@@ -18,7 +18,7 @@ povray fluid.pov `
     "+W$Width" "+H$Height" `
     "+KFI1" "+KFF$NFrames" `
     "+KI0" "+KF1" `
-    "+FN" `
+    "+FN" "-V" `
     "+A$AAThreshold" "-J" `
     "+Oframes/frame"
 

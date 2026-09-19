@@ -26,7 +26,7 @@ povray fluid.pov \
   +W"$WIDTH" +H"$HEIGHT" \
   +KFI1 +KFF"$NFRAMES" \
   +KI0 +KF1 \
-  +FN \
+  +FN -V \
   +A"$AA_THRESHOLD" -J \
   +Oframes/frame
 

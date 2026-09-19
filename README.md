@@ -175,7 +175,8 @@ These shapes are a visualization concept, not a mechanical or fluid-structure de
 
 ## Render speed experiments
 
-Both render scripts default to `+A0.2 -J`. Area-light jitter is also disabled in
+Both render scripts default to `+A0.2 -J -V`. `-V` suppresses POV-Ray's
+per-pixel progress output while retaining render statistics and errors. Area-light jitter is also disabled in
 `fluid.pov`. Disabling both kinds of jitter follows
 [POV-Ray's animation guidance](https://www.povray.org/documentation/view/3.7.0/112/)
 and avoids random sampling noise between frames.
