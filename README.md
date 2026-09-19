@@ -140,6 +140,22 @@ povray fluid.pov \
 
 Then inspect several frames before committing to a long high-resolution render.
 
+## Tracer visibility
+
+The default view hides the illustrative PIV sheet and core cylinder so that
+tracer motion is easier to see. Add `Declare=ShowPIVSheet=1` and/or
+`Declare=ShowCore=1` to a POV-Ray command to display these optional overlays.
+The tracer marker radius is exaggerated to 0.030 model units for visibility;
+it does not represent the experimental particle size or affect trajectories.
+The experimental concept uses 10–20 µm diameter PIV particles (see
+[EXPERIMENT.md](EXPERIMENT.md)).
+
+The current four-second visibility test uses 64 tracers, twice the original
+32, and the first 120 frames of a 450-frame trajectory at 30 fps. Generate that
+trajectory with `python3 make_trajectories.py --frames 450 --fps 30 --beads 64`.
+Render frames 1–120 with `+KFI1 +KFF450 +SF1 +EF120` to retain the same flow
+timing as the earlier clip. The generator's general default remains 500 tracers.
+
 ## How the tracer motion works
 
 The Python program treats each bead as a passive tracer satisfying

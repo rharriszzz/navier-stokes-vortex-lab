@@ -21,12 +21,14 @@
   }
 
   // PIV sheet: y ~= 0.
-  box {
-    <-0.90, -0.003, -0.98>,
-    < 0.90,  0.003,  0.98>
-    material { PIVMaterial }
-    no_shadow
-  }
+  #if (ShowPIVSheet)
+    box {
+      <-0.90, -0.003, -0.98>,
+      < 0.90,  0.003,  0.98>
+      material { PIVMaterial }
+      no_shadow
+    }
+  #end
 #end
 
 #macro RenderCore()

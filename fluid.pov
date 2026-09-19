@@ -7,6 +7,14 @@
 
 #version 3.7;
 
+// Optional explanatory overlays; hide them for tracer-motion tests.
+#ifndef (ShowPIVSheet)
+  #declare ShowPIVSheet = false;
+#end
+#ifndef (ShowCore)
+  #declare ShowCore = false;
+#end
+
 #include "colors.inc"
 #include "materials.inc"
 #include "tank.inc"
@@ -65,6 +73,8 @@ plane {
 }
 
 RenderTank()
-RenderCore()
+#if (ShowCore)
+  RenderCore()
+#end
 RenderActuatorsAndSensors()
 RenderTracers()

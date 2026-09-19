@@ -2,7 +2,9 @@
 // Shared tracer bead prototype and rendering macro.
 
 #ifndef (TracerRadius)
-  #declare TracerRadius = 0.018;
+  // Exaggerated visual marker size, not the physical PIV particle radius.
+  // Changing this does not affect passive-tracer trajectories.
+  #declare TracerRadius = 0.030;
 #end
 
 #declare TracerPrototype =
