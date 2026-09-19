@@ -28,35 +28,35 @@ The central flow is intended to have four qualitative features:
 
 A useful idealized mean flow in cylindrical coordinates is
 
-\[
+```math
 u_r = -a(t)r,
 \qquad
 u_z = 2a(t)z,
-\]
+```
 
 with an additional azimuthal velocity
 
-\[
+```math
 u_\theta = u_\theta(r,z,t).
-\]
+```
 
 The linear radial/axial part is incompressible because
 
-\[
+```math
 \frac{1}{r}\frac{\partial (r u_r)}{\partial r}
 +
 \frac{\partial u_z}{\partial z}
 =
 -2a + 2a = 0.
-\]
+```
 
 The experiment is meant to create a small, strongly sheared, swirling core whose transverse scale decreases over time while the axial structure stretches.
 
 The perturbations are intended to have approximately zero mean but nonzero quadratic correlations, so that quantities such as
 
-\[
+```math
 \langle u'_r u'_\theta \rangle
-\]
+```
 
 can be measured.
 
@@ -72,9 +72,9 @@ The initial experiment should use **water**.
 
 Representative room-temperature kinematic viscosity:
 
-\[
+```math
 \nu \approx 10^{-6}\ {\rm m^2/s}.
-\]
+```
 
 Water is preferred initially because it is inexpensive, transparent, compatible with standard PIV techniques, easy to seed with tracer particles, well characterized, and safer than many specialized fluids.
 
@@ -105,9 +105,9 @@ The tank should be transparent from multiple directions so that both top and sid
 
 The apparatus should contain a fixed amount of water. Any boundary actuation that produces radial or axial flow must therefore satisfy zero net volume flux over the full boundary:
 
-\[
+```math
 \int_{\partial\Omega} u_n\,dS = 0.
-\]
+```
 
 That means actuators should preferably operate in paired or balanced modes rather than adding net fluid to the vessel.
 
@@ -126,15 +126,15 @@ The desired qualitative motion is:
 
 A useful illustrative scaling is
 
-\[
+```math
 r_c \propto \tau^{1/2},
 \qquad
 \tau = t_* - t,
-\]
+```
 
 over a finite experimental interval.
 
-The purpose is not to take \(\tau\) literally to zero. Instead, the experiment should try to reproduce the scaling over perhaps two or more decades in \(\tau\).
+The purpose is not to take $\tau$ literally to zero. Instead, the experiment should try to reproduce the scaling over perhaps two or more decades in $\tau$.
 
 For example, a practical first target might be a core-radius change from about 10 mm to about 1 mm. A later apparatus might attempt smaller scales if the imaging and actuation systems support them.
 
@@ -144,31 +144,31 @@ For example, a practical first target might be a core-radius change from about 1
 
 The perturbations should initially be simple, low-order, controlled modes rather than arbitrary turbulence.
 
-An especially useful first mode is an azimuthal mode with \(m=4\).
+An especially useful first mode is an azimuthal mode with $m=4$.
 
 For example,
 
-\[
+```math
 u'_r = A\cos(m\theta),
-\]
+```
 
-\[
+```math
 u'_\theta = B\cos(m\theta+\phi).
-\]
+```
 
 Their average values are zero around the circumference, but their product has mean
 
-\[
+```math
 \langle u'_r u'_\theta\rangle
 =
 \frac{AB}{2}\cos\phi.
-\]
+```
 
 This provides a clean laboratory demonstration that a zero-mean perturbation can produce a nonzero quadratic momentum-transfer term.
 
 A useful boundary representation is
 
-\[
+```math
 u_n(\theta,t)
 =
 A_0(t)
@@ -179,9 +179,9 @@ A_m(t)\cos(m\theta)
 +
 B_m(t)\sin(m\theta)
 \right].
-\]
+```
 
-The first apparatus can concentrate on modes \(m=1\) through \(m=6\), with particular emphasis on \(m=4\).
+The first apparatus can concentrate on modes $m=1$ through $m=6$, with particular emphasis on $m=4$.
 
 ---
 
@@ -208,13 +208,13 @@ The animation currently uses red markers and arrows to represent these actuators
 
 The system contains motions over a wide range of time scales.
 
-For water, the viscous diffusion time associated with a length scale \(L\) is approximately
+For water, the viscous diffusion time associated with a length scale $L$ is approximately
 
-\[
+```math
 T_\nu \sim \frac{L^2}{\nu}.
-\]
+```
 
-Using \(\nu \approx 10^{-6}\ {\rm m^2/s}\):
+Using $\nu \approx 10^{-6}\ {\rm m^2/s}$:
 
 | Length scale | Approximate viscous time | Approximate frequency |
 |---|---:|---:|
@@ -252,11 +252,11 @@ In the POV-Ray visualization, particle diameter may be exaggerated dramatically 
 
 In the current computational model, tracer particles satisfy
 
-\[
+```math
 \frac{d\mathbf{x}}{dt}
 =
 \mathbf{u}(\mathbf{x},t).
-\]
+```
 
 Their trajectories are integrated numerically using classical fourth-order Runge-Kutta (RK4).
 
@@ -330,9 +330,9 @@ The control system should probably use two time scales.
 
 Approximate update rate:
 
-\[
+```math
 1\text{–}5\ {\rm kHz}.
-\]
+```
 
 Inputs may include pressure sensors, actuator position, actuator velocity, and motor current. Outputs are actuator drive signals.
 
@@ -342,13 +342,13 @@ The fast loop stabilizes the hardware and executes requested boundary modes.
 
 Approximate update rate:
 
-\[
+```math
 20\text{–}100\ {\rm Hz},
-\]
+```
 
 depending on the PIV system.
 
-The outer loop estimates quantities such as core radius \(r_c\), characteristic swirl velocity \(U_\theta\), axial velocity \(U_z\), circumferential mode amplitudes \(a_m\), and Reynolds-stress quantities.
+The outer loop estimates quantities such as core radius $r_c$, characteristic swirl velocity $U_\theta$, axial velocity $U_z$, circumferential mode amplitudes $a_m$, and Reynolds-stress quantities.
 
 It then adjusts the desired actuator-mode amplitudes.
 
@@ -358,7 +358,7 @@ It then adjusts the desired actuator-mode amplitudes.
 
 Rather than attempting full real-time control of the entire velocity field, use a reduced state such as
 
-\[
+```math
 x_{\rm state}
 =
 \left(
@@ -370,7 +370,7 @@ a_2,
 \ldots,
 a_6
 \right).
-\]
+```
 
 This state can be estimated from PIV and pressure measurements.
 
@@ -384,17 +384,17 @@ This makes the initial control problem tractable and experimentally interpretabl
 
 Important measurements include:
 
-- core radius \(r_c(t)\),
-- swirl profile \(u_\theta(r,z,t)\),
-- axial velocity \(u_z(r,z,t)\),
-- circumferential Fourier amplitudes \(a_m(t)\),
-- Reynolds stress \(\langle u'_r u'_\theta\rangle\).
+- core radius $r_c(t)$,
+- swirl profile $u_\theta(r,z,t)$,
+- axial velocity $u_z(r,z,t)$,
+- circumferential Fourier amplitudes $a_m(t)$,
+- Reynolds stress $\langle u'_r u'_\theta\rangle$.
 
 A useful finite-range test is whether
 
-\[
+```math
 r_c \propto \tau^{1/2}
-\]
+```
 
 and whether the velocity profiles show approximate collapse under appropriate rescaling.
 
@@ -414,25 +414,25 @@ Drive one actuator sinusoidally, measure pressure and PIV response, and determin
 
 ## Experiment C: actuator ring
 
-Operate one circumferential ring, generate simple modes \(m=1,2,3,4\), and verify their spatial mode shapes.
+Operate one circumferential ring, generate simple modes $m=1,2,3,4$, and verify their spatial mode shapes.
 
 ## Experiment D: zero-mean Reynolds-stress test
 
 Create approximately
 
-\[
+```math
 u'_r=A\cos(m\theta),
 \qquad
 u'_\theta=B\cos(m\theta+\phi).
-\]
+```
 
 Measure whether
 
-\[
+```math
 \langle u'_r u'_\theta\rangle
-\]
+```
 
-follows the expected dependence on \(\phi\).
+follows the expected dependence on $\phi$.
 
 This is an important standalone experiment even before trying to create a contracting vortex core.
 
@@ -442,7 +442,7 @@ Produce a stable axisymmetric swirling flow and measure core size, swirl profile
 
 ## Experiment F: controlled contraction
 
-Slowly vary the actuator commands to reduce the core radius and test whether the system can track a prescribed target \(r_c(t)\).
+Slowly vary the actuator commands to reduce the core radius and test whether the system can track a prescribed target $r_c(t)$.
 
 ## Experiment G: contraction plus perturbation
 
@@ -546,9 +546,9 @@ A high-value future improvement is therefore to construct the entire kinematic v
 
 That would enforce
 
-\[
+```math
 \nabla\cdot\mathbf{u}=0
-\]
+```
 
 analytically.
 
