@@ -10,6 +10,12 @@ This repository is intended to separate:
 
 It is deliberately **not** a claim to numerically solve, reproduce, or physically realize a mathematical Navier–Stokes singularity. The initial model is a controlled, finite-scale, kinematic analogue designed for visualization and later experimental design work.
 
+![Representative tracer-render preview](preview.png)
+
+This representative frame uses the current tracer-only view: pressure sensors
+and actuator hardware are hidden, and tracer markers are enlarged relative to
+the physical particles for visibility.
+
 ## Repository layout
 
 ```text
@@ -147,9 +153,9 @@ hardware so that
 tracer motion is easier to see. Add `Declare=ShowPIVSheet=1` and/or
 `Declare=ShowCore=1` to a POV-Ray command to display these optional overlays.
 Use `Declare=ShowActuators=1` to show the diaphragm housings and their supports.
-Blue sensor markers remain visible; `Declare=ShowSensors=0` hides them independently.
+Blue sensor markers are hidden by default; `Declare=ShowSensors=1` displays them.
 Neither the actuators nor sensors participate in the prescribed velocity field.
-The tracer marker radius is exaggerated to 0.020 model units for visibility;
+The tracer marker radius is exaggerated to 0.014 model units for visibility;
 it does not represent the experimental particle size or affect trajectories.
 The experimental concept uses 10–20 µm diameter PIV particles (see
 [EXPERIMENT.md](EXPERIMENT.md)).

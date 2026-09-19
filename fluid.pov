@@ -18,7 +18,7 @@
   #declare ShowActuators = false;
 #end
 #ifndef (ShowSensors)
-  #declare ShowSensors = true;
+  #declare ShowSensors = false;
 #end
 
 #include "colors.inc"
@@ -70,6 +70,12 @@ light_source {
 light_source {
   <0.0, 4.0, 2.0>
   color rgb <1.0, 1.0, 1.0> * 0.45
+}
+
+// Soft front fill for the tracer-only view after hardware markers are hidden.
+light_source {
+  <-1.5, -3.0, 4.5>
+  color rgb <0.78, 0.88, 1.00> * 0.70
 }
 
 plane {

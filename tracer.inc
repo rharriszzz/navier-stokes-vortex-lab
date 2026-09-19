@@ -4,7 +4,7 @@
 #ifndef (TracerRadius)
   // Exaggerated visual marker size, not the physical PIV particle radius.
   // Changing this does not affect passive-tracer trajectories.
-  #declare TracerRadius = 0.020;
+  #declare TracerRadius = 0.014;
 #end
 
 #declare TracerPrototype =
