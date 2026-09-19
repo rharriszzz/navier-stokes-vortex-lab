@@ -4,13 +4,15 @@
 #ifndef (TracerRadius)
   // Exaggerated visual marker size, not the physical PIV particle radius.
   // Changing this does not affect passive-tracer trajectories.
-  #declare TracerRadius = 0.030;
+  #declare TracerRadius = 0.020;
 #end
 
 #declare TracerPrototype =
 sphere {
   <0, 0, 0>, TracerRadius
   material { TracerMaterial }
+  // Magnified markers should not cast macroscopic bead shadows.
+  no_shadow
 }
 
 #macro RenderTracers()

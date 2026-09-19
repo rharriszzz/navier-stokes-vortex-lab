@@ -145,16 +145,29 @@ Then inspect several frames before committing to a long high-resolution render.
 The default view hides the illustrative PIV sheet and core cylinder so that
 tracer motion is easier to see. Add `Declare=ShowPIVSheet=1` and/or
 `Declare=ShowCore=1` to a POV-Ray command to display these optional overlays.
-The tracer marker radius is exaggerated to 0.030 model units for visibility;
+The tracer marker radius is exaggerated to 0.020 model units for visibility;
 it does not represent the experimental particle size or affect trajectories.
 The experimental concept uses 10–20 µm diameter PIV particles (see
 [EXPERIMENT.md](EXPERIMENT.md)).
+The markers use a bright green-cyan fluorescent appearance with low gloss and
+no mirror reflection or cast shadows. Their emission is an illustrative
+visibility aid across the volume, not a model of wavelength-dependent
+fluorescence or laser-sheet excitation.
 
-The current four-second visibility test uses 64 tracers, twice the original
-32, and the first 120 frames of a 450-frame trajectory at 30 fps. Generate that
-trajectory with `python3 make_trajectories.py --frames 450 --fps 30 --beads 64`.
+The current four-second visibility test uses 128 tracers, twice the preceding
+64-particle preview, and the first 120 frames of a 450-frame trajectory at 30 fps.
+Generate that trajectory with
+`python3 make_trajectories.py --frames 450 --fps 30 --beads 128`.
 Render frames 1–120 with `+KFI1 +KFF450 +SF1 +EF120` to retain the same flow
 timing as the earlier clip. The generator's general default remains 500 tracers.
+
+The red actuator markers and arrows described in the experimental concept are
+now represented by gray cylindrical housings with dark, bulging diaphragm
+faces. Three support rings and four floor-mounted posts show how this
+illustrative hardware could be held in place. Sensors sit between the housings.
+Diaphragm motion follows an oscillating `m=4` command with exaggerated travel;
+the prescribed tracer velocity field is not computed from this hardware motion.
+These shapes are a visualization concept, not a mechanical or fluid-structure design.
 
 ## How the tracer motion works
 
