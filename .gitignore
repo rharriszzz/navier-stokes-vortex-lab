@@ -1,0 +1,29 @@
+# Python
+.venv/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+
+# POV-Ray generated trajectory data
+positions/frame*.inc
+
+# Rendered frames
+frames/*.png
+frames/*.jpg
+frames/*.jpeg
+frames/*.exr
+
+# Movies
+movie/*.mp4
+movie/*.mov
+movie/*.webm
+movie/*.gif
+
+# POV-Ray temporary/output files
+*.out
+*.log
+
+# Editor / OS
+.vscode/
+.DS_Store
+Thumbs.db
