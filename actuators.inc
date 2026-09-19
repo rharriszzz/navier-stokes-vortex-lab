@@ -64,7 +64,7 @@
   #end
 #end
 
-#macro RenderActuatorsAndSensors()
+#macro RenderActuators()
   // Four posts support the rings from the tank floor.
   #local I = 0;
   #while (I < 4)
@@ -79,7 +79,9 @@
   RenderActuatorRing(-0.55, -0.7)
   RenderActuatorRing( 0.00,  0.0)
   RenderActuatorRing( 0.55,  0.7)
+#end
 
+#macro RenderSensors()
   RenderSensorRing(-0.80)
   RenderSensorRing( 0.00)
   RenderSensorRing( 0.80)

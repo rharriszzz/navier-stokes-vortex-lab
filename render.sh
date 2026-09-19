@@ -6,6 +6,7 @@ cd "$(dirname "$0")"
 NFRAMES="${NFRAMES:-240}"
 WIDTH="${WIDTH:-1280}"
 HEIGHT="${HEIGHT:-720}"
+AA_THRESHOLD="${AA_THRESHOLD:-0.2}"
 
 mkdir -p frames
 
@@ -26,7 +27,7 @@ povray fluid.pov \
   +KFI1 +KFF"$NFRAMES" \
   +KI0 +KF1 \
   +FN \
-  +A0.2 \
+  +A"$AA_THRESHOLD" -J \
   +Oframes/frame
 
 echo "Finished. Rendered frames are in frames/."

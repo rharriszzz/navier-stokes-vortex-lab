@@ -14,6 +14,12 @@
 #ifndef (ShowCore)
   #declare ShowCore = false;
 #end
+#ifndef (ShowActuators)
+  #declare ShowActuators = false;
+#end
+#ifndef (ShowSensors)
+  #declare ShowSensors = true;
+#end
 
 #include "colors.inc"
 #include "materials.inc"
@@ -53,7 +59,7 @@ light_source {
   color rgb <1.0, 0.96, 0.90> * 1.25
   area_light <1.5,0,0>, <0,1.5,0>, 5, 5
   adaptive 1
-  jitter
+  // No area-light jitter: avoid frame-to-frame shadow noise in animation.
 }
 
 light_source {
@@ -76,5 +82,10 @@ RenderTank()
 #if (ShowCore)
   RenderCore()
 #end
-RenderActuatorsAndSensors()
+#if (ShowActuators)
+  RenderActuators()
+#end
+#if (ShowSensors)
+  RenderSensors()
+#end
 RenderTracers()

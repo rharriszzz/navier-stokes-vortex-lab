@@ -134,7 +134,7 @@ povray fluid.pov \
   +W1280 +H720 \
   +KFI1 +KFF20 \
   +KI0 +KF1 \
-  +FN +A0.2 \
+  +FN +A0.2 -J \
   +Oframes/frame
 ```
 
@@ -142,9 +142,13 @@ Then inspect several frames before committing to a long high-resolution render.
 
 ## Tracer visibility
 
-The default view hides the illustrative PIV sheet and core cylinder so that
+The default view hides the illustrative PIV sheet, core cylinder, and actuator
+hardware so that
 tracer motion is easier to see. Add `Declare=ShowPIVSheet=1` and/or
 `Declare=ShowCore=1` to a POV-Ray command to display these optional overlays.
+Use `Declare=ShowActuators=1` to show the diaphragm housings and their supports.
+Blue sensor markers remain visible; `Declare=ShowSensors=0` hides them independently.
+Neither the actuators nor sensors participate in the prescribed velocity field.
 The tracer marker radius is exaggerated to 0.020 model units for visibility;
 it does not represent the experimental particle size or affect trajectories.
 The experimental concept uses 10–20 µm diameter PIV particles (see
@@ -168,6 +172,33 @@ illustrative hardware could be held in place. Sensors sit between the housings.
 Diaphragm motion follows an oscillating `m=4` command with exaggerated travel;
 the prescribed tracer velocity field is not computed from this hardware motion.
 These shapes are a visualization concept, not a mechanical or fluid-structure design.
+
+## Render speed experiments
+
+Both render scripts default to `+A0.2 -J`. Area-light jitter is also disabled in
+`fluid.pov`. Disabling both kinds of jitter follows
+[POV-Ray's animation guidance](https://www.povray.org/documentation/view/3.7.0/112/)
+and avoids random sampling noise between frames.
+
+Set `AA_THRESHOLD` to compare anti-aliasing thresholds, keeping the frame range,
+resolution, particle data, and scene switches fixed:
+
+```bash
+AA_THRESHOLD=0.4 NFRAMES=10 ./render.sh
+```
+
+```powershell
+$env:AA_THRESHOLD = "0.4"
+$env:NFRAMES = "10"
+.\render.ps1
+```
+
+Try `0.2`, `0.3`, or `0.4`. A higher threshold applies extra samples to fewer
+pixels, which can save time but leave rougher edges or lose small particle
+detail. `-J` controls pixel-sampling jitter; it does not control area-light jitter.
+The [POV-Ray tracing reference](https://www.povray.org/documentation/3.7.0/r3_2.html#r3_2_8_7)
+describes these options. Render into separate output directories when comparing
+settings; the scripts overwrite matching frame filenames.
 
 ## How the tracer motion works
 
