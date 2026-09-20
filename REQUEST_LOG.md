@@ -796,3 +796,113 @@ Previous request history and all 19 numerical source/configuration identities
 were preserved. `git diff --check` passed. Validation records are
 `/tmp/navier-b2-response-r012/numerical-validation.json` and
 `documentation-validation.json`.
+
+## R013 — 2026-09-20 — Short continuation request
+
+**User request (verbatim):**
+
+> continue
+
+**Scope:** Complete the R012 geometry and boundary-layer accuracy method review.
+Use existing source/evidence and elementary calculations to select one affordable
+experiment that can distinguish spatial resolution from faceted-boundary model
+error. Record a reproducible experiment contract, update continuity, and commit
+and push the scoped review to the configured upstream.
+
+**Status:** In progress.
+
+**Plan and completion criteria:** Read the required scientific documents and
+R012/R009/R005/R008 evidence; identify the distinct boundary problems; compare
+an existing-form 3D boundary-layer mesh, a symmetry-restricted diagnostic and
+an output-weighted residual approach; select one justified experiment with
+boundary equations, identity/reference/output checks, resource caps and failure
+interpretation; validate the documentation and publish the review.
+
+**Stopping conditions:** Stop after the reviewed experiment contract, or an
+explicit missing method decision. No new mesh, assembly, PDE solve, reference
+sweep, field reintegration, solver/form implementation, adjoint solve, boundary
+model change, gate integration, campaign or B3. Preserve the physical parameters,
+signed features, phasor, acceptance thresholds, default guards, failed physical
+B2 gate and `campaign_ready=false`. The proposed experiment is not run in R013.
+`Continue` authorizes the scoped commit and push without rewriting Git history.
+
+**Outcome, 2026-09-20:** Completed the method review and stopped before its
+proposed experiment. The selected test uses the unchanged 50 mm alpha=96
+operator with the current command and the full complex boundary trace of the
+known finite 128-term solution. The latter is an exact continuum verification
+problem on the same polyhedron, generally requiring nonzero normal data.
+Its error and the discrete change between commands satisfy an explicit complex
+identity; the change is not a continuum geometry-error estimate. The review
+compares and defers a 3D boundary-layer mesh, a symmetry-restricted solver and
+an output-weighted/adjoint study, with their limitations and cost uncertainties.
+
+The next contract fixes two facet quadrature orders, oriented normal-trace
+projection, consistent lifting and cell-aware polynomial integration on the
+exact disk. It requires orientation, geometry, flux/nullspace, arithmetic,
+reference and source/mesh/matrix checks. One matrix/factorization serves three
+primary RHSs and three residual corrections; the physical child is capped at
+180 s/1.5 GiB, with separate 60 s/512 MiB toy checks. It has explicit refusal,
+component-screen, physical-failure and resource-stop interpretations, with no
+retry, second mesh or automatic method substitution. These are **proposed
+counts and limits**, not completed solves or promised resource use.
+
+**Checks executed:** The standard-library read-only review checked the exact
+R012 report/runner hashes, all 19 package/config identities and three existing
+appendix identities; it parsed the prior runner without executing it. Elementary
+arithmetic reproduced the penetration depth (5.641895835 mm), reference 5% scale
+(3.4556100991e-6 1/m), proposed component screens and polynomial dimensions.
+The illustrative chord sagitta is not a mesh measurement. No reference function,
+Bessel series, stored field integral, mesh, assembly or PDE calculation ran.
+The documentation validation result is recorded below.
+
+**Checks skipped:** Application, optional FEM/dense/calibration tests, new
+numerical experiments, load/output-kernel implementation, rendering and encoding
+are outside this method-review scope. No unexecuted check is claimed passed.
+No numerical package/config, solver/form, acceptance threshold, guard or gate
+behavior changed. Physical B2 remains failed and `campaign_ready=false`.
+
+**Evidence and changed files:** New durable
+`docs/realizability/B2_MATCHED_TRACE_REVIEW.md` and
+`docs/realizability/B2_MATCHED_TRACE_EVIDENCE.md`; updated `REQUEST_LOG.md`,
+`SESSION_HANDOFF.md`, `STATUS.md`, `PROJECT_TRACKS.md`, and
+`docs/realizability/B2_PHYSICAL_RESPONSE_AUDIT.md`, `B2_NEXT_STEPS.md`,
+`B2_GATE.md`. Temporary read-only calculations and documentation validation are
+in `/tmp/navier-b2-method-r013/`; the exact read-only script/report are embedded
+in the new appendix. Existing numerical evidence appendices are unchanged.
+
+**Unresolved:** Total spatial/boundary approximation error and continuum
+geometry error remain unallocated. One matched-trace result cannot establish
+convergence, penalty robustness, a validated production response or hardware
+feasibility. The finite-element normal-trace projection itself remains part of
+the approximation error. New load/output cost is unmeasured; a refused or capped
+attempt is an acceptable next-task result. Preparation tolerances, continued
+actuation, adequate sensing and a validated movie history remain open.
+
+**Next task/recommendation:** GPT-6 Astra, high reasoning, to implement and run
+exactly the reviewed disposable experiment, preserve the runner and finite JSON
+result (including partial/refused outcomes), update continuity and commit/push,
+then stop. Read the full review's checks and stopping conditions first; do not
+rerun the completed R012 audit as a separate task. No production backend change,
+new mesh family, extra penalty, reduced solver, adjoint, gate integration,
+campaign, B3 or movie export follows automatically. Recommend GPT-5.6 Luna,
+medium, only if an understood mechanical fix has exact edits/checks and a stop
+before scientific interpretation; otherwise retain Astra/high for one bounded
+numerical question. Availability was rechecked in the session catalog and
+fetched official model pages using OpenAI Docs. No switch, delegation or
+automation occurred. The next user prompt is **Continue**.
+
+**Status at completion:** Complete at the method-review boundary. The proposed
+matched-trace experiment has not been run.
+
+**Git delivery:** `Continue` authorizes the scoped checkpoint
+`Specify B2 matched-trace accuracy experiment` and push to `origin/main`.
+The actual commit and push outcome are reported in Git history and the final
+response; no force-push is authorized.
+
+**Final documentation validation, 2026-09-20:** Passed for nine Markdown files,
+54 local links/anchors, 22 fenced blocks and seven result/status tables. The
+exact embedded read-only script/report, proposed inventory, elementary scales
+and preserved R012 result table checked consistently. All prior request history,
+19 numerical source/config identities and three numerical evidence appendices
+were preserved. `git diff --check` passed. Validation record:
+`/tmp/navier-b2-method-r013/documentation-validation.json`.

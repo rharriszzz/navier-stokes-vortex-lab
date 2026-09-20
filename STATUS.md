@@ -1,6 +1,7 @@
 # Project status: physical preparation and a realistic movie
 
-Updated 2026-09-20, following the R012 physical response audit against `339b3ee` and the
+Updated 2026-09-20, following the R013 method review against `568c68b`, the R012
+physical response audit, and the
 [R010 status-report request](REQUEST_LOG.md#r010--2026-09-20--project-status-and-user-goals).
 
 Our goal is to determine whether exterior actuators and sensors can prepare
@@ -175,12 +176,21 @@ evidence of realizability.
 ## Next checkpoint
 
 The single response audit is complete: 38.75 seconds and 753.05 MiB observed
-peak memory, within its 180 s/1.5 GiB caps. Its
-[next-task contract](docs/realizability/B2_PHYSICAL_RESPONSE_AUDIT.md#next-bounded-task-design-a-geometry-and-boundary-layer-accuracy-test)
-is a bounded method review to specify one affordable test separating spatial
-resolution from boundary-model error. The review will state its assumptions,
-reference, checks, cost limits and failure interpretation before another solve.
+peak memory, within its 180 s/1.5 GiB caps. The subsequent
+[method review](docs/realizability/B2_MATCHED_TRACE_REVIEW.md) specifies the next
+test: compare the existing wall command with boundary values taken from a known
+solution, on the same mesh. The latter problem has a known answer even on the
+faceted vessel, so it can reveal approximation error separately from the
+original mismatch in continuum boundary data. The difference between the two
+computed answers measures sensitivity to that change; it does not, by itself,
+give the true geometry error.
+
+The proposed experiment also checks disk integration separately on each mesh
+cell. Its equations, fixed checks, one-factorization limit and 180 s/1.5 GiB
+physical-child caps are recorded before execution. **The review ran no new
+simulation, and this experiment has not yet been run.**
 
 The physical-response campaign remains blocked (`campaign_ready=false`). No
 preparation protocol, sensing result, time-dependent movie dataset or render
-was produced by this audit. Those broader goals remain as stated above.
+was produced by this audit or method review. Those broader goals remain as
+stated above.

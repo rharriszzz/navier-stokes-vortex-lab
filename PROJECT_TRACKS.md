@@ -98,10 +98,13 @@ comparison scale. The subsequent
 completed one 50 mm alpha=96 solve and same-factor correction within its caps.
 PDE/arithmetic checks pass, but the finest-rule amplitude is 28962.69 times the
 reference with a 74.12-degree phase discrepancy. The observed correction is tiny;
-feature quadrature remains unresolved at the reference error scale. The next
-bounded task reviews a geometry and boundary-layer accuracy experiment. A total
-FEM error floor is still unknown. The B2 gate remains failed and campaign
-readiness false. Use
+feature quadrature remains unresolved at the reference error scale. The completed
+[method review](docs/realizability/B2_MATCHED_TRACE_REVIEW.md) specifies a paired
+boundary-data experiment on that same mesh: compare the current command with a
+known solution's full boundary trace, and integrate the disk separately by cell.
+The experiment is not yet run. Its discrete boundary sensitivity will not by
+itself identify continuum geometry error. A total FEM error floor is still
+unknown. The B2 gate remains failed and campaign readiness false. Use
 [SESSION_HANDOFF.md](SESSION_HANDOFF.md) for completion criteria and stops.
 
 ### Core constraint

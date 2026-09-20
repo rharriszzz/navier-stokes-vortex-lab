@@ -52,6 +52,13 @@ correction is tiny, while feature quadrature remains unresolved at the reference
 error scale. This is failed physical-accuracy evidence for one mesh, not a
 convergence study or gate integration. This gate's code and thresholds are unchanged.
 
+The subsequent [R013 method review](B2_MATCHED_TRACE_REVIEW.md) specifies one
+paired boundary-data experiment on the same 50 mm alpha=96 operator, using a
+known solution's full trace as a verification fixture. It has not been run.
+It will measure numerical approximation and discrete boundary sensitivity,
+without treating their difference as a continuum geometry-error estimate.
+The failed physical gate and false campaign readiness are unchanged.
+
 This package is deliberately incomplete: the six-input response campaign was
 not launched because the numerical acceptance gates did not all pass.
 

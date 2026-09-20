@@ -1,6 +1,8 @@
 # B2 continuation: independent swirl reference and stability checks
 
-Current continuation after R012: read the
+Current continuation after R013: read the
+[matched-trace experiment specification](B2_MATCHED_TRACE_REVIEW.md), its
+[read-only review evidence](B2_MATCHED_TRACE_EVIDENCE.md), the
 [single physical response audit](B2_PHYSICAL_RESPONSE_AUDIT.md), its
 [exact evidence](B2_PHYSICAL_RESPONSE_EVIDENCE.md), the
 [physical-accuracy review](B2_ACCURACY_REVIEW.md), its
@@ -12,11 +14,13 @@ homogeneous-dissipation certificates on the exact 50/40/30/25 mm meshes;
 alpha=48 remains inconclusive. R009 reproduced the physical reference and its
 small numerical sensitivity. R012 completed the capped 50 mm alpha=96 physical
 audit: PDE/arithmetic checks pass, but all five feature rules fail the physical
-reference comparison. The next bounded task is a method review specifying one
-affordable experiment to distinguish spatial resolution from faceted-boundary
-model error; no additional solve is part of that review. No production penalty
-choice or gate integration is selected. The new audit defines the exact next
-task and stops. Older assignments below are historical.
+reference comparison. R013 completed the method review without new numerical
+runs. The next bounded task is the specified paired current-command/matched-trace
+experiment on the same operator, with two facet quadrature orders and a separate
+cell-aware disk integral. It permits one factorization, three primary RHSs and
+three same-factor corrections, under 180 s/1.5 GiB physical-child caps. No
+production penalty choice or gate integration is selected. The R013 specification
+defines the exact checks and stops. Older assignments below are historical.
 
 Follow-up at commit `a6295da`: the reference and cube audit are implemented.
 The new [stability review](B2_STABILITY_REVIEW.md) tests the actual cylinder

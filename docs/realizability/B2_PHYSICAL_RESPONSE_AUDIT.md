@@ -6,6 +6,11 @@ The [evidence appendix](B2_PHYSICAL_RESPONSE_EVIDENCE.md) preserves the exact
 runner, complete numerical report, provenance, watchdog checks and validation.
 No package source, configuration, solver, form or acceptance threshold changed.
 
+The R013 [method review](B2_MATCHED_TRACE_REVIEW.md) has since completed the
+next-task contract below. It selects a paired current-command/matched-trace
+experiment on this same mesh, with cell-aware disk integration. That experiment
+is specified but **not yet executed**; the R012 results below are unchanged.
+
 ## Result
 
 **The certified 50 mm, alpha=96 calculation passes the existing PDE checks but
