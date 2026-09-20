@@ -1,11 +1,12 @@
 # B2 continuation: independent swirl reference and stability checks
 
-Current continuation after `21676b9`: read the
-[scalable stability review](B2_SCALABLE_STABILITY_REVIEW.md) and the root
-[session handoff](../../SESSION_HANDOFF.md). The acceptance repair, diagnostic
-report package, and bounded stability-method review are complete. The next
-task packages the sufficient local coercivity diagnostic under explicit
-resource caps. Older assignments below are historical.
+Current continuation after R006: inspect the implementation result in the
+[scalable stability review](B2_SCALABLE_STABILITY_REVIEW.md) and use the root
+[session handoff](../../SESSION_HANDOFF.md). The standalone sufficient local
+coercivity diagnostic is implemented. The next bounded task is a research
+interpretation of its 50 mm inconclusive-at-alpha-48 / positive-at-alpha-96
+result and selection of one actual-response-mesh stability or physical-
+accuracy review. Older assignments below are historical.
 
 Follow-up at commit `a6295da`: the reference and cube audit are implemented.
 The new [stability review](B2_STABILITY_REVIEW.md) tests the actual cylinder

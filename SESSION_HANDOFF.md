@@ -1,7 +1,7 @@
 # Current session handoff
 
-Last updated: 2026-09-20. Workflow: [R003](REQUEST_LOG.md#r003--2026-09-20--short-continuation-request).
-Last completed B2 task: [R005](REQUEST_LOG.md#r005--2026-09-20--short-continuation-request).
+Last updated: 2026-09-20. Workflow: [R006](REQUEST_LOG.md#r006--2026-09-20--short-continuation-request).
+Last completed B2 task: [R006](REQUEST_LOG.md#r006--2026-09-20--short-continuation-request).
 
 ## Reusable continuation request
 
@@ -18,57 +18,55 @@ model/effort when starting the session. No scheduler is installed.
 
 ## Next task
 
-**GPT-5.6 Luna, medium reasoning:** implement the separate `b2-coercivity`
-diagnostic specified in
-[B2_SCALABLE_STABILITY_REVIEW.md](docs/realizability/B2_SCALABLE_STABILITY_REVIEW.md#bounded-follow-on-implementation).
-Read that review, its calibration appendix, the previous stability/report
-reviews, and the four required research documents before coding. The formula,
-numerical guards, report states, validation cases, and resource caps are fixed
-in the review. This is a sufficient local energy certificate: an inconclusive
-bound does not prove instability or authorize changing the penalty.
+**GPT-6 Astra, high reasoning:** review the completed separate
+`b2-coercivity` diagnostic and interpret the 50 mm result. Read its
+[implementation result](docs/realizability/B2_SCALABLE_STABILITY_REVIEW.md#2026-09-20-implementation-result-r006),
+the calibration appendix, previous stability/report reviews, and the four
+required research documents. Decide whether the 50 mm sufficient bound supports
+any conclusion about the response meshes, then select one bounded next research
+task: an actual-response-mesh stability method or a physical-accuracy/error-
+floor investigation. State assumptions, alternatives, observable acceptance
+evidence, resource limits, and failure conditions before requesting another
+implementation.
 
-**Completion:** implement the optional command and strict JSON/Markdown reports;
-validate geometry formulas and small-cylinder agreement with independent UFL
-assembly and the dense fixtures; run ordinary realizability and optional B2
-discovery, CLI help, and only the 100/70/50 mm local diagnostic. Enforce the
-500-cell, 120 s, 1 GiB limits for that diagnostic's verification run. Keep the
-separate dense regression below 3,000 free DOFs (180 s/1.5 GiB budget). Record
-checks/skips, evidence, and source/mesh hashes; update documentation, commit,
-and push under the new `Continue` request. Keep `b2-gate` integration for a later
-review: its actual response-mesh stability remains `not_assessed`, the physical
-B2 gate remains failed, and `campaign_ready` remains false.
+**Completion:** produce a review that interprets certified versus inconclusive
+results without calling an inconclusive case unstable, preserves the dense
+3,000-free-DOF guard, failed B2 gate and `campaign_ready=false`, and defines one
+bounded follow-up with a model/effort recommendation and a clear stop point.
+Do not wire `b2-coercivity` into `b2-gate` in this review.
 
-**Stop:** stop after this diagnostic and its checks, even if the 50 mm result
-is inconclusive. No harmonic pilot, sparse production factorization, larger
-mesh run, physical-parameter change, or threshold relaxation belongs here.
-Stop earlier with evidence if calibration contradicts the bound, assumptions
-fail, or a resource cap is exceeded. Recommend **GPT-6 Astra, high reasoning**
-next to interpret the result and select a bounded actual-mesh stability or
-physical-accuracy task. Recommend Luna/medium again only for an understood
-mechanical defect, specifying its exact fix, validation, and stop condition.
+**Stop:** stop at that research-decision boundary. Do not launch response-mesh
+factorizations, harmonic pilots, larger meshes, or campaigns; do not change the
+physical model, penalty, or thresholds. If the evidence makes the only next
+step a known mechanical fix, recommend GPT-5.6 Luna, medium reasoning, with the
+exact fix, relevant check, and stop condition. Otherwise recommend Astra/high
+for the next scientific interpretation. Official OpenAI model guidance was
+rechecked on 2026-09-20: it lists GPT-6 Astra for complex reasoning/coding and
+GPT-5.6 Luna for cost-sensitive workloads; account/client availability can
+vary. No model switch or session launch occurred. See the
+[OpenAI model catalog](https://developers.openai.com/api/docs/models) and
+[reasoning guide](https://developers.openai.com/api/docs/guides/reasoning).
 
-**Availability:** the [official model guide](https://learn.chatgpt.com/docs/models)
-was opened on 2026-09-20 and lists Luna and Astra for Codex. Client/account
-availability can vary; recheck at the next handoff. No model switch or new
-session was launched by this written recommendation.
+**Availability:** OpenAI's current model catalog and reasoning guide were
+checked on 2026-09-20. The catalog lists GPT-6 Astra and GPT-5.6 Luna; the guide
+recommends Astra for most reasoning workloads and Luna for the lowest cost and
+latency. The signed-in Codex client's available model list can vary by account;
+confirm there before starting. No model switch or new session was launched.
 
 ## Last completed work
 
-R005 completed the stability-method review at source `21676b9`. The sufficient
-local bound certifies alpha=96 at 100 mm and alpha=48/96 at 70 mm. It is
-inconclusive for some stable cases, including alpha=48 at 100 mm. The sparse
-alternative counted all 67 negative constrained modes for alpha=6 on 100 mm
-and none for alpha=48; it is not the next implementation package.
+R006 implemented and exercised `b2-coercivity` on 100/70/50 mm fixtures. The
+certified penalties were 96 at 100 mm, 48/96 at 70 mm, and 96 at 50 mm. The
+50 mm alpha=48 result is inconclusive, not unstable. The alpha=6 dense control
+remains negative; stable dense controls still show why the local sufficient
+bound can be conservative. No physical acceptance threshold or gate behavior
+changed, and the standalone diagnostic is not wired into `b2-gate`.
 
-Validation: ten dense cases, five targeted time steps, 253 independent local
-trace-form comparisons, and six sparse inertia comparisons agreed with their
-reference results. The full calibration took 46.86 s / 796.06 MiB peak RSS;
-the separate warm local calculation took 0.117 s / 196.74 MiB. Evidence is in
-`/tmp/navier-b2-stability-method-r005/{dense,local,local_cost,provenance}.json`;
-the versioned calibration appendix preserves reproduction code and provenance.
-Local Markdown links/anchors, fenced-block syntax, strict JSON/evidence
-consistency, and `git diff --check` passed. Application suites and visualization
-checks were skipped because numerical/application source did not change.
-
-Earlier R004 reporting checks remain recorded in `REQUEST_LOG.md` and
-`B2_CONTINUATION_REVIEW.md`; do not replay that completed implementation.
+Checks: ordinary discovery 50 (37 passed, 13 optional skips), optional B2
+discovery 27 passed, focused coercivity checks 6 passed, CLI help passed,
+253 local UFL trace comparisons within `1e-12`, strict JSON/report semantics,
+and `git diff --check`. The three-mesh diagnostic took 0.51 s / 179.56 MiB
+parent-observed RSS; the separate dense comparison took 7.26 s / 769.07 MiB.
+Both remained below their recorded wall-time and memory caps. Evidence is in
+`/tmp/navier-b2-coercivity-r006-final2/` and the associated watchdog/dense JSON files;
+the versioned review records numerical and source/mesh evidence.

@@ -32,9 +32,12 @@ physical accuracy, or campaign readiness.
 
 The [scalable stability review](B2_SCALABLE_STABILITY_REVIEW.md) now specifies
 a separate sufficient coercivity diagnostic, calibrated on the existing small
-cylinders and compared with sparse inertia counts. It has not been integrated
-into this gate or applied to its requested response meshes. An inconclusive
-coercivity bound must not be interpreted as an unstable operator.
+cylinders and compared with sparse inertia counts. The standalone diagnostic
+has now run on the 100, 70, and 50 mm fixtures; its 50 mm alpha=48 result is
+inconclusive and alpha=96 is certified positive by the sufficient bound. It is
+not integrated into this gate and has not assessed the requested response
+meshes. An inconclusive coercivity bound must not be interpreted as an
+unstable operator.
 
 This package is deliberately incomplete: the six-input response campaign was
 not launched because the numerical acceptance gates did not all pass.

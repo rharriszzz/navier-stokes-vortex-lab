@@ -202,6 +202,16 @@ def _arguments() -> argparse.Namespace:
     )
     verification.add_argument("--penalty-factor", type=float, default=48.0)
     verification.add_argument("--comparison-penalty-factor", type=float, default=96.0)
+    coercivity = subcommands.add_parser(
+        "b2-coercivity", help="run the bounded sufficient local B2 energy certificate"
+    )
+    coercivity.add_argument("--config", type=Path, required=True, help="versioned benchmark JSON configuration")
+    coercivity.add_argument("--output-dir", type=Path, default=Path("results/realizability/b2/coercivity"),
+                            help="generated output directory; ignored by Git")
+    coercivity.add_argument("--mesh-sizes", type=float, nargs="+", default=(0.10, 0.07, 0.05),
+                            help="bounded cylinder fixture mesh sizes in metres")
+    coercivity.add_argument("--penalty-factors", type=float, nargs="+", default=(48.0, 96.0),
+                            help="SIP penalties to evaluate without changing them")
     return parser.parse_args()
 
 
@@ -310,6 +320,27 @@ def main() -> None:
         (output_dir / "stability.md").write_text(markdown, encoding="utf-8")
         print(markdown, end="")
         print(f"Wrote {output_dir / 'stability.json'} and {output_dir / 'stability.md'}")
+        return
+    if args.command == "b2-coercivity":
+        from .backends.b2_coercivity import format_b2_coercivity, run_b2_coercivity
+
+        report = run_b2_coercivity(config, tuple(args.mesh_sizes), tuple(args.penalty_factors))
+        report["provenance"] = _source_provenance(
+            args.config,
+            (Path("realizability/backends/fenicsx_stokes.py"),
+             Path("realizability/backends/hdiv_stokes.py"),
+             Path("realizability/backends/b2_coercivity.py"), Path("realizability/cli.py")),
+        )
+        output_dir = args.output_dir
+        output_dir.mkdir(parents=True, exist_ok=True)
+        (output_dir / "coercivity.json").write_text(
+            json.dumps(report, indent=2, sort_keys=True, default=_json_default, allow_nan=False) + "\n",
+            encoding="utf-8",
+        )
+        markdown = format_b2_coercivity(report)
+        (output_dir / "coercivity.md").write_text(markdown, encoding="utf-8")
+        print(markdown, end="\n")
+        print(f"Wrote {output_dir / 'coercivity.json'} and {output_dir / 'coercivity.md'}")
         return
     if args.command == "b2-verify":
         from .backends.b2_verification import format_b2_verification_fixture, run_b2_verification_fixture

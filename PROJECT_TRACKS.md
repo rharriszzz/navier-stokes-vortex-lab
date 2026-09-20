@@ -76,11 +76,13 @@ control. The six-input campaign and B3 sensing work have not begun.
 The acceptance-report repair and physical-reference diagnostics are complete.
 The [scalable stability review](docs/realizability/B2_SCALABLE_STABILITY_REVIEW.md)
 calibrates a sufficient local coercivity bound against dense small-cylinder
-fixtures and compares it with sparse constrained inertia counts. The next
-bounded task packages the local certificate as a separate diagnostic, with
-inconclusive results kept explicit. Response-mesh stability and physical
-accuracy remain unresolved. Use [SESSION_HANDOFF.md](SESSION_HANDOFF.md) for
-the current model recommendation, completion criteria, and stopping conditions.
+fixtures and compares it with sparse constrained inertia counts. The separate
+`b2-coercivity` diagnostic is implemented and has been evaluated on 100, 70,
+and 50 mm fixtures. At 50 mm, alpha=48 remains inconclusive while alpha=96 is
+certified positive by this sufficient local bound. This does not assess the
+actual response meshes or their physical accuracy; the B2 gate remains failed
+and campaign readiness false. Use [SESSION_HANDOFF.md](SESSION_HANDOFF.md) for
+the current research review, completion criteria, and stopping conditions.
 
 ### Core constraint
 

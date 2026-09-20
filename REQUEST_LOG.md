@@ -230,3 +230,64 @@ floor, and whether inconclusive cases merit a separate sparse method.
 `Review scalable B2 stability certificates`. Its commit identity and upstream
 push result are recorded in Git history and the session's final response.
 The review stops here before implementing the next diagnostic.
+
+## R006 — 2026-09-20 — Short continuation request
+
+**User request (verbatim):**
+
+> continue
+
+**Scope:** Implement the bounded B2 local coercivity diagnostic defined in the
+current handoff and stability review, run only its prescribed checks, update
+documentation and handoff, then commit and push the scoped changes to the
+configured upstream.
+
+**Status:** In progress.
+
+**Outcome, 2026-09-20:** Implemented the separate optional `b2-coercivity`
+diagnostic and strict JSON/Markdown reports. It uses the reviewed four-by-four
+cell certificate, validates affine connected tetrahedral geometry and facet
+coverage, enforces the 500-cell pre-array guard, and reports positive,
+inconclusive, invalid, or resource-limited results. It includes config,
+dependency versions, mesh/source hashes, energy-bound units, timings, and peak
+RSS. It remains separate from `b2-gate`; no production response operator,
+harmonic pilot, physical threshold, or campaign setting changed.
+
+**Validation:** The 100/70/50 mm meshes have 82/171/482 cells, and their
+`C_upper` values are 56.0371901177, 36.7200957987, and 58.1265712308. The
+alpha=6/12/24/48/96 certificate classifications match the review on 100/70 mm;
+on 50 mm alpha=96 is certified and alpha=48 is inconclusive. The 50 mm mesh
+hash matches its stored dense-fixture hash. Independent UFL mass/trace
+eigenvalues agree on all 253 100/70 mm cells within `1e-12`; quadrature,
+scale-invariance, vertex-permutation, degeneracy, and pre-array resource
+refusal checks pass. A separate guarded dense run reproduced all ten stored
+rates (maximum absolute difference `4.01e-14 /s`), including the negative
+alpha=6 control and stable-but-inconclusive cases. The final diagnostic took
+0.51 s and 179.56 MiB parent-observed peak RSS; the dense run took 7.26 s and
+769.07 MiB. Both stayed below their 120 s/1 GiB and 180 s/1.5 GiB limits.
+
+Ordinary discovery: 50 tests, 37 passed and 13 optional DOLFINx skips.
+Optional B2 discovery: 27 passed. Focused optional coercivity suite: six
+passed. CLI help, strict JSON/report review, mesh/source hash checks, and
+`git diff --check` passed. Render and movie checks were skipped because those
+layers did not change. Final report evidence is in
+`/tmp/navier-b2-coercivity-r006-final2/`,
+`/tmp/navier-b2-coercivity-r006-final2-watch.json`,
+`/tmp/navier-b2-stability-dense-r006.json`, and
+`/tmp/navier-b2-dense-r006-watch.json`.
+
+**Changed files:** `realizability/backends/b2_coercivity.py`,
+`realizability/cli.py`, `tests/realizability/test_b2_coercivity.py`,
+`docs/realizability/B2_SCALABLE_STABILITY_REVIEW.md`,
+`docs/realizability/B2_GATE.md`, `docs/realizability/B2_NEXT_STEPS.md`,
+`PROJECT_TRACKS.md`, `SESSION_HANDOFF.md`, and `REQUEST_LOG.md`.
+
+**Next task/recommendation:** GPT-6 Astra, high reasoning, to interpret whether
+this sufficient local result informs actual response-mesh stability and to
+select one bounded stability or physical-accuracy/error-floor review. Define
+acceptance evidence, resource limits, alternatives, and stop conditions; stop
+before large runs or implementation. Recommend GPT-5.6 Luna, medium, only if
+that review reduces the next action to a known mechanical fix with a narrow
+check. Official OpenAI model documentation was rechecked 2026-09-20 and lists
+Astra for complex reasoning/coding and Luna for cost-sensitive work; local
+client/account access may vary. No model switch occurred.

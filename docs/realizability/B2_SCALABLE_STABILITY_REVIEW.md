@@ -316,3 +316,66 @@ targeted steps, 253 independently assembled local trace comparisons, six sparse
 inertia comparisons, strict-JSON/evidence consistency, local links/anchors,
 fenced-block syntax, and `git diff --check`. Ordinary application suites,
 rendering, and encoding checks are not rerun because their source is unchanged.
+
+## 2026-09-20 implementation result (R006)
+
+Implemented the standalone `b2-coercivity` command in
+`realizability/backends/b2_coercivity.py` and `realizability/cli.py`. It
+calculates the four-by-four P1 trace matrices and conservative absolute-row-sum
+bound without assembling global velocity or divergence matrices. It rejects
+nonserial, nonaffine, non-tetrahedral, disconnected, incomplete-facet, and
+unsupported near-degenerate geometry; checks the 500-cell limit before
+allocating per-cell coordinate and trace arrays; and reports the guarded
+`C_safe` and dimensionless beta. Results use `certified_positive`,
+`inconclusive`, `invalid`, and `resource_limit` states. Inconclusive is not
+instability. Reports include configuration, mesh and source hashes, dependency
+versions, counts, worst-cell diagnostics, timings, peak RSS, and the persistent
+physical-accuracy blocker. The command is separate from `b2-gate`.
+
+The 100/70/50 mm results reproduce the review's local classifications at
+alpha=6/12/24/48/96. Their cell counts are 82/171/482 and their `C_upper`
+values are 56.0371901177/36.7200957987/58.1265712308. At 100 mm only alpha=96
+is certified; at 70 mm alpha=48/96 are certified; at 50 mm alpha=96 is
+certified, with alpha=48 inconclusive. That final result is an allowed
+finite-limit result. It is not evidence that alpha=48 is unstable, and it does
+not justify changing a penalty. The separate dense regression remained within
+the 3,000-free-DOF guard and reproduced all ten stored rates, including the
+negative alpha=6 control and positive yet locally inconclusive cases. The
+largest dense-rate difference from the stored values was `4.01e-14 /s`.
+
+| Mesh | Cells | `C_upper` | Mesh SHA-256 | Certified alpha values |
+|---:|---:|---:|---|---|
+| 100 mm | 82 | 56.0371901177 | `97e8d99450223ab6d448dac3c484152b7590aa00ad5fa3fb3f8a4d3a8475ac78` | 96 |
+| 70 mm | 171 | 36.7200957987 | `8d2ffd3d7e7f563035ee6099e54f7e602135d7c3f2d63d81d124bd6bf4d10e5a` | 48, 96 |
+| 50 mm | 482 | 58.1265712308 | `423ab057c5738ae3e2dcef6e82c238ee7e61bc1d0af7f1e212d04b8a2cd6bfb4` | 96 |
+
+Independent quadrature tests confirm the analytic P1 cell/face matrices;
+scale and vertex-permutation checks pass; flat geometry is rejected; and an
+over-cap fake mesh is refused before its coordinate array can be accessed.
+Every local trace eigenvalue on the 82- and 171-cell meshes agrees with
+independent DG1 UFL mass/trace assembly within `1e-12` relative error (253
+cells total). The final three-mesh diagnostic used 0.51 s and 179.56 MiB
+parent-observed peak RSS, below 120 s/1 GiB. Its report has strict JSON,
+`campaign_ready=false`, and a nonempty physical-accuracy blocker. The separate
+dense run took 7.26 s and peaked at 769.07 MiB, below 180 s/1.5 GiB. These are
+measurements in this environment, not general runtime guarantees.
+
+Validation: ordinary discovery ran 50 tests (37 passed, 13 optional DOLFINx
+skips); optional B2 discovery passed 27 tests; the focused optional coercivity
+tests passed all six checks; CLI help passed; strict report contents and mesh
+hashes were checked; `git diff --check` passed. The ordinary interpreter lacks
+DOLFINx, so its independent UFL test was skipped there and passed in the
+optional environment. Full evidence and watchdog records are in
+`/tmp/navier-b2-coercivity-r006-final2/` and
+`/tmp/navier-b2-coercivity-r006-final2-watch.json`,
+`/tmp/navier-b2-stability-dense-r006.json`. Mesh hashes are recorded in the
+coercivity report; the 50 mm value matches the previously recorded dense
+fixture hash.
+
+Changed source: `realizability/backends/b2_coercivity.py`,
+`realizability/cli.py`, and `tests/realizability/test_b2_coercivity.py`.
+Changed documentation: this review, `B2_GATE.md`, `B2_NEXT_STEPS.md`,
+`PROJECT_TRACKS.md`, `SESSION_HANDOFF.md`, and `REQUEST_LOG.md`. The actual
+response-mesh stability question and physical accuracy/error floor remain
+unresolved. No production response run, gate integration, threshold change,
+harmonic pilot, or campaign was performed.
