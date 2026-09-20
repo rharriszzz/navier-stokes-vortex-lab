@@ -1,5 +1,10 @@
 # B2 continuation: independent swirl reference and stability checks
 
+Follow-up at commit `a6295da`: the reference and cube audit are implemented.
+The new [stability review](B2_STABILITY_REVIEW.md) tests the actual cylinder
+geometry, demonstrates unforced energy growth, and specifies the next bounded
+implementation package. The original derivation below remains useful context.
+
 Prepared 2026-09-19 after reading all tracked source, configuration, tests, and
 research documents at commit `47b3205`. The tracked working tree was clean.
 The stored B2 report's six source/configuration hashes match the current files.

@@ -52,6 +52,20 @@ class HdivB2Tests(unittest.TestCase):
         self.assertEqual(features.shape, (6,))
         self.assertTrue(np.isfinite(features).all())
 
+    def test_facet_consistent_trace_diagnostics_are_finite(self) -> None:
+        from realizability.backends.hdiv_stokes import harmonic_response
+
+        normal = harmonic_response(self.config, "N_02c", 0.01, 0.07, penalty_factor=48.0)
+        tangential = harmonic_response(self.config, "T_00c", 0.01, 0.07, penalty_factor=48.0)
+        for result in (normal, tangential):
+            for trace in (result.real_boundary_trace, result.imaginary_boundary_trace):
+                self.assertTrue(np.isfinite(tuple(trace.__dict__.values())).all())
+                self.assertGreaterEqual(trace.interior_tangential_jump_relative_l2, 0.0)
+        # The smooth-cylinder swirl target has a measurable normal component
+        # on planar side facets; the RHS now projects it before weak imposition.
+        self.assertGreater(tangential.real_boundary_trace.target_normal_mismatch_relative_l2, 1.0e-3)
+        self.assertLess(tangential.imaginary_boundary_trace.target_normal_mismatch_relative_l2, 1.0e-12)
+
     def test_small_mesh_sip_stability_audit(self) -> None:
         from realizability.backends.hdiv_stokes import sip_stability_diagnostics
 
@@ -66,6 +80,26 @@ class HdivB2Tests(unittest.TestCase):
                 self.assertLess(metrics["minimum_divergence_free_eigenvalue"], 0.0)
             else:
                 self.assertGreater(metrics["minimum_divergence_free_eigenvalue"], 0.0)
+
+    def test_cylinder_energy_audit_distinguishes_known_unstable_penalty(self) -> None:
+        from realizability.backends.b2_stability import run_cylinder_stability_audit
+
+        report = run_cylinder_stability_audit(
+            self.config, mesh_sizes=(0.10,), penalty_factors=(6.0, 48.0), include_backward_euler=False
+        )
+        cases = report["mesh_results"][0]["penalty_cases"]
+        self.assertFalse(cases[0]["stability_checks_passed"])
+        self.assertLess(cases[0]["minimum_decay_rate_per_s"], 0.0)
+        self.assertTrue(cases[1]["stability_checks_passed"])
+        self.assertGreater(cases[1]["minimum_decay_rate_per_s"], 0.0)
+
+    def test_non_affine_manufactured_fixture_converges(self) -> None:
+        from realizability.backends.hdiv_stokes import non_affine_manufactured_convergence
+
+        rows = non_affine_manufactured_convergence()
+        self.assertLess(rows[-1]["velocity_l2_error"], rows[0]["velocity_l2_error"])
+        self.assertLess(rows[-1]["divergence_l2"], 1.0e-9)
+        self.assertLess(rows[-1]["algebraic_residual"], 1.0e-9)
 
 
 if __name__ == "__main__":

@@ -9,6 +9,7 @@ from typing import Any
 import numpy as np
 
 from ..config import PilotConfig
+from .b2_stability import run_cylinder_stability_audit
 from .fem_observables import extract_complex_linear_features
 from .hdiv_stokes import affine_reaction_verification, harmonic_response
 
@@ -55,6 +56,19 @@ def _comparison(coarse: complex, fine: complex) -> dict[str, float | bool]:
     }
 
 
+def _pde_diagnostics_passed(result) -> bool:
+    """Apply the same algebraic and physical checks to every pilot solve."""
+
+    return bool(
+        result.real.divergence_ratio < 1.0e-3
+        and result.imaginary.divergence_ratio < 1.0e-3
+        and result.corrected_flux_ratio < 1.0e-8
+        and result.real.algebraic_residual < 1.0e-9
+        and result.real.boundary_dof_residual < 1.0e-14
+        and result.imaginary.boundary_dof_residual < 1.0e-14
+    )
+
+
 def run_b2_gate(
     config: PilotConfig,
     mesh_sizes: tuple[float, ...] = (0.04, 0.03, 0.025),
@@ -67,6 +81,30 @@ def run_b2_gate(
         raise ValueError("Use at least two positive mesh sizes.")
     if any(finer >= coarser for coarser, finer in zip(mesh_sizes, mesh_sizes[1:])):
         raise ValueError("mesh_sizes must be listed from coarse to fine.")
+
+    stability_audit = run_cylinder_stability_audit(
+        config, penalty_factors=(penalty_factor, comparison_penalty_factor)
+    )
+    stability_passed = bool(stability_audit["all_requested_cases_stable"])
+    if not stability_passed:
+        return {
+            "schema_version": 2,
+            "claim": "B2 pre-campaign numerical gate only; no six-mode response campaign or control result.",
+            "formulation": {
+                "velocity_pressure": "BDM2/DG1 divergence-conforming symmetric interior-penalty Stokes",
+                "operating_point": "rest",
+                "frequency_hz": 0.01,
+                "penalty_factor": penalty_factor,
+                "comparison_penalty_factor": comparison_penalty_factor,
+                "production_volume_forcing": "none",
+            },
+            "mesh_sizes": list(mesh_sizes),
+            "cylinder_stability_audit": stability_audit,
+            "cylinder_stability_gate_passed": False,
+            "all_numerical_gates_passed": False,
+            "campaign_launched": False,
+            "campaign_blocked_reason": "One or more requested SIP penalties add energy on a bounded cylinder fixture; harmonic pilot solves were not launched.",
+        }
 
     affine = affine_reaction_verification(resolution=3, penalty_factor=penalty_factor)
     records: dict[str, list[dict[str, Any]]] = {mode: [] for mode in PRIMARY_FEATURE}
@@ -87,14 +125,7 @@ def run_b2_gate(
             gains = extract_complex_linear_features(fields) / config.probe_velocity
             index = PRIMARY_FEATURE[mode]
             primary_values[mode].append(complex(gains[index]))
-            diagnostics_passed = (
-                result.real.divergence_ratio < 1.0e-3
-                and result.imaginary.divergence_ratio < 1.0e-3
-                and result.corrected_flux_ratio < 1.0e-8
-                and result.real.algebraic_residual < 1.0e-9
-                and result.real.boundary_dof_residual < 1.0e-14
-                and result.imaginary.boundary_dof_residual < 1.0e-14
-            )
+            diagnostics_passed = _pde_diagnostics_passed(result)
             all_pde_diagnostics_pass = all_pde_diagnostics_pass and diagnostics_passed
             records[mode].append(
                 {
@@ -145,12 +176,14 @@ def run_b2_gate(
             _return_fields=True,
         )
         gains = extract_complex_linear_features(fields) / config.probe_velocity
+        diagnostics_passed = _pde_diagnostics_passed(result)
         penalty_checks[mode] = {
             "base_penalty_factor": penalty_factor,
             "comparison_penalty_factor": comparison_penalty_factor,
             **_comparison(primary_values[mode][-1], gains[index]),
             "comparison_solver": result.as_dict(),
             "comparison_feature_gains": _complex_records(gains),
+            "comparison_pde_diagnostics_passed": diagnostics_passed,
         }
         del fields
         gc.collect()
@@ -162,20 +195,24 @@ def run_b2_gate(
         and affine["algebraic_residual"] < 1.0e-9
     )
     mesh_passed = all(rows[-1]["passed_5_percent_5_degree"] for rows in mesh_comparisons.values())
-    penalty_passed = all(row["passed_5_percent_5_degree"] for row in penalty_checks.values())
+    penalty_passed = all(
+        row["passed_5_percent_5_degree"] and row["comparison_pde_diagnostics_passed"]
+        for row in penalty_checks.values()
+    )
     quadrature_passed = all(
         row["default_to_high_primary"]["passed_5_percent_5_degree"]
         for row in quadrature_checks.values()
     )
     all_passed = bool(
-        affine_passed
+        stability_passed
+        and affine_passed
         and all_pde_diagnostics_pass
         and mesh_passed
         and penalty_passed
         and quadrature_passed
     )
     return {
-        "schema_version": 1,
+        "schema_version": 2,
         "claim": "B2 pre-campaign numerical gate only; no six-mode response campaign or control result.",
         "formulation": {
             "velocity_pressure": "BDM2/DG1 divergence-conforming symmetric interior-penalty Stokes",
@@ -187,6 +224,8 @@ def run_b2_gate(
             "production_volume_forcing": "none",
         },
         "mesh_sizes": list(mesh_sizes),
+        "cylinder_stability_audit": stability_audit,
+        "cylinder_stability_gate_passed": stability_passed,
         "affine_reaction_verification": affine,
         "affine_verification_passed": affine_passed,
         "pilot_divergence_and_residual_gates_passed": all_pde_diagnostics_pass,
@@ -218,6 +257,7 @@ def format_b2_gate(report: dict[str, Any]) -> str:
         "",
         "| Gate | Passed |",
         "|---|:---:|",
+        f"| bounded cylinder energy stability | {report['cylinder_stability_gate_passed']} |",
         f"| affine reaction verification | {report['affine_verification_passed']} |",
         f"| flux, algebraic residual, and strong divergence | {report['pilot_divergence_and_residual_gates_passed']} |",
         f"| primary gain/phase mesh convergence | {report['primary_mesh_convergence_passed']} |",
@@ -229,6 +269,9 @@ def format_b2_gate(report: dict[str, Any]) -> str:
         "| Mode → feature | Meshes (m) | Gain change | Phase change | Passed |",
         "|---|---:|---:|---:|:---:|",
     ]
+    if not report["cylinder_stability_gate_passed"]:
+        lines.extend(["", "## Disposition", "", report["campaign_blocked_reason"]])
+        return "\n".join(lines) + "\n"
     for mode, rows in report["primary_feature_mesh_comparisons"].items():
         feature = FEATURE_NAMES[PRIMARY_FEATURE[mode]]
         for row in rows:

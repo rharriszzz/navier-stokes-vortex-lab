@@ -152,6 +152,50 @@ def _arguments() -> argparse.Namespace:
         default=(0.04, 0.03, 0.025),
         help="coarse-to-fine uniform pilot mesh sizes in metres",
     )
+    b2_gate.add_argument(
+        "--penalty-factor",
+        type=float,
+        default=48.0,
+        help="base SIP penalty; a bounded cylinder audit must pass before pilot solves",
+    )
+    b2_gate.add_argument(
+        "--comparison-penalty-factor",
+        type=float,
+        default=96.0,
+        help="comparison SIP penalty; also checked by the bounded cylinder audit",
+    )
+    stability = subcommands.add_parser(
+        "b2-stability", help="run the bounded B2 cylinder energy-stability audit"
+    )
+    stability.add_argument("--config", type=Path, required=True, help="versioned benchmark JSON configuration")
+    stability.add_argument(
+        "--output-dir",
+        type=Path,
+        default=Path("results/realizability/b2"),
+        help="generated output directory; ignored by Git",
+    )
+    stability.add_argument(
+        "--mesh-sizes", type=float, nargs="+", default=(0.10, 0.07),
+        help="small cylinder fixture mesh sizes in metres",
+    )
+    stability.add_argument(
+        "--penalty-factors", type=float, nargs="+", default=(6.0, 48.0, 96.0),
+        help="SIP penalties to audit; a negative rate is an explicit failed stability case",
+    )
+    verification = subcommands.add_parser(
+        "b2-verify", help="run small manufactured and swirl-reference B2 verification fixtures"
+    )
+    verification.add_argument("--config", type=Path, required=True, help="versioned benchmark JSON configuration")
+    verification.add_argument(
+        "--output-dir", type=Path, default=Path("results/realizability/b2"),
+        help="generated output directory; ignored by Git",
+    )
+    verification.add_argument(
+        "--mesh-sizes", type=float, nargs=2, default=(0.07, 0.05),
+        help="coarse and fine fixture mesh sizes in metres",
+    )
+    verification.add_argument("--penalty-factor", type=float, default=48.0)
+    verification.add_argument("--comparison-penalty-factor", type=float, default=96.0)
     return parser.parse_args()
 
 
@@ -235,23 +279,87 @@ def main() -> None:
         print(markdown, end="")
         print(f"Wrote {output_dir / 'verification.json'} and {output_dir / 'verification.md'}")
         return
+    if args.command == "b2-stability":
+        from .backends.b2_stability import format_cylinder_stability_audit, run_cylinder_stability_audit
+
+        report = run_cylinder_stability_audit(
+            config, tuple(args.mesh_sizes), tuple(args.penalty_factors)
+        )
+        report["provenance"] = _source_provenance(
+            args.config,
+            (
+                Path("realizability/backends/fenicsx_stokes.py"),
+                Path("realizability/backends/hdiv_stokes.py"),
+                Path("realizability/backends/b2_stability.py"),
+                Path("realizability/cli.py"),
+            ),
+        )
+        output_dir = args.output_dir
+        output_dir.mkdir(parents=True, exist_ok=True)
+        (output_dir / "stability.json").write_text(
+            json.dumps(report, indent=2, sort_keys=True, default=_json_default, allow_nan=False) + "\n",
+            encoding="utf-8",
+        )
+        markdown = format_cylinder_stability_audit(report)
+        (output_dir / "stability.md").write_text(markdown, encoding="utf-8")
+        print(markdown, end="")
+        print(f"Wrote {output_dir / 'stability.json'} and {output_dir / 'stability.md'}")
+        return
+    if args.command == "b2-verify":
+        from .backends.b2_verification import format_b2_verification_fixture, run_b2_verification_fixture
+
+        report = run_b2_verification_fixture(
+            config,
+            tuple(args.mesh_sizes),
+            penalty_factor=args.penalty_factor,
+            comparison_penalty_factor=args.comparison_penalty_factor,
+        )
+        report["provenance"] = _source_provenance(
+            args.config,
+            (
+                Path("realizability/backends/fenicsx_stokes.py"),
+                Path("realizability/backends/hdiv_stokes.py"),
+                Path("realizability/backends/fem_observables.py"),
+                Path("realizability/backends/b2_verification.py"),
+                Path("realizability/swirl_reference.py"),
+                Path("realizability/cli.py"),
+            ),
+        )
+        output_dir = args.output_dir
+        output_dir.mkdir(parents=True, exist_ok=True)
+        (output_dir / "verification_fixture.json").write_text(
+            json.dumps(report, indent=2, sort_keys=True, default=_json_default, allow_nan=False) + "\n",
+            encoding="utf-8",
+        )
+        markdown = format_b2_verification_fixture(report)
+        (output_dir / "verification_fixture.md").write_text(markdown, encoding="utf-8")
+        print(markdown, end="")
+        print(f"Wrote {output_dir / 'verification_fixture.json'} and {output_dir / 'verification_fixture.md'}")
+        return
     if args.command == "b2-gate":
         from .backends.b2_gate import format_b2_gate, run_b2_gate
 
-        report = run_b2_gate(config, tuple(args.mesh_sizes))
+        report = run_b2_gate(
+            config,
+            tuple(args.mesh_sizes),
+            penalty_factor=args.penalty_factor,
+            comparison_penalty_factor=args.comparison_penalty_factor,
+        )
         report["provenance"] = _source_provenance(
             args.config,
             (
                 Path("realizability/backends/hdiv_stokes.py"),
+                Path("realizability/backends/b2_stability.py"),
                 Path("realizability/backends/fem_observables.py"),
                 Path("realizability/backends/b2_gate.py"),
+                Path("realizability/cli.py"),
             ),
         )
         report["process_peak_rss_mib"] = resource.getrusage(resource.RUSAGE_SELF).ru_maxrss / 1024.0
         output_dir = args.output_dir
         output_dir.mkdir(parents=True, exist_ok=True)
         (output_dir / "gate.json").write_text(
-            json.dumps(report, indent=2, sort_keys=True, default=_json_default) + "\n",
+            json.dumps(report, indent=2, sort_keys=True, default=_json_default, allow_nan=False) + "\n",
             encoding="utf-8",
         )
         markdown = format_b2_gate(report)

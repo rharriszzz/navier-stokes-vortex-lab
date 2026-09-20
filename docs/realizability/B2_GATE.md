@@ -33,6 +33,13 @@ python -m realizability.cli b2-gate \
   --mesh-sizes 0.04 0.03 0.025
 ```
 
+The current command first runs the bounded cylinder energy audit at its
+explicit alpha=48 and alpha=96 defaults.  It writes an explicit failed gate
+and skips all harmonic pilots if either candidate adds energy on those small
+fixtures.  These settings are verification candidates, not a certification for
+the listed response meshes; use `b2-stability` and `b2-verify` from
+`B2_STABILITY_REVIEW.md` for their separate reports.
+
 The command writes `results/realizability/b2/gate.{json,md}` and never launches
 the six-mode campaign.  It checks only the two prerequisite pilots,
 `N_02c` and `T_00c`, at 0.01 Hz.
@@ -88,3 +95,10 @@ reference for the tangential pilot. See [B2_NEXT_STEPS.md](B2_NEXT_STEPS.md) for
 the derivation, discrepancy with the stored results, and the stability checks
 to perform before another large refinement run. The failed gate above remains
 unchanged.
+
+The subsequent [cylinder stability review](B2_STABILITY_REVIEW.md) finds
+negative viscous dissipation at the current default penalty on small cylinder
+meshes and confirms unforced energy growth. Stabilization and consistent
+boundary data must be checked before choosing the next refinement strategy;
+the cube audit alone cannot certify a cylinder penalty. No stored gate result
+is reclassified by that review.

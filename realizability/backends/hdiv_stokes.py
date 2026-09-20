@@ -18,6 +18,7 @@ import numpy as np
 from ..boundary_modes import parse_mode
 from ..config import PilotConfig
 from .fenicsx_stokes import (
+    CAP_TAG,
     SIDE_TAG,
     BoundaryInputDiagnostics,
     _block_direct_solve,
@@ -46,6 +47,18 @@ class HdivComponentDiagnostics:
 
 
 @dataclass(frozen=True)
+class BoundaryTraceDiagnostics:
+    """Facet-wise weak-boundary diagnostics, normalized by the command scale."""
+
+    side_tangential_relative_l2: float
+    cap_tangential_relative_l2: float
+    target_normal_mismatch_relative_l2: float
+    actual_side_normal_relative_l2: float
+    actual_cap_normal_relative_l2: float
+    interior_tangential_jump_relative_l2: float
+
+
+@dataclass(frozen=True)
 class HdivHarmonicResult:
     mode: str
     frequency_hz: float
@@ -57,6 +70,8 @@ class HdivHarmonicResult:
     flux_correction_coefficient: float
     corrected_flux_ratio: float
     input_diagnostics: BoundaryInputDiagnostics
+    real_boundary_trace: BoundaryTraceDiagnostics
+    imaginary_boundary_trace: BoundaryTraceDiagnostics
     elapsed_seconds: float
     real: HdivComponentDiagnostics
     imaginary: HdivComponentDiagnostics
@@ -163,6 +178,92 @@ def _input_diagnostics(
     )
 
 
+def _mode_ufl(mode, config: PilotConfig, coordinate):
+    """Return the smooth cylindrical command as a UFL vector expression.
+
+    This is used only on exterior facets.  Keeping it symbolic lets the
+    Nitsche target use each planar facet normal rather than a nodal normal
+    averaged at edges of the faceted cylinder.
+    """
+
+    import ufl
+
+    radius = ufl.sqrt(coordinate[0] ** 2 + coordinate[1] ** 2)
+    radial_x = coordinate[0] / radius
+    radial_y = coordinate[1] / radius
+    cosine, sine = 1.0, 0.0
+    for _ in range(mode.m):
+        cosine, sine = cosine * radial_x - sine * radial_y, sine * radial_x + cosine * radial_y
+    angular = cosine if mode.phase == "c" else sine
+    s = coordinate[2] / config.geometry.half_height
+    window = (1.0 - s**2) ** 2
+    if mode.k == 0:
+        axial = window
+    elif mode.k == 1:
+        axial = s * window
+    elif mode.k == 2:
+        axial = (s**2 - 1.0 / 7.0) * window
+    else:  # parse_mode currently excludes this, but keep the invariant local.
+        raise ValueError(f"Unsupported axial mode index {mode.k}.")
+    scalar = angular * axial / mode.peak_raw_amplitude
+    if mode.is_normal:
+        return scalar * ufl.as_vector((radial_x, radial_y, 0.0))
+    return scalar * ufl.as_vector((-radial_y, radial_x, 0.0))
+
+
+def _boundary_trace_diagnostics(
+    field,
+    smooth_target,
+    imposed_normal,
+    facet_tags,
+    command_speed: float,
+) -> BoundaryTraceDiagnostics:
+    """Measure facet-consistent target, trace, and tangential-jump errors."""
+
+    from dolfinx import fem
+    import ufl
+
+    mesh = field.function_space.mesh
+    normal = ufl.FacetNormal(mesh)
+    ds = ufl.Measure("ds", domain=mesh, subdomain_data=facet_tags)
+    dS = ufl.Measure("dS", domain=mesh)
+    side_area = _global_scalar(mesh, fem.assemble_scalar(fem.form(1.0 * ds(SIDE_TAG))))
+    cap_area = _global_scalar(mesh, fem.assemble_scalar(fem.form(1.0 * ds(CAP_TAG))))
+    interior_area = _global_scalar(mesh, fem.assemble_scalar(fem.form(1.0 * dS)))
+    scale = max(command_speed, np.finfo(float).tiny)
+
+    def tangent(value):
+        return value - ufl.dot(value, normal) * normal
+
+    consistent_target = tangent(smooth_target) + ufl.dot(imposed_normal, normal) * normal
+    side_tangent = _global_scalar(
+        mesh, fem.assemble_scalar(fem.form(ufl.inner(tangent(field - consistent_target), tangent(field - consistent_target)) * ds(SIDE_TAG)))
+    )
+    cap_tangent = _global_scalar(
+        mesh, fem.assemble_scalar(fem.form(ufl.inner(tangent(field), tangent(field)) * ds(CAP_TAG)))
+    )
+    target_normal = _global_scalar(
+        mesh, fem.assemble_scalar(fem.form((ufl.dot(smooth_target - imposed_normal, normal)) ** 2 * ds(SIDE_TAG)))
+    )
+    side_normal = _global_scalar(
+        mesh, fem.assemble_scalar(fem.form((ufl.dot(field - imposed_normal, normal)) ** 2 * ds(SIDE_TAG)))
+    )
+    cap_normal = _global_scalar(
+        mesh, fem.assemble_scalar(fem.form((ufl.dot(field, normal)) ** 2 * ds(CAP_TAG)))
+    )
+    jump_value = ufl.jump(field)
+    tangent_jump = jump_value - ufl.dot(jump_value, normal("+")) * normal("+")
+    interior_jump = _global_scalar(
+        mesh, fem.assemble_scalar(fem.form(ufl.inner(tangent_jump, tangent_jump) * dS))
+    )
+    return BoundaryTraceDiagnostics(
+        math.sqrt(max(side_tangent / max(side_area, np.finfo(float).tiny), 0.0)) / scale,
+        math.sqrt(max(cap_tangent / max(cap_area, np.finfo(float).tiny), 0.0)) / scale,
+        math.sqrt(max(target_normal / max(side_area, np.finfo(float).tiny), 0.0)) / scale,
+        math.sqrt(max(side_normal / max(side_area, np.finfo(float).tiny), 0.0)) / scale,
+        math.sqrt(max(cap_normal / max(cap_area, np.finfo(float).tiny), 0.0)) / scale,
+        math.sqrt(max(interior_jump / max(interior_area, np.finfo(float).tiny), 0.0)) / scale,
+    )
 def affine_reaction_verification(
     resolution: int = 3,
     strain: float = 0.07,
@@ -260,6 +361,100 @@ def affine_reaction_verification(
         "divergence_l2": divergence_l2,
         "algebraic_residual": residual,
     }
+
+
+def non_affine_manufactured_convergence(
+    resolutions: tuple[int, ...] = (3, 4), *, penalty_factor: float = 48.0
+) -> list[dict[str, float | int]]:
+    """Run a smooth divergence-free BDM convergence fixture on unit cubes.
+
+    The source and all boundary data are manufactured from the curl of a
+    smooth vector potential.  This is a numerical fixture only; it does not
+    introduce volume forcing into a boundary-response calculation.
+    """
+
+    require_fenicsx()
+    if len(resolutions) < 2 or any(resolution < 1 for resolution in resolutions):
+        raise ValueError("Use at least two positive cube resolutions.")
+    if any(finer <= coarser for coarser, finer in zip(resolutions, resolutions[1:])):
+        raise ValueError("resolutions must increase.")
+
+    from dolfinx import fem, mesh as dmesh
+    from mpi4py import MPI
+    import ufl
+
+    viscosity = 1.0
+    rows: list[dict[str, float | int]] = []
+    for resolution in resolutions:
+        domain = dmesh.create_unit_cube(MPI.COMM_WORLD, resolution, resolution, resolution)
+        if domain.comm.size != 1:
+            raise RuntimeError("The B2 manufactured convergence fixture is serial only.")
+        V, Q = create_hdiv_spaces(domain)
+        trial, pressure = ufl.TrialFunction(V), ufl.TrialFunction(Q)
+        test, pressure_test = ufl.TestFunction(V), ufl.TestFunction(Q)
+        normal = ufl.FacetNormal(domain)
+        cell_size = ufl.CellDiameter(domain)
+        coordinate = ufl.SpatialCoordinate(domain)
+        pi = math.pi
+        exact = ufl.as_vector(
+            (
+                pi * ufl.sin(pi * coordinate[0]) * ufl.cos(pi * coordinate[1]) * ufl.sin(pi * coordinate[2]),
+                -pi * ufl.cos(pi * coordinate[0]) * ufl.sin(pi * coordinate[1]) * ufl.sin(pi * coordinate[2]),
+                0.0,
+            )
+        )
+
+        def exact_expression(points: np.ndarray) -> np.ndarray:
+            return np.vstack(
+                (
+                    pi * np.sin(pi * points[0]) * np.cos(pi * points[1]) * np.sin(pi * points[2]),
+                    -pi * np.cos(pi * points[0]) * np.sin(pi * points[1]) * np.sin(pi * points[2]),
+                    np.zeros_like(points[0]),
+                )
+            )
+
+        normal_data = fem.Function(V)
+        normal_data.interpolate(exact_expression)
+        domain.topology.create_connectivity(domain.topology.dim - 1, domain.topology.dim)
+        facets = dmesh.exterior_facet_indices(domain.topology)
+        boundary_dofs = fem.locate_dofs_topological(V, domain.topology.dim - 1, facets)
+        boundary_condition = fem.dirichletbc(normal_data, boundary_dofs)
+        alpha = fem.Constant(domain, float(penalty_factor))
+        consistent_target = (
+            exact - ufl.dot(exact, normal) * normal + ufl.dot(normal_data, normal) * normal
+        )
+        bilinear = sip_viscosity_form(trial, test, normal, cell_size, viscosity, alpha)
+        lhs = [
+            [bilinear + ufl.inner(trial, test) * ufl.dx, -pressure * ufl.div(test) * ufl.dx],
+            [-pressure_test * ufl.div(trial) * ufl.dx, None],
+        ]
+        rhs = [
+            (1.0 + 3.0 * pi**2 * viscosity) * ufl.inner(exact, test) * ufl.dx
+            + viscosity
+            * (
+                -ufl.inner(ufl.outer(consistent_target, normal), ufl.grad(test)) * ufl.ds
+                + alpha / cell_size * ufl.inner(ufl.outer(consistent_target, normal), ufl.outer(test, normal)) * ufl.ds
+            ),
+            ufl.ZeroBaseForm((pressure_test,)),
+        ]
+        (velocity, pressure_field), _, residual, _, nullspace = _block_direct_solve(
+            lhs, rhs, [boundary_condition], [V, Q], (1,), f"b2_hdiv_non_affine_{resolution}_"
+        )
+        del nullspace
+        error_squared = float(fem.assemble_scalar(fem.form(ufl.inner(velocity - exact, velocity - exact) * ufl.dx)))
+        velocity_l2, pressure_l2, divergence_l2 = _field_norms(velocity, pressure_field)
+        rows.append(
+            {
+                "resolution": resolution,
+                "cells": int(domain.topology.index_map(domain.topology.dim).size_global),
+                "velocity_l2_error": math.sqrt(max(error_squared, 0.0)),
+                "velocity_l2": velocity_l2,
+                "pressure_l2": pressure_l2,
+                "divergence_l2": divergence_l2,
+                "algebraic_residual": residual,
+            }
+        )
+    return rows
 
 
 def sip_stability_diagnostics(
@@ -422,6 +617,7 @@ def harmonic_response(
     )
     normal = ufl.FacetNormal(mesh)
     cell_size = ufl.CellDiameter(mesh)
+    side_measure = ufl.Measure("ds", domain=mesh, subdomain_data=facet_tags)
     alpha = fem.Constant(mesh, float(penalty_factor))
     nu = config.fluid.kinematic_viscosity
     omega = 2.0 * math.pi * frequency_hz
@@ -443,11 +639,19 @@ def harmonic_response(
         [None, None, -q_i * ufl.div(u_i) * ufl.dx, None],
     ]
 
+    coordinate = ufl.SpatialCoordinate(mesh)
+    smooth_target = _mode_ufl(mode, config, coordinate)
+    facet_consistent_target = (
+        smooth_target - ufl.dot(smooth_target, normal) * normal
+        + ufl.dot(boundary_normal, normal) * normal
+    )
+    # Projecting in UFL retains each planar facet normal.  A continuous nodal
+    # target would average incompatible normals where side facets meet caps.
     boundary_rhs = nu * (
-        -ufl.inner(ufl.outer(boundary_target, normal), ufl.grad(v_r)) * ufl.ds
+        -ufl.inner(ufl.outer(facet_consistent_target, normal), ufl.grad(v_r)) * side_measure(SIDE_TAG)
         + alpha / cell_size
-        * ufl.inner(ufl.outer(boundary_target, normal), ufl.outer(v_r, normal))
-        * ufl.ds
+        * ufl.inner(ufl.outer(facet_consistent_target, normal), ufl.outer(v_r, normal))
+        * side_measure(SIDE_TAG)
     )
     rhs = [
         boundary_rhs,
@@ -492,6 +696,12 @@ def harmonic_response(
         frequency_hz,
         mode.is_normal,
     )
+    real_boundary_trace = _boundary_trace_diagnostics(
+        u_real, physical * smooth_target, boundary_normal, facet_tags, physical
+    )
+    imaginary_boundary_trace = _boundary_trace_diagnostics(
+        u_imaginary, 0.0 * smooth_target, zero_imag, facet_tags, physical
+    )
 
     real_diagnostics = HdivComponentDiagnostics(
         real_velocity,
@@ -526,6 +736,8 @@ def harmonic_response(
         correction,
         corrected_flux_ratio,
         input_diagnostics,
+        real_boundary_trace,
+        imaginary_boundary_trace,
         elapsed,
         real_diagnostics,
         imaginary_diagnostics,
