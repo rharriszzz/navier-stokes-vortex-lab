@@ -1,0 +1,127 @@
+{
+  "status": "passed",
+  "wall_limit_seconds": 60.0,
+  "rss_limit_mib": 512.0,
+  "physical_meshes": 0,
+  "matrix_solves": 0,
+  "watches": {
+    "wrong_root": {
+      "command": [
+        "/tmp/navier-fenicsx/bin/python",
+        "/tmp/navier-b2-matched-r019e/wrapper_toys.py",
+        "--output",
+        "/tmp/navier-b2-matched-r019e/toys/wrong-root"
+      ],
+      "returncode": 1,
+      "elapsed_seconds": 0.10996342098223977,
+      "parent_observed_peak_rss_mib": 35.640625,
+      "samples": 3,
+      "nominal_poll_seconds": 0.05,
+      "maximum_sample_gap_seconds": 0.05369036801857874,
+      "largest_observed_process_tree": 1,
+      "stop_reason": null
+    },
+    "watchdog": {
+      "command": [
+        "/tmp/navier-fenicsx/bin/python",
+        "/tmp/navier-b2-matched-r019e/toy_runner.py",
+        "--self-check",
+        "--output",
+        "/tmp/navier-b2-matched-r019e/toys/watchdog"
+      ],
+      "returncode": 0,
+      "elapsed_seconds": 0.2695525230083149,
+      "parent_observed_peak_rss_mib": 70.6875,
+      "samples": 6,
+      "nominal_poll_seconds": 0.05,
+      "maximum_sample_gap_seconds": 0.05538962301216088,
+      "largest_observed_process_tree": 3,
+      "stop_reason": null
+    },
+    "kernels": {
+      "command": [
+        "/tmp/navier-fenicsx/bin/python",
+        "/tmp/navier-b2-matched-r019e/toy_runner.py",
+        "--toy-child",
+        "--output",
+        "/tmp/navier-b2-matched-r019e/toys/kernels"
+      ],
+      "returncode": 0,
+      "elapsed_seconds": 4.078176198003348,
+      "parent_observed_peak_rss_mib": 140.51171875,
+      "samples": 76,
+      "nominal_poll_seconds": 0.05,
+      "maximum_sample_gap_seconds": 0.0566049299959559,
+      "largest_observed_process_tree": 1,
+      "stop_reason": null
+    },
+    "wrapper": {
+      "command": [
+        "/tmp/navier-fenicsx/bin/python",
+        "/tmp/navier-b2-matched-r019e/wrapper_toys.py",
+        "--output",
+        "/tmp/navier-b2-matched-r019e/toys/wrapper"
+      ],
+      "returncode": 0,
+      "elapsed_seconds": 0.3810220710001886,
+      "parent_observed_peak_rss_mib": 128.1640625,
+      "samples": 8,
+      "nominal_poll_seconds": 0.05,
+      "maximum_sample_gap_seconds": 0.054626636003376916,
+      "largest_observed_process_tree": 1,
+      "stop_reason": null
+    },
+    "block-rhs": {
+      "command": [
+        "/tmp/navier-fenicsx/bin/python",
+        "/tmp/navier-b2-matched-r019e/block_rhs_toys.py",
+        "--output",
+        "/tmp/navier-b2-matched-r019e/toys/block-rhs"
+      ],
+      "returncode": 0,
+      "elapsed_seconds": 0.428424849989824,
+      "parent_observed_peak_rss_mib": 138.88671875,
+      "samples": 9,
+      "nominal_poll_seconds": 0.05,
+      "maximum_sample_gap_seconds": 0.054566289007198066,
+      "largest_observed_process_tree": 1,
+      "stop_reason": null
+    },
+    "disk": {
+      "command": [
+        "/tmp/navier-fenicsx/bin/python",
+        "/tmp/navier-b2-matched-r019e/physical.py",
+        "--extra-toys",
+        "--output",
+        "/tmp/navier-b2-matched-r019e/toys/disk"
+      ],
+      "returncode": 0,
+      "elapsed_seconds": 0.10911035898607224,
+      "parent_observed_peak_rss_mib": 34.41796875,
+      "samples": 3,
+      "nominal_poll_seconds": 0.05,
+      "maximum_sample_gap_seconds": 0.05411268601892516,
+      "largest_observed_process_tree": 1,
+      "stop_reason": null
+    }
+  },
+  "elapsed_seconds": 5.378702526999405,
+  "wrong_root_refusal": {
+    "status": "partial_failed",
+    "stage": "imports",
+    "error": {
+      "type": "FileNotFoundError",
+      "message": "[Errno 2] No such file or directory: '/tmp/navier-b2-matched-r019e/toys/invalid-working-directory/realizability/__init__.py'"
+    },
+    "counts": {
+      "physical_meshes": 0,
+      "pde_solves": 0,
+      "matrix_factorizations": 0,
+      "primary_rhs": 0,
+      "returned_primary_solves": 0,
+      "correction_rhs": 0,
+      "matrix_solves": 0
+    },
+    "report_sha256": "f63a6cb06743d3dbfb45e6b44f28d59c77eb1e4d4d1b90546fb7a3de745ca51c"
+  }
+}

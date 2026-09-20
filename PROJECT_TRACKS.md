@@ -118,11 +118,15 @@ refusal fixtures. No physical run occurred, and the paired diagnostic remains
 incomplete. Discrete boundary sensitivity will not by itself identify
 continuum geometry error. A total FEM error floor is still unknown. The
 [R018 prerequisite attempt](docs/realizability/B2_MATCHED_TRACE_PREFLIGHT_RESULT.md)
-stopped before physical execution: a copied wrapper toy assumed repository
-archive depth when locating the source root. Watchdog and kernel checks passed;
-block RHS and extra disk checks were not reached. The next step is a toy-only
-repair of root discovery and early refusal reporting in the disposable launch
-context. The B2 gate remains
+stopped before physical execution because a copied wrapper toy assumed
+repository archive depth when locating the source root. The
+[R019 portability repair](docs/realizability/B2_TOY_PORTABILITY_RESULT.md)
+passes the wrong-root refusal and all five prerequisite phases in the shallow
+disposable layout. The parent's failed-prerequisite path also writes a finite
+zero-count report without launching a physical child. No physical experiment
+ran; the paired diagnostic remains incomplete. The next step is Astra/high
+review of the unchanged R013 physical runner and prerequisites, with at most
+one attempt under the existing caps if no unresolved decision remains. The B2 gate remains
 failed and campaign readiness false. Use
 [SESSION_HANDOFF.md](SESSION_HANDOFF.md) for completion criteria and stops.
 

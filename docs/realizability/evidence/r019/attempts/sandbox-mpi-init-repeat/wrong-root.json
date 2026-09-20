@@ -1,0 +1,3 @@
+{
+  "stderr": "Abort(404899215): Fatal error in internal_Init_thread: Other MPI error, error stack:\ninternal_Init_thread(71).: MPI_Init_thread(argc=0x77272781dfd8, argv=0x77272781dfd0, required=1, provided=0x7ffee16b939c) failed\nMPII_Init_thread(261)....: \nMPID_Init(549)...........: \nMPIDI_UCX_init_local(234): \nMPIDI_UCX_init_worker(86):  ucx function returned with failed status(ucx_init.c 86 MPIDI_UCX_init_worker Input/output error)\n"
+}

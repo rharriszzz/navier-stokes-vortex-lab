@@ -1,0 +1,6 @@
+Traceback (most recent call last):
+  File "/tmp/navier-b2-matched-r019/wrapper_toys.py", line 191, in <module>
+    args.output.mkdir(parents=True, exist_ok=False)
+  File "/tmp/navier-fenicsx/lib/python3.12/pathlib.py", line 1311, in mkdir
+    os.mkdir(self, mode)
+FileExistsError: [Errno 17] File exists: '/tmp/navier-b2-matched-r019/toys/wrong-root'

@@ -1,10 +1,10 @@
 # Current session handoff
 
 Last updated: 2026-09-20. Latest request:
-[R018](REQUEST_LOG.md#r018--2026-09-20--short-continuation-request), complete at
-the prescribed prerequisite stop. No physical child was launched. R018 starts
-from `bd4945b`; `continue` authorizes its scoped commit/push. Actual delivery
-is recorded in Git history and the final response. R014–R017 evidence is unchanged.
+[R019](REQUEST_LOG.md#r019--2026-09-20--short-continuation-request), complete
+after the toy portability contract passed. No physical child was launched.
+R019 starts from `0e8e421`; `continue` authorizes its scoped commit/push.
+Actual delivery is recorded in Git history and the final response.
 
 ## User goals
 
@@ -28,31 +28,30 @@ update continuity, commit/push scoped work, and stop. Explicit qualifications
 such as “Continue without pushing” override that default. It does not switch the
 selected model or schedule another session. No scheduler is installed.
 
-## Latest result: prerequisite path failure (R018)
+## Latest result: toy portability prerequisites pass (R019)
 
-Read [the R018 result](docs/realizability/B2_MATCHED_TRACE_PREFLIGHT_RESULT.md),
-[evidence index](docs/realizability/B2_MATCHED_TRACE_PREFLIGHT_EVIDENCE.md), and
-[validation](docs/realizability/evidence/r018/validation.json).
-All 19 production identities and 266 prior evidence files match. The R016 and
-R017 stored-data audits passed with writes redirected into the new directory.
-Static review covered the repaired remaining A path; physical compatibility
-remained an execution prerequisite, not an assumed pass.
+Read the [R019 result](docs/realizability/B2_TOY_PORTABILITY_RESULT.md),
+[evidence index](docs/realizability/B2_TOY_PORTABILITY_EVIDENCE.md), and
+[validation](docs/realizability/evidence/r019/validation.json). All 19 pinned
+production identities matched. In a shallow disposable directory, the wrapper
+uses the repository-root working directory, checks source identities before
+DOLFINx/MPI imports, and saves a finite early refusal from a wrong root.
 
-The exact R017 sources were copied to `/tmp/navier-b2-matched-r018/`. Fresh
-watchdog and kernel checks passed. The wrapper toy then raised `IndexError: 4`
-at `wrapper_toys.py:22`, where `Path(__file__).resolve().parents[4]` assumes
-archive depth. The temporary copy has only three parents. R018 preparation
-missed that launch-layout dependency. The failure precedes record construction,
-the first checkpoint and the exception handler, so no wrapper child JSON exists.
-The parent retained its finite refusal record, traceback and resource data.
+The wrong-root report has finite stage/error/count fields and zero physical
+counts. The watchdog, 24-permutation/load/kernel fixtures, wrapper grouping and
+compatibility fixtures, full block-RHS oracle, and disk fixtures all passed.
+The complete parent-monitored sequence took 5.3787 seconds, with 140.5117 MiB
+peak observed child-tree RSS and a 0.056605-second maximum sample gap. Including
+four earlier failed disposable attempts, recorded parent-monitored time was
+6.4805 seconds. Those attempts exposed an output-directory collision and
+sandbox MPI/UCX startup failures; their reports and error logs are archived.
 
-Three monitored child phases used 4.8031 s total, including the failed wrapper,
-with peak observed child-tree RSS 141.5703 MiB and maximum gap 0.057983 s,
-below 60 s/512 MiB. Block RHS and extra disk phases were not launched after
-the refusal. No physical mesh, factorization, PDE solve or matrix solve ran.
-No repair or retry followed the required stop. Full application, refinement,
-rendering and encoding were skipped. The default staged whitespace check has
-one preserved-source exception at `evidence/r018/toy_runner.py:213`.
+A synthetic failed-prerequisite report also verified the parent's refusal path:
+it recorded finite zero counts and `child_launched=false`, with no physical
+launch record. No mesh, PDE solve, factorization or matrix solve ran. The R016
+P-only result and failed physical comparison are unchanged; no A compatibility
+or matched-trace response was measured. The physical B2 gate remains failed
+and `campaign_ready=false`.
 
 ## Preserved physical and toy results
 
@@ -82,38 +81,26 @@ preparation, sensing and validated movie flow remain unassessed or unresolved.
 
 ## Next task
 
-**GPT-5.6 Luna, medium reasoning:** complete the
-[R018 toy portability repair contract](docs/realizability/B2_MATCHED_TRACE_PREFLIGHT_RESULT.md#next-bounded-task-make-toy-prerequisites-portable).
-Before acting, check Git status/history and read this handoff, `STATUS.md`,
-`PROJECT_TRACKS.md`, `EXPERIMENT.md`, `PHYSICAL_REALIZABILITY_PLAN.md`,
-`CONTROL_RESEARCH_ROADMAP.md`, the R013 contract, R016–R018 result/evidence
-records and exact R018 sources. Preserve historical evidence and all 19
-production identities.
+**GPT-6 Astra, high reasoning:** review the unchanged R013 physical runner and
+the R019 prerequisite evidence against the original contract. Before any launch,
+check Git status/history and read the required research documents, R013 contract,
+R016–R019 results/evidence and exact physical runner. Reverify all 19 pinned
+production identities and the preserved P evidence. Confirm the five toy
+phases, wrong-root handling, parent refusal, output limits and unchanged
+180 s/1.5 GiB physical caps. If all prerequisites hold and no method,
+interpretation or acceptance decision is unresolved, run at most one separate
+physical attempt. Stop on the first failure, resource cap or unexplained result;
+do not retry, change trace/tolerance/solver, integrate a gate, or begin campaign,
+B3, rendering or encoding. If the review finds an unresolved scientific or
+numerical choice, record it and stop before launch.
 
-Use a new disposable copy. Replace the wrapper toy's fixed ancestor index
-with the documented repository-root working directory, validated against the
-pinned identities. Move root validation inside its report/exception boundary.
-Inspect all parent/child launch, output-directory and sibling-import assumptions.
-Under one cumulative 60 s/512 MiB budget in the approved MPI environment, run
-the complete five-phase prerequisite sequence from the repository root with
-scripts in a shallow temporary directory, and verify an intentional wrong-root
-refusal leaves finite stage/error/count JSON. Keep every original numerical
-fixture and threshold. Verify the parent's refusal path without a physical child.
-
-Completion means correct disposable invocation and early refusal reporting
-pass, or a precise unresolved failure is recorded; archive and audit evidence,
-update continuity, commit/push scoped work and stop. Stop on resource limits,
-unexplained numerical inconsistency or a scientific decision. No physical
-cylinder, PDE solve, factorization, changed scientific tolerance, gate
-integration, campaign/B3, rendering or encoding in this repair task.
-
-On passing, recommend GPT-6 Astra/high for review and at most one separately
-continued R013 physical attempt under its original prerequisites and
-180 s/1.5 GiB caps. Keep Luna/medium only for understood mechanical defects;
-use Astra/high for scientific, method or acceptance-threshold decisions.
-Both are available in the current session catalog; OpenAI Docs confirms the
-supported efforts ([Luna](https://developers.openai.com/api/docs/models/gpt-5.6-luna),
-[Astra](https://developers.openai.com/api/docs/models/gpt-6-astra)). No model
-switch, delegated session or automation was launched.
+At completion, archive and audit complete or finite partial evidence, update the
+log and handoff, commit/push the scoped changes under the next **Continue**, and
+stop. Recommend Luna/medium for the following task only if it is an understood
+mechanical repair; retain Astra/high if physical interpretation, numerical
+method or acceptance thresholds remain. GPT-6 Astra is listed in the current
+session catalog, and its official model page supports high reasoning for complex
+research and coding ([OpenAI Docs](https://developers.openai.com/api/docs/models/gpt-6-astra)).
+No model switch, delegated session or automation was launched.
 
 **Next prompt: Continue.**

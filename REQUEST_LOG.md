@@ -212,7 +212,7 @@ calibrate against dense small-cylinder fixtures, and document acceptance
 evidence, resource limits, and one bounded implementation follow-up. Commit
 and push only this request's changes to the configured upstream.
 
-**Status:** In progress.
+**Status:** Complete; toy prerequisites passed, stopped before physical execution.
 
 **Plan and completion criteria:** Review the mathematical operator and stored
 fixtures; perform bounded calibration calculations; write a method review with
@@ -1372,3 +1372,27 @@ expected preserved blank line at `docs/realizability/evidence/r018/toy_runner.py
 The staged check excluding that byte-preserved historical source passed. The
 whole-archive default whitespace check did not pass; no executed source was
 edited to hide the exception.
+
+## R019 — 2026-09-20 — Short continuation request
+
+**User request (verbatim):**
+
+> continue
+
+**Interpreted scope:** Apply the Continue workflow to the bounded R018 toy portability repair in the current handoff. Preserve scientific fixtures and thresholds; validate the complete prerequisite toy sequence and early refusal reporting in a disposable copy, audit and archive evidence, update continuity, then commit and push only this task's changes to the configured upstream.
+
+**Status:** In progress.
+
+**Bounded plan and completion criteria:** Check Git status/history; read the handoff and required research and R013/R016–R018 records. Inspect exact R018 sources and identity pins. In a new disposable copy, remove fixed ancestor assumptions using the documented repository-root working directory, validate root identity and report early errors, inspect child launch/output/import assumptions, and run the five-phase toy prerequisites under 60 s/512 MiB. Verify correct-root execution, intentional wrong-root finite refusal JSON, and the parent's refusal path without any physical child. Archive and audit the result, update the handoff with one next task and model/effort guidance, then commit and push the scoped changes.
+
+**Stopping conditions:** Stop on resource limits, unexplained numerical inconsistency or a scientific decision. No physical cylinder, PDE solve, factorization, changed tolerance, gate integration, campaign/B3, rendering or encoding.
+
+**Outcome, 2026-09-20:** The portability and early-refusal contract passed in a shallow disposable directory. `wrapper_toys.py` now uses the repository-root working directory, verifies all pinned source identities before DOLFINx/MPI imports, and writes an early finite report on an invalid root. The wrong-root report is at stage `imports` with zero mesh/solve/factorization/RHS counts. The parent records `prerequisite_refused` with zero counts and `child_launched=false` when its toy report is failed or incomplete.
+
+**Checks and resource accounting:** The full five-phase sequence plus wrong-root probe passed under the 60 s/512 MiB parent monitor: 5.378702527 s, 140.51171875 MiB maximum observed child-tree RSS, and 0.056604930 s maximum sample gap. This includes the watchdog wall/RSS self-checks, kernel fixtures, wrapper grouping/compatibility fixtures, full block-RHS oracle and extra disk checks. All 19 production identities matched. Four earlier disposable failures (one harness output-directory collision, two wrong-root MPI/UCX startup failures and one kernel MPI/UCX startup failure) are preserved; combined parent-monitored time across all attempts was 6.480515285 s. The final run used the approved MPI environment. The isolated parent refusal probe produced finite JSON and no child launch record.
+
+**Evidence, changed files and skips:** Evidence and source hashes are archived under `docs/realizability/evidence/r019/`; see `B2_TOY_PORTABILITY_RESULT.md`, `B2_TOY_PORTABILITY_EVIDENCE.md` and `validation.json`. Changed documentation is limited to this log, `SESSION_HANDOFF.md`, `STATUS.md`, `PROJECT_TRACKS.md`, `docs/realizability/B2_NEXT_STEPS.md`, the new R019 result/evidence index and the R019 archive. No production numerical sources/configuration or R014–R018 artifacts changed. No physical mesh, PDE solve, factorization or matrix solve ran; no A pressure compatibility or matched-trace gain was measured. The B2 gate remains failed and `campaign_ready=false`. Rendering, encoding, application tests, gate integration, campaign and B3 were skipped.
+
+**Next task/recommendation:** GPT-6 Astra, high reasoning, should review the unchanged R013 physical runner and prerequisites against the original contract. If no method, interpretation or acceptance decision is unresolved and all prerequisites remain valid, perform at most one separate physical attempt under 180 s/1.5 GiB; stop on the first failure, resource cap or unexplained result. No retry or changes to trace, tolerances, solver or gate. Keep Astra/high for numerical/scientific interpretation; recommend Luna/medium next only for an understood mechanical defect. GPT-6 Astra is listed in the current session catalog, and the official model page supports high reasoning for complex research and coding: https://developers.openai.com/api/docs/models/gpt-6-astra. No model switch, delegated session or automation occurred.
+
+**Validation:** `docs/realizability/evidence/r019/audit.py` passed: 19 production hashes, archived runner hashes, all finite JSON, five phases, wrong-root/parent refusal, 103 local links/anchors and 35 JSON files. Eight Python sources parsed successfully; `git diff --check` and `git diff --cached --check` passed. Raw MPI error text is retained as JSON string data so its diagnostic spacing is preserved without trailing whitespace in the staged files.

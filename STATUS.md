@@ -1,6 +1,6 @@
 # Project status: physical preparation and a realistic movie
 
-Updated 2026-09-20, following the R018 prerequisite stop, R017 toy repair, partial
+Updated 2026-09-20, following the R019 toy portability repair, R018 prerequisite stop, R017 toy repair, partial
 R016 matched-trace attempt, the R012 physical response audit, and the
 [R010 status-report request](REQUEST_LOG.md#r010--2026-09-20--project-status-and-user-goals).
 
@@ -207,9 +207,14 @@ ran no physical mesh or solve. The
 [R018 review and prerequisite attempt](docs/realizability/B2_MATCHED_TRACE_PREFLIGHT_RESULT.md)
 then passed source/evidence, watchdog and kernel checks, but a wrapper toy
 failed because its repository-root lookup assumed the archive directory depth.
-No physical child was launched. The next checkpoint is a Luna/medium toy-only
-repair of root discovery and early failure reporting, including validation of
-the actual disposable invocation. The R013 physical experiment remains deferred.
+The [R019 toy portability repair](docs/realizability/B2_TOY_PORTABILITY_RESULT.md)
+now passes all five prerequisite phases in the required shallow disposable
+layout. Wrong-root and parent refusals produce finite zero-count reports. The
+run took 5.38 seconds and 140.51 MiB peak observed child-tree RSS. No physical
+child was launched, and no paired gain or compatibility result was produced.
+The next checkpoint is an Astra/high review of the unchanged R013 physical
+runner and prerequisites, followed by at most one separate physical attempt if
+that review finds no unresolved decision.
 
 The physical-response campaign remains blocked (`campaign_ready=false`). No
 preparation protocol, sensing result, time-dependent movie dataset or render
