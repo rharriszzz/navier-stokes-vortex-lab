@@ -1,6 +1,6 @@
 # Project status: physical preparation and a realistic movie
 
-Updated 2026-09-20, following the R019 toy portability repair, R018 prerequisite stop, R017 toy repair, partial
+Updated 2026-09-20, following the R020 pressure-compatibility stop, R019 toy portability repair, R018 prerequisite stop, R017 toy repair, partial
 R016 matched-trace attempt, the R012 physical response audit, and the
 [R010 status-report request](REQUEST_LOG.md#r010--2026-09-20--project-status-and-user-goals).
 
@@ -212,9 +212,16 @@ now passes all five prerequisite phases in the required shallow disposable
 layout. Wrong-root and parent refusals produce finite zero-count reports. The
 run took 5.38 seconds and 140.51 MiB peak observed child-tree RSS. No physical
 child was launched, and no paired gain or compatibility result was produced.
-The next checkpoint is an Astra/high review of the unchanged R013 physical
-runner and prerequisites, followed by at most one separate physical attempt if
-that review finds no unresolved decision.
+The subsequent [R020 physical attempt](docs/realizability/B2_MATCHED_TRACE_COMPATIBILITY_RESULT.md)
+passed fresh prerequisites and reached matched-trace RHS lifting, then stopped
+before A_32's solve because pressure compatibility exceeded the fixed arithmetic
+limit by 11.09 times. It took 59.97 seconds and 757.00 MiB. P's solve, correction
+and outputs reproduce R016; no A response was measured. Saved boundary-flux
+imbalance predicts the failed pressure check, supporting finite-order trace
+integration as the cause. A_64's smaller saved flux does not establish its RHS
+compatibility. The next checkpoint is an Astra/high method review using saved
+data, to specify a compatible future integration comparison without changing
+acceptance thresholds. No physical retry is part of that review.
 
 The physical-response campaign remains blocked (`campaign_ready=false`). No
 preparation protocol, sensing result, time-dependent movie dataset or render

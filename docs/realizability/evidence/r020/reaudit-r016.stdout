@@ -1,0 +1,22 @@
+{
+  "status": "passed",
+  "archived_artifacts": 48,
+  "pinned_source_identities": 19,
+  "historical_files_preserved": 79,
+  "prior_appendices_preserved": 4,
+  "toy_total_seconds": 5.373297752026701,
+  "toy_peak_rss_mib": 140.99609375,
+  "physical_seconds": 59.17945076801698,
+  "physical_peak_rss_mib": 755.86328125,
+  "physical_meshes": 1,
+  "returned_primary_solves": 1,
+  "correction_solves": 1,
+  "matched_trace_solves": 0,
+  "projection_records": 564,
+  "disk_regions": 11,
+  "P_cell_output_screens_passed": true,
+  "P_polar_reproduction_passed": true,
+  "physical_accuracy_passed": false,
+  "source_and_traceback_diagnosis_only": true,
+  "new_FEM_execution_by_audit": false
+}

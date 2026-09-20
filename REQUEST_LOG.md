@@ -212,7 +212,7 @@ calibrate against dense small-cylinder fixtures, and document acceptance
 evidence, resource limits, and one bounded implementation follow-up. Commit
 and push only this request's changes to the configured upstream.
 
-**Status:** Complete; toy prerequisites passed, stopped before physical execution.
+**Status:** In progress.
 
 **Plan and completion criteria:** Review the mathematical operator and stored
 fixtures; perform bounded calibration calculations; write a method review with
@@ -1398,3 +1398,119 @@ edited to hide the exception.
 **Validation:** `docs/realizability/evidence/r019/audit.py` passed: 19 production hashes, archived runner hashes, all finite JSON, five phases, wrong-root/parent refusal, 103 local links/anchors and 35 JSON files. Eight Python sources parsed successfully; `git diff --check` and `git diff --cached --check` passed. Raw MPI error text is retained as JSON string data so its diagnostic spacing is preserved without trailing whitespace in the staged files.
 
 **Git delivery:** Scoped R019 checkpoint committed as `76cfa81` (`Record R019 toy portability prerequisite pass`) and pushed successfully to `origin/main`; no force-push. This delivery note is recorded in the follow-up continuity commit.
+
+## R020 — 2026-09-20 — Short continuation request
+
+**User request (verbatim):**
+
+> continue
+
+**Interpreted scope:** Apply the Continue workflow to the handoff's bounded
+R013 physical-runner review after the R019 toy portability pass. Recheck pinned
+production identities, preserved evidence and every prerequisite; if no
+scientific or numerical decision remains, run at most one physical attempt
+under the original 180 s/1.5 GiB limits. Archive and audit complete or finite
+partial evidence, update continuity, and commit/push scoped changes to the
+configured upstream. This request authorizes that commit and push.
+
+**Status:** In progress.
+
+**Bounded plan and completion criteria:** Read the required research documents,
+R013 contract, R016–R019 results/evidence and exact disposable runner; review
+toy phases, wrong-root and parent refusal, output checks and resource caps.
+Complete one permitted attempt or record the prerequisite/decision preventing
+launch, audit the evidence, update the log and handoff with one concrete next
+task and model/effort guidance, commit/push, and stop.
+
+**Stopping conditions:** Stop before launch on a failed prerequisite or
+unresolved method, interpretation or acceptance choice. After launch stop on
+the first failure, resource cap or unexplained result; no retry, changed
+trace/tolerance/solver, gate integration, campaign, B3, rendering or encoding.
+Keep the physical B2 gate failed and `campaign_ready=false`.
+
+**Continuity correction, 2026-09-20:** Initial stored-data review passed R016
+and all 19 production identities, then the R017 auditor caught an inherited
+request-history edit. Commit `76cfa81` had replaced R005's original
+`Status: In progress` line with R019's toy outcome. Restored that exact original
+line from `0e8e421`; R005's appended completion and validation remain intact.
+The initial auditor failure and correction are recorded in
+`evidence/r020/continuity_correction.json`. This is a documentation repair
+within the authorized continuity work; no physical/toy attempt, numerical
+failure, tolerance change or scientific choice occurred. Recheck the static
+prerequisites after this correction before any numerical launch.
+
+**Outcome, 2026-09-20:** Complete at the physical pressure-compatibility stop.
+The unchanged R019 runner passed fresh prerequisites and completed P's solve,
+one correction and all output checks. A_32 completed block RHS allocation,
+layout validation, loading, lifting, reverse scatter and assignment, then
+failed at `A_32_primary_rhs_compatibility` before solving. Its required removal
+`5.856084855505123e-14` exceeded `256*eps*||b||=5.2802161649827306e-15` by
+11.0906 times. No A solve, A_64 compatibility, paired comparison or retry ran.
+Saved projected flux predicts the measured pressure products within the
+absolute-flux arithmetic scale, supporting finite-order trace integration as
+the cause. This is a numerical-method decision boundary, not another wrapper
+repair. No pressure/return-flow correction or threshold change was accepted.
+
+**Checks and resources:** All 19 production identities and 358 R014–R019
+historical files matched; four historical auditors passed after the documented
+R005 status restoration, with generated writes redirected into R020. Seven
+runner/support files match R019 exactly. Fresh wrong-root, watchdog,
+24-permutation/kernel, wrapper, full block RHS and disk phases passed in
+5.630006265 s, with 144.60546875 MiB peak observed child-tree RSS and
+0.057955449 s maximum sample gap. R019's parent refusal was reaudited. One
+physical attempt took 59.972154446 s, with 756.99609375 MiB observed and process
+high-water RSS and 0.059124924 s maximum sample gap. One 482-cell mesh, one
+symbolic/numeric factorization pair and two matrix solves were recorded.
+P's complete outputs reproduce R016 exactly; its physical comparison still
+fails. No numerical resource limit was reached.
+
+**Evidence and changed files:** This log (including the explicitly documented
+R005 restoration), `SESSION_HANDOFF.md`, `STATUS.md`, `PROJECT_TRACKS.md`,
+`docs/realizability/B2_NEXT_STEPS.md`, the current-status introductions in
+`B2_MATCHED_TRACE_REVIEW.md` and `B2_BLOCK_RHS_TOY_REPAIR_RESULT.md`, the new
+`B2_MATCHED_TRACE_COMPATIBILITY_RESULT.md` and evidence index, and
+`docs/realizability/evidence/r020/`. The execution manifest covers 72 exact or
+parsed-equivalent artifacts; only facet JSON whitespace was compacted.
+Production numerical sources/configuration and all old evidence are unchanged.
+
+**Skips and remaining limits:** No A accuracy, paired error allocation or total
+FEM error floor is established. A_64's small flux does not establish its RHS
+compatibility. No coefficient vectors were saved. Full application,
+dense/calibration/refinement suites, production changes, gate integration,
+campaign, B3, rendering and encoding were skipped. The physical B2 gate remains
+failed and `campaign_ready=false`; preparation, sensing, hardware demands and
+validated movie flow remain unresolved.
+
+**Next task/recommendation:** GPT-6 Astra, high reasoning, for the result's
+bounded saved-data compatibility method review. Audit flux/moment cancellation
+and nullspace normalization; compare future integration strategies preserving
+the same finite reference trace and thresholds; state one justified subsequent
+experiment contract or the precise unresolved choice. Specify toy coverage,
+compatibility checks before primary solves, output screens, resource caps and
+solve/factor inventory. No method implementation, fresh reference/quad sweep,
+physical assembly/solve or retry in that review. Archive/audit, update
+continuity, commit/push and stop at the review boundary. Retain Astra/high
+for numerical choices and interpretation; recommend Luna/medium only for a
+fully specified mechanical follow-up. Both models and supported efforts were
+rechecked in the current catalog and fetched official pages using OpenAI Docs.
+No model switch, delegated session or automation occurred. Next prompt:
+**Continue**.
+
+**Git delivery:** This `continue` authorizes the scoped checkpoint and push to
+the configured `origin/main` upstream without force-push. Actual delivery is
+reported in Git history and the final response.
+
+**Validation, 2026-09-20:** The R020 saved-data/documentation audit passed for
+72 execution artifacts, 19 production identities, 358 preserved historical
+files, seven exact R019 sources, four historical reaudits, 12 Python syntax
+checks, 40 finite JSON inputs, nine Markdown files, 119 local links/anchors
+and 18 fenced blocks. Record:
+`docs/realizability/evidence/r020/validation.json`. The first new audit draft
+incorrectly compared local-certificate elapsed times for exact equality;
+comparison now excludes only that timing field, while all scientific values
+match. No numerical work was rerun. The physical diagnostic itself remains
+explicitly failed at compatibility. Tracked documentation passed
+`git diff --check` before staging.
+
+**Staged validation, 2026-09-20:** `git diff --cached --check` passed for the
+complete R020 archive and documentation, with no whitespace exceptions.

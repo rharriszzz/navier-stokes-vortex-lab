@@ -1,0 +1,8 @@
+Traceback (most recent call last):
+  File "/tmp/navier-b2-matched-r020/physical.py", line 581, in <module>
+    calculate(args.output)
+  File "/tmp/navier-b2-matched-r020/physical.py", line 528, in calculate
+    record_compatibility(rhs,nulls,record['loads'][name],checkpoint,
+  File "/tmp/navier-b2-matched-r020/physical.py", line 122, in record_compatibility
+    raise RuntimeError('Primal pressure compatibility failed before solve')
+RuntimeError: Primal pressure compatibility failed before solve

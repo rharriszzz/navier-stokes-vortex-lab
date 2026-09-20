@@ -1,0 +1,15 @@
+{
+  "status": "partial",
+  "matrix_solves": 1,
+  "returned_primary_solves": 1,
+  "factor_counts_at_return": {
+    "symbolic": 1,
+    "numeric": 1,
+    "solve": 1
+  },
+  "stage": "synthetic_solver_returned",
+  "error": {
+    "type": "RuntimeError",
+    "message": "synthetic post-return bookkeeping failure"
+  }
+}

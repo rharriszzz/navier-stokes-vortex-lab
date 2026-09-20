@@ -1,0 +1,29 @@
+{
+  "status": "passed",
+  "archive_files": 134,
+  "r016_copy_file_count": 3,
+  "markdown_files": 9,
+  "local_links_and_anchors": 111,
+  "fenced_blocks": 9,
+  "production_source_identities": 19,
+  "attempt_wall_cumulative_seconds": [
+    3.635672952979803,
+    4.494353728019632,
+    5.311707087006653,
+    6.1122257209790405,
+    6.926302957028383,
+    7.742076631984673,
+    8.501242424012162
+  ],
+  "total_toy_seconds": 8.501242424012162,
+  "peak_child_tree_rss_mib": 183.20703125,
+  "metadata_loss_reproduced": true,
+  "rhs_cases": 2,
+  "matrix_unchanged": true,
+  "required_couplings": 4,
+  "pressure_compatibility_fixtures": 2,
+  "physical_meshes": 0,
+  "pde_solves": 0,
+  "matrix_factorizations": 0,
+  "matrix_solves": 0
+}

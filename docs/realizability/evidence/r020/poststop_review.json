@@ -1,0 +1,66 @@
+{
+  "status": "stopped_at_pressure_compatibility",
+  "physical_attempts": 1,
+  "physical_meshes": 1,
+  "returned_primary_solves": 1,
+  "correction_rhs": 1,
+  "matrix_solves": 2,
+  "symbolic_factorizations": 1,
+  "numeric_factorizations": 1,
+  "matched_trace_solves": 0,
+  "physical_seconds": 59.972154446004424,
+  "physical_peak_observed_rss_mib": 756.99609375,
+  "process_high_water_rss_mib": 756.99609375,
+  "physical_maximum_sample_gap_seconds": 0.059124923980562016,
+  "toy_total_seconds": 5.630006264982512,
+  "toy_peak_observed_rss_mib": 144.60546875,
+  "P_outputs_equal_R016": true,
+  "A32_compatibility": {
+    "pressure_constant_products_before": [
+      5.856082051301347e-14,
+      5.322894013045066e-17
+    ],
+    "removed_norm": 5.856084855505123e-14,
+    "rhs_norm": 0.09289054512910896,
+    "tolerance": 5.2802161649827306e-15
+  },
+  "removed_norm_over_tolerance": 11.090615748539674,
+  "removed_norm_over_rhs_norm": 6.304285164185145e-13,
+  "pressure_nullspace_normalization": 43.9089968002003,
+  "flux_prediction": {
+    "formula": "signed_flux_si / (U * sqrt(nq))",
+    "A32_predicted_products": [
+      5.856097272417803e-14,
+      5.320342219288553e-17
+    ],
+    "A32_measured_products": [
+      5.856082051301347e-14,
+      5.322894013045066e-17
+    ],
+    "A32_absolute_discrepancies": [
+      1.5221116455690625e-19,
+      2.551793756512993e-20
+    ],
+    "A32_absolute_flux_arithmetic_scales": [
+      1.0951392421218461e-17,
+      1.8344481194563126e-18
+    ],
+    "A64_flux_only_predicted_products": [
+      -2.6166643868879308e-20,
+      6.244807719526787e-21
+    ],
+    "A64_assembled_rhs_compatibility": "not measured"
+  },
+  "interpretation": "The saved A32 flux predicts the measured pressure incompatibility within an absolute-flux arithmetic scale. This supports finite-order trace integration as the cause, but no new quadrature or trace calculation was performed. A64 compatibility and all matched-trace gains remain unmeasured.",
+  "skipped": [
+    "A32 primary solve/correction/PDE/output checks",
+    "A64 lifting/compatibility/solve/correction/PDE/output checks",
+    "paired errors and output load sensitivity",
+    "new meshes, quadrature orders, tolerance or trace changes",
+    "production changes, gate integration, campaign, B3, movie"
+  ],
+  "retry_after_stop": false,
+  "physical_gate_passed": false,
+  "campaign_ready": false,
+  "next_task": "Astra/high: saved-data and method review of pressure compatibility and a future trace-integration contract; no physical retry during review."
+}

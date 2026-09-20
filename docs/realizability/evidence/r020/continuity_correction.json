@@ -1,0 +1,19 @@
+{
+  "status": "resolved_documentation_error",
+  "stage": "historical_audit_r017",
+  "error": {
+    "type": "AssertionError",
+    "message": "R017 auditor rejected non-append-only REQUEST_LOG history"
+  },
+  "introduced_in_commit": "76cfa81",
+  "affected_request": "R005",
+  "line": 215,
+  "incorrect_status": "**Status:** Complete; toy prerequisites passed, stopped before physical execution.",
+  "restored_status": "**Status:** In progress.",
+  "reference_commit": "0e8e421",
+  "R016_saved_data_audit": "passed",
+  "production_identities_matched": 19,
+  "physical_launches": 0,
+  "toy_launches": 0,
+  "resolution": "Restore exact original status; retain R005 outcome; append dated correction under R020. No numerical prerequisite was executed or changed."
+}

@@ -1,0 +1,127 @@
+{
+  "status": "passed",
+  "wall_limit_seconds": 60.0,
+  "rss_limit_mib": 512.0,
+  "physical_meshes": 0,
+  "matrix_solves": 0,
+  "watches": {
+    "wrong_root": {
+      "command": [
+        "/tmp/navier-fenicsx/bin/python",
+        "/tmp/navier-b2-matched-r020/wrapper_toys.py",
+        "--output",
+        "/tmp/navier-b2-matched-r020/toys/wrong-root"
+      ],
+      "returncode": 1,
+      "elapsed_seconds": 0.16543059799005277,
+      "parent_observed_peak_rss_mib": 26.36328125,
+      "samples": 4,
+      "nominal_poll_seconds": 0.05,
+      "maximum_sample_gap_seconds": 0.054799762001493946,
+      "largest_observed_process_tree": 1,
+      "stop_reason": null
+    },
+    "watchdog": {
+      "command": [
+        "/tmp/navier-fenicsx/bin/python",
+        "/tmp/navier-b2-matched-r020/toy_runner.py",
+        "--self-check",
+        "--output",
+        "/tmp/navier-b2-matched-r020/toys/watchdog"
+      ],
+      "returncode": 0,
+      "elapsed_seconds": 0.2761037249874789,
+      "parent_observed_peak_rss_mib": 70.55859375,
+      "samples": 6,
+      "nominal_poll_seconds": 0.05,
+      "maximum_sample_gap_seconds": 0.05663095001364127,
+      "largest_observed_process_tree": 3,
+      "stop_reason": null
+    },
+    "kernels": {
+      "command": [
+        "/tmp/navier-fenicsx/bin/python",
+        "/tmp/navier-b2-matched-r020/toy_runner.py",
+        "--toy-child",
+        "--output",
+        "/tmp/navier-b2-matched-r020/toys/kernels"
+      ],
+      "returncode": 0,
+      "elapsed_seconds": 4.268097350985045,
+      "parent_observed_peak_rss_mib": 141.15625,
+      "samples": 79,
+      "nominal_poll_seconds": 0.05,
+      "maximum_sample_gap_seconds": 0.05795544901047833,
+      "largest_observed_process_tree": 1,
+      "stop_reason": null
+    },
+    "wrapper": {
+      "command": [
+        "/tmp/navier-fenicsx/bin/python",
+        "/tmp/navier-b2-matched-r020/wrapper_toys.py",
+        "--output",
+        "/tmp/navier-b2-matched-r020/toys/wrapper"
+      ],
+      "returncode": 0,
+      "elapsed_seconds": 0.4341929359943606,
+      "parent_observed_peak_rss_mib": 140.6171875,
+      "samples": 9,
+      "nominal_poll_seconds": 0.05,
+      "maximum_sample_gap_seconds": 0.05487227500998415,
+      "largest_observed_process_tree": 1,
+      "stop_reason": null
+    },
+    "block-rhs": {
+      "command": [
+        "/tmp/navier-fenicsx/bin/python",
+        "/tmp/navier-b2-matched-r020/block_rhs_toys.py",
+        "--output",
+        "/tmp/navier-b2-matched-r020/toys/block-rhs"
+      ],
+      "returncode": 0,
+      "elapsed_seconds": 0.37868887098738924,
+      "parent_observed_peak_rss_mib": 144.60546875,
+      "samples": 8,
+      "nominal_poll_seconds": 0.05,
+      "maximum_sample_gap_seconds": 0.05488963800598867,
+      "largest_observed_process_tree": 1,
+      "stop_reason": null
+    },
+    "disk": {
+      "command": [
+        "/tmp/navier-fenicsx/bin/python",
+        "/tmp/navier-b2-matched-r020/physical.py",
+        "--extra-toys",
+        "--output",
+        "/tmp/navier-b2-matched-r020/toys/disk"
+      ],
+      "returncode": 0,
+      "elapsed_seconds": 0.1053554309764877,
+      "parent_observed_peak_rss_mib": 34.421875,
+      "samples": 3,
+      "nominal_poll_seconds": 0.05,
+      "maximum_sample_gap_seconds": 0.05163349999929778,
+      "largest_observed_process_tree": 1,
+      "stop_reason": null
+    }
+  },
+  "elapsed_seconds": 5.630006264982512,
+  "wrong_root_refusal": {
+    "status": "partial_failed",
+    "stage": "imports",
+    "error": {
+      "type": "FileNotFoundError",
+      "message": "[Errno 2] No such file or directory: '/tmp/navier-b2-matched-r020/toys/invalid-working-directory/realizability/__init__.py'"
+    },
+    "counts": {
+      "physical_meshes": 0,
+      "pde_solves": 0,
+      "matrix_factorizations": 0,
+      "primary_rhs": 0,
+      "returned_primary_solves": 0,
+      "correction_rhs": 0,
+      "matrix_solves": 0
+    },
+    "report_sha256": "9a2bbd0dc3993d7fb43bd574fccbd2c7c8e137b13602f351e657e6936bfdd749"
+  }
+}

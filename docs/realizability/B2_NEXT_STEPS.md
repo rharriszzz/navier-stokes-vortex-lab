@@ -1,6 +1,8 @@
 # B2 continuation: independent swirl reference and stability checks
 
-Current continuation after R019: first read the
+Current continuation after R020: first read the
+[R020 pressure-compatibility stop and method-review contract](B2_MATCHED_TRACE_COMPATIBILITY_RESULT.md)
+and [evidence index](B2_MATCHED_TRACE_COMPATIBILITY_EVIDENCE.md), then the
 [R019 toy portability result](B2_TOY_PORTABILITY_RESULT.md) and
 [evidence index](B2_TOY_PORTABILITY_EVIDENCE.md), then the
 [R018 prerequisite stop](B2_MATCHED_TRACE_PREFLIGHT_RESULT.md) and
@@ -40,10 +42,15 @@ after watchdog and kernel checks passed. The
 inside the report boundary and before DOLFINx/MPI imports, then passed all five
 prerequisite phases in a shallow disposable directory. The wrong-root path and
 parent refusal both wrote finite zero-count reports. No physical child ran.
-The next bounded task is GPT-6 Astra/high review of the unchanged R013 physical
-runner and prerequisites, with at most one separate attempt under the original
-180 s/1.5 GiB caps if no scientific or numerical decision remains. No retry,
-changed tolerance, solver, gate integration, campaign, B3, rendering or encoding.
+R020 subsequently passed fresh prerequisites and ran one physical attempt in
+59.97 s/757.00 MiB. P's complete outputs reproduce R016. A_32 completed lifting
+and assignment, then failed pressure compatibility at 11.09 times the fixed
+arithmetic limit before solving. Saved flux imbalance predicts the failure;
+A_64 compatibility and all matched-trace gains remain unmeasured. The next
+bounded task is GPT-6 Astra/high saved-data and method review of a future
+compatible integration comparison. No physical retry, method implementation,
+new quadrature/reference evaluation, changed tolerance, gate integration,
+campaign, B3, rendering or encoding is included in that review.
 Older assignments below are historical.
 
 Follow-up at commit `a6295da`: the reference and cube audit are implemented.

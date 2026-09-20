@@ -124,10 +124,15 @@ repository archive depth when locating the source root. The
 passes the wrong-root refusal and all five prerequisite phases in the shallow
 disposable layout. The parent's failed-prerequisite path also writes a finite
 zero-count report without launching a physical child. No physical experiment
-ran; the paired diagnostic remains incomplete. The next step is Astra/high
-review of the unchanged R013 physical runner and prerequisites, with at most
-one attempt under the existing caps if no unresolved decision remains. The B2 gate remains
-failed and campaign readiness false. Use
+ran during R019. The [R020 physical attempt](docs/realizability/B2_MATCHED_TRACE_COMPATIBILITY_RESULT.md)
+then passed fresh prerequisites and completed P's solve/correction/outputs,
+but stopped at A_32 pressure compatibility before any matched-trace solve.
+The required removal was 11.09 times the unchanged arithmetic limit; saved
+flux imbalance predicts the pressure products. Its 59.97 s and 757.00 MiB
+stayed within caps. A_64 compatibility and the paired comparison remain
+unmeasured. Next is an Astra/high saved-data method review to specify a future
+compatible trace-integration comparison, with no physical retry in that review.
+The B2 gate remains failed and campaign readiness false. Use
 [SESSION_HANDOFF.md](SESSION_HANDOFF.md) for completion criteria and stops.
 
 ### Core constraint

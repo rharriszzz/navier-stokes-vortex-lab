@@ -1,0 +1,21 @@
+{
+  "status": "partial_failed",
+  "stage": "imports",
+  "campaign_ready": false,
+  "physical_meshes": 0,
+  "pde_solves": 0,
+  "matrix_factorizations": 0,
+  "primary_rhs": 0,
+  "returned_primary_solves": 0,
+  "correction_rhs": 0,
+  "matrix_solves": 0,
+  "source_sha256": {},
+  "repository_root": "/tmp/navier-b2-matched-r020/toys/invalid-working-directory",
+  "source_archive_sha256": "be9c78e4b4af7521a614417a908ca342e78feb5ba7b4adcd22f51500f397f755",
+  "elapsed_seconds": 0.00017228300566785038,
+  "process_peak_rss_mib": 36.2265625,
+  "error": {
+    "type": "FileNotFoundError",
+    "message": "[Errno 2] No such file or directory: '/tmp/navier-b2-matched-r020/toys/invalid-working-directory/realizability/__init__.py'"
+  }
+}

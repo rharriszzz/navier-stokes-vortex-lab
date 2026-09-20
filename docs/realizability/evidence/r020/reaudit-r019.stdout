@@ -1,0 +1,13 @@
+{
+  "status": "passed",
+  "production_sources_verified": 19,
+  "five_prerequisite_phases": "passed",
+  "complete_parent_monitored_seconds": 5.378702526999405,
+  "all_attempts_parent_monitored_seconds": 6.48051528504584,
+  "peak_observed_child_tree_rss_mib": 140.51171875,
+  "maximum_sample_gap_seconds": 0.0566049299959559,
+  "physical_meshes": 0,
+  "matrix_solves": 0,
+  "archived_json_files": 35,
+  "local_links_and_anchors": 103
+}
