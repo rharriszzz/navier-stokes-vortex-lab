@@ -126,4 +126,6 @@ A failure or finite limitation is useful data.
 - `EXPERIMENT.md` — physical experiment concept.
 - `PHYSICAL_REALIZABILITY_PLAN.md` — broad realizability philosophy and plan.
 - `CONTROL_RESEARCH_ROADMAP.md` — concrete staged computational research program.
+- `BOUNDARY_CONTROL_HANDOFF.md` — proposed benchmark decisions, scientific
+  diagnostics, and implementation/testing work packages for the next coding agent.
 - `PROJECT_TRACKS.md` — this high-level separation of the two avenues.

@@ -25,6 +25,10 @@ experimental mechanism. See [PROJECT_TRACKS.md](PROJECT_TRACKS.md),
 [PHYSICAL_REALIZABILITY_PLAN.md](PHYSICAL_REALIZABILITY_PLAN.md), and
 [CONTROL_RESEARCH_ROADMAP.md](CONTROL_RESEARCH_ROADMAP.md).
 
+For the next implementation tasks, see
+[BOUNDARY_CONTROL_HANDOFF.md](BOUNDARY_CONTROL_HANDOFF.md): proposed scientific
+defaults, a small boundary-response benchmark, and coding/testing work packages.
+
 ![Representative tracer-render preview](preview.png)
 
 This representative frame uses the current tracer-only view: pressure sensors
@@ -40,6 +44,7 @@ navier-stokes-vortex-lab/
 ├── EXPERIMENT.md
 ├── PHYSICAL_REALIZABILITY_PLAN.md
 ├── CONTROL_RESEARCH_ROADMAP.md
+├── BOUNDARY_CONTROL_HANDOFF.md
 ├── PROJECT_TRACKS.md
 ├── .gitignore
 ├── requirements.txt
