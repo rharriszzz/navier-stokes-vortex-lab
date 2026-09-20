@@ -54,8 +54,11 @@ convergence study or gate integration. This gate's code and thresholds are uncha
 
 The subsequent [R013 method review](B2_MATCHED_TRACE_REVIEW.md) specifies one
 paired boundary-data experiment on the same 50 mm alpha=96 operator, using a
-known solution's full trace as a verification fixture. It has not been run.
-It will measure numerical approximation and discrete boundary sensitivity,
+known solution's full trace as a verification fixture. Its
+[R014 attempt](B2_MATCHED_TRACE_RESULT.md) stopped on a wrapper error after the
+original-command solve; no matched-trace gain or error decomposition was obtained.
+The next task repairs instrumentation on toy data only. A future completed
+comparison would measure numerical approximation and discrete boundary sensitivity,
 without treating their difference as a continuum geometry-error estimate.
 The failed physical gate and false campaign readiness are unchanged.
 

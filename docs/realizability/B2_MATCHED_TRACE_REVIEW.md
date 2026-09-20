@@ -1,5 +1,12 @@
 # B2 geometry and resolution discrimination review
 
+The R014 [single attempt](B2_MATCHED_TRACE_RESULT.md) has since stopped on a
+disposable-wrapper error after the original-command solve. Its
+[preserved partial evidence](B2_MATCHED_TRACE_RUN_EVIDENCE.md) includes completed
+prerequisites but no matched-trace gain. The proposal below remains the original
+R013 contract; its statements about unexecuted work describe R013. The current
+next task is the result's toy-only wrapper repair, not a physical retry.
+
 Completed 2026-09-20 for [R013](../../REQUEST_LOG.md#r013--2026-09-20--short-continuation-request)
 against `568c68b`, following the [R012 method-review contract](B2_PHYSICAL_RESPONSE_AUDIT.md#next-bounded-task-design-a-geometry-and-boundary-layer-accuracy-test).
 This is a method selection and experiment specification. **No new mesh, field

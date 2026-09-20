@@ -1,0 +1,164 @@
+{
+  "toy_runner.py": {
+    "original_path": "/tmp/navier-b2-matched-r014/toy_runner.py",
+    "original_sha256": "e402682369f9b6523174067c85f79c53ad5d64cdbafc4f7162c89d1740ab2e0f",
+    "archived_sha256": "e402682369f9b6523174067c85f79c53ad5d64cdbafc4f7162c89d1740ab2e0f",
+    "encoding": "exact bytes"
+  },
+  "kernels.py": {
+    "original_path": "/tmp/navier-b2-matched-r014/kernels.py",
+    "original_sha256": "9e8110d929a9af1a46cad811f69ba86c1123ebf24f9d852d7cecf13585ead2d6",
+    "archived_sha256": "9e8110d929a9af1a46cad811f69ba86c1123ebf24f9d852d7cecf13585ead2d6",
+    "encoding": "exact bytes"
+  },
+  "disk.py": {
+    "original_path": "/tmp/navier-b2-matched-r014/disk.py",
+    "original_sha256": "52afe6d93ff6886b3bfbc4cd6fb68523ec60c98d0bb336fa22c74f4276199255",
+    "archived_sha256": "52afe6d93ff6886b3bfbc4cd6fb68523ec60c98d0bb336fa22c74f4276199255",
+    "encoding": "exact bytes"
+  },
+  "physical.py": {
+    "original_path": "/tmp/navier-b2-matched-r014/physical.py",
+    "original_sha256": "8e8e63e41902f9216452e1280cdb11f2f2669804a4148e11d1340061144e10bb",
+    "archived_sha256": "8e8e63e41902f9216452e1280cdb11f2f2669804a4148e11d1340061144e10bb",
+    "encoding": "exact bytes"
+  },
+  "toy__manifest.json": {
+    "original_path": "/tmp/navier-b2-matched-r014/attempt/manifest.json",
+    "original_sha256": "aadb3080ff29c0332079f239aa097d4473be18f233f22d25985b8b9c001215fb",
+    "archived_sha256": "aadb3080ff29c0332079f239aa097d4473be18f233f22d25985b8b9c001215fb",
+    "encoding": "exact bytes"
+  },
+  "toy__toy-report.json": {
+    "original_path": "/tmp/navier-b2-matched-r014/attempt/toy-report.json",
+    "original_sha256": "fb6943720cf9077fd9e1436fa4b1a2d8960130f6f43a5cdc9a1c6d97ddd5c6e2",
+    "archived_sha256": "fb6943720cf9077fd9e1436fa4b1a2d8960130f6f43a5cdc9a1c6d97ddd5c6e2",
+    "encoding": "exact bytes"
+  },
+  "toy__toy-watch.json": {
+    "original_path": "/tmp/navier-b2-matched-r014/attempt/toy-watch.json",
+    "original_sha256": "be03a62732aa65a04e8f6bb9face22521f2f46975326cd339821eeb5fc1269b8",
+    "archived_sha256": "be03a62732aa65a04e8f6bb9face22521f2f46975326cd339821eeb5fc1269b8",
+    "encoding": "exact bytes"
+  },
+  "toy__toy.stderr": {
+    "original_path": "/tmp/navier-b2-matched-r014/attempt/toy.stderr",
+    "original_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "archived_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "encoding": "exact bytes"
+  },
+  "toy__toy.stdout": {
+    "original_path": "/tmp/navier-b2-matched-r014/attempt/toy.stdout",
+    "original_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "archived_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "encoding": "exact bytes"
+  },
+  "toy__watchdog__memory.stderr": {
+    "original_path": "/tmp/navier-b2-matched-r014/attempt/watchdog/memory.stderr",
+    "original_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "archived_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "encoding": "exact bytes"
+  },
+  "toy__watchdog__memory.stdout": {
+    "original_path": "/tmp/navier-b2-matched-r014/attempt/watchdog/memory.stdout",
+    "original_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "archived_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "encoding": "exact bytes"
+  },
+  "toy__watchdog__self-check.json": {
+    "original_path": "/tmp/navier-b2-matched-r014/attempt/watchdog/self-check.json",
+    "original_sha256": "a0dd7dc58064a82bcbed7cc9a614f74fa7adc4bbff21f44e79c61eeef50f7b48",
+    "archived_sha256": "a0dd7dc58064a82bcbed7cc9a614f74fa7adc4bbff21f44e79c61eeef50f7b48",
+    "encoding": "exact bytes"
+  },
+  "toy__watchdog__timeout.stderr": {
+    "original_path": "/tmp/navier-b2-matched-r014/attempt/watchdog/timeout.stderr",
+    "original_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "archived_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "encoding": "exact bytes"
+  },
+  "toy__watchdog__timeout.stdout": {
+    "original_path": "/tmp/navier-b2-matched-r014/attempt/watchdog/timeout.stdout",
+    "original_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "archived_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "encoding": "exact bytes"
+  },
+  "physical__A_32_facets.json": {
+    "original_path": "/tmp/navier-b2-matched-r014/physical_attempt/A_32_facets.json",
+    "original_sha256": "ec21fdfd9eaf763412566aba86c2edb08dae101c361dbf041404aa96f5c360be",
+    "archived_sha256": "252f067fd145ed504894fea3366758f902bc5692f97f910ff73fa8526b96ece8",
+    "encoding": "one facet per line, JSON values unchanged"
+  },
+  "physical__A_64_facets.json": {
+    "original_path": "/tmp/navier-b2-matched-r014/physical_attempt/A_64_facets.json",
+    "original_sha256": "324f7789342556b1ef83a20d48ba0cd4f8a9dc3f798fe6cca8438947d47b39be",
+    "archived_sha256": "e26d6f3efb2e8e0b8ca809b130e7d6dddea478e9422731e9712a3059fce5f5ba",
+    "encoding": "one facet per line, JSON values unchanged"
+  },
+  "physical__disk_regions.json": {
+    "original_path": "/tmp/navier-b2-matched-r014/physical_attempt/disk_regions.json",
+    "original_sha256": "dfa3c1e2185af93386926e88a6fc229378ba90dd7b12fe5301a7d505c10bff6d",
+    "archived_sha256": "dfa3c1e2185af93386926e88a6fc229378ba90dd7b12fe5301a7d505c10bff6d",
+    "encoding": "exact bytes"
+  },
+  "physical__extra-toys-watch.json": {
+    "original_path": "/tmp/navier-b2-matched-r014/physical_attempt/extra-toys-watch.json",
+    "original_sha256": "b88bcc8ed37952f954dadd1d483e51544bd41bf99a88c676f5670464e06af72f",
+    "archived_sha256": "b88bcc8ed37952f954dadd1d483e51544bd41bf99a88c676f5670464e06af72f",
+    "encoding": "exact bytes"
+  },
+  "physical__extra-toys.json": {
+    "original_path": "/tmp/navier-b2-matched-r014/physical_attempt/extra-toys.json",
+    "original_sha256": "7e327012b47d04d094952a904d0e8917a11ae76efab0e16e75166e0167a57c8a",
+    "archived_sha256": "7e327012b47d04d094952a904d0e8917a11ae76efab0e16e75166e0167a57c8a",
+    "encoding": "exact bytes"
+  },
+  "physical__extra-toys.stderr": {
+    "original_path": "/tmp/navier-b2-matched-r014/physical_attempt/extra-toys.stderr",
+    "original_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "archived_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "encoding": "exact bytes"
+  },
+  "physical__extra-toys.stdout": {
+    "original_path": "/tmp/navier-b2-matched-r014/physical_attempt/extra-toys.stdout",
+    "original_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "archived_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "encoding": "exact bytes"
+  },
+  "physical__local_bound.json": {
+    "original_path": "/tmp/navier-b2-matched-r014/physical_attempt/local_bound.json",
+    "original_sha256": "7d1db6130ac3e1966169bfb07a341b5f6a83530ae4f9bf08f71048e61fcd4460",
+    "archived_sha256": "7d1db6130ac3e1966169bfb07a341b5f6a83530ae4f9bf08f71048e61fcd4460",
+    "encoding": "exact bytes"
+  },
+  "physical__manifest.json": {
+    "original_path": "/tmp/navier-b2-matched-r014/physical_attempt/manifest.json",
+    "original_sha256": "f5693d79b51b94a01f54ad1e9361b8e369dc4061ca8f24a2a6e26d972dca8e7c",
+    "archived_sha256": "f5693d79b51b94a01f54ad1e9361b8e369dc4061ca8f24a2a6e26d972dca8e7c",
+    "encoding": "exact bytes"
+  },
+  "physical__physical.stderr": {
+    "original_path": "/tmp/navier-b2-matched-r014/physical_attempt/physical.stderr",
+    "original_sha256": "8afd481fe01c980ca7eb0f882afebf71ddc0c0ba6757077859c0709bf00ee567",
+    "archived_sha256": "8afd481fe01c980ca7eb0f882afebf71ddc0c0ba6757077859c0709bf00ee567",
+    "encoding": "exact bytes"
+  },
+  "physical__physical.stdout": {
+    "original_path": "/tmp/navier-b2-matched-r014/physical_attempt/physical.stdout",
+    "original_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "archived_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "encoding": "exact bytes"
+  },
+  "physical__report.json": {
+    "original_path": "/tmp/navier-b2-matched-r014/physical_attempt/report.json",
+    "original_sha256": "7b4bbb2a59a3f4e6f3d70f81cdc57df818371fd7eadbc90426193863d56c99fa",
+    "archived_sha256": "7b4bbb2a59a3f4e6f3d70f81cdc57df818371fd7eadbc90426193863d56c99fa",
+    "encoding": "exact bytes"
+  },
+  "physical__watch.json": {
+    "original_path": "/tmp/navier-b2-matched-r014/physical_attempt/watch.json",
+    "original_sha256": "b60d6d23336310285b6023b1e5e1c17181d5759aa3e005b0bb43806b9bb77d52",
+    "archived_sha256": "b60d6d23336310285b6023b1e5e1c17181d5759aa3e005b0bb43806b9bb77d52",
+    "encoding": "exact bytes"
+  }
+}

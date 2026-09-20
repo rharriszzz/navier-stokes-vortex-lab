@@ -1,6 +1,8 @@
 # B2 continuation: independent swirl reference and stability checks
 
-Current continuation after R013: read the
+Current continuation after R014: read the
+[partial matched-trace result](B2_MATCHED_TRACE_RESULT.md), its
+[preserved run evidence](B2_MATCHED_TRACE_RUN_EVIDENCE.md), the
 [matched-trace experiment specification](B2_MATCHED_TRACE_REVIEW.md), its
 [read-only review evidence](B2_MATCHED_TRACE_EVIDENCE.md), the
 [single physical response audit](B2_PHYSICAL_RESPONSE_AUDIT.md), its
@@ -15,12 +17,14 @@ alpha=48 remains inconclusive. R009 reproduced the physical reference and its
 small numerical sensitivity. R012 completed the capped 50 mm alpha=96 physical
 audit: PDE/arithmetic checks pass, but all five feature rules fail the physical
 reference comparison. R013 completed the method review without new numerical
-runs. The next bounded task is the specified paired current-command/matched-trace
-experiment on the same operator, with two facet quadrature orders and a separate
-cell-aware disk integral. It permits one factorization, three primary RHSs and
-three same-factor corrections, under 180 s/1.5 GiB physical-child caps. No
-production penalty choice or gate integration is selected. The R013 specification
-defines the exact checks and stops. Older assignments below are historical.
+runs. R014 implemented the disposable kernels and attempted the experiment once.
+Toy, mesh, load and disk-geometry checks passed; a wrapper constraint-grouping
+error stopped it after one original-command solve, with no correction or A solve.
+The next bounded task is the result's mechanical wrapper repair and focused toy
+checks, at 60 s/512 MiB, with no physical cylinder or PDE solve. A later physical
+attempt would still need the complete R013 checks and 180 s/1.5 GiB caps. No
+production penalty choice or gate integration is selected. Older assignments
+below are historical.
 
 Follow-up at commit `a6295da`: the reference and cube audit are implemented.
 The new [stability review](B2_STABILITY_REVIEW.md) tests the actual cylinder

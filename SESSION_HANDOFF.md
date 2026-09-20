@@ -1,9 +1,9 @@
 # Current session handoff
 
 Last updated: 2026-09-20. Latest request:
-[R013](REQUEST_LOG.md#r013--2026-09-20--short-continuation-request), completed.
-R012 was already committed/pushed as `568c68b`; there were no pending user edits
-at R013 start. The current checkpoint records a method review, not a new solve.
+[R014](REQUEST_LOG.md#r014--2026-09-20--short-continuation-request), completed at
+the prescribed internal-error stopping point. The numerical experiment is
+partial. R013 was committed/pushed as `d5a2711`; R014 began with a clean worktree.
 
 ## User goals
 
@@ -27,127 +27,105 @@ update continuity, commit/push scoped work, and stop. Explicit qualifications
 such as “Continue without pushing” override that default. It does not switch
 the selected model or schedule another session. No scheduler is installed.
 
-## Last completed task: method review
+## Last task: partial matched-trace attempt
 
-R013 completed the [matched-trace method review](docs/realizability/B2_MATCHED_TRACE_REVIEW.md)
-and its [read-only evidence appendix](docs/realizability/B2_MATCHED_TRACE_EVIDENCE.md).
-It distinguishes the smooth cylinder, the current projected command on a
-faceted vessel, and a verification problem prescribing the full complex trace
-of the finite 128-term known solution on the same polyhedron. That last problem
-has a known continuum solution without volume forcing. Its normal trace is
-generally nonzero; a tangential-only substitution is not the same fixture.
+Read the [R014 result](docs/realizability/B2_MATCHED_TRACE_RESULT.md) and
+[evidence index](docs/realizability/B2_MATCHED_TRACE_RUN_EVIDENCE.md). The single
+physical child ran 54.1700 s, with 734.7539 MiB parent/process peak RSS and a
+0.060411 s maximum sample gap, below 180 s/1.5 GiB. No retry or cap increase.
 
-The selected next experiment pairs the current command with this trace on the
-existing 50 mm alpha=96 operator. Two fixed facet rules check load sensitivity;
-cell-aware polynomial disk integration addresses the unresolved polar-rule
-effect. The error identity separates matched-problem approximation error from
-discrete sensitivity to changed boundary data. It does not identify continuum
-geometry error or rule out cancellation from one mesh. A boundary-layer 3D
-mesh, symmetry-restricted discretization and enriched/adjoint error study were
-compared and deferred with reasons.
+All 19 source/config identities and the exact 50 mm mesh matched: 482 cells,
+9,522/1,928 V/Q DOFs, 282 exterior facets, hash
+`423ab057c5738ae3e2dcef6e82c238ee7e61bc1d0af7f1e212d04b8a2cd6bfb4`.
+The 500-cell local certificate reproduced C_upper `58.12657123078638` and
+alpha=96 beta `0.22187075813338908`. Both facet orders assembled; their
+real/imaginary closed-flux ratios passed the unchanged 1e-8 ceiling.
 
-R013 checked the embedded R012 report/runner, all 19 source/config hashes and
-three evidence-appendix identities, and calculated elementary length/output
-scales using only the standard library. Documentation links, anchors, fences,
-embedded Python/JSON, scalar consistency and request-history preservation were
-checked. No mesh, FEM import, assembly, solve, reference evaluation or stored
-field integration ran; no proposed load/output kernel was implemented. No
-package, configuration, solver/form, guard, threshold or gate changed. The
-review and appendix preserve the specification and read-only evidence;
-temporary checks are in `/tmp/navier-b2-method-r013/`.
+Completed toy checks include all 24 tetrahedron vertex permutations and 30 P2³
+vector traces, exact-circle moments/arcs/jumps/tangencies, and polynomial
+reconstruction/restriction fixtures. Their shared measured duration was
+4.4804 s, with 141.5508 MiB maximum parent RSS, below 60 s/512 MiB. Physical
+polynomial loads agreed with UFL. The disk partition has 11 positive-area
+regions and correct moments through degree three; no coincident interior facet
+was found. These are geometry/load checks, not solved-field accuracy evidence.
 
-## Last numerical result (R012; unchanged)
+The original P solve returned with the same diagnostics as R012 except timing.
+The next wrapper operation used `bc.function_space == spaces[i]`, comparing
+C++ and Python space objects; its filter was empty and concatenate raised
+`ValueError: need at least one array to concatenate`. This is an instrumentation
+bug. Recorded counts: one primary solve, zero corrections, zero matched-trace
+solves. The last checkpoint stage still names P assembly; the traceback records
+the subsequent failed constraint collection. Matrix/factor hashes and event
+counters were not reached. No fields were saved for later gain recovery.
 
-R012 completed the single 50 mm alpha=96 physical T_00c response audit under
-the [R009 contract](docs/realizability/B2_ACCURACY_REVIEW.md#one-proposed-experiment-and-next-task).
-Read the [result](docs/realizability/B2_PHYSICAL_RESPONSE_AUDIT.md) and
+A lifting/pressure compatibility, solved-field reconstruction/integration,
+all six features at the two rules, error identities and physical/component
+comparisons are unexecuted. The report has no new gain. Do not claim those
+checks passed or label the error a failed physical matched-trace comparison.
+The exact failed runner is preserved, including its unvalidated later code.
+
+The standard-library stored-data audit checks 27 archived artifacts, 19 source
+identities, 482 certificate values, 564 facet projection equations/flux reductions,
+11 disk regions, UFL comparisons and P diagnostics. Evidence is durable under
+`docs/realizability/evidence/r014/`; original temporary files are in
+`/tmp/navier-b2-matched-r014/`. Do not rerun a physical case to recreate them.
+The result/evidence index explains hashes and lossless JSON whitespace compaction.
+No production package/configuration, solver/form, threshold, default guard or
+gate changed. No full application, dense/refinement suite, rendering or encoding
+ran. The physical B2 gate remains failed and `campaign_ready=false`.
+
+## Last complete physical accuracy result (R012; unchanged)
+
+Read the [R012 audit](docs/realizability/B2_PHYSICAL_RESPONSE_AUDIT.md) and
 [exact evidence](docs/realizability/B2_PHYSICAL_RESPONSE_EVIDENCE.md).
-
-The prescribed mesh hash, 482 cells, 9,522/1,928 V/Q DOFs and 19 source/config
-hashes matched. The local certificate reproduced `C_upper=58.12657123078638`
-and beta `0.22187075813338908`. Exactly one primal harmonic solve and one
-residual-correction solve used the same factors. PETSc recorded one symbolic
-and one numerical factorization, with matrix solves increasing from one to two.
-The existing PDE and fixed arithmetic checks pass.
-
-**Physical accuracy fails at all five feature rules.** The finest disk gain is
-`-1.6734039795256472 - 1.0983726070219908 i 1/m`, amplitude 28962.6876 times
-the independent reference, phase discrepancy 74.1164 degrees. Absolute complex
-error is `2.0016562003 1/m`. The residual correction is `2.2498932366e-14 1/m`,
-while the finest quadrature step is `2.9156584710e-4 1/m`, 84.37 times the
-`3.4556100991e-6 1/m` scale. These are measured corrections/sensitivities, not
-error bounds. The combined spatial, geometry/loading and integration error
-is unresolved; this is not evidence of physical hardware failure.
-
-The complete physical child took 38.7542 s, with parent-observed and process
-peak RSS 753.0508 MiB, below 180 s/1.5 GiB. Maximum sample gap was 0.08138 s.
-Both final synthetic watchdog checks passed before the single attempt; there
-was no retry or cap increase. All point locations succeeded. Stored-evidence
-validation checked eight manifest files, 19 source/config identities, 482 local
-trace values, eight coefficient arrays, 30 complex original features and three
-sets of 49,152 disk samples. Documentation links, embedded runner/report bytes,
-syntax, tables and `git diff --check` were checked.
-
-No package/configuration, solver/form, threshold or guard changed. No full
-application, dense/UFL calibration, refinement suite, rendering or encoding ran.
-The physical B2 gate remains failed and `campaign_ready=false`; the separate
-alpha=96 certificates are still not integrated into schema-3 gate reports.
-Alpha=48 remains inconclusive. Force/power and pressure demand remain unassessed.
-
-Evidence is in `/tmp/navier-b2-response-r012/`; the versioned result and appendix
-preserve the exact runner and compact numerical evidence independently of those
-temporary files. Do not rerun the physical case to reconstruct temporary files
-without a new bounded contract. The next task below uses the durable records
-and has its own paired-run contract.
+The finest polar gain was `-1.6734039795256472 - 1.0983726070219908 i 1/m`,
+with amplitude 28962.6876 times the reference and 74.1164 degrees phase error.
+Physical accuracy failed at all five rules. The correction was tiny, while
+polar integration remained unresolved at the reference scale. R014 supplies
+no replacement accuracy result or geometry/spatial-error allocation. Alpha=48
+remains inconclusive; certificates are not integrated into schema-3 gate reports.
+Force/power, pressure demand, preparation, sensing and validated movie flow remain
+unassessed or unresolved.
 
 ## Next task
 
-**GPT-6 Astra, high reasoning:** implement a disposable runner and execute the
-[one matched-trace experiment](docs/realizability/B2_MATCHED_TRACE_REVIEW.md#one-executable-next-task-contract)
-once. This is proposed, **not already executed**. Read the complete R013 review
-and appendix, R012 audit/appendix, R009 error decomposition, R005 method
-assumptions, R008 certificates, `STATUS.md` and the four root research documents
-(`PROJECT_TRACKS.md`, `EXPERIMENT.md`, `PHYSICAL_REALIZABILITY_PLAN.md`,
-`CONTROL_RESEARCH_ROADMAP.md`). The full contract governs these summary points:
+**GPT-5.6 Luna, medium reasoning:** complete the
+[toy-only wrapper repair](docs/realizability/B2_MATCHED_TRACE_RESULT.md#next-bounded-task-repair-wrapper-instrumentation-on-toy-data-only).
+Read that full five-step contract and the exact failed runner first. Also read
+`STATUS.md`, the R013 review, and the four root research documents required by
+`AGENTS.md`. Preserve the archived R014 attempt; make a new disposable copy.
 
-- Pin the 19 source/config identities and exact existing 50 mm mesh hash;
-  reproduce its 482 cells, V/Q dimensions and local alpha=96 certificate.
-  Preserve the 500-cell and 3,000-free-DOF guards. No other physical mesh.
-- Implement and check oriented facet L2 normal projection and the matching
-  weak tangential load for the full 128-term complex trace. Facet Duffy orders
-  are 32 and 64, with at most 256 reference points per batch. Check flux and
-  pressure compatibility before projection into the algebraic nullspace.
-- Implement cell-aware polynomial integration on the exact disk, with the
-  prescribed geometry/moment/orientation checks. Refuse ambiguous positive-area
-  coincident facets. Keep the existing polar extractors and report them too.
-- Toy checks have a separate 60 s/512 MiB total budget. The physical child is
-  parent-monitored from imports through output at **180 s/1.5 GiB**, nominal
-  0.05 s samples. Validate the watchdog first. No retry or cap increase.
-- One unchanged matrix/factorization serves P, A_32 and A_64, each with one
-  homogeneous residual correction: exactly three primary RHSs, three correction
-  RHSs and six matrix solves on success. Preserve matrix/factor identities,
-  lifting, pressure gauges, physical scaling and fixed PDE/arithmetic checks.
-- Report complex error identities and unchanged strict 5%/5-degree comparisons.
-  The new load/output/correction component screens qualify this diagnostic;
-  they do not replace gate thresholds or certify a total error bound. A failure
-  stops at the recorded stage, with partial evidence and no method substitution.
+- Replace all three direct C++/Python space comparisons with
+  `fem.bcs_by_block`; use the resulting groups for constraints and residuals.
+  Check nonempty velocity/empty pressure groups, offsets, disjoint sets and
+  equality to independently located exterior DOFs before entering the solve.
+- Persist returned-solve counts and factor counters before further bookkeeping;
+  set accurate operation stages. Persist pre-removal compatibility numbers
+  before rejecting a RHS, including the currently unexecuted A failure path.
+- Use one reference tetrahedron, distinct real/imaginary BDM2/DG1 spaces,
+  zero/nonzero targets and intentional missing/wrong-space groups. Check 24
+  exterior DOFs per velocity block, six free interior velocity DOFs and zero
+  pressure constraints. Test exact assignment and unchanged sets. Exercise
+  failure reporting with synthetic bookkeeping/compatibility cases.
+- Parent-monitor all toy execution at **60 s/512 MiB total**. No physical
+  cylinder, global factorization or PDE solve, no physical retry or threshold
+  change. Preserve the numerical source identities and archived evidence.
 
-**Completion and stop:** preserve the exact runner and finite JSON report,
-including refused/partial results if a prerequisite or cap fails. Interpret only
-what the completed checks support, update continuity with one next task,
-commit/push under `Continue`, and stop after this single experiment. No
-persistent backend/form/mesh-generator change, boundary-layer mesh, alternate
-penalty, reduced solver, adjoint, gate integration, campaign, B3 or movie export.
-Preserve R/H/nu/f/U, disk, signed features, phasor, acceptance thresholds, failed
-physical B2 gate and false readiness. No hardware-feasibility claim follows.
+**Completion and stop:** preserve the exact repaired copy, focused finite toy
+report and checks; update request history/handoff; commit/push under `Continue`;
+stop before a physical attempt or scientific interpretation. On failure preserve
+partial evidence; do not silently change the boundary method or screen.
 
-**Following recommendation:** use GPT-5.6 Luna, medium, only for a fully specified
-mechanical package, with exact edits, focused checks and a stop before scientific
-interpretation. Otherwise retain Astra/high for one bounded unresolved numerical
-question. Do not start that following task in the same continuation.
+**Following recommendation:** after focused checks pass, recommend **GPT-6 Astra,
+high**, to review the repaired runner and conduct a separately authorized R013
+experiment under all original caps, checks and stop conditions. No model switch
+or run occurs automatically. Retain Luna/medium only for another fully understood
+mechanical defect with exact checks; use Astra/high if scientific assumptions,
+thresholds or numerical interpretation require a decision. The A pressure screen
+and physical output path have not been validated merely by fixing grouping.
 
 **Availability:** rechecked 2026-09-20 in the session model catalog and fetched
-[official Astra](https://developers.openai.com/api/docs/models/gpt-6-astra) and
-[Luna](https://developers.openai.com/api/docs/models/gpt-5.6-luna) pages using the
-OpenAI Docs skill. Both model/effort choices are listed; account/client access
-may differ. No model switch, delegated session or automation was launched.
+[official Luna](https://developers.openai.com/api/docs/models/gpt-5.6-luna) and
+[Astra](https://developers.openai.com/api/docs/models/gpt-6-astra) pages with
+OpenAI Docs. Both model/effort choices are listed; account access can differ.
+No switch, delegation or automation was launched. Next prompt: **Continue**.

@@ -906,3 +906,119 @@ and preserved R012 result table checked consistently. All prior request history,
 19 numerical source/config identities and three numerical evidence appendices
 were preserved. `git diff --check` passed. Validation record:
 `/tmp/navier-b2-method-r013/documentation-validation.json`.
+
+## R014 — 2026-09-20 — Short continuation request
+
+**User request (verbatim):**
+
+> continue
+
+**Scope:** Implement and execute the single disposable matched-trace experiment
+specified by R013, preserve complete or explicitly partial evidence, update
+continuity, and commit/push the scoped checkpoint to the configured upstream.
+
+**Status:** In progress.
+
+**Plan and completion criteria:** Read the complete R013 contract and required
+research/evidence; implement the fixed load/output kernels and prerequisite toy
+checks; validate the watchdog; attempt the prescribed paired physical experiment
+once if prerequisites pass; preserve the exact runner and finite JSON evidence;
+interpret only completed checks and publish the bounded result.
+
+**Stopping conditions:** Honor the contract's 60 s/512 MiB toy budget and
+180 s/1.5 GiB physical child-tree cap, fixed source/mesh identities, guards,
+compatibility and numerical checks. Stop on prerequisite refusal, inconsistency,
+resource cap or completion. No retry/cap increase, extra physical mesh, changed
+backend/form/penalty, adjoint, gate integration, campaign, B3 or movie export.
+Preserve parameters, features, phasor, thresholds, failed B2 and false readiness.
+`Continue` authorizes this scoped commit and push without rewriting history.
+
+**Outcome, 2026-09-20:** The single R014 physical attempt stopped at its required
+internal-error boundary. The disposable wrapper failed after the original P
+solve when direct comparison of C++/Python function-space objects produced an
+empty boundary-constraint list. `numpy.concatenate` raised `ValueError: need at
+least one array to concatenate`. There was no retry or cap increase. The
+experiment is partial, not a failed matched-trace accuracy comparison.
+
+All 19 source/configuration identities and the exact 482-cell, 9,522/1,928-DOF
+mesh matched. The alpha=96 certificate reproduced C_upper=58.12657123078638
+and beta=0.22187075813338908 under the 500-cell guard. All 24 permutation/30
+polynomial-vector-trace toy checks, disk/arc/jump/tangency checks and quadratic
+restriction/stencil checks passed. Two physical polynomial loads agreed with
+UFL; all 482 cells were checked for the disk partition, giving 11 positive-area
+regions and correct moments/denominator, with no coincident interior facet.
+Both q=32/64 full-trace loads and normal projections completed on 282 facets;
+all real/imaginary closed-flux ratios passed 1e-8. A pressure-compatibility
+checks were not reached. P's existing PDE diagnostics passed and reproduce
+R012 exactly except timing.
+
+**Actual inventory and limits:** One physical mesh, one returned P solve,
+zero residual corrections and zero matched-trace solves. Matrix/factor hashes
+and PETSc event counters were not reached. The physical child took 54.1700 s,
+with 734.7539 MiB parent/process peak RSS, 1,003 samples and maximum gap
+0.060411 s, below 180 s/1.5 GiB. Two successful toy children used 4.4804 s total
+and at most 141.5508 MiB parent RSS, below their shared 60 s/512 MiB cap. Synthetic
+wall and two-process RSS watchdog tests passed. No resource stop occurred.
+
+**Evidence and validation:** Durable result and index are
+`docs/realizability/B2_MATCHED_TRACE_RESULT.md` and
+`B2_MATCHED_TRACE_RUN_EVIDENCE.md`. Exact failed code, reports, normals/projection
+moments/fluxes, disk geometry, traceback and watchdog records are under
+`docs/realizability/evidence/r014/`; original files remain in
+`/tmp/navier-b2-matched-r014/`. The standard-library read-only audit passed for
+27 archived artifact identities, 19 numerical identities, 482 local values,
+564 facet projection equations/flux reductions, 11 regions, UFL comparisons,
+permutation records and P diagnostics. Large facet JSON records were compacted
+without changing parsed values; original and archived hashes are recorded.
+The audit performs no FEM import, mesh, assembly, reference evaluation or solve.
+
+**Checks skipped/unresolved:** No A lift/pressure check or solve; no correction,
+matrix/factor audit, solved-field polynomial reconstruction, feature extraction,
+gain, error identity or component/reference comparison. No coefficient vectors
+were saved for later output recovery. No full application, dense/calibration,
+refinement suite, rendering or encoding ran. No new physical accuracy, geometry
+error allocation, preparation, sensor or movie-flow result follows. The failed
+B2 gate and `campaign_ready=false` are unchanged. No production source/config,
+form/solver, guard or threshold changed; prior numerical appendices are intact.
+
+**Changed files:** This log, `SESSION_HANDOFF.md`, `STATUS.md`,
+`PROJECT_TRACKS.md`, `docs/realizability/B2_MATCHED_TRACE_REVIEW.md`,
+`B2_PHYSICAL_RESPONSE_AUDIT.md`, `B2_NEXT_STEPS.md`, `B2_GATE.md`; new matched-trace
+result, evidence index and the R014 historical artifact directory. The exact
+failed runner is preserved, including its unexecuted later code.
+
+**Next task/recommendation:** GPT-5.6 Luna, medium reasoning, for the result's
+fully specified toy-only wrapper repair. Replace all three direct space-object
+comparisons with `fem.bcs_by_block`, validate groups/offsets/exterior DOFs before
+solving, and persist accurate counts/stages/compatibility data before a failure.
+Test a reference tetrahedron and synthetic error paths under 60 s/512 MiB,
+preserve the repaired copy and finite report, commit/push, then stop. No physical
+cylinder, factorization, PDE solve or retry belongs to that next package. After
+focused checks pass, recommend Astra/high for review and a separately authorized
+R013 attempt; retain Luna/medium only for understood mechanical defects, and
+stop for Astra/high if a scientific assumption or threshold decision is needed.
+Availability was rechecked in the session catalog and fetched official model
+pages with OpenAI Docs. No switch, delegated session or automation occurred.
+
+**Status at completion:** Complete at the prescribed stop; scientific diagnostic
+partial due to an instrumentation error. The next prompt is **Continue**.
+
+**Git delivery:** `Continue` authorizes this scoped checkpoint and push to
+`origin/main`. Actual commit/push outcome is reported in Git history and the
+final response; no force-push is authorized.
+
+**Final documentation validation, 2026-09-20:** Passed for 10 Markdown files,
+84 local links/anchors, 20 fenced blocks, 15 finite JSON files and five Python
+syntax checks. All previous request history is preserved; stored-evidence checks
+also preserve the 19 numerical source/configuration identities and four prior
+evidence appendices. `git diff --check` passed. Documentation record:
+`/tmp/navier-b2-matched-r014/documentation-validation.json`; durable numerical
+record: `docs/realizability/evidence/r014/stored_validation.json`.
+
+**Staged archive check, 2026-09-20:** After newly archived files were staged,
+`git diff --cached --check` reported one trailing blank line at EOF in the exact
+historical `evidence/r014/toy_runner.py` (line 213). It is retained to preserve
+the executed bytes and SHA-256. All other staged files pass the whitespace
+check; this exception supersedes any interpretation that the entire new archive
+passed the default whitespace check. The earlier unstaged documentation check
+passed. No numerical check or artifact was changed to remove this warning.

@@ -9,7 +9,9 @@ No package source, configuration, solver, form or acceptance threshold changed.
 The R013 [method review](B2_MATCHED_TRACE_REVIEW.md) has since completed the
 next-task contract below. It selects a paired current-command/matched-trace
 experiment on this same mesh, with cell-aware disk integration. That experiment
-is specified but **not yet executed**; the R012 results below are unchanged.
+was attempted in [R014](B2_MATCHED_TRACE_RESULT.md) and stopped on a wrapper
+error after its original-command solve, before any matched-trace solve. The
+R012 results below are unchanged; the next task repairs the wrapper on toys.
 
 ## Result
 

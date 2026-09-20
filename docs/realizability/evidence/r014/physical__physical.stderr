@@ -1,0 +1,7 @@
+Traceback (most recent call last):
+  File "/tmp/navier-b2-matched-r014/physical.py", line 448, in <module>
+    calculate(args.output)
+  File "/tmp/navier-b2-matched-r014/physical.py", line 237, in calculate
+    constrained=np.concatenate([bc.dof_indices()[0]+offsets[i]
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+ValueError: need at least one array to concatenate

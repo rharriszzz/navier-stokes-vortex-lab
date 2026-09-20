@@ -102,8 +102,11 @@ feature quadrature remains unresolved at the reference error scale. The complete
 [method review](docs/realizability/B2_MATCHED_TRACE_REVIEW.md) specifies a paired
 boundary-data experiment on that same mesh: compare the current command with a
 known solution's full boundary trace, and integrate the disk separately by cell.
-The experiment is not yet run. Its discrete boundary sensitivity will not by
-itself identify continuum geometry error. A total FEM error floor is still
+The [single attempt](docs/realizability/B2_MATCHED_TRACE_RESULT.md) passed its
+mesh, load and disk-geometry checks, then stopped on a disposable-wrapper error
+after the original-command solve. No matched-trace response was calculated.
+The next task repairs and tests the wrapper on toys only. Discrete boundary
+sensitivity will not by itself identify continuum geometry error. A total FEM error floor is still
 unknown. The B2 gate remains failed and campaign readiness false. Use
 [SESSION_HANDOFF.md](SESSION_HANDOFF.md) for completion criteria and stops.
 

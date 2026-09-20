@@ -1,0 +1,40 @@
+{
+  "status": "passed",
+  "archived_files": 27,
+  "source_identities": 19,
+  "vertex_permutations": 24,
+  "polynomial_vector_traces_per_permutation": 30,
+  "facet_projection_records": {
+    "A_32": {
+      "facets": 282,
+      "maximum_projection_equation_residual": 1.3985787785349405e-17,
+      "signed_flux_si_fsum": [
+        2.5713535631527886e-19,
+        2.336108394034163e-22
+      ],
+      "absolute_flux_si_fsum": [
+        8.459460469091571e-10,
+        1.417029063726441e-10
+      ]
+    },
+    "A_64": {
+      "facets": 282,
+      "maximum_projection_equation_residual": 1.3904866443919908e-17,
+      "signed_flux_si_fsum": [
+        -1.1650997204110807e-25,
+        2.7387404803785154e-26
+      ],
+      "absolute_flux_si_fsum": [
+        8.460730228051459e-10,
+        1.4170311589495623e-10
+      ]
+    }
+  },
+  "local_certificate_values": 482,
+  "disk_regions": 11,
+  "prior_P_diagnostics_exactly_reproduced_except_timing": true,
+  "physical_child_seconds": 54.17002707297797,
+  "physical_peak_rss_mib": 734.75390625,
+  "toy_total_seconds": 4.480443482956616,
+  "no_FEM_import_mesh_assembly_solve_reference_or_field_integration": true
+}

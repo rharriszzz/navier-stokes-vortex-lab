@@ -185,12 +185,16 @@ original mismatch in continuum boundary data. The difference between the two
 computed answers measures sensitivity to that change; it does not, by itself,
 give the true geometry error.
 
-The proposed experiment also checks disk integration separately on each mesh
-cell. Its equations, fixed checks, one-factorization limit and 180 s/1.5 GiB
-physical-child caps are recorded before execution. **The review ran no new
-simulation, and this experiment has not yet been run.**
+The [single matched-trace attempt](docs/realizability/B2_MATCHED_TRACE_RESULT.md)
+has now stopped because its disposable wrapper failed after the original-command
+solve. The mesh, stability certificate, disk geometry and boundary-load checks
+passed, but no matched-trace solve or corrected/output comparison ran. It took
+54.17 seconds and 734.75 MiB, within its resource caps. This is an instrumentation
+failure and supplies no new evidence about physical accuracy or feasibility.
+The next task fixes and tests the wrapper on toy data only, before any separately
+authorized physical attempt.
 
 The physical-response campaign remains blocked (`campaign_ready=false`). No
 preparation protocol, sensing result, time-dependent movie dataset or render
-was produced by this audit or method review. Those broader goals remain as
+was produced by these audits, review or partial attempt. Those broader goals remain as
 stated above.
