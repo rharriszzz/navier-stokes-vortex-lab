@@ -91,6 +91,26 @@ def _jump(vector, normal):
     return ufl.outer(vector("+"), normal("+")) + ufl.outer(vector("-"), normal("-"))
 
 
+def sip_viscosity_form(trial, test, normal, cell_size, viscosity, alpha):
+    """Return the shared BDM SIP viscous bilinear form.
+
+    ``alpha`` is the dimensionless penalty coefficient.  This helper is used
+    by both the production harmonic solve and the small-mesh stability audit.
+    """
+
+    import ufl
+
+    return viscosity * (
+        ufl.inner(ufl.grad(trial), ufl.grad(test)) * ufl.dx
+        - ufl.inner(ufl.avg(ufl.grad(trial)), _jump(test, normal)) * ufl.dS
+        - ufl.inner(_jump(trial, normal), ufl.avg(ufl.grad(test))) * ufl.dS
+        + alpha / ufl.avg(cell_size) * ufl.inner(_jump(trial, normal), _jump(test, normal)) * ufl.dS
+        - ufl.inner(ufl.grad(trial), ufl.outer(test, normal)) * ufl.ds
+        - ufl.inner(ufl.outer(trial, normal), ufl.grad(test)) * ufl.ds
+        + alpha / cell_size * ufl.inner(ufl.outer(trial, normal), ufl.outer(test, normal)) * ufl.ds
+    )
+
+
 def _input_diagnostics(
     boundary_target,
     boundary_normal,
@@ -200,15 +220,7 @@ def affine_reaction_verification(
     boundary_dofs = fem.locate_dofs_topological(V, domain.topology.dim - 1, facets)
     bc = fem.dirichletbc(boundary_normal, boundary_dofs)
 
-    viscous = viscosity * (
-        ufl.inner(ufl.grad(u), ufl.grad(v)) * ufl.dx
-        - ufl.inner(ufl.avg(ufl.grad(u)), _jump(v, normal)) * ufl.dS
-        - ufl.inner(_jump(u, normal), ufl.avg(ufl.grad(v))) * ufl.dS
-        + alpha / ufl.avg(cell_size) * ufl.inner(_jump(u, normal), _jump(v, normal)) * ufl.dS
-        - ufl.inner(ufl.grad(u), ufl.outer(v, normal)) * ufl.ds
-        - ufl.inner(ufl.outer(u, normal), ufl.grad(v)) * ufl.ds
-        + alpha / cell_size * ufl.inner(ufl.outer(u, normal), ufl.outer(v, normal)) * ufl.ds
-    )
+    viscous = sip_viscosity_form(u, v, normal, cell_size, viscosity, alpha)
     a = [
         [viscous + ufl.inner(u, v) * ufl.dx, -p * ufl.div(v) * ufl.dx],
         [-q * ufl.div(u) * ufl.dx, None],
@@ -247,6 +259,84 @@ def affine_reaction_verification(
         "pressure_l2": pressure_l2,
         "divergence_l2": divergence_l2,
         "algebraic_residual": residual,
+    }
+
+
+def sip_stability_diagnostics(
+    resolution: int = 2, *, penalty_factor: float = 6.0
+) -> dict[str, float | int]:
+    """Measure small-mesh SIP coercivity after homogeneous normal constraints.
+
+    The result reports the velocity block both on all free velocity degrees of
+    freedom and on its discrete divergence-free nullspace.  It is deliberately
+    a dense, serial diagnostic for a very small cube; it is not a production
+    eigensolver or a claim about the full saddle-point spectrum.
+    """
+
+    require_fenicsx()
+    if resolution < 1 or penalty_factor <= 0.0:
+        raise ValueError("resolution and penalty_factor must be positive.")
+
+    from dolfinx import fem, mesh as dmesh
+    from mpi4py import MPI
+    import ufl
+
+    domain = dmesh.create_unit_cube(MPI.COMM_WORLD, resolution, resolution, resolution)
+    if domain.comm.size != 1:
+        raise RuntimeError("The dense SIP stability diagnostic is serial only.")
+    V, Q = create_hdiv_spaces(domain)
+    u, v = ufl.TrialFunction(V), ufl.TestFunction(V)
+    q = ufl.TestFunction(Q)
+    normal = ufl.FacetNormal(domain)
+    cell_size = ufl.CellDiameter(domain)
+    alpha = fem.Constant(domain, float(penalty_factor))
+    from dolfinx.fem import petsc as fem_petsc
+
+    velocity_matrix = fem_petsc.assemble_matrix(
+        fem.form(sip_viscosity_form(u, v, normal, cell_size, 1.0, alpha))
+    )
+    velocity_matrix.assemble()
+    divergence_matrix = fem_petsc.assemble_matrix(fem.form(-q * ufl.div(u) * ufl.dx))
+    divergence_matrix.assemble()
+
+    velocity_size = velocity_matrix.getSize()[0]
+    pressure_size = divergence_matrix.getSize()[0]
+    indices = np.arange(velocity_size, dtype=np.int32)
+    pressure_indices = np.arange(pressure_size, dtype=np.int32)
+    dense_velocity = velocity_matrix.getValues(indices, indices)
+    dense_divergence = divergence_matrix.getValues(pressure_indices, indices)
+    domain.topology.create_connectivity(domain.topology.dim - 1, domain.topology.dim)
+    facets = dmesh.exterior_facet_indices(domain.topology)
+    constrained = fem.locate_dofs_topological(V, domain.topology.dim - 1, facets)
+    free = np.setdiff1d(indices, constrained, assume_unique=False)
+    if free.size == 0:
+        raise RuntimeError("No free velocity degrees of freedom remain after normal constraints.")
+    reduced_velocity = dense_velocity[np.ix_(free, free)]
+    reduced_divergence = dense_divergence[:, free]
+    symmetry_error = np.linalg.norm(reduced_velocity - reduced_velocity.T) / max(
+        np.linalg.norm(reduced_velocity), np.finfo(float).tiny
+    )
+    full_eigenvalues = np.linalg.eigvalsh(0.5 * (reduced_velocity + reduced_velocity.T))
+    _, singular_values, right_vectors = np.linalg.svd(reduced_divergence, full_matrices=True)
+    divergence_tolerance = max(reduced_divergence.shape) * np.finfo(float).eps * max(
+        float(singular_values[0]) if singular_values.size else 0.0, 1.0
+    )
+    rank = int(np.count_nonzero(singular_values > divergence_tolerance))
+    nullspace_basis = right_vectors[rank:].T
+    if nullspace_basis.shape[1] == 0:
+        raise RuntimeError("No discrete divergence-free degrees of freedom were found.")
+    divergence_free_matrix = nullspace_basis.T @ reduced_velocity @ nullspace_basis
+    divergence_free_eigenvalues = np.linalg.eigvalsh(
+        0.5 * (divergence_free_matrix + divergence_free_matrix.T)
+    )
+    return {
+        "penalty_factor": float(penalty_factor),
+        "free_velocity_dofs": int(free.size),
+        "discrete_divergence_rank": rank,
+        "discrete_divergence_free_dofs": int(nullspace_basis.shape[1]),
+        "symmetry_relative_error": float(symmetry_error),
+        "minimum_free_velocity_eigenvalue": float(full_eigenvalues[0]),
+        "minimum_divergence_free_eigenvalue": float(divergence_free_eigenvalues[0]),
     }
 
 
@@ -336,24 +426,9 @@ def harmonic_response(
     nu = config.fluid.kinematic_viscosity
     omega = 2.0 * math.pi * frequency_hz
 
-    def viscosity_form(trial, test):
-        return nu * (
-            ufl.inner(ufl.grad(trial), ufl.grad(test)) * ufl.dx
-            - ufl.inner(ufl.avg(ufl.grad(trial)), _jump(test, normal)) * ufl.dS
-            - ufl.inner(_jump(trial, normal), ufl.avg(ufl.grad(test))) * ufl.dS
-            + alpha / ufl.avg(cell_size) * ufl.inner(
-                _jump(trial, normal), _jump(test, normal)
-            ) * ufl.dS
-            - ufl.inner(ufl.grad(trial), ufl.outer(test, normal)) * ufl.ds
-            - ufl.inner(ufl.outer(trial, normal), ufl.grad(test)) * ufl.ds
-            + alpha / cell_size * ufl.inner(
-                ufl.outer(trial, normal), ufl.outer(test, normal)
-            ) * ufl.ds
-        )
-
     a = [
         [
-            viscosity_form(u_r, v_r),
+            sip_viscosity_form(u_r, v_r, normal, cell_size, nu, alpha),
             -p_r * ufl.div(v_r) * ufl.dx,
             -omega * ufl.inner(u_i, v_r) * ufl.dx,
             None,
@@ -362,7 +437,7 @@ def harmonic_response(
         [
             omega * ufl.inner(u_r, v_i) * ufl.dx,
             None,
-            viscosity_form(u_i, v_i),
+            sip_viscosity_form(u_i, v_i, normal, cell_size, nu, alpha),
             -p_i * ufl.div(v_i) * ufl.dx,
         ],
         [None, None, -q_i * ufl.div(u_i) * ufl.dx, None],

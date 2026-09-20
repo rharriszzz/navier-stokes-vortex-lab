@@ -6,6 +6,8 @@ import importlib.util
 from pathlib import Path
 import unittest
 
+import numpy as np
+
 
 HAS_DOLFINX = importlib.util.find_spec("dolfinx") is not None
 
@@ -49,6 +51,21 @@ class HdivB2Tests(unittest.TestCase):
         features = extract_complex_linear_features(fields)
         self.assertEqual(features.shape, (6,))
         self.assertTrue(np.isfinite(features).all())
+
+    def test_small_mesh_sip_stability_audit(self) -> None:
+        from realizability.backends.hdiv_stokes import sip_stability_diagnostics
+
+        for penalty in (6.0, 12.0, 24.0, 48.0):
+            metrics = sip_stability_diagnostics(resolution=2, penalty_factor=penalty)
+            self.assertLess(metrics["symmetry_relative_error"], 1.0e-12)
+            self.assertGreater(metrics["free_velocity_dofs"], 0)
+            self.assertGreater(metrics["discrete_divergence_free_dofs"], 0)
+            self.assertTrue(np.isfinite(metrics["minimum_free_velocity_eigenvalue"]))
+            self.assertTrue(np.isfinite(metrics["minimum_divergence_free_eigenvalue"]))
+            if penalty == 6.0:
+                self.assertLess(metrics["minimum_divergence_free_eigenvalue"], 0.0)
+            else:
+                self.assertGreater(metrics["minimum_divergence_free_eigenvalue"], 0.0)
 
 
 if __name__ == "__main__":

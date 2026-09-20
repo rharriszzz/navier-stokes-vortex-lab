@@ -82,3 +82,9 @@ Do not run the six-mode response matrix, higher frequencies, pulse histories,
 or B3 sensing work from this state.  The next work remains within B2: make the
 tangential pilot affordable and demonstrate less than 5% gain and 5° phase
 change across refinement and acceptable SIP-penalty sensitivity.
+
+A subsequent source and numerical audit derived an independent smooth-cylinder
+reference for the tangential pilot. See [B2_NEXT_STEPS.md](B2_NEXT_STEPS.md) for
+the derivation, discrepancy with the stored results, and the stability checks
+to perform before another large refinement run. The failed gate above remains
+unchanged.

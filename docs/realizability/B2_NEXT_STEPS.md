@@ -1,0 +1,213 @@
+# B2 continuation: independent swirl reference and stability checks
+
+Prepared 2026-09-19 after reading all tracked source, configuration, tests, and
+research documents at commit `47b3205`. The tracked working tree was clean.
+The stored B2 report's six source/configuration hashes match the current files.
+The numerical work below is a new independent reference calculation; the
+stored three-dimensional CFD runs were not rerun during this audit.
+
+## Decision
+
+Continue B2 verification before launching the six-input campaign or B3 sensing.
+First add an independent reference for `T_00c`, then check the stability and
+boundary enforcement of the existing BDM2/DG1 formulation. Larger uniform
+meshes are not the first next step.
+
+Keep the current rest operating point, smooth-cylinder dimensions, viscosity,
+boundary modes, probe amplitude, feature definitions, and harmonic convention.
+The reference below is a verification oracle for one symmetry-restricted case,
+not a replacement CFD backend or an extension to nonlinear flow or m=4.
+
+The alternatives in `B2_GATE.md` (iterative solver, graded mesh, or a reviewed
+Fourier-separated backend) remain possible after these checks establish the
+accuracy and cost requirements. Do not silently select a new production
+discretization or reinterpret the failed gates.
+
+## Independent reference for the tangential pilot
+
+For axisymmetric pure swirl about rest, write
+`u_hat = v(r,z) e_theta`, with constant kinematic pressure. The linear Stokes
+equations reduce exactly to
+
+```text
+i*omega*v = nu*(v_rr + v_r/r - v/r^2 + v_zz)
+v(R,z) = U*(1-(z/H)^2)^2
+v(r,+H) = v(r,-H) = 0
+v(0,z) = 0, with v/r finite.
+```
+
+These are the existing `T_00c` data on the ideal smooth cylinder. They are not
+the exact boundary data on a finite faceted mesh. In particular, a tangential
+vector relative to the cylinder need not be tangential to each planar facet.
+
+Separation of variables gives the following series, with n = 0,1,...:
+
+```text
+a_n = (n+1/2)*pi
+k_n = a_n/H
+b_n = integral[-1,1] (1-s^2)^2*cos(a_n*s) ds
+    = 16*(-1)^n*(3-a_n^2)/a_n^5
+lambda_n = sqrt(k_n^2 + i*omega/nu), choosing positive real part
+
+v(r,z)/U = sum_n b_n * I_1(lambda_n*r)/I_1(lambda_n*R) * cos(k_n*z).
+```
+
+The coefficient formula follows by integrating the quartic polynomial by parts;
+the cosine basis has squared norm one on [-1,1]. The radial equation is the
+order-one modified Bessel equation, and regularity excludes its singular
+solution. See the [NIST definition](https://dlmf.nist.gov/10.25) for this equation.
+
+For the existing disk feature of radius d = 0.025 m at z = 0:
+
+```text
+G_Omega = Omega_hat/U
+        = (4/d^4) * integral[0,d] r^2 * v(r,0)/U dr
+        = (4/d^2) * sum_n b_n * I_2(lambda_n*d)
+                                  / (lambda_n*I_1(lambda_n*R)).
+```
+
+This is the disk-fitted rotation feature, not a pointwise velocity or a core
+radius. G_Omega has units 1/m. All five other primary features vanish by
+symmetry for this ideal case; pressure differences vanish as well.
+
+Use exponentially scaled Bessel functions to avoid overflow. For positive
+real(lambda) and 0 <= r <= R,
+
+```text
+I_j(lambda*r)/I_1(lambda*R)
+  = ive(j, lambda*r)/ive(1, lambda*R) * exp(real(lambda)*(r-R)).
+```
+
+The exponential here is real, as required by
+[SciPy's definition of ive](https://docs.scipy.org/doc/scipy/reference/generated/scipy.special.ive.html).
+Keep SciPy optional; Track A and B0 retain their existing dependency scope.
+
+## New calculation and its limits
+
+At R = 0.10 m, H = 0.15 m, nu = 1e-6 m^2/s, and f = 0.01 Hz:
+
+```text
+G_Omega = 2.066285885722e-5 - 6.595106312048e-5 i  [1/m]
+|G_Omega| = 6.911220198254e-5  [1/m]
+wrapped phase = -72.603917097 degrees
+|Omega_hat| at U = 1e-7 m/s = 6.911220198254e-12  [1/s].
+```
+
+The wrapped phase is not an unwrapped delay or evidence of a short response
+time. The calculation assumes the periodic steady state of linear Stokes flow.
+It says nothing about preparing or controlling a finite-amplitude vortex.
+
+| Terms | Magnitude (1/m) | Wrapped phase (degrees) |
+|---:|---:|---:|
+| 8 | 6.91111092850e-5 | -72.603682684 |
+| 16 | 6.91122019877e-5 | -72.603917094 |
+| 32 | 6.91122019825e-5 | -72.603917097 |
+| 64 | 6.91122019825e-5 | -72.603917097 |
+| 128 | 6.91122019825e-5 | -72.603917097 |
+
+Independent 512-point Gauss-Legendre integration agrees with the closed-form
+b_n coefficients to 3.4e-15 absolute and with the disk-integral expression to
+1.0e-18 absolute. This is evidence of series/quadrature convergence for this
+calculation, not a formal error bound or validation of the 3D solver.
+
+The existing B2 tangential gain magnitudes are approximately 1097, 299, and
+262 times this reference at 40, 30, and 25 mm mesh sizes, respectively.
+The 25 mm complex discrepancy is approximately 0.0182041 1/m. That discrepancy
+includes geometry, boundary-data, and discretization effects; it does not
+identify which effect dominates. The physical response is small but nonzero.
+
+Reproduce the arithmetic from the repository root with a SciPy-enabled Python:
+
+```bash
+python - <<'PY'
+import numpy as np
+from scipy.special import ive
+
+R, H, d, nu, f = 0.1, 0.15, 0.025, 1e-6, 0.01
+s, weights = np.polynomial.legendre.leggauss(512)
+for count in (8, 16, 32, 64, 128):
+    n = np.arange(count)
+    a = (n + 0.5)*np.pi
+    b = 16*(-1.0)**n*(3-a*a)/a**5
+    lam = np.sqrt((a/H)**2 + 2j*np.pi*f/nu)
+    ratio = ive(2, lam*d)/ive(1, lam*R)*np.exp(lam.real*(d-R))
+    gain = (4/d**2)*np.sum(b*ratio/lam)
+    b_quad = np.cos(a[:, None]*s) @ (weights*(1-s*s)**2)
+    radius, radial_weights = d*(s+1)/2, d*weights/2
+    profiles = (ive(1, lam[:, None]*radius)/ive(1, lam[:, None]*R)
+                * np.exp(lam.real[:, None]*(radius-R)))
+    gain_quad = (4/d**4)*np.sum(radial_weights*radius**2*(b @ profiles))
+    print(count, gain, abs(gain), np.angle(gain, deg=True),
+          max(abs(b-b_quad)), abs(gain-gain_quad))
+PY
+```
+
+## Implementation work to hand off
+
+1. Package the derived series as an optional diagnostic module and add focused
+   tests: coefficient quadrature, regular axis limit, cap conditions, truncated
+   side-wall reconstruction, series refinement, and independently integrated
+   disk feature. Check a resolved lower-frequency or higher-viscosity fixture
+   as well as the physical 0.01 Hz case. Label altered-parameter cases as
+   verification fixtures, preserving the production parameters.
+2. Audit the existing SIP viscous form before another production refinement.
+   Both implementations currently use alpha = 6 directly; the cited
+   [DOLFINx demo](https://docs.fenicsproject.org/dolfinx/v0.10.0/python/demos/demo_navier-stokes.html)
+   uses alpha = 6*k^2 in a different element/mesh setting. That is a reason to
+   test coercivity, not proof that 24 is sufficient for our tetrahedral BDM2
+   meshes. Extract a shared form helper so verification and production test
+   the same operator. On small meshes test alpha = 6, 12, 24, 48 with no added
+   reaction. Check symmetry and the lowest eigenvalues after eliminating
+   homogeneous normal boundary DOFs; inspect the discretely divergence-free
+   subspace when interpreting stability of the constrained Stokes system.
+   Add a homogeneous-wall decay or non-affine manufactured convergence check.
+   The current affine reaction fixture verifies consistency for one exactly
+   represented field; it cannot certify positive viscous dissipation.
+3. Measure tangential boundary error against the declared target, including
+   caps, and interior tangential jumps. The current `boundary_dof_residual`
+   checks essential normal DOFs only. Distinguish prescribed target speed from
+   actual computed trace speed. Audit whether the weak target's normal
+   component on planar facets is consistent with the imposed zero normal
+   trace; any projection must be explicit and checked under geometry refinement.
+4. Compare the complex `T_00c -> Omega` gain with the independent reference,
+   recording absolute complex error as well as relative gain/phase error.
+   Keep the current numerical thresholds. Do not claim a resolved phase while
+   discretization error exceeds the response. Agreement between adjacent
+   meshes alone is insufficient if both disagree with the reference.
+5. Only then choose the least costly refinement/linear-solver improvement with
+   measured degrees of freedom, runtime, memory, and accuracy. At 0.01 Hz the
+   viscous penetration length is 5.642 mm; the handoff's initial wall spacing
+   delta/4 is approximately 1.410 mm. Merely shrinking the current 25 mm
+   uniform mesh once more is unlikely to settle this accuracy question.
+
+Stop after the independent reference and small stability tests and bring back
+the results before initiating another large refinement campaign. A converged
+small-response result remains useful; it does not authorize relaxing a gate or
+claiming failure of boundary control around a developed vortex.
+
+## Additional issues to address before later packages
+
+- `realizability/response.py` casts gains and SVD/nullspace inputs to float.
+  Harmonic complex gains would lose their imaginary parts. Preserve complex
+  dtype and use conjugate transpose for right singular vectors when extending
+  these helpers. Add a phase-sensitive regression before the six-input report.
+- `b2_gate.py` checks only primary relative gain/phase changes; it has no
+  absolute response error floor. Penalty-comparison solves should also satisfy
+  the same PDE diagnostic checks as baseline solves. These are report/gate
+  improvements, not a reason to reinterpret the stored failed result.
+- `PROJECT_TRACKS.md` still says CFD has not begun; the package and CLI
+  docstrings also describe only B0. Update these summaries to acknowledge B0,
+  B1's documented limitation, and the incomplete B2 gate. Preserve historical
+  context in the original handoff.
+- The B2 generated report lacks the complete configuration, runtime dependency
+  versions, and all contributing source hashes required by the handoff. Add
+  these before future result comparisons; the matching existing hashes do not
+  establish complete provenance.
+
+## Cost-aware continuation
+
+The research decision and reference derivation are now recorded. Pause here for
+a model switch, as requested by the user. A cheaper coding model can implement
+the explicit reference, tests, diagnostics, and documentation updates above.
+Retain higher-level review for interpreting instability, choosing a new solver
+or mesh architecture, changing thresholds, or broadening the physical claims.
