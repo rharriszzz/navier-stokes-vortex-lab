@@ -19,6 +19,9 @@ movie/*.mov
 movie/*.webm
 movie/*.gif
 
+# Physical-realizability generated reports and arrays
+results/realizability/
+
 # POV-Ray temporary/output files
 *.out
 *.log

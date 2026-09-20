@@ -1,0 +1,24 @@
+{
+  "schema_version": 1,
+  "geometry": {
+    "radius": 0.1,
+    "half_height": 0.15
+  },
+  "fluid": {
+    "kinematic_viscosity": 1e-06,
+    "density": 1000.0
+  },
+  "reference": {
+    "duration": 100.0,
+    "initial_core_radius": 0.01,
+    "final_core_radius": 0.003,
+    "initial_peak_swirl": 0.01,
+    "radial_plateau": 0.04,
+    "radial_cutoff": 0.08,
+    "axial_plateau": 0.05,
+    "axial_cutoff": 0.12
+  },
+  "probe_velocity": 1e-07,
+  "frequencies_hz": [0.01, 0.1, 1.0, 30.0],
+  "mode_order": ["N_02c", "T_00c", "N_40c", "N_40s", "T_40c", "T_40s"]
+}
