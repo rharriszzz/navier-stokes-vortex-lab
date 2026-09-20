@@ -191,6 +191,42 @@ describes Luna as suited to cost-sensitive work and supports medium effort.
    test counts/skips, and remaining limitations. Do not commit or push unless
    the user asks.
 
+## 2026-09-20 implementation result
+
+Implemented the bounded acceptance repair in `realizability/backends/b2_gate.py`
+and `realizability/backends/b2_stability.py`, with focused regressions in
+`tests/realizability/test_b2_gate.py`. The rejection formatter now reports
+later checks as not run and includes the audited meshes/penalties; API defaults
+match CLI candidates 48/96. Successful reports state the fixed-fixture and
+independent-reference limitations. The energy audit separately records
+spectral and backward-Euler outcomes, applies the specified residual/energy
+tolerances, marks skipped steps not run, and converts nonfinite diagnostics to
+JSON null while making their checks fail. This does not alter the physical
+pilot aggregate or acceptance thresholds.
+
+Validation:
+
+- `python3 -W error -m unittest discover -s tests/realizability -v`: 41 tests,
+  29 passed and 12 optional DOLFINx tests skipped.
+- `/tmp/navier-fenicsx/bin/python -m unittest discover -s tests/realizability -p 'test_b2*.py' -v`:
+  18 tests passed, including the existing real unstable-penalty regression.
+- Reproduced the rejection command into
+  `/tmp/navier-b2-repair-review-20260920`: JSON and Markdown were written,
+  stability remained false for alpha 6/48, downstream checks read “not run,”
+  and no harmonic solve or traceback occurred.
+- Ran the bounded 100/70 mm alpha 6/48 energy audit into
+  `/tmp/navier-b2-repair-stability-20260920`. Rates matched the evidence above;
+  the 70 mm backward-Euler ratios were 1.072025523823309 / 1.0720255238233112
+  (alpha 6) and 0.996633794049131 / 0.9966337940491317 (alpha 48), with residuals
+  below `1.9e-15`. Step agreement passes for both; alpha 6 remains spectrally
+  unstable and the aggregate correctly fails.
+
+Changed files: this review, `realizability/backends/b2_gate.py`,
+`realizability/backends/b2_stability.py`, and the new
+`tests/realizability/test_b2_gate.py`. The actual response meshes and physical
+disk-reference agreement remain unverified; this bounded repair does not pass
+the B2 physical-response gate or authorize a campaign.
+
 Suggested validation commands from the repository root:
 
 ```bash

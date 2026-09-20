@@ -26,6 +26,10 @@ FEATURE_UNITS = (
 PRIMARY_FEATURE = {"N_02c": 0, "T_00c": 1}
 
 
+def _gate_status(value: bool | None) -> str:
+    return "not run" if value is None else str(value)
+
+
 def _complex_records(values: np.ndarray) -> list[dict[str, float | str]]:
     return [
         {
@@ -72,8 +76,8 @@ def _pde_diagnostics_passed(result) -> bool:
 def run_b2_gate(
     config: PilotConfig,
     mesh_sizes: tuple[float, ...] = (0.04, 0.03, 0.025),
-    penalty_factor: float = 6.0,
-    comparison_penalty_factor: float = 12.0,
+    penalty_factor: float = 48.0,
+    comparison_penalty_factor: float = 96.0,
 ) -> dict[str, Any]:
     """Run only the normal/tangential pilot gates required before a campaign."""
 
@@ -101,9 +105,15 @@ def run_b2_gate(
             "mesh_sizes": list(mesh_sizes),
             "cylinder_stability_audit": stability_audit,
             "cylinder_stability_gate_passed": False,
+            "affine_verification_passed": None,
+            "pilot_divergence_and_residual_gates_passed": None,
+            "primary_feature_mesh_comparisons": {},
+            "primary_mesh_convergence_passed": None,
+            "penalty_sensitivity_passed": None,
+            "quadrature_convergence_passed": None,
             "all_numerical_gates_passed": False,
             "campaign_launched": False,
-            "campaign_blocked_reason": "One or more requested SIP penalties add energy on a bounded cylinder fixture; harmonic pilot solves were not launched.",
+            "campaign_blocked_reason": "One or more requested penalties failed the bounded cylinder stability audit; harmonic pilot solves were not launched.",
         }
 
     affine = affine_reaction_verification(resolution=3, penalty_factor=penalty_factor)
@@ -214,6 +224,11 @@ def run_b2_gate(
     return {
         "schema_version": 2,
         "claim": "B2 pre-campaign numerical gate only; no six-mode response campaign or control result.",
+        "limitations": [
+            "Cylinder stability is audited only on fixed 100/70 mm fixtures, not the requested response meshes.",
+            "No comparison is made between the physical T_00c gain and the independent disk-rotation reference.",
+            "Passing these numerical gates does not establish physical response accuracy or campaign readiness.",
+        ],
         "formulation": {
             "velocity_pressure": "BDM2/DG1 divergence-conforming symmetric interior-penalty Stokes",
             "operating_point": "rest",
@@ -258,11 +273,11 @@ def format_b2_gate(report: dict[str, Any]) -> str:
         "| Gate | Passed |",
         "|---|:---:|",
         f"| bounded cylinder energy stability | {report['cylinder_stability_gate_passed']} |",
-        f"| affine reaction verification | {report['affine_verification_passed']} |",
-        f"| flux, algebraic residual, and strong divergence | {report['pilot_divergence_and_residual_gates_passed']} |",
-        f"| primary gain/phase mesh convergence | {report['primary_mesh_convergence_passed']} |",
-        f"| SIP penalty sensitivity | {report['penalty_sensitivity_passed']} |",
-        f"| feature quadrature convergence | {report['quadrature_convergence_passed']} |",
+        f"| affine reaction verification | {_gate_status(report.get('affine_verification_passed'))} |",
+        f"| flux, algebraic residual, and strong divergence | {_gate_status(report.get('pilot_divergence_and_residual_gates_passed'))} |",
+        f"| primary gain/phase mesh convergence | {_gate_status(report.get('primary_mesh_convergence_passed'))} |",
+        f"| SIP penalty sensitivity | {_gate_status(report.get('penalty_sensitivity_passed'))} |",
+        f"| feature quadrature convergence | {_gate_status(report.get('quadrature_convergence_passed'))} |",
         "",
         "## Primary-feature mesh comparisons",
         "",
@@ -270,7 +285,10 @@ def format_b2_gate(report: dict[str, Any]) -> str:
         "|---|---:|---:|---:|:---:|",
     ]
     if not report["cylinder_stability_gate_passed"]:
-        lines.extend(["", "## Disposition", "", report["campaign_blocked_reason"]])
+        lines.extend(["", "## Disposition", "", report["campaign_blocked_reason"], "",
+                      f"Audited fixture meshes: {', '.join(f'{size:g} m' for size in report['cylinder_stability_audit']['audit_mesh_sizes_m'])}.",
+                      f"Audited penalties: {', '.join(f'{value:g}' for value in report['cylinder_stability_audit']['penalty_factors'])}.",
+                      "Later gate stages are **not run** because the cylinder stability gate rejected the requested penalties."])
         return "\n".join(lines) + "\n"
     for mode, rows in report["primary_feature_mesh_comparisons"].items():
         feature = FEATURE_NAMES[PRIMARY_FEATURE[mode]]
@@ -282,7 +300,9 @@ def format_b2_gate(report: dict[str, Any]) -> str:
             )
     lines.extend(["", "## Disposition", ""])
     if report["all_numerical_gates_passed"]:
-        lines.append("The documented pilot gates pass; a separate command may launch the six-mode campaign.")
+        lines.append("The documented two-pilot numerical checks pass on the stated fixtures.")
+        lines.extend(["", "## Scope limitations", ""])
+        lines.extend(f"- {limitation}" for limitation in report.get("limitations", []))
     else:
         lines.append(
             "The campaign remains blocked. Passing strong divergence alone is insufficient while the reported "

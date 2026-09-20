@@ -40,6 +40,74 @@ def _relative(numerator: float, denominator: float) -> float:
     return float(numerator / max(denominator, np.finfo(float).tiny))
 
 
+def _finite_or_none(value: float) -> float | None:
+    """Keep invalid diagnostics explicit while preserving strict JSON output."""
+
+    try:
+        result = float(value)
+    except (TypeError, ValueError, OverflowError):
+        return None
+    return result if math.isfinite(result) else None
+
+
+def _strict_finite(value: Any) -> Any:
+    """Replace nonfinite numeric leaves with null for strict JSON reports."""
+
+    if isinstance(value, dict):
+        return {key: _strict_finite(item) for key, item in value.items()}
+    if isinstance(value, list):
+        return [_strict_finite(item) for item in value]
+    if isinstance(value, (float, np.floating)):
+        return _finite_or_none(float(value))
+    return value
+
+
+def _backward_euler_decision(decay_rate: float, step: dict[str, Any] | None) -> dict[str, Any]:
+    """Evaluate independent step evidence against its eigenvalue prediction."""
+
+    tolerances = {
+        "algebraic_residual_max": 1.0e-9,
+        "energy_ratio_rtol": 1.0e-9,
+        "energy_ratio_atol": 1.0e-12,
+        "non_growth_allowance": 1.0e-12,
+    }
+    if step is None:
+        return {"status": "not_run", "passed": None, "checks": {}, "tolerances": tolerances}
+
+    fields = ("time_step_s", "measured_energy_ratio", "predicted_energy_ratio", "step_algebraic_residual")
+    values = {name: _finite_or_none(step.get(name, math.nan)) for name in fields}
+    finite = all(value is not None for value in values.values()) and math.isfinite(decay_rate)
+    positive_dt = finite and values["time_step_s"] > 0.0
+    residual_passed = finite and values["step_algebraic_residual"] <= tolerances["algebraic_residual_max"]
+    agreement_passed = finite and bool(
+        np.isclose(
+            values["measured_energy_ratio"],
+            values["predicted_energy_ratio"],
+            rtol=tolerances["energy_ratio_rtol"],
+            atol=tolerances["energy_ratio_atol"],
+        )
+    )
+    non_growth_applicable = math.isfinite(decay_rate) and decay_rate > 0.0
+    non_growth_passed = (not non_growth_applicable) or (
+        finite and values["measured_energy_ratio"] <= 1.0 + tolerances["non_growth_allowance"]
+    )
+    checks = {
+        "all_diagnostics_finite": finite,
+        "positive_time_step": positive_dt,
+        "algebraic_residual_passed": residual_passed,
+        "energy_prediction_agreement_passed": agreement_passed,
+        "non_growth_applicable": non_growth_applicable,
+        "non_growth_passed": non_growth_passed,
+    }
+    return {
+        "status": "executed",
+        "passed": bool(all(value for key, value in checks.items() if key != "non_growth_applicable")),
+        "checks": checks,
+        "tolerances": tolerances,
+        **values,
+    }
+
+
 def _backward_euler_step(V, Q, initial, normal, cell_size, viscosity, penalty_factor, constrained):
     """Take one unforced constrained Stokes step from an audit eigenvector."""
 
@@ -165,9 +233,34 @@ def run_cylinder_stability_audit(
                 float(np.linalg.norm(projected_viscous @ vector)
                       + abs(decay_rate) * np.linalg.norm(projected_mass @ vector)),
             )
+            spectral_checks = {
+                "finite_decay_rate": math.isfinite(decay_rate),
+                "positive_decay_rate": math.isfinite(decay_rate) and decay_rate > 0.0,
+                "projected_matrix_symmetry_passed": math.isfinite(
+                    float(np.linalg.norm(projected_viscous - projected_viscous.T))
+                ) and _relative(
+                    float(np.linalg.norm(projected_viscous - projected_viscous.T)),
+                    float(np.linalg.norm(projected_viscous)),
+                ) < 1.0e-12,
+                "eigenpair_residual_passed": math.isfinite(eigenpair_residual) and eigenpair_residual < 1.0e-9,
+                "divergence_passed": (
+                    math.isfinite(divergence_l2_squared)
+                    and math.isfinite(velocity_mass)
+                    and config.geometry.radius
+                    * math.sqrt(
+                        max(
+                            divergence_l2_squared / max(velocity_mass, np.finfo(float).tiny),
+                            0.0,
+                        )
+                    )
+                    < 1.0e-10
+                ),
+                "normal_trace_passed": math.isfinite(boundary_normal_squared) and math.sqrt(max(boundary_normal_squared, 0.0)) < 1.0e-10,
+                "quadratic_form_passed": math.isfinite(direct_quadratic) and math.isfinite(decay_rate) and abs(direct_quadratic / max(velocity_mass, np.finfo(float).tiny) - decay_rate) < 1.0e-10,
+            }
             case: dict[str, Any] = {
                 "penalty_factor": float(penalty_factor),
-                "minimum_decay_rate_per_s": decay_rate,
+                "minimum_decay_rate_per_s": _finite_or_none(decay_rate),
                 "projected_matrix_symmetry_relative_error": _relative(
                     float(np.linalg.norm(projected_viscous - projected_viscous.T)),
                     float(np.linalg.norm(projected_viscous)),
@@ -189,21 +282,25 @@ def run_cylinder_stability_audit(
                     penalty_factor, constrained,
                 )
                 after_mass = float(fem.assemble_scalar(fem.form(ufl.inner(after, after) * ufl.dx)))
-                case["backward_euler"] = {
+                step_values = {
                     "time_step_s": time_step,
                     "measured_energy_ratio": after_mass / max(velocity_mass, np.finfo(float).tiny),
-                    "predicted_energy_ratio": 1.0 / (1.0 + time_step * decay_rate) ** 2,
+                    "predicted_energy_ratio": (
+                        math.inf if (1.0 + time_step * decay_rate) == 0.0
+                        else 1.0 / (1.0 + time_step * decay_rate) ** 2
+                    ),
                     "step_algebraic_residual": solve_residual,
                 }
+            else:
+                step_values = None
+            case["spectral_checks"] = spectral_checks
+            case["spectral_checks_passed"] = bool(all(spectral_checks.values()))
+            case["backward_euler"] = _backward_euler_decision(decay_rate, step_values)
             case["stability_checks_passed"] = bool(
-                decay_rate > 0.0
-                and case["projected_matrix_symmetry_relative_error"] < 1.0e-12
-                and eigenpair_residual < 1.0e-9
-                and case["divergence_ratio"] < 1.0e-10
-                and case["boundary_normal_l2"] < 1.0e-10
-                and case["quadratic_form_absolute_error_per_s"] < 1.0e-10
+                case["spectral_checks_passed"]
+                and (case["backward_euler"]["passed"] is not False)
             )
-            cases.append(case)
+            cases.append(_strict_finite(case))
         results.append(
             {
                 "mesh_size_m": float(mesh_size),
@@ -248,13 +345,16 @@ def format_cylinder_stability_audit(report: dict[str, Any]) -> str:
         "",
         f"All requested cases stable: **{report['all_requested_cases_stable']}**",
         "",
-        "| Mesh (m) | Penalty | Minimum decay rate (1/s) | Stable |",
-        "|---:|---:|---:|:---:|",
+        "| Mesh (m) | Penalty | Minimum decay rate (1/s) | Spectral | Backward Euler | Overall |",
+        "|---:|---:|---:|:---:|:---:|:---:|",
     ]
     for mesh in report["mesh_results"]:
         for case in mesh["penalty_cases"]:
             lines.append(
                 f"| {mesh['mesh_size_m']:g} | {case['penalty_factor']:g} | "
-                f"{case['minimum_decay_rate_per_s']:.12g} | {case['stability_checks_passed']} |"
+                f"{case['minimum_decay_rate_per_s'] if case['minimum_decay_rate_per_s'] is not None else 'invalid'} | "
+                f"{case['spectral_checks_passed']} | "
+                f"{case['backward_euler']['passed'] if case['backward_euler']['passed'] is not None else 'not run'} | "
+                f"{case['stability_checks_passed']} |"
             )
     return "\n".join(lines) + "\n"
