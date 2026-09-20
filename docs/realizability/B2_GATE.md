@@ -41,8 +41,11 @@ scoped homogeneous-operator evidence, not a physical-accuracy result or a
 production penalty choice. The diagnostic remains separate from this gate, so
 schema-3 reports still say response-mesh stability is `not_assessed`; that
 field has not incorporated the R008 evidence. An inconclusive certificate must
-not be interpreted as an unstable operator. The next task is an absolute
-physical-accuracy/error-floor investigation, with no new harmonic run yet.
+not be interpreted as an unstable operator. The completed
+[R009 accuracy review](B2_ACCURACY_REVIEW.md) quantifies reference sensitivity
+and the absolute comparison scale; current FEM accuracy remains unknown. It
+proposes one capped 50 mm alpha=96 response/feature/residual-correction audit.
+No new harmonic response was run in that review, and this gate is unchanged.
 
 This package is deliberately incomplete: the six-input response campaign was
 not launched because the numerical acceptance gates did not all pass.

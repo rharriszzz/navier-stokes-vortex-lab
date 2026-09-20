@@ -482,3 +482,112 @@ incorporated the separate alpha=96 certificates.
 `Record B2 response-mesh coercivity certificates` and its push to the configured
 upstream. The commit identity and actual push outcome are reported in Git
 history and the session's final response; no force-push is authorized.
+
+## R009 — 2026-09-20 — Short continuation request
+
+**User request (verbatim):**
+
+> continue
+
+**Scope:** Complete the R008 bounded physical-response accuracy/error-floor
+investigation using existing source/reports and bounded reference/feature
+quadrature calculations. Preserve quantitative evidence and reproducible
+calculation text, propose one affordable next experiment, update continuity
+records, and commit/push only the scoped work to the configured upstream.
+
+**Status:** In progress.
+
+**Plan and completion criteria:** Read the handoff's required research and
+method records; reproduce the physical complex disk gain and sensitivity;
+separate known error contributions from unknowns; compare targeted error or
+adjoint diagnostics with boundary-layer or symmetry-restricted alternatives;
+specify one proposed experiment with acceptance evidence, identity checks,
+resource limits, and failure conditions; validate and publish the review.
+
+**Stopping conditions:** Stop at the accuracy-review boundary, or earlier on
+reference inconsistency or resource refusal. New reference calculations are
+limited to 32/64/128 terms and at most 512 quadrature points per integrated
+coordinate, under a parent-enforced total 120 s/1 GiB RSS budget. No mesh
+generation, global assembly/factorization, harmonic pilots, gate integration,
+campaigns, or B3. Preserve physical parameters, signed features, phasor and
+facet-target conventions, thresholds, default guards, failed physical B2
+gate, and `campaign_ready=false`. Alpha=96 remains only a verification
+candidate on the recorded geometries; alpha=48 remains inconclusive.
+
+**Outcome, 2026-09-20:** Completed the physical-accuracy/error-floor review in
+`docs/realizability/B2_ACCURACY_REVIEW.md`, with exact calculations in
+`B2_ACCURACY_EVIDENCE.md`. The physical complex gain reproduced as
+`2.0662858857221768e-5 - 6.595106312048072e-5 i 1/m`, giving rotation amplitude
+`6.911220198253778e-12 1/s`. The 32/64/128-term results coincide at returned
+precision; the largest measured radial quadrature discrepancy is
+`1.3736273526914378e-18 1/m`. Series/radial cancellation ratios are 1.05233
+and 1.17288. These are observed reference sensitivities, not a rigorous
+reference bound or a total FEM error floor.
+
+The review derives how `0.05 |G|=3.4556100991268897e-6 1/m` is sufficient for
+both existing magnitude/phase comparisons, without replacing their thresholds.
+It separates algebraic/output, boundary load, geometry and spatial uncertainty,
+retains the historical alpha=6 discrepancies as historical, and compares
+same-operator error/adjoint, boundary-layer, and symmetry-restricted options.
+The selected next experiment is one capped 50 mm alpha=96 physical response
+audit with feature-quadrature sensitivity and one residual-correction RHS
+using the original factors. No repaired harmonic response or total error bound
+is claimed; physical accuracy and production penalty selection remain unresolved.
+
+**Resources and validation:** Final reference pass 0.3690 s; both executed
+passes together 0.8442 s, with the second parent deadline deducting the first
+pass's measured duration. Maximum parent-observed child RSS across both was
+66.9063 MiB; final process high-water RSS was 71.7813 MiB; maximum sample gap
+0.05342 s. All are within 120 s/1 GiB. The initial synthetic watchdog CLI
+self-check encountered a directory-creation defect before launching children;
+the corrected final runner passed wall-time and two-process RSS termination
+checks. Reference consistency and resource limits never failed.
+
+Checks passed for three series, 128 independently integrated coefficients,
+21 radial and five polar comparisons, scaled/unscaled Bessel evaluation,
+summation checks, three stored historical gains, 19 unchanged package/config
+hashes matching R008, strict JSON, four manifest file identities, exact embedded
+runner and all embedded calculation records. Documentation audit passed for
+nine Markdown files, 42 local links/anchors, 38 fenced blocks (Python/JSON
+syntax where applicable), and five review tables; `git diff --check` passed.
+No application suite, FEM/PDE/UFL/dense check, mesh, harmonic pilot, rendering
+or encoding ran. Existing tests that calculate 16 terms or changed parameters
+were skipped to preserve this task's bounded calculation contract.
+
+**Evidence:** `/tmp/navier-b2-accuracy-r009/` contains the exact runner, initial
+and final reference records, watchdog self-checks, read-only audit and validation
+record. The versioned appendix preserves calculations and source/config/report
+provenance independently of temporary files. Final runner SHA-256:
+`d3f821efdf8cae1ae9a977082affe7e19a681bbb573c7c9f2a1052a36b91ab61`.
+Final calculation JSON SHA-256:
+`aea6e545734dbcaeacf5e29ac7977fa68a8033c0827ee397906efdfadccfdf96`.
+
+**Changed files:** `REQUEST_LOG.md`, `SESSION_HANDOFF.md`, `PROJECT_TRACKS.md`,
+`docs/realizability/B2_GATE.md`, `docs/realizability/B2_NEXT_STEPS.md`,
+`docs/realizability/B2_RESPONSE_COERCIVITY_RESULT.md`,
+`docs/realizability/B2_SCALABLE_STABILITY_REVIEW.md`, and new
+`docs/realizability/B2_ACCURACY_REVIEW.md` and `B2_ACCURACY_EVIDENCE.md`.
+Numerical source, config, gate behavior, physical thresholds and defaults are
+unchanged. The physical B2 gate remains failed and `campaign_ready=false`.
+
+**Next task/recommendation:** GPT-6 Astra, high reasoning, for the review's
+single 50 mm alpha=96 response audit: pinned mesh/form/config, current physical
+parameters/target/features, one same-factor residual correction, five prescribed
+quadrature rules, complete strict evidence, 180 s total/1.5 GiB active-child-tree
+RSS cap. Stop after that one case or an explicit failure/refusal; no automatic
+retry, larger mesh, second penalty, new solver/form, adjoint, boundary-layer
+implementation, gate integration, campaign or B3. Interpret measured corrections
+as sensitivities, not certified error bounds. Recommend Luna/medium next only
+for a known mechanical fix with exact edits, focused checks and a stop before
+interpretation; otherwise retain Astra/high for one bounded numerical question.
+Availability was rechecked against this session's catalog and fetched official
+model pages using the OpenAI Docs skill. No model switch, delegation or
+automation was launched.
+
+**Status at completion:** Complete; stopped at the accuracy-review boundary.
+
+**Git delivery:** `Continue` authorizes the scoped checkpoint
+`Review B2 physical response accuracy and bound one diagnostic` and its push
+to the configured upstream. The commit identity and actual push outcome are
+reported in Git history and the session's final response; no force-push is
+authorized.

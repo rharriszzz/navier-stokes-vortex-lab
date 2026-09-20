@@ -1,8 +1,9 @@
 # B2 scalable stability method review
 
-Current result and next task: [R008 response-geometry study](B2_RESPONSE_COERCIVITY_RESULT.md).
-The implementation and bounded response-geometry evaluation are complete;
-the next task investigates physical accuracy and the absolute error floor.
+Current accuracy result and next task: [R009 review](B2_ACCURACY_REVIEW.md).
+The implementation, [R008 response-geometry evaluation](B2_RESPONSE_COERCIVITY_RESULT.md),
+and reference/error-budget review are complete. The next task is one capped
+50 mm alpha=96 response audit; the total FEM error floor remains unknown.
 The [R007 review](B2_COERCIVITY_INTERPRETATION.md) records the evaluation contract.
 
 Prepared 2026-09-20 for [R005](../../REQUEST_LOG.md), against source commit

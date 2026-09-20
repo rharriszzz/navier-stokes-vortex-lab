@@ -84,9 +84,13 @@ also certifies positive homogeneous dissipation at alpha=96 on the exact
 40/30/25 mm physical-pilot geometries; alpha=48 remains inconclusive on all
 four 50/40/30/25 mm meshes. This supplies scoped stability evidence without
 establishing physical accuracy or selecting a production penalty. The separate
-diagnostic is not integrated into the gate. The next bounded task investigates
-the absolute physical-response accuracy/error floor and specifies one affordable
-experiment. The B2 gate remains failed and campaign readiness false. Use
+diagnostic is not integrated into the gate. The completed
+[accuracy review](docs/realizability/B2_ACCURACY_REVIEW.md) reproduces the tiny
+physical disk response and finds reference sensitivity far below the existing
+comparison scale, while leaving the total FEM error floor unknown. Its next
+bounded task is one capped 50 mm alpha=96 response audit with feature quadrature
+and one residual correction using the same factors. The B2 gate remains failed
+and campaign readiness false. Use
 [SESSION_HANDOFF.md](SESSION_HANDOFF.md) for completion criteria and stops.
 
 ### Core constraint

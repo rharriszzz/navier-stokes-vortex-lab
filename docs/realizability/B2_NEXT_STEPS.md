@@ -1,15 +1,19 @@
 # B2 continuation: independent swirl reference and stability checks
 
-Current continuation after R008: read the
+Current continuation after R009: read the
+[physical-accuracy review](B2_ACCURACY_REVIEW.md), its
+[calculation appendix](B2_ACCURACY_EVIDENCE.md), the
 [response-geometry result](B2_RESPONSE_COERCIVITY_RESULT.md), its exact-runner
 [appendix](B2_RESPONSE_COERCIVITY_EVIDENCE.md), and root
 [session handoff](../../SESSION_HANDOFF.md). Alpha=96 now has positive
 homogeneous-dissipation certificates on the exact 50/40/30/25 mm meshes;
-alpha=48 remains inconclusive. The next bounded task investigates absolute
-physical-response accuracy/error floor using the existing reference and source,
-then proposes one affordable experiment. No new harmonic pilot, global
-factorization, production penalty choice, or gate integration is selected.
-Older assignments below are historical.
+alpha=48 remains inconclusive. R009 reproduced the physical reference and its
+small numerical sensitivity, leaving current FEM error unknown. The next
+bounded task is one capped 50 mm alpha=96 physical response audit with feature
+quadrature and one residual-correction RHS using the same factors. No harmonic
+pilot ran in R009. No production penalty choice or gate integration is selected;
+the new review defines the exact next experiment and stops. Older assignments
+below are historical.
 
 Follow-up at commit `a6295da`: the reference and cube audit are implemented.
 The new [stability review](B2_STABILITY_REVIEW.md) tests the actual cylinder

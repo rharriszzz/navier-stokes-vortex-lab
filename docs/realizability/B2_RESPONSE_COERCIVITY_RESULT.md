@@ -1,5 +1,10 @@
 # B2 response-geometry coercivity result
 
+The next-task contract below was completed in R009. Read the
+[physical-accuracy review](B2_ACCURACY_REVIEW.md) and its
+[calculation evidence](B2_ACCURACY_EVIDENCE.md) for the current result and
+proposed single-case follow-up. The R008 stability evidence here is unchanged.
+
 Completed 2026-09-20 for [R008](../../REQUEST_LOG.md#r008--2026-09-20--short-continuation-request)
 against `f7a7e8f`, following the
 [R007 acceptance contract](B2_COERCIVITY_INTERPRETATION.md#one-next-task-and-its-acceptance-contract).
