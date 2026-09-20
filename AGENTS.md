@@ -230,3 +230,35 @@ In order:
 6. rendering speed.
 
 Do not sacrifice the first three for prettier output.
+
+## Physical-realizability research track
+
+The repository also contains a second track concerned with boundary-controlled
+physical realizability. Before substantial work on that track, read:
+
+- `PROJECT_TRACKS.md`
+- `EXPERIMENT.md`
+- `PHYSICAL_REALIZABILITY_PLAN.md`
+- `CONTROL_RESEARCH_ROADMAP.md`
+
+Do not silently make research-significant architectural choices involving CFD
+solver selection, reduced-state definition, controllability/observability
+interpretation, actuator physics, or boundary-condition design. State
+assumptions and alternatives for review first.
+
+For the realizability track:
+
+- arbitrary volumetric forcing may define a reference target, but is not the
+  final experimental actuation mechanism;
+- every proposed actuator should map to plausible hardware;
+- every feedback variable should map to a plausible sensor or estimator;
+- do not give a controller exact hidden CFD state unavailable experimentally;
+- report actuator amplitude, bandwidth, and other physical limits as well as
+  tracking error;
+- treat a negative or finite-limit result as scientifically useful.
+
+The first control calculation should be a boundary-mode response study, not a
+full closed-loop controller: excite physically interpretable normal and
+tangential boundary modes, measure the reduced central-flow response, and
+analyze reachability/conditioning. Perform the analogous observability study
+for pressure/PIV sensing before attempting full trajectory control.

@@ -10,6 +10,21 @@ This repository is intended to separate:
 
 It is deliberately **not** a claim to numerically solve, reproduce, or physically realize a mathematical Navier–Stokes singularity. The initial model is a controlled, finite-scale, kinematic analogue designed for visualization and later experimental design work.
 
+## Two parallel project tracks
+
+This repository now has two related but distinct tracks:
+
+1. **Visualization** — the existing Python/POV-Ray/ffmpeg pipeline for making the
+   proposed flow and apparatus understandable in three dimensions.
+2. **Physical realizability / boundary control** — a research program asking
+   whether physically realizable external actuators and sensors can reproduce
+   experimentally meaningful portions of the desired interior dynamics.
+
+The second track must not rely on arbitrary volumetric forcing as the final
+experimental mechanism. See [PROJECT_TRACKS.md](PROJECT_TRACKS.md),
+[PHYSICAL_REALIZABILITY_PLAN.md](PHYSICAL_REALIZABILITY_PLAN.md), and
+[CONTROL_RESEARCH_ROADMAP.md](CONTROL_RESEARCH_ROADMAP.md).
+
 ![Representative tracer-render preview](preview.png)
 
 This representative frame uses the current tracer-only view: pressure sensors
