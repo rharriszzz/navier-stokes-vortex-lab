@@ -1,0 +1,19 @@
+{
+  "status": "partial_failed",
+  "stage": "imports",
+  "campaign_ready": false,
+  "physical_meshes": 0,
+  "pde_solves": 0,
+  "matrix_factorizations": 0,
+  "primary_rhs": 0,
+  "returned_primary_solves": 0,
+  "correction_rhs": 0,
+  "matrix_solves": 0,
+  "source_archive_sha256": "90a997e5acba4186be608b37003de18028e99d95d525fc9e4327c71f9bcf4e20",
+  "elapsed_seconds": 0.00807738900766708,
+  "process_peak_rss_mib": 136.3125,
+  "error": {
+    "type": "RuntimeError",
+    "message": "Facet to cell connectivity has not been computed."
+  }
+}

@@ -1,0 +1,15 @@
+{
+  "status": "passed",
+  "monitored_toy_attempts": 8,
+  "total_parent_monitored_seconds": 3.7696304350101855,
+  "maximum_observed_child_tree_rss_mib": 180.57421875,
+  "maximum_sample_gap_seconds": 0.0569679299951531,
+  "toy_contract_passed": true,
+  "physical_meshes": 0,
+  "pde_solves": 0,
+  "matrix_factorizations": 0,
+  "pinned_source_identities": 19,
+  "r014_archived_artifacts_verified": 27,
+  "all_json_finite": true,
+  "all_python_sources_parse": true
+}

@@ -121,7 +121,50 @@ and the session's final response record its commit and push result.
 
 **Scope:** Apply the `Continue` workflow to the current B2 diagnostic implementation package in `SESSION_HANDOFF.md`: read required research and review documents, implement the bounded reporting/reference diagnostics, run prescribed checks, update evidence and next-task handoff, then commit and push scoped changes.
 
-**Status:** In progress.
+**Status:** Complete at the toy-only stopping point.
+
+**Outcome, 2026-09-20:** Repaired a new disposable copy of the R014 runner.
+All three direct boundary-space comparisons were replaced by space-aware
+`fem.bcs_by_block` groups extracted from the block forms. The groups are
+validated before the helper call and reused for essential sets, RHS lifting
+and assignment, same-set checks, and essential residuals. Returned solve counts
+and factor counters now persist immediately after helper return. Both P and A
+compatibility paths persist pre-removal products, RHS/removed norms and the
+unchanged tolerance before a possible refusal, with explicit operation stages.
+
+The passing tetrahedron fixture used separate real/imaginary BDM2/DG1 spaces:
+24 exterior velocity DOFs and six free interior velocity DOFs per velocity
+block, zero pressure constraints, valid offsets and disjoint sets. Exact
+assignment passed for zero and nonzero complex targets; missing and wrong-space
+groups were refused. Synthetic compatibility and post-return bookkeeping
+failures preserved the expected finite partial JSON. The eight monitored
+attempts totaled 3.769630435 seconds, with maximum observed child-tree RSS
+180.57421875 MiB and maximum sample gap 0.05696793 seconds, below 60 s/512 MiB.
+No physical mesh, PDE solve, factorization, or retry ran. The 19 pinned
+production hashes match. The R014 read-only stored-data audit passed for all
+27 archived artifacts.
+
+**Evidence and validation:** `docs/realizability/B2_MATCHED_TRACE_WRAPPER_REPAIR.md`
+and `docs/realizability/evidence/r015/` preserve the repaired source, toy
+fixture, all eight monitored attempts, final finite report, and audit. The R015
+audit confirmed the toy contract, all finite JSON, Python syntax, source
+hashes, and R014 archive identities. No physical accuracy or matched-trace
+result follows. The A physical compatibility screen and physical output path
+remain unvalidated.
+
+The staged whitespace check found one trailing blank at EOF in the exact
+preserved R014 support copy `docs/realizability/evidence/r015/toy_runner.py`
+(line 213); it is retained for byte fidelity. All other staged files pass.
+
+**Changed files:** This log, `SESSION_HANDOFF.md`, the new bounded result
+document, and the new `docs/realizability/evidence/r015/` archive.
+
+**Next task:** GPT-6 Astra, high reasoning, to review the repaired runner and
+conduct the separately scoped R013 matched-trace attempt under its original
+caps, checks, and stopping conditions. Stop for any scientific assumption or
+threshold decision; no automatic model switch or physical run is launched.
+Current official OpenAI documentation lists GPT-6 Astra and high reasoning;
+account availability can differ. The continuation prompt remains **Continue**.
 
 **Outcome, 2026-09-20:** Completed the bounded B2 report package. Schema-3
 reports now handle undefined/nonfinite gain comparisons as strict-JSON nulls
@@ -1022,3 +1065,15 @@ the executed bytes and SHA-256. All other staged files pass the whitespace
 check; this exception supersedes any interpretation that the entire new archive
 passed the default whitespace check. The earlier unstaged documentation check
 passed. No numerical check or artifact was changed to remove this warning.
+
+## R015 — 2026-09-20 — Short continuation request
+
+**User wording:** “continue”
+
+**Interpreted scope:** Apply the repository's Continue workflow. Resume the
+toy-only wrapper instrumentation repair specified at the end of R014, complete
+its bounded checks and evidence, update continuity documents, then commit and
+push the scoped changes to the current upstream. No physical matched-trace
+attempt is authorized in this task.
+
+**Status:** In progress.

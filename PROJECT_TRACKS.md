@@ -105,9 +105,12 @@ known solution's full boundary trace, and integrate the disk separately by cell.
 The [single attempt](docs/realizability/B2_MATCHED_TRACE_RESULT.md) passed its
 mesh, load and disk-geometry checks, then stopped on a disposable-wrapper error
 after the original-command solve. No matched-trace response was calculated.
-The next task repairs and tests the wrapper on toys only. Discrete boundary
-sensitivity will not by itself identify continuum geometry error. A total FEM error floor is still
-unknown. The B2 gate remains failed and campaign readiness false. Use
+The [toy-only wrapper repair](docs/realizability/B2_MATCHED_TRACE_WRAPPER_REPAIR.md)
+is complete and passed its reference-tetrahedron checks; it provides no physical
+response data. Review that repaired runner before any separately scoped R013
+attempt. Discrete boundary sensitivity will not by itself identify continuum
+geometry error. A total FEM error floor is still unknown. The B2 gate remains
+failed and campaign readiness false. Use
 [SESSION_HANDOFF.md](SESSION_HANDOFF.md) for completion criteria and stops.
 
 ### Core constraint

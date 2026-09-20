@@ -1,0 +1,10 @@
+Traceback (most recent call last):
+  File "/tmp/navier-b2-wrapper-r015/wrapper_toys.py", line 145, in <module>
+    run(args.output)
+  File "/tmp/navier-b2-wrapper-r015/wrapper_toys.py", line 42, in run
+    exterior = mesh.exterior_facet_indices(domain.topology)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/navier-fenicsx/lib/python3.12/site-packages/dolfinx/mesh.py", line 1185, in exterior_facet_indices
+    return _cpp.mesh.exterior_facet_indices(topology._cpp_object)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+RuntimeError: Facet to cell connectivity has not been computed.

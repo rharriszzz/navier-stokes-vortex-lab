@@ -1,5 +1,9 @@
 # B2 matched-trace attempt: wrapper failure after the first solve
 
+The toy-only wrapper repair described in this historical R014 next-task
+section was completed in [R015](B2_MATCHED_TRACE_WRAPPER_REPAIR.md). No
+physical matched-trace retry was run.
+
 Recorded 2026-09-20 for [R014](../../REQUEST_LOG.md#r014--2026-09-20--short-continuation-request)
 against `d5a2711`, under the [R013 experiment contract](B2_MATCHED_TRACE_REVIEW.md#one-executable-next-task-contract).
 The [evidence index](B2_MATCHED_TRACE_RUN_EVIDENCE.md) preserves the exact

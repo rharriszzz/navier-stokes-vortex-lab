@@ -1,0 +1,19 @@
+Traceback (most recent call last):
+  File "/tmp/navier-b2-wrapper-r015/wrapper_toys.py", line 147, in <module>
+    run(args.output)
+  File "/tmp/navier-b2-wrapper-r015/wrapper_toys.py", line 57, in run
+    groups, global_sets, local_sets = physical.collect_constraints(fem, spaces, bcs, offsets, expected)
+                                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/navier-b2-wrapper-r015/physical.py", line 23, in collect_constraints
+    groups = fem.bcs_by_block(spaces, bcs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/navier-fenicsx/lib/python3.12/site-packages/dolfinx/fem/bcs.py", line 254, in bcs_by_block
+    return [_bc_space(V, bcs) if V is not None else [] for V in spaces]
+            ^^^^^^^^^^^^^^^^^
+  File "/tmp/navier-fenicsx/lib/python3.12/site-packages/dolfinx/fem/bcs.py", line 252, in _bc_space
+    return [bc for bc in bcs if V.contains(bc.function_space)]
+                                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/navier-fenicsx/lib/python3.12/site-packages/dolfinx/fem/function.py", line 730, in contains
+    return self._cpp_object.contains(V._cpp_object)  # type: ignore
+                                     ^^^^^^^^^^^^^
+AttributeError: 'dolfinx.cpp.fem.FunctionSpace_float64' object has no attribute '_cpp_object'

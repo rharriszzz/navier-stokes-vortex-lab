@@ -20,6 +20,8 @@ Scripts import sibling files and the repository package; their original parent
 commands and temporary paths are retained in the watch records. Reproducing the
 failed physical attempt requires a new bounded contract; do not rerun it merely
 to recreate temporary files. The next task repairs instrumentation on toys only.
+That bounded repair is complete in [R015](B2_MATCHED_TRACE_WRAPPER_REPAIR.md);
+no physical retry followed.
 
 ## Reports and reproducibility records
 

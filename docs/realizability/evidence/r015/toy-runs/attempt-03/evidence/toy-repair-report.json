@@ -1,0 +1,19 @@
+{
+  "status": "partial_failed",
+  "stage": "imports",
+  "campaign_ready": false,
+  "physical_meshes": 0,
+  "pde_solves": 0,
+  "matrix_factorizations": 0,
+  "primary_rhs": 0,
+  "returned_primary_solves": 0,
+  "correction_rhs": 0,
+  "matrix_solves": 0,
+  "source_archive_sha256": "2015f0ec66122f1ad7a2f48ad4dfe97c3f6cbe4db5424fa644cd24a661d0d6cb",
+  "elapsed_seconds": 0.00432203701348044,
+  "process_peak_rss_mib": 136.4921875,
+  "error": {
+    "type": "AttributeError",
+    "message": "'dolfinx.cpp.fem.FunctionSpace_float64' object has no attribute '_cpp_object'"
+  }
+}

@@ -1,0 +1,16 @@
+{
+  "command": [
+    "/tmp/navier-fenicsx/bin/python",
+    "wrapper_toys.py",
+    "--output",
+    "r015-third-run/evidence"
+  ],
+  "returncode": 1,
+  "elapsed_seconds": 0.3746072720095981,
+  "parent_observed_peak_rss_mib": 136.75,
+  "samples": 8,
+  "nominal_poll_seconds": 0.05,
+  "maximum_sample_gap_seconds": 0.05428762998781167,
+  "largest_observed_process_tree": 1,
+  "stop_reason": null
+}

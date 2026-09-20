@@ -1,0 +1,69 @@
+{
+  "status": "passed",
+  "stage": "toy_repair_complete",
+  "campaign_ready": false,
+  "physical_meshes": 0,
+  "pde_solves": 0,
+  "matrix_factorizations": 0,
+  "primary_rhs": 0,
+  "returned_primary_solves": 0,
+  "correction_rhs": 0,
+  "matrix_solves": 0,
+  "source_archive_sha256": "41822633374787a257a6a374275e4d837957ffd500830369477f8a94621cc697",
+  "elapsed_seconds": 0.017072892020223662,
+  "process_peak_rss_mib": 140.171875,
+  "tetrahedron": {
+    "block_sizes": [
+      30,
+      4,
+      30,
+      4
+    ],
+    "offsets": [
+      0,
+      30,
+      34,
+      64,
+      68
+    ],
+    "constrained_dofs_per_block": [
+      24,
+      0,
+      24,
+      0
+    ],
+    "velocity_free_interior_dofs": [
+      6,
+      6
+    ],
+    "pressure_constraints": 0,
+    "exact_assignment": true,
+    "unchanged_constraint_sets": true,
+    "complex_target_assignment": [
+      {
+        "real_value": 0.0,
+        "imaginary_value": 0.0,
+        "exact": true
+      },
+      {
+        "real_value": 0.125,
+        "imaginary_value": -0.375,
+        "exact": true
+      }
+    ]
+  },
+  "refusal_cases": [
+    {
+      "case": "missing imaginary block",
+      "refused": true
+    },
+    {
+      "case": "wrong-space block",
+      "refused": true
+    }
+  ],
+  "failure_reporting": {
+    "compatibility_pre_removal_persisted": true,
+    "returned_solve_and_factor_counts_persisted": true
+  }
+}

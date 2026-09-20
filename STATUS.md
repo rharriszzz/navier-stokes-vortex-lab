@@ -186,13 +186,16 @@ computed answers measures sensitivity to that change; it does not, by itself,
 give the true geometry error.
 
 The [single matched-trace attempt](docs/realizability/B2_MATCHED_TRACE_RESULT.md)
-has now stopped because its disposable wrapper failed after the original-command
-solve. The mesh, stability certificate, disk geometry and boundary-load checks
-passed, but no matched-trace solve or corrected/output comparison ran. It took
-54.17 seconds and 734.75 MiB, within its resource caps. This is an instrumentation
-failure and supplies no new evidence about physical accuracy or feasibility.
-The next task fixes and tests the wrapper on toy data only, before any separately
-authorized physical attempt.
+stopped because its disposable wrapper failed after the original-command solve.
+The mesh, stability certificate, disk geometry and boundary-load checks passed,
+but no matched-trace solve or corrected/output comparison ran. It took 54.17
+seconds and 734.75 MiB, within its resource caps. This instrumentation failure
+supplies no new evidence about physical accuracy or feasibility. The prescribed
+[toy-only wrapper repair](docs/realizability/B2_MATCHED_TRACE_WRAPPER_REPAIR.md)
+is now complete. It passed on one reference tetrahedron and preserved all 19
+production hashes, but it performed no physical work. Reviewing that runner and
+then attempting the single R013 case under its original contract remains the
+next separately scoped task.
 
 The physical-response campaign remains blocked (`campaign_ready=false`). No
 preparation protocol, sensing result, time-dependent movie dataset or render
