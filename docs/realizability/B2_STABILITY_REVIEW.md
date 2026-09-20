@@ -1,5 +1,9 @@
 # B2 stability review and implementation handoff
 
+The subsequent [acceptance-logic review](B2_GATE_REVIEW.md) reproduces the
+implemented small-cylinder results, identifies two reporting/gating defects,
+and gives the current bounded repair task and model-switch stopping point.
+
 Prepared against commit `a6295da1b4a13e853481b8bae33dc2c28dfa32d5`.
 All 49 tracked files were inspected, including the preview image and empty
 directory placeholders, together with the stored B0/B1/B2 reports. The initial

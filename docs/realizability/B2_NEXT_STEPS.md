@@ -1,5 +1,10 @@
 # B2 continuation: independent swirl reference and stability checks
 
+Current continuation after `5a7bd5b`: read the
+[B2 acceptance-logic review and repair handoff](B2_GATE_REVIEW.md).
+The project-status synchronization described at the end of this document is
+complete; the new review defines the next bounded task and when to stop.
+
 Follow-up at commit `a6295da`: the reference and cube audit are implemented.
 The new [stability review](B2_STABILITY_REVIEW.md) tests the actual cylinder
 geometry, demonstrates unforced energy growth, and specifies the next bounded
