@@ -1,0 +1,30 @@
+Traceback (most recent call last):
+  File "/tmp/navier-b2-compatible-r022/wrapper_toys.py", line 193, in <module>
+    run(args.output)
+  File "/tmp/navier-b2-compatible-r022/wrapper_toys.py", line 130, in run
+    physical.record_compatibility(compatible_rhs, [compatible_null], compatible_record,
+  File "/tmp/navier-b2-compatible-r022/physical.py", line 135, in record_compatibility
+    checkpoint(stage)
+  File "/tmp/navier-b2-compatible-r022/wrapper_toys.py", line 125, in compatible_checkpoint
+    support.write_json(compatible_path, compatible_record)
+  File "/tmp/navier-b2-compatible-r022/toy_runner.py", line 22, in write_json
+    temporary.write_text(json.dumps(value, indent=2, allow_nan=False) + '\n')
+                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/navier-fenicsx/lib/python3.12/json/__init__.py", line 238, in dumps
+    **kw).encode(obj)
+          ^^^^^^^^^^^
+  File "/tmp/navier-fenicsx/lib/python3.12/json/encoder.py", line 202, in encode
+    chunks = list(chunks)
+             ^^^^^^^^^^^^
+  File "/tmp/navier-fenicsx/lib/python3.12/json/encoder.py", line 432, in _iterencode
+    yield from _iterencode_dict(o, _current_indent_level)
+  File "/tmp/navier-fenicsx/lib/python3.12/json/encoder.py", line 406, in _iterencode_dict
+    yield from chunks
+  File "/tmp/navier-fenicsx/lib/python3.12/json/encoder.py", line 406, in _iterencode_dict
+    yield from chunks
+  File "/tmp/navier-fenicsx/lib/python3.12/json/encoder.py", line 439, in _iterencode
+    o = _default(o)
+        ^^^^^^^^^^^
+  File "/tmp/navier-fenicsx/lib/python3.12/json/encoder.py", line 180, in default
+    raise TypeError(f'Object of type {o.__class__.__name__} '
+TypeError: Object of type bool is not JSON serializable

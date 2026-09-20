@@ -133,9 +133,14 @@ stayed within caps. A_64 compatibility and the paired comparison remain
 unmeasured. The completed [R021 compatibility review](docs/realizability/B2_COMPATIBLE_TRACE_INTEGRATION_REVIEW.md)
 checks all saved projection moments and selects a future fixed q=64/q=96
 comparison with P and both A compatibility checks before factorization. Its
-shared-potential moment alternative is deferred. No new numerical work ran;
-next is Astra/high implementation, prescribed toys and at most one conditional
-physical attempt under the new contract and unchanged limits/thresholds.
+shared-potential moment alternative is deferred. No new numerical work ran in that review. The subsequent
+[R022 prerequisite attempt](docs/realizability/B2_COMPATIBLE_TRACE_PREFLIGHT_RESULT.md)
+implemented the disposable 64/96 runner and pre-solve observer. Its five original
+prerequisites and all 16 high-order polynomial facet checks passed, then the
+advanced child hit the 512 MiB RSS cap before any actual observer case. No
+physical child or PDE solve ran. The next task is Luna/medium toy-process
+isolation and resource reporting under the same caps, with full observer
+coverage required and a stop before physical execution.
 The B2 gate remains failed and campaign readiness false. Use
 [SESSION_HANDOFF.md](SESSION_HANDOFF.md) for completion criteria and stops.
 

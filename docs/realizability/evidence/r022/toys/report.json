@@ -1,0 +1,163 @@
+{
+  "status": "prerequisite_refused",
+  "wall_limit_seconds": 60.0,
+  "rss_limit_mib": 512.0,
+  "physical_meshes": 0,
+  "matrix_solves": 0,
+  "watches": {
+    "wrong_root": {
+      "command": [
+        "/tmp/navier-fenicsx/bin/python",
+        "/tmp/navier-b2-compatible-r022/wrapper_toys.py",
+        "--output",
+        "/tmp/navier-b2-compatible-r022/toys/wrong-root"
+      ],
+      "returncode": 1,
+      "elapsed_seconds": 0.16982157199527137,
+      "parent_observed_peak_rss_mib": 25.12890625,
+      "samples": 4,
+      "nominal_poll_seconds": 0.05,
+      "maximum_sample_gap_seconds": 0.05677773698698729,
+      "largest_observed_process_tree": 1,
+      "stop_reason": null
+    },
+    "watchdog": {
+      "command": [
+        "/tmp/navier-fenicsx/bin/python",
+        "/tmp/navier-b2-compatible-r022/toy_runner.py",
+        "--self-check",
+        "--output",
+        "/tmp/navier-b2-compatible-r022/toys/watchdog"
+      ],
+      "returncode": 0,
+      "elapsed_seconds": 0.2781297799956519,
+      "parent_observed_peak_rss_mib": 70.76953125,
+      "samples": 6,
+      "nominal_poll_seconds": 0.05,
+      "maximum_sample_gap_seconds": 0.05659397700219415,
+      "largest_observed_process_tree": 3,
+      "stop_reason": null
+    },
+    "kernels": {
+      "command": [
+        "/tmp/navier-fenicsx/bin/python",
+        "/tmp/navier-b2-compatible-r022/toy_runner.py",
+        "--toy-child",
+        "--output",
+        "/tmp/navier-b2-compatible-r022/toys/kernels"
+      ],
+      "returncode": 0,
+      "elapsed_seconds": 4.374674966005841,
+      "parent_observed_peak_rss_mib": 141.46484375,
+      "samples": 82,
+      "nominal_poll_seconds": 0.05,
+      "maximum_sample_gap_seconds": 0.05728241501492448,
+      "largest_observed_process_tree": 1,
+      "stop_reason": null
+    },
+    "wrapper": {
+      "command": [
+        "/tmp/navier-fenicsx/bin/python",
+        "/tmp/navier-b2-compatible-r022/wrapper_toys.py",
+        "--output",
+        "/tmp/navier-b2-compatible-r022/toys/wrapper"
+      ],
+      "returncode": 0,
+      "elapsed_seconds": 0.4302351429942064,
+      "parent_observed_peak_rss_mib": 138.734375,
+      "samples": 9,
+      "nominal_poll_seconds": 0.05,
+      "maximum_sample_gap_seconds": 0.055215369997313246,
+      "largest_observed_process_tree": 1,
+      "stop_reason": null
+    },
+    "block-rhs": {
+      "command": [
+        "/tmp/navier-fenicsx/bin/python",
+        "/tmp/navier-b2-compatible-r022/block_rhs_toys.py",
+        "--output",
+        "/tmp/navier-b2-compatible-r022/toys/block-rhs"
+      ],
+      "returncode": 0,
+      "elapsed_seconds": 0.43348340899683535,
+      "parent_observed_peak_rss_mib": 139.44140625,
+      "samples": 9,
+      "nominal_poll_seconds": 0.05,
+      "maximum_sample_gap_seconds": 0.054819523997139186,
+      "largest_observed_process_tree": 1,
+      "stop_reason": null
+    },
+    "disk": {
+      "command": [
+        "/tmp/navier-fenicsx/bin/python",
+        "/tmp/navier-b2-compatible-r022/physical.py",
+        "--extra-toys",
+        "--output",
+        "/tmp/navier-b2-compatible-r022/toys/disk"
+      ],
+      "returncode": 0,
+      "elapsed_seconds": 0.10676029202295467,
+      "parent_observed_peak_rss_mib": 34.19140625,
+      "samples": 3,
+      "nominal_poll_seconds": 0.05,
+      "maximum_sample_gap_seconds": 0.05294029199285433,
+      "largest_observed_process_tree": 1,
+      "stop_reason": null
+    },
+    "parent-refusal": {
+      "command": [
+        "/tmp/navier-fenicsx/bin/python",
+        "/tmp/navier-b2-compatible-r022/run_contract.py",
+        "parent-refusal",
+        "--output",
+        "/tmp/navier-b2-compatible-r022/toys/parent-refusal"
+      ],
+      "returncode": 0,
+      "elapsed_seconds": 0.0536432649823837,
+      "parent_observed_peak_rss_mib": 4.82421875,
+      "samples": 2,
+      "nominal_poll_seconds": 0.05,
+      "maximum_sample_gap_seconds": 0.05114552399027161,
+      "largest_observed_process_tree": 1,
+      "stop_reason": null
+    },
+    "advanced": {
+      "command": [
+        "/tmp/navier-fenicsx/bin/python",
+        "/tmp/navier-b2-compatible-r022/advanced_toys.py",
+        "--output",
+        "/tmp/navier-b2-compatible-r022/toys/advanced"
+      ],
+      "returncode": -9,
+      "elapsed_seconds": 5.31647074301145,
+      "parent_observed_peak_rss_mib": 513.60546875,
+      "samples": 98,
+      "nominal_poll_seconds": 0.05,
+      "maximum_sample_gap_seconds": 0.05671900199376978,
+      "largest_observed_process_tree": 4,
+      "stop_reason": "rss_limit"
+    }
+  },
+  "prior_elapsed_seconds": 5.239195592002943,
+  "current_attempt_seconds": 11.16627278298256,
+  "elapsed_seconds": 16.405468374985503,
+  "wrong_root_refusal": {
+    "status": "partial_failed",
+    "stage": "imports",
+    "error": {
+      "type": "FileNotFoundError",
+      "message": "[Errno 2] No such file or directory: '/tmp/navier-b2-compatible-r022/toys/invalid-working-directory/realizability/__init__.py'"
+    },
+    "counts": {
+      "physical_meshes": 0,
+      "pde_solves": 0,
+      "matrix_factorizations": 0,
+      "primary_rhs": 0,
+      "returned_primary_solves": 0,
+      "correction_rhs": 0,
+      "matrix_solves": 0
+    },
+    "report_sha256": "8dd0cbb5a30a1aed085fa495226c7df7961b2f743359f7918aacf06cb675d71c"
+  },
+  "failed_phase": "advanced"
+}

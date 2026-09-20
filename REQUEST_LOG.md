@@ -1621,3 +1621,121 @@ validate the review evidence, not the proposed numerical experiment.
 complete R021 review/archive and continuity documents, with no exceptions.
 Only the 16 scoped documentation/evidence files are staged; no production
 source or old evidence is included.
+
+## R022 — 2026-09-20 — Continue with overall progress in STATUS.md
+
+**User request (verbatim):**
+
+> continue, but before committing, plase add some information about how far we have gone so far, and whar remans to be done. to STATUS.md.  thanks
+
+**Interpreted scope:** Apply the Continue workflow to R021's bounded fixed
+q=64/q=96 compatibility experiment, and expand `STATUS.md` with a clear account
+of overall progress and remaining work before committing. This request
+authorizes the scoped commit and push to the configured upstream.
+
+**Status:** In progress.
+
+**Bounded plan and completion criteria:** Read the handoff's required research
+and evidence; preserve production and prior evidence; implement a disposable
+runner and the specified pre-solve compatibility observer. Run the prerequisite
+checks within cumulative 60 s/512 MiB and, only if all pass without a scientific
+decision, at most one physical child within 180 s/1536 MiB. Archive the complete
+comparison or finite audited refusal, update progress/remaining work and
+continuity, validate, commit/push and stop.
+
+**Stopping conditions:** Stop at the first unexplained numerical failure,
+resource cap or scientific decision. No physical retry, third order, changed
+trace/threshold, pressure/return-flow repair, new production method, gate
+integration, campaign, B3, rendering or encoding. Preserve the failed physical
+B2 gate and `campaign_ready=false` unless the prescribed evidence warrants a
+more limited explicitly stated result.
+
+**Outcome, 2026-09-20:** Complete at the prescribed toy resource-refusal
+boundary. Implemented a disposable q=64/q=96 runner and once-only pre-solve
+compatibility observer. The five original prerequisite phases, wrong-root
+refusal, actual parent refusal and all 16 new high-order polynomial facet
+checks passed. The advanced child then hit the 512 MiB child-tree RSS cap at
+513.60546875 MiB, before the actual harmonic observer cases. No physical child,
+PDE solve or factorization ran; the observer and physical path remain
+unvalidated. No numerical retry followed the resource stop.
+
+**Attempts and checks:** The first toy attempt used 5.239195592 s and stopped
+on an understood JSON reporting defect: a NumPy Boolean was not serializable.
+Converted `accepted` to built-in bool and preserved the exact initial code and
+reports. The second parent deducted that time from the unchanged cumulative
+60 s allowance and ran for 11.166272783 s, giving 16.405468375 s total. The
+maximum sample gap was 0.058599793 s. All 19 production identities and 440
+historical evidence files match `eebc69d`; R021's saved-data auditor passed
+with writes redirected into R022. Five R020 support sources remain exact.
+Projection, weak-load and independent UFL errors were below their fixed
+arithmetic scales, and callback batches never exceeded 256 points.
+
+**Resource evidence and uncertainty:** The advanced child's last checkpoint
+contains four completed trace/order cases and no observer cases. It records
+180.66015625 MiB child process high-water RSS before the later parent-observed
+513.60546875 MiB tree peak. The parent saw up to four processes. Generated C
+cache metadata and source order suggest compiler memory contributed, but no
+per-process RSS or intervening stage checkpoint proves the exact operation or
+allocation. The final child high-water is unavailable after SIGKILL. The
+resource refusal is not a failed numerical compatibility or accuracy result.
+
+**Evidence and changed files:** New
+`docs/realizability/B2_COMPATIBLE_TRACE_PREFLIGHT_RESULT.md`, its evidence index,
+and `docs/realizability/evidence/r022/` preserve sources, both attempts, exact
+artifact mapping, finite parent/child records and saved-data derivations.
+Updated this log, `SESSION_HANDOFF.md`, `STATUS.md`, `PROJECT_TRACKS.md`,
+`B2_NEXT_STEPS.md` and current-status introductions in
+`B2_MATCHED_TRACE_REVIEW.md`, `B2_BLOCK_RHS_TOY_REPAIR_RESULT.md` and
+`B2_COMPATIBLE_TRACE_INTEGRATION_REVIEW.md`. The requested `STATUS.md` update
+was completed before committing: a prominent milestone table explains what
+exists, our current numerical-validation stage, and the remaining influence,
+sensing, preparation, finite-evolution, hardware and movie-data work. It avoids
+a percentage estimate or an unsupported feasibility claim. Production sources,
+configuration and old evidence are unchanged.
+
+**Skips and remaining limits:** Actual harmonic observer acceptance and three
+injected-refusal tests, physical reference evaluation, physical RHS assembly/
+compatibility, P/A solves and paired outputs were not reached. Full application,
+dense/calibration/refinement suites, production changes, gate integration,
+campaign, B3, rendering and encoding were skipped. R020 remains the latest
+physical attempt and R012 the last complete physical response audit. P's
+accuracy failure, unknown paired/geometry/total FEM errors and failed physical
+B2 gate with `campaign_ready=false` are unchanged. Preparation, sensing,
+hardware demands and a validated movie trajectory remain unresolved.
+
+**Next task/recommendation:** GPT-5.6 Luna, medium reasoning, for the result's
+toy-only process-isolation and reporting contract: split high-order and
+harmonic-observer fixtures into sequential children, add stage and per-process
+RSS reporting, preserve every form/trace/oracle/threshold, and run the complete
+prerequisites under cumulative 60 s/512 MiB including imports and compilation.
+Require all high-order checks and actual compatible P/A/A sentinel plus
+incompatible P/first-A/second-A cases, matrix/layout/nullspace checks and zero
+factor/solve events. Archive a pass or finite refusal, update continuity,
+commit/push and stop before physical execution. No resource-cap retry, new
+order, changed compiler option/method/threshold, physical mesh, gate or campaign.
+Recommend GPT-6 Astra/high after a pass to review the remaining physical path,
+or after a renewed cap/numerical choice for one bounded diagnosis. Retain
+Luna/medium only for an understood mechanical follow-up. Both models were
+rechecked in the current session catalog and fetched official model pages using
+OpenAI Docs. No switch, sub-agent or automation occurred. Next prompt:
+**Continue**.
+
+**Git delivery:** This qualified Continue request authorizes the scoped
+checkpoint and push to configured `origin/main`, without force-push, after
+the requested progress/remaining-work update in `STATUS.md`. Actual delivery
+is reported in Git history and the final response.
+
+**Validation, 2026-09-20:** The R022 saved-evidence/documentation audit passed:
+19 production identities, 440 preserved historical files, 86 exact execution
+artifacts mapped to 79 files, 16 high-order facet records, 14 Python syntax
+checks, 41 finite JSON inputs, 10 Markdown files, 123 local links/anchors and
+23 fenced blocks. The saved-data derivation reproduces `result.json` exactly;
+earlier request history is byte-preserved and R022 occurs once. Record:
+`docs/realizability/evidence/r022/validation.json`. `git diff --check` passed.
+These checks validate the recorded resource refusal, not the unexecuted
+observer or physical experiment. No numerical work was rerun after the cap.
+
+**Staged validation, 2026-09-20:** `git diff --cached --check` passed for the
+99 scoped documentation/evidence files, including the completed `STATUS.md`
+progress update. No production source, configuration or historical evidence
+is staged, and no unrelated working-tree change was present.

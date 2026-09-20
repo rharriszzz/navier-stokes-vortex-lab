@@ -1,20 +1,24 @@
 # Current session handoff
 
 Last updated: 2026-09-20. Latest request:
-[R021](REQUEST_LOG.md#r021--2026-09-20--short-continuation-request), complete
-at the compatibility method-review boundary. R021 starts from `e96f81b`;
-`continue` authorizes its scoped commit/push. Actual delivery is recorded in
-Git history and the final response.
+[R022](REQUEST_LOG.md#r022--2026-09-20--continue-with-overall-progress-in-statusmd),
+complete at the toy resource-refusal boundary. R022 starts from `eebc69d`;
+the qualified Continue request authorizes its scoped commit/push and requires
+the overall progress/remaining-work update in `STATUS.md` before committing.
+That update is complete. Actual delivery is recorded in Git history and the
+final response.
 
 ## User goals
 
-Read [STATUS.md](STATUS.md). The user wants to learn whether exterior sensors
-and actuators can provide an adequate initial setup for some orders of magnitude
-of the process, and provide data for a separate, clear, approximately realistic
-3D movie. Distinguish initial preparation from continued driving. The quantity
-and range meant by “orders of magnitude,” physical preparation tolerances,
-permitted continued actuation and adequate sensing remain open. Rest-Stokes
-verification does not demonstrate those goals or a validated movie trajectory.
+Read [STATUS.md](STATUS.md), including its new overall milestone table. The
+user wants to learn whether exterior sensors and actuators can provide an
+adequate initial setup for some orders of magnitude of the process, and provide
+data for a separate, clear, approximately realistic 3D movie. Initial
+preparation and continued driving are distinct. The quantity/range meant by
+“orders of magnitude,” preparation tolerances, permitted continued actuation
+and adequate sensing remain open. The illustrative movie pipeline is usable;
+no physical preparation, attained contraction range or validated movie flow
+history is established. We are still verifying numerical boundary responses.
 
 ## Reusable continuation request
 
@@ -25,97 +29,103 @@ In a session opened in this repository, say:
 The [short continuation request in AGENTS.md](AGENTS.md#short-continuation-request)
 defines the workflow: log the request, complete the bounded task and checks,
 update continuity, commit/push scoped work, and stop. Explicit qualifications
-such as “Continue without pushing” override that default. It does not switch the
-selected model or schedule another session. No scheduler is installed.
+such as “Continue without pushing” override that default. It does not switch
+the selected model or schedule another session. No scheduler is installed.
 
-## Latest result: revised compatibility contract (R021)
+## Latest result: R022 toy memory stop
 
-Read the [R021 review and subsequent experiment contract](docs/realizability/B2_COMPATIBLE_TRACE_INTEGRATION_REVIEW.md),
-[evidence index](docs/realizability/B2_COMPATIBLE_TRACE_INTEGRATION_EVIDENCE.md),
-[saved-data arithmetic](docs/realizability/evidence/r021/review.json), and
-[validation](docs/realizability/evidence/r021/validation.json).
-Then read the [R020 physical stop](docs/realizability/B2_MATCHED_TRACE_COMPATIBILITY_RESULT.md),
-[exact runner](docs/realizability/evidence/r020/physical.py),
-[R013 original contract](docs/realizability/B2_MATCHED_TRACE_REVIEW.md), and
-R016–R019 results linked from those records. Required research documents remain
+Read the [R022 result and next contract](docs/realizability/B2_COMPATIBLE_TRACE_PREFLIGHT_RESULT.md),
+[evidence index](docs/realizability/B2_COMPATIBLE_TRACE_PREFLIGHT_EVIDENCE.md),
+[derived result](docs/realizability/evidence/r022/result.json),
+[validation](docs/realizability/evidence/r022/validation.json), and exact
+[advanced toy source](docs/realizability/evidence/r022/advanced_toys.py),
+[observer](docs/realizability/evidence/r022/presolve.py),
+[physical runner](docs/realizability/evidence/r022/physical.py) and
+[parent](docs/realizability/evidence/r022/run_contract.py).
+Then read the [R021 contract](docs/realizability/B2_COMPATIBLE_TRACE_INTEGRATION_REVIEW.md),
+[R020 physical stop](docs/realizability/B2_MATCHED_TRACE_COMPATIBILITY_RESULT.md),
+[R013 original contract](docs/realizability/B2_MATCHED_TRACE_REVIEW.md) and
+R016–R019 results linked there. Required research documents remain
 `PROJECT_TRACKS.md`, `EXPERIMENT.md`, `PHYSICAL_REALIZABILITY_PLAN.md` and
 `CONTROL_RESEARCH_ROADMAP.md`.
 
-R021 verified all 19 production identities, 433 historical evidence files and
-564 saved facet records. R020's auditor passed with writes redirected to R021.
-Projection mass equations pass the fixed arithmetic scale; saved q32/q64
-normal-projection relative L2 steps are 1.3433e-8 real and 1.6209e-10 imaginary.
-These are integration sensitivities, not output errors. At A_32's RHS norm,
-the pressure arithmetic limit corresponds to a combined flux norm of
-2.31849e-20 m³/s. Its saved real flux exceeds this by about eleven times even
-though it passes the separate 1e-8 relative flux screen. No new numerical
-fixture, method implementation, reference evaluation or physical solve ran.
+R022 preserved all 19 production identities and 440 historical files and
+reaudited R021 with writes redirected. The disposable runner implements fixed
+q=64/q=96 and a once-only pre-solve observer, checking P and both A candidates
+on copies before allowing factorization. Accepted A vectors are retained.
+The actual observer path remains unvalidated: its toy cases were not reached.
 
-The selected future experiment uses **fixed Duffy orders 64 and 96**, preserving
-the finite 128-term trace, projection/load method, physical parameters and all
-thresholds. Check P and both A RHS compatibilities before any primary solve or
-factorization. A shared vector-potential/edge-moment alternative was derived
-and deferred; do not implement it or select another order after a failure.
-Q=64's saved flux remains motivation only: its assembled compatibility is
-unmeasured. The new pair is proposed, not validated or implemented.
+The first toy attempt exposed a NumPy-Boolean JSON-reporting defect, fixed by
+converting `accepted` to built-in bool. Its exact code/reports and 5.239195592 s
+are preserved. The second attempt passed wrong-root refusal, all five original
+phases, actual parent refusal and 16 high-order polynomial facet checks.
+It then hit the 512 MiB child-tree cap at 513.60546875 MiB, before the first
+observer case. Cumulative toy time was 16.405468375 s; maximum sample gap was
+0.058599793 s. There was no numerical retry after this resource stop.
+
+The final advanced child record is a partial last checkpoint, with all four
+trace/order cases and no observer cases. Its 180.66015625 MiB process high-water
+value is not the final peak. The parent saw up to four processes. Source order
+and a generated C cache artifact suggest compilation contributed, but no
+per-process RSS or intervening stage checkpoint identifies the exact cause.
+No physical child, factorization, PDE solve or physical trace evaluation ran.
 
 ## Preserved physical limits
 
 R020 remains the latest physical attempt: one mesh, P solve/correction and
-checked outputs, then A_32 compatibility refusal before its solve. It took
-59.9722 s and 756.9961 MiB; one symbolic/numeric factorization pair and two
-matrix solves ran. Its removal norm 5.8560848555e-14 was 11.0906 times the
-5.2802161650e-15 limit. No retry followed.
-
-The [R012 audit](docs/realizability/B2_PHYSICAL_RESPONSE_AUDIT.md) remains the
-last complete physical response audit. R020's P cell gain reproduces R016:
+checked outputs, then A_32 compatibility refusal before its solve. Its required
+removal was 11.0906 times the unchanged arithmetic limit. The saved q64 flux
+is motivation, not acceptance of an assembled candidate. R012 remains the
+last complete physical response audit. R020's P gain is
 `-1.6734724052233703 - 1.0983702805959774 i 1/m`, amplitude ratio 28,963.4968
-and phase error 74.1175 degrees. Its arithmetic/output screens pass but
-reference accuracy fails. No solution coefficient vector was saved.
+and phase error 74.1175 degrees. Its arithmetic/output checks pass; reference
+accuracy fails. No physical solution coefficient vector was saved.
 
-The paired comparison, continuum geometry/spatial-error allocation and total
-FEM error floor remain unknown. Alpha=48 remains inconclusive; certificates
-are not integrated into schema-3 gate reports. The physical B2 gate remains
-failed and `campaign_ready=false`. Force/power, pressure demand, preparation,
-sensing and validated movie flow remain unassessed or unresolved.
+Paired comparison, continuum geometry/spatial-error allocation and total FEM
+error floor remain unknown. Alpha=48 remains inconclusive; certificates are
+not integrated into schema-3 gate reports. The physical B2 gate stays failed
+and `campaign_ready=false`. Force/power, pressure demand, hardware feasibility,
+preparation, sensing and validated movie flow remain unassessed or unresolved.
 
 ## Next task
 
-**GPT-6 Astra, high reasoning:** carry out the
-[R021 subsequent experiment contract](docs/realizability/B2_COMPATIBLE_TRACE_INTEGRATION_REVIEW.md#one-subsequent-experiment-contract).
-Implement only a new disposable copy of R020, preserving production and old
-evidence. Use q=64/q=96 and the actual repaired lifting helper in a once-only
-pre-solve observer at the pinned direct helper's first nullspace removal.
-Validate raw P and both A candidates before allowing KSP/factors/solves; retain
-accepted A vectors rather than assembling them again after P. Record each raw
-candidate and refusal without modifying it to force compatibility.
+**GPT-5.6 Luna, medium reasoning:** carry out only the
+[R022 toy-process isolation contract](docs/realizability/B2_COMPATIBLE_TRACE_PREFLIGHT_RESULT.md#next-bounded-task-isolate-toy-processes-and-finish-observer-coverage).
+Use a new disposable copy, preserving all prior evidence and production pins.
+Split high-order polynomial and harmonic observer fixtures into separate,
+sequential children so the former process exits before the latter starts.
+Preserve exact mathematics, q64/q96, full lifting oracle and all thresholds;
+no compiler-option change or reduced coverage. Add checkpoints around mesh,
+form compilation, oracle assembly and observer cases, plus per-process RSS
+and executable names at peak/stop in the parent. Keep final parent totals
+separate from partial child checkpoints.
 
-Under the cumulative 60 s/512 MiB toy cap, retain the five prerequisite phases,
-wrong-root/parent refusal and watchdog checks. Add the prescribed high-order
-polynomial checks and exercise the actual pre-solve observer on tetrahedral
-harmonic blocks, including incompatible P/first-A/second-A paths. Even the
-successful toy preparation stops before factorization/solve via a sentinel.
-If every prerequisite passes and no scientific choice remains, launch at most
-one physical child under 180 s/1536 MiB, serial and single-threaded. Success
-inventory is three primaries plus three same-factor corrections, one symbolic
-and numeric factorization and six matrix solves. Retain all R013 disk, PDE,
-original-feature, reference, component and operator checks as restated in R021.
+Under one cumulative 60 s/512 MiB budget, retain all five original phases,
+wrong-root/parent refusals and synthetic watchdogs, both complex polynomial
+traces on all four faces at q64/q96, and actual pinned harmonic observer
+P/A/A acceptance with a pre-KSP sentinel plus incompatible P/first-A/second-A
+cases. Require full block-oracle agreement, once-only observation, expected
+layout/nullspace/matrix invariants, unchanged refused raw vectors and zero
+factor/solve events. Retain metadata, offset and synthetic lifting refusals.
+Count imports, compilation and all attempts; record cache reuse and do not
+prewarm outside the cap or edit a global cache to hide the prior failure.
+Use the approved serial MPI environment and single-thread libraries.
 
-Completion is the complete comparison or a finite, audited refusal report,
-updated continuity, scoped commit/push and stop. Stop at first unexplained
-numerical failure, cap or scientific decision. No physical retry, cap increase,
-third order, trace/tolerance change, pressure/return-flow repair, new mesh,
-gate integration, campaign, B3, rendering or encoding. A failed accuracy result
-is useful and does not authorize another case. Any new physical-mesh work
-belongs inside the one physical child's cap.
+Completion is a full audited prerequisite pass or finite refusal, updated
+continuity, scoped commit/push and stop **before physical execution**. Stop at
+the first resource cap, unexplained numerical result or scientific choice;
+no retry after a cap, physical child, new order, trace/tolerance/method change,
+pressure/return-flow repair, gate integration, campaign, B3, rendering or encoding.
+Process isolation may reduce peak memory; it is not a guarantee of success.
 
-Retain Astra/high for numerical implementation, physical attempts and
-interpretation. Recommend Luna/medium only for an understood, fully specified
-mechanical follow-up with focused checks and a stop before physical
-interpretation. Recheck availability then. Both are in the current session
-catalog; OpenAI Docs confirmed supported efforts on the fetched official
-[Astra](https://developers.openai.com/api/docs/models/gpt-6-astra) and
-[Luna](https://developers.openai.com/api/docs/models/gpt-5.6-luna) pages.
+After a pass recommend **GPT-6 Astra/high** to review exercised coverage and
+the remaining physical path before a separately scoped R021 attempt. If a
+cap recurs or a numerical/method issue appears, recommend Astra/high for one
+bounded diagnosis from the improved evidence; do not choose new numerical
+settings automatically. Retain Luna/medium only for understood mechanical
+work. Both models are in the current session catalog; OpenAI Docs fetched the
+supported efforts on official [Luna](https://developers.openai.com/api/docs/models/gpt-5.6-luna)
+and [Astra](https://developers.openai.com/api/docs/models/gpt-6-astra) pages.
 No model switch, delegated session or automation was launched.
 
 **Next prompt: Continue.**

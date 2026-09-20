@@ -1,0 +1,95 @@
+{
+  "status": "prerequisite_refused",
+  "wall_limit_seconds": 60.0,
+  "rss_limit_mib": 512.0,
+  "physical_meshes": 0,
+  "matrix_solves": 0,
+  "watches": {
+    "wrong_root": {
+      "command": [
+        "/tmp/navier-fenicsx/bin/python",
+        "/tmp/navier-b2-compatible-r022/wrapper_toys.py",
+        "--output",
+        "/tmp/navier-b2-compatible-r022/toys/wrong-root"
+      ],
+      "returncode": 1,
+      "elapsed_seconds": 0.16050050701596774,
+      "parent_observed_peak_rss_mib": 26.015625,
+      "samples": 4,
+      "nominal_poll_seconds": 0.05,
+      "maximum_sample_gap_seconds": 0.054558469011681154,
+      "largest_observed_process_tree": 1,
+      "stop_reason": null
+    },
+    "watchdog": {
+      "command": [
+        "/tmp/navier-fenicsx/bin/python",
+        "/tmp/navier-b2-compatible-r022/toy_runner.py",
+        "--self-check",
+        "--output",
+        "/tmp/navier-b2-compatible-r022/toys/watchdog"
+      ],
+      "returncode": 0,
+      "elapsed_seconds": 0.27307714699418284,
+      "parent_observed_peak_rss_mib": 70.80078125,
+      "samples": 6,
+      "nominal_poll_seconds": 0.05,
+      "maximum_sample_gap_seconds": 0.05563361500389874,
+      "largest_observed_process_tree": 3,
+      "stop_reason": null
+    },
+    "kernels": {
+      "command": [
+        "/tmp/navier-fenicsx/bin/python",
+        "/tmp/navier-b2-compatible-r022/toy_runner.py",
+        "--toy-child",
+        "--output",
+        "/tmp/navier-b2-compatible-r022/toys/kernels"
+      ],
+      "returncode": 0,
+      "elapsed_seconds": 4.43272239799262,
+      "parent_observed_peak_rss_mib": 141.1640625,
+      "samples": 82,
+      "nominal_poll_seconds": 0.05,
+      "maximum_sample_gap_seconds": 0.058599793002940714,
+      "largest_observed_process_tree": 1,
+      "stop_reason": null
+    },
+    "wrapper": {
+      "command": [
+        "/tmp/navier-fenicsx/bin/python",
+        "/tmp/navier-b2-compatible-r022/wrapper_toys.py",
+        "--output",
+        "/tmp/navier-b2-compatible-r022/toys/wrapper"
+      ],
+      "returncode": 1,
+      "elapsed_seconds": 0.3715626369812526,
+      "parent_observed_peak_rss_mib": 140.28125,
+      "samples": 8,
+      "nominal_poll_seconds": 0.05,
+      "maximum_sample_gap_seconds": 0.055325669003650546,
+      "largest_observed_process_tree": 1,
+      "stop_reason": null
+    }
+  },
+  "elapsed_seconds": 5.239195592002943,
+  "wrong_root_refusal": {
+    "status": "partial_failed",
+    "stage": "imports",
+    "error": {
+      "type": "FileNotFoundError",
+      "message": "[Errno 2] No such file or directory: '/tmp/navier-b2-compatible-r022/toys/invalid-working-directory/realizability/__init__.py'"
+    },
+    "counts": {
+      "physical_meshes": 0,
+      "pde_solves": 0,
+      "matrix_factorizations": 0,
+      "primary_rhs": 0,
+      "returned_primary_solves": 0,
+      "correction_rhs": 0,
+      "matrix_solves": 0
+    },
+    "report_sha256": "666d7598397eb202df7adb2a36c1ebbcc274fd75afde988f83cedb2c21442415"
+  },
+  "failed_phase": "wrapper"
+}

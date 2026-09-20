@@ -1,0 +1,5 @@
+{
+  "prior_elapsed_seconds": 5.239195592002943,
+  "attempts": 1,
+  "reason": "Understood reporting defect: NumPy comparison produced non-JSON Boolean; convert accepted to built-in bool. No numerical failure or physical run."
+}

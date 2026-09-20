@@ -1,0 +1,32 @@
+{
+  "status": "passed",
+  "scope": "saved arithmetic, identities and documentation only",
+  "base_commit": "e96f81b",
+  "production_identities": 19,
+  "historical_files_preserved": 433,
+  "historical_audits_reexecuted": 1,
+  "archived_facet_records_checked": 564,
+  "request_history_preserved": true,
+  "saved_calculation_reproduced": true,
+  "new_python_syntax_checks": 2,
+  "finite_json_inputs": 3,
+  "markdown_files": 9,
+  "local_links_and_anchors": 103,
+  "fenced_blocks": 23,
+  "artifact_sha256": {
+    "audit.py": "24f0f6cc0cf8c849e972d20de88aa7e21c1898b33bf734b852bcc9fb9cfa2a1c",
+    "identities.json": "469ab72fab4945a107571badb505441585fb0e9636bb410cc11f266eb7bbe728",
+    "reaudit-r020-validation.json": "ac568aa377c081678af1e6d8462f3a80e2d266cf941bd8ff85354f72b477cb8c",
+    "reaudit-r020.stdout": "ac568aa377c081678af1e6d8462f3a80e2d266cf941bd8ff85354f72b477cb8c",
+    "review.json": "f348aaadbf0b3dbfcd5d3a80c5c68c2852337b8522d0c549ac458c7b6646dccc",
+    "review.py": "9c9eda5f70dd2e65187ded1afe986e8fd334ef04c61a9eb0062b2c90fc87e4d3"
+  },
+  "new_physical_meshes": 0,
+  "new_FEM_assemblies": 0,
+  "new_PDE_solves": 0,
+  "new_reference_or_quadrature_evaluations": 0,
+  "new_toy_executions": 0,
+  "future_experiment": "specified only; fixed 64/96 pair; all primary compatibility before solve",
+  "physical_gate_passed": false,
+  "campaign_ready": false
+}

@@ -1,0 +1,349 @@
+{
+  "scope": "Exact execution sources and reports, with identical support sources shared",
+  "artifacts": {
+    "advanced_toys.py": {
+      "sha256": "602f3b715a53871344dd3a121e015519f162a271b6006f11e6b2b1c8b7323ccc",
+      "archive_path": "advanced_toys.py"
+    },
+    "attempts/attempt-01/advanced_toys.py": {
+      "sha256": "602f3b715a53871344dd3a121e015519f162a271b6006f11e6b2b1c8b7323ccc",
+      "archive_path": "advanced_toys.py"
+    },
+    "attempts/attempt-01/block_rhs_toys.py": {
+      "sha256": "503e1dd8bf9867fa3e9dc829c40b1e82a4b75c7e698e0f3d58e72180186aa214",
+      "archive_path": "block_rhs_toys.py"
+    },
+    "attempts/attempt-01/disk.py": {
+      "sha256": "52afe6d93ff6886b3bfbc4cd6fb68523ec60c98d0bb336fa22c74f4276199255",
+      "archive_path": "disk.py"
+    },
+    "attempts/attempt-01/kernels.py": {
+      "sha256": "9e8110d929a9af1a46cad811f69ba86c1123ebf24f9d852d7cecf13585ead2d6",
+      "archive_path": "kernels.py"
+    },
+    "attempts/attempt-01/physical.py": {
+      "sha256": "efe2a0e61609031fdddf4ddadd895be8e55e8a3c9f327b4106b5ba7f13d3f5eb",
+      "archive_path": "attempts/attempt-01/physical.py"
+    },
+    "attempts/attempt-01/preflight.json": {
+      "sha256": "aa0946996484dc70207c12979452c361cf17efa43ac13b29e9e3505aa12ca65c",
+      "archive_path": "attempts/attempt-01/preflight.json"
+    },
+    "attempts/attempt-01/presolve.py": {
+      "sha256": "aa67f9b22db26848279599f39b6b4972172f0480fdde7d9b20131f791ce1edf2",
+      "archive_path": "presolve.py"
+    },
+    "attempts/attempt-01/run_contract.py": {
+      "sha256": "41bc678a114f2593f556b50a357243c4281c259a8b560d0899513abca6620ef7",
+      "archive_path": "attempts/attempt-01/run_contract.py"
+    },
+    "attempts/attempt-01/toy_runner.py": {
+      "sha256": "6ac14223fd44e283d6b85a8a3346476274c6cf40a99c621ff9d53647058969d8",
+      "archive_path": "toy_runner.py"
+    },
+    "attempts/attempt-01/toys/kernels/toy-report.json": {
+      "sha256": "c8b339b79b9ef68322142a78c5079b9e0be17086577c0c3c328341de9b3cea0b",
+      "archive_path": "attempts/attempt-01/toys/kernels/toy-report.json"
+    },
+    "attempts/attempt-01/toys/kernels.stderr": {
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "archive_path": "attempts/attempt-01/toys/kernels.stderr"
+    },
+    "attempts/attempt-01/toys/kernels.stdout": {
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "archive_path": "attempts/attempt-01/toys/kernels.stdout"
+    },
+    "attempts/attempt-01/toys/report.json": {
+      "sha256": "adcd70dc46bdc05ffff52d1f0aeefb80eaa5b4ef982657b6a605f743b6fa73dc",
+      "archive_path": "attempts/attempt-01/toys/report.json"
+    },
+    "attempts/attempt-01/toys/watchdog/memory.stderr": {
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "archive_path": "attempts/attempt-01/toys/watchdog/memory.stderr"
+    },
+    "attempts/attempt-01/toys/watchdog/memory.stdout": {
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "archive_path": "attempts/attempt-01/toys/watchdog/memory.stdout"
+    },
+    "attempts/attempt-01/toys/watchdog/self-check.json": {
+      "sha256": "e24ef460523fc271d3a4218f142ebada9d3057ad1df83bdb29cc0265f638adca",
+      "archive_path": "attempts/attempt-01/toys/watchdog/self-check.json"
+    },
+    "attempts/attempt-01/toys/watchdog/timeout.stderr": {
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "archive_path": "attempts/attempt-01/toys/watchdog/timeout.stderr"
+    },
+    "attempts/attempt-01/toys/watchdog/timeout.stdout": {
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "archive_path": "attempts/attempt-01/toys/watchdog/timeout.stdout"
+    },
+    "attempts/attempt-01/toys/watchdog.stderr": {
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "archive_path": "attempts/attempt-01/toys/watchdog.stderr"
+    },
+    "attempts/attempt-01/toys/watchdog.stdout": {
+      "sha256": "e24ef460523fc271d3a4218f142ebada9d3057ad1df83bdb29cc0265f638adca",
+      "archive_path": "attempts/attempt-01/toys/watchdog.stdout"
+    },
+    "attempts/attempt-01/toys/wrapper/synthetic-compatible-pressure.json": {
+      "sha256": "f1a16f0f5f7fa6610286a37237b04b33470bc130907683fde9ee641d0ff31b80",
+      "archive_path": "attempts/attempt-01/toys/wrapper/synthetic-compatible-pressure.json"
+    },
+    "attempts/attempt-01/toys/wrapper/toy-repair-report.json": {
+      "sha256": "b5b0201224366b52be90faf38e92cfb6700b35ca7dd0140b790093c34ce4e08e",
+      "archive_path": "attempts/attempt-01/toys/wrapper/toy-repair-report.json"
+    },
+    "attempts/attempt-01/toys/wrapper.stderr": {
+      "sha256": "ad3e6b270d8eab68418c22ceb9eae4f7bd086b138b47760afe0ec65da85563ba",
+      "archive_path": "attempts/attempt-01/toys/wrapper.stderr"
+    },
+    "attempts/attempt-01/toys/wrapper.stdout": {
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "archive_path": "attempts/attempt-01/toys/wrapper.stdout"
+    },
+    "attempts/attempt-01/toys/wrong-root/toy-repair-report.json": {
+      "sha256": "666d7598397eb202df7adb2a36c1ebbcc274fd75afde988f83cedb2c21442415",
+      "archive_path": "attempts/attempt-01/toys/wrong-root/toy-repair-report.json"
+    },
+    "attempts/attempt-01/toys/wrong-root.stderr": {
+      "sha256": "7fb2f372c8f8c372dd6ec1cfe62abeb301cdd89c432f1bd3cb8a436ecfd8f3bd",
+      "archive_path": "attempts/attempt-01/toys/wrong-root.stderr"
+    },
+    "attempts/attempt-01/toys/wrong-root.stdout": {
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "archive_path": "attempts/attempt-01/toys/wrong-root.stdout"
+    },
+    "attempts/attempt-01/wrapper_toys.py": {
+      "sha256": "8d4820d52353ff074fce6d54f43c0c287c60ad2eea43eb0b7b7abd75782e6b98",
+      "archive_path": "wrapper_toys.py"
+    },
+    "block_rhs_toys.py": {
+      "sha256": "503e1dd8bf9867fa3e9dc829c40b1e82a4b75c7e698e0f3d58e72180186aa214",
+      "archive_path": "block_rhs_toys.py"
+    },
+    "disk.py": {
+      "sha256": "52afe6d93ff6886b3bfbc4cd6fb68523ec60c98d0bb336fa22c74f4276199255",
+      "archive_path": "disk.py"
+    },
+    "kernels.py": {
+      "sha256": "9e8110d929a9af1a46cad811f69ba86c1123ebf24f9d852d7cecf13585ead2d6",
+      "archive_path": "kernels.py"
+    },
+    "physical.py": {
+      "sha256": "e0bfff861a9be6c7adf2c403ee958493e419875dce6e2d2aaea684671c8e705c",
+      "archive_path": "physical.py"
+    },
+    "preflight.json": {
+      "sha256": "a2d17590ff33da0f2ea2cab78f24b3211ee68951966c838810656dad64218cfe",
+      "archive_path": "preflight.json"
+    },
+    "presolve.py": {
+      "sha256": "aa67f9b22db26848279599f39b6b4972172f0480fdde7d9b20131f791ce1edf2",
+      "archive_path": "presolve.py"
+    },
+    "run_contract.py": {
+      "sha256": "5ee276929abc8b3aa51d0ee3dd1897b86c293968a824e36d6a702817d27a8abb",
+      "archive_path": "run_contract.py"
+    },
+    "toy_budget.json": {
+      "sha256": "1a4fd5cb2b43be6ba9f1fdb966b474df4c946f18cdef62595188f10fd9ded3ff",
+      "archive_path": "toy_budget.json"
+    },
+    "toy_runner.py": {
+      "sha256": "6ac14223fd44e283d6b85a8a3346476274c6cf40a99c621ff9d53647058969d8",
+      "archive_path": "toy_runner.py"
+    },
+    "toys/advanced/advanced-report.json": {
+      "sha256": "4a14747e012c5bef26b525b8605812981b3752ae555aa2957615eb41f4f2834f",
+      "archive_path": "toys/advanced/advanced-report.json"
+    },
+    "toys/advanced.stderr": {
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "archive_path": "toys/advanced.stderr"
+    },
+    "toys/advanced.stdout": {
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "archive_path": "toys/advanced.stdout"
+    },
+    "toys/block-rhs/0-rhs_allocation.json": {
+      "sha256": "203b98d868bc9c4a25badb457f2e252deec09370266de52f85458fe8cda541d0",
+      "archive_path": "toys/block-rhs/0-rhs_allocation.json"
+    },
+    "toys/block-rhs/0-rhs_assignment.json": {
+      "sha256": "749521a12b3108a179c4404a55aa9617d35fe4f7490af82c0af1a5b7ebbbf60c",
+      "archive_path": "toys/block-rhs/0-rhs_assignment.json"
+    },
+    "toys/block-rhs/0-rhs_layout_validation.json": {
+      "sha256": "24e28d357a4ed1480e17915a041f00494fdcf799b336fea886089da0f6405754",
+      "archive_path": "toys/block-rhs/0-rhs_layout_validation.json"
+    },
+    "toys/block-rhs/0-rhs_lifting.json": {
+      "sha256": "97c80918a4d028c452d141cf0cee9fef08929092237753d0ef54521e2ef95d84",
+      "archive_path": "toys/block-rhs/0-rhs_lifting.json"
+    },
+    "toys/block-rhs/0-rhs_loading.json": {
+      "sha256": "982d925ba962d80620f2bfb5f9a175333524faca13aa1c78691a5c70cc9262e4",
+      "archive_path": "toys/block-rhs/0-rhs_loading.json"
+    },
+    "toys/block-rhs/1-rhs_allocation.json": {
+      "sha256": "203b98d868bc9c4a25badb457f2e252deec09370266de52f85458fe8cda541d0",
+      "archive_path": "toys/block-rhs/1-rhs_allocation.json"
+    },
+    "toys/block-rhs/1-rhs_assignment.json": {
+      "sha256": "749521a12b3108a179c4404a55aa9617d35fe4f7490af82c0af1a5b7ebbbf60c",
+      "archive_path": "toys/block-rhs/1-rhs_assignment.json"
+    },
+    "toys/block-rhs/1-rhs_layout_validation.json": {
+      "sha256": "24e28d357a4ed1480e17915a041f00494fdcf799b336fea886089da0f6405754",
+      "archive_path": "toys/block-rhs/1-rhs_layout_validation.json"
+    },
+    "toys/block-rhs/1-rhs_lifting.json": {
+      "sha256": "97c80918a4d028c452d141cf0cee9fef08929092237753d0ef54521e2ef95d84",
+      "archive_path": "toys/block-rhs/1-rhs_lifting.json"
+    },
+    "toys/block-rhs/1-rhs_loading.json": {
+      "sha256": "982d925ba962d80620f2bfb5f9a175333524faca13aa1c78691a5c70cc9262e4",
+      "archive_path": "toys/block-rhs/1-rhs_loading.json"
+    },
+    "toys/block-rhs/block-rhs-report.json": {
+      "sha256": "def6ae0460557340b7d91702a9ae081763872bc209722cfc91496b1cf4e555cc",
+      "archive_path": "toys/block-rhs/block-rhs-report.json"
+    },
+    "toys/block-rhs/missing-layout-refusal.json": {
+      "sha256": "1ac7f5b20788d9060f40d13b469e12dcf243ac6dcc9ea0a6cfadb225bb6ad162",
+      "archive_path": "toys/block-rhs/missing-layout-refusal.json"
+    },
+    "toys/block-rhs/synthetic-lifting-failure.json": {
+      "sha256": "97c80918a4d028c452d141cf0cee9fef08929092237753d0ef54521e2ef95d84",
+      "archive_path": "toys/block-rhs/synthetic-lifting-failure.json"
+    },
+    "toys/block-rhs/wrong-offset-refusal.json": {
+      "sha256": "400856b2c220e6e848b37330cce5eb4c7452ab48b4cd429b7057b6935f1d39a9",
+      "archive_path": "toys/block-rhs/wrong-offset-refusal.json"
+    },
+    "toys/block-rhs.stderr": {
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "archive_path": "toys/block-rhs.stderr"
+    },
+    "toys/block-rhs.stdout": {
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "archive_path": "toys/block-rhs.stdout"
+    },
+    "toys/disk/extra-toys.json": {
+      "sha256": "0cb8655de1cf4c6e67f62517f866ddb8e36f9df9f90cf5e32845a93ceff4f522",
+      "archive_path": "toys/disk/extra-toys.json"
+    },
+    "toys/disk.stderr": {
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "archive_path": "toys/disk.stderr"
+    },
+    "toys/disk.stdout": {
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "archive_path": "toys/disk.stdout"
+    },
+    "toys/kernels/toy-report.json": {
+      "sha256": "19da1283cc15280a8d3c642a83dbed8f3b78a465a936706ad0ebed6f9ac1fd40",
+      "archive_path": "toys/kernels/toy-report.json"
+    },
+    "toys/kernels.stderr": {
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "archive_path": "toys/kernels.stderr"
+    },
+    "toys/kernels.stdout": {
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "archive_path": "toys/kernels.stdout"
+    },
+    "toys/parent-refusal/input-report.json": {
+      "sha256": "ceee17b1ad7f1653689b04ca5d4a043d0dc022f390787f3656d8afb419ab35f8",
+      "archive_path": "toys/parent-refusal/input-report.json"
+    },
+    "toys/parent-refusal/parent-report.json": {
+      "sha256": "eda8e1deacd6705b0d47f0be7652a3f7adf1b8f935251fa02c268abf34bfcf98",
+      "archive_path": "toys/parent-refusal/parent-report.json"
+    },
+    "toys/parent-refusal/refused/report.json": {
+      "sha256": "ec3cd1a53344b8cb26dd027e3a0fa7fa8891bdd7c445824a1a1d5485e565cf86",
+      "archive_path": "toys/parent-refusal/refused/report.json"
+    },
+    "toys/parent-refusal.stderr": {
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "archive_path": "toys/parent-refusal.stderr"
+    },
+    "toys/parent-refusal.stdout": {
+      "sha256": "ec3cd1a53344b8cb26dd027e3a0fa7fa8891bdd7c445824a1a1d5485e565cf86",
+      "archive_path": "toys/parent-refusal.stdout"
+    },
+    "toys/report.json": {
+      "sha256": "358f75272b0de27e5caf063c7458b9b9f8d5d637fa86964bf40ffba04f9d766c",
+      "archive_path": "toys/report.json"
+    },
+    "toys/watchdog/memory.stderr": {
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "archive_path": "toys/watchdog/memory.stderr"
+    },
+    "toys/watchdog/memory.stdout": {
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "archive_path": "toys/watchdog/memory.stdout"
+    },
+    "toys/watchdog/self-check.json": {
+      "sha256": "2458b00e7e73cfdc990de62cc463e92d29d80a695cf730cec6df069d0db8b46d",
+      "archive_path": "toys/watchdog/self-check.json"
+    },
+    "toys/watchdog/timeout.stderr": {
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "archive_path": "toys/watchdog/timeout.stderr"
+    },
+    "toys/watchdog/timeout.stdout": {
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "archive_path": "toys/watchdog/timeout.stdout"
+    },
+    "toys/watchdog.stderr": {
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "archive_path": "toys/watchdog.stderr"
+    },
+    "toys/watchdog.stdout": {
+      "sha256": "2458b00e7e73cfdc990de62cc463e92d29d80a695cf730cec6df069d0db8b46d",
+      "archive_path": "toys/watchdog.stdout"
+    },
+    "toys/wrapper/synthetic-compatibility-failure.json": {
+      "sha256": "318418fe0fee362f342b8305554d03e5249e3219194f56a72341f405b114b204",
+      "archive_path": "toys/wrapper/synthetic-compatibility-failure.json"
+    },
+    "toys/wrapper/synthetic-compatible-pressure.json": {
+      "sha256": "e051cf99c2259efa96e38c767759e817426b584729b5234b90e2cd268a27beec",
+      "archive_path": "toys/wrapper/synthetic-compatible-pressure.json"
+    },
+    "toys/wrapper/synthetic-return-checkpoint.json": {
+      "sha256": "df418a202d0e0aac3f96246a9f3d4eb1c7a26d2bfa0b0ba4861c5aa4c69179d0",
+      "archive_path": "toys/wrapper/synthetic-return-checkpoint.json"
+    },
+    "toys/wrapper/toy-repair-report.json": {
+      "sha256": "9e88de4043bfab3ccc95112c88dcc51c05b2bb8b43ebfcc3c773f3e41ad1e77a",
+      "archive_path": "toys/wrapper/toy-repair-report.json"
+    },
+    "toys/wrapper.stderr": {
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "archive_path": "toys/wrapper.stderr"
+    },
+    "toys/wrapper.stdout": {
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "archive_path": "toys/wrapper.stdout"
+    },
+    "toys/wrong-root/toy-repair-report.json": {
+      "sha256": "8dd0cbb5a30a1aed085fa495226c7df7961b2f743359f7918aacf06cb675d71c",
+      "archive_path": "toys/wrong-root/toy-repair-report.json"
+    },
+    "toys/wrong-root.stderr": {
+      "sha256": "7fb2f372c8f8c372dd6ec1cfe62abeb301cdd89c432f1bd3cb8a436ecfd8f3bd",
+      "archive_path": "toys/wrong-root.stderr"
+    },
+    "toys/wrong-root.stdout": {
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "archive_path": "toys/wrong-root.stdout"
+    },
+    "wrapper_toys.py": {
+      "sha256": "8d4820d52353ff074fce6d54f43c0c287c60ad2eea43eb0b7b7abd75782e6b98",
+      "archive_path": "wrapper_toys.py"
+    }
+  }
+}

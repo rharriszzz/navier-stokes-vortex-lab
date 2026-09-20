@@ -1,0 +1,80 @@
+{
+  "scope": "read-only post-stop JIT-cache metadata, not a process/RSS trace",
+  "recent_files": [
+    {
+      "name": "libffcx_forms_bc53fb131fa42354cefbc7ea6a1bb0a796fec431.c",
+      "size_bytes": 1372986,
+      "mtime_utc": "2026-09-20T22:34:33.539516+00:00",
+      "sha256": "83b55248a512c92e0dcbcde6a37e0bb08f04c05e403d67eca8fdb5cfdd738874"
+    },
+    {
+      "name": "libffcx_forms_4dc5eac3e4f17f2d084fb20e2d1df88961dbf0a9.c.cached",
+      "size_bytes": 1184,
+      "mtime_utc": "2026-09-20T22:34:32.247444+00:00",
+      "sha256": "4f974800933c20109375384e4b07896c61a9239b9f2ad82fd07d85bff6aa3e15"
+    },
+    {
+      "name": "libffcx_forms_4dc5eac3e4f17f2d084fb20e2d1df88961dbf0a9.cpython-312-x86_64-linux-gnu.so",
+      "size_bytes": 96728,
+      "mtime_utc": "2026-09-20T22:34:32.245189+00:00",
+      "sha256": "a7e68e612703a5dabf27f8d46ddabec22c94beabb4093288495c5d63a0683c26"
+    },
+    {
+      "name": "libffcx_forms_4dc5eac3e4f17f2d084fb20e2d1df88961dbf0a9.o",
+      "size_bytes": 89440,
+      "mtime_utc": "2026-09-20T22:34:32.109635+00:00",
+      "sha256": "da3c048eab4e4edcdb312c19a30cd561278ca837ae16765c5b44f05242553607"
+    },
+    {
+      "name": "libffcx_forms_4dc5eac3e4f17f2d084fb20e2d1df88961dbf0a9.c",
+      "size_bytes": 204209,
+      "mtime_utc": "2026-09-20T22:34:31.990722+00:00",
+      "sha256": "70e7d19740f3981440598064808e045c893abe3cff1ade99cafbc179a45965a8"
+    },
+    {
+      "name": "libffcx_forms_6fc5b74dbf8cfd4a41cc27232db546be5b8c73b8.c.cached",
+      "size_bytes": 1184,
+      "mtime_utc": "2026-09-20T22:34:31.933036+00:00",
+      "sha256": "e28ef98101380492029c044ed4785a2ada682672c03ec673919b844d4ea746ee"
+    },
+    {
+      "name": "libffcx_forms_6fc5b74dbf8cfd4a41cc27232db546be5b8c73b8.cpython-312-x86_64-linux-gnu.so",
+      "size_bytes": 96728,
+      "mtime_utc": "2026-09-20T22:34:31.930843+00:00",
+      "sha256": "e28ddec8ef7f926f188778d3948294096cb75db39a9464bff6dfbe1bbdfa85df"
+    },
+    {
+      "name": "libffcx_forms_6fc5b74dbf8cfd4a41cc27232db546be5b8c73b8.o",
+      "size_bytes": 89440,
+      "mtime_utc": "2026-09-20T22:34:31.887683+00:00",
+      "sha256": "741f3f26fa3d58ac784dbac662cea7c045e31adbab6ef6b74cb87206faa2ea4a"
+    },
+    {
+      "name": "libffcx_forms_6fc5b74dbf8cfd4a41cc27232db546be5b8c73b8.c",
+      "size_bytes": 204135,
+      "mtime_utc": "2026-09-20T22:34:31.773103+00:00",
+      "sha256": "4a564096fcf74a29a34bb6627eadce42d6b9b1bd80b742c5d675fe57303d6b1b"
+    },
+    {
+      "name": "libffcx_forms_ea9619217b5616be5e453a0b24fb5b96dbcec0eb.c.cached",
+      "size_bytes": 1184,
+      "mtime_utc": "2026-09-20T22:34:30.815452+00:00",
+      "sha256": "a8f02fca971328b2cba97026ae1bf3b80e36f37c6bee2af0f27d9c7cb6672cdd"
+    },
+    {
+      "name": "libffcx_forms_ea9619217b5616be5e453a0b24fb5b96dbcec0eb.cpython-312-x86_64-linux-gnu.so",
+      "size_bytes": 96728,
+      "mtime_utc": "2026-09-20T22:34:30.813237+00:00",
+      "sha256": "ab6fc36bf1dc2e6d717a57e3b2cfbddda2814af265b7ecf40476ce54b507c1c6"
+    },
+    {
+      "name": "libffcx_forms_ea9619217b5616be5e453a0b24fb5b96dbcec0eb.o",
+      "size_bytes": 89776,
+      "mtime_utc": "2026-09-20T22:34:30.765119+00:00",
+      "sha256": "8af5179fe5ff75b554cae5e0ec16cb8cfcded35071f2553d1fefab98c7b33f3f"
+    }
+  ],
+  "newest_generated_source_siblings": [
+    "libffcx_forms_bc53fb131fa42354cefbc7ea6a1bb0a796fec431.c"
+  ]
+}

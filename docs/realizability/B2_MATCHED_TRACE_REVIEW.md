@@ -11,8 +11,11 @@ solve/correction/outputs and A_32 lifting, then stopped at A_32 pressure
 compatibility before any matched-trace solve. The completed
 [R021 compatibility review](B2_COMPATIBLE_TRACE_INTEGRATION_REVIEW.md) specifies
 a future fixed q=64/q=96 pair with compatibility before primary solves. The
-original R013 contract below remains preserved; the next experiment must use
-R021's explicit revised contract rather than rerunning the old pair.
+original R013 contract below remains preserved. The subsequent
+[R022 prerequisite attempt](B2_COMPATIBLE_TRACE_PREFLIGHT_RESULT.md) passed the
+high-order polynomial checks but hit its toy memory cap before actual observer
+tests. No physical child ran. Its toy-only next task must complete before any
+new physical experiment under R021's revised contract.
 
 Completed 2026-09-20 for [R013](../../REQUEST_LOG.md#r013--2026-09-20--short-continuation-request)
 against `568c68b`, following the [R012 method-review contract](B2_PHYSICAL_RESPONSE_AUDIT.md#next-bounded-task-design-a-geometry-and-boundary-layer-accuracy-test).

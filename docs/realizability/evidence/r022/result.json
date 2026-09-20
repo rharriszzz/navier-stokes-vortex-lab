@@ -1,0 +1,77 @@
+{
+  "status": "refused_at_toy_resource_cap",
+  "physical_child_launched": false,
+  "physical_meshes": 0,
+  "physical_primary_solves_attempted": 0,
+  "physical_primary_solves_returned": 0,
+  "physical_corrections": 0,
+  "symbolic_factorizations": 0,
+  "numeric_factorizations": 0,
+  "matrix_solves": 0,
+  "orders": [
+    64,
+    96
+  ],
+  "toy_attempts": 2,
+  "initial_failure": {
+    "phase": "wrapper",
+    "error": {
+      "type": "TypeError",
+      "message": "Object of type bool is not JSON serializable"
+    },
+    "repair": "Convert the accepted NumPy Boolean to built-in bool; initial sources and reports preserved."
+  },
+  "first_attempt_seconds": 5.239195592002943,
+  "second_attempt_seconds": 11.16627278298256,
+  "cumulative_toy_seconds": 16.405468374985503,
+  "observed_peak_child_tree_rss_mib": 513.60546875,
+  "maximum_sample_gap_seconds": 0.058599793002940714,
+  "advanced_watch": {
+    "command": [
+      "/tmp/navier-fenicsx/bin/python",
+      "/tmp/navier-b2-compatible-r022/advanced_toys.py",
+      "--output",
+      "/tmp/navier-b2-compatible-r022/toys/advanced"
+    ],
+    "returncode": -9,
+    "elapsed_seconds": 5.31647074301145,
+    "parent_observed_peak_rss_mib": 513.60546875,
+    "samples": 98,
+    "nominal_poll_seconds": 0.05,
+    "maximum_sample_gap_seconds": 0.05671900199376978,
+    "largest_observed_process_tree": 4,
+    "stop_reason": "rss_limit"
+  },
+  "last_advanced_checkpoint": "high_order_polynomial",
+  "last_checkpoint_child_high_water_mib": 180.66015625,
+  "final_process_high_water": "unavailable after SIGKILL; last checkpoint is not final peak",
+  "high_order_cases": 4,
+  "high_order_facets": 16,
+  "maximum_projection_error_over_tolerance": 0.009719585032654295,
+  "maximum_weak_load_error_over_tolerance": 0.006966032953702833,
+  "maximum_ufl_error_over_tolerance": 0.007354743751912697,
+  "maximum_target_batch": 256,
+  "original_five_prerequisites_passed": true,
+  "wrong_root_refusal_passed": true,
+  "parent_refusal_passed": true,
+  "actual_observer_cases_completed": 0,
+  "actual_observer_validation": "not reached; runner remains unvalidated for physical execution",
+  "stop_localization": "After all high-order polynomial results were checkpointed, before first observer case. Source next constructs reference tetrahedron and unconstrained harmonic UFL oracle. No intervening stage checkpoint or per-process RSS was saved.",
+  "memory_cause": "Compiler contribution is plausible from a four-process tree and newly generated C without recorded completion; not established by a process-level trace.",
+  "no_retry_after_resource_stop": true,
+  "physical_gate_passed": false,
+  "campaign_ready": false,
+  "skipped": [
+    "actual harmonic observer accept/refuse cases",
+    "physical child",
+    "physical RHS compatibility",
+    "P/A solves and output comparison",
+    "production changes",
+    "gate integration",
+    "campaign",
+    "B3",
+    "rendering",
+    "encoding"
+  ],
+  "next_task": "Toy-only process isolation and stage/RSS reporting, preserving the exact tests/forms/thresholds and cumulative 60 s/512 MiB caps; stop before any physical run."
+}

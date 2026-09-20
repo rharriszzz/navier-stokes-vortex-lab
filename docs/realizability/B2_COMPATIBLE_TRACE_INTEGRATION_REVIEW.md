@@ -1,5 +1,11 @@
 # R021 compatibility review and revised matched-trace contract
 
+The subsequent [R022 prerequisite attempt](B2_COMPATIBLE_TRACE_PREFLIGHT_RESULT.md)
+implemented a disposable copy of this contract and passed its high-order
+polynomial checks, then stopped at the toy memory cap before actual observer
+coverage. No physical child ran. Follow R022's toy-only next task before a
+physical experiment; the R021 decision below remains the preserved contract.
+
 Recorded 2026-09-20 for [R021](../../REQUEST_LOG.md#r021--2026-09-20--short-continuation-request),
 starting from `e96f81b`. This completes the
 [R020 saved-data review](B2_MATCHED_TRACE_COMPATIBILITY_RESULT.md#next-bounded-task-review-compatibility-and-specify-a-revised-fixture).

@@ -1,9 +1,9 @@
 # Project status: physical preparation and a realistic movie
 
-Updated 2026-09-20, following the R021 compatibility method review,
-R020 pressure-compatibility stop, R019 toy portability repair, R018 prerequisite
-stop, R017 toy repair, partial R016 matched-trace attempt, the R012 physical
-response audit, and the
+Updated 2026-09-20 for
+[R022](REQUEST_LOG.md#r022--2026-09-20--continue-with-overall-progress-in-statusmd),
+following the higher-order prerequisite tests and their memory-cap stop.
+The goals below preserve the
 [R010 status-report request](REQUEST_LOG.md#r010--2026-09-20--project-status-and-user-goals).
 
 Our goal is to determine whether exterior actuators and sensors can prepare
@@ -16,6 +16,32 @@ question. We have an implemented illustrative movie pipeline, but have not yet
 demonstrated the required initial setup, an attainable range of contraction,
 or a validated flow history for the movie.** The recent progress is in making
 the calculations trustworthy; it is not yet evidence that the apparatus works.
+
+## Overall progress and remaining milestones
+
+The software foundation is in place: we can generate illustrative tracer
+motion, render it, and run reproducible numerical verification cases. We have
+also built independent reference, stability, boundary-load and measurement
+checks that expose errors an apparently plausible flow picture would miss.
+The central research question remains unanswered because the boundary-driven
+fluid calculation has not yet passed its physical accuracy checks.
+
+| Milestone | Position now | Work still needed |
+|---|---|---|
+| Explain the apparatus and intended motion | Illustrative movie pipeline implemented | Further visual refinement is possible; label the prescribed flow clearly. |
+| Trust the numerical boundary response | Current active stage; verification tools exist, physical accuracy gate fails | Finish the capped compatibility tests, then complete the matched-boundary comparison and resolve the resulting accuracy questions. |
+| Determine what exterior actuators can influence | Benchmark commands/features defined; full six-input response campaign has not begun | Validate responses, then assess independent influence, conditioning and required amplitudes/times. |
+| Determine what exterior sensors can distinguish | Basic sensor fixtures exist; B3 sensing study has not begun | Test pressure/PIV information with realistic noise, resolution and delay. |
+| Prepare the desired initial flow | Concept and candidate hardware only | Define acceptable initial-state errors; test a finite actuator layout and its physical limits. |
+| Establish the useful finite evolution | No demonstrated contraction range | Compare preparation alone with any continued driving, quantify attainable scales and duration, and validate against bench measurements. |
+| Supply physically supported movie data | No validated time-dependent preparation/contraction dataset | Export a checked flow history, tracer paths and hardware/sensor records to the separate renderer. |
+
+These are research milestones, not a schedule or a percentage-complete estimate.
+The accuracy investigation may reveal that a different numerical approach is
+needed. Later reachability or hardware tests may identify a useful finite limit
+or a negative result. Neither outcome can be inferred from the present failed
+numerical comparison. Explanatory movie work can proceed independently of
+these scientific gates.
 
 ## The two goals guiding the work
 
@@ -175,60 +201,36 @@ movie can precede physical feasibility, while later validated data should
 replace or constrain its illustrative motion. Visual clarity alone is not
 evidence of realizability.
 
-## Next checkpoint
+## Latest checkpoint and the immediate next step
 
-The single response audit is complete: 38.75 seconds and 753.05 MiB observed
-peak memory, within its 180 s/1.5 GiB caps. The subsequent
-[method review](docs/realizability/B2_MATCHED_TRACE_REVIEW.md) specifies the next
-test: compare the existing wall command with boundary values taken from a known
-solution, on the same mesh. The latter problem has a known answer even on the
-faceted vessel, so it can reveal approximation error separately from the
-original mismatch in continuum boundary data. The difference between the two
-computed answers measures sensitivity to that change; it does not, by itself,
-give the true geometry error.
+The [R022 prerequisite result](docs/realizability/B2_COMPATIBLE_TRACE_PREFLIGHT_RESULT.md)
+adds a disposable implementation of the R021 q=64/q=96 comparison and its
+pre-solve compatibility barrier. The five original prerequisite phases,
+wrong-root refusal and parent refusal passed. Both complex polynomial traces
+passed their high-order projection and load checks on all four faces at both
+orders: **16 checked facet cases**. Those tests validate polynomial integration
+on a toy tetrahedron; they do not establish physical response accuracy.
 
-The [single matched-trace attempt](docs/realizability/B2_MATCHED_TRACE_RESULT.md)
-stopped because its disposable wrapper failed after the original-command solve.
-The mesh, stability certificate, disk geometry and boundary-load checks passed,
-but no matched-trace solve or corrected/output comparison ran. It took 54.17
-seconds and 734.75 MiB, within its resource caps. This instrumentation failure
-supplies no new evidence about physical accuracy or feasibility. The prescribed
-[toy-only wrapper repair](docs/realizability/B2_MATCHED_TRACE_WRAPPER_REPAIR.md)
-is complete. The subsequent
-[R016 attempt](docs/realizability/B2_MATCHED_TRACE_LIFTING_RESULT.md) reached the
-original-command solve, one correction and checked cell-integrated output, then
-stopped on a second wrapper error during matched-trace RHS lifting. It ran
-59.18 seconds with 755.86 MiB peak RSS, within its caps. Neither matched-trace
-solve ran. The checked original-command output still fails reference accuracy;
-the paired comparison remains incomplete. The
-[R017 toy repair](docs/realizability/B2_BLOCK_RHS_TOY_REPAIR_RESULT.md)
-reproduced block metadata loss on `copy()` and `duplicate()`, then passed the
-replacement-vector, full lifting/assignment, coupling, compatibility and refusal
-checks in 8.50 seconds cumulative and 183.21 MiB peak across its attempts. It
-ran no physical mesh or solve. The
-[R018 review and prerequisite attempt](docs/realizability/B2_MATCHED_TRACE_PREFLIGHT_RESULT.md)
-then passed source/evidence, watchdog and kernel checks, but a wrapper toy
-failed because its repository-root lookup assumed the archive directory depth.
-The [R019 toy portability repair](docs/realizability/B2_TOY_PORTABILITY_RESULT.md)
-now passes all five prerequisite phases in the required shallow disposable
-layout. Wrong-root and parent refusals produce finite zero-count reports. The
-run took 5.38 seconds and 140.51 MiB peak observed child-tree RSS. No physical
-child was launched, and no paired gain or compatibility result was produced.
-The subsequent [R020 physical attempt](docs/realizability/B2_MATCHED_TRACE_COMPATIBILITY_RESULT.md)
-passed fresh prerequisites and reached matched-trace RHS lifting, then stopped
-before A_32's solve because pressure compatibility exceeded the fixed arithmetic
-limit by 11.09 times. It took 59.97 seconds and 757.00 MiB. P's solve, correction
-and outputs reproduce R016; no A response was measured. Saved boundary-flux
-imbalance predicts the failed pressure check, supporting finite-order trace
-integration as the cause. A_64's smaller saved flux does not establish its RHS
-compatibility. The completed [R021 method review](docs/realizability/B2_COMPATIBLE_TRACE_INTEGRATION_REVIEW.md)
-audits the saved facet moments and specifies fixed q=64/q=96 integration, with
-all candidate RHS compatibility checks before any solve. It derived a shared
-vector-potential moment alternative and deferred it. No new numerical fixture
-ran. Next is an Astra/high disposable implementation, prescribed toys and at
-most one conditional physical attempt under unchanged limits and thresholds.
+The new test child then reached **513.61 MiB**, exceeding the unchanged
+**512 MiB** child-tree cap, and the watchdog stopped it. Across both recorded
+toy attempts, including a corrected JSON-reporting bug, elapsed time was
+**16.41 seconds**. The actual harmonic pre-solve observer tests were not reached.
+**No physical child, PDE solve, factorization or new flow response ran.** The
+new runner remains unvalidated for physical execution.
 
-The physical-response campaign remains blocked (`campaign_ready=false`). No
-preparation protocol, sensing result, time-dependent movie dataset or render
-was produced by these audits, review or partial attempt. Those broader goals remain as
-stated above.
+The next bounded task is to isolate the high-order and observer toys in separate
+processes and improve stage/memory reporting, preserving all tests and the
+60 s/512 MiB cumulative toy limits. It stops after a complete prerequisite
+result or another finite refusal, before physical execution. The
+[session handoff](SESSION_HANDOFF.md) gives the exact checks and stopping rules.
+A later physical attempt would still need to satisfy the
+[R021 experiment contract](docs/realizability/B2_COMPATIBLE_TRACE_INTEGRATION_REVIEW.md).
+
+The latest physical attempt remains
+[R020](docs/realizability/B2_MATCHED_TRACE_COMPATIBILITY_RESULT.md): P's checked
+response still fails reference accuracy, and A_32 was refused at pressure
+compatibility. The paired physical comparison, continuum geometry-error
+allocation and total FEM error floor remain unknown. The physical-response
+campaign stays blocked (`campaign_ready=false`). Preparation, sensing, hardware
+feasibility and a validated movie trajectory remain the later milestones
+listed above.

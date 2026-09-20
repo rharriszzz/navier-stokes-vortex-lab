@@ -1,0 +1,13 @@
+{
+  "status": "partial",
+  "matrix_solves": 0,
+  "pressure_compatibility": {
+    "raw_sha256": "0827fd05442d5279a37c60207e21a0e11585427eebdf4b2a0a35ded23a7cd9ed",
+    "rhs_norm": 2.0,
+    "pressure_constant_products_before": [
+      0.0
+    ],
+    "tolerance": 1.1368683772161603e-13
+  },
+  "stage": "synthetic_compatible_pressure"
+}

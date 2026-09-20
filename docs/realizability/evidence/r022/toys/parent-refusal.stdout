@@ -1,0 +1,17 @@
+{
+  "status": "prerequisite_refused",
+  "stage": "toy_prerequisites",
+  "error": {
+    "type": "RuntimeError",
+    "message": "Toy prerequisite report missing, failed, or incomplete"
+  },
+  "physical_meshes": 0,
+  "primary_rhs": 0,
+  "returned_primary_solves": 0,
+  "correction_rhs": 0,
+  "matrix_factorizations": 0,
+  "matrix_solves": 0,
+  "campaign_ready": false,
+  "physical_gate_passed": false,
+  "child_launched": false
+}
