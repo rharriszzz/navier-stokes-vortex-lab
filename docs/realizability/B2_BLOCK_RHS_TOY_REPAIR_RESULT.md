@@ -4,8 +4,9 @@ The subsequent [R018 review and prerequisite attempt](B2_MATCHED_TRACE_PREFLIGHT
 stopped before physical execution on a toy repository-root path assumption.
 The result below is preserved; its next-task section is historical. R019
 completed portability repair, and the [R020 attempt](B2_MATCHED_TRACE_COMPATIBILITY_RESULT.md)
-then reached A_32 lifting and stopped at pressure compatibility. The current
-handoff specifies a saved-data method review before any further physical run.
+then reached A_32 lifting and stopped at pressure compatibility. The completed
+[R021 review](B2_COMPATIBLE_TRACE_INTEGRATION_REVIEW.md) specifies the revised
+q=64/q=96 comparison and compatibility barrier before any primary solve.
 
 Recorded 2026-09-20 for [R017](../../REQUEST_LOG.md#r017--2026-09-20--short-continuation-request).
 The scope was the toy-only block-vector repair specified by the

@@ -1,0 +1,189 @@
+{
+  "status": "passed_saved_data_audit",
+  "base_commit": "e96f81b",
+  "new_physical_meshes": 0,
+  "new_FEM_assemblies": 0,
+  "new_PDE_solves": 0,
+  "new_reference_evaluations": 0,
+  "new_quadrature_evaluations": 0,
+  "facet_audit": {
+    "32": {
+      "facets": 282,
+      "side": 200,
+      "caps": 82,
+      "maximum_Mc_minus_m_over_arithmetic_tolerance": 0.004411629462463772,
+      "maximum_mass_asymmetry_over_arithmetic_tolerance": 0.00043048161164833563,
+      "maximum_unit_normal_squared_error": 4.440892098500626e-16,
+      "saved_mass_positive_pivots": true,
+      "caps_exactly_zero": true,
+      "recomputed_signed_flux_si": [
+        2.5713535631527886e-19,
+        2.336108394034163e-22
+      ],
+      "saved_signed_flux_si": [
+        2.57135356396255e-19,
+        2.336108894827116e-22
+      ],
+      "sum_absolute_facet_signed_flux_si": [
+        5.394755246208956e-10,
+        7.894236813533405e-11
+      ],
+      "integrated_absolute_flux_si": [
+        8.459460469091571e-10,
+        1.417029063726441e-10
+      ],
+      "report_sum_discrepancy_si": [
+        8.097615784599882e-29,
+        5.007929533991794e-29
+      ],
+      "saved_flux_ratios": [
+        3.0396188661883777e-10,
+        1.6485963164959508e-12
+      ]
+    },
+    "64": {
+      "facets": 282,
+      "side": 200,
+      "caps": 82,
+      "maximum_Mc_minus_m_over_arithmetic_tolerance": 0.0038250731170022326,
+      "maximum_mass_asymmetry_over_arithmetic_tolerance": 0.0004276546299425408,
+      "maximum_unit_normal_squared_error": 4.440892098500626e-16,
+      "saved_mass_positive_pivots": true,
+      "caps_exactly_zero": true,
+      "recomputed_signed_flux_si": [
+        -1.1650997204110807e-25,
+        2.7387404803785154e-26
+      ],
+      "saved_signed_flux_si": [
+        -1.1489510819106024e-25,
+        2.742032421745678e-26
+      ],
+      "sum_absolute_facet_signed_flux_si": [
+        5.394755248071374e-10,
+        7.894236813647203e-11
+      ],
+      "integrated_absolute_flux_si": [
+        8.460730228051459e-10,
+        1.4170311589495623e-10
+      ],
+      "report_sum_discrepancy_si": [
+        1.6148638500478326e-27,
+        3.2919413671625064e-29
+      ],
+      "saved_flux_ratios": [
+        1.3579809909329896e-16,
+        1.9350544301215862e-16
+      ]
+    }
+  },
+  "mass_step_over_arithmetic_tolerance": 0.019567910645195922,
+  "normal_projection_step": {
+    "norm": "L2(surface), normalized velocity; units m",
+    "real_imaginary_step": [
+      3.7597913613459717e-10,
+      7.190283549981752e-13
+    ],
+    "real_imaginary_q64_norm": [
+      0.027988822582308164,
+      0.004435949673250505
+    ],
+    "relative_step": [
+      1.3433188731999572e-08,
+      1.6209118857547748e-10
+    ],
+    "interpretation": "Saved q64 facet Gram matrices weight coefficient differences; no new field evaluation. Not an error bound or output sensitivity."
+  },
+  "largest_facet_flux_steps": [
+    {
+      "facet": 807,
+      "cell": 274,
+      "signed_flux_step_si": [
+        1.6725128696016737e-19,
+        -9.482107449667838e-23
+      ]
+    },
+    {
+      "facet": 238,
+      "cell": 42,
+      "signed_flux_step_si": [
+        1.6412888371175856e-19,
+        -8.788538417442627e-23
+      ]
+    },
+    {
+      "facet": 661,
+      "cell": 268,
+      "signed_flux_step_si": [
+        -1.1370739981983098e-19,
+        3.8403980395887544e-22
+      ]
+    },
+    {
+      "facet": 1068,
+      "cell": 466,
+      "signed_flux_step_si": [
+        -1.0780036069197363e-19,
+        5.478396017601119e-23
+      ]
+    },
+    {
+      "facet": 1064,
+      "cell": 454,
+      "signed_flux_step_si": [
+        1.0722146007703456e-19,
+        -5.78591987309396e-23
+      ]
+    }
+  ],
+  "compatibility": {
+    "pressure_constant_norm": 43.9089968002003,
+    "measured": {
+      "pressure_constant_products_before": [
+        5.856082051301347e-14,
+        5.322894013045066e-17
+      ],
+      "removed_norm": 5.856084855505123e-14,
+      "rhs_norm": 0.09289054512910896,
+      "tolerance": 5.2802161649827306e-15
+    },
+    "predicted_products": {
+      "32": [
+        5.856097272417803e-14,
+        5.320342219288553e-17
+      ],
+      "64": [
+        -2.6166643868879308e-20,
+        6.244807719526787e-21
+      ]
+    },
+    "prediction_discrepancies": [
+      1.5221116455690625e-19,
+      2.551793756512993e-20
+    ],
+    "prediction_arithmetic_scales": [
+      1.0951392421218461e-17,
+      1.8344481194563126e-18
+    ],
+    "removal_over_tolerance": 11.090615748539674,
+    "equivalent_combined_flux_budget_si_at_A32_rhs_norm": 2.3184899469259262e-20,
+    "equivalent_individual_flux_ratio_ceilings": [
+      2.7407066389127553e-11,
+      1.6361625927621155e-10
+    ],
+    "A64_assembled_compatibility": "unmeasured; flux prediction only"
+  },
+  "quadrature_cost": {
+    "old_points_per_facet": 5120,
+    "proposed_points_per_facet": 13312,
+    "point_count_ratio": 2.6,
+    "interpretation": "Boundary loading point count only; not a runtime or peak-memory prediction."
+  },
+  "limitations": [
+    "No saved facet basis integrals to reconstruct signed flux independently from moments.",
+    "No saved full A RHS/coefficient solution, so no new lifting or compatibility audit for A64.",
+    "Moment equations test projection arithmetic, not integration accuracy.",
+    "No new method implemented or numerical fixture executed."
+  ],
+  "physical_gate_passed": false,
+  "campaign_ready": false
+}

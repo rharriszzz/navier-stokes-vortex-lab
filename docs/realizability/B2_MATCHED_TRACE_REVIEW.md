@@ -8,10 +8,11 @@ R013 contract; its statements about unexecuted work describe R013. Following
 the R017 block RHS and R019 portability repairs, the
 [R020 physical attempt](B2_MATCHED_TRACE_COMPATIBILITY_RESULT.md) completed P's
 solve/correction/outputs and A_32 lifting, then stopped at A_32 pressure
-compatibility before any matched-trace solve. The current task is R020's
-saved-data compatibility method review. The original experiment contract
-below remains unchanged; any future integration prescription needs a new
-reviewed contract.
+compatibility before any matched-trace solve. The completed
+[R021 compatibility review](B2_COMPATIBLE_TRACE_INTEGRATION_REVIEW.md) specifies
+a future fixed q=64/q=96 pair with compatibility before primary solves. The
+original R013 contract below remains preserved; the next experiment must use
+R021's explicit revised contract rather than rerunning the old pair.
 
 Completed 2026-09-20 for [R013](../../REQUEST_LOG.md#r013--2026-09-20--short-continuation-request)
 against `568c68b`, following the [R012 method-review contract](B2_PHYSICAL_RESPONSE_AUDIT.md#next-bounded-task-design-a-geometry-and-boundary-layer-accuracy-test).

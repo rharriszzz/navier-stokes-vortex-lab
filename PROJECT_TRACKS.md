@@ -130,8 +130,12 @@ but stopped at A_32 pressure compatibility before any matched-trace solve.
 The required removal was 11.09 times the unchanged arithmetic limit; saved
 flux imbalance predicts the pressure products. Its 59.97 s and 757.00 MiB
 stayed within caps. A_64 compatibility and the paired comparison remain
-unmeasured. Next is an Astra/high saved-data method review to specify a future
-compatible trace-integration comparison, with no physical retry in that review.
+unmeasured. The completed [R021 compatibility review](docs/realizability/B2_COMPATIBLE_TRACE_INTEGRATION_REVIEW.md)
+checks all saved projection moments and selects a future fixed q=64/q=96
+comparison with P and both A compatibility checks before factorization. Its
+shared-potential moment alternative is deferred. No new numerical work ran;
+next is Astra/high implementation, prescribed toys and at most one conditional
+physical attempt under the new contract and unchanged limits/thresholds.
 The B2 gate remains failed and campaign readiness false. Use
 [SESSION_HANDOFF.md](SESSION_HANDOFF.md) for completion criteria and stops.
 

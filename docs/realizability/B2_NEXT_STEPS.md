@@ -1,6 +1,8 @@
 # B2 continuation: independent swirl reference and stability checks
 
-Current continuation after R020: first read the
+Current continuation after R021: first read the
+[R021 compatibility review and revised experiment contract](B2_COMPATIBLE_TRACE_INTEGRATION_REVIEW.md)
+and [evidence index](B2_COMPATIBLE_TRACE_INTEGRATION_EVIDENCE.md), then the
 [R020 pressure-compatibility stop and method-review contract](B2_MATCHED_TRACE_COMPATIBILITY_RESULT.md)
 and [evidence index](B2_MATCHED_TRACE_COMPATIBILITY_EVIDENCE.md), then the
 [R019 toy portability result](B2_TOY_PORTABILITY_RESULT.md) and
@@ -46,11 +48,15 @@ R020 subsequently passed fresh prerequisites and ran one physical attempt in
 59.97 s/757.00 MiB. P's complete outputs reproduce R016. A_32 completed lifting
 and assignment, then failed pressure compatibility at 11.09 times the fixed
 arithmetic limit before solving. Saved flux imbalance predicts the failure;
-A_64 compatibility and all matched-trace gains remain unmeasured. The next
-bounded task is GPT-6 Astra/high saved-data and method review of a future
-compatible integration comparison. No physical retry, method implementation,
-new quadrature/reference evaluation, changed tolerance, gate integration,
-campaign, B3, rendering or encoding is included in that review.
+A_64 compatibility and all matched-trace gains remain unmeasured. R021's
+completed saved-data review checks 564 facet records and selects fixed
+q=64/q=96 loads, retaining the finite trace and thresholds. P and both A
+compatibility screens move before factorization. The shared-potential moment
+alternative is derived and deferred. No numerical fixture ran in R021. Next
+is GPT-6 Astra/high disposable implementation, prescribed toy coverage under
+60 s/512 MiB, then at most one physical attempt under 180 s/1536 MiB if all
+prerequisites pass. Stop on the first numerical/resource/decision boundary;
+no retry, third order, changed trace/tolerance, gate, campaign, B3 or movie work.
 Older assignments below are historical.
 
 Follow-up at commit `a6295da`: the reference and cube audit are implemented.

@@ -1,7 +1,9 @@
 # Project status: physical preparation and a realistic movie
 
-Updated 2026-09-20, following the R020 pressure-compatibility stop, R019 toy portability repair, R018 prerequisite stop, R017 toy repair, partial
-R016 matched-trace attempt, the R012 physical response audit, and the
+Updated 2026-09-20, following the R021 compatibility method review,
+R020 pressure-compatibility stop, R019 toy portability repair, R018 prerequisite
+stop, R017 toy repair, partial R016 matched-trace attempt, the R012 physical
+response audit, and the
 [R010 status-report request](REQUEST_LOG.md#r010--2026-09-20--project-status-and-user-goals).
 
 Our goal is to determine whether exterior actuators and sensors can prepare
@@ -219,9 +221,12 @@ limit by 11.09 times. It took 59.97 seconds and 757.00 MiB. P's solve, correctio
 and outputs reproduce R016; no A response was measured. Saved boundary-flux
 imbalance predicts the failed pressure check, supporting finite-order trace
 integration as the cause. A_64's smaller saved flux does not establish its RHS
-compatibility. The next checkpoint is an Astra/high method review using saved
-data, to specify a compatible future integration comparison without changing
-acceptance thresholds. No physical retry is part of that review.
+compatibility. The completed [R021 method review](docs/realizability/B2_COMPATIBLE_TRACE_INTEGRATION_REVIEW.md)
+audits the saved facet moments and specifies fixed q=64/q=96 integration, with
+all candidate RHS compatibility checks before any solve. It derived a shared
+vector-potential moment alternative and deferred it. No new numerical fixture
+ran. Next is an Astra/high disposable implementation, prescribed toys and at
+most one conditional physical attempt under unchanged limits and thresholds.
 
 The physical-response campaign remains blocked (`campaign_ready=false`). No
 preparation protocol, sensing result, time-dependent movie dataset or render

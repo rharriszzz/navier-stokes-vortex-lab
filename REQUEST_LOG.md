@@ -1514,3 +1514,110 @@ explicitly failed at compatibility. Tracked documentation passed
 
 **Staged validation, 2026-09-20:** `git diff --cached --check` passed for the
 complete R020 archive and documentation, with no whitespace exceptions.
+
+## R021 — 2026-09-20 — Short continuation request
+
+**User request (verbatim):**
+
+> continue
+
+**Interpreted scope:** Apply the Continue workflow to the R020 handoff's bounded
+saved-data compatibility method review. Preserve the finite reference trace,
+scientific assumptions and acceptance thresholds. Audit existing evidence and
+derive a justified subsequent experiment contract or identify the precise
+unresolved decision. Update continuity, commit and push scoped changes to the
+configured upstream; this request authorizes that delivery.
+
+**Status:** In progress.
+
+**Bounded plan and completion criteria:** Read required research documents,
+the R013 contract, R016–R020 results and exact sources; recheck identities;
+audit saved flux, normal-projection moments, pressure-nullspace normalization
+and lifting. Explain both compatibility screens, compare higher fixed
+quadrature with flux-moment-preserving integration, and write one review with
+an explicit next experiment contract or unresolved choice. Specify toy checks,
+pre-solve compatibility, output screens, solve/factor counts and resource caps.
+Archive and audit saved-data derivations, update continuity, commit/push, stop.
+
+**Stopping conditions:** Saved data and derivation only. No new physical mesh,
+FEM assembly/solve, reference evaluation, quadrature sweep, method
+implementation, pressure/return-flow repair, changed tolerance, gate
+integration, campaign, B3, rendering or encoding. Stop at the method-review
+boundary; retain the failed physical B2 gate and `campaign_ready=false`.
+
+**Outcome, 2026-09-20:** Complete at the method-review boundary. Selected a
+prospective fixed q=64/q=96 matched-trace comparison, retaining the finite
+128-term trace, projection/weak-load construction, parameters and every
+threshold. The new contract checks P and both A RHS compatibilities before
+factorization or any primary solve, with immediate refusal on failure. It
+specifies the actual observer/lifting toy coverage and one conditional physical
+attempt. The shared vector-potential edge-moment alternative was derived and
+deferred; it is not an automatic fallback. No new integration method or
+numerical fixture was implemented or executed during this review.
+
+**Saved-data findings:** All 19 production identities and 433 R014–R020 files
+match `e96f81b`. R020's auditor passed with its generated validation redirected
+into R021. All 564 saved facet records pass mass-equation arithmetic, matching
+orientation, unit-normal, positive-Gram and exact-zero cap checks. The saved
+q32/q64 normal-projection relative L2 steps are 1.3433188732e-8 real and
+1.6209118858e-10 imaginary; these are not output error estimates. A_32's RHS
+arithmetic limit corresponds to a combined flux norm 2.3184899469e-20 m³/s,
+explaining why its 2.571353564e-19 real flux passes the relative screen but
+fails compatibility by 11.0906 times. Flux predicts the measured pressure
+products within the fixed absolute-contribution scale. A_64 assembled
+compatibility remains unmeasured, and its tiny saved flux is not acceptance.
+
+**Evidence and changed files:** `docs/realizability/evidence/r021/` contains
+standard-library review/audit scripts, input identity hashes, derived arithmetic
+and redirected historical validation. The new review and evidence index are
+`B2_COMPATIBLE_TRACE_INTEGRATION_REVIEW.md` and
+`B2_COMPATIBLE_TRACE_INTEGRATION_EVIDENCE.md`. Updated this log,
+`SESSION_HANDOFF.md`, `STATUS.md`, `PROJECT_TRACKS.md`, `B2_NEXT_STEPS.md`, and
+the current-status introductions of `B2_MATCHED_TRACE_REVIEW.md` and
+`B2_BLOCK_RHS_TOY_REPAIR_RESULT.md`. Production code/configuration and old
+evidence are unchanged; no historical archive payload was duplicated.
+
+**Skips and unresolved limits:** No fresh mesh, FEM assembly/PDE solve,
+reference or quadrature evaluation, toy run, method implementation, application
+or optional FEM suite, gate integration, campaign, B3, rendering or encoding.
+Saved six-by-six Gram arithmetic is not a new PDE factorization. No saved
+basis-integral vector permits independent recovery of facet signed flux from
+moments; full A RHSs and solution vectors are absent. The proposed pair's
+compatibility, output sensitivity and cost remain unknown. R020's P result,
+failed physical B2 gate and `campaign_ready=false` remain unchanged. Paired
+accuracy, total FEM error floor, geometry allocation, preparation, sensing,
+hardware demands and validated movie flow remain unresolved.
+
+**Next task/recommendation:** GPT-6 Astra, high reasoning, for the review's
+explicit subsequent experiment contract: create a disposable q=64/q=96 runner,
+validate all original prerequisites and the actual pre-solve compatibility
+barrier under cumulative 60 s/512 MiB, then at most one physical child under
+180 s/1536 MiB if all checks pass and no scientific choice remains. Success
+inventory is three primaries, three same-factor corrections, one symbolic and
+numeric factorization and six matrix solves. Preserve all R013 output/PDE,
+reference and component checks. Archive complete or finite refusal evidence,
+update continuity, commit/push and stop. No retry, third order, cap increase,
+trace/tolerance/solver change or pressure/return-flow repair. Retain Astra/high
+for numerical work and interpretation; recommend Luna/medium only for a fully
+specified mechanical follow-up with focused checks and a stop before physical
+interpretation. Both models are in the current session catalog; OpenAI Docs
+was used to fetch their official model pages and confirm effort support. No
+model switch, sub-agent or automation occurred. Next prompt: **Continue**.
+
+**Git delivery:** This `continue` authorizes the scoped checkpoint and push
+to the configured `origin/main` upstream, without force-push. Actual delivery
+is recorded in Git history and the final response.
+
+**Validation, 2026-09-20:** The R021 saved-data/documentation audit passed:
+19 production identities, 433 preserved historical files, 564 facet records,
+one redirected R020 re-audit, exact reproduction of saved-data calculations,
+two new Python syntax checks, three finite JSON inputs, nine Markdown files,
+103 local links/anchors and 23 fenced blocks. Record:
+`docs/realizability/evidence/r021/validation.json`. Earlier request history is
+byte-preserved and R021 occurs once. `git diff --check` passed. These checks
+validate the review evidence, not the proposed numerical experiment.
+
+**Staged validation, 2026-09-20:** `git diff --cached --check` passed for the
+complete R021 review/archive and continuity documents, with no exceptions.
+Only the 16 scoped documentation/evidence files are staged; no production
+source or old evidence is included.
