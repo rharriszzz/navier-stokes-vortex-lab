@@ -1,10 +1,11 @@
 # B2 continuation: independent swirl reference and stability checks
 
-Current continuation after `705b89f`: read the
-[B2 continuation review](B2_CONTINUATION_REVIEW.md) and the root
-[session handoff](../../SESSION_HANDOFF.md). The project-status synchronization
-and [acceptance repair](B2_GATE_REVIEW.md) are complete. The new review defines
-the next bounded task and when to stop; older assignments below are historical.
+Current continuation after `21676b9`: read the
+[scalable stability review](B2_SCALABLE_STABILITY_REVIEW.md) and the root
+[session handoff](../../SESSION_HANDOFF.md). The acceptance repair, diagnostic
+report package, and bounded stability-method review are complete. The next
+task packages the sufficient local coercivity diagnostic under explicit
+resource caps. Older assignments below are historical.
 
 Follow-up at commit `a6295da`: the reference and cube audit are implemented.
 The new [stability review](B2_STABILITY_REVIEW.md) tests the actual cylinder

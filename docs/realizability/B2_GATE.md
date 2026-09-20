@@ -30,6 +30,12 @@ The physical-pilot gate remains failed. A synthetic reference match or a
 passing legacy aggregate does not establish actual response-mesh stability,
 physical accuracy, or campaign readiness.
 
+The [scalable stability review](B2_SCALABLE_STABILITY_REVIEW.md) now specifies
+a separate sufficient coercivity diagnostic, calibrated on the existing small
+cylinders and compared with sparse inertia counts. It has not been integrated
+into this gate or applied to its requested response meshes. An inconclusive
+coercivity bound must not be interpreted as an unstable operator.
+
 This package is deliberately incomplete: the six-input response campaign was
 not launched because the numerical acceptance gates did not all pass.
 

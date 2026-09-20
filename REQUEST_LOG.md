@@ -152,3 +152,81 @@ failure conditions. Stop at that research-review boundary. If only a known
 mechanical correction remains, recommend GPT-5.6 Luna, medium, with narrow
 checks and a stop condition. Official model guidance was rechecked on
 2026-09-20; Astra is listed for Codex, with client/account availability caveats.
+
+## R005 — 2026-09-20 — Short continuation request
+
+**User request (verbatim):**
+
+> continue
+
+**Scope:** Complete the current bounded method review for stability of actual
+B2 response operators. Read the required research and prior evidence, compare
+sparse constrained eigenanalysis with a sufficient coercivity certificate,
+calibrate against dense small-cylinder fixtures, and document acceptance
+evidence, resource limits, and one bounded implementation follow-up. Commit
+and push only this request's changes to the configured upstream.
+
+**Status:** In progress.
+
+**Plan and completion criteria:** Review the mathematical operator and stored
+fixtures; perform bounded calibration calculations; write a method review with
+residual/convergence requirements, runtime/memory estimates, failure conditions,
+and interpretation limits; update the handoff and relevant documentation;
+validate the documentation; commit and push.
+
+**Stopping conditions:** Stop at the method-review boundary. Preserve the
+3,000-free-DOF dense audit guard, failed physical B2 gate, and false campaign
+readiness. Do not implement a production method or launch large response runs.
+If calibration contradicts stored fixtures or requires changes to the physical
+model, boundary data, or thresholds, record evidence and alternatives for
+research review.
+
+**Outcome, 2026-09-20:** Completed the bounded stability-method review. Derived
+a sufficient local coercivity certificate for the existing affine tetrahedral
+BDM2 SIP form and compared it with constrained sparse inertia analysis. The
+certificate uses four-by-four cell trace matrices and a conservative row-sum
+bound; inconclusive results do not imply instability. It certifies alpha=96
+on 100 mm and alpha=48/96 on 70 mm, while remaining inconclusive on some
+dense-positive cases. No physical parameter, backend, gate, or threshold was
+changed. The physical B2 gate remains failed and campaign readiness false.
+
+**Validation:** Ten dense small-cylinder cases reproduce stored decay rates;
+five targeted 70 mm backward-Euler steps meet the existing prediction checks;
+253 independent UFL cell trace comparisons agree within `5.24e-15` relative;
+six sparse inertia counts match the complete dense 100 mm spectrum, including
+67 negative constrained modes at alpha=6 and none at alpha=48. The full run
+took 46.86 s and peaked at 796.06 MiB RSS. A separate warm local-only run took
+0.117 s inside the script and peaked at 196.74 MiB. Strict JSON, source/script/
+mesh hashes, documented values, Python/JSON fences, eight Markdown files and
+23 local links/anchors were checked; `git diff --check` passed. Application
+test suites, harmonic response pilots, rendering, and encoding checks were
+skipped because their source was unchanged and they are outside this review.
+
+**Evidence:** `/tmp/navier-b2-stability-method-r005/` contains `calibrate.py`,
+`dense.json`, `local.json`, `local_cost.json`, and `provenance.json`. The
+versioned calibration appendix preserves the exact script and provenance for
+reproduction without depending on those temporary files. Numerical source
+remains at `21676b96ced6c2372fc8ca350c9650a90960fe3a`.
+
+**Changed files:** `REQUEST_LOG.md`, `SESSION_HANDOFF.md`, `PROJECT_TRACKS.md`,
+`docs/realizability/B2_GATE.md`, `docs/realizability/B2_NEXT_STEPS.md`,
+`docs/realizability/B2_CONTINUATION_REVIEW.md`, and new
+`docs/realizability/B2_SCALABLE_STABILITY_REVIEW.md` and
+`docs/realizability/B2_SCALABLE_STABILITY_CALIBRATION.md`.
+
+**Next task/recommendation:** GPT-5.6 Luna, medium reasoning, to implement only
+the specified separate local coercivity diagnostic and reports. Verify on
+100/70/50 mm under the 500-cell, 120 s, 1 GiB limits; keep dense regressions
+separate under their 3,000-free-DOF guard. Stop after the package and its checks,
+including if 50 mm is inconclusive. Recommend GPT-6 Astra, high reasoning,
+then to interpret stability/physical-accuracy evidence; recommend Luna again
+only for a known mechanical fix with a narrow validation/stop condition.
+Official model availability was rechecked on 2026-09-20; both are listed for
+Codex subject to account/client access. No model switch or new session was
+launched. Unresolved: actual response-mesh stability, physical accuracy/error
+floor, and whether inconclusive cases merit a separate sparse method.
+
+**Git delivery:** This request authorizes the scoped documentation checkpoint
+`Review scalable B2 stability certificates`. Its commit identity and upstream
+push result are recorded in Git history and the session's final response.
+The review stops here before implementing the next diagnostic.

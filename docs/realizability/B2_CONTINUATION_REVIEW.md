@@ -313,3 +313,21 @@ criteria. Stop at the research-review boundary; if the work reduces to a known
 mechanical correction, recommend GPT-5.6 Luna, medium, with a narrower check.
 The official model guide was rechecked on 2026-09-20 and lists Astra for Codex;
 availability varies by client/account.
+
+## 2026-09-20 scalable stability review result
+
+R005 completed the requested method review in
+[B2_SCALABLE_STABILITY_REVIEW.md](B2_SCALABLE_STABILITY_REVIEW.md), with an
+exact calibration script and provenance in its
+[appendix](B2_SCALABLE_STABILITY_CALIBRATION.md). Ten dense cylinder cases and
+five targeted time steps reproduced the stored results. A local sufficient
+coercivity bound agreed with 253 independently assembled cell trace problems;
+six sparse inertia comparisons agreed with the complete 100 mm constrained
+spectrum. No actual response-mesh operator or harmonic pilot was run.
+
+The next package is the separate local coercivity diagnostic, suitable for
+GPT-5.6 Luna at medium reasoning under the review's explicit formula, checks,
+resource caps, and stop conditions. Stable dense examples where the bound is
+inconclusive remain required controls. The dense size guard, failed physical
+B2 gate, and false campaign readiness are preserved. Return to GPT-6 Astra at
+high reasoning for interpretation after that bounded implementation.

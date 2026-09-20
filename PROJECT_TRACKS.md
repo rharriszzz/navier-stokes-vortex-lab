@@ -73,12 +73,14 @@ Changed-parameter manufactured and swirl cases are verification fixtures only;
 they do not validate the physical 0.01 Hz response or demonstrate physical
 control. The six-input campaign and B3 sensing work have not begun.
 
-The acceptance-report repair is complete. The
-[current B2 review](docs/realizability/B2_CONTINUATION_REVIEW.md) reproduces its
-checks, inventories actual mesh sizes, and specifies the next bounded task:
-robust gain reporting, independent physical-reference diagnostics, and explicit
-campaign blockers. Use [SESSION_HANDOFF.md](SESSION_HANDOFF.md) for the current
-model recommendation, completion criteria, and stopping conditions.
+The acceptance-report repair and physical-reference diagnostics are complete.
+The [scalable stability review](docs/realizability/B2_SCALABLE_STABILITY_REVIEW.md)
+calibrates a sufficient local coercivity bound against dense small-cylinder
+fixtures and compares it with sparse constrained inertia counts. The next
+bounded task packages the local certificate as a separate diagnostic, with
+inconclusive results kept explicit. Response-mesh stability and physical
+accuracy remain unresolved. Use [SESSION_HANDOFF.md](SESSION_HANDOFF.md) for
+the current model recommendation, completion criteria, and stopping conditions.
 
 ### Core constraint
 
