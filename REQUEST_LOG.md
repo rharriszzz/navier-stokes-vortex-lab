@@ -242,7 +242,7 @@ current handoff and stability review, run only its prescribed checks, update
 documentation and handoff, then commit and push the scoped changes to the
 configured upstream.
 
-**Status:** In progress.
+**Status:** Complete.
 
 **Outcome, 2026-09-20:** Implemented the separate optional `b2-coercivity`
 diagnostic and strict JSON/Markdown reports. It uses the reviewed four-by-four
@@ -291,3 +291,8 @@ that review reduces the next action to a known mechanical fix with a narrow
 check. Official OpenAI model documentation was rechecked 2026-09-20 and lists
 Astra for complex reasoning/coding and Luna for cost-sensitive work; local
 client/account access may vary. No model switch occurred.
+
+**Git delivery:** The scoped implementation commit `ae31af2` was pushed
+successfully to the configured `origin/main` upstream. The worktree was clean
+after publication. This completion record is committed separately so the
+original request and implementation commit remain unchanged.
