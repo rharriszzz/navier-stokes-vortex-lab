@@ -1,0 +1,11 @@
+{
+  "block-rhs/block-rhs-report.json": "6a8810422401a6883a7f5855821171dc9a0002b7e2ff5ef4bd869ef77165c547",
+  "block-rhs.stderr": "66a60750d7ab6e38fef6158772c1c89b211eb25d63a8d547bacf303961b07c51",
+  "block-rhs.stdout": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "report.json": "6d06eb5871b35a643a28c0c83a275d61061643c889058efc925b493b7f535459",
+  "wrapper/synthetic-compatibility-failure.json": "2e81a32fb2dd9b0b7ef6ed817bfcd00e5cd6e0821c7d055079ef5c1f361ee4f3",
+  "wrapper/synthetic-return-checkpoint.json": "df418a202d0e0aac3f96246a9f3d4eb1c7a26d2bfa0b0ba4861c5aa4c69179d0",
+  "wrapper/toy-repair-report.json": "97836b340c3f45949cee551756c6d193405e449e560de258498e3543c11397a4",
+  "wrapper.stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "wrapper.stdout": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+}

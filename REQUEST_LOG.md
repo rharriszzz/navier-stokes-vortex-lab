@@ -1226,3 +1226,38 @@ Records: `docs/realizability/evidence/r016/stored_validation.json` and
 `evidence/r016/toys/kernels.stderr:3`, `:4`, `:5` (raw MPI error trailing spaces).
 They are retained for byte/hash fidelity; all other staged files pass. The
 whole-archive default whitespace check is therefore not reported as passed.
+
+## R017 — 2026-09-20 — short continuation request
+
+**User wording:** “continue”
+
+**Interpreted scope:** Apply the repository's short continuation workflow.
+Resume the bounded R016 toy-only block RHS lifting repair contract in a new
+disposable copy; review required research and evidence documents, execute only
+the prescribed toy fixtures within the stated caps, preserve unrelated work,
+update continuity, and commit/push the scoped result to the configured upstream.
+
+**Status:** Complete.
+
+**Outcome (2026-09-20):** Complete. The repaired disposable helper passed the
+block RHS allocation, layout, loading, lifting, reverse-scatter, assignment,
+coupling, pressure-compatibility and refusal checks on toys. Seven cumulative
+parent-monitored attempts took 8.5012 s, with a maximum observed child-tree RSS
+of 183.2071 MiB. All 19 production identities matched; no physical mesh, PDE
+solve, factorization or matrix solve ran. The R017 stored-data and documentation
+audit passed for its archived files, three byte-compared R016 support sources, 102 local
+links/anchors, nine fenced blocks and all Python sources. The separate R016
+stored-data audit also passed. Full application/render/encoding checks were
+skipped. The physical R013 attempt remains the next bounded task under Astra/high.
+The staged whitespace check reports one preserved-source exception at
+`docs/realizability/evidence/r017/toy_runner.py:213` (the copied R016 support
+file's blank line at EOF); no other staged whitespace findings remain.
+
+**Changed files:** `REQUEST_LOG.md`, `SESSION_HANDOFF.md`, `STATUS.md`,
+`PROJECT_TRACKS.md`, `docs/realizability/B2_NEXT_STEPS.md`, the R017 result and
+evidence index, and `docs/realizability/evidence/r017/`. Production numerical
+sources, R014–R016 evidence and the physical gate were not changed.
+
+**Git delivery:** The `continue` shorthand authorizes the scoped commit and
+push to the configured upstream. The actual commit and push result will be
+recorded in Git history and the final response.

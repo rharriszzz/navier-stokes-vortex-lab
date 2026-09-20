@@ -111,9 +111,14 @@ is complete and passed its reference-tetrahedron checks. The
 completed P's solve, one correction and checked cell-integrated output, then
 failed during A_32 RHS lifting. No matched-trace solve was reached. Its 59.18 s
 and 755.86 MiB stayed within the caps; P still fails reference accuracy. The
-next task is a toy-only block RHS repair. Discrete boundary sensitivity will
-not by itself identify continuum geometry error. A total FEM error floor is
-still unknown. The B2 gate remains
+[R017 toy-only block RHS repair](docs/realizability/B2_BLOCK_RHS_TOY_REPAIR_RESULT.md)
+reproduced loss of PETSc block metadata on copy/duplicate and passed the
+replacement-vector lifting and assignment oracle, coupling, compatibility and
+refusal fixtures. No physical run occurred, and the paired diagnostic remains
+incomplete. Discrete boundary sensitivity will not by itself identify
+continuum geometry error. A total FEM error floor is still unknown. The next
+step is a high-reasoning review of the remaining A path before at most one
+separately scoped R013 attempt. The B2 gate remains
 failed and campaign readiness false. Use
 [SESSION_HANDOFF.md](SESSION_HANDOFF.md) for completion criteria and stops.
 

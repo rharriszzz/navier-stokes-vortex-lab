@@ -1,0 +1,53 @@
+{
+  "status": "passed",
+  "wall_limit_seconds": 60.0,
+  "rss_limit_mib": 512.0,
+  "physical_meshes": 0,
+  "pde_solves": 0,
+  "matrix_factorizations": 0,
+  "matrix_solves": 0,
+  "prior_attempt_seconds": 7.7421,
+  "phases": [
+    {
+      "name": "R015_grouping_and_failure_fixtures",
+      "watch": {
+        "command": [
+          "/tmp/navier-fenicsx/bin/python",
+          "/home/rharris/git/navier-stokes-vortex-lab/docs/realizability/evidence/r017/wrapper_toys.py",
+          "--output",
+          "/tmp/navier-b2-matched-r017/toys-final-02/wrapper"
+        ],
+        "returncode": 0,
+        "elapsed_seconds": 0.3779754349961877,
+        "parent_observed_peak_rss_mib": 138.53515625,
+        "samples": 8,
+        "nominal_poll_seconds": 0.05,
+        "maximum_sample_gap_seconds": 0.05489077701349743,
+        "largest_observed_process_tree": 1,
+        "stop_reason": null
+      },
+      "child_status": "passed"
+    },
+    {
+      "name": "block_rhs_metadata_lifting_and_oracle",
+      "watch": {
+        "command": [
+          "/tmp/navier-fenicsx/bin/python",
+          "/home/rharris/git/navier-stokes-vortex-lab/docs/realizability/evidence/r017/block_rhs_toys.py",
+          "--output",
+          "/tmp/navier-b2-matched-r017/toys-final-02/block-rhs"
+        ],
+        "returncode": 0,
+        "elapsed_seconds": 0.38035813497845083,
+        "parent_observed_peak_rss_mib": 141.97265625,
+        "samples": 8,
+        "nominal_poll_seconds": 0.05,
+        "maximum_sample_gap_seconds": 0.05488648600294255,
+        "largest_observed_process_tree": 1,
+        "stop_reason": null
+      },
+      "child_status": "passed"
+    }
+  ],
+  "elapsed_seconds": 8.501242424012162
+}

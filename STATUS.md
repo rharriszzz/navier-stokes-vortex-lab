@@ -1,7 +1,7 @@
 # Project status: physical preparation and a realistic movie
 
-Updated 2026-09-20, following the partial R016 matched-trace attempt, the R012
-physical response audit, and the
+Updated 2026-09-20, following the R017 toy-only block RHS repair, the partial
+R016 matched-trace attempt, the R012 physical response audit, and the
 [R010 status-report request](REQUEST_LOG.md#r010--2026-09-20--project-status-and-user-goals).
 
 Our goal is to determine whether exterior actuators and sensors can prepare
@@ -198,8 +198,14 @@ original-command solve, one correction and checked cell-integrated output, then
 stopped on a second wrapper error during matched-trace RHS lifting. It ran
 59.18 seconds with 755.86 MiB peak RSS, within its caps. Neither matched-trace
 solve ran. The checked original-command output still fails reference accuracy;
-the paired comparison remains incomplete. The next task tests and repairs the
-block-vector lifting operation on toy data, with no physical retry in that task.
+the paired comparison remains incomplete. The
+[R017 toy repair](docs/realizability/B2_BLOCK_RHS_TOY_REPAIR_RESULT.md)
+reproduced block metadata loss on `copy()` and `duplicate()`, then passed the
+replacement-vector, full lifting/assignment, coupling, compatibility and refusal
+checks in 8.50 seconds cumulative and 183.21 MiB peak across its attempts. It
+ran no physical mesh or solve. The next checkpoint is an Astra/high review of
+the remaining A path and, only if the unchanged R013 prerequisites hold, at
+most one separately scoped physical attempt under the original caps.
 
 The physical-response campaign remains blocked (`campaign_ready=false`). No
 preparation protocol, sensing result, time-dependent movie dataset or render

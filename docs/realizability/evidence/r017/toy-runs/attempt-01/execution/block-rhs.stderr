@@ -1,0 +1,9 @@
+Traceback (most recent call last):
+  File "/home/rharris/git/navier-stokes-vortex-lab/docs/realizability/evidence/r017/block_rhs_toys.py", line 227, in <module>
+    run(args.output)
+  File "/home/rharris/git/navier-stokes-vortex-lab/docs/realizability/evidence/r017/block_rhs_toys.py", line 117, in run
+    groups, global_sets, local_sets = physical.collect_constraints(
+                                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/rharris/git/navier-stokes-vortex-lab/docs/realizability/evidence/r017/physical.py", line 35, in collect_constraints
+    raise RuntimeError('Duplicate constrained DOFs in a block')
+RuntimeError: Duplicate constrained DOFs in a block

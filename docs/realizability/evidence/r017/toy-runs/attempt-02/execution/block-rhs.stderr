@@ -1,0 +1,13 @@
+Traceback (most recent call last):
+  File "/home/rharris/git/navier-stokes-vortex-lab/docs/realizability/evidence/r017/block_rhs_toys.py", line 229, in <module>
+    run(args.output)
+  File "/home/rharris/git/navier-stokes-vortex-lab/docs/realizability/evidence/r017/block_rhs_toys.py", line 132, in run
+    rhs = physical.make_lifted_rhs(create_vector, apply_lifting, set_bc, PETSc,
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/rharris/git/navier-stokes-vortex-lab/docs/realizability/evidence/r017/physical.py", line 65, in make_lifted_rhs
+    expected = vector_layout(reference)
+               ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/rharris/git/navier-stokes-vortex-lab/docs/realizability/evidence/r017/physical.py", line 56, in vector_layout
+    owned_offsets=list(owned), ghost_offsets=list(ghost),
+                                                  ^^^^^
+NameError: name 'ghost' is not defined. Did you mean: 'ghosts'?

@@ -1,7 +1,9 @@
 # B2 continuation: independent swirl reference and stability checks
 
-Current continuation after R016: read the
-[R016 lifting failure and toy repair contract](B2_MATCHED_TRACE_LIFTING_RESULT.md),
+Current continuation after R017: read the
+[R017 block RHS toy repair result](B2_BLOCK_RHS_TOY_REPAIR_RESULT.md) and
+[evidence index](B2_BLOCK_RHS_TOY_REPAIR_EVIDENCE.md), then the
+[R016 lifting failure and original toy repair contract](B2_MATCHED_TRACE_LIFTING_RESULT.md),
 its [evidence index](B2_MATCHED_TRACE_LIFTING_EVIDENCE.md), the
 [partial matched-trace result](B2_MATCHED_TRACE_RESULT.md), its
 [preserved run evidence](B2_MATCHED_TRACE_RUN_EVIDENCE.md), the
@@ -24,10 +26,13 @@ Toy, mesh, load and disk-geometry checks passed; a wrapper constraint-grouping
 error stopped it after one original-command solve, with no correction or A solve.
 The R015 grouping repair is complete. R016 subsequently reached P's solve,
 correction and checked cell-integrated output, then stopped during A_32 RHS
-lifting before any A solve. The next bounded task is R016's mechanical block
-RHS repair and actual PETSc lifting/assignment toy checks, at 60 s/512 MiB,
-with no physical cylinder, factorization or PDE solve. A later physical
-attempt would still need the complete R013 checks and 180 s/1.5 GiB caps. No
+lifting before any A solve. R017 reproduced copy/duplicate metadata loss and
+passed the replacement-vector lifting/assignment oracle and reporting fixtures
+in 8.50 s cumulative with 183.21 MiB peak. No physical execution occurred.
+The next bounded task is a GPT-6 Astra/high review of the repaired remaining A
+path against the R013 contract. If prerequisites hold without scientific
+changes, perform at most one physical attempt under the original 180 s/1.5 GiB
+caps. No retry or cap increase. No
 production penalty choice or gate integration is selected. Older assignments
 below are historical.
 

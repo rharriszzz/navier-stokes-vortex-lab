@@ -1,0 +1,21 @@
+{
+  "task": "toy-only DOLFINx block RHS metadata, lifting, scatter, assignment and compatibility repair",
+  "base_commit": "a22fc32f86c957a32e187d090bcd2eb6117db4ad",
+  "physical_execution_permitted": false,
+  "source_sha256_from_r016_preflight": true,
+  "runner_sha256": {
+    "physical.py": "be9c78e4b4af7521a614417a908ca342e78feb5ba7b4adcd22f51500f397f755",
+    "toy_runner.py": "e402682369f9b6523174067c85f79c53ad5d64cdbafc4f7162c89d1740ab2e0f",
+    "wrapper_toys.py": "ee16f2c914458b5bd1f92b18d235b5a6160d5be026c59f5a93394b79a5619d44",
+    "block_rhs_toys.py": "503e1dd8bf9867fa3e9dc829c40b1e82a4b75c7e698e0f3d58e72180186aa214",
+    "run_toys.py": "033be814eaeb36f5c932bb3a3b263923ad923ec0822720e0700522cb791b18bb",
+    "kernels.py": "9e8110d929a9af1a46cad811f69ba86c1123ebf24f9d852d7cecf13585ead2d6",
+    "disk.py": "52afe6d93ff6886b3bfbc4cd6fb68523ec60c98d0bb336fa22c74f4276199255"
+  },
+  "toy_budget": {
+    "cumulative_wall_seconds": 60.0,
+    "process_tree_peak_rss_mib": 512.0,
+    "serial": true,
+    "single_threaded": true
+  }
+}

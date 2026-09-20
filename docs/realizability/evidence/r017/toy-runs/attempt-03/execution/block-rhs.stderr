@@ -1,0 +1,38 @@
+Traceback (most recent call last):
+  File "/home/rharris/git/navier-stokes-vortex-lab/docs/realizability/evidence/r017/block_rhs_toys.py", line 172, in run
+    wrong_reference = create_vector([Q, V, V, Q], kind=PETSc.Vec.Type.MPI)
+                                     ^
+NameError: name 'Q' is not defined
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/rharris/git/navier-stokes-vortex-lab/docs/realizability/evidence/r017/block_rhs_toys.py", line 229, in <module>
+    run(args.output)
+  File "/home/rharris/git/navier-stokes-vortex-lab/docs/realizability/evidence/r017/block_rhs_toys.py", line 219, in run
+    checkpoint(record['stage'])
+  File "/home/rharris/git/navier-stokes-vortex-lab/docs/realizability/evidence/r017/block_rhs_toys.py", line 36, in checkpoint
+    support.write_json(output / 'block-rhs-report.json', record)
+  File "/home/rharris/git/navier-stokes-vortex-lab/docs/realizability/evidence/r017/toy_runner.py", line 22, in write_json
+    temporary.write_text(json.dumps(value, indent=2, allow_nan=False) + '\n')
+                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/navier-fenicsx/lib/python3.12/json/__init__.py", line 238, in dumps
+    **kw).encode(obj)
+          ^^^^^^^^^^^
+  File "/tmp/navier-fenicsx/lib/python3.12/json/encoder.py", line 202, in encode
+    chunks = list(chunks)
+             ^^^^^^^^^^^^
+  File "/tmp/navier-fenicsx/lib/python3.12/json/encoder.py", line 432, in _iterencode
+    yield from _iterencode_dict(o, _current_indent_level)
+  File "/tmp/navier-fenicsx/lib/python3.12/json/encoder.py", line 406, in _iterencode_dict
+    yield from chunks
+  File "/tmp/navier-fenicsx/lib/python3.12/json/encoder.py", line 326, in _iterencode_list
+    yield from chunks
+  File "/tmp/navier-fenicsx/lib/python3.12/json/encoder.py", line 406, in _iterencode_dict
+    yield from chunks
+  File "/tmp/navier-fenicsx/lib/python3.12/json/encoder.py", line 439, in _iterencode
+    o = _default(o)
+        ^^^^^^^^^^^
+  File "/tmp/navier-fenicsx/lib/python3.12/json/encoder.py", line 180, in default
+    raise TypeError(f'Object of type {o.__class__.__name__} '
+TypeError: Object of type bool is not JSON serializable

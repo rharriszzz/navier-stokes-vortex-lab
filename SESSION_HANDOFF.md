@@ -1,12 +1,11 @@
 # Current session handoff
 
 Last updated: 2026-09-20. Latest request:
-[R016](REQUEST_LOG.md#r016--2026-09-20--short-continuation-request), completed
-at the required internal-error stop. One physical child reached P's solve,
-correction and output checks, then failed in A_32 RHS lifting. No matched-trace
-solve or physical retry occurred. R016 starts from `349c9a3`; scoped commit/push
-is authorized by `continue`. Actual delivery is recorded in Git history and
-the final response. Prior R014/R015 evidence remains unchanged.
+[R017](REQUEST_LOG.md#r017--2026-09-20--short-continuation-request), complete.
+The toy-only block RHS repair passed under its cumulative limits. No physical
+retry occurred. R017 starts from `a22fc32`; scoped commit/push is authorized by
+`continue`. Actual delivery is recorded in Git history and the final response.
+R014–R016 evidence remains unchanged.
 
 ## User goals
 
@@ -30,7 +29,7 @@ update continuity, commit/push scoped work, and stop. Explicit qualifications
 such as “Continue without pushing” override that default. It does not switch the
 selected model or schedule another session. No scheduler is installed.
 
-## Latest result: RHS lifting failure (R016)
+## Previous result: RHS lifting failure (R016)
 
 Read the [R016 result](docs/realizability/B2_MATCHED_TRACE_LIFTING_RESULT.md),
 [evidence index](docs/realizability/B2_MATCHED_TRACE_LIFTING_EVIDENCE.md), and
@@ -88,42 +87,60 @@ integrated into schema-3 gate reports. The physical B2 gate remains failed and
 `campaign_ready=false`. Force/power, pressure demand, preparation, sensing and
 validated movie flow remain unassessed or unresolved.
 
+## Latest result: block RHS toy repair (R017)
+
+Read [the R017 result](docs/realizability/B2_BLOCK_RHS_TOY_REPAIR_RESULT.md),
+[evidence index](docs/realizability/B2_BLOCK_RHS_TOY_REPAIR_EVIDENCE.md), and
+[stored-data validation](docs/realizability/evidence/r017/validation.json).
+The single-tetrahedron test reproduced loss of `_blocks` on PETSc copy and
+duplicate. The repaired helper creates a replacement from captured spaces,
+checks PETSc and owned/ghost layout before loading, and then performs the actual
+block lift, reverse scatter and grouped assignment. Zero and nonzero complex
+targets matched the independent toy operator oracle; pressure and
+real/imaginary cross-blocks were nonzero, the operator remained unchanged, and
+exact boundary assignment and refusal/report stages passed. Compatible and
+incompatible pressure fixtures and the R015 grouping/reporting fixtures passed.
+
+Seven cumulative toy attempts, including all failed attempts, took 8.5013 s;
+the largest observed child-tree RSS was 183.2071 MiB, below 60 s/512 MiB. All
+19 production identities match. The R017 audit byte-compared its three
+unchanged support sources with R016 and separately verified the stored R016
+audit. No physical mesh, factorization,
+PDE solve or matrix solve ran. Full application and rendering/movie checks were
+skipped. R016's last complete physical evidence remains the P-only result, which
+fails its reference comparison; this toy result supplies no physical accuracy
+or feasibility evidence.
+
 ## Next task
 
-**GPT-5.6 Luna, medium reasoning:** complete the
-[R016 toy-only block RHS repair contract](docs/realizability/B2_MATCHED_TRACE_LIFTING_RESULT.md#next-bounded-task-exercise-and-repair-block-rhs-lifting-on-toys).
-Before acting read `STATUS.md`, `PROJECT_TRACKS.md`, `EXPERIMENT.md`,
-`PHYSICAL_REALIZABILITY_PLAN.md`, `CONTROL_RESEARCH_ROADMAP.md`, the R013 contract,
-and R014–R016 result/evidence records. Inspect Git status and history first;
-the initial R015 log entry lacks its outcome, but its completed result and
-commits (`5f48dba`, `349c9a3`) establish that the earlier grouping task is done.
+**GPT-6 Astra, high reasoning:** review the repaired disposable R017 wrapper's
+remaining A path against the original R013 contract. Before acting, inspect Git
+status/history and read `STATUS.md`, `PROJECT_TRACKS.md`, `EXPERIMENT.md`,
+`PHYSICAL_REALIZABILITY_PLAN.md`, `CONTROL_RESEARCH_ROADMAP.md`, R013–R017 result
+and evidence records, and the exact R017 archive. Recheck all source identities,
+preserved P evidence, A constraint grouping, layout validation, pressure
+compatibility, primary/correction counts, output checks and stop behavior.
 
-- Work on a new disposable copy. Reproduce copy/duplicate metadata behavior on
-  one reference tetrahedron; create the replacement block RHS through the
-  DOLFINx vector factory and validate all owned/ghost offsets before lifting.
-- Exercise the actual loading/lifting/scatter/assignment helper on zero and
-  nonzero complex targets, with pressure and real/imaginary cross-block coupling.
-  Compare against independent toy operator arithmetic, preserving the original
-  forms, trace, constraints and all tolerances in the physical runner.
-- Add accurate pre-operation stages and layout/failure records; check compatible
-  and incompatible pressure fixtures and the R015 grouping/refusal fixtures.
-- All toy execution, including failures, stays within 60 s/512 MiB total,
-  serial and single-threaded, using approved access needed by MPI. No physical
-  cylinder, factorization, PDE solve, physical retry or cap increase.
-- Completion: exact repaired copy and finite passing toy report, unchanged
-  production/prior-evidence identities, updated continuity and scoped commit/push.
-  Stop on a resource limit, unexplained inconsistency, scientific decision or
-  completion. No campaign, B3, gate integration, rendering or movie export.
+- If original R013 prerequisites, thresholds and resource caps hold without a
+  scientific decision, execute at most one separate physical attempt using the
+  repaired disposable runner under 180 s/1.5 GiB. Preserve all finite partial
+  output and stop on the first failure, resource limit or unexplained result.
+- If any prerequisite fails, or a method/tolerance/physical interpretation
+  choice is needed, do not launch the physical child. Record the exact issue and
+  alternatives for scientific review.
+- Do not retry, increase caps, change tolerances, modify production solver
+  choices, integrate the gate, start a campaign/B3 study, render or encode.
 
-After the mechanical checks pass, recommend **GPT-6 Astra, high reasoning**
-for review of the remaining A path and one separately scoped R013 attempt with
-its original prerequisites/caps/stops. Retain Luna/medium only for a fully
-understood mechanical defect; refer scientific assumptions or threshold changes
-to Astra/high. A toy pass alone never authorizes physical interpretation.
-
-Both recommendations were rechecked against the session catalog and fetched
-[OpenAI Docs: Luna](https://developers.openai.com/api/docs/models/gpt-5.6-luna)
-and [Astra](https://developers.openai.com/api/docs/models/gpt-6-astra) pages.
-This is a recommendation only, not a model switch or scheduled continuation.
+Completion means the original contract is either completed once or explicitly
+stopped before physical execution with the unresolved decision documented,
+evidence audited, continuity updated and scoped changes committed/pushed. A
+successful paired numerical experiment still does not establish preparation,
+sensing sufficiency or a validated movie trajectory. Retain GPT-5.6 Luna,
+medium for understood mechanical defects; use Astra/high for any scientific or
+acceptance-threshold decision. The current session catalog lists both models;
+OpenAI Docs describes Astra for complex reasoning/research and Luna for
+cost-sensitive workloads ([Astra](https://developers.openai.com/api/docs/models/gpt-6-astra),
+[Luna](https://developers.openai.com/api/docs/models/gpt-5.6-luna)). This is a
+recommendation only, not a model switch or scheduled continuation.
 
 **Next prompt: Continue.**
