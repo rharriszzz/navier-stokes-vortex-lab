@@ -112,3 +112,43 @@ change.
 **Git delivery:** Explicitly authorized by this request. This entry is included
 in the checkpoint `Simplify continuation to a single-word request`; Git history
 and the session's final response record its commit and push result.
+
+## R004 — 2026-09-20 — Short continuation request
+
+**User request (verbatim):**
+
+> continue
+
+**Scope:** Apply the `Continue` workflow to the current B2 diagnostic implementation package in `SESSION_HANDOFF.md`: read required research and review documents, implement the bounded reporting/reference diagnostics, run prescribed checks, update evidence and next-task handoff, then commit and push scoped changes.
+
+**Status:** In progress.
+
+**Outcome, 2026-09-20:** Completed the bounded B2 report package. Schema-3
+reports now handle undefined/nonfinite gain comparisons as strict-JSON nulls
+with validity flags, record absolute complex sensitivity and independent
+physical-reference diagnostics, and keep campaign readiness false with actual
+response-mesh stability explicitly unassessed. The early stability rejection
+still performs no harmonic pilot or optional reference calculation.
+
+**Validation:** 44 ordinary realizability tests ran (32 passed, 12 optional
+DOLFINx skips); 21 optional B2 tests passed; CLI help passed; the real bounded
+alpha=6/48 rejection wrote strict JSON/Markdown with a false gate and no pilot
+records; `git diff --check` passed. The final rejection evidence is in
+`/tmp/navier-b2-next-diagnostic-rejection-r004-final/gate.{json,md}`. An
+intermediate new test had an incorrect expected complex difference; its
+expectation was corrected and both final suites pass.
+
+**Changed files:** `realizability/backends/b2_gate.py`, `realizability/cli.py`,
+`tests/realizability/test_b2_gate.py`, `docs/realizability/B2_GATE.md`,
+`docs/realizability/B2_CONTINUATION_REVIEW.md`, `PROJECT_TRACKS.md`,
+`SESSION_HANDOFF.md`, and this log. Actual response-mesh stability and
+physical-reference accuracy/error floor remain unresolved. No production
+response solve or physical threshold change was made.
+
+**Next task/recommendation:** GPT-6 Astra, high reasoning, to review and specify
+a scalable actual-response-operator stability method calibrated against dense
+small fixtures, with residual/convergence evidence, resource limits, and
+failure conditions. Stop at that research-review boundary. If only a known
+mechanical correction remains, recommend GPT-5.6 Luna, medium, with narrow
+checks and a stop condition. Official model guidance was rechecked on
+2026-09-20; Astra is listed for Codex, with client/account availability caveats.

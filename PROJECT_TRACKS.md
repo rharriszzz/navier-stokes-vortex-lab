@@ -64,7 +64,10 @@ not a validated boundary-control system or a physical realization of the target.
   Stokes verification, stability audits, and a pre-campaign response gate. The
   stored physical-pilot gate remains failed: the tangential response has not
   converged against the independent reference, and stability/boundary issues
-  still require numerical-method review.
+  still require numerical-method review. Schema-3 reports now make physical
+  reference discrepancies and unresolved campaign blockers explicit; even a
+  passing legacy aggregate leaves readiness false until actual response-mesh
+  stability and physical accuracy are reviewed.
 
 Changed-parameter manufactured and swirl cases are verification fixtures only;
 they do not validate the physical 0.01 Hz response or demonstrate physical

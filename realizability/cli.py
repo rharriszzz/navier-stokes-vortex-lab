@@ -358,6 +358,7 @@ def main() -> None:
                 Path("realizability/backends/b2_stability.py"),
                 Path("realizability/backends/fem_observables.py"),
                 Path("realizability/backends/b2_gate.py"),
+                Path("realizability/swirl_reference.py"),
                 Path("realizability/cli.py"),
             ),
         )

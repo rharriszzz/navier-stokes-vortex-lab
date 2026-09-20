@@ -1,5 +1,35 @@
 # B2 pre-campaign numerical gate
 
+## Current report contract (schema 3)
+
+Gate reports preserve `all_numerical_gates_passed` as the legacy aggregate of
+bounded-fixture stability, affine verification, pilot PDE diagnostics, and the
+two-pilot mesh, penalty, and quadrature checks. It does not include stability
+on the requested response meshes or agreement with the smooth-cylinder
+reference. Reports therefore set `campaign_ready` to `false` and list both
+items in `campaign_blockers`, even when the legacy aggregate passes.
+
+Completed reports compare every existing `T_00c` pilot and penalty-comparison
+gain with the independent disk-rotation reference at the configured cylinder
+dimensions and viscosity, 0.01 Hz, and a 0.025 m disk. The reference reports
+its complex gain, units, `exp(i*2*pi*f*t)` convention, and 64-to-128-term
+series difference. Comparisons include absolute complex error, relative
+complex error, relative magnitude error, and wrapped phase difference. They
+are diagnostics, not a campaign gate or a proven discretization-error bound;
+no additional harmonic solves are made.
+
+Mesh, penalty, and quadrature comparisons now include absolute complex change
+alongside the existing relative-magnitude and phase tests. These are observed
+sensitivities, not error bounds. Undefined phase and invalid arithmetic are
+reported as JSON `null` with validity flags and reasons; they fail the existing
+comparison acceptance. A zero response retains a valid absolute difference
+where calculable, but has no phase. Early stability rejection reports mark
+later work as not run and do not evaluate the optional SciPy reference.
+
+The physical-pilot gate remains failed. A synthetic reference match or a
+passing legacy aggregate does not establish actual response-mesh stability,
+physical accuracy, or campaign readiness.
+
 This package is deliberately incomplete: the six-input response campaign was
 not launched because the numerical acceptance gates did not all pass.
 

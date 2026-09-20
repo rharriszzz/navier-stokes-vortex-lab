@@ -251,3 +251,65 @@ for size in (0.05, 0.04, 0.03, 0.025):
     print(size, domain.topology.index_map(3).size_global, total, free,
           Q.dofmap.index_map.size_global, 8*free**2/1024**3, _mesh_sha256(domain))
 ```
+
+## 2026-09-20 implementation result
+
+Implemented the bounded report package in `realizability/backends/b2_gate.py`.
+Gain comparisons now include absolute complex change, strict-JSON-safe values,
+validity flags, and explicit reasons for undefined phase or invalid arithmetic.
+The existing 5%/5-degree acceptance behavior remains for finite nonzero gains;
+undefined comparisons fail. Complex feature records follow the same null and
+validity policy.
+
+Completed schema-3 reports calculate the existing independent smooth-cylinder
+`T_00c` reference at the configured R/H/viscosity, 0.01 Hz, and 0.025 m disk,
+using 64 and 128 series terms. They compare every recorded T_00c pilot and
+penalty comparison without adding harmonic solves. Reports record the complex
+gain, units, phasor convention, and 64-to-128-term difference. Mesh, penalty,
+and quadrature absolute changes are labeled as observed sensitivities, not
+error bounds. Both rejected and completed reports include requested response
+meshes/penalties as `not_assessed`, a nonempty blocker list, and
+`campaign_ready=false`; the legacy aggregate's scope is explicit. The early
+rejection path neither launches harmonic pilots nor evaluates the optional
+SciPy reference. Provenance now hashes `swirl_reference.py`.
+
+Focused dependency-free regressions cover zero/zero and one-zero comparisons,
+nonfinite values and overflow, undefined feature phase, independently checked
+absolute reference error, mutually agreeing synthetic gains far from the
+reference, and an exact synthetic reference match that still leaves production
+stability unassessed. These fixtures are not CFD evidence.
+
+Validation:
+
+- `python3 -W error -m unittest discover -s tests/realizability -v`: 44 tests,
+  32 passed and 12 optional DOLFINx skips.
+- `/tmp/navier-fenicsx/bin/python -m unittest discover -s tests/realizability
+  -p 'test_b2*.py' -v`: 21 tests passed.
+- `python3 -m realizability.cli --help`: passed.
+- Real bounded alpha=6/48 rejection in
+  `/tmp/navier-b2-next-diagnostic-rejection-r004-final`: strict `gate.json` and
+  `gate.md` written; stability and readiness false; actual response-mesh
+  stability `not_assessed`; no pilot records/reference call; later stages not
+  run. This is a successful report-generation check, not a passing scientific
+  gate.
+- `git diff --check`: passed.
+
+One intermediate run exposed an incorrect expected value in the new independent
+absolute-error test (the selected complex values differ by `3+4i`, whose
+magnitude is 5). The fixture expectation was corrected; the final ordinary
+and optional B2 suites listed above both pass.
+
+Changed files: `realizability/backends/b2_gate.py`, `realizability/cli.py`,
+`tests/realizability/test_b2_gate.py`, `docs/realizability/B2_GATE.md`,
+`PROJECT_TRACKS.md`, `SESSION_HANDOFF.md`, and `REQUEST_LOG.md`. The actual
+response-mesh stability method, physical accuracy/error floor, and campaign
+readiness remain unresolved. No production response solve or threshold change
+was made.
+
+**Next task:** GPT-6 Astra, high reasoning, to review and bound a scalable
+actual-response-operator stability check, calibrated against the dense small
+fixtures with explicit residual, convergence, memory, runtime, and failure
+criteria. Stop at the research-review boundary; if the work reduces to a known
+mechanical correction, recommend GPT-5.6 Luna, medium, with a narrower check.
+The official model guide was rechecked on 2026-09-20 and lists Astra for Codex;
+availability varies by client/account.
