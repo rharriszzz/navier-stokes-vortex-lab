@@ -33,14 +33,16 @@ physical accuracy, or campaign readiness.
 The [scalable stability review](B2_SCALABLE_STABILITY_REVIEW.md) now specifies
 a separate sufficient coercivity diagnostic, calibrated on the existing small
 cylinders and compared with sparse inertia counts. The standalone diagnostic
-has now run on the 100, 70, and 50 mm fixtures; its 50 mm alpha=48 result is
-inconclusive and alpha=96 is certified positive by the sufficient bound. It is
-not integrated into this gate and has not assessed the 40/30/25 mm physical
-response meshes. The [interpretation review](B2_COERCIVITY_INTERPRETATION.md)
-explains the positive homogeneous-operator conclusion for the exact 50 mm
-mesh/form at alpha=96 and specifies a bounded geometry-only follow-up on those
-physical-pilot meshes. An inconclusive coercivity bound must not be interpreted
-as an unstable operator; neither status establishes physical accuracy.
+has run on the 100/70/50 mm fixtures and, in the
+[R008 response-geometry study](B2_RESPONSE_COERCIVITY_RESULT.md), the exact
+40/30/25 mm physical-pilot geometries. Alpha=96 has a positive certificate on
+all four 50/40/30/25 mm meshes; alpha=48 is inconclusive on all four. This is
+scoped homogeneous-operator evidence, not a physical-accuracy result or a
+production penalty choice. The diagnostic remains separate from this gate, so
+schema-3 reports still say response-mesh stability is `not_assessed`; that
+field has not incorporated the R008 evidence. An inconclusive certificate must
+not be interpreted as an unstable operator. The next task is an absolute
+physical-accuracy/error-floor investigation, with no new harmonic run yet.
 
 This package is deliberately incomplete: the six-input response campaign was
 not launched because the numerical acceptance gates did not all pass.

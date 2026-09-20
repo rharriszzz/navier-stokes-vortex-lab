@@ -379,3 +379,106 @@ and `campaign_ready=false`.
 `Review B2 coercivity scope and bound response-mesh study` and its push to the
 configured upstream. The commit identity and actual push outcome are reported
 in Git history and the session's final response; no force-push is authorized.
+
+## R008 — 2026-09-20 — Short continuation request
+
+**User request (verbatim):**
+
+> continue
+
+**Scope:** Execute and interpret the R007 bounded local coercivity study on
+the existing 40/30/25 mm response geometries, with the prescribed 50 mm control.
+Preserve the exact runner, evidence, provenance, and resource observations;
+update the research documents and handoff; commit and push only this scoped
+work to the configured upstream.
+
+**Status:** In progress.
+
+**Plan and completion criteria:** Review the acceptance contract and required
+research context; check source identities; prepare a disposable runner with
+a parent watchdog; evaluate the four cases once each in fresh serial children;
+check identity, geometry, arithmetic, and strict report semantics; document
+the result and one bounded next task; validate and publish the checkpoint.
+
+**Stopping conditions:** Enforce 120 s total experiment wall time and 1 GiB
+active child-tree RSS. Use the default 500-cell cap for the 50 mm control and
+the reviewed per-call 4,000-cell allowance only for 40/30/25 mm. Stop on a
+control/hash mismatch, unsupported geometry, resource refusal, or contradictory
+arithmetic. Inconclusive is a valid result. Preserve the dense 3,000-free-DOF
+guard, failed physical B2 gate, and `campaign_ready=false`. No global operator
+assembly, factorization, harmonic pilot, additional mesh sweep, gate
+integration, physical parameter/penalty/threshold change, campaign, or B3 work.
+
+**Outcome, 2026-09-20:** Completed the bounded four-case study using the existing
+local certificate and a disposable parent/child runner. All 50/40/30/25 mm
+mesh identities matched the inventory. Alpha=96 was certified positive on all
+four; alpha=48 remained inconclusive on all four. Their C_upper values were
+58.1265712308, 57.9026155132, 58.4738571184, and 59.3021263562. Every maximum
+local trace eigenvalue exceeds 48, so replacing only the row-sum estimate would
+still not certify 48 through the same sufficient inequality. No actual
+alpha=48 instability, physical response accuracy, or production penalty choice
+is inferred.
+
+**Resource evidence:** Four fresh serial children ran once each, with no
+retries, refusals, or unexecuted cases. Total experiment time was 2.6918 s;
+maximum parent-observed active child-tree RSS was 184.5078 MiB. The largest
+observed sample gap was 0.05561 s at a nominal 0.05 s interval. All remained
+within the prescribed 120 s/1 GiB budget and 0.1 s monitoring requirement.
+The 50 mm control retained its 500-cell cap, and only the three reviewed new
+cases used `max_cells=4000`. Backend defaults and the dense guard are unchanged.
+
+**Validation:** The 50 mm control reproduced the exact recorded bound before
+subsequent cases ran. Checked four mesh identities, geometry/facet guards,
+6,351 finite local values, eight beta/classification calculations, 19 unchanged
+package/config hashes, configuration, strict JSON/Markdown, explicit unresolved
+stability/physical-accuracy blockers, and false readiness. All 22 manifest
+files matched their hashes. Final synthetic wall-time and two-process RSS
+watchdog checks passed. Focused ordinary coercivity discovery ran six tests:
+five passed and one optional DOLFINx/UFL test skipped. Runner syntax and exact
+embedded bytes passed. Documentation checks passed for nine Markdown files,
+38 local links/anchors, 23 fenced blocks, four numerical and four resource
+table rows; `git diff --check` passed. Full application, optional UFL/dense/PDE,
+rendering, and encoding suites were not run because source is unchanged and
+they are outside the bounded study. No global matrices or harmonic responses
+were computed.
+
+**Evidence:** `/tmp/navier-b2-response-coercivity-r008/` contains `runner.py`,
+the per-mesh JSON/Markdown pairs, parent watch records, study/manifest files,
+synthetic watchdog checks, and the read-only evidence/document audit. The
+versioned `B2_RESPONSE_COERCIVITY_EVIDENCE.md` preserves exact runner text,
+compact numerical records, config/versions/source identities, and report
+hashes so the result does not depend on temporary files. Runner SHA-256:
+`3eed2ee55b1ebce6b7a183b53e8c19e01deb02254d142d63b1aca07bd33686fe`.
+
+**Changed files:** `REQUEST_LOG.md`, `SESSION_HANDOFF.md`, `PROJECT_TRACKS.md`,
+`docs/realizability/B2_GATE.md`, `docs/realizability/B2_NEXT_STEPS.md`,
+`docs/realizability/B2_SCALABLE_STABILITY_REVIEW.md`,
+`docs/realizability/B2_COERCIVITY_INTERPRETATION.md`, and new
+`docs/realizability/B2_RESPONSE_COERCIVITY_RESULT.md` and
+`docs/realizability/B2_RESPONSE_COERCIVITY_EVIDENCE.md`. Numerical source,
+configuration, physical thresholds, and gate behavior are unchanged.
+
+**Next task/recommendation:** GPT-6 Astra, high reasoning, for the result
+document's bounded physical-accuracy/error-floor investigation. Use existing
+source/reports and bounded reference/quadrature calculations to produce a
+quantitative error budget and one proposed affordable experiment. Preserve
+physical parameters and acceptance criteria; enforce 120 s/1 GiB for new
+reference calculations; stop at the accuracy-review boundary before mesh,
+global-operator, or harmonic work. The certified alpha=96 candidate motivates
+that task; resolving alpha=48 by sparse analysis is deferred. Recommend
+Luna/medium next only for a fully specified mechanical diagnostic/report
+package with exact checks and a stop before interpretation; otherwise retain
+Astra/high for the bounded scientific question. Official model pages and
+the session's model catalog were rechecked on 2026-09-20. No model switch,
+delegated session, or automation was launched.
+
+**Status at completion:** Complete; stopped after the bounded study and its
+documentation. Physical accuracy/error floor, alpha=48's actual stability,
+and production penalty selection remain unresolved. The physical B2 gate
+remains failed and `campaign_ready=false`; its `not_assessed` field has not
+incorporated the separate alpha=96 certificates.
+
+**Git delivery:** `Continue` authorizes the scoped checkpoint
+`Record B2 response-mesh coercivity certificates` and its push to the configured
+upstream. The commit identity and actual push outcome are reported in Git
+history and the session's final response; no force-push is authorized.

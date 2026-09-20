@@ -78,16 +78,16 @@ The [scalable stability review](docs/realizability/B2_SCALABLE_STABILITY_REVIEW.
 calibrates a sufficient local coercivity bound against dense small-cylinder
 fixtures and compares it with sparse constrained inertia counts. The separate
 `b2-coercivity` diagnostic is implemented and has been evaluated on 100, 70,
-and 50 mm fixtures. At 50 mm, alpha=48 remains inconclusive while alpha=96 is
-certified positive by this sufficient local bound. The
-[interpretation review](docs/realizability/B2_COERCIVITY_INTERPRETATION.md)
-establishes the scope: positive homogeneous dissipation on that exact 50 mm
-mesh/form at alpha=96, no certificate for alpha=48 or the distinct 40/30/25 mm
-physical-pilot meshes, and no physical-accuracy conclusion. The next bounded
-task evaluates the existing local certificate on those response geometries
-under explicit resource caps. The B2 gate remains failed and campaign readiness
-false. Use [SESSION_HANDOFF.md](SESSION_HANDOFF.md) for completion criteria and
-stopping conditions.
+and 50 mm fixtures. The subsequent
+[response-geometry study](docs/realizability/B2_RESPONSE_COERCIVITY_RESULT.md)
+also certifies positive homogeneous dissipation at alpha=96 on the exact
+40/30/25 mm physical-pilot geometries; alpha=48 remains inconclusive on all
+four 50/40/30/25 mm meshes. This supplies scoped stability evidence without
+establishing physical accuracy or selecting a production penalty. The separate
+diagnostic is not integrated into the gate. The next bounded task investigates
+the absolute physical-response accuracy/error floor and specifies one affordable
+experiment. The B2 gate remains failed and campaign readiness false. Use
+[SESSION_HANDOFF.md](SESSION_HANDOFF.md) for completion criteria and stops.
 
 ### Core constraint
 

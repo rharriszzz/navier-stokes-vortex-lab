@@ -1,5 +1,9 @@
 # B2 coercivity interpretation and response-mesh follow-up
 
+The bounded follow-up below was completed in R008. Read the
+[response-geometry result](B2_RESPONSE_COERCIVITY_RESULT.md) for the new
+40/30/25 mm evidence and current next task; retain this review as its contract.
+
 Prepared 2026-09-20 for [R007](../../REQUEST_LOG.md#r007--2026-09-20--short-continuation-request)
 against `14896cd` (the R006 implementation is `ae31af2`). This is a review of
 existing evidence and source. No mesh, PDE matrix, eigenproblem, or harmonic

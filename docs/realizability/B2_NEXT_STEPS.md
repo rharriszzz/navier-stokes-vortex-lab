@@ -1,13 +1,14 @@
 # B2 continuation: independent swirl reference and stability checks
 
-Current continuation after R007: read the
-[coercivity interpretation](B2_COERCIVITY_INTERPRETATION.md) and root
-[session handoff](../../SESSION_HANDOFF.md). The 50 mm alpha=96 certificate
-supports homogeneous dissipation only for that mesh/form; alpha=48 remains
-inconclusive. The next bounded research task applies the existing local
-certificate to 40/30/25 mm response geometries under the reviewed caps, with
-50 mm as a control. Stop after reporting those classifications. No global
-factorization, harmonic pilot, penalty change, or gate integration is selected.
+Current continuation after R008: read the
+[response-geometry result](B2_RESPONSE_COERCIVITY_RESULT.md), its exact-runner
+[appendix](B2_RESPONSE_COERCIVITY_EVIDENCE.md), and root
+[session handoff](../../SESSION_HANDOFF.md). Alpha=96 now has positive
+homogeneous-dissipation certificates on the exact 50/40/30/25 mm meshes;
+alpha=48 remains inconclusive. The next bounded task investigates absolute
+physical-response accuracy/error floor using the existing reference and source,
+then proposes one affordable experiment. No new harmonic pilot, global
+factorization, production penalty choice, or gate integration is selected.
 Older assignments below are historical.
 
 Follow-up at commit `a6295da`: the reference and cube audit are implemented.

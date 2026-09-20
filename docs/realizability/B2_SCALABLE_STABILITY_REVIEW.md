@@ -1,8 +1,9 @@
 # B2 scalable stability method review
 
-Current interpretation and next task: [R007 review](B2_COERCIVITY_INTERPRETATION.md).
-The implementation below is complete; the next task evaluates the existing
-certificate on the inventoried response geometries under new explicit limits.
+Current result and next task: [R008 response-geometry study](B2_RESPONSE_COERCIVITY_RESULT.md).
+The implementation and bounded response-geometry evaluation are complete;
+the next task investigates physical accuracy and the absolute error floor.
+The [R007 review](B2_COERCIVITY_INTERPRETATION.md) records the evaluation contract.
 
 Prepared 2026-09-20 for [R005](../../REQUEST_LOG.md), against source commit
 `21676b96ced6c2372fc8ca350c9650a90960fe3a`. This completes the method review
@@ -402,3 +403,20 @@ new cases, and a 120 s total/1 GiB child-tree RSS watchdog. The default
 identity checks, acceptance evidence, limits, and stops. Recommend Astra/high
 for execution and scientific interpretation; do not run a global factorization
 or harmonic pilot in that package. R007 performed no new mesh or PDE work.
+
+## 2026-09-20 response-geometry result (R008)
+
+The existing local certificate was evaluated once on each of the 50/40/30/25 mm
+geometries, with every mesh identity matching the inventory. Alpha=96 is
+certified positive on all four; alpha=48 is inconclusive on all four. The
+40/30/25 mm C_upper values are `57.9026155132`, `58.4738571184`, and
+`59.3021263562`, respectively. Total experiment time was 2.6918 s, with
+184.5078 MiB maximum parent-observed RSS, within the 120 s/1 GiB caps.
+
+The [result](B2_RESPONSE_COERCIVITY_RESULT.md) and exact-runner
+[evidence appendix](B2_RESPONSE_COERCIVITY_EVIDENCE.md) preserve numerical scope,
+checks, provenance, and costs. No global operator or harmonic response was
+computed, no production penalty was selected, and no gate/default changed.
+The positive alpha=96 evidence supports moving to a bounded physical-accuracy/
+error-floor investigation with Astra/high. Stop before a new harmonic pilot;
+alpha=48 stability and the failed physical gate remain unresolved.
