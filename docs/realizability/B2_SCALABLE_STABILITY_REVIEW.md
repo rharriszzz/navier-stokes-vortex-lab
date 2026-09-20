@@ -1,9 +1,10 @@
 # B2 scalable stability method review
 
-Current accuracy result and next task: [R009 review](B2_ACCURACY_REVIEW.md).
+Current accuracy result and next task: [R012 physical audit](B2_PHYSICAL_RESPONSE_AUDIT.md).
 The implementation, [R008 response-geometry evaluation](B2_RESPONSE_COERCIVITY_RESULT.md),
-and reference/error-budget review are complete. The next task is one capped
-50 mm alpha=96 response audit; the total FEM error floor remains unknown.
+and reference/error-budget review are complete. The subsequent single 50 mm
+alpha=96 audit passes PDE checks but fails physical accuracy. The next task
+reviews a geometry/resolution accuracy experiment; a total error floor remains unknown.
 The [R007 review](B2_COERCIVITY_INTERPRETATION.md) records the evaluation contract.
 
 Prepared 2026-09-20 for [R005](../../REQUEST_LOG.md), against source commit

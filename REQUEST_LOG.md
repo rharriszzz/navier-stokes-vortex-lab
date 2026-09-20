@@ -685,3 +685,114 @@ result. No new scientific work is requested.
 `b84b2c5` (`Add project status report for physical and movie goals`) and pushed
 to the configured `origin/main` upstream. The post-request outcome record in
 this entry is being delivered as a separate documentation-only log commit.
+
+## R012 — 2026-09-20 — Short continuation request
+
+**User request (verbatim):**
+
+> continue
+
+**Scope:** Complete the pending R009 single 50 mm alpha=96 physical T_00c
+response audit, preserving its exact numerical and resource contract. Record
+reproducible evidence and interpretation, update continuity documents, then
+commit and push the scoped checkpoint to the configured upstream.
+
+**Status:** In progress.
+
+**Plan and completion criteria:** Read the status report and required research,
+method and evidence records; build a disposable instrumented runner using the
+existing backend/form; validate its watchdog; verify the 19 source/config
+identities, mesh identity/size/DOFs and local certificate; run one physical
+harmonic solve and one residual correction with existing factors; record the
+five prescribed signed-feature quadrature comparisons and independent physical
+reference; validate and publish complete or explicitly partial evidence.
+
+**Stopping conditions:** Stop on identity mismatch, numerical inconsistency,
+180 s total child-tree wall time, 1.5 GiB active child-tree RSS, or completion
+of the single case. No retry/cap increase, mesh sweep, second penalty, new
+solver/form, persistent backend API, adjoint, gate integration, campaign or B3.
+Preserve physical parameters, features, conventions, thresholds, default guards,
+failed physical B2 gate and `campaign_ready=false`. A small residual correction
+is not a total error bound. `Continue` authorizes this scoped commit/push.
+
+**Outcome, 2026-09-20:** Completed the single physical response audit and stopped
+at its one-case boundary. The mesh identity, 482 cells, 9,522/1,928 V/Q DOFs,
+19 source/configuration identities and local alpha=96 certificate all matched.
+One unchanged-backend primal solve and one residual correction used the same
+MUMPS factors; PETSc counters confirmed one symbolic factorization, one numerical
+factorization and exactly two matrix solves. Existing PDE checks, exact block
+round trips and the fixed arithmetic identity tolerance passed.
+
+Physical reference accuracy failed at all five prescribed quadrature rules.
+At the finest rule the gain is `-1.6734039795256472 - 1.0983726070219908 i 1/m`,
+with amplitude 28962.6876 times the independent 128-term reference and phase
+error 74.1164 degrees. Absolute complex error is `2.0016562003 1/m`.
+The correction magnitude is `2.2498932366e-14 1/m`; the final quadrature step
+is `2.9156584710e-4 1/m`, 84.37 times the reference's 5% absolute scale.
+These sensitivities are not error bounds; combined spatial, geometry/loading
+and unmeasured integration error remain unresolved. No hardware feasibility,
+preparation, sensing or validated movie-flow conclusion follows.
+
+**Resources and checks:** The physical child ran once for 38.7542 s; parent
+observed and process high-water RSS were both 753.0508 MiB. Maximum sample gap
+was 0.08138 s across 718 samples, below the 180 s/1.5 GiB limits. Both ordinary
+and final optional-interpreter synthetic watchdog pairs passed before the run.
+No attempt was retried. The first scaffold command found no `python` executable;
+using `python3` completed setup before any physical attempt. No internal
+consistency check failed and no resource stop occurred; the physical reference
+comparison itself failed.
+
+Read-only numerical validation passed for eight manifest files, 19 source/config
+identities, 482 local trace values, eight finite 22,900-entry coefficient arrays,
+30 complex original features, three sets of 49,152 saved disk samples, residual
+norms, reference comparisons, factor counts, vector addition and independent
+`math.fsum` disk reductions. No point location failed. Documentation validation
+covers local links/anchors, exact runner/audit/report records, fenced syntax,
+tables, source immutability and `git diff --check`. No full application,
+dense/UFL calibration, mesh refinement, changed-parameter suite, rendering or
+encoding ran; these were outside the one-case contract and source is unchanged.
+
+**Evidence:** `/tmp/navier-b2-response-r012/`, with durable interpretation and
+exact runner/report/audit in `docs/realizability/B2_PHYSICAL_RESPONSE_AUDIT.md`
+and `B2_PHYSICAL_RESPONSE_EVIDENCE.md`. Runner SHA-256:
+`fcb8dfedfa4f9049ea6c321f3082ada7666219e90cbcfce234222357901d94bb`.
+Report SHA-256:
+`16da2b4a410fa08291a86c50454e13f4cfd57f183bc671d0d53e45e313d10b2c`.
+
+**Changed files:** New physical response audit and evidence appendix; updated
+`REQUEST_LOG.md`, `SESSION_HANDOFF.md`, `STATUS.md`, `PROJECT_TRACKS.md`, and
+`docs/realizability/B2_ACCURACY_REVIEW.md`, `B2_GATE.md`, `B2_NEXT_STEPS.md`,
+`B2_RESPONSE_COERCIVITY_RESULT.md`, `B2_SCALABLE_STABILITY_REVIEW.md`.
+No numerical source/configuration, solver/form, threshold, default guard or
+gate behavior changed. Physical B2 stays failed and `campaign_ready=false`.
+
+**Next task/recommendation:** GPT-6 Astra, high reasoning, for the audit's one
+bounded geometry and boundary-layer accuracy method review. Use existing
+source/reports and elementary calculations to select one affordable experiment
+that distinguishes resolution from faceted-boundary model effects, with explicit
+boundary equations, identities, reference/output checks, cost caps and stops.
+No new mesh, assembly, PDE solve, reference sweep, field reintegration, new
+solver/form, adjoint, gate integration, campaign or B3 runs in that review.
+If no defensible test can be specified, record the missing decision. Stop before
+implementing/running the proposed experiment. Recommend Luna/medium only for
+fully specified mechanical work with focused checks and a stop before numerical
+interpretation; otherwise retain Astra/high. Availability was rechecked in the
+session catalog and fetched official model pages using OpenAI Docs. No switch,
+delegation or automation occurred.
+
+**Status at completion:** Complete; stopped after the bounded audit and
+interpretation. A complete diagnostic with a failed physical comparison is the
+recorded result, not a passing physical gate.
+
+**Git delivery:** `Continue` authorizes the scoped checkpoint
+`Record failed B2 physical response accuracy audit` and its push to `origin/main`.
+The actual commit and push outcome are reported in Git history and the final
+response; no force-push is authorized.
+
+**Final documentation validation, 2026-09-20:** Passed for 11 Markdown files,
+63 local links/anchors, 26 fenced blocks and five result/status tables; exact
+embedded runner, read-only audit and report records matched their evidence.
+Previous request history and all 19 numerical source/configuration identities
+were preserved. `git diff --check` passed. Validation records are
+`/tmp/navier-b2-response-r012/numerical-validation.json` and
+`documentation-validation.json`.

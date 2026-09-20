@@ -1,31 +1,19 @@
 # Current session handoff
 
 Last updated: 2026-09-20. Latest request:
-[R010](REQUEST_LOG.md#r010--2026-09-20--project-status-and-user-goals), documentation only.
-Last completed numerical B2 task:
-[R009](REQUEST_LOG.md#r009--2026-09-20--short-continuation-request).
+[R012](REQUEST_LOG.md#r012--2026-09-20--short-continuation-request), completed.
+The R010 status report was already committed/pushed in R011 (`b84b2c5`, with
+publication log `339b3ee`); there were no pending user edits at R012 start.
 
-## User goals and latest status report
+## User goals
 
-Read [STATUS.md](STATUS.md) before resuming numerical work. The user wants to
-learn whether exterior sensors and actuators can provide an adequate initial
-setup for some orders of magnitude of the process, and to provide data for a
-separate clear, approximately realistic 3D movie. Distinguish initial preparation
-from any continued driving; the quantity/range meant by “orders of magnitude”
-and the physical meaning of “good enough” remain to be specified. Do not infer
-that rest-Stokes verification demonstrates preparation, sensing sufficiency,
-finite-amplitude contraction, or a physically validated movie trajectory.
-
-R010 created the status report and linked it from README/project navigation.
-It did not run the pending numerical task, change its contract or authorize a
-new commit/push. Its documentation edits remain uncommitted for user review.
-On a later `Continue`, preserve these recorded edits and include them in the
-scoped checkpoint if still pending; do not redo R010 as a new assignment.
-
-R010 checks: five Markdown files, 30 local links/anchors, 19 fenced blocks,
-two report tables and `git diff --check` passed. The pending numerical contract
-below is unchanged. No numerical tests, simulations or renders ran. Validation
-records are in `/tmp/navier-status-r010/`; the report is the durable deliverable.
+Read [STATUS.md](STATUS.md). The user wants to learn whether exterior sensors
+and actuators can provide an adequate initial setup for some orders of magnitude
+of the process, and to provide data for a separate clear, approximately realistic
+3D movie. Distinguish initial preparation from continued driving. The quantity
+and range meant by “orders of magnitude,” physical preparation tolerances,
+permitted continued actuation and adequate sensing remain open. Rest-Stokes
+verification does not demonstrate those goals or a validated movie trajectory.
 
 ## Reusable continuation request
 
@@ -34,96 +22,91 @@ In a session opened in this repository, say:
 > Continue
 
 The [short continuation request in AGENTS.md](AGENTS.md#short-continuation-request)
-defines the full workflow: log the request, complete the bounded task and its
-checks, update Markdown and the next model's handoff, commit, push, and stop.
-An explicit qualification overrides the default, such as “Continue without
-pushing.” The selected model is unchanged by the prompt; choose the recommended
-model/effort when starting the session. No scheduler is installed.
+defines the workflow: log the request, complete the bounded task and checks,
+update continuity, commit/push scoped work, and stop. Explicit qualifications
+such as “Continue without pushing” override that default. It does not switch
+the selected model or schedule another session. No scheduler is installed.
+
+## Last completed task
+
+R012 completed the single 50 mm alpha=96 physical T_00c response audit under
+the [R009 contract](docs/realizability/B2_ACCURACY_REVIEW.md#one-proposed-experiment-and-next-task).
+Read the [result](docs/realizability/B2_PHYSICAL_RESPONSE_AUDIT.md) and
+[exact evidence](docs/realizability/B2_PHYSICAL_RESPONSE_EVIDENCE.md).
+
+The prescribed mesh hash, 482 cells, 9,522/1,928 V/Q DOFs and 19 source/config
+hashes matched. The local certificate reproduced `C_upper=58.12657123078638`
+and beta `0.22187075813338908`. Exactly one primal harmonic solve and one
+residual-correction solve used the same factors. PETSc recorded one symbolic
+and one numerical factorization, with matrix solves increasing from one to two.
+The existing PDE and fixed arithmetic checks pass.
+
+**Physical accuracy fails at all five feature rules.** The finest disk gain is
+`-1.6734039795256472 - 1.0983726070219908 i 1/m`, amplitude 28962.6876 times
+the independent reference, phase discrepancy 74.1164 degrees. Absolute complex
+error is `2.0016562003 1/m`. The residual correction is `2.2498932366e-14 1/m`,
+while the finest quadrature step is `2.9156584710e-4 1/m`, 84.37 times the
+`3.4556100991e-6 1/m` scale. These are measured corrections/sensitivities, not
+error bounds. The combined spatial, geometry/loading and integration error
+is unresolved; this is not evidence of physical hardware failure.
+
+The complete physical child took 38.7542 s, with parent-observed and process
+peak RSS 753.0508 MiB, below 180 s/1.5 GiB. Maximum sample gap was 0.08138 s.
+Both final synthetic watchdog checks passed before the single attempt; there
+was no retry or cap increase. All point locations succeeded. Stored-evidence
+validation checked eight manifest files, 19 source/config identities, 482 local
+trace values, eight coefficient arrays, 30 complex original features and three
+sets of 49,152 disk samples. Documentation links, embedded runner/report bytes,
+syntax, tables and `git diff --check` were checked.
+
+No package/configuration, solver/form, threshold or guard changed. No full
+application, dense/UFL calibration, refinement suite, rendering or encoding ran.
+The physical B2 gate remains failed and `campaign_ready=false`; the separate
+alpha=96 certificates are still not integrated into schema-3 gate reports.
+Alpha=48 remains inconclusive. Force/power and pressure demand remain unassessed.
+
+Evidence is in `/tmp/navier-b2-response-r012/`; the versioned result and appendix
+preserve the exact runner and compact numerical evidence independently of those
+temporary files. Do not rerun the physical case to reconstruct temporary files
+without a new bounded contract. The next task below uses the durable records.
 
 ## Next task
 
-**GPT-6 Astra, high reasoning:** implement, run once, and interpret the single
-50 mm alpha=96 physical T_00c response audit in the
-[R009 next-task contract](docs/realizability/B2_ACCURACY_REVIEW.md#one-proposed-experiment-and-next-task).
-Read that review and its exact-runner evidence, R008, the R005 method assumptions,
-and the four root research documents (`PROJECT_TRACKS.md`, `EXPERIMENT.md`,
-`PHYSICAL_REALIZABILITY_PLAN.md`, `CONTROL_RESEARCH_ROADMAP.md`).
+**GPT-6 Astra, high reasoning:** complete the
+[geometry and boundary-layer accuracy method review](docs/realizability/B2_PHYSICAL_RESPONSE_AUDIT.md#next-bounded-task-design-a-geometry-and-boundary-layer-accuracy-test).
+The deliverable is **one selected affordable experiment contract**, not another
+physical run. Read the audit/appendix, R009 error decomposition, R005 method
+assumptions, R008 certificates, `STATUS.md` and the four root research documents
+(`PROJECT_TRACKS.md`, `EXPERIMENT.md`, `PHYSICAL_REALIZABILITY_PLAN.md`,
+`CONTROL_RESEARCH_ROADMAP.md`).
 
-Use a disposable instrumented runner with the existing backend/form. Pin the
-19 source/config hashes and the 50 mm mesh hash; verify 482 cells, 9,522/1,928
-V/Q DOFs and the local alpha=96 certificate before assembling that same mesh.
-Run exactly one physical harmonic solve, then exactly one residual-correction
-RHS using its existing factors. Record original/corrected residuals, nullspace
-compatibility, absolute disk correction and a signed-feature quadrature sweep
-at the five prescribed rules. Compare original gains against the independent
-128-term physical reference without changing acceptance thresholds. The review
-specifies the matrix/field scaling and report identities to check.
+Use existing source/reports and elementary scale/cost calculations. Distinguish
+the smooth-cylinder reference boundary problem from the faceted/projection
+problem. Compare an existing-form 3D boundary-layer mesh, a separate
+symmetry-restricted diagnostic, and an output-weighted residual approach. State
+assumptions and alternatives before selecting one proposed test; no new method
+silently replaces the backend. Specify equations and physical boundary data,
+identity/configuration checks, appropriate reference and feature integration,
+mesh-specific stability evidence, resource limits and failure interpretation.
+The 753 MiB coarse cost and historical 6931 MiB 25 mm cost do not predict a
+safe factorization for a new mesh.
 
-**Limits:** 180 s total child-tree wall time and 1.5 GiB active child-tree RSS,
-parent monitored nominally every 0.05 s from imports through output. Validate
-the watchdog before the physical attempt. These are conservative stop limits,
-not a measured factorization-cost promise. The historical 25 mm run peaked at
-6931.1 MiB and 20 mm failed; geometry-only R008 timing predicts no LU cost.
-Keep the default 500-cell and dense 3,000-free-DOF guards. Retain R/H/nu/f/U,
-fixed disk, signed features, phasor convention and facet-consistent target.
-No new solver/form, persistent backend API, mesh sweep, second penalty,
-adjoint, boundary-layer implementation, gate integration, campaign or B3.
+**Completion and stop:** publish the reviewed experiment contract, or explicitly
+record the missing decision if none is defensible. No new mesh, assembly, PDE
+solve, reference sweep, field reintegration, solver/form implementation, adjoint,
+boundary-model change, gate integration, campaign or B3 in this review. Preserve
+R/H/nu/f/U, fixed disk, signed features, phasor, acceptance thresholds, default
+500-cell and 3,000-free-DOF guards, failed physical B2 gate and false readiness.
+Update continuity, commit/push under `Continue`, then stop before executing the
+proposed experiment. Do not infer preparation, sensing or movie-data feasibility.
 
-**Completion and stop:** preserve a complete or explicitly partial/refused
-report, exact runner/provenance, checks/skips, and the numerical interpretation.
-Stop on identity mismatch, numerical inconsistency, resource cap, or after the
-one case; no automatic retry or cap increase. A failed reference comparison is
-a useful result. One mesh cannot establish refinement or penalty robustness;
-a small residual correction is not a total error bound. Keep the physical B2
-gate failed and `campaign_ready=false`. Alpha=96 remains a verification
-candidate only on certified geometries; alpha=48 stays inconclusive. Commit
-and push the scoped checkpoint under `Continue`, then stop.
+**Following recommendation:** use GPT-5.6 Luna, medium, only for a fully specified
+mechanical package, with exact edits, focused checks and a stop before scientific
+interpretation. Otherwise retain Astra/high for one bounded unresolved numerical
+question. Do not start that following task in the same continuation.
 
-**Following recommendation:** use GPT-5.6 Luna, medium, only for a fully
-understood mechanical instrumentation/report fix, specifying exact edits,
-focused checks, and a stop before interpretation. Otherwise retain Astra/high
-for one bounded unresolved numerical-method or scientific question. Do not
-start that following task in the same continuation.
-
-**Availability:** checked 2026-09-20 in the session's model catalog and fetched
-official [Astra](https://developers.openai.com/api/docs/models/gpt-6-astra) and
+**Availability:** rechecked 2026-09-20 in the session model catalog and fetched
+[official Astra](https://developers.openai.com/api/docs/models/gpt-6-astra) and
 [Luna](https://developers.openai.com/api/docs/models/gpt-5.6-luna) pages using the
-OpenAI Docs skill. Both named models/efforts are listed; account/client access
-can differ. No model switch, delegated session, or automation was launched.
-
-## Last completed work
-
-R009 reproduced the physical disk gain
-`2.0662858857221768e-5 - 6.595106312048072e-5 i 1/m`, or a physical rotation
-amplitude of `6.911220198253778e-12 1/s`. The 32/64/128-term results coincide
-at returned precision. The largest observed radial quadrature discrepancy is
-`1.3736273526914378e-18 1/m`; polar feature checks are similarly small. The
-series and radial cancellation ratios are only 1.05233 and 1.17288. These are
-reference sensitivities, not a certified total FEM error floor.
-
-The review translates the existing 5%/5-degree criteria into absolute complex
-error implications without replacing them: `0.05 |G|=3.4556100991268897e-6 1/m`
-is sufficient for both comparisons. It separates unknown algebraic, FEM
-quadrature, boundary-load, geometry and spatial errors, and explains why the
-unit-command solve avoids interpreting tiny physical amplitude as an inherent
-roundoff failure. Historical alpha=6 discrepancies remain historical.
-
-Validation: three series, 128 independent coefficient integrals, 21 radial
-integrations, five polar feature comparisons, unscaled/scaled Bessel and
-summation checks, three stored historical gains, source/report identities,
-strict JSON/manifest and documentation checks. Both final synthetic watchdog
-checks passed after fixing a self-check directory-creation defect. The two
-reference passes totalled 0.8442 s; maximum parent-observed RSS was 66.9063 MiB,
-with final process peak 71.7813 MiB and maximum sample gap 0.05342 s, below
-120 s/1 GiB. The second parent deadline deducted the first pass's duration.
-
-No numerical source or configuration changed. No mesh, FEM/PDE/UFL/dense test,
-harmonic pilot, full application suite, rendering or encoding ran. Physical
-accuracy/error floor and production penalty remain unresolved. No certificate
-was integrated into the gate; schema-3 response stability still says
-`not_assessed` despite the separate R008 alpha=96 evidence.
-
-Evidence: `/tmp/navier-b2-accuracy-r009/`; the versioned
-[review](docs/realizability/B2_ACCURACY_REVIEW.md) and
-[appendix](docs/realizability/B2_ACCURACY_EVIDENCE.md) preserve reproducible
-calculations, quantitative records, source identities and the proposed task.
+OpenAI Docs skill. Both model/effort choices are listed; account/client access
+may differ. No model switch, delegated session or automation was launched.

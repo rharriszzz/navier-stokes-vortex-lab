@@ -1,6 +1,6 @@
 # Project status: physical preparation and a realistic movie
 
-Updated 2026-09-20, following the numerical work through `915bc68` and the
+Updated 2026-09-20, following the R012 physical response audit against `339b3ee` and the
 [R010 status-report request](REQUEST_LOG.md#r010--2026-09-20--project-status-and-user-goals).
 
 Our goal is to determine whether exterior actuators and sensors can prepare
@@ -70,7 +70,7 @@ that experiment's parameters, acceptance criteria or resource limits.
 | Illustrative movie | Python tracer integration, POV-Ray rendering and ffmpeg encoding, with example scene and motion settings | A usable way to explain the concept. The flow is prescribed; the rendered actuators do not generate it. It is not a validated physical evolution. |
 | Target and measurement definitions | A finite reference target, boundary-command basis, central-flow features, and basic sensor/response diagnostics (B0) | A reproducible vocabulary for testing the idea. Prescribing a target does not show that exterior hardware can create it; sensor fixtures are not an observability study. |
 | Fluid-response calculations | Two optional linear Stokes implementations and verification cases (B1/B2) | B1 failed its strong-divergence check. B2 addresses that issue in recorded cases, but its physical tangential-response accuracy remains unresolved. |
-| Stability and accuracy checks | Independent swirl reference, repaired reporting, and positive dissipation certificates for one numerical penalty on four recorded meshes | Meaningful numerical progress. Stability does not establish response accuracy, and the physical B2 gate still fails. |
+| Stability and accuracy checks | Independent swirl reference, repaired reporting, positive dissipation certificates on four meshes, and one completed physical response audit | The audited 50 mm case passes PDE checks but fails reference accuracy by a large margin. Stability does not establish response accuracy, and the physical B2 gate still fails. |
 | Physical preparation and sensing | Research plan and candidate mechanisms | No demonstrated preparation protocol, validated actuation/measurement response study, or hardware feasibility result yet. No demonstrated multi-order evolution. |
 | Data for a physically supported movie | Existing illustrative trajectories and numerical reference/diagnostic records | Useful explanatory material, but no validated time-dependent preparation/contraction dataset or completed export from such a calculation to the movie. |
 
@@ -93,9 +93,21 @@ independent reference for one simple case: periodic, axisymmetric tangential
 wall motion about rest. At the benchmark's very small wall-speed amplitude
 of 1e-7 m/s and frequency 0.01 Hz, the reference central disk-rotation amplitude
 is approximately 6.91e-12 per second. Reference evaluation is reproducible far
-below the comparison scale, while the repaired 3D solver's total error remains
-unknown. Earlier tangential-response calculations disagreed strongly with the
-reference and cannot be treated as validated data.
+below the comparison scale. The subsequent
+[single physical response audit](docs/realizability/B2_PHYSICAL_RESPONSE_AUDIT.md)
+ran the repaired solver on one coarse, stability-certified mesh. It completed
+within the resource limits and passed its algebraic and divergence checks, but
+its central response amplitude was about **29,000 times the reference**, with
+about **74 degrees of phase error**. It cannot be used as validated physical
+response data.
+
+One residual correction changed that result negligibly. Finer measurement
+quadrature also left the large discrepancy, while its own remaining sensitivity
+was still too large relative to the tiny reference. The next numerical question
+is how to distinguish inadequate boundary-layer resolution from effects of
+the faceted vessel and its projected boundary command. This result establishes
+a failed accuracy check on one mesh; it does not establish a universal numerical
+error floor or a limit on physical actuation.
 
 That tiny reference response is useful evidence about this particular way of
 driving resting water. It does **not** establish that exterior actuation is
@@ -162,17 +174,13 @@ evidence of realizability.
 
 ## Next checkpoint
 
-The pending numerical task is one capped 50 mm, alpha=96 response audit,
-specified in the [accuracy review](docs/realizability/B2_ACCURACY_REVIEW.md#one-proposed-experiment-and-next-task).
-It will measure the repaired calculation's discrepancy against the reference
-and examine algebraic and feature-integration effects. It has a 180 s/1.5 GiB
-resource cap and stops after one case or an explicit failure/refusal.
+The single response audit is complete: 38.75 seconds and 753.05 MiB observed
+peak memory, within its 180 s/1.5 GiB caps. Its
+[next-task contract](docs/realizability/B2_PHYSICAL_RESPONSE_AUDIT.md#next-bounded-task-design-a-geometry-and-boundary-layer-accuracy-test)
+is a bounded method review to specify one affordable test separating spatial
+resolution from boundary-model error. The review will state its assumptions,
+reference, checks, cost limits and failure interpretation before another solve.
 
-That diagnostic was **not run for this status report**. Its result should tell
-us what numerical issue to address next; even a passing comparison would not
-complete the preparation, sensing or movie-data goals. The physical-response
-campaign remains blocked (`campaign_ready=false`).
-
-This report adds no new simulation, rendering or experimental evidence. It
-summarizes the recorded results and places the next numerical checkpoint in
-the context of the user's two goals.
+The physical-response campaign remains blocked (`campaign_ready=false`). No
+preparation protocol, sensing result, time-dependent movie dataset or render
+was produced by this audit. Those broader goals remain as stated above.

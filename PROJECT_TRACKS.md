@@ -93,10 +93,15 @@ establishing physical accuracy or selecting a production penalty. The separate
 diagnostic is not integrated into the gate. The completed
 [accuracy review](docs/realizability/B2_ACCURACY_REVIEW.md) reproduces the tiny
 physical disk response and finds reference sensitivity far below the existing
-comparison scale, while leaving the total FEM error floor unknown. Its next
-bounded task is one capped 50 mm alpha=96 response audit with feature quadrature
-and one residual correction using the same factors. The B2 gate remains failed
-and campaign readiness false. Use
+comparison scale. The subsequent
+[single physical response audit](docs/realizability/B2_PHYSICAL_RESPONSE_AUDIT.md)
+completed one 50 mm alpha=96 solve and same-factor correction within its caps.
+PDE/arithmetic checks pass, but the finest-rule amplitude is 28962.69 times the
+reference with a 74.12-degree phase discrepancy. The observed correction is tiny;
+feature quadrature remains unresolved at the reference error scale. The next
+bounded task reviews a geometry and boundary-layer accuracy experiment. A total
+FEM error floor is still unknown. The B2 gate remains failed and campaign
+readiness false. Use
 [SESSION_HANDOFF.md](SESSION_HANDOFF.md) for completion criteria and stops.
 
 ### Core constraint

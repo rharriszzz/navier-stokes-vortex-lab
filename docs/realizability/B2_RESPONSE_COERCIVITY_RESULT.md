@@ -2,8 +2,10 @@
 
 The next-task contract below was completed in R009. Read the
 [physical-accuracy review](B2_ACCURACY_REVIEW.md) and its
-[calculation evidence](B2_ACCURACY_EVIDENCE.md) for the current result and
-proposed single-case follow-up. The R008 stability evidence here is unchanged.
+[calculation evidence](B2_ACCURACY_EVIDENCE.md) for that result. The subsequent
+[R012 physical response audit](B2_PHYSICAL_RESPONSE_AUDIT.md) completes the
+single-case follow-up and fails the reference comparison. The R008 stability
+evidence here is unchanged.
 
 Completed 2026-09-20 for [R008](../../REQUEST_LOG.md#r008--2026-09-20--short-continuation-request)
 against `f7a7e8f`, following the

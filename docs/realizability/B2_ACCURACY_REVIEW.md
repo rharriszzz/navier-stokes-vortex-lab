@@ -1,5 +1,11 @@
 # B2 physical-response accuracy and error-floor review
 
+The single-case contract below was completed in R012. The
+[physical response audit](B2_PHYSICAL_RESPONSE_AUDIT.md) passes the existing
+PDE/arithmetic checks but fails the reference comparison. Its
+[evidence appendix](B2_PHYSICAL_RESPONSE_EVIDENCE.md) and next-task contract
+supersede the pending assignment here; the R009 calculations remain unchanged.
+
 Completed 2026-09-20 for [R009](../../REQUEST_LOG.md#r009--2026-09-20--short-continuation-request)
 against `f7f522b`, following the [R008 contract](B2_RESPONSE_COERCIVITY_RESULT.md#next-bounded-task-physical-accuracy-and-error-floor-investigation).
 The [evidence appendix](B2_ACCURACY_EVIDENCE.md) preserves the exact calculation,

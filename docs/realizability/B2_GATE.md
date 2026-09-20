@@ -43,9 +43,14 @@ schema-3 reports still say response-mesh stability is `not_assessed`; that
 field has not incorporated the R008 evidence. An inconclusive certificate must
 not be interpreted as an unstable operator. The completed
 [R009 accuracy review](B2_ACCURACY_REVIEW.md) quantifies reference sensitivity
-and the absolute comparison scale; current FEM accuracy remains unknown. It
-proposes one capped 50 mm alpha=96 response/feature/residual-correction audit.
-No new harmonic response was run in that review, and this gate is unchanged.
+and the absolute comparison scale. Its subsequent
+[R012 physical audit](B2_PHYSICAL_RESPONSE_AUDIT.md) completed the one 50 mm
+alpha=96 response and same-factor residual correction. Existing PDE/arithmetic
+checks pass, but the finest-rule response amplitude is 28962.69 times the
+reference with a 74.12-degree phase discrepancy. The observed algebraic
+correction is tiny, while feature quadrature remains unresolved at the reference
+error scale. This is failed physical-accuracy evidence for one mesh, not a
+convergence study or gate integration. This gate's code and thresholds are unchanged.
 
 This package is deliberately incomplete: the six-input response campaign was
 not launched because the numerical acceptance gates did not all pass.

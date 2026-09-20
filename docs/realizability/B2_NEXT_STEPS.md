@@ -1,6 +1,8 @@
 # B2 continuation: independent swirl reference and stability checks
 
-Current continuation after R009: read the
+Current continuation after R012: read the
+[single physical response audit](B2_PHYSICAL_RESPONSE_AUDIT.md), its
+[exact evidence](B2_PHYSICAL_RESPONSE_EVIDENCE.md), the
 [physical-accuracy review](B2_ACCURACY_REVIEW.md), its
 [calculation appendix](B2_ACCURACY_EVIDENCE.md), the
 [response-geometry result](B2_RESPONSE_COERCIVITY_RESULT.md), its exact-runner
@@ -8,12 +10,13 @@ Current continuation after R009: read the
 [session handoff](../../SESSION_HANDOFF.md). Alpha=96 now has positive
 homogeneous-dissipation certificates on the exact 50/40/30/25 mm meshes;
 alpha=48 remains inconclusive. R009 reproduced the physical reference and its
-small numerical sensitivity, leaving current FEM error unknown. The next
-bounded task is one capped 50 mm alpha=96 physical response audit with feature
-quadrature and one residual-correction RHS using the same factors. No harmonic
-pilot ran in R009. No production penalty choice or gate integration is selected;
-the new review defines the exact next experiment and stops. Older assignments
-below are historical.
+small numerical sensitivity. R012 completed the capped 50 mm alpha=96 physical
+audit: PDE/arithmetic checks pass, but all five feature rules fail the physical
+reference comparison. The next bounded task is a method review specifying one
+affordable experiment to distinguish spatial resolution from faceted-boundary
+model error; no additional solve is part of that review. No production penalty
+choice or gate integration is selected. The new audit defines the exact next
+task and stops. Older assignments below are historical.
 
 Follow-up at commit `a6295da`: the reference and cube audit are implemented.
 The new [stability review](B2_STABILITY_REVIEW.md) tests the actual cylinder
