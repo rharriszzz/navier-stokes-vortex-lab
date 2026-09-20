@@ -4,7 +4,8 @@ Last updated: 2026-09-20. Latest request:
 [R019](REQUEST_LOG.md#r019--2026-09-20--short-continuation-request), complete
 after the toy portability contract passed. No physical child was launched.
 R019 starts from `0e8e421`; `continue` authorizes its scoped commit/push.
-Actual delivery is recorded in Git history and the final response.
+The scoped checkpoint `76cfa81` was pushed to `origin/main`; this delivery
+confirmation is in the follow-up continuity commit and Git history.
 
 ## User goals
 
