@@ -1,12 +1,14 @@
 # B2 continuation: independent swirl reference and stability checks
 
-Current continuation after R006: inspect the implementation result in the
-[scalable stability review](B2_SCALABLE_STABILITY_REVIEW.md) and use the root
-[session handoff](../../SESSION_HANDOFF.md). The standalone sufficient local
-coercivity diagnostic is implemented. The next bounded task is a research
-interpretation of its 50 mm inconclusive-at-alpha-48 / positive-at-alpha-96
-result and selection of one actual-response-mesh stability or physical-
-accuracy review. Older assignments below are historical.
+Current continuation after R007: read the
+[coercivity interpretation](B2_COERCIVITY_INTERPRETATION.md) and root
+[session handoff](../../SESSION_HANDOFF.md). The 50 mm alpha=96 certificate
+supports homogeneous dissipation only for that mesh/form; alpha=48 remains
+inconclusive. The next bounded research task applies the existing local
+certificate to 40/30/25 mm response geometries under the reviewed caps, with
+50 mm as a control. Stop after reporting those classifications. No global
+factorization, harmonic pilot, penalty change, or gate integration is selected.
+Older assignments below are historical.
 
 Follow-up at commit `a6295da`: the reference and cube audit are implemented.
 The new [stability review](B2_STABILITY_REVIEW.md) tests the actual cylinder

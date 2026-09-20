@@ -296,3 +296,86 @@ client/account access may vary. No model switch occurred.
 successfully to the configured `origin/main` upstream. The worktree was clean
 after publication. This completion record is committed separately so the
 original request and implementation commit remain unchanged.
+
+## R007 — 2026-09-20 — Short continuation request
+
+**User request (verbatim):**
+
+> continue
+
+**Scope:** Review the completed standalone B2 coercivity diagnostic and its
+50 mm evidence, determine what it establishes about the actual response
+meshes, and select one bounded stability or physical-accuracy/error-floor
+follow-up. Update the research record and handoff, then commit and push only
+this request's scoped changes to the configured upstream.
+
+**Status:** In progress.
+
+**Plan and completion criteria:** Read the required research documents,
+calibration appendix, previous stability/report reviews, and diagnostic
+implementation/evidence. Document certified versus inconclusive conclusions,
+assumptions, alternatives, acceptance evidence, resource limits, and failure
+conditions for one concrete next task. Check the documentation and recorded
+evidence, update continuity records, and publish the scoped checkpoint.
+
+**Stopping conditions:** Stop at the research-decision boundary. Preserve the
+3,000-free-DOF dense guard, failed B2 gate, and `campaign_ready=false`. Do not
+wire the standalone certificate into the gate, change physical parameters or
+thresholds, or launch response-mesh factorizations, harmonic pilots, larger
+meshes, or campaigns.
+
+**Outcome, 2026-09-20:** Completed the bounded interpretation review in
+`docs/realizability/B2_COERCIVITY_INTERPRETATION.md`. The exact 50 mm mesh/form
+at alpha=96 has a guarded positive dissipation margin of
+`0.22187075813338908`, which also applies under constant positive viscosity
+scaling. Alpha=48 remains inconclusive. Its computed local trace maximum is
+`48.96418141363834`, so replacing only the row-sum estimate would still not
+certify that penalty through the same sufficient inequality. No stability
+conclusion transfers to the distinct 40/30/25 mm meshes, and physical accuracy
+remains unresolved. No numerical source, physical threshold, or gate changed.
+
+**Validation:** Read-only strict-JSON audit checked 735 stored cell values,
+15 classifications, three facet-count identities, six matching config/source
+hashes, pilot configuration, four stored dense sign/conservatism controls and
+their mesh identities, and false schema-3 gate/readiness status. Documentation
+validation passed for seven Markdown files, 26 local links/anchors, 18 fenced
+blocks (Python/JSON syntax checked where present), and three numerical table
+rows; `git diff --check` passed. Application tests, PDE/UFL/dense checks,
+rendering, and encoding were skipped because numerical source is unchanged.
+No mesh generation, response-mesh factorization, harmonic pilot, or campaign
+was run. These are R007 evidence/consistency checks, not rerun R006 CFD tests.
+
+**Evidence:** `/tmp/navier-b2-interpretation-r007/` contains `audit.py`,
+`audit.json`, and `check_docs.py`. The review preserves the decisive values,
+source/report identities, interpretation, and next-task contract without
+requiring temporary files. The audited R006 report SHA-256 is
+`83530949284b50c3cd4e9b22e9cbb88c47c0f0d9667ee752f4065d3ba8e9454f`.
+
+**Changed files:** `REQUEST_LOG.md`, `SESSION_HANDOFF.md`, `PROJECT_TRACKS.md`,
+`docs/realizability/B2_GATE.md`, `docs/realizability/B2_NEXT_STEPS.md`,
+`docs/realizability/B2_SCALABLE_STABILITY_REVIEW.md`, and new
+`docs/realizability/B2_COERCIVITY_INTERPRETATION.md`.
+
+**Next task/recommendation:** GPT-6 Astra, high reasoning, to execute and
+interpret the existing local diagnostic on 40/30/25 mm response geometries,
+with a 50 mm control, exact mesh-identity checks, and the review's 120 s
+total/1 GiB child-tree RSS watchdog. A per-call `max_cells=4000` allowance is
+explicitly scoped to the three new geometry cases; preserve the default
+500-cell and dense 3,000-free-DOF guards. Stop after reporting classifications
+and costs, including inconclusive outcomes, or earlier on a documented
+failure condition. No new backend, global operator, harmonic pilot, or gate
+integration is selected. Follow with Astra/high for physical accuracy or
+unresolved stability interpretation; recommend Luna/medium only for a known
+mechanical fix with its exact check and stop. Official model pages and this
+session's model catalog were checked on 2026-09-20. No model switch, delegated
+session, or automation was launched.
+
+**Status at completion:** Complete; stopped at the research-decision boundary.
+Actual response-mesh stability, physical accuracy/error floor, and any later
+sparse-method choice remain unresolved. The physical B2 gate remains failed
+and `campaign_ready=false`.
+
+**Git delivery:** This request authorizes the scoped documentation checkpoint
+`Review B2 coercivity scope and bound response-mesh study` and its push to the
+configured upstream. The commit identity and actual push outcome are reported
+in Git history and the session's final response; no force-push is authorized.

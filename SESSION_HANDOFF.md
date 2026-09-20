@@ -1,7 +1,7 @@
 # Current session handoff
 
-Last updated: 2026-09-20. Workflow: [R006](REQUEST_LOG.md#r006--2026-09-20--short-continuation-request).
-Last completed B2 task: [R006](REQUEST_LOG.md#r006--2026-09-20--short-continuation-request).
+Last updated: 2026-09-20. Workflow: [R007](REQUEST_LOG.md#r007--2026-09-20--short-continuation-request).
+Last completed B2 task: [R007](REQUEST_LOG.md#r007--2026-09-20--short-continuation-request).
 
 ## Reusable continuation request
 
@@ -18,55 +18,66 @@ model/effort when starting the session. No scheduler is installed.
 
 ## Next task
 
-**GPT-6 Astra, high reasoning:** review the completed separate
-`b2-coercivity` diagnostic and interpret the 50 mm result. Read its
-[implementation result](docs/realizability/B2_SCALABLE_STABILITY_REVIEW.md#2026-09-20-implementation-result-r006),
-the calibration appendix, previous stability/report reviews, and the four
-required research documents. Decide whether the 50 mm sufficient bound supports
-any conclusion about the response meshes, then select one bounded next research
-task: an actual-response-mesh stability method or a physical-accuracy/error-
-floor investigation. State assumptions, alternatives, observable acceptance
-evidence, resource limits, and failure conditions before requesting another
-implementation.
+**GPT-6 Astra, high reasoning:** execute and interpret the bounded local
+coercivity study on the existing 40/30/25 mm response geometries. Read the
+[R007 interpretation and acceptance contract](docs/realizability/B2_COERCIVITY_INTERPRETATION.md#one-next-task-and-its-acceptance-contract),
+the R005 derivation/calibration, R006 implementation result, previous stability
+and report reviews, and the four root research documents (`PROJECT_TRACKS.md`,
+`EXPERIMENT.md`, `PHYSICAL_REALIZABILITY_PLAN.md`, `CONTROL_RESEARCH_ROADMAP.md`).
+Use the existing API and a disposable research runner; no new backend is needed.
 
-**Completion:** produce a review that interprets certified versus inconclusive
-results without calling an inconclusive case unstable, preserves the dense
-3,000-free-DOF guard, failed B2 gate and `campaign_ready=false`, and defines one
-bounded follow-up with a model/effort recommendation and a clear stop point.
-Do not wire `b2-coercivity` into `b2-gate` in this review.
+Run a 50 mm alpha=48/96 control with the existing 500-cell cap first. Require
+its recorded hash, 482 cells, C_upper, and classifications. Then evaluate
+40/30/25 mm once each at the same penalties, in fresh serial child processes,
+using the explicitly reviewed `max_cells=4000` per-call allowance. Preserve
+the default `CELL_LIMIT=500` and the dense 3,000-free-DOF guard. Match the
+recorded hashes and 873/1842/3154 cell counts. Enforce 120 s total wall time
+for all four cases and 1 GiB active child-tree RSS with a parent watchdog.
+The linked contract specifies geometry/arithmetic checks, provenance, reports,
+watchdog granularity, and failure handling; do not silently increase any cap.
 
-**Stop:** stop at that research-decision boundary. Do not launch response-mesh
-factorizations, harmonic pilots, larger meshes, or campaigns; do not change the
-physical model, penalty, or thresholds. If the evidence makes the only next
-step a known mechanical fix, recommend GPT-5.6 Luna, medium reasoning, with the
-exact fix, relevant check, and stop condition. Otherwise recommend Astra/high
-for the next scientific interpretation. Official OpenAI model guidance was
-rechecked on 2026-09-20: it lists GPT-6 Astra for complex reasoning/coding and
-GPT-5.6 Luna for cost-sensitive workloads; account/client availability can
-vary. No model switch or session launch occurred. See the
-[OpenAI model catalog](https://developers.openai.com/api/docs/models) and
-[reasoning guide](https://developers.openai.com/api/docs/guides/reasoning).
+**Completion:** record strict JSON/Markdown, numerical scope, compact evidence,
+the exact reproducible runner and hashes, observed costs, checks/skips, and one
+next task. Positive and inconclusive classifications are both valid results.
+Keep the physical B2 gate failed, its response stability field `not_assessed`,
+and `campaign_ready=false`; the standalone evidence does not update the gate.
+Commit and push the scoped documentation/evidence under `Continue`, then stop.
 
-**Availability:** OpenAI's current model catalog and reasoning guide were
-checked on 2026-09-20. The catalog lists GPT-6 Astra and GPT-5.6 Luna; the guide
-recommends Astra for most reasoning workloads and Luna for the lowest cost and
-latency. The signed-in Codex client's available model list can vary by account;
-confirm there before starting. No model switch or new session was launched.
+**Stop:** stop after the four-case study or earlier on control/hash mismatch,
+unsupported geometry, resource refusal, or contradictory arithmetic. An
+inconclusive case does not trigger a new method; the remaining scheduled
+geometry cases may still run within the same caps. No global operator assembly,
+factorization, harmonic pilot, additional mesh sweep, gate integration, physical
+parameter/penalty/threshold change, campaign, or B3 work belongs to this task.
+
+**Following recommendation:** use Astra/high for an absolute physical-accuracy/
+error-floor investigation if useful cases are certified, or for deciding
+whether constrained sparse analysis is justified if they are inconclusive.
+Recommend GPT-5.6 Luna, medium, only for an identified mechanical runner/report
+fix, stating the exact edit, focused check, and stop before interpretation.
+
+**Availability:** checked 2026-09-20 in this session's model tool catalog and
+the official [Astra](https://developers.openai.com/api/docs/models/gpt-6-astra)
+and [Luna](https://developers.openai.com/api/docs/models/gpt-5.6-luna) pages.
+Both named models/efforts are listed; the user's picker can depend on account
+and client. No model switch, delegated session, or automation was launched.
 
 ## Last completed work
 
-R006 implemented and exercised `b2-coercivity` on 100/70/50 mm fixtures. The
-certified penalties were 96 at 100 mm, 48/96 at 70 mm, and 96 at 50 mm. The
-50 mm alpha=48 result is inconclusive, not unstable. The alpha=6 dense control
-remains negative; stable dense controls still show why the local sufficient
-bound can be conservative. No physical acceptance threshold or gate behavior
-changed, and the standalone diagnostic is not wired into `b2-gate`.
+R007 reviewed R006 without new mesh/PDE work. At 50 mm, alpha=96 certifies
+positive homogeneous dissipation with beta `0.22187075813338908`; alpha=48
+remains inconclusive. Its local trace maximum `48.96418141363834` exceeds 48,
+so tightening only the row-sum estimate would still not certify 48. The
+40/30/25 mm meshes and physical accuracy remain unresolved. No code, physical
+threshold, gate behavior, or historical result changed.
 
-Checks: ordinary discovery 50 (37 passed, 13 optional skips), optional B2
-discovery 27 passed, focused coercivity checks 6 passed, CLI help passed,
-253 local UFL trace comparisons within `1e-12`, strict JSON/report semantics,
-and `git diff --check`. The three-mesh diagnostic took 0.51 s / 179.56 MiB
-parent-observed RSS; the separate dense comparison took 7.26 s / 769.07 MiB.
-Both remained below their recorded wall-time and memory caps. Evidence is in
-`/tmp/navier-b2-coercivity-r006-final2/` and the associated watchdog/dense JSON files;
-the versioned review records numerical and source/mesh evidence.
+Checks: strict stored-JSON audit of 735 local values and 15 classifications;
+six source/config hashes and pilot configuration match; facet-count identities,
+four stored dense controls and fixture hashes, and failed schema-3
+gate/readiness checked. Documentation links/anchors, numerical table values,
+fenced syntax, and `git diff --check` checked for this documentation checkpoint.
+Application/PDE suites and rendering/encoding were skipped because source is
+unchanged. Evidence: `/tmp/navier-b2-interpretation-r007/{audit.py,audit.json}`;
+the new review preserves the interpretation, decisive values, source identities,
+and next-task contract. R006's numerical checks remain recorded in its review
+and log entry; they were not rerun or relabeled as R007 results.

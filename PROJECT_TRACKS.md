@@ -79,10 +79,15 @@ calibrates a sufficient local coercivity bound against dense small-cylinder
 fixtures and compares it with sparse constrained inertia counts. The separate
 `b2-coercivity` diagnostic is implemented and has been evaluated on 100, 70,
 and 50 mm fixtures. At 50 mm, alpha=48 remains inconclusive while alpha=96 is
-certified positive by this sufficient local bound. This does not assess the
-actual response meshes or their physical accuracy; the B2 gate remains failed
-and campaign readiness false. Use [SESSION_HANDOFF.md](SESSION_HANDOFF.md) for
-the current research review, completion criteria, and stopping conditions.
+certified positive by this sufficient local bound. The
+[interpretation review](docs/realizability/B2_COERCIVITY_INTERPRETATION.md)
+establishes the scope: positive homogeneous dissipation on that exact 50 mm
+mesh/form at alpha=96, no certificate for alpha=48 or the distinct 40/30/25 mm
+physical-pilot meshes, and no physical-accuracy conclusion. The next bounded
+task evaluates the existing local certificate on those response geometries
+under explicit resource caps. The B2 gate remains failed and campaign readiness
+false. Use [SESSION_HANDOFF.md](SESSION_HANDOFF.md) for completion criteria and
+stopping conditions.
 
 ### Core constraint
 

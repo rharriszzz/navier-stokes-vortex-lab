@@ -35,9 +35,12 @@ a separate sufficient coercivity diagnostic, calibrated on the existing small
 cylinders and compared with sparse inertia counts. The standalone diagnostic
 has now run on the 100, 70, and 50 mm fixtures; its 50 mm alpha=48 result is
 inconclusive and alpha=96 is certified positive by the sufficient bound. It is
-not integrated into this gate and has not assessed the requested response
-meshes. An inconclusive coercivity bound must not be interpreted as an
-unstable operator.
+not integrated into this gate and has not assessed the 40/30/25 mm physical
+response meshes. The [interpretation review](B2_COERCIVITY_INTERPRETATION.md)
+explains the positive homogeneous-operator conclusion for the exact 50 mm
+mesh/form at alpha=96 and specifies a bounded geometry-only follow-up on those
+physical-pilot meshes. An inconclusive coercivity bound must not be interpreted
+as an unstable operator; neither status establishes physical accuracy.
 
 This package is deliberately incomplete: the six-input response campaign was
 not launched because the numerical acceptance gates did not all pass.

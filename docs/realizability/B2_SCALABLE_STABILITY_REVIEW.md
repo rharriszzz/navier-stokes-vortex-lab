@@ -1,5 +1,9 @@
 # B2 scalable stability method review
 
+Current interpretation and next task: [R007 review](B2_COERCIVITY_INTERPRETATION.md).
+The implementation below is complete; the next task evaluates the existing
+certificate on the inventoried response geometries under new explicit limits.
+
 Prepared 2026-09-20 for [R005](../../REQUEST_LOG.md), against source commit
 `21676b96ced6c2372fc8ca350c9650a90960fe3a`. This completes the method review
 requested by the [diagnostic handoff](B2_CONTINUATION_REVIEW.md#2026-09-20-implementation-result).
@@ -379,3 +383,22 @@ Changed documentation: this review, `B2_GATE.md`, `B2_NEXT_STEPS.md`,
 response-mesh stability question and physical accuracy/error floor remain
 unresolved. No production response run, gate integration, threshold change,
 harmonic pilot, or campaign was performed.
+
+## 2026-09-20 interpretation result (R007)
+
+The [interpretation review](B2_COERCIVITY_INTERPRETATION.md) checked the stored
+R006 report against current source and recomputed its arithmetic. The 50 mm
+alpha=96 result certifies positive homogeneous dissipation for that mesh/form,
+with beta `0.22187075813338908`; it also applies under constant positive
+viscosity scaling. Alpha=48 remains inconclusive. Its maximum local trace
+eigenvalue is already `48.96418141363834`, so replacing only the row-sum
+estimate would not make the same sufficient inequality certify 48.
+
+The distinct 40/30/25 mm physical-pilot meshes remain unassessed. The next
+task uses the existing API for a bounded geometry-only study on those meshes,
+with a 50 mm control, an explicit per-call 4,000-cell allowance for the three
+new cases, and a 120 s total/1 GiB child-tree RSS watchdog. The default
+500-cell and dense 3,000-DOF guards remain unchanged. The review defines
+identity checks, acceptance evidence, limits, and stops. Recommend Astra/high
+for execution and scientific interpretation; do not run a global factorization
+or harmonic pilot in that package. R007 performed no new mesh or PDE work.
