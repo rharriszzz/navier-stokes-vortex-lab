@@ -37,6 +37,10 @@ the physical particles for visibility.
 navier-stokes-vortex-lab/
 ├── README.md
 ├── AGENTS.md
+├── EXPERIMENT.md
+├── PHYSICAL_REALIZABILITY_PLAN.md
+├── CONTROL_RESEARCH_ROADMAP.md
+├── PROJECT_TRACKS.md
 ├── .gitignore
 ├── requirements.txt
 ├── make_trajectories.py
