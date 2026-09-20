@@ -591,3 +591,92 @@ automation was launched.
 to the configured upstream. The commit identity and actual push outcome are
 reported in Git history and the session's final response; no force-push is
 authorized.
+
+## R010 — 2026-09-20 — Project status and user goals
+
+**User request (verbatim):**
+
+> Before going on, I would like us to prepare a status report, and put it into whichever markdown file is best.  I would like you to state the goal you are working toward, and how far you have gotten.  Also somehow incorporate my goals, which are (1) try to figure out if exterior sensors and actuators can provide a good enough initial setup to do some orders of magnitude of the process, and (2) provide data so that a separate 3d movie of this process will be both clear and approximately realistic.
+
+**Scope:** Write an accessible project status report connecting the current
+numerical-verification milestone to the user's physical-preparation and movie
+objectives. Explain completed work, remaining uncertainty, the meaning still
+to be assigned to “orders of magnitude,” and the path from validated data to
+a separate visualization. Link the report from project navigation and update
+session continuity. This documentation request takes precedence over executing
+the next numerical experiment; it does not authorize another commit or push.
+
+**Status:** In progress.
+
+**Plan and completion criteria:** Review the existing project descriptions,
+implementation and research evidence; select a durable report location; state
+the overall and immediate goals, honest milestone status, and remaining
+questions; preserve the bounded next numerical task; check links, consistency
+and Markdown changes; record the outcome and stop.
+
+**Stopping conditions:** Documentation only. Do not run the next physical
+response audit, change scientific parameters/acceptance criteria, implement
+movie exports, render, or infer hardware feasibility from numerical fixtures.
+Do not silently assume initial preparation suffices without further driving,
+or prescribe a contraction range the user has not specified.
+
+**Outcome, 2026-09-20:** Created root-level `STATUS.md` as the accessible,
+project-wide status report, linked from `README.md`, `PROJECT_TRACKS.md` and
+`SESSION_HANDOFF.md`. It states both user goals, the immediate task of verifying
+boundary-to-interior flow calculations, and the current stage: an implemented
+illustrative movie pipeline and substantial numerical verification, with no
+demonstrated physical preparation, attainable multi-order evolution, sensing
+sufficiency, or validated movie flow history.
+
+The report distinguishes initial preparation from continued driving; leaves
+“good enough” and the quantity/range of “orders of magnitude” open; explains the
+radius/similarity-time distinction without selecting a new physical target;
+and describes the proposed data handoff to a separate movie. It separates
+prescribed illustrations, numerical benchmark evidence and future physical
+claims. Existing numerical comparison thresholds are not presented as physical
+success criteria. No scientific parameters, acceptance criteria or numerical
+next-task contract changed.
+
+**Changed files:** New `STATUS.md`; updated `README.md`, `PROJECT_TRACKS.md`,
+`SESSION_HANDOFF.md` and `REQUEST_LOG.md`.
+
+**Checks and skips:** Documentation validation passed for five Markdown files,
+30 local links/anchors, 19 fenced blocks and two status-report tables; verified
+the pending numerical handoff and recorded evidence below its next-task heading
+are unchanged. The quoted response scale was checked against the existing
+accuracy review. `git diff --check` passed. No application tests, CFD/reference
+calculations, rendering or encoding were run for this documentation-only request.
+Evidence: `/tmp/navier-status-r010/check_docs.py` and `validation.json`; the
+versioned-source deliverable is `STATUS.md` (currently uncommitted).
+
+**Unresolved decisions and next task:** The physical preparation tolerances,
+which quantity should span orders of magnitude, its intended range, permitted
+continued actuation and sufficient sensor arrangement remain open. The next
+numerical task remains the R009 single 50 mm alpha=96 diagnostic under its
+180 s/1.5 GiB cap and one-case/failure stop. Retain GPT-6 Astra, high reasoning,
+for its numerical interpretation; this session's model catalog still lists
+that model/effort. Recommend GPT-5.6 Luna, medium, only for an understood
+mechanical fix with exact edits, focused checks and a stop before scientific
+interpretation. No model switch or task launch occurred.
+
+**Status at completion:** Complete; stopped after the requested status report.
+No commit or push was requested for R010, so all five documentation changes are
+left in the working tree for review. The previous continuation's publication
+authorization was scoped to the completed R009 checkpoint.
+
+## R011 — 2026-09-20 — Commit and push the status report
+
+**User request (verbatim):**
+
+> if the docs are ready, please add commit push
+
+**Scope:** Publish the R010 status-report documentation changes after reviewing
+the final diff. Stage only `STATUS.md`, README/project navigation, the request
+log and session handoff, then commit and push to the configured upstream.
+
+**Status:** In progress.
+
+**Completion criteria:** Confirm the worktree contains only the intended R010
+documentation changes, preserve the pending numerical handoff, commit the scoped
+files, push without rewriting history, and report the commit and actual upstream
+result. No new scientific work is requested.

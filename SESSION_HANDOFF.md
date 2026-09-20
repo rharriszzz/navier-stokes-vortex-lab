@@ -1,7 +1,31 @@
 # Current session handoff
 
-Last updated: 2026-09-20. Workflow and last completed B2 task:
+Last updated: 2026-09-20. Latest request:
+[R010](REQUEST_LOG.md#r010--2026-09-20--project-status-and-user-goals), documentation only.
+Last completed numerical B2 task:
 [R009](REQUEST_LOG.md#r009--2026-09-20--short-continuation-request).
+
+## User goals and latest status report
+
+Read [STATUS.md](STATUS.md) before resuming numerical work. The user wants to
+learn whether exterior sensors and actuators can provide an adequate initial
+setup for some orders of magnitude of the process, and to provide data for a
+separate clear, approximately realistic 3D movie. Distinguish initial preparation
+from any continued driving; the quantity/range meant by “orders of magnitude”
+and the physical meaning of “good enough” remain to be specified. Do not infer
+that rest-Stokes verification demonstrates preparation, sensing sufficiency,
+finite-amplitude contraction, or a physically validated movie trajectory.
+
+R010 created the status report and linked it from README/project navigation.
+It did not run the pending numerical task, change its contract or authorize a
+new commit/push. Its documentation edits remain uncommitted for user review.
+On a later `Continue`, preserve these recorded edits and include them in the
+scoped checkpoint if still pending; do not redo R010 as a new assignment.
+
+R010 checks: five Markdown files, 30 local links/anchors, 19 fenced blocks,
+two report tables and `git diff --check` passed. The pending numerical contract
+below is unchanged. No numerical tests, simulations or renders ran. Validation
+records are in `/tmp/navier-status-r010/`; the report is the durable deliverable.
 
 ## Reusable continuation request
 

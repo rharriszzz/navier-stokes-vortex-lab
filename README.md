@@ -25,6 +25,9 @@ experimental mechanism. See [PROJECT_TRACKS.md](PROJECT_TRACKS.md),
 [PHYSICAL_REALIZABILITY_PLAN.md](PHYSICAL_REALIZABILITY_PLAN.md), and
 [CONTROL_RESEARCH_ROADMAP.md](CONTROL_RESEARCH_ROADMAP.md).
 
+For the current goals, progress, open physical questions, and intended data
+for a separate movie, read [STATUS.md](STATUS.md).
+
 To resume work in a Codex session opened in this repository, say **Continue**.
 The [documented workflow](AGENTS.md#short-continuation-request) includes the
 current task, checks, logging, the next handoff, commit, and push. See
@@ -48,6 +51,7 @@ navier-stokes-vortex-lab/
 ├── AGENTS.md
 ├── REQUEST_LOG.md
 ├── SESSION_HANDOFF.md
+├── STATUS.md
 ├── EXPERIMENT.md
 ├── PHYSICAL_REALIZABILITY_PLAN.md
 ├── CONTROL_RESEARCH_ROADMAP.md

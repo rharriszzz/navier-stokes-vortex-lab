@@ -2,6 +2,12 @@
 
 This repository deliberately contains two related but distinct projects.
 
+The shared goals are to assess whether exterior actuators and sensors can
+prepare a flow that carries out a useful finite range of the desired process,
+and to supply data for a clear, approximately realistic separate 3D movie.
+[STATUS.md](STATUS.md) connects those goals to current progress, unresolved
+questions and the distinction between initial preparation and continued driving.
+
 ## Track A — Visualization
 
 ### Question
@@ -164,6 +170,8 @@ A failure or finite limitation is useful data.
 ## Documentation map
 
 - `README.md` — project entry point and practical visualization instructions.
+- `STATUS.md` — user goals, current progress, unresolved feasibility questions,
+  and the intended data handoff to a separate movie.
 - `AGENTS.md` — implementation and AI-agent rules.
 - `REQUEST_LOG.md` — user requests, scope, validation, and outcomes.
 - `SESSION_HANDOFF.md` — current bounded task, reusable continuation request,
