@@ -166,6 +166,9 @@ threshold decision; no automatic model switch or physical run is launched.
 Current official OpenAI documentation lists GPT-6 Astra and high reasoning;
 account availability can differ. The continuation prompt remains **Continue**.
 
+**Git delivery:** Commit `5f48dbaed841a73923a1523350046957d339992b` was pushed
+to `origin/main`. HEAD and upstream match; the worktree was clean after push.
+
 **Outcome, 2026-09-20:** Completed the bounded B2 report package. Schema-3
 reports now handle undefined/nonfinite gain comparisons as strict-JSON nulls
 with validity flags, record absolute complex sensitivity and independent

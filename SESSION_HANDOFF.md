@@ -4,7 +4,8 @@ Last updated: 2026-09-20. Latest request:
 [R015](REQUEST_LOG.md#r015--2026-09-20--short-continuation-request), completed
 at the toy-only stopping point. The repaired runner is archived; no physical
 matched-trace attempt was run. R014 remains a partial diagnostic after its
-post-P-solve instrumentation error. R013 was committed and pushed as `d5a2711`.
+post-P-solve instrumentation error. R013 was committed and pushed as `d5a2711`;
+R015 was committed and pushed as `5f48dba` on `origin/main`, with a clean tree.
 
 ## User goals
 
