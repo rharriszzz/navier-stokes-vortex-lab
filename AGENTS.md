@@ -2,6 +2,39 @@
 
 Instructions for AI coding/debugging agents working on `navier-stokes-vortex-lab`.
 
+## Request recording and session continuity
+
+For every new user request in this repository, including follow-up corrections,
+append an entry to `REQUEST_LOG.md` before substantive work. Use a sequential
+ID, date, the user's wording, interpreted scope, and status. Preserve previous
+entries; append dated outcome/validation notes rather than rewriting the request.
+Record only requests actually available in the conversation. Context blocks and
+automatic continuation messages are not new user requests. Redact credentials
+or other secrets and label the redaction; do not copy private session files.
+
+At session start, read `SESSION_HANDOFF.md` and the latest request entries.
+Follow its current task and read the linked research documents before acting.
+A new user request takes precedence over a stale handoff. Keep a bounded plan,
+completion criteria, and explicit stopping conditions. At completion, record
+changed files, checks and skips, evidence paths, unresolved decisions, and the
+next task in the log and handoff. Do not claim an unexecuted check passed.
+On compaction/resume, continue the existing entry rather than duplicating it.
+The request log is history; do not replay completed requests as new assignments.
+
+When the remaining task becomes routine, recommend a concrete available model
+and reasoning effort. Give it an actionable task, checks, a stop condition,
+and a rule for recommending the following model/effort. Routine execution is
+usually suitable for GPT-5.6 Luna with medium reasoning; numerical-method or
+scientific interpretation usually warrants GPT-6 Astra with high reasoning.
+Recheck current availability when making the recommendation. Do not claim a
+model switch occurred unless it did. A written handoff does not launch another
+session or schedule an automation. See `SESSION_HANDOFF.md` for the reusable
+continuation request and current recommendation.
+
+Commit/push authorization must come from the user, including a continuation
+request that explicitly includes those actions. Record its scope and honor it
+without asking again; logging alone does not authorize every future push.
+
 ## Project purpose
 
 This repository develops a reproducible visualization and later experimental-design framework for a **finite-scale analogue** of a contracting, stretching, swirling Navier–Stokes flow.

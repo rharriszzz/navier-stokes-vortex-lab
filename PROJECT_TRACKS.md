@@ -70,6 +70,13 @@ Changed-parameter manufactured and swirl cases are verification fixtures only;
 they do not validate the physical 0.01 Hz response or demonstrate physical
 control. The six-input campaign and B3 sensing work have not begun.
 
+The acceptance-report repair is complete. The
+[current B2 review](docs/realizability/B2_CONTINUATION_REVIEW.md) reproduces its
+checks, inventories actual mesh sizes, and specifies the next bounded task:
+robust gain reporting, independent physical-reference diagnostics, and explicit
+campaign blockers. Use [SESSION_HANDOFF.md](SESSION_HANDOFF.md) for the current
+model recommendation, completion criteria, and stopping conditions.
+
 ### Core constraint
 
 The final model should not rely on arbitrary volumetric forcing.
@@ -142,6 +149,9 @@ A failure or finite limitation is useful data.
 
 - `README.md` — project entry point and practical visualization instructions.
 - `AGENTS.md` — implementation and AI-agent rules.
+- `REQUEST_LOG.md` — user requests, scope, validation, and outcomes.
+- `SESSION_HANDOFF.md` — current bounded task, reusable continuation request,
+  model/effort recommendations, and stop conditions.
 - `EXPERIMENT.md` — physical experiment concept.
 - `PHYSICAL_REALIZABILITY_PLAN.md` — broad realizability philosophy and plan.
 - `CONTROL_RESEARCH_ROADMAP.md` — concrete staged computational research program.

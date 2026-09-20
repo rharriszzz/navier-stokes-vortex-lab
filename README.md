@@ -25,9 +25,11 @@ experimental mechanism. See [PROJECT_TRACKS.md](PROJECT_TRACKS.md),
 [PHYSICAL_REALIZABILITY_PLAN.md](PHYSICAL_REALIZABILITY_PLAN.md), and
 [CONTROL_RESEARCH_ROADMAP.md](CONTROL_RESEARCH_ROADMAP.md).
 
-For the next implementation tasks, see
-[BOUNDARY_CONTROL_HANDOFF.md](BOUNDARY_CONTROL_HANDOFF.md): proposed scientific
-defaults, a small boundary-response benchmark, and coding/testing work packages.
+For the current bounded task and a reusable Codex continuation request, see
+[SESSION_HANDOFF.md](SESSION_HANDOFF.md). User requests and outcomes are recorded
+in [REQUEST_LOG.md](REQUEST_LOG.md), following the persistent instructions in
+[AGENTS.md](AGENTS.md). The scientific benchmark defaults and original work
+packages are in [BOUNDARY_CONTROL_HANDOFF.md](BOUNDARY_CONTROL_HANDOFF.md).
 
 ![Representative tracer-render preview](preview.png)
 
@@ -41,6 +43,8 @@ the physical particles for visibility.
 navier-stokes-vortex-lab/
 ├── README.md
 ├── AGENTS.md
+├── REQUEST_LOG.md
+├── SESSION_HANDOFF.md
 ├── EXPERIMENT.md
 ├── PHYSICAL_REALIZABILITY_PLAN.md
 ├── CONTROL_RESEARCH_ROADMAP.md

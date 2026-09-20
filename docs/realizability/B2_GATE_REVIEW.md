@@ -1,5 +1,10 @@
 # B2 acceptance-logic review and bounded repair handoff
 
+The repair below is complete at `705b89f`. Continue from
+[B2_CONTINUATION_REVIEW.md](B2_CONTINUATION_REVIEW.md) and the root
+[session handoff](../../SESSION_HANDOFF.md); retain this document as the repair
+specification and historical evidence.
+
 Prepared 2026-09-20 against clean commit
 `5a7bd5b830baa26bf27b936bc4fed8e56bf5062b`.
 
