@@ -1,4 +1,8 @@
-"""Command-line entry point for NumPy-only B0 preflight diagnostics."""
+"""CLI for B0 diagnostics and optional B1/B2 linear Stokes verification.
+
+B1 does not meet its strong-divergence tolerance; the B2 physical-response
+gate remains unresolved. Verification fixtures are not physical validation.
+"""
 
 from __future__ import annotations
 
@@ -111,7 +115,9 @@ def format_preflight(report: dict[str, Any]) -> str:
 
 
 def _arguments() -> argparse.Namespace:
-    parser = argparse.ArgumentParser(description="B0 physical-realizability diagnostics")
+    parser = argparse.ArgumentParser(
+        description="B0 diagnostics and optional B1/B2 linear Stokes verification"
+    )
     subcommands = parser.add_subparsers(dest="command", required=True)
     preflight = subcommands.add_parser("preflight", help="write the NumPy-only benchmark preflight")
     preflight.add_argument("--config", type=Path, required=True, help="versioned B0 JSON configuration")

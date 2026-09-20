@@ -192,10 +192,13 @@ claiming failure of boundary control around a developed vortex.
 
 ## Additional issues to address before later packages
 
-- `realizability/response.py` casts gains and SVD/nullspace inputs to float.
-  Harmonic complex gains would lose their imaginary parts. Preserve complex
-  dtype and use conjugate transpose for right singular vectors when extending
-  these helpers. Add a phase-sensitive regression before the six-input report.
+- Completed 2026-09-20: `realizability/response.py` preserves complex gains,
+  Gram matrices, and measurement/feature maps. Inverse roots and right
+  nullspaces use conjugate transposes. Five phase-sensitive regressions in
+  `tests/realizability/test_response.py` cover whitening, unit invariance,
+  rank, nullspace residuals, and identifiable/unidentifiable feature maps.
+  Complex inputs describe complex coefficients such as harmonic amplitudes;
+  this repair does not establish dynamical observability or pass the B2 gate.
 - `b2_gate.py` checks only primary relative gain/phase changes; it has no
   absolute response error floor. Penalty-comparison solves should also satisfy
   the same PDE diagnostic checks as baseline solves. These are report/gate
@@ -216,3 +219,38 @@ a model switch, as requested by the user. A cheaper coding model can implement
 the explicit reference, tests, diagnostics, and documentation updates above.
 Retain higher-level review for interpreting instability, choosing a new solver
 or mesh architecture, changing thresholds, or broadening the physical claims.
+
+### Continuation update, 2026-09-20
+
+The stability implementation was checkpointed and pushed as `a503cbb` before
+the response-helper repair above. The five new tests reproduced phase loss on
+that checkpoint and passed after the repair. Validation with warnings treated
+as errors:
+
+```bash
+python3 -W error -m unittest discover -s tests/realizability -v
+```
+
+Result: 30 tests discovered, 18 passed, 12 optional DOLFINx tests skipped.
+The existing real-valued tests pass. No CFD calculation was rerun for this
+algebra-only change, and the stored physical-pilot gate remains failed.
+
+The next routine task is suitable for a cheaper coding model: synchronize the
+stale project-status summaries. Handoff and completion instructions:
+
+1. Read `AGENTS.md`, this update, `B2_GATE.md`, and the implementation-results
+   section of `B2_STABILITY_REVIEW.md`. Inspect the working tree and preserve
+   any uncommitted response-helper changes.
+2. Update the Track B status in `PROJECT_TRACKS.md` and the opening docstrings
+   of `realizability/__init__.py` and `realizability/cli.py`. Describe implemented
+   B0 diagnostics, optional B1/B2 Stokes backends, B1's divergence limitation,
+   and B2's unresolved physical response gate. Keep Track A's kinematic status
+   and the distinction between verification fixtures and physical validation.
+3. Verify the wording against the current commands and reports. Run
+   `python3 -m realizability.cli --help`, the test command above, and
+   `git diff --check`. Completion means the three summaries agree, checks pass
+   with optional skips disclosed, and the final handoff lists changed files.
+   This task requires no new CFD runs or generated report changes.
+4. Stop after those summaries and recommend returning to a more capable model
+   for numerical-method review before selecting a production mesh, solver,
+   penalty strategy, or changing any scientific acceptance threshold.

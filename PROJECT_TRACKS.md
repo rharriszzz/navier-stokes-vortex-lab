@@ -49,7 +49,26 @@ Can physically realizable external actuators and sensors reproduce something mea
 
 ### Current status
 
-A research plan exists; substantive CFD/control implementation has not yet begun.
+The research track has implemented B0 benchmark diagnostics and optional B1/B2
+linear Stokes verification backends. This is a bounded verification pipeline,
+not a validated boundary-control system or a physical realization of the target.
+
+- **B0:** NumPy-only configuration, boundary-mode, observable, and sensor
+  diagnostics run without a CFD solver. They check benchmark assumptions and
+  verification fixtures; they do not calculate a controlled flow.
+- **B1:** An optional DOLFINx Taylor–Hood backend runs linear unsteady-Stokes
+  verification cases and coarse boundary pilots. Its strong-divergence check
+  failed the required tolerance, so B1 does not establish a reliable
+  divergence-free response.
+- **B2:** A separate optional DOLFINx BDM2/DG1 backend adds divergence-conforming
+  Stokes verification, stability audits, and a pre-campaign response gate. The
+  stored physical-pilot gate remains failed: the tangential response has not
+  converged against the independent reference, and stability/boundary issues
+  still require numerical-method review.
+
+Changed-parameter manufactured and swirl cases are verification fixtures only;
+they do not validate the physical 0.01 Hz response or demonstrate physical
+control. The six-input campaign and B3 sensing work have not begun.
 
 ### Core constraint
 
