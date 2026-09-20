@@ -31,9 +31,41 @@ model switch occurred unless it did. A written handoff does not launch another
 session or schedule an automation. See `SESSION_HANDOFF.md` for the reusable
 continuation request and current recommendation.
 
-Commit/push authorization must come from the user, including a continuation
-request that explicitly includes those actions. Record its scope and honor it
-without asking again; logging alone does not authorize every future push.
+Commit/push authorization must come from the user, including the short
+continuation request defined below. Record its scope and honor it without
+asking again; logging alone does not authorize every future push.
+
+## Short continuation request
+
+When the user says **Continue** as a task instruction in this repository
+(ignoring capitalization and trailing punctuation), apply this full workflow.
+This shorthand replaces the long prompt at the user's request, R003 in
+`REQUEST_LOG.md`; it includes authorization to commit and push the scoped work.
+
+1. Record the user's actual words in `REQUEST_LOG.md`. Check `git status`, read
+   `SESSION_HANDOFF.md` and its required documents, and identify the current
+   bounded task. Resume unfinished work before starting the next listed task;
+   use recorded outcomes and Git history to avoid repeating completed work.
+2. Carry out that task and its prescribed checks through completion. Preserve
+   user work, scientific assumptions, acceptance thresholds, and recorded stop
+   conditions. Fix understood implementation errors within the task's scope.
+3. At completion or a research-decision boundary, record evidence, changed
+   files, checks/skips, and unresolved questions. Update the request log,
+   relevant Markdown, and `SESSION_HANDOFF.md` with one concrete next task,
+   model/effort recommendation, completion criteria, and stopping conditions.
+   Explain when the next model should recommend a different model/effort.
+4. Stage only the task's changes, commit, and push to the current branch's
+   configured upstream. Honor this authorization without asking the user to
+   repeat it. Preserve unrelated changes and Git history; do not force-push.
+   Report any actual permission, remote, or publication blocker accurately.
+5. Stop at the bounded task's recorded stopping point. Report the result,
+   checks, commit/push outcome, and recommended next model/effort concisely.
+   Give **Continue** as the next prompt instead of another long instruction.
+
+An explicit qualification in the user's message overrides the default workflow
+(for example, “Continue without pushing”). Quoted examples and mentions of the
+word in a question do not invoke it. The shorthand does not itself change the
+selected model or schedule another session.
 
 ## Project purpose
 

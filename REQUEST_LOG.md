@@ -67,3 +67,48 @@ method review, or stop earlier with evidence if scientific changes are needed.
 `Record requests and define the next B2 diagnostic task`. Its commit identity
 is available in Git history; the session's final response records the commit
 hash and push outcome. The authorization applies to this request's changes.
+
+## R002 — 2026-09-20 — Initial prompt for the next model
+
+**User request (verbatim):**
+
+> OK.  what is its initial prompt?
+
+**Scope:** Provide the initial prompt for the recommended GPT-5.6 Luna session
+at medium reasoning, using the current bounded B2 implementation handoff.
+
+**Outcome:** Provided a copyable prompt directing the next session to implement
+the six specified diagnostic/report steps, run required checks, update the
+request log and Markdown, stop at the package boundary, recommend the following
+model/effort, and commit/push its scoped changes. The implementation remains
+the next session's task. Only this request log was changed for this follow-up;
+the prompt was checked against `SESSION_HANDOFF.md` and the B2 review.
+
+## R003 — 2026-09-20 — Short continuation request
+
+**User request (verbatim):**
+
+> In the future, I don't want to say this many words.  Can you update one or more of the markdown files, so that what I have to say will be simpler?  also, please add commit and push
+
+**Scope:** Replace the long continuation prompt with the repository shorthand
+`Continue`, preserving its task, validation, logging, model-handoff, and scoped
+commit/push instructions. Update the relevant Markdown and commit/push these
+changes, including the existing R002 log entry.
+
+**Outcome:** Defined `Continue` in `AGENTS.md` as the complete bounded workflow:
+record the request, carry out the task and checks, update documentation and
+model/effort handoff, stage scoped changes, commit, push, and stop. Explicit
+qualifications override the default. Replaced the long prompt in
+`SESSION_HANDOFF.md` and linked the shortcut from `README.md`. The next B2
+implementation task and its stopping conditions remain recorded in the handoff.
+
+**Changed files:** `AGENTS.md`, `SESSION_HANDOFF.md`, `README.md`, and
+`REQUEST_LOG.md`, including preservation of R002.
+
+**Validation:** Four Markdown files, 14 local links/anchors, code fences, and
+`git diff --check` passed. Numerical tests were not rerun for this documentation
+change.
+
+**Git delivery:** Explicitly authorized by this request. This entry is included
+in the checkpoint `Simplify continuation to a single-word request`; Git history
+and the session's final response record its commit and push result.

@@ -25,8 +25,11 @@ experimental mechanism. See [PROJECT_TRACKS.md](PROJECT_TRACKS.md),
 [PHYSICAL_REALIZABILITY_PLAN.md](PHYSICAL_REALIZABILITY_PLAN.md), and
 [CONTROL_RESEARCH_ROADMAP.md](CONTROL_RESEARCH_ROADMAP.md).
 
-For the current bounded task and a reusable Codex continuation request, see
-[SESSION_HANDOFF.md](SESSION_HANDOFF.md). User requests and outcomes are recorded
+To resume work in a Codex session opened in this repository, say **Continue**.
+The [documented workflow](AGENTS.md#short-continuation-request) includes the
+current task, checks, logging, the next handoff, commit, and push. See
+[SESSION_HANDOFF.md](SESSION_HANDOFF.md) for the bounded task and recommended
+model/effort. User requests and outcomes are recorded
 in [REQUEST_LOG.md](REQUEST_LOG.md), following the persistent instructions in
 [AGENTS.md](AGENTS.md). The scientific benchmark defaults and original work
 packages are in [BOUNDARY_CONTROL_HANDOFF.md](BOUNDARY_CONTROL_HANDOFF.md).

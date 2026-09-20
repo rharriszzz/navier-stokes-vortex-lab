@@ -1,25 +1,21 @@
 # Current session handoff
 
-Last updated: 2026-09-20. Request: [R001](REQUEST_LOG.md#r001--2026-09-20--request-logging-and-project-continuation).
+Last updated: 2026-09-20. Workflow: [R003](REQUEST_LOG.md#r003--2026-09-20--short-continuation-request).
+Current B2 task: [R001](REQUEST_LOG.md#r001--2026-09-20--request-logging-and-project-continuation).
 
 ## Reusable continuation request
 
-Copy this into a new session opened in this repository:
+In a session opened in this repository, say:
 
-> Record this request in REQUEST_LOG.md. Read AGENTS.md, SESSION_HANDOFF.md,
-> and the documents linked by the current task. Check the working tree, then
-> carry out that bounded task and its required checks. Preserve user work and
-> the recorded scientific assumptions. If a new research decision is needed,
-> record the evidence and stop before implementing it. Update the request log,
-> current handoff, and relevant Markdown. Recommend the next model and reasoning
-> effort, give it a concrete task and stop conditions, and explain when it
-> should recommend a different model/effort. Stage only this task's files,
-> commit, and push without rewriting history. Report checks, remaining limits,
-> and the commit/push outcome.
+> Continue
 
-This prompt can later serve as an automation's instruction. No scheduler or
-automatic model switching is installed by these Markdown files. Each session
-must actually read the instructions and update the log.
+The [short continuation request in AGENTS.md](AGENTS.md#short-continuation-request)
+defines the full workflow: log the request, complete the bounded task and its
+checks, update Markdown and the next model's handoff, commit, push, and stop.
+Future handoffs should keep this short prompt and update the task below.
+An explicit qualification overrides the default, such as “Continue without
+pushing.” The selected model is unchanged by the prompt; choose the recommended
+model/effort when starting the session. No scheduler is installed.
 
 ## Next task
 
@@ -62,6 +58,6 @@ in the new review. No production response was rerun during that review.
 
 The review and handoff are recorded in the documentation checkpoint
 `Record requests and define the next B2 diagnostic task`. See Git history and
-the session's final response for its commit/push result. Future sessions should
-record their own request and outcome; the prompt above explicitly authorizes
-commit/push for its bounded task.
+the session's final response for its commit/push result. R003 simplifies the
+continuation workflow to **Continue**, including scoped commit/push. Its
+documentation update preserves the B2 implementation as the next task above.
