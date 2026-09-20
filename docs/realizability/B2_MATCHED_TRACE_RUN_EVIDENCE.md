@@ -21,7 +21,9 @@ commands and temporary paths are retained in the watch records. Reproducing the
 failed physical attempt requires a new bounded contract; do not rerun it merely
 to recreate temporary files. The next task repairs instrumentation on toys only.
 That bounded repair is complete in [R015](B2_MATCHED_TRACE_WRAPPER_REPAIR.md);
-no physical retry followed.
+no physical work occurred in that repair. The separately scoped
+[R016 attempt and evidence](B2_MATCHED_TRACE_LIFTING_EVIDENCE.md) later stopped
+on an RHS lifting error. The R014 archive remains unchanged.
 
 ## Reports and reproducibility records
 

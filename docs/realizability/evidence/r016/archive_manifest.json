@@ -1,0 +1,290 @@
+{
+  "disk.py": {
+    "original_path": "/tmp/navier-b2-matched-r016/disk.py",
+    "original_sha256": "52afe6d93ff6886b3bfbc4cd6fb68523ec60c98d0bb336fa22c74f4276199255",
+    "archived_sha256": "52afe6d93ff6886b3bfbc4cd6fb68523ec60c98d0bb336fa22c74f4276199255",
+    "json_whitespace_compacted": false
+  },
+  "kernels.py": {
+    "original_path": "/tmp/navier-b2-matched-r016/kernels.py",
+    "original_sha256": "9e8110d929a9af1a46cad811f69ba86c1123ebf24f9d852d7cecf13585ead2d6",
+    "archived_sha256": "9e8110d929a9af1a46cad811f69ba86c1123ebf24f9d852d7cecf13585ead2d6",
+    "json_whitespace_compacted": false
+  },
+  "physical/A_32_facets.json": {
+    "original_path": "/tmp/navier-b2-matched-r016/physical/A_32_facets.json",
+    "original_sha256": "ec21fdfd9eaf763412566aba86c2edb08dae101c361dbf041404aa96f5c360be",
+    "archived_sha256": "0b30c2041b4cca3792073d037f4de7c8924d58b33ce8d807baee04a145897552",
+    "json_whitespace_compacted": true
+  },
+  "physical/A_64_facets.json": {
+    "original_path": "/tmp/navier-b2-matched-r016/physical/A_64_facets.json",
+    "original_sha256": "324f7789342556b1ef83a20d48ba0cd4f8a9dc3f798fe6cca8438947d47b39be",
+    "archived_sha256": "00af3327c58ff2dc4bb6102a2f071e8fd4ee899e227e2d7ce9ee4376b977b42b",
+    "json_whitespace_compacted": true
+  },
+  "physical/disk_regions.json": {
+    "original_path": "/tmp/navier-b2-matched-r016/physical/disk_regions.json",
+    "original_sha256": "dfa3c1e2185af93386926e88a6fc229378ba90dd7b12fe5301a7d505c10bff6d",
+    "archived_sha256": "dfa3c1e2185af93386926e88a6fc229378ba90dd7b12fe5301a7d505c10bff6d",
+    "json_whitespace_compacted": false
+  },
+  "physical/launch.json": {
+    "original_path": "/tmp/navier-b2-matched-r016/physical/launch.json",
+    "original_sha256": "19cd4d1bbf0789d33b5603301d124d1d375d9379576d24c019c52bc693437db9",
+    "archived_sha256": "19cd4d1bbf0789d33b5603301d124d1d375d9379576d24c019c52bc693437db9",
+    "json_whitespace_compacted": false
+  },
+  "physical/local_bound.json": {
+    "original_path": "/tmp/navier-b2-matched-r016/physical/local_bound.json",
+    "original_sha256": "111fb960a3f1971b85d40222e0f7622fbd871192d0e616a34ce203501ae1512a",
+    "archived_sha256": "111fb960a3f1971b85d40222e0f7622fbd871192d0e616a34ce203501ae1512a",
+    "json_whitespace_compacted": false
+  },
+  "physical/physical.stderr": {
+    "original_path": "/tmp/navier-b2-matched-r016/physical/physical.stderr",
+    "original_sha256": "3fe46fda088e8203d512bc96b6f2cc73e28310452c72d9889013d34886436723",
+    "archived_sha256": "3fe46fda088e8203d512bc96b6f2cc73e28310452c72d9889013d34886436723",
+    "json_whitespace_compacted": false
+  },
+  "physical/physical.stdout": {
+    "original_path": "/tmp/navier-b2-matched-r016/physical/physical.stdout",
+    "original_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "archived_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "json_whitespace_compacted": false
+  },
+  "physical/report.json": {
+    "original_path": "/tmp/navier-b2-matched-r016/physical/report.json",
+    "original_sha256": "857b7cb05466789b645eb660321e848df98374f4514ac0f947db4f4445788c58",
+    "archived_sha256": "857b7cb05466789b645eb660321e848df98374f4514ac0f947db4f4445788c58",
+    "json_whitespace_compacted": false
+  },
+  "physical/watch.json": {
+    "original_path": "/tmp/navier-b2-matched-r016/physical/watch.json",
+    "original_sha256": "17fb31d390c335b4f7432f4ef0c288068df50e4c039d643bb99017fb7aa47fd1",
+    "archived_sha256": "17fb31d390c335b4f7432f4ef0c288068df50e4c039d643bb99017fb7aa47fd1",
+    "json_whitespace_compacted": false
+  },
+  "physical.py": {
+    "original_path": "/tmp/navier-b2-matched-r016/physical.py",
+    "original_sha256": "005fd1552bf50b85a173aecfae3d58ea833a85d04dd03045e532ae64d90bba4c",
+    "archived_sha256": "005fd1552bf50b85a173aecfae3d58ea833a85d04dd03045e532ae64d90bba4c",
+    "json_whitespace_compacted": false
+  },
+  "poststop_review.json": {
+    "original_path": "/tmp/navier-b2-matched-r016/poststop_review.json",
+    "original_sha256": "366bb02a7b5ac0d015cc1a30f6c650cdc77f73f1efdd22ae0ee5fae50bddaeca",
+    "archived_sha256": "366bb02a7b5ac0d015cc1a30f6c650cdc77f73f1efdd22ae0ee5fae50bddaeca",
+    "json_whitespace_compacted": false
+  },
+  "preflight.json": {
+    "original_path": "/tmp/navier-b2-matched-r016/preflight.json",
+    "original_sha256": "446def8bf45cfde9e866233039f2f52ca8fdc09f9be759eb9450316fa2401a8b",
+    "archived_sha256": "446def8bf45cfde9e866233039f2f52ca8fdc09f9be759eb9450316fa2401a8b",
+    "json_whitespace_compacted": false
+  },
+  "run_contract.py": {
+    "original_path": "/tmp/navier-b2-matched-r016/run_contract.py",
+    "original_sha256": "441b9767ce694e06652225d3c552077de6746b815b14f75ccdcb693af134aaff",
+    "archived_sha256": "441b9767ce694e06652225d3c552077de6746b815b14f75ccdcb693af134aaff",
+    "json_whitespace_compacted": false
+  },
+  "run_contract_initial.py": {
+    "original_path": "/tmp/navier-b2-matched-r016/run_contract_initial.py",
+    "original_sha256": "a0792d8b471c1249c7c4440bb481bfb21c4f95eb228277fabcec83502c7ad35d",
+    "archived_sha256": "a0792d8b471c1249c7c4440bb481bfb21c4f95eb228277fabcec83502c7ad35d",
+    "json_whitespace_compacted": false
+  },
+  "toy_runner.py": {
+    "original_path": "/tmp/navier-b2-matched-r016/toy_runner.py",
+    "original_sha256": "e402682369f9b6523174067c85f79c53ad5d64cdbafc4f7162c89d1740ab2e0f",
+    "archived_sha256": "e402682369f9b6523174067c85f79c53ad5d64cdbafc4f7162c89d1740ab2e0f",
+    "json_whitespace_compacted": false
+  },
+  "toys/kernels/toy-report.json": {
+    "original_path": "/tmp/navier-b2-matched-r016/toys/kernels/toy-report.json",
+    "original_sha256": "3527cd27ebfc988cc4bdd57c90cf472a73cec4cc4368f2868c0a5f77ae6d3bd0",
+    "archived_sha256": "3527cd27ebfc988cc4bdd57c90cf472a73cec4cc4368f2868c0a5f77ae6d3bd0",
+    "json_whitespace_compacted": false
+  },
+  "toys/kernels.stderr": {
+    "original_path": "/tmp/navier-b2-matched-r016/toys/kernels.stderr",
+    "original_sha256": "e5d7b56e1f7e8dc53b365b05ad952ef9ae2a9a41ab9b4c293889e39b9463ad7d",
+    "archived_sha256": "e5d7b56e1f7e8dc53b365b05ad952ef9ae2a9a41ab9b4c293889e39b9463ad7d",
+    "json_whitespace_compacted": false
+  },
+  "toys/kernels.stdout": {
+    "original_path": "/tmp/navier-b2-matched-r016/toys/kernels.stdout",
+    "original_sha256": "6c6b08b411de6c9fd1d3c3625447806bee9fd845364134d2e9ad2b422680800b",
+    "archived_sha256": "6c6b08b411de6c9fd1d3c3625447806bee9fd845364134d2e9ad2b422680800b",
+    "json_whitespace_compacted": false
+  },
+  "toys/report.json": {
+    "original_path": "/tmp/navier-b2-matched-r016/toys/report.json",
+    "original_sha256": "e06e4f73ad2a4b12359391407ca1fb51db36718aac45b09a834961d17bfd4607",
+    "archived_sha256": "e06e4f73ad2a4b12359391407ca1fb51db36718aac45b09a834961d17bfd4607",
+    "json_whitespace_compacted": false
+  },
+  "toys/watchdog/memory.stderr": {
+    "original_path": "/tmp/navier-b2-matched-r016/toys/watchdog/memory.stderr",
+    "original_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "archived_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "json_whitespace_compacted": false
+  },
+  "toys/watchdog/memory.stdout": {
+    "original_path": "/tmp/navier-b2-matched-r016/toys/watchdog/memory.stdout",
+    "original_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "archived_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "json_whitespace_compacted": false
+  },
+  "toys/watchdog/self-check.json": {
+    "original_path": "/tmp/navier-b2-matched-r016/toys/watchdog/self-check.json",
+    "original_sha256": "9370cd9a6f366a634566e4f06dc940d04eed02af0d08cf20cf5bb1604daf0d5e",
+    "archived_sha256": "9370cd9a6f366a634566e4f06dc940d04eed02af0d08cf20cf5bb1604daf0d5e",
+    "json_whitespace_compacted": false
+  },
+  "toys/watchdog/timeout.stderr": {
+    "original_path": "/tmp/navier-b2-matched-r016/toys/watchdog/timeout.stderr",
+    "original_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "archived_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "json_whitespace_compacted": false
+  },
+  "toys/watchdog/timeout.stdout": {
+    "original_path": "/tmp/navier-b2-matched-r016/toys/watchdog/timeout.stdout",
+    "original_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "archived_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "json_whitespace_compacted": false
+  },
+  "toys/watchdog.stderr": {
+    "original_path": "/tmp/navier-b2-matched-r016/toys/watchdog.stderr",
+    "original_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "archived_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "json_whitespace_compacted": false
+  },
+  "toys/watchdog.stdout": {
+    "original_path": "/tmp/navier-b2-matched-r016/toys/watchdog.stdout",
+    "original_sha256": "9370cd9a6f366a634566e4f06dc940d04eed02af0d08cf20cf5bb1604daf0d5e",
+    "archived_sha256": "9370cd9a6f366a634566e4f06dc940d04eed02af0d08cf20cf5bb1604daf0d5e",
+    "json_whitespace_compacted": false
+  },
+  "toys-approved/disk/extra-toys.json": {
+    "original_path": "/tmp/navier-b2-matched-r016/toys-approved/disk/extra-toys.json",
+    "original_sha256": "63c9fd7785a61d1884f43dbd035dd28325fd938e9406159f0c512a18e0920312",
+    "archived_sha256": "63c9fd7785a61d1884f43dbd035dd28325fd938e9406159f0c512a18e0920312",
+    "json_whitespace_compacted": false
+  },
+  "toys-approved/disk.stderr": {
+    "original_path": "/tmp/navier-b2-matched-r016/toys-approved/disk.stderr",
+    "original_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "archived_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "json_whitespace_compacted": false
+  },
+  "toys-approved/disk.stdout": {
+    "original_path": "/tmp/navier-b2-matched-r016/toys-approved/disk.stdout",
+    "original_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "archived_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "json_whitespace_compacted": false
+  },
+  "toys-approved/kernels/toy-report.json": {
+    "original_path": "/tmp/navier-b2-matched-r016/toys-approved/kernels/toy-report.json",
+    "original_sha256": "1ffa411ece01267a624f97d8233253add7e1ff51877fcb4fb55b4bcd4b905287",
+    "archived_sha256": "1ffa411ece01267a624f97d8233253add7e1ff51877fcb4fb55b4bcd4b905287",
+    "json_whitespace_compacted": false
+  },
+  "toys-approved/kernels.stderr": {
+    "original_path": "/tmp/navier-b2-matched-r016/toys-approved/kernels.stderr",
+    "original_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "archived_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "json_whitespace_compacted": false
+  },
+  "toys-approved/kernels.stdout": {
+    "original_path": "/tmp/navier-b2-matched-r016/toys-approved/kernels.stdout",
+    "original_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "archived_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "json_whitespace_compacted": false
+  },
+  "toys-approved/report.json": {
+    "original_path": "/tmp/navier-b2-matched-r016/toys-approved/report.json",
+    "original_sha256": "d8194000382083d7a1b69166ca0204cfd921e52b86093a93978b7358027e31e4",
+    "archived_sha256": "d8194000382083d7a1b69166ca0204cfd921e52b86093a93978b7358027e31e4",
+    "json_whitespace_compacted": false
+  },
+  "toys-approved/watchdog/memory.stderr": {
+    "original_path": "/tmp/navier-b2-matched-r016/toys-approved/watchdog/memory.stderr",
+    "original_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "archived_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "json_whitespace_compacted": false
+  },
+  "toys-approved/watchdog/memory.stdout": {
+    "original_path": "/tmp/navier-b2-matched-r016/toys-approved/watchdog/memory.stdout",
+    "original_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "archived_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "json_whitespace_compacted": false
+  },
+  "toys-approved/watchdog/self-check.json": {
+    "original_path": "/tmp/navier-b2-matched-r016/toys-approved/watchdog/self-check.json",
+    "original_sha256": "61df8471e2799c02031f3f6a01d200c9665bfccdf9fdd952320b3e376af1cf3a",
+    "archived_sha256": "61df8471e2799c02031f3f6a01d200c9665bfccdf9fdd952320b3e376af1cf3a",
+    "json_whitespace_compacted": false
+  },
+  "toys-approved/watchdog/timeout.stderr": {
+    "original_path": "/tmp/navier-b2-matched-r016/toys-approved/watchdog/timeout.stderr",
+    "original_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "archived_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "json_whitespace_compacted": false
+  },
+  "toys-approved/watchdog/timeout.stdout": {
+    "original_path": "/tmp/navier-b2-matched-r016/toys-approved/watchdog/timeout.stdout",
+    "original_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "archived_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "json_whitespace_compacted": false
+  },
+  "toys-approved/watchdog.stderr": {
+    "original_path": "/tmp/navier-b2-matched-r016/toys-approved/watchdog.stderr",
+    "original_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "archived_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "json_whitespace_compacted": false
+  },
+  "toys-approved/watchdog.stdout": {
+    "original_path": "/tmp/navier-b2-matched-r016/toys-approved/watchdog.stdout",
+    "original_sha256": "61df8471e2799c02031f3f6a01d200c9665bfccdf9fdd952320b3e376af1cf3a",
+    "archived_sha256": "61df8471e2799c02031f3f6a01d200c9665bfccdf9fdd952320b3e376af1cf3a",
+    "json_whitespace_compacted": false
+  },
+  "toys-approved/wrapper/synthetic-compatibility-failure.json": {
+    "original_path": "/tmp/navier-b2-matched-r016/toys-approved/wrapper/synthetic-compatibility-failure.json",
+    "original_sha256": "2e81a32fb2dd9b0b7ef6ed817bfcd00e5cd6e0821c7d055079ef5c1f361ee4f3",
+    "archived_sha256": "2e81a32fb2dd9b0b7ef6ed817bfcd00e5cd6e0821c7d055079ef5c1f361ee4f3",
+    "json_whitespace_compacted": false
+  },
+  "toys-approved/wrapper/synthetic-return-checkpoint.json": {
+    "original_path": "/tmp/navier-b2-matched-r016/toys-approved/wrapper/synthetic-return-checkpoint.json",
+    "original_sha256": "df418a202d0e0aac3f96246a9f3d4eb1c7a26d2bfa0b0ba4861c5aa4c69179d0",
+    "archived_sha256": "df418a202d0e0aac3f96246a9f3d4eb1c7a26d2bfa0b0ba4861c5aa4c69179d0",
+    "json_whitespace_compacted": false
+  },
+  "toys-approved/wrapper/toy-repair-report.json": {
+    "original_path": "/tmp/navier-b2-matched-r016/toys-approved/wrapper/toy-repair-report.json",
+    "original_sha256": "24522de3a1433c27a7596b58732d10c2af73a5e4e64ae85a46ec61de3f0b728f",
+    "archived_sha256": "24522de3a1433c27a7596b58732d10c2af73a5e4e64ae85a46ec61de3f0b728f",
+    "json_whitespace_compacted": false
+  },
+  "toys-approved/wrapper.stderr": {
+    "original_path": "/tmp/navier-b2-matched-r016/toys-approved/wrapper.stderr",
+    "original_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "archived_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "json_whitespace_compacted": false
+  },
+  "toys-approved/wrapper.stdout": {
+    "original_path": "/tmp/navier-b2-matched-r016/toys-approved/wrapper.stdout",
+    "original_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "archived_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "json_whitespace_compacted": false
+  },
+  "wrapper_toys.py": {
+    "original_path": "/tmp/navier-b2-matched-r016/wrapper_toys.py",
+    "original_sha256": "77496d1a512cbc7a4f3c818c6002b3f30f1056851bd5e46ff1bdbacc35e6db2c",
+    "archived_sha256": "77496d1a512cbc7a4f3c818c6002b3f30f1056851bd5e46ff1bdbacc35e6db2c",
+    "json_whitespace_compacted": false
+  }
+}

@@ -1,0 +1,39 @@
+{
+  "scope": "Read-only arithmetic on saved outputs and static installed-source inspection after the mandatory stop; no new FEM execution",
+  "stage_at_last_checkpoint": "P_outputs",
+  "failed_operation": "A_32 RHS apply_lifting, physical.py line 465",
+  "diagnosis": "The traceback enters the non-block branch of apply_lifting. The installed source selects that branch when rhs.getAttr(\"_blocks\") is None. The wrapper obtains rhs with b.copy(). Loss of Python block metadata at this copy is inferred from the source and traceback, not yet reproduced on a toy.",
+  "installed_sources": {
+    "/tmp/navier-fenicsx/lib/python3.12/site-packages/dolfinx/fem/petsc.py": "841615634fd29d233574652c8c4375cd9057f156bf4e00eaba1f32c0a107b962",
+    "/tmp/navier-fenicsx/lib/python3.12/site-packages/dolfinx/fem/assemble.py": "fdba305d3c02088a0ed7276cfb415e9fe2759749e3f300fe82139fe5a34b150c"
+  },
+  "source_reference": "https://docs.fenicsproject.org/dolfinx/v0.10.0/python/_modules/dolfinx/fem/petsc.html#apply_lifting",
+  "P_cell_gain_per_m": [
+    -1.6734724052233703,
+    -1.0983702805959774
+  ],
+  "P_amplitude_ratio": 28963.496814417016,
+  "P_correction_magnitude_per_m": 2.2504571343741693e-14,
+  "P_polar_cell_differences": [
+    {
+      "rule": [
+        18,
+        18,
+        96
+      ],
+      "absolute_difference_per_m": 0.003596840190698864,
+      "multiple_of_E5": 1040.869799404643
+    },
+    {
+      "rule": [
+        96,
+        96,
+        512
+      ],
+      "absolute_difference_per_m": 6.84652347317901e-05,
+      "multiple_of_E5": 19.812777705762826
+    }
+  ],
+  "physical_retry": false,
+  "matched_trace_solves": 0
+}

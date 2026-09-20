@@ -1080,3 +1080,149 @@ push the scoped changes to the current upstream. No physical matched-trace
 attempt is authorized in this task.
 
 **Status:** In progress.
+
+## R016 — 2026-09-20 — Short continuation request
+
+**User request (verbatim):**
+
+> continue
+
+**Interpreted scope:** Review the archived R015 repaired disposable runner and
+carry out the single R013 matched-trace attempt specified by the current
+handoff, subject to its original prerequisites, fixed scientific assumptions,
+resource limits and stopping conditions. Preserve prior evidence, record the
+complete or partial outcome, update continuity, and commit/push only this task's
+changes to the configured upstream. This request authorizes that scoped commit
+and push; it does not authorize retries or a further numerical campaign.
+
+**Status:** In progress.
+
+**Bounded plan and completion criteria:** Read the required research documents,
+R013 contract and R014/R015 evidence; review the repaired runner and production
+identities; perform only prescribed prerequisite checks within the shared
+60 s/512 MiB toy budget; attempt at most one fixed 50 mm physical child within
+180 s/1.5 GiB if all prerequisites pass; archive exact code, finite reports and
+resource evidence; document completed checks, skips, interpretation and one
+concrete next task, then commit/push and stop.
+
+**Stopping conditions:** Stop on prerequisite or integrity inconsistency,
+compatibility/PDE failure, resource cap, scientific assumption/threshold decision,
+or completion. No physical retry, cap increase, second mesh, altered form,
+penalty, boundary trace, acceptance threshold or correction count. No refinement,
+B3, gate integration, rendering or movie export. Preserve the failed physical
+B2 gate and `campaign_ready=false`.
+
+**Outcome, 2026-09-20:** Completed at the prescribed internal-error stop. The
+single R016 physical child reached the original-command P solve, its one
+same-factor correction and checked outputs, then failed during A_32 RHS lifting:
+`AttributeError: 'list' object has no attribute '_cpp_object'`. The saved
+`stage=P_outputs` is the last checkpoint; the traceback identifies the later
+lifting call at `physical.py:465`. Neither A pressure compatibility nor any
+matched-trace solve was reached. No physical retry, cap increase or scientific
+assumption change followed.
+
+Static inspection shows the copied RHS entered DOLFINx's non-block lifting
+branch; loss of `_blocks` at `rhs=b.copy()` is the source/traceback-based
+diagnosis, pending a toy reproduction. R015 tested grouping and `bc.set` on
+NumPy slices, not the complete PETSc block lifting/assignment path. The exact
+R015 child code was used and is preserved without retrospective repair.
+
+**Actual inventory and limits:** One physical mesh, one returned primary P
+solve, one correction, one symbolic/numeric factorization and two matrix solves.
+The child ran 59.1794507680 s, with 755.86328125 MiB observed/process peak RSS,
+1,090 watchdog samples and maximum gap 0.0603705890 s, under 180 s/1.5 GiB.
+Toy checks passed within 5.3732977520 s total and 140.99609375 MiB maximum
+observed child-tree RSS. An initial sandbox MPI initialization failure occurred
+before numerical checks; after approved escalation, checks ran successfully.
+Its 0.4231748100 s and failed-import evidence remain in the shared 60 s/512 MiB
+budget and archive. No toy numerical failure or physical retry was concealed.
+
+**Completed checks:** All 19 pinned production source/configuration identities
+and the exact 482-cell, 9,522/1,928-DOF mesh matched. The local certificate,
+24-permutation/30-polynomial load checks, disk/arc/jump/tangency and wrapper
+toys, synthetic watchdog tests, physical UFL loads, all 482 disk-cell visits
+and 11 positive-area regions passed. Both 282-facet normal projections/loads
+and all four closed-flux ratios completed. P's constraint groups, pressure
+compatibility, original PDE diagnostics, correction residual, matrix/factor
+invariance, polynomial reconstruction, output arithmetic/component screens,
+linearity and both original polar-rule reproductions passed.
+
+P's cell-integrated primary gain is
+`-1.6734724052233703 - 1.0983702805959774 i 1/m`; the correction magnitude is
+`2.2504571344e-14 1/m`. The measured P amplitude remains 28963.4968 times the
+reference, with 74.1175-degree phase error, failing the strict 5%/5-degree
+comparison. This is a completed P diagnostic within an incomplete paired
+experiment. No A error, load-step comparison, discrete boundary sensitivity,
+continuum geometry allocation or physical feasibility result follows. The
+physical B2 gate remains failed and `campaign_ready=false`.
+
+**Evidence:** New result `docs/realizability/B2_MATCHED_TRACE_LIFTING_RESULT.md`
+and index `B2_MATCHED_TRACE_LIFTING_EVIDENCE.md`; 48 exact code/report/log/review
+artifacts under `docs/realizability/evidence/r016/`, including both parent
+versions, finite partial reports, traceback and watchdogs. The two large facet
+JSON files preserve every parsed value with compact whitespace; original and
+archived hashes are recorded. Working evidence is in
+`/tmp/navier-b2-matched-r016/`. The standard-library `audit.py` and
+`stored_validation.json` validate 19 source identities, 79 prior archive files,
+four prior evidence appendices, 564 facet records, disk moments, P measurements
+and counts without new FEM execution.
+
+**Checks skipped/unresolved:** No completed A lifting/assignment, A pressure
+compatibility, A solve/correction/PDE/trace/output, paired identity or load-step
+screen. No coefficient vectors were saved for later recovery. Full application,
+optional dense/calibration/refinement suites, production changes, gate
+integration, campaign, B3, rendering and encoding were outside scope. Physical
+preparation tolerances, allowed continued driving, adequate sensing, attained
+range and validated movie flow remain open. Alpha=48 and schema-3 certificate
+integration remain unresolved as previously recorded.
+
+**Changed files:** This log, `SESSION_HANDOFF.md`, `STATUS.md`,
+`PROJECT_TRACKS.md`, `docs/realizability/B2_MATCHED_TRACE_REVIEW.md`,
+`B2_MATCHED_TRACE_RESULT.md`, `B2_MATCHED_TRACE_RUN_EVIDENCE.md`,
+`B2_MATCHED_TRACE_WRAPPER_REPAIR.md`, `B2_PHYSICAL_RESPONSE_AUDIT.md`,
+`B2_GATE.md`, `B2_NEXT_STEPS.md`, the new R016 result/index and artifact directory.
+No production numerical source/configuration or old evidence artifact changed.
+
+**Continuity reconciliation for R015, 2026-09-20:** Its initial log entry has
+no appended outcome, but the existing repair result, archived validation and
+commits `5f48dba`/`349c9a3` establish completion of its toy-only grouping repair.
+That completed assignment was not replayed; R016 reviewed and used its code
+under the separately continued physical contract.
+
+**Next task/recommendation:** GPT-5.6 Luna, medium reasoning, for the result's
+explicit toy-only block RHS repair. Reproduce metadata loss; construct the RHS
+through the DOLFINx vector factory; validate owned/ghost layout; test the actual
+loading/lifting/scatter/assignment helper with pressure and real/imaginary
+couplings against independent toy arithmetic; add pre-operation stage/layout
+records and refusal/compatibility fixtures. Keep all toy execution within
+60 s/512 MiB, with no physical cylinder, factorization or PDE solve. Preserve
+exact artifacts and source identities, update continuity, commit/push, then
+stop. On passing, recommend Astra/high for review of the remaining A path and
+one separately scoped R013 attempt under its original caps/checks. Retain
+Luna/medium only for understood mechanical defects; stop for Astra/high on
+scientific or threshold decisions. Availability and effort support were
+rechecked in the current catalog and fetched official model pages using
+OpenAI Docs. No model switch, sub-agent or automation was launched.
+
+**Status at completion:** Complete at the required stop; paired scientific
+diagnostic partial due to wrapper instrumentation. The next prompt is
+**Continue**.
+
+**Git delivery:** `continue` authorizes the scoped checkpoint and push to the
+configured `origin/main` upstream. Actual commit/push is reported in Git history
+and the final response. No force-push or unrelated changes are included.
+
+**Final validation, 2026-09-20:** The stored-data audit passed. Documentation
+validation passed for 13 Markdown files, 137 local links/anchors, 20 fenced
+blocks and nine Python sources; previous request history is preserved and
+R016 is recorded once. The documentation checker initially required its own
+not-yet-written linked report; that bootstrap check was corrected, then passed.
+Records: `docs/realizability/evidence/r016/stored_validation.json` and
+`documentation_validation.json`. No physical or toy rerun followed the stop.
+
+`git diff --check` passed for tracked documentation before staging. The actual
+`git diff --cached --check` reports four warnings in exact preserved artifacts:
+`evidence/r016/toy_runner.py:213` (blank line at EOF), and
+`evidence/r016/toys/kernels.stderr:3`, `:4`, `:5` (raw MPI error trailing spaces).
+They are retained for byte/hash fidelity; all other staged files pass. The
+whole-archive default whitespace check is therefore not reported as passed.

@@ -106,10 +106,14 @@ The [single attempt](docs/realizability/B2_MATCHED_TRACE_RESULT.md) passed its
 mesh, load and disk-geometry checks, then stopped on a disposable-wrapper error
 after the original-command solve. No matched-trace response was calculated.
 The [toy-only wrapper repair](docs/realizability/B2_MATCHED_TRACE_WRAPPER_REPAIR.md)
-is complete and passed its reference-tetrahedron checks; it provides no physical
-response data. Review that repaired runner before any separately scoped R013
-attempt. Discrete boundary sensitivity will not by itself identify continuum
-geometry error. A total FEM error floor is still unknown. The B2 gate remains
+is complete and passed its reference-tetrahedron checks. The
+[R016 attempt](docs/realizability/B2_MATCHED_TRACE_LIFTING_RESULT.md) subsequently
+completed P's solve, one correction and checked cell-integrated output, then
+failed during A_32 RHS lifting. No matched-trace solve was reached. Its 59.18 s
+and 755.86 MiB stayed within the caps; P still fails reference accuracy. The
+next task is a toy-only block RHS repair. Discrete boundary sensitivity will
+not by itself identify continuum geometry error. A total FEM error floor is
+still unknown. The B2 gate remains
 failed and campaign readiness false. Use
 [SESSION_HANDOFF.md](SESSION_HANDOFF.md) for completion criteria and stops.
 

@@ -1,0 +1,33 @@
+{
+  "scope": "synthetic watchdog validation; no mesh/PDE work",
+  "timeout": {
+    "command": [
+      "/tmp/navier-fenicsx/bin/python",
+      "-c",
+      "import time; time.sleep(3)"
+    ],
+    "returncode": -9,
+    "elapsed_seconds": 0.1532758839894086,
+    "parent_observed_peak_rss_mib": 8.9453125,
+    "samples": 4,
+    "nominal_poll_seconds": 0.05,
+    "maximum_sample_gap_seconds": 0.052546102000633255,
+    "largest_observed_process_tree": 1,
+    "stop_reason": "wall_time_limit"
+  },
+  "memory": {
+    "command": [
+      "/tmp/navier-fenicsx/bin/python",
+      "-c",
+      "import subprocess,sys,time; subprocess.Popen([sys.executable,\"-c\",'import time; data=bytearray(32*1024**2); time.sleep(3)']); time.sleep(3)"
+    ],
+    "returncode": -9,
+    "elapsed_seconds": 0.05261395199340768,
+    "parent_observed_peak_rss_mib": 52.43359375,
+    "samples": 2,
+    "nominal_poll_seconds": 0.05,
+    "maximum_sample_gap_seconds": 0.050591159000759944,
+    "largest_observed_process_tree": 2,
+    "stop_reason": "rss_limit"
+  }
+}

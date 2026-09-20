@@ -1,11 +1,12 @@
 # Current session handoff
 
 Last updated: 2026-09-20. Latest request:
-[R015](REQUEST_LOG.md#r015--2026-09-20--short-continuation-request), completed
-at the toy-only stopping point. The repaired runner is archived; no physical
-matched-trace attempt was run. R014 remains a partial diagnostic after its
-post-P-solve instrumentation error. R013 was committed and pushed as `d5a2711`;
-R015 was committed and pushed as `5f48dba` on `origin/main`, with a clean tree.
+[R016](REQUEST_LOG.md#r016--2026-09-20--short-continuation-request), completed
+at the required internal-error stop. One physical child reached P's solve,
+correction and output checks, then failed in A_32 RHS lifting. No matched-trace
+solve or physical retry occurred. R016 starts from `349c9a3`; scoped commit/push
+is authorized by `continue`. Actual delivery is recorded in Git history and
+the final response. Prior R014/R015 evidence remains unchanged.
 
 ## User goals
 
@@ -29,84 +30,100 @@ update continuity, commit/push scoped work, and stop. Explicit qualifications
 such as “Continue without pushing” override that default. It does not switch the
 selected model or schedule another session. No scheduler is installed.
 
-## Latest task: toy-only wrapper repair (R015)
+## Latest result: RHS lifting failure (R016)
 
-Read the [R015 result](docs/realizability/B2_MATCHED_TRACE_WRAPPER_REPAIR.md)
-and [validation record](docs/realizability/evidence/r015/validation.json).
-The disposable R014 runner now groups constraints with `fem.bcs_by_block`,
-validates groups/offsets/exterior DOFs before the original helper, and uses the
-resulting groups for essential sets, RHS lifting and assignment, set comparison
-and residuals. It checkpoints returned solve counts and factor counters
-immediately, and persists pre-removal compatibility diagnostics before
-refusing an RHS.
+Read the [R016 result](docs/realizability/B2_MATCHED_TRACE_LIFTING_RESULT.md),
+[evidence index](docs/realizability/B2_MATCHED_TRACE_LIFTING_EVIDENCE.md), and
+[stored-data validation](docs/realizability/evidence/r016/stored_validation.json).
+The child code exactly matches the R015 archive. All 19 production identities,
+mesh/certificate/load/geometry prerequisites and toy checks passed. One sandbox
+MPI import failure preceded approved execution; the total toy time including
+that attempt was 5.3733 s, with peak 140.9961 MiB, below 60 s/512 MiB.
 
-The final tetrahedron check passed for separate real/imaginary BDM2/DG1 spaces:
-24 exterior and six free interior velocity DOFs per velocity block, no pressure
-constraints, correct offsets and disjoint sets. Exact assignment passed for
-zero and nonzero complex targets. Missing/wrong-space groups refused, and
-synthetic compatibility/bookkeeping errors preserved finite partial reports.
-Eight monitored attempts totaled 3.7696 seconds, maximum observed child-tree
-RSS 180.5742 MiB, and maximum sample gap 0.056968 seconds, under 60 s/512 MiB.
-The final run passed. All 19 pinned production identities match; the read-only
-R014 audit passed for 27 archived artifacts. No physical mesh, factorization,
-PDE solve, or retry ran. Exact code and all attempt evidence are under
-`docs/realizability/evidence/r015/`.
+The single physical child ran 59.1795 s with 755.8633 MiB observed/process peak
+RSS, below 180 s/1.5 GiB. It recorded one mesh, one returned P primary solve,
+one residual correction, one symbolic/numeric factorization and two matrix
+solves. Matrix digest/state and factor handle/state remained unchanged through
+P's correction. All original P diagnostics reproduce R012 except timing.
 
-The staged whitespace check has one documented exception: the exact copied
-support file `evidence/r015/toy_runner.py` has a trailing blank line at EOF
-(line 213), preserved for byte fidelity. All other staged files pass.
+P's cell-integrated gain is `-1.6734724052233703 - 1.0983702805959774 i 1/m`.
+Reconstruction, independent arc evaluation, arithmetic/component screens and
+linearity passed for P, its correction and corrected field. Both original polar
+rules reproduce R012. The cell-integrated magnitude remains about 28,963.5 times
+the reference, with 74.1175 degrees phase error. This is a completed P diagnostic
+inside an incomplete paired experiment, not validated physical response data.
 
-The R014 [result](docs/realizability/B2_MATCHED_TRACE_RESULT.md) remains
-partial: its one 50 mm physical child ran 54.1700 s and peaked at 734.7539 MiB,
-then its wrapper failed while collecting constraints after the original P
-solve. It recorded one returned P solve, zero corrections and zero matched-trace
-solves. No A compatibility, matched-trace solve, corrected output or new gain
-was reached. Do not rerun that physical case to recreate archived evidence.
+The traceback identifies `physical.py:465`, A_32 `apply_lifting`, raising
+`AttributeError: 'list' object has no attribute '_cpp_object'`. The saved
+`stage=P_outputs` is the last checkpoint. The copied RHS entered DOLFINx's
+non-block lifting branch; loss of `_blocks` metadata at `rhs=b.copy()` is the
+source/traceback-based diagnosis, still to be reproduced on a toy. R015 checked
+BC grouping and NumPy-slice assignment, not this complete PETSc operation.
+Neither A pressure compatibility nor any A solve/output was reached. No
+coefficient vectors were saved. Do not rerun this physical case to reconstruct
+missing evidence.
 
-## Last complete physical accuracy result (R012; unchanged)
+The standard-library audit passed for 48 archived artifacts, 79 prior R014/R015
+files, four earlier appendices, 19 production identities, 564 facet projection
+records, disk moments, P measurements and stop counts. Changed files are the
+request log, this handoff, status/track summaries, relevant B2 navigation,
+the new R016 result/index and `docs/realizability/evidence/r016/`. Full application,
+dense/calibration/refinement suites, rendering and encoding were skipped.
+The staged whitespace check has four byte-preservation exceptions:
+`evidence/r016/toy_runner.py:213` (blank line at EOF) and
+`evidence/r016/toys/kernels.stderr:3`, `:4`, `:5` (raw MPI error trailing spaces).
+All other staged files pass; the whole-archive whitespace check does not pass.
+Documentation validation passed for 13 Markdown files, 137 local links/anchors,
+20 fenced blocks and nine Python sources; earlier request history is preserved.
 
-Read the [R012 audit](docs/realizability/B2_PHYSICAL_RESPONSE_AUDIT.md) and
-[evidence](docs/realizability/B2_PHYSICAL_RESPONSE_EVIDENCE.md). The finest
-polar gain was `-1.6734039795256472 - 1.0983726070219908 i 1/m`, with amplitude
-28962.6876 times the reference and 74.1164 degrees phase error. Physical
-accuracy failed at all five rules. The correction was tiny, while polar
-integration remained unresolved at the reference scale. R014 supplies no
-replacement accuracy result or geometry/spatial-error allocation. Alpha=48
-remains inconclusive; certificates are not integrated into schema-3 gate
-reports. Force/power, pressure demand, preparation, sensing and validated movie
-flow remain unassessed or unresolved.
+## Scientific limits retained
+
+The [R012 audit](docs/realizability/B2_PHYSICAL_RESPONSE_AUDIT.md) remains the
+last complete physical response audit. R016 adds a checked P disk integral but
+no matched-trace accuracy comparison or continuum geometry/spatial-error
+allocation. The finest polar gain still differs from the cell integral by
+19.8128 times the 5% reference scale. A tiny correction does not establish
+spatial convergence. Alpha=48 remains inconclusive; certificates are not
+integrated into schema-3 gate reports. The physical B2 gate remains failed and
+`campaign_ready=false`. Force/power, pressure demand, preparation, sensing and
+validated movie flow remain unassessed or unresolved.
 
 ## Next task
 
-**GPT-6 Astra, high reasoning:** review the repaired disposable runner and
-conduct the single R013 matched-trace attempt specified by the
-[R013 review](docs/realizability/B2_MATCHED_TRACE_REVIEW.md#one-executable-next-task-contract),
-under that contract's original prerequisites, caps, checks and stops. Before
-acting, read `STATUS.md`, `PROJECT_TRACKS.md`, `EXPERIMENT.md`,
-`PHYSICAL_REALIZABILITY_PLAN.md`, `CONTROL_RESEARCH_ROADMAP.md`, the R013 review,
-the R014 result/evidence index, and the R015 result/archive. Check Git status and
-the existing request/history outcomes first.
+**GPT-5.6 Luna, medium reasoning:** complete the
+[R016 toy-only block RHS repair contract](docs/realizability/B2_MATCHED_TRACE_LIFTING_RESULT.md#next-bounded-task-exercise-and-repair-block-rhs-lifting-on-toys).
+Before acting read `STATUS.md`, `PROJECT_TRACKS.md`, `EXPERIMENT.md`,
+`PHYSICAL_REALIZABILITY_PLAN.md`, `CONTROL_RESEARCH_ROADMAP.md`, the R013 contract,
+and R014–R016 result/evidence records. Inspect Git status and history first;
+the initial R015 log entry lacks its outcome, but its completed result and
+commits (`5f48dba`, `349c9a3`) establish that the earlier grouping task is done.
 
-- Validate the repaired runner and unchanged production identities. Preserve
-  the exact repaired copy and R014 evidence.
-- Toy execution remains capped at 60 s/512 MiB total. The single physical child
-  remains capped at 180 s/1.5 GiB. No retry, cap increase or second mesh.
-- Keep the fixed 50 mm mesh, forms, penalty, thresholds, boundary trace,
-  correction count and interpretation rules from the R013 contract. A toy pass
-  does not establish physical correctness.
-- Stop on any prerequisite/integrity inconsistency, compatibility or PDE check
-  failure, resource limit, or completion. Preserve partial evidence. Do not
-  start a refinement, campaign, B3, gate integration, rendering or movie export.
+- Work on a new disposable copy. Reproduce copy/duplicate metadata behavior on
+  one reference tetrahedron; create the replacement block RHS through the
+  DOLFINx vector factory and validate all owned/ghost offsets before lifting.
+- Exercise the actual loading/lifting/scatter/assignment helper on zero and
+  nonzero complex targets, with pressure and real/imaginary cross-block coupling.
+  Compare against independent toy operator arithmetic, preserving the original
+  forms, trace, constraints and all tolerances in the physical runner.
+- Add accurate pre-operation stages and layout/failure records; check compatible
+  and incompatible pressure fixtures and the R015 grouping/refusal fixtures.
+- All toy execution, including failures, stays within 60 s/512 MiB total,
+  serial and single-threaded, using approved access needed by MPI. No physical
+  cylinder, factorization, PDE solve, physical retry or cap increase.
+- Completion: exact repaired copy and finite passing toy report, unchanged
+  production/prior-evidence identities, updated continuity and scoped commit/push.
+  Stop on a resource limit, unexplained inconsistency, scientific decision or
+  completion. No campaign, B3, gate integration, rendering or movie export.
 
-The review specifies a finite task; do not choose new physics, solver,
-actuator, sensing or acceptance assumptions. A scientific assumption or
-threshold decision requires stopping for review. At completion, record evidence,
-changed files, checks/skips and the next bounded task, then commit/push scoped
-work under `Continue`.
+After the mechanical checks pass, recommend **GPT-6 Astra, high reasoning**
+for review of the remaining A path and one separately scoped R013 attempt with
+its original prerequisites/caps/stops. Retain Luna/medium only for a fully
+understood mechanical defect; refer scientific assumptions or threshold changes
+to Astra/high. A toy pass alone never authorizes physical interpretation.
 
-The current official OpenAI model page lists GPT-6 Astra and supports `high`
-reasoning for complex reasoning and coding; account access can differ. This is
-a recommendation only. No model switch, physical attempt or automation has
-occurred. See [OpenAI Docs: GPT-6 Astra](https://developers.openai.com/api/docs/models/gpt-6-astra).
+Both recommendations were rechecked against the session catalog and fetched
+[OpenAI Docs: Luna](https://developers.openai.com/api/docs/models/gpt-5.6-luna)
+and [Astra](https://developers.openai.com/api/docs/models/gpt-6-astra) pages.
+This is a recommendation only, not a model switch or scheduled continuation.
 
 **Next prompt: Continue.**

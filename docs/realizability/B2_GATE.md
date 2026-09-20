@@ -57,7 +57,11 @@ paired boundary-data experiment on the same 50 mm alpha=96 operator, using a
 known solution's full trace as a verification fixture. Its
 [R014 attempt](B2_MATCHED_TRACE_RESULT.md) stopped on a wrapper error after the
 original-command solve; no matched-trace gain or error decomposition was obtained.
-The next task repairs instrumentation on toy data only. A future completed
+The R015 grouping repair passed its toy checks. The subsequent
+[R016 attempt](B2_MATCHED_TRACE_LIFTING_RESULT.md) reached P's correction and
+checked cell-integrated output, then failed during A_32 RHS lifting. No A solve
+ran; P still fails reference accuracy. The next task repairs block RHS lifting
+on toy data only. A future completed
 comparison would measure numerical approximation and discrete boundary sensitivity,
 without treating their difference as a continuum geometry-error estimate.
 The failed physical gate and false campaign readiness are unchanged.

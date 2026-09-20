@@ -5,7 +5,10 @@ disposable-wrapper error after the original-command solve. Its
 [preserved partial evidence](B2_MATCHED_TRACE_RUN_EVIDENCE.md) includes completed
 prerequisites but no matched-trace gain. The proposal below remains the original
 R013 contract; its statements about unexecuted work describe R013. The current
-next task is the result's toy-only wrapper repair, not a physical retry.
+next task after the completed R015 grouping repair and the
+[R016 lifting failure](B2_MATCHED_TRACE_LIFTING_RESULT.md) is the latter result's
+toy-only block RHS repair. R016 completed P's solve/correction/output checks
+but no A solve. The original experiment contract below remains unchanged.
 
 Completed 2026-09-20 for [R013](../../REQUEST_LOG.md#r013--2026-09-20--short-continuation-request)
 against `568c68b`, following the [R012 method-review contract](B2_PHYSICAL_RESPONSE_AUDIT.md#next-bounded-task-design-a-geometry-and-boundary-layer-accuracy-test).

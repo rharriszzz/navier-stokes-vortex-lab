@@ -1,5 +1,10 @@
 # R015 toy-only matched-trace wrapper repair
 
+The separately scoped [R016 attempt](B2_MATCHED_TRACE_LIFTING_RESULT.md) has
+since reached P's solve/correction/output checks, then stopped on a block RHS
+lifting error. No A solve ran. The next-task section below records the R015
+handoff; the current task is R016's toy-only lifting repair.
+
 Completed 2026-09-20 under the R014 handoff contract. This repairs and checks a
 disposable copy of the failed R014 wrapper. No physical cylinder, factorization,
 PDE solve, or matched-trace retry was run. The physical B2 gate remains failed

@@ -1,0 +1,12 @@
+Traceback (most recent call last):
+  File "/tmp/navier-b2-matched-r016/physical.py", line 522, in <module>
+    calculate(args.output)
+  File "/tmp/navier-b2-matched-r016/physical.py", line 465, in calculate
+    apply_lifting(rhs,captured['a'],bcs=new_grouped)
+  File "/tmp/navier-fenicsx/lib/python3.12/site-packages/dolfinx/fem/petsc.py", line 630, in apply_lifting
+    _apply_lifting(b_local.array_w, a, bcs, x0_r, alpha, constants, coeffs)  # type: ignore[arg-type]
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/navier-fenicsx/lib/python3.12/site-packages/dolfinx/fem/assemble.py", line 455, in apply_lifting
+    _a = [None if form is None else form._cpp_object for form in a]
+                                    ^^^^^^^^^^^^^^^^
+AttributeError: 'list' object has no attribute '_cpp_object'

@@ -1,0 +1,6 @@
+Abort(606225807): Fatal error in internal_Init_thread: Other MPI error, error stack:
+internal_Init_thread(71).: MPI_Init_thread(argc=0x71719321dfd8, argv=0x71719321dfd0, required=1, provided=0x7ffd623c47bc) failed
+MPII_Init_thread(261)....: 
+MPID_Init(549)...........: 
+MPIDI_UCX_init_local(234): 
+MPIDI_UCX_init_worker(86):  ucx function returned with failed status(ucx_init.c 86 MPIDI_UCX_init_worker Input/output error)

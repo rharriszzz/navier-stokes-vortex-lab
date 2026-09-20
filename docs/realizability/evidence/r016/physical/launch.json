@@ -1,0 +1,8 @@
+{
+  "physical_attempt": 1,
+  "wall_limit_seconds": 180.0,
+  "rss_limit_mib": 1536.0,
+  "runner_sha256": "005fd1552bf50b85a173aecfae3d58ea833a85d04dd03045e532ae64d90bba4c",
+  "parent_sha256": "441b9767ce694e06652225d3c552077de6746b815b14f75ccdcb693af134aaff",
+  "toy_report_sha256": "d8194000382083d7a1b69166ca0204cfd921e52b86093a93978b7358027e31e4"
+}

@@ -11,7 +11,10 @@ next-task contract below. It selects a paired current-command/matched-trace
 experiment on this same mesh, with cell-aware disk integration. That experiment
 was attempted in [R014](B2_MATCHED_TRACE_RESULT.md) and stopped on a wrapper
 error after its original-command solve, before any matched-trace solve. The
-R012 results below are unchanged; the next task repairs the wrapper on toys.
+R012 results below are unchanged. Following the completed R015 grouping repair,
+[R016](B2_MATCHED_TRACE_LIFTING_RESULT.md) reached P's correction and checked
+cell-integrated output, then stopped during A_32 RHS lifting before any A solve.
+The next task repairs block RHS construction/lifting on toys only.
 
 ## Result
 

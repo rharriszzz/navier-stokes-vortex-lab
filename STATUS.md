@@ -1,6 +1,6 @@
 # Project status: physical preparation and a realistic movie
 
-Updated 2026-09-20, following the R013 method review against `568c68b`, the R012
+Updated 2026-09-20, following the partial R016 matched-trace attempt, the R012
 physical response audit, and the
 [R010 status-report request](REQUEST_LOG.md#r010--2026-09-20--project-status-and-user-goals).
 
@@ -192,10 +192,14 @@ but no matched-trace solve or corrected/output comparison ran. It took 54.17
 seconds and 734.75 MiB, within its resource caps. This instrumentation failure
 supplies no new evidence about physical accuracy or feasibility. The prescribed
 [toy-only wrapper repair](docs/realizability/B2_MATCHED_TRACE_WRAPPER_REPAIR.md)
-is now complete. It passed on one reference tetrahedron and preserved all 19
-production hashes, but it performed no physical work. Reviewing that runner and
-then attempting the single R013 case under its original contract remains the
-next separately scoped task.
+is complete. The subsequent
+[R016 attempt](docs/realizability/B2_MATCHED_TRACE_LIFTING_RESULT.md) reached the
+original-command solve, one correction and checked cell-integrated output, then
+stopped on a second wrapper error during matched-trace RHS lifting. It ran
+59.18 seconds with 755.86 MiB peak RSS, within its caps. Neither matched-trace
+solve ran. The checked original-command output still fails reference accuracy;
+the paired comparison remains incomplete. The next task tests and repairs the
+block-vector lifting operation on toy data, with no physical retry in that task.
 
 The physical-response campaign remains blocked (`campaign_ready=false`). No
 preparation protocol, sensing result, time-dependent movie dataset or render

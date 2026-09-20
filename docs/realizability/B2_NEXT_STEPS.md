@@ -1,6 +1,8 @@
 # B2 continuation: independent swirl reference and stability checks
 
-Current continuation after R014: read the
+Current continuation after R016: read the
+[R016 lifting failure and toy repair contract](B2_MATCHED_TRACE_LIFTING_RESULT.md),
+its [evidence index](B2_MATCHED_TRACE_LIFTING_EVIDENCE.md), the
 [partial matched-trace result](B2_MATCHED_TRACE_RESULT.md), its
 [preserved run evidence](B2_MATCHED_TRACE_RUN_EVIDENCE.md), the
 [matched-trace experiment specification](B2_MATCHED_TRACE_REVIEW.md), its
@@ -20,8 +22,11 @@ reference comparison. R013 completed the method review without new numerical
 runs. R014 implemented the disposable kernels and attempted the experiment once.
 Toy, mesh, load and disk-geometry checks passed; a wrapper constraint-grouping
 error stopped it after one original-command solve, with no correction or A solve.
-The next bounded task is the result's mechanical wrapper repair and focused toy
-checks, at 60 s/512 MiB, with no physical cylinder or PDE solve. A later physical
+The R015 grouping repair is complete. R016 subsequently reached P's solve,
+correction and checked cell-integrated output, then stopped during A_32 RHS
+lifting before any A solve. The next bounded task is R016's mechanical block
+RHS repair and actual PETSc lifting/assignment toy checks, at 60 s/512 MiB,
+with no physical cylinder, factorization or PDE solve. A later physical
 attempt would still need the complete R013 checks and 180 s/1.5 GiB caps. No
 production penalty choice or gate integration is selected. Older assignments
 below are historical.

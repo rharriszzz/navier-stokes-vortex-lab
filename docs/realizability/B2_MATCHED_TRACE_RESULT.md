@@ -2,7 +2,10 @@
 
 The toy-only wrapper repair described in this historical R014 next-task
 section was completed in [R015](B2_MATCHED_TRACE_WRAPPER_REPAIR.md). No
-physical matched-trace retry was run.
+physical work occurred in R015. The separately authorized
+[R016 attempt](B2_MATCHED_TRACE_LIFTING_RESULT.md) later reached P's correction
+and output checks, then stopped during A_32 RHS lifting, before any A solve.
+The R014 result and next-task description below are historical.
 
 Recorded 2026-09-20 for [R014](../../REQUEST_LOG.md#r014--2026-09-20--short-continuation-request)
 against `d5a2711`, under the [R013 experiment contract](B2_MATCHED_TRACE_REVIEW.md#one-executable-next-task-contract).
