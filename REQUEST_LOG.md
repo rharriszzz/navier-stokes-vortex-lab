@@ -1261,3 +1261,114 @@ sources, R014–R016 evidence and the physical gate were not changed.
 **Git delivery:** The `continue` shorthand authorizes the scoped commit and
 push to the configured upstream. The actual commit and push result will be
 recorded in Git history and the final response.
+
+## R018 — 2026-09-20 — Short continuation request
+
+**User request (verbatim):**
+
+> continue
+
+**Interpreted scope:** Apply the Continue workflow to the handoff's bounded
+review of the repaired R017 disposable wrapper and remaining A path against
+the original R013 contract. If every prerequisite holds without a scientific
+decision, execute at most one separate physical attempt under the original
+180 s/1.5 GiB limits. Archive and audit complete or finite partial evidence,
+update continuity and commit/push only this task's changes to the configured
+upstream. This request authorizes that scoped commit and push.
+
+**Status:** In progress.
+
+**Bounded plan and completion criteria:** Read the required research documents
+and R013–R017 records; inspect exact archived code, production identities and
+preserved P evidence; review A grouping, layout, compatibility, solve counts,
+output checks and stops. Complete one permitted attempt or document the exact
+prerequisite/decision preventing execution, audit evidence, record checks and
+skips, provide one concrete next task with model/effort and stop conditions,
+then commit/push and stop.
+
+**Stopping conditions:** Stop before physical execution on failed prerequisite
+or method/tolerance/interpretation choice. After launch, stop on first failure,
+resource cap or unexplained result. No retry, increased caps, changed tolerance,
+production solver change, gate integration, campaign/B3, rendering or encoding.
+Retain the failed physical B2 gate and `campaign_ready=false`.
+
+**Outcome, 2026-09-20:** Complete at the prescribed prerequisite stop, before
+physical execution. The fresh watchdog and kernel phases passed; the wrapper
+toy failed at `wrapper_toys.py:22` with `IndexError: 4` while resolving
+`Path(__file__).resolve().parents[4]`. The exact R017 files were copied into
+`/tmp/navier-b2-matched-r018/`, where that ancestor does not exist. R018
+preparation overlooked the fixture's archive-depth dependency. No numerical
+claim follows from this path failure, and it does not invalidate R017's saved
+toy arithmetic. No repair, retry or physical child followed the stop.
+
+**Completed checks and resource accounting:** All 19 production identities and
+266 R014–R017 evidence files matched the starting commit `bd4945b`. R016 and
+R017 stored-data auditors passed with their writes captured in the new work
+directory, leaving old artifacts unchanged. Static review covered A grouping,
+layout, complete lifting, compatibility, corrections, common matrix/factors,
+own-target diagnostics and outputs. Six child/support files match R017 exactly.
+Fresh synthetic wall/RSS watchdog checks and all 24 permutation/polynomial-load
+and kernel disk/arc/jump/tangency checks passed. Three child phases, including
+the failed wrapper, used 4.8030722210 s total and 141.5703125 MiB maximum
+observed child-tree RSS, below 60 s/512 MiB; maximum sample gap was 0.057983 s.
+The approved MPI environment was used without a new sandbox MPI failure.
+
+**Failure evidence and skips:** The wrapper failed after imports but before
+report construction, its first checkpoint, source verification or tetrahedron
+creation. It wrote no child JSON; the parent saved finite refusal/count/resource
+data and the exact traceback. Block RHS and extra disk phases were not launched
+after refusal. No physical mesh, PDE solve, factorization or matrix solve ran.
+A pressure compatibility and accuracy remain unmeasured. R016's P-only output
+and the failed physical comparison remain unchanged. Full application,
+dense/calibration/refinement suites, production changes, gate integration,
+campaign, B3, rendering and encoding were skipped. Preparation, sensing,
+physical demands and validated movie flow remain unresolved.
+
+**Changed files/evidence:** This log, `SESSION_HANDOFF.md`, `STATUS.md`,
+`PROJECT_TRACKS.md`, `docs/realizability/B2_NEXT_STEPS.md`,
+`B2_MATCHED_TRACE_REVIEW.md`, `B2_BLOCK_RHS_TOY_REPAIR_RESULT.md`, the new
+`B2_MATCHED_TRACE_PREFLIGHT_RESULT.md` and `B2_MATCHED_TRACE_PREFLIGHT_EVIDENCE.md`,
+and `docs/realizability/evidence/r018/`. The archive manifest preserves 29 exact
+code/report/log artifacts; the later standard-library audit and validation are
+separate. No production numerical source/configuration or old evidence changed.
+
+**Next task/recommendation:** GPT-5.6 Luna, medium reasoning, for the result's
+toy-only portability and early-reporting repair. Use the documented
+repository-root working directory instead of fixed script ancestry, validate
+it against pinned source identities, and persist early failures. Inspect every
+child's launch/output/import assumptions. Under one cumulative 60 s/512 MiB
+budget, validate the complete five-phase sequence using scripts in a shallow
+temporary directory, correct-root success and intentional wrong-root refusal
+with finite reports, and the parent's refusal path without a physical child.
+Archive/audit evidence, update continuity, commit/push, then stop. Stop on a
+resource limit, unexplained numerical failure or scientific decision. On passing,
+recommend Astra/high for a separately continued R013 review and at most one
+physical attempt under the unchanged contract. Retain Luna/medium only for
+understood mechanical fixes; use Astra/high for method, tolerance or physical
+interpretation choices. Availability and supported efforts were rechecked in
+the current catalog and fetched official model pages using OpenAI Docs. No
+model switch, sub-agent or automation occurred.
+
+**Status at completion:** Complete at the prerequisite stop; the paired
+scientific diagnostic remains incomplete. The next prompt is **Continue**.
+
+**Git delivery:** `continue` authorizes this scoped checkpoint and push to
+`origin/main`, with no force-push. Actual delivery is reported in Git history
+and the final response.
+
+**Validation, 2026-09-20:** The R018 stored-data/documentation audit passed for
+29 archived artifacts, 19 production identities, 266 preserved historical files,
+six unchanged child/support sources, ten Python syntax checks, nine finite
+JSON inputs, nine Markdown files, 89 local links/anchors and 17 fenced blocks.
+Earlier request history is preserved, and R018 occurs once. Record:
+`docs/realizability/evidence/r018/validation.json`. The numerical prerequisite
+sequence itself is explicitly recorded as refused, not passed. Tracked
+documentation passed `git diff --check` before staging; the exact copied
+`toy_runner.py:213` retains the known blank-line-at-EOF exception, to be checked
+separately in the staged archive.
+
+**Staged check, 2026-09-20:** `git diff --cached --check` reported exactly the
+expected preserved blank line at `docs/realizability/evidence/r018/toy_runner.py:213`.
+The staged check excluding that byte-preserved historical source passed. The
+whole-archive default whitespace check did not pass; no executed source was
+edited to hide the exception.

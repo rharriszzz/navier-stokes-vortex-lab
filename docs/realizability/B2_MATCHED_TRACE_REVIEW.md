@@ -5,10 +5,11 @@ disposable-wrapper error after the original-command solve. Its
 [preserved partial evidence](B2_MATCHED_TRACE_RUN_EVIDENCE.md) includes completed
 prerequisites but no matched-trace gain. The proposal below remains the original
 R013 contract; its statements about unexecuted work describe R013. The current
-next task after the completed R015 grouping repair and the
-[R016 lifting failure](B2_MATCHED_TRACE_LIFTING_RESULT.md) is the latter result's
-toy-only block RHS repair. R016 completed P's solve/correction/output checks
-but no A solve. The original experiment contract below remains unchanged.
+task follows the completed R017 block RHS repair and the
+[R018 prerequisite stop](B2_MATCHED_TRACE_PREFLIGHT_RESULT.md): repair toy
+repository-root discovery and early failure reporting in a disposable directory.
+R016 completed P's solve/correction/output checks but no A solve; R018 launched
+no physical child. The original experiment contract below remains unchanged.
 
 Completed 2026-09-20 for [R013](../../REQUEST_LOG.md#r013--2026-09-20--short-continuation-request)
 against `568c68b`, following the [R012 method-review contract](B2_PHYSICAL_RESPONSE_AUDIT.md#next-bounded-task-design-a-geometry-and-boundary-layer-accuracy-test).

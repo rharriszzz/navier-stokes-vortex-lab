@@ -1,5 +1,10 @@
 # R017 block RHS lifting repair: toy result
 
+The subsequent [R018 review and prerequisite attempt](B2_MATCHED_TRACE_PREFLIGHT_RESULT.md)
+stopped before physical execution on a toy repository-root path assumption.
+The result below is preserved; its next-task section is historical. The current
+handoff specifies the toy-only portability and early-reporting repair.
+
 Recorded 2026-09-20 for [R017](../../REQUEST_LOG.md#r017--2026-09-20--short-continuation-request).
 The scope was the toy-only block-vector repair specified by the
 [R016 contract](B2_MATCHED_TRACE_LIFTING_RESULT.md#next-bounded-task-exercise-and-repair-block-rhs-lifting-on-toys).

@@ -116,9 +116,13 @@ reproduced loss of PETSc block metadata on copy/duplicate and passed the
 replacement-vector lifting and assignment oracle, coupling, compatibility and
 refusal fixtures. No physical run occurred, and the paired diagnostic remains
 incomplete. Discrete boundary sensitivity will not by itself identify
-continuum geometry error. A total FEM error floor is still unknown. The next
-step is a high-reasoning review of the remaining A path before at most one
-separately scoped R013 attempt. The B2 gate remains
+continuum geometry error. A total FEM error floor is still unknown. The
+[R018 prerequisite attempt](docs/realizability/B2_MATCHED_TRACE_PREFLIGHT_RESULT.md)
+stopped before physical execution: a copied wrapper toy assumed repository
+archive depth when locating the source root. Watchdog and kernel checks passed;
+block RHS and extra disk checks were not reached. The next step is a toy-only
+repair of root discovery and early refusal reporting in the disposable launch
+context. The B2 gate remains
 failed and campaign readiness false. Use
 [SESSION_HANDOFF.md](SESSION_HANDOFF.md) for completion criteria and stops.
 

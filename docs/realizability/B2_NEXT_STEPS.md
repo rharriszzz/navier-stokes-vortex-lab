@@ -1,6 +1,8 @@
 # B2 continuation: independent swirl reference and stability checks
 
-Current continuation after R017: read the
+Current continuation after R018: first read the
+[R018 prerequisite stop and toy portability repair contract](B2_MATCHED_TRACE_PREFLIGHT_RESULT.md)
+and [evidence index](B2_MATCHED_TRACE_PREFLIGHT_EVIDENCE.md), then the
 [R017 block RHS toy repair result](B2_BLOCK_RHS_TOY_REPAIR_RESULT.md) and
 [evidence index](B2_BLOCK_RHS_TOY_REPAIR_EVIDENCE.md), then the
 [R016 lifting failure and original toy repair contract](B2_MATCHED_TRACE_LIFTING_RESULT.md),
@@ -29,12 +31,15 @@ correction and checked cell-integrated output, then stopped during A_32 RHS
 lifting before any A solve. R017 reproduced copy/duplicate metadata loss and
 passed the replacement-vector lifting/assignment oracle and reporting fixtures
 in 8.50 s cumulative with 183.21 MiB peak. No physical execution occurred.
-The next bounded task is a GPT-6 Astra/high review of the repaired remaining A
-path against the R013 contract. If prerequisites hold without scientific
-changes, perform at most one physical attempt under the original 180 s/1.5 GiB
-caps. No retry or cap increase. No
-production penalty choice or gate integration is selected. Older assignments
-below are historical.
+R018 reviewed the remaining A path and preserved all identities, but fresh
+prerequisites stopped on the wrapper toy's archive-depth repository-root lookup
+after watchdog and kernel checks passed. No physical child was launched.
+The next bounded task is the GPT-5.6 Luna/medium toy-only root-discovery and
+early-reporting repair, within 60 s/512 MiB, using the actual shallow temporary
+launch layout. After that passes, recommend Astra/high for a separately scoped
+R013 review/attempt under the unchanged 180 s/1.5 GiB caps. No production
+penalty choice or gate integration is selected. Older assignments below are
+historical.
 
 Follow-up at commit `a6295da`: the reference and cube audit are implemented.
 The new [stability review](B2_STABILITY_REVIEW.md) tests the actual cylinder

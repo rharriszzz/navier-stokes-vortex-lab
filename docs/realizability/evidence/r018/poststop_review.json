@@ -1,0 +1,46 @@
+{
+  "status": "stopped_before_physical_execution",
+  "stage": "wrapper_toy_repository_root",
+  "physical_attempts": 0,
+  "physical_meshes": 0,
+  "pde_solves": 0,
+  "primary_rhs": 0,
+  "correction_rhs": 0,
+  "matrix_solves": 0,
+  "factorizations": 0,
+  "campaign_ready": false,
+  "physical_gate_passed": false,
+  "error": {
+    "type": "IndexError",
+    "message": "4",
+    "file": "wrapper_toys.py",
+    "line": 22
+  },
+  "cause": "The unchanged R017 toy assumes archive-relative parents[4]; the R018 disposable /tmp copy has only three parents. R018 preflight overlooked this launch-layout dependency.",
+  "child_report_present": false,
+  "child_report_absence_reason": "Root resolution precedes record construction, first checkpoint and try/except.",
+  "completed_phases": [
+    "watchdog",
+    "kernels"
+  ],
+  "failed_phase": "wrapper",
+  "skipped_phases": [
+    "block-rhs",
+    "disk",
+    "physical"
+  ],
+  "toy_total_seconds": 4.803072221024195,
+  "toy_peak_child_tree_rss_mib": 141.5703125,
+  "toy_maximum_sample_gap_seconds": 0.057982989004813135,
+  "disposable_parent_paths": [
+    "/tmp/navier-b2-matched-r018",
+    "/tmp",
+    "/"
+  ],
+  "production_source_identities": 19,
+  "prior_evidence_files_preserved": 266,
+  "physical_runner_changed": false,
+  "scientific_parameters_changed": false,
+  "retry_after_stop": false,
+  "next_task": "Repair repository-root discovery and early failure reporting on toys; validate the exact disposable launch context before any separately continued physical attempt."
+}

@@ -1,11 +1,10 @@
 # Current session handoff
 
 Last updated: 2026-09-20. Latest request:
-[R017](REQUEST_LOG.md#r017--2026-09-20--short-continuation-request), complete.
-The toy-only block RHS repair passed under its cumulative limits. No physical
-retry occurred. R017 starts from `a22fc32`; scoped commit/push is authorized by
-`continue`. Actual delivery is recorded in Git history and the final response.
-R014–R016 evidence remains unchanged.
+[R018](REQUEST_LOG.md#r018--2026-09-20--short-continuation-request), complete at
+the prescribed prerequisite stop. No physical child was launched. R018 starts
+from `bd4945b`; `continue` authorizes its scoped commit/push. Actual delivery
+is recorded in Git history and the final response. R014–R017 evidence is unchanged.
 
 ## User goals
 
@@ -29,118 +28,92 @@ update continuity, commit/push scoped work, and stop. Explicit qualifications
 such as “Continue without pushing” override that default. It does not switch the
 selected model or schedule another session. No scheduler is installed.
 
-## Previous result: RHS lifting failure (R016)
+## Latest result: prerequisite path failure (R018)
 
-Read the [R016 result](docs/realizability/B2_MATCHED_TRACE_LIFTING_RESULT.md),
-[evidence index](docs/realizability/B2_MATCHED_TRACE_LIFTING_EVIDENCE.md), and
-[stored-data validation](docs/realizability/evidence/r016/stored_validation.json).
-The child code exactly matches the R015 archive. All 19 production identities,
-mesh/certificate/load/geometry prerequisites and toy checks passed. One sandbox
-MPI import failure preceded approved execution; the total toy time including
-that attempt was 5.3733 s, with peak 140.9961 MiB, below 60 s/512 MiB.
+Read [the R018 result](docs/realizability/B2_MATCHED_TRACE_PREFLIGHT_RESULT.md),
+[evidence index](docs/realizability/B2_MATCHED_TRACE_PREFLIGHT_EVIDENCE.md), and
+[validation](docs/realizability/evidence/r018/validation.json).
+All 19 production identities and 266 prior evidence files match. The R016 and
+R017 stored-data audits passed with writes redirected into the new directory.
+Static review covered the repaired remaining A path; physical compatibility
+remained an execution prerequisite, not an assumed pass.
 
-The single physical child ran 59.1795 s with 755.8633 MiB observed/process peak
-RSS, below 180 s/1.5 GiB. It recorded one mesh, one returned P primary solve,
-one residual correction, one symbolic/numeric factorization and two matrix
-solves. Matrix digest/state and factor handle/state remained unchanged through
-P's correction. All original P diagnostics reproduce R012 except timing.
+The exact R017 sources were copied to `/tmp/navier-b2-matched-r018/`. Fresh
+watchdog and kernel checks passed. The wrapper toy then raised `IndexError: 4`
+at `wrapper_toys.py:22`, where `Path(__file__).resolve().parents[4]` assumes
+archive depth. The temporary copy has only three parents. R018 preparation
+missed that launch-layout dependency. The failure precedes record construction,
+the first checkpoint and the exception handler, so no wrapper child JSON exists.
+The parent retained its finite refusal record, traceback and resource data.
 
-P's cell-integrated gain is `-1.6734724052233703 - 1.0983702805959774 i 1/m`.
-Reconstruction, independent arc evaluation, arithmetic/component screens and
-linearity passed for P, its correction and corrected field. Both original polar
-rules reproduce R012. The cell-integrated magnitude remains about 28,963.5 times
-the reference, with 74.1175 degrees phase error. This is a completed P diagnostic
-inside an incomplete paired experiment, not validated physical response data.
+Three monitored child phases used 4.8031 s total, including the failed wrapper,
+with peak observed child-tree RSS 141.5703 MiB and maximum gap 0.057983 s,
+below 60 s/512 MiB. Block RHS and extra disk phases were not launched after
+the refusal. No physical mesh, factorization, PDE solve or matrix solve ran.
+No repair or retry followed the required stop. Full application, refinement,
+rendering and encoding were skipped. The default staged whitespace check has
+one preserved-source exception at `evidence/r018/toy_runner.py:213`.
 
-The traceback identifies `physical.py:465`, A_32 `apply_lifting`, raising
-`AttributeError: 'list' object has no attribute '_cpp_object'`. The saved
-`stage=P_outputs` is the last checkpoint. The copied RHS entered DOLFINx's
-non-block lifting branch; loss of `_blocks` metadata at `rhs=b.copy()` is the
-source/traceback-based diagnosis, still to be reproduced on a toy. R015 checked
-BC grouping and NumPy-slice assignment, not this complete PETSc operation.
-Neither A pressure compatibility nor any A solve/output was reached. No
-coefficient vectors were saved. Do not rerun this physical case to reconstruct
-missing evidence.
-
-The standard-library audit passed for 48 archived artifacts, 79 prior R014/R015
-files, four earlier appendices, 19 production identities, 564 facet projection
-records, disk moments, P measurements and stop counts. Changed files are the
-request log, this handoff, status/track summaries, relevant B2 navigation,
-the new R016 result/index and `docs/realizability/evidence/r016/`. Full application,
-dense/calibration/refinement suites, rendering and encoding were skipped.
-The staged whitespace check has four byte-preservation exceptions:
-`evidence/r016/toy_runner.py:213` (blank line at EOF) and
-`evidence/r016/toys/kernels.stderr:3`, `:4`, `:5` (raw MPI error trailing spaces).
-All other staged files pass; the whole-archive whitespace check does not pass.
-Documentation validation passed for 13 Markdown files, 137 local links/anchors,
-20 fenced blocks and nine Python sources; earlier request history is preserved.
-
-## Scientific limits retained
+## Preserved physical and toy results
 
 The [R012 audit](docs/realizability/B2_PHYSICAL_RESPONSE_AUDIT.md) remains the
-last complete physical response audit. R016 adds a checked P disk integral but
-no matched-trace accuracy comparison or continuum geometry/spatial-error
-allocation. The finest polar gain still differs from the cell integral by
-19.8128 times the 5% reference scale. A tiny correction does not establish
-spatial convergence. Alpha=48 remains inconclusive; certificates are not
-integrated into schema-3 gate reports. The physical B2 gate remains failed and
-`campaign_ready=false`. Force/power, pressure demand, preparation, sensing and
-validated movie flow remain unassessed or unresolved.
+last complete physical response audit. The
+[R016 attempt](docs/realizability/B2_MATCHED_TRACE_LIFTING_RESULT.md) completed
+P's solve, one same-factor correction and output checks, then failed at A_32
+lifting. Its cell-integrated P gain is
+`-1.6734724052233703 - 1.0983702805959774 i 1/m`, about 28,963.5 times the
+reference magnitude with 74.1175 degrees phase error. It took 59.1795 s and
+755.8633 MiB; one mesh, one primary solve, one correction and one factorization
+were recorded. No A solve or coefficient vector was saved. Do not rerun old
+physical cases to reconstruct missing evidence.
 
-## Latest result: block RHS toy repair (R017)
+The [R017 repair](docs/realizability/B2_BLOCK_RHS_TOY_REPAIR_RESULT.md)
+reproduced block metadata loss on copy/duplicate and passed the factory-created
+RHS oracle, layout checks, complete lifting/scatter/assignment, coupling,
+compatibility and refusal fixtures on toys. Its cumulative 8.5013 s and
+183.2071 MiB were within limits. R018's path failure does not invalidate those
+recorded arithmetic checks or validate any physical A result.
 
-Read [the R017 result](docs/realizability/B2_BLOCK_RHS_TOY_REPAIR_RESULT.md),
-[evidence index](docs/realizability/B2_BLOCK_RHS_TOY_REPAIR_EVIDENCE.md), and
-[stored-data validation](docs/realizability/evidence/r017/validation.json).
-The single-tetrahedron test reproduced loss of `_blocks` on PETSc copy and
-duplicate. The repaired helper creates a replacement from captured spaces,
-checks PETSc and owned/ghost layout before loading, and then performs the actual
-block lift, reverse scatter and grouped assignment. Zero and nonzero complex
-targets matched the independent toy operator oracle; pressure and
-real/imaginary cross-blocks were nonzero, the operator remained unchanged, and
-exact boundary assignment and refusal/report stages passed. Compatible and
-incompatible pressure fixtures and the R015 grouping/reporting fixtures passed.
-
-Seven cumulative toy attempts, including all failed attempts, took 8.5013 s;
-the largest observed child-tree RSS was 183.2071 MiB, below 60 s/512 MiB. All
-19 production identities match. The R017 audit byte-compared its three
-unchanged support sources with R016 and separately verified the stored R016
-audit. No physical mesh, factorization,
-PDE solve or matrix solve ran. Full application and rendering/movie checks were
-skipped. R016's last complete physical evidence remains the P-only result, which
-fails its reference comparison; this toy result supplies no physical accuracy
-or feasibility evidence.
+The paired accuracy comparison, continuum geometry/spatial-error allocation
+and total FEM error floor remain unknown. Alpha=48 remains inconclusive;
+certificates are not integrated into schema-3 gate reports. The physical B2
+gate remains failed and `campaign_ready=false`. Force/power, pressure demand,
+preparation, sensing and validated movie flow remain unassessed or unresolved.
 
 ## Next task
 
-**GPT-6 Astra, high reasoning:** review the repaired disposable R017 wrapper's
-remaining A path against the original R013 contract. Before acting, inspect Git
-status/history and read `STATUS.md`, `PROJECT_TRACKS.md`, `EXPERIMENT.md`,
-`PHYSICAL_REALIZABILITY_PLAN.md`, `CONTROL_RESEARCH_ROADMAP.md`, R013–R017 result
-and evidence records, and the exact R017 archive. Recheck all source identities,
-preserved P evidence, A constraint grouping, layout validation, pressure
-compatibility, primary/correction counts, output checks and stop behavior.
+**GPT-5.6 Luna, medium reasoning:** complete the
+[R018 toy portability repair contract](docs/realizability/B2_MATCHED_TRACE_PREFLIGHT_RESULT.md#next-bounded-task-make-toy-prerequisites-portable).
+Before acting, check Git status/history and read this handoff, `STATUS.md`,
+`PROJECT_TRACKS.md`, `EXPERIMENT.md`, `PHYSICAL_REALIZABILITY_PLAN.md`,
+`CONTROL_RESEARCH_ROADMAP.md`, the R013 contract, R016–R018 result/evidence
+records and exact R018 sources. Preserve historical evidence and all 19
+production identities.
 
-- If original R013 prerequisites, thresholds and resource caps hold without a
-  scientific decision, execute at most one separate physical attempt using the
-  repaired disposable runner under 180 s/1.5 GiB. Preserve all finite partial
-  output and stop on the first failure, resource limit or unexplained result.
-- If any prerequisite fails, or a method/tolerance/physical interpretation
-  choice is needed, do not launch the physical child. Record the exact issue and
-  alternatives for scientific review.
-- Do not retry, increase caps, change tolerances, modify production solver
-  choices, integrate the gate, start a campaign/B3 study, render or encode.
+Use a new disposable copy. Replace the wrapper toy's fixed ancestor index
+with the documented repository-root working directory, validated against the
+pinned identities. Move root validation inside its report/exception boundary.
+Inspect all parent/child launch, output-directory and sibling-import assumptions.
+Under one cumulative 60 s/512 MiB budget in the approved MPI environment, run
+the complete five-phase prerequisite sequence from the repository root with
+scripts in a shallow temporary directory, and verify an intentional wrong-root
+refusal leaves finite stage/error/count JSON. Keep every original numerical
+fixture and threshold. Verify the parent's refusal path without a physical child.
 
-Completion means the original contract is either completed once or explicitly
-stopped before physical execution with the unresolved decision documented,
-evidence audited, continuity updated and scoped changes committed/pushed. A
-successful paired numerical experiment still does not establish preparation,
-sensing sufficiency or a validated movie trajectory. Retain GPT-5.6 Luna,
-medium for understood mechanical defects; use Astra/high for any scientific or
-acceptance-threshold decision. The current session catalog lists both models;
-OpenAI Docs describes Astra for complex reasoning/research and Luna for
-cost-sensitive workloads ([Astra](https://developers.openai.com/api/docs/models/gpt-6-astra),
-[Luna](https://developers.openai.com/api/docs/models/gpt-5.6-luna)). This is a
-recommendation only, not a model switch or scheduled continuation.
+Completion means correct disposable invocation and early refusal reporting
+pass, or a precise unresolved failure is recorded; archive and audit evidence,
+update continuity, commit/push scoped work and stop. Stop on resource limits,
+unexplained numerical inconsistency or a scientific decision. No physical
+cylinder, PDE solve, factorization, changed scientific tolerance, gate
+integration, campaign/B3, rendering or encoding in this repair task.
+
+On passing, recommend GPT-6 Astra/high for review and at most one separately
+continued R013 physical attempt under its original prerequisites and
+180 s/1.5 GiB caps. Keep Luna/medium only for understood mechanical defects;
+use Astra/high for scientific, method or acceptance-threshold decisions.
+Both are available in the current session catalog; OpenAI Docs confirms the
+supported efforts ([Luna](https://developers.openai.com/api/docs/models/gpt-5.6-luna),
+[Astra](https://developers.openai.com/api/docs/models/gpt-6-astra)). No model
+switch, delegated session or automation was launched.
 
 **Next prompt: Continue.**

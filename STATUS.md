@@ -1,6 +1,6 @@
 # Project status: physical preparation and a realistic movie
 
-Updated 2026-09-20, following the R017 toy-only block RHS repair, the partial
+Updated 2026-09-20, following the R018 prerequisite stop, R017 toy repair, partial
 R016 matched-trace attempt, the R012 physical response audit, and the
 [R010 status-report request](REQUEST_LOG.md#r010--2026-09-20--project-status-and-user-goals).
 
@@ -203,9 +203,13 @@ the paired comparison remains incomplete. The
 reproduced block metadata loss on `copy()` and `duplicate()`, then passed the
 replacement-vector, full lifting/assignment, coupling, compatibility and refusal
 checks in 8.50 seconds cumulative and 183.21 MiB peak across its attempts. It
-ran no physical mesh or solve. The next checkpoint is an Astra/high review of
-the remaining A path and, only if the unchanged R013 prerequisites hold, at
-most one separately scoped physical attempt under the original caps.
+ran no physical mesh or solve. The
+[R018 review and prerequisite attempt](docs/realizability/B2_MATCHED_TRACE_PREFLIGHT_RESULT.md)
+then passed source/evidence, watchdog and kernel checks, but a wrapper toy
+failed because its repository-root lookup assumed the archive directory depth.
+No physical child was launched. The next checkpoint is a Luna/medium toy-only
+repair of root discovery and early failure reporting, including validation of
+the actual disposable invocation. The R013 physical experiment remains deferred.
 
 The physical-response campaign remains blocked (`campaign_ready=false`). No
 preparation protocol, sensing result, time-dependent movie dataset or render
