@@ -1,8 +1,11 @@
 # Current session handoff
 
 Last updated: 2026-09-20. Latest request:
-[R034](REQUEST_LOG.md#r034--2026-09-20--evaluate-this-mac-and-update-the-project-records),
-completed as a read-only Mac evaluation and project-record update. The user permits using the PC
+[R036](REQUEST_LOG.md#r036--2026-09-20--clarify-whether-the-ssh-key-expired-and-repeat-recovery-steps),
+and the follow-up [R037](REQUEST_LOG.md#r037--2026-09-20--confirm-the-github-ssh-key-fingerprint),
+which confirmed the GitHub fingerprint matches the existing Ed25519 key.
+GitHub accepted that key when explicitly selected; finish the pending R034
+publication over SSH. The user permits using the PC
 within its capabilities; the former small diagnostic caps are not immutable
 user requirements. R023–R032 did not invoke Continue or authorize publication
 at the time; their resource and machine continuity is included here where
@@ -13,6 +16,11 @@ without a physical run. R034 also ran no numerical work. The last previously com
 
 R033's scoped result was committed as `85ebd85` and pushed successfully to
 `origin/main` on branch `main`. The request log records the delivery outcome.
+R034's scoped files are in local commit `da46593`, one commit ahead of
+`origin/main`. HTTPS password input and default SSH identity selection failed,
+but an explicit test with the existing Ed25519 key succeeded and its
+fingerprint matches GitHub Settings. Switch `origin` to SSH and publish the
+existing commit; do not recreate or duplicate the R034 changes.
 
 ## User goals
 
@@ -272,3 +280,30 @@ finds only a clearly understood mechanical defect, recommend GPT-5.6 Luna with
 medium reasoning for a narrow repair. Retain GPT-6 Astra/high for unexplained
 results or any scientific/numerical-method decision. No model switch or
 automation occurred. **Next prompt: Continue.**
+
+## R035 Git publication setup
+
+Sibling repositories `beads`, `beads2`, `hsv_tools`, `madweave` and `sound`
+configure `origin` as `git@github.com:...` SSH remotes. Two read-only sibling
+`ls-remote` checks failed with `Permission denied (publickey)` in this session,
+so matching their remote format alone will not authenticate. This repository
+currently uses HTTPS. This Mac already has `~/.ssh/id_ed25519` and its public
+key. Initial default SSH attempts failed because the agent had no identities
+and no `github.com` host entry was found in `~/.ssh/config`. A later explicit
+read-only test with `-i ~/.ssh/id_ed25519 -o IdentitiesOnly=yes` succeeded and
+GitHub greeted `rharriszzz`; this confirms the key is valid and registered.
+The identity was added to the current agent by that test, but no persistent
+Keychain, credential or remote setting was changed. The GitHub settings
+fingerprint supplied in R037 exactly matched the diagnostic fingerprint.
+
+Recommended persistent setup: run
+`ssh-add --apple-use-keychain ~/.ssh/id_ed25519` in Mac Terminal, and add a
+`Host github.com` entry in `~/.ssh/config` with `UseKeychain yes`,
+`AddKeysToAgent yes`, and `IdentityFile ~/.ssh/id_ed25519`. The public key is
+already registered, so do not create or replace keys. Confirm with
+`ssh -T git@github.com`. Then change this repo's `origin` to
+`git@github.com:rharriszzz/navier-stokes-vortex-lab.git` and push `main`.
+R034's commit `da46593` remains one commit ahead of upstream; continuity edits
+from the interrupted R035 staging attempt are unstaged and must be reviewed
+before any follow-up commit. No GitHub CLI is installed. Do not install another
+Git client solely for this issue.

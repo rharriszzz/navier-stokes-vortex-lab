@@ -2277,10 +2277,50 @@ review recorded in `SESSION_HANDOFF.md`.
 
 **Interpreted scope:** Read the handoff and its required research/current-task records, inspect this Mac against the repository's recorded machine and workload measures, document evidence and any implications, update continuity, then commit and push only scoped changes to the configured upstream. Preserve existing work and scientific thresholds.
 
-**Status:** In progress.
+**Status:** Completed locally; push blocked by unavailable GitHub credentials.
 
 **Plan and stop:** Check Git state and current handoff, read required research and physical-task files, collect read-only Mac hardware/OS/capacity/tool/environment facts, compare what can be supported against the recorded PC/workload evidence, document unknowns and decision, run documentation checks, commit/push scoped changes, and stop at the resulting machine-selection boundary. Do not launch physical numerical work.
 
 **Outcome, 2026-09-20:** The Mac is an Apple M4 iMac (4 performance and 6 efficiency cores), arm64, macOS 26.6.2, with 24 GiB RAM. At inspection macOS reported 68% system-wide free memory, no swap-ins/outs since boot, and 591 GiB available on the project volume. The inspected Python 3.10.19 environment has NumPy but not importable DOLFINx, PETSc4py, mpi4py or Gmsh; the FEM environment pinned by the project is not ready in that shell. R033's last PC snapshot recorded 6.294 GiB available in Windows and 6924 MiB in WSL. These dated readings do not establish runtime or physical-job fit. No transfer is recommended before the Astra/high physical-path review and, if that review warrants a physical comparison, Mac environment/monitoring validation plus a small reference comparison.
 
 **Changed files, checks/skips and next task:** Added `docs/realizability/evidence/r034/mac_snapshot.json`; updated `STATUS.md`, `SESSION_HANDOFF.md` and this entry. JSON parsing and `git diff --check` passed. No FEM, render, movie, environment installation or physical calculation was run; no machine setting or app was changed. The next task remains the handoff's Astra/high review of the R033 observer and physical launch path against R021/R013, stopping before physical execution. Official OpenAI model pages were checked on 2026-09-20 and list GPT-6 Astra and GPT-5.6 Luna; account-level availability may differ. No model switch occurred.
+
+**Delivery update, 2026-09-20:** Commit `da46593` (`Record Mac capacity and environment assessment`) was created on `main`. Push to `origin/main` failed because HTTPS could not read a password in this session; the bounded SSH check also returned `Permission denied (publickey)`. `gh` is not installed. The local branch is one commit ahead of `origin/main`. No credential configuration was changed. Push remains pending usable GitHub authentication.
+
+## R035 — 2026-09-20 — Check sibling Git connection and explain push fix
+
+**User request (verbatim):**
+
+> I can update the software into the configuration you recommend. Please recommend, and I will do it. But first lets fix make sure we can do the push. Can you check a sibling directory of this one to see which git connection plan we used, also remind me how to fix this problem.
+
+**Interpreted scope:** Check the interrupted R034 continuity update's Git state, inspect sibling repository Git connection configuration and available credential tooling without disclosing secrets, then explain the matching setup to fix authenticated push. Do not change Git credentials or remote settings without the user's follow-up.
+
+**Status:** Recommendation provided; waiting for the user to configure GitHub SSH authentication.
+
+**Outcome, 2026-09-20:** Sibling repositories `beads`, `beads2`, `hsv_tools`, `madweave` and `sound` use SSH `git@github.com:` remotes. Their Git configuration has a credential helper, but two read-only sibling SSH checks failed in this session with `Permission denied (publickey)`, so their remote style alone does not establish working authentication. This repository currently uses HTTPS. Its current shell cannot prompt for a password, `gh` is not installed, and SSH authentication also failed. A local `~/.ssh/id_ed25519` key pair and SSH config file exist; no GitHub host entry was detected. The existing Ed25519 public key should be added to the GitHub account, then authentication verified before changing this repository's remote. No key, credential, helper or remote was changed.
+
+**Recommendation and next action:** Use the sibling repositories' SSH plan with the existing Ed25519 key; do not install another Git client. In a normal Mac Terminal, copy only the public key using `pbcopy < ~/.ssh/id_ed25519.pub`, add it at GitHub **Settings → SSH and GPG keys → New SSH key**, then check `ssh -T git@github.com`. If needed, load/configure the key with macOS Keychain (`ssh-add --apple-use-keychain ~/.ssh/id_ed25519`, and an SSH `Host github.com` entry using `UseKeychain yes`, `AddKeysToAgent yes`, and `IdentityFile ~/.ssh/id_ed25519`). Once the SSH test succeeds, update this repo's remote to `git@github.com:rharriszzz/navier-stokes-vortex-lab.git` and push `main`. Do not send or paste the private key. The pending R034 commit is `da46593`; R034 continuity edits remain in the worktree after an interrupted staging attempt. Finish/publish the scoped records after SSH authentication works.
+
+## R036 — 2026-09-20 — Clarify whether the SSH key expired and repeat recovery steps
+
+**User request (verbatim):**
+
+> It used to have a SSH key. did it expire or something? anyway please remind me how to fix it
+
+**Interpreted scope:** Explain the observed SSH public-key failure without assuming key expiration, and restate the shortest recovery steps using the existing local key. Do not change key, GitHub, or remote configuration.
+
+**Status:** Complete; recovery steps provided.
+
+**Outcome, 2026-09-20:** A verbose, read-only SSH test explicitly selected `~/.ssh/id_ed25519`; GitHub accepted that key and returned the authenticated greeting for `rharriszzz`. The agent had no identities before the explicit selection. This confirms the key is valid and registered; the initial failure was that the client session did not offer it. No persistent agent, keychain, remote or credential setting was changed. The repository's HTTPS remote remains in place and the R034 push is still pending.
+
+## R037 — 2026-09-20 — Confirm the GitHub SSH key fingerprint
+
+**User request (verbatim):**
+
+> this is what github.com/settings/keys says for this one "SHA256:L6+W9hjp105BL4hGZpyEm3gODIx/uYVCnFyzFFL+zrE"
+
+**Interpreted scope:** Compare the supplied GitHub key fingerprint with the explicitly selected local key fingerprint and, as part of the still-active R034 publication task, complete the authenticated SSH push if they match.
+
+**Status:** In progress.
+
+**Outcome, 2026-09-20:** The supplied fingerprint exactly matches the local `id_ed25519` fingerprint from the successful explicit SSH diagnostic; GitHub accepted the key and authenticated `rharriszzz`. The issue was SSH identity selection in the session, not key expiry. The R034 commit is being published over SSH.
