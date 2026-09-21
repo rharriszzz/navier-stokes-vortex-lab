@@ -1,15 +1,8 @@
 # Project status: physical preparation and a realistic movie
 
-Updated 2026-09-21 for
-[R074](REQUEST_LOG.md#r074--2026-09-21--continue-review-process-changes-and-specify-monitor-adapters):
-the process review and host monitor adapter specification are complete.
-See the [single current task](SESSION_HANDOFF.md#next-task) for fixture-only
-monitor implementation on PC; physical execution remains disabled.
-R069 makes Python 3.12 the preference on both machines, retaining the 3.12.13
-FEM pin. R058 remains the latest inspected Mac readiness evidence; POV-Ray
-build completion is unverified. No physical run or benchmark ran in this review.
-The goals below preserve the
-[R010 status-report request](REQUEST_LOG.md#r010--2026-09-20--project-status-and-user-goals).
+Updated 2026-09-21. The latest completed work is a
+[review of how calculations are monitored and reported](docs/realizability/B2_MONITOR_ADAPTER_REVIEW.md).
+The [technical handoff](SESSION_HANDOFF.md#next-task) records the next task.
 
 Our goal is to determine whether exterior actuators and sensors can prepare
 a contracting, stretching, swirling flow that follows the desired process
@@ -21,6 +14,26 @@ question. We have an implemented illustrative movie pipeline, but have not yet
 demonstrated the required initial setup, an attainable range of contraction,
 or a validated flow history for the movie.** The recent progress is in making
 the calculations trustworthy; it is not yet evidence that the apparatus works.
+
+## Recent results and their practical meaning
+
+- **The review found ways a failed or unfinished calculation could appear
+  complete.** Examples include accepting a success report despite an abnormal
+  process exit, or declaring completion while supporting processes remain
+  active. The required corrections are now specified, including checks that
+  work has actually stopped and memory readings are current. Implementation
+  and tests on the PC are still pending; further flow calculations remain
+  disabled until the required safeguards are validated and launch is reviewed.
+- **There is no new result yet on physical feasibility.** Previous experiment
+  records were preserved, and the latest numerical boundary response still
+  fails its accuracy comparison. This review adds no evidence about achievable
+  contraction, adequate exterior sensing or practical actuator demands. Those
+  questions remain open, and the existing numerical failure does not establish
+  that the physical concept is impossible.
+- **The movie can still illustrate the concept.** The latest work supplies no
+  new validated flow history for a physically supported animation. Connecting
+  the movie to reliable fluid calculations remains a later milestone; the
+  independent Mac POV-Ray build's completion is still unverified.
 
 ## Overall progress and remaining milestones
 
