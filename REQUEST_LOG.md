@@ -2789,3 +2789,15 @@ No DOLFINx/MPI import, JIT, mesh, factorization, PDE solve, physical child, rend
 **Next task/recommendation:** Stay on PC. Use GPT-6 Astra/high to review and specify the Linux/WSL process-tree and Windows host-pressure/termination adapters for the disabled R070 launch path, including required host-specific validation. Stop before physical execution or threshold changes. Recommend GPT-5.6 Luna/medium only after resource semantics are settled and remaining work is mechanical; return to Astra/high for unresolved semantics, threshold decisions or any physical launch interpretation. These model choices remain available in the current session tool catalog; no switch or delegation occurred.
 
 **Release state:** PC retains repository ownership; all R073 commands exited and no child/background process remains. Independent Mac POV-Ray build is user-reported and unverified.
+
+## R074 — 2026-09-21 — Continue, review process changes and specify monitor adapters
+
+**User request:** “continue.  there was also some process changes, they look good to me but blease review them and fix anything that needs it.  then do whatever the handoff requests.”
+
+**Interpreted scope:** Invoke Continue, including scoped commit/push authorization. Review and correct the recent session-coordination process changes, then complete R073's recorded next task: review/specify Linux/WSL process-tree, Windows host-pressure and termination adapters for the disabled R070 launch path. The handoff's opening and R073 completion agree on this task; its stale `Next task` section repeats completed R073 work and will be corrected, without replaying that task.
+
+**Ownership/start:** PC/WSL `daisy`, Linux `x86_64`, `/home/rharris/git/navier-stokes-vortex-lab`; matches the current owner, with R073 completed and no open session record. Clean `main` tracking `origin/main`, empty stash list. Required `git pull --ff-only --no-rebase --no-autostash` returned `Already up to date`; HEAD and fetched upstream both equal `3fcc82f832737381bed90b7d6073644cd87c52e0`. Independent Mac POV-Ray build remains user-reported and unverified.
+
+**Bounded plan/completion/stop:** Publish this request and its STARTED record before substantive work. Review the workflow diff, research/resource policy, R033 monitor, R070 guard and R073 evidence; fix process documentation and produce a concrete host-adapter specification with required validation and saved/source audit evidence. Use Python 3.12 for utility checks. Preserve historical evidence, attempt allowances, production sources and physical 180 s / 1536 MiB caps. Complete with documentation/source/evidence checks, a single next task and scoped publication. Stop before adapter workload execution, FEM/MPI/JIT, mesh, assembly, factorization, solve or physical launch; this task specifies required future live validation.
+
+**Status:** In progress; start publication pending.

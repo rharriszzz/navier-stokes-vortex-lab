@@ -31,3 +31,8 @@ Checkout: /home/rharris/git/navier-stokes-vortex-lab | Branch/upstream: main/ori
 Task: Use Python 3.12.13 and fake process/host readings to validate the portable monitor contract within 120 s / 256 MiB; no FEM/physical child; stop before changing physical caps.
 COMPLETED | 2026-09-21 04:28:58 UTC | outcome: 16/16 synthetic checks passed in final attempt; four attempts preserved; cumulative 0.200314582 s, maximum measured RSS 133.59375 MiB | released: no (PC retains ownership)
 Changed files: REQUEST_LOG.md, SESSION_HANDOFF.md, WORK_SESSIONS.md, docs/realizability/evidence/r073/* | Checks/skips: Python 3.12.13 synthetic monitor validation and evidence hash/JSON checks passed; live process/Windows adapters and all FEM work skipped | Evidence: docs/realizability/evidence/r073/ | Next task: Astra/high review of Linux/WSL process-tree and Windows host-pressure/termination adapters; stop before physical execution and threshold changes.
+
+## R074 — Process review and host monitor adapter specification
+STARTED | 2026-09-21 04:32:10 UTC | PC/WSL | daisy | Linux/x86_64
+Checkout: /home/rharris/git/navier-stokes-vortex-lab | Branch/upstream: main/origin/main | Starting commit: 3fcc82f832737381bed90b7d6073644cd87c52e0
+Task: Review/fix recent coordination process changes, then specify Linux/WSL process-tree, Windows host-pressure and termination adapters with required validation. Review/source/saved-data checks only; stop before live adapter workloads, FEM/physical execution or threshold changes.
