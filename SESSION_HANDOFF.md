@@ -1,12 +1,14 @@
 # Current session handoff
 
-Last updated 2026-09-21 for R099. PC/WSL `daisy` retains ownership.
+Last updated 2026-09-21 for R100 metadata confirmation; research outcome R099.
+PC/WSL `daisy` retains ownership.
 The [trusted-adapter contract](docs/realizability/B2_MONITOR_TRUSTED_ADAPTER_CONTRACT.md)
 now maps all Admission/TerminalWitness fields, E0–E9 events, accounting and
 failure outcomes. **OS-source admission remains refused:** the selected manager's
 reservation/setup/final-retention authority and enforcement are unestablished.
-One documentation-only capability decision is next. Completion is prepared
-separately from final Git delivery. Supplied session excerpts, with account
+One documentation-only capability decision is next. R099 was delivered as
+`90f4cf0`; R100 confirms session-excerpt recording. Its metadata edits remain
+local and uncommitted. Supplied session excerpts, with account
 redaction, are recorded in [R099](REQUEST_LOG.md#r099--2026-09-21--continue-trusted-adapter-contract-repair).
 
 ## Owner and checkout
@@ -18,6 +20,7 @@ redaction, are recorded in [R099](REQUEST_LOG.md#r099--2026-09-21--continue-trus
 | Branch/upstream | `main` / `origin/main` |
 | Starting state | Clean synchronized `d26b1adbef44d49582a88f058a5cfbcd222bfd32` confirms R098 delivery; R099 STARTED published as `fe67f6a` |
 | Other owner/process | No ownership switch indicated. Independent Mac POV-Ray build remains user-managed and unverified. |
+| Metadata state | R100 confirmation updates REQUEST_LOG.md and this handoff locally; no new research task or publication. |
 | Task processes | No fixture/workload or background process launched; no ignored transfer input. |
 
 ## Current result and limits
