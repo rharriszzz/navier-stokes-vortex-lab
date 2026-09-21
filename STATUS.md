@@ -1,11 +1,11 @@
 # Project status: physical preparation and a realistic movie
 
 Updated 2026-09-20 for
-[R065](REQUEST_LOG.md#r065--2026-09-20--make-the-pc-review-next-while-pov-ray-builds-on-the-mac),
-making the PC scientific review next while the user builds POV-Ray on the Mac.
-R058 remains the latest inspected Mac readiness evidence; build completion is
-unverified, and this session ran no install or benchmark. Resource
-guidance below includes the R023/R024 capacity clarifications.
+[R067](REQUEST_LOG.md#r067--2026-09-20--short-continuation-request): the PC
+scientific review is complete; a disposable launch/report repair is next.
+R069 makes Python 3.12 the preference on both machines, retaining the 3.12.13
+FEM pin. R058 remains the latest inspected Mac readiness evidence; POV-Ray
+build completion is unverified. No physical run or benchmark ran in this review.
 The goals below preserve the
 [R010 status-report request](REQUEST_LOG.md#r010--2026-09-20--project-status-and-user-goals).
 
@@ -32,7 +32,7 @@ fluid calculation has not yet passed its physical accuracy checks.
 | Milestone | Position now | Work still needed |
 |---|---|---|
 | Explain the apparatus and intended motion | Illustrative movie pipeline implemented | Further visual refinement is possible; label the prescribed flow clearly. |
-| Trust the numerical boundary response | R033 toy prerequisites and observer coverage pass; physical accuracy gate still fails | Review the exercised observer and physical launch path, then decide separately whether to run the conditional matched-boundary comparison and resolve its accuracy questions. |
+| Trust the numerical boundary response | R033 toy prerequisites and observer coverage pass; physical accuracy gate still fails | R067 review is complete: repair launch/report safeguards, validate monitors, then decide separately on physical execution. |
 | Determine what exterior actuators can influence | Benchmark commands/features defined; full six-input response campaign has not begun | Validate responses, then assess independent influence, conditioning and required amplitudes/times. |
 | Determine what exterior sensors can distinguish | Basic sensor fixtures exist; B3 sensing study has not begun | Test pressure/PIV information with realistic noise, resolution and delay. |
 | Prepare the desired initial flow | Concept and candidate hardware only | Define acceptable initial-state errors; test a finite actuator layout and its physical limits. |
@@ -204,12 +204,17 @@ movie can precede physical feasibility, while later validated data should
 replace or constrain its illustrative motion. Visual clarity alone is not
 evidence of realizability.
 
-## Latest scientific checkpoint and the next review
+## Latest scientific checkpoint and next repair
 
-The immediate task is the PC Astra/high scientific review below. The user's
-Mac POV-Ray build can continue independently; its movie check waits for a later
-explicit switch. See the [current execution handoff](SESSION_HANDOFF.md#next-task)
-for completion criteria, ownership and the stop before numerical execution.
+The [R067 review](docs/realizability/B2_PHYSICAL_RUNNER_REVIEW.md) confirms the
+saved observer/oracle coverage and the patched FFCx package, but finds stale
+launch limits, incomplete evidence binding and failure/count reporting gaps.
+Next on PC: Luna/medium repair in a new disposable copy using saved-data and
+synthetic checks only. The review specifies a later repeatable observer/assembly
+reference, with unchanged numerical screens; monitors must pass first. It does
+not establish comparative solver performance or authorize physical execution.
+The independent Mac POV-Ray build remains outside this task; its movie check
+waits for a later explicit switch. See the [handoff](SESSION_HANDOFF.md#next-task).
 
 The [R033 prerequisite result](docs/realizability/B2_COMPATIBLE_TRACE_PREFLIGHT_FOLLOWUP.md)
 completes the disposable q=64/q=96 fixture and the actual pre-solve observer
@@ -222,9 +227,8 @@ sampled child-tree RSS was 571.42 MiB, below the capacity-sized 1536 MiB cap.
 The final cache-reuse pass peaked at 171.24 MiB. Two understood fixture defects
 were repaired in the disposable copy, and every attempt was preserved.
 **No physical child, PDE solve, factorization or flow response ran.** The B2
-physical accuracy gate remains failed. The next scientific step is an Astra/high review of
-the observer and remaining physical path before any separately scoped physical
-comparison.
+physical accuracy gate remains failed. R067 completed the observer/physical-path
+review without launching that comparison; the mechanical repairs above come next.
 
 R023's qualified 600-second/2048-MiB allowance was sized down for R033 after
 the live Windows host check: the first launch used a 1536-MiB child-tree cap
@@ -288,7 +292,8 @@ The user authorizes using the PC within its capabilities. Future local jobs
 should use allowances based on available RAM and expected work, leaving room
 for the operating system and other applications. R033 rechecked both Windows
 and WSL before each attempt, did not count swap as RAM, and preserved its
-600-second/1536-MiB limit. The next task is a review before any physical launch;
+600-second/1536-MiB limit. R067 completed the review; launch/report repairs and
+validated resource monitoring are required before any physical launch;
 size a later physical allowance separately. Preserve watchdogs, finite reports,
 scientific acceptance thresholds and the recorded experiment scope. Historical
 R022 resource results remain unchanged.
@@ -306,23 +311,24 @@ metadata: build, artifact URL and SHA-256 match the R056 PC record. See
 R056 confirmed that the PC already has conda-forge `fenics-ffcx 0.10.1`
 (`pyhbc3ee6d_1`). R014/R016/R020 used this environment after installation, so
 their `ffcx: 0.10.0` report values are module self-reports, not evidence of an
-unfixed package; no rerun is required. Astra's planned review should audit
-whether source forms meet the same-quadrature multi-integral fix condition and
-whether any relevant compiled cache could predate the package. The next FEM
-reference run should use a fresh isolated cache and record the Conda build/hash
+unfixed package; no rerun is required. R067 verified the installed compiler
+files against package metadata and found the inspected repeated integrals merge
+during symbolic analysis. Historical loaded binaries are not fully attributable
+from cache timestamps; use the documented provenance checks for future runs.
+The next FEM reference run should use a fresh isolated cache and record the Conda build/hash
 separately. See [R056 environment evidence](docs/realizability/evidence/r056/ffcx_pc_environment.json).
 The latest PC snapshot showed 15.72 GiB total/5.44 GiB free in Windows and
 7.61 GiB total/6.73 GiB available in WSL; these are overlapping views of
 shared host RAM. The Mac's 4 performance/6 efficiency cores and the PC's 28
 WSL-visible logical CPUs do not establish comparative speed; no matched run
 exists. The PC's R033 Linux observer/runner and resource checks were
-exercised, so it is the better-supported host for the immediate Astra/high
-physical-path review. The Mac is a plausible future memory-sensitive FEM
+exercised, so retain the PC for the immediate launch/report repair. The Mac is
+a plausible future memory-sensitive FEM
 candidate, but neither workload fit nor relative runtime is established. See
 the [R053 comparison evidence](docs/realizability/evidence/r053/machine_snapshot.json)
 and [handoff assessment](SESSION_HANDOFF.md#r053-machine-task-allocation-checkpoint).
-Complete the review first; only then, if warranted, refresh capacity on both
-hosts and run the same small reference case under unchanged tolerances. No
+Complete the repair and synthetic monitor validation before refreshing capacity
+and running the specified observer/assembly reference on both hosts. No
 physical calculation or matched benchmark was run for this comparison.
 
 For the Mac software inventory (R054), the FEM Conda environment and MPI
@@ -341,12 +347,11 @@ session rather than launching another install. Once verified, use the guide's
 fresh source copy for the one-frame and ten-frame checks. A passing
 movie check establishes visualization readiness; FEM assembly, solving and
 portable resource-monitor validation remain pending. No install or benchmark
-was run as part of R058. Astra/high should complete the PC R021/R013 review
-and set the small FEM reference case/acceptance thresholds before either host is evaluated
-for the scientific workload.
+was run as part of R058. R067 has now specified an observer/assembly reference
+and comparison screens, with no solve benchmark or host winner inferred.
 
-R065 puts the PC scientific review first, followed, if warranted, by portable
-monitor validation and a separately scoped matched comparison. Mac movie
+R065 retained PC ownership. R067 completed its scientific review; launch/report
+repair, portable monitor validation and a separately scoped reference follow. Mac movie
 readiness and visualization benchmarks can be scheduled independently. The workload revision
 stays fixed across later evidence commits; ignored benchmark inputs need an
 explicit checksum-verified transfer. R063 adds a local machine/owner check at

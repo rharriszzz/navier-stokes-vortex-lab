@@ -2682,3 +2682,45 @@ review recorded in `SESSION_HANDOFF.md`.
 **Status:** In progress on PC/WSL `daisy`, branch `main`, based on `c783db182d67409e997f5b18774b824bbbcd871a`. R066 explicitly authorizes this publication. The next task remains the PC Astra/high R021/R013 and FFCx form/cache review with a stop before physical execution; **Continue** is the next prompt.
 
 **Prepared delivery, 2026-09-20:** The six changed files are `AGENTS.md`, `REQUEST_LOG.md`, `SESSION_HANDOFF.md`, `STATUS.md`, `docs/realizability/B1_SETUP.md`, and `docs/realizability/MAC_INSTALL_AND_BENCHMARK_PLAN.md`. The scoped diff and whitespace checks passed; R065's 73 local-link, 18 heading-fragment and seven Bash syntax checks remain applicable. Only the publication record/handoff state changed in R066. No application tests, installation, render, numerical work or Mac process inspection ran, and no background task was launched. The final report supplies the actual delivery commit, push result and clean-status check after publication; do not append an uncommitted delivery note afterward. PC ownership and the next scientific task remain unchanged.
+
+## R067 — 2026-09-20 — Short continuation request
+
+**User request:** “continue”
+
+**Interpreted scope:** Complete the current PC R021/R013 observer/physical-runner scientific review and R056 FFCx form/cache audit; document the decision and, if warranted, a repeatable reference and resource/monitor contract. This invokes the short continuation workflow and authorizes committing and pushing only this bounded task's changes to `origin/main`.
+
+**Ownership/start:** PC/WSL `daisy`, Linux `x86_64`, checkout `/home/rharris/git/navier-stokes-vortex-lab`, matches the retained R065/R066 owner. Clean `main...origin/main`, empty stash list, base/source `73416243fb9857c834d6663cca2235a116253537`. No receiving transfer or new fetch/pull is needed for this same-owner continuation. The user's independent Mac POV-Ray build remains unverified and outside this task.
+
+**Plan/completion/stop:** Read the required research contracts and archived implementation/evidence; statically audit compatibility, lifting, refusal/factorization gates, output/resource reporting and FFCx provenance. Record findings, assumptions, alternatives and one concrete next task. Validate documentation and saved evidence without FEM/JIT execution. Stop at the documented scientific decision before physical execution, solver/method changes, meshes/orders, gate integration, campaign, B3, rendering or encoding.
+
+**Status:** In progress.
+
+## R068 — 2026-09-20 — Clarify Python minimum and pinned runtime
+
+**User request:** “Are you sure we need to have python 3.10, and not something newer?”
+
+**Interpreted scope:** Clarify whether Python 3.10 is required, distinguishing source compatibility, the old MacPorts interpreter and the pinned FEM runtime. Continue R067's review; do not change packages or environment pins based on this question.
+
+**Status:** In progress; checking the repository's declared versions and saved environment evidence.
+
+**Outcome, 2026-09-20 (R068):** Python 3.10 is a source-syntax minimum in the prior agent guidance, not a required interpreter. `environment-b1.yml` already pins Python 3.12.13, and the recorded Mac FEM environment uses that version. The 3.10.19 handoff entry describes the older MacPorts interpreter. Answered during R067; no packages or pins changed.
+
+## R069 — 2026-09-20 — Prefer Python 3.12 on both machines
+
+**User request:** “let's try to do python 3.12 as much as possible, on both machines”
+
+**Interpreted scope:** Adopt Python 3.12 as the preferred project interpreter on PC and Mac, retaining the existing FEM pin of 3.12.13. Align agent/setup/handoff guidance and use the available PC 3.12 interpreter for this review's saved-data checks. Preserve system and MacPorts interpreters; no machine switch or remote installation is implied. Include this scoped documentation correction in R067's authorized publication.
+
+**Status:** In progress alongside R067.
+
+**Outcome, 2026-09-20 (R069):** Adopted Python 3.12 as the preferred project interpreter on both PC and Mac, retaining `environment-b1.yml`'s unchanged 3.12.13 pin. The PC `/tmp/navier-fenicsx/bin/python --version` reports 3.12.13; the Mac version is supported by saved R046/R058 evidence, not a new remote check. Updated `AGENTS.md`, README, B1 setup, Mac guide and handoff; checks use the PC 3.12.13 interpreter. Kept system/MacPorts interpreters and working numerical syntax intact. No package installation or model/machine switch. **Status:** Complete; included in R067 publication.
+
+**R067 outcome, 2026-09-20:** Completed the scientific review in `docs/realizability/B2_PHYSICAL_RUNNER_REVIEW.md`. R033's actual observer tests support ordered P/A_64/A_96 preparation, full-block lifting, compatibility measured on copies, raw refusal preservation and zero factor/solve events. The physical parent is not launch-ready: its 60 s/512 MiB prerequisite predicate is stale, successful reports lack complete source/child-evidence binding, once-only accounting is output-directory-local, early failures lack complete count semantics, and A primary convergence/event checkpoints need immediate validation. These are source/report findings, not new failed physical calculations. The fixed q64/q96 experiment remains warranted after repair and monitoring prerequisites, with unchanged R021/R013 scientific thresholds and no consumed physical attempt here.
+
+**Compiler/cache and host decision:** Verified installed FFCx IR/naming/JIT/header files against Conda per-file hashes; they match the patched 0.10.1 artifact. Symbolic FFCx analysis of four representative forms combines repeated terms before rule aggregation. No geometrical mesh, quadrature-point generation, IR/C generation, JIT, FEM assembly or solve ran. Both surviving R033 isolated-cache inventories match all 112 archived file hashes each; global cache timestamps do not establish which binary each historical solve loaded. No reinstall or historical numerical rerun is warranted. Keep PC ownership for repair. A later frozen polynomial observer/assembly reference with zero solves is specified, including cross-host absolute screens and provisional resource limits; it cannot rank physical LU performance. Mac monitor/memory semantics and a solve benchmark remain later decisions.
+
+**Evidence/checks:** `docs/realizability/evidence/r067/audit.py` and `review.json` verify 19 production identities, all 796 previously committed evidence files, R033 attempt/source hashes, four observer cases, nine oracles and 16 high-order facet checks. Pure evaluation of the archived parent predicate accepts R033's final report but refuses valid 61 s and 600 MiB examples under the updated policy. `inspect_forms.py` and `forms.json` preserve symbolic grouping evidence. No archived evidence, source/config pin, production solver, package or global cache changed. Documentation/final publication checks are recorded below.
+
+**Next task/stop:** Luna/medium on PC for the exact disposable launch/report repair in the new review: standard-library saved/synthetic checks only, 120 s cumulative/256 MiB, physical launch disabled, then evidence/continuity/publication and stop. Recommend Luna/medium for a subsequent bounded portable synthetic-monitor task if mechanical work remains; require Astra/high before FEM launch/scientific interpretation or a numerical-semantic change. The current session catalog and official OpenAI Docs list both recommended model/effort combinations; no switch, delegation or automation occurred. R067 stops before repair implementation or numerical execution. The independent Mac POV-Ray build remains unverified and untouched.
+
+**R067 final checks and prepared delivery, 2026-09-20:** Review complete. Changed Markdown: `AGENTS.md`, `README.md`, `PROJECT_TRACKS.md`, `REQUEST_LOG.md`, `SESSION_HANDOFF.md`, `STATUS.md`, `docs/realizability/B1_SETUP.md`, `docs/realizability/B2_NEXT_STEPS.md`, `docs/realizability/MAC_INSTALL_AND_BENCHMARK_PLAN.md`; added `docs/realizability/B2_PHYSICAL_RUNNER_REVIEW.md`. Added six small review artifacts under `docs/realizability/evidence/r067/`: `audit.py`, `review.json`, `inspect_forms.py`, `forms.json`, `validate_docs.py`, `documentation_validation.json`. Saved-data, symbolic grouping and documentation checks passed; the latter checks local links/headings, 23 Bash blocks by syntax only, new Python AST/JSON, preserved request history with IDs 67–69, unchanged environment/trajectory/render sources and whitespace. Full application tests, numerical toys, MPI, JIT, meshes, assembly/solve, process watchdog exercises, rendering, encoding and installations were not run because this task stops at review. No task background processes were started; all commands exited. Stage only these 16 files, commit and push to configured `origin/main` under R067's authorization. PC ownership is retained. The final report supplies the delivery commit/push/clean-status result; do not leave a post-push uncommitted delivery note.

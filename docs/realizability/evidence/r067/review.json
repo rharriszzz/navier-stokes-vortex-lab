@@ -1,0 +1,88 @@
+{
+  "status": "review_checks_passed",
+  "physical_launch_ready": false,
+  "source_commit": "73416243fb9857c834d6663cca2235a116253537",
+  "python": "3.12.13",
+  "executable": "/tmp/navier-fenicsx/bin/python",
+  "machine": {
+    "system": "Linux",
+    "machine": "x86_64",
+    "hostname": "daisy",
+    "checkout": "/home/rharris/git/navier-stokes-vortex-lab"
+  },
+  "pinned_production_files": 19,
+  "historical_evidence_files_preserved": 796,
+  "archived_observer": {
+    "cases": 4,
+    "oracle_comparisons": 9,
+    "high_order_facet_checks": 16,
+    "all_refusals_preserve_raw": true,
+    "all_factor_solve_events_zero": true
+  },
+  "archived_resources": {
+    "cumulative_seconds": 56.25128577899886,
+    "maximum_tree_rss_mib": 571.421875
+  },
+  "parent_predicate": {
+    "final_R033_report_accepted": true,
+    "valid_61_second_report_refused": true,
+    "valid_600_mib_report_refused": true,
+    "scope": "Pure saved/synthetic dictionary evaluation; no launch"
+  },
+  "physical_sizing": {
+    "cells": 482,
+    "velocity_dofs": 9522,
+    "pressure_dofs": 1928,
+    "real_unknowns": 22900,
+    "old_points_per_facet": 5120,
+    "proposed_points_per_facet": 13312,
+    "q96_retained_basis_gradient_mib": 25.3125,
+    "meaning": "Array subtotal, not a process peak or LU forecast"
+  },
+  "skips": [
+    "FEM mesh generation",
+    "quadrature evaluation",
+    "JIT/C compilation",
+    "FEM assembly",
+    "factorization",
+    "PDE solve",
+    "synthetic process launches",
+    "rendering",
+    "encoding",
+    "installation",
+    "remote Mac inspection"
+  ],
+  "environment": {
+    "prefix": "/tmp/navier-fenicsx",
+    "ffcx": {
+      "version": "0.10.1",
+      "build": "pyhbc3ee6d_1",
+      "url": "https://conda.anaconda.org/conda-forge/noarch/fenics-ffcx-0.10.1-pyhbc3ee6d_1.conda",
+      "sha256": "727926ec2782375707cd036f86ab3d5004d53074ee80cf127619134f763e3473"
+    },
+    "package_files_verified": {
+      "lib/python3.12/site-packages/ffcx/codegeneration/jit.py": "85216ca4f6ca0f5ab3a4f72265dccbfbc3d9441a5d8e646ecc01947f8324d3bb",
+      "lib/python3.12/site-packages/ffcx/codegeneration/ufcx.h": "814e1b94ec09178281deaf6b07b3b750d5dfc6c46dfafcc741f9b6b47bed56c8",
+      "lib/python3.12/site-packages/ffcx/ir/representation.py": "6cfb40125cf63479ed0d8dc044b540fffc457f0ca9bbde14180036d5ea5a8ef8",
+      "lib/python3.12/site-packages/ffcx/naming.py": "9f3e9fd6789087bd1ec5744901c2cef15b4ae750b76546fa13d56fedc86a7ccc"
+    },
+    "patched_accumulation_present": true,
+    "local_task_caches": {
+      "attempt-02": {
+        "available": true,
+        "recorded_files": 112,
+        "all_hashes_match": true
+      },
+      "attempt-03": {
+        "available": true,
+        "recorded_files": 112,
+        "all_hashes_match": true
+      }
+    },
+    "global_cache": {
+      "files": 1002,
+      "earliest_mtime_utc": "2026-09-20T02:33:33.588939+00:00",
+      "limitation": "Timestamps do not bind a loaded binary to a historical solve"
+    }
+  }
+}

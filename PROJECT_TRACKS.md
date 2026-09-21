@@ -141,9 +141,11 @@ advanced child hit the 512 MiB RSS cap before any actual observer case. No
 physical child or PDE solve ran. The subsequent
 [R033 prerequisite completion](docs/realizability/B2_COMPATIBLE_TRACE_PREFLIGHT_FOLLOWUP.md)
 passed the full toy/observer suite under its capacity-sized resource allowance;
-that work is complete and should not be repeated as a new task. The next
-scientific task is the Astra/high R021/R013 observer/physical-runner and FFCx
-form/cache review, stopping before physical execution. The Mac setup task and
+that work is complete and should not be repeated as a new task. The
+[R067 observer/physical-runner and FFCx review](docs/realizability/B2_PHYSICAL_RUNNER_REVIEW.md)
+is now complete. It supports the saved observer tests but requires a disposable
+launch/report repair before physical execution. The next PC task is that
+Luna/medium repair with saved-data and synthetic checks only. The Mac setup task and
 machine-handoff sequence are recorded in the current session handoff.
 The B2 gate remains failed and campaign readiness false. Use
 [SESSION_HANDOFF.md](SESSION_HANDOFF.md) for completion criteria and stops.

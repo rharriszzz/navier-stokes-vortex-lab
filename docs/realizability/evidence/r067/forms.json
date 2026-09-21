@@ -1,0 +1,137 @@
+{
+  "scope": "Symbolic FFCx analysis only; no generated geometry, quadrature points, C, JIT, assembly or solve",
+  "forms": {
+    "sip_velocity_block": {
+      "raw_integrals": 7,
+      "groups": [
+        {
+          "type": "cell",
+          "subdomain": [
+            "otherwise"
+          ],
+          "integrands_after_analysis": 1,
+          "metadata": [
+            {
+              "estimated_polynomial_degree": 2,
+              "quadrature_degree": 2,
+              "quadrature_rule": "default"
+            }
+          ]
+        },
+        {
+          "type": "exterior_facet",
+          "subdomain": [
+            "otherwise"
+          ],
+          "integrands_after_analysis": 1,
+          "metadata": [
+            {
+              "estimated_polynomial_degree": 4,
+              "quadrature_degree": 4,
+              "quadrature_rule": "default"
+            }
+          ]
+        },
+        {
+          "type": "interior_facet",
+          "subdomain": [
+            "otherwise"
+          ],
+          "integrands_after_analysis": 1,
+          "metadata": [
+            {
+              "estimated_polynomial_degree": 4,
+              "quadrature_degree": 4,
+              "quadrature_rule": "default"
+            }
+          ]
+        }
+      ]
+    },
+    "P_T00c_boundary_load": {
+      "raw_integrals": 2,
+      "groups": [
+        {
+          "type": "exterior_facet",
+          "subdomain": [
+            1
+          ],
+          "integrands_after_analysis": 1,
+          "metadata": [
+            {
+              "estimated_polynomial_degree": 11,
+              "quadrature_degree": 11,
+              "quadrature_rule": "default"
+            }
+          ]
+        }
+      ]
+    },
+    "physical_polynomial_load": {
+      "raw_integrals": 1,
+      "groups": [
+        {
+          "type": "exterior_facet",
+          "subdomain": [
+            "otherwise"
+          ],
+          "integrands_after_analysis": 1,
+          "metadata": [
+            {
+              "estimated_polynomial_degree": 4,
+              "quadrature_degree": 4,
+              "quadrature_rule": "default"
+            }
+          ]
+        }
+      ]
+    },
+    "reaction_verification_velocity_block": {
+      "raw_integrals": 8,
+      "groups": [
+        {
+          "type": "cell",
+          "subdomain": [
+            "otherwise"
+          ],
+          "integrands_after_analysis": 1,
+          "metadata": [
+            {
+              "estimated_polynomial_degree": 4,
+              "quadrature_degree": 4,
+              "quadrature_rule": "default"
+            }
+          ]
+        },
+        {
+          "type": "exterior_facet",
+          "subdomain": [
+            "otherwise"
+          ],
+          "integrands_after_analysis": 1,
+          "metadata": [
+            {
+              "estimated_polynomial_degree": 4,
+              "quadrature_degree": 4,
+              "quadrature_rule": "default"
+            }
+          ]
+        },
+        {
+          "type": "interior_facet",
+          "subdomain": [
+            "otherwise"
+          ],
+          "integrands_after_analysis": 1,
+          "metadata": [
+            {
+              "estimated_polynomial_degree": 4,
+              "quadrature_degree": 4,
+              "quadrature_rule": "default"
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

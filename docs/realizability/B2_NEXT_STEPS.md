@@ -11,7 +11,14 @@ the two readings must not be added as if they were separate physical RAM.
 Capacity-sized limits supersede the earlier 60 s/512 MiB toy guards. The
 scientific checks and stop before physical execution remain unchanged.
 
-Current continuation after R033: review the completed
+Current continuation after R067: implement the
+[launch/report repair](B2_PHYSICAL_RUNNER_REVIEW.md#next-task-launch-and-report-repair)
+on PC with Luna/medium and saved/synthetic checks only. No FEM execution.
+R067 completed the observer/physical-runner and FFCx form/cache review; the
+reference fixture and later monitor prerequisites are documented there.
+The following R033 reading sequence and older assignments are historical.
+
+Historical review sequence after R033: review the completed
 [R033 prerequisite result](B2_COMPATIBLE_TRACE_PREFLIGHT_FOLLOWUP.md) and
 [evidence index](B2_COMPATIBLE_TRACE_PREFLIGHT_EVIDENCE.md), then the
 [R022 historical memory stop](B2_COMPATIBLE_TRACE_PREFLIGHT_RESULT.md),
@@ -76,9 +83,9 @@ P, first-A and second-A cases refused with unchanged raw vectors. Each
 observation occurred once, with zero factor or solve events. The maximum
 sampled child-tree RSS across attempts was 571.42 MiB under a 1536 MiB cap; the
 final cache-reuse pass peaked at 171.24 MiB. No production files changed and
-no physical child ran. Next is an **Astra/high review** of the exercised
-observer and remaining physical path before deciding whether to run a
-separately scoped R021 comparison. Older assignments below are historical.
+no physical child ran. R067 subsequently completed the **Astra/high review**
+and identified launch/report repairs. Follow the current task above; older
+assignments below are historical.
 
 Follow-up at commit `a6295da`: the reference and cube audit are implemented.
 The new [stability review](B2_STABILITY_REVIEW.md) tests the actual cylinder

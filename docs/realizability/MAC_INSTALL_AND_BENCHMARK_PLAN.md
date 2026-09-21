@@ -1,45 +1,47 @@
 # Finish Mac setup and compare it with the PC
 
-Updated 2026-09-20 for R065's choice to continue on the PC. Inspected Mac
-readiness remains from R058; the user now reports a POV-Ray build in progress.
-Its completion has not been verified by this session.
+Updated 2026-09-20 after R067's PC scientific review and R069's Python 3.12
+preference. Mac readiness remains from R058; the user's POV-Ray build completion
+has not been verified by this session.
 
 ## Immediate next step and sequence
 
-**Stay on the PC for the R021/R013 and FFCx form/cache scientific review using
-GPT-6 Astra/high. Stop after its documented decision, before numerical
-execution.** The Mac POV-Ray build and movie checks are independent of this
-review and do not block it. `Continue` on the PC selects that review.
+**Stay on PC for the disposable launch/report repair using GPT-5.6 Luna/medium.**
+Use the [R067 contract](B2_PHYSICAL_RUNNER_REVIEW.md#next-task-launch-and-report-repair):
+saved-data and synthetic checks only, then stop before FEM execution. `Continue`
+selects that repair. The scientific review is complete and must not be repeated
+as a new task. Mac movie readiness is independent.
 
 Use the [machine handoff procedure](../../AGENTS.md#switching-between-the-mac-and-pc)
 when the user later chooses to switch. The PC retains repository ownership;
-the independent Mac package build can continue. Do not start a duplicate
-build or assume the Mac checkout has received this local R065 priority change.
+the independent Mac package build can continue. Do not start a duplicate build.
 
 The scientific sequence is:
 
-1. Complete the PC Astra/high R021/R013 and FFCx form/cache review. Finish with
-   a documented decision and, if warranted, a repeatable FEM
-   reference fixture, acceptance rules and resource contract. Stop before
-   execution. The once-only physical q=64/q=96 experiment is a separate task.
-2. Implement and validate the portable benchmark wrapper on each host using
-   synthetic processes; freeze its source with the selected cases. Check PC
-   POV-Ray/ffmpeg availability too; existing Mac readiness says nothing about
-   PC visualization tools. Record monitor/version compatibility on both hosts.
-3. Execute the separately scoped matched comparison in sequential host sessions
-   with the same frozen workload and input artifacts. Collect both reports,
-   check outputs first, then recommend a host per task. Stop on the first
-   contract failure; do not run the physical experiment as a benchmark fallback.
+1. Repair the disposable launch/report safeguards under R067; stop after its
+   saved/synthetic evidence and publication. Preserve old sources and run budgets.
+2. Implement and validate portable process-tree and host-pressure monitoring
+   using synthetic processes, first on PC and later in an explicitly transferred
+   Mac session. Freeze the monitor and selected fixture source before timing.
+3. Execute the separately scoped
+   [R067 observer/assembly reference](B2_PHYSICAL_RUNNER_REVIEW.md#repeatable-reference-decision)
+   sequentially on both hosts after their prerequisites pass. Collect reports,
+   check unchanged correctness screens, then compare cold JIT and warm assembly.
+   This reference has zero factor/solve events; it cannot rank physical LU solves.
 
-Visualization comparisons need their own fixed contract and monitor checks and
-can be explicitly scheduled independently of the FEM review. They do not need
-to wait for a passing physical accuracy gate. No FEM fixture, launch allowance,
-cross-host tolerance or validated Mac monitor has yet been selected by this guide.
+R067 defines the polynomial reference, expected outputs, comparison screens and
+provisional 600 s/1536 MiB per-host allowance. Mac available-memory semantics
+and monitoring still require validation. A matched solve fixture and physical
+host choice remain later scientific decisions. The once-only q64/q96 physical
+experiment is separate and must never serve as a repeatable benchmark.
 
-**Deferred Mac task:** after the current POV-Ray build finishes and the user
-chooses to work on the Mac, verify the build and run the isolated movie checks
-below using Luna/medium. This establishes visualization readiness, not a speed
-ranking. Its completion does not require repeating a completed PC review.
+Visualization comparisons need their own frozen contract and monitor checks
+and can be explicitly scheduled independently. Check PC POV-Ray/ffmpeg
+availability too; existing Mac readiness says nothing about PC tools.
+
+**Deferred Mac task:** after the current build finishes and the user chooses to
+work on the Mac, verify the build and run the isolated movie checks below using
+Luna/medium. This establishes visualization readiness, not a speed ranking.
 
 ## What remains to install
 
@@ -102,6 +104,7 @@ From the repository root:
 ```bash
 source "$HOME/miniconda3/etc/profile.d/conda.sh"
 conda activate navier-stokes-vortex-b1
+python --version
 python -c 'import sys, platform, numpy; print(sys.executable); print(platform.machine()); print("NumPy", numpy.__version__)'
 conda list --show-channel-urls fenics-ffcx
 command -v povray
@@ -109,6 +112,7 @@ command -v ffmpeg
 command -v ffprobe
 ```
 
+Prefer Python 3.12 on both machines (R069); the existing FEM pin is 3.12.13.
 Use this Python consistently for the checks. This avoids accidentally using
 the older `/opt/local/bin/python3` environment. Use native arm64 on this Mac;
 do not solve the environment for Intel/Rosetta or copy Linux binaries/JIT caches.
@@ -188,13 +192,13 @@ observer/watchdogs; the Mac is a candidate for future FEM work.
 
 Trajectory/render/encode checks can proceed independently of the physical
 research review, as described in [Project Tracks](../../PROJECT_TRACKS.md).
-For FEM, first complete the [current PC scientific review](../../SESSION_HANDOFF.md#next-task)
-on the PC: the [R021 contract](B2_COMPATIBLE_TRACE_INTEGRATION_REVIEW.md),
-[R013 limits](B2_MATCHED_TRACE_REVIEW.md), [R033 result](B2_COMPATIBLE_TRACE_PREFLIGHT_FOLLOWUP.md)
-and R056 form/cache audit. Document the proposed small reference fixture,
-expected numerical outputs, acceptance checks and resource allowance. That
-review ends before physical execution. A subsequent scoped task may implement
-and run the approved comparison; this checklist itself is not its authorization.
+R067 completed the [PC scientific review](B2_PHYSICAL_RUNNER_REVIEW.md) against
+the [R021 contract](B2_COMPATIBLE_TRACE_INTEGRATION_REVIEW.md),
+[R013 limits](B2_MATCHED_TRACE_REVIEW.md) and [R033 result](B2_COMPATIBLE_TRACE_PREFLIGHT_FOLLOWUP.md),
+including the FFCx audit. Its launch/report repair is next, followed by synthetic
+monitor validation. A subsequent scoped task may implement and run the
+specified observer/assembly comparison; this checklist itself is not its
+execution authorization.
 
 Do not run `B1_SETUP.md`'s general solver examples, a B2 campaign, or an archived
 physical runner merely as an installation check. An archived runner may have
@@ -313,7 +317,7 @@ is missing. Repository synchronization alone does not transfer ignored outputs.
 | Trajectory generation | `python make_trajectories.py --frames 240 --fps 30 --beads 500 --substeps 8 --seed 20260919` | 240 includes; first/middle/last inspection; all finite coordinates and stated bounds; same-host repeat hashes; cross-host numeric/scalar comparison if hashes differ. |
 | POV-Ray | Same 240-frame includes and scene; render frames 1–10 at 1280x720, `+A0.2 -J -D -V +WT1`, overlays unchanged | Ten PNGs; inspect frames 1, 5, 10; compare decoded pixels if hashes differ. Keep `+KFF240` so timeline/numbering matches the input case. |
 | Encoding | Identical ten PNGs; software `libx264`, preset `medium`, CRF 18, 30 fps, `yuv420p`, one thread | `ffprobe` codec/dimensions/fps/count/duration; decode successfully; compare decoded content, not only MP4 hashes/container metadata. |
-| FEM | Fixture selected by the scientific review; identical mesh artifact and tags, method/order/quadrature, parameters, solver, ranks and tolerances | Record mesh/DOF counts, assembly/solve/output checks, residuals, iterations, observables and reference errors. Require both the fixture's acceptance and cross-host agreement under rules fixed before execution. |
+| FEM assembly/observer | R067's frozen polynomial reference tetrahedra and R033 advanced observer suite; same method/orders, parameters, ranks and tolerances | Four observer cases, nine oracle comparisons, 16 facet checks, zero factor/solve events and unchanged arithmetic/flux screens; cross-host comparison under R067. A solve benchmark needs a separate contract. |
 
 The renderer command for the fixed case, after creating empty `frames/`:
 
@@ -387,20 +391,18 @@ both hosts reproduce it.
 
 ## Completion and model handoff
 
-The current PC review is complete when its scientific decision, remaining risks
-and any proposed repeatable reference/monitor contract are documented. Stop
-before numerical execution and choose the next bounded PC task from those
-findings. Retain Astra/high for numerical choices or unexplained differences;
-recommend Luna/medium for a bounded monitor
-implementation only after its contract is settled. Each step of the sequence
-above is a separate bounded task, not one automatic multi-machine execution.
+The PC review is complete. Follow the R067 launch/report repair with Luna/medium,
+then stop after saved/synthetic validation and publication. Recommend Luna/medium
+for a separately bounded monitor implementation once its contract is settled;
+return to Astra/high for FEM launch decisions or unexplained numerical behavior.
+Each step is separate, not one automatic multi-machine execution.
 
 The deferred Mac check is complete when counts, coordinates, separated images
 and decoded MP4 metadata pass and evidence is recorded. Stop on an install/check
 failure or after that report, then follow the current handoff without replaying
 completed research work.
 
-R062 rechecked the session catalog and the official
+R067 rechecked the session catalog and the official
 [Luna](https://developers.openai.com/api/docs/models/gpt-5.6-luna) and
 [Astra](https://developers.openai.com/api/docs/models/gpt-6-astra) effort support.
 Both are available in this session; recheck availability when executing. No

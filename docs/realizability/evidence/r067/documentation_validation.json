@@ -1,0 +1,24 @@
+{
+  "status": "passed",
+  "markdown_files": 10,
+  "local_links": 159,
+  "heading_fragments": 26,
+  "bash_blocks_syntax_only": 23,
+  "new_request_ids": [
+    67,
+    68,
+    69
+  ],
+  "request_history_prefix_preserved": true,
+  "unchanged_runtime_pins_and_trajectory_render_sources": true,
+  "symbolic_forms": 4,
+  "physical_execution": false,
+  "checks": "Links/headings, Bash syntax without execution, Python AST, JSON, request continuity, source preservation and whitespace",
+  "artifacts": {
+    "audit.py": "618779463a395ed920547204ffe4c74c37cfa7d805d8ba94388ec943f788177f",
+    "forms.json": "d3add1f6be9784d7f93fd28ed581f79ac759138a13bcbec2031b35cd4d19c6d7",
+    "inspect_forms.py": "3265d1e9ff3c36e4a1218fecf6c5be565cac5aed1972c9f56337e4d35ee1c0db",
+    "review.json": "5cbea3233a131eefbbeebbc0dfd896b840a4c193db5a59391ce956d2b070629b",
+    "validate_docs.py": "e4dece1c31aefb10b121daba844683c70ae3e879e7a8857a039d04596ad7799a"
+  }
+}

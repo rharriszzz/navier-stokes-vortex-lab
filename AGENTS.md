@@ -365,7 +365,8 @@ Avoid:
 
 Use:
 
-- Python 3.10+ compatible syntax,
+- Python 3.12 as the preferred project interpreter on both PC and Mac; the
+  reproducible FEM environment pins Python 3.12.13 in `environment-b1.yml`,
 - NumPy,
 - standard library only where practical,
 - type hints for public helper functions when they improve clarity,
@@ -373,6 +374,14 @@ Use:
 - clear command-line parameters if configuration grows.
 
 Do not introduce heavy dependencies without a concrete benefit.
+
+Check `python --version` and the executable path after activating the intended
+environment. Prefer that Python 3.12 environment for trajectory generation,
+validation and utility scripts too. Keep system/MacPorts interpreters intact;
+do not downgrade to 3.10 because an old record mentions it. If 3.12 is unavailable
+for a task, record the exception and resolve the environment before numerical
+comparisons. This preference does not require rewriting working syntax or
+installing FEM dependencies into a separate NumPy-only visualization environment.
 
 ## Git discipline
 

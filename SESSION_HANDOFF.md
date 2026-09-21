@@ -1,42 +1,49 @@
 # Current session handoff
 
-Last updated: 2026-09-20. Current task selection:
-[R065](REQUEST_LOG.md#r065--2026-09-20--make-the-pc-review-next-while-pov-ray-builds-on-the-mac)
-keeps work on the PC while the user builds POV-Ray on the Mac. **The next task
-is the PC scientific review with GPT-6 Astra/high; Mac movie readiness is not
-a prerequisite.** This explicit change of priority supersedes R064's proposed
-Mac handoff. The Mac build is user-reported and its completion is unverified;
-do not restart or interfere with it from this session.
+Last updated: 2026-09-20 for [R067](REQUEST_LOG.md#r067--2026-09-20--short-continuation-request)
+and R068/R069's Python clarification/preference. **The PC scientific review is
+complete. Next: a disposable launch/report repair on this PC using GPT-5.6
+Luna/medium, with saved-data and synthetic checks only.** Read the
+[R067 review and exact repair contract](docs/realizability/B2_PHYSICAL_RUNNER_REVIEW.md).
+No physical execution or FEM benchmark is authorized by this handoff.
 
-R064 was committed and pushed as `c783db1`; that publication is complete.
-[R066](REQUEST_LOG.md#r066--2026-09-20--publish-the-pc-first-task-sequence)
-authorizes publication of R065's scheduling correction. Verify the delivery
-commit and successful push in the final publication report/Git history. This
-publication retains PC ownership. No scientific review, installation, rendering
-or benchmark was executed during the rearrangement or publication.
+The observer's saved P/A/A tests pass. The archived physical parent still has
+stale prerequisite caps, incomplete evidence binding and early-failure reports;
+primary convergence/event checkpoints also need repair. R067 verified the
+patched FFCx package files and symbolic form grouping; no reinstall or historical
+physical rerun is indicated. Its [audit](docs/realizability/evidence/r067/review.json)
+preserves all 19 production pins and 796 old evidence files. No physical mesh,
+JIT, assembly, factorization or PDE solve ran. B2 accuracy remains failed.
+
+Prefer **Python 3.12 on both machines**, retaining `environment-b1.yml`'s
+**3.12.13** pin. The PC executable `/tmp/navier-fenicsx/bin/python` was checked
+live in R069; the Mac Conda environment's 3.12.13 is from saved readiness
+records. Activate the intended environment and verify its version/path. The
+historical MacPorts Python 3.10.19 is not the required project interpreter.
+No package installation, pin change or remote Mac check occurred.
 
 | Handoff field | Current value |
 |---|---|
-| Current task/owner | PC/WSL retains ownership by R065; documentation rearrangement complete, scientific review next |
-| Observed local identity | Hostname `daisy`, Linux/WSL2, `x86_64`, checkout `/home/rharris/git/navier-stokes-vortex-lab` |
-| Branch/upstream | `main` / `origin/main` |
-| Inspected base/source commit | `c783db182d67409e997f5b18774b824bbbcd871a`; clean `main...origin/main` at R065 start; no new fetch/pull performed |
-| Delivery state | R066 authorizes this six-file publication; identify the delivery commit by its R066 entry and verify the push before any future machine switch |
-| Intended next owner/task | Same PC: R021/R013 observer/physical-runner and FFCx form/cache review, Astra/high |
-| Task processes | R065 launched no background workloads; independent Mac POV-Ray build reported by user, not inspected |
-| Required transfer inputs | None for this PC review; required source and archived evidence are already in this checkout |
-| Next stop | Documented scientific decision and, if warranted, reference/monitor contract; stop before numerical execution |
+| Current task/owner | PC/WSL retains ownership; R067 review complete, mechanical repair next |
+| Observed identity | `daisy`, Linux/WSL2, `x86_64`, `/home/rharris/git/navier-stokes-vortex-lab` |
+| Branch/upstream | `main` / `origin/main`; clean at R067 start, stash list empty |
+| Source/base commit | `73416243fb9857c834d6663cca2235a116253537`, the R066 publication; no new fetch/pull required for same-owner continuation |
+| Delivery state | R067's Continue authorizes this scoped review and R068/R069 documentation; final report/Git history gives the actual delivery hash and push result |
+| Task processes | Review/check commands exited; no background workload started. Independent Mac POV-Ray build remains user-reported and unverified |
+| Required next inputs | Committed R033 source/reports and R067 contract; no irreplaceable ignored input, cache or binary transfer required |
+| Consumed experiments | R033 prerequisites: four attempts, 56.25128577899886 s; q64/q96 physical attempt: unused. R020 remains last physical attempt |
+| Next stop | New disposable parent/report source and saved/synthetic validation; stop before FEM/MPI/JIT or physical work |
 
-Use [Next task](#next-task) as the single current execution task. The
-[deferred Mac movie check](#deferred-mac-setup-check) waits for a later user-selected
-switch and a completed build. The historical sections
-below explain prior results and superseded recommendations, not additional
-current assignments. R062's checks and skips are in
-[review evidence](docs/realizability/evidence/r062/documentation_validation.json).
-R065's documentation checks passed (73 local links, 18 heading fragments,
-seven unchanged shell blocks, preserved request history and whitespace); its
-[request entry](REQUEST_LOG.md#r065--2026-09-20--make-the-pc-review-next-while-pov-ray-builds-on-the-mac)
-records the six changed files and execution skips. All check commands exited.
+Use [Next task](#next-task) as the single current execution task. All older
+next-task recommendations below are historical. The
+[deferred Mac movie check](#deferred-mac-setup-check) waits for a later
+user-selected switch and verification of the existing build. R067 also
+specifies an observer/assembly reference for later host comparison, contingent
+on repaired launch reporting and validated monitors; it is not a solve benchmark.
+The [documentation checks](docs/realizability/evidence/r067/documentation_validation.json)
+cover links/headings, Bash syntax without execution, Python/JSON, request
+continuity and preserved source pins. Changed-file and skip inventories are in
+R067's request-log outcome. All check commands exited; no child workload remains.
 
 ## Previous publication and readiness
 
@@ -577,43 +584,36 @@ native arm64 DOLFINx 0.10.0/Python 3.12.13 package metadata.
 
 ## Next task
 
-**Stay on the PC and perform the R021/R013 scientific review with GPT-6
-Astra/high.** This is the task selected by `Continue`. It can proceed while the
-user's independent POV-Ray build runs on the Mac; no Mac installation, movie
-check or machine transfer is required for this review.
+**Stay on PC; use GPT-5.6 Luna with medium reasoning for the
+[R067 launch/report repair](docs/realizability/B2_PHYSICAL_RUNNER_REVIEW.md#next-task-launch-and-report-repair).**
+`Continue` selects that bounded implementation, not another scientific review.
 
-Review the now-exercised disposable observer and remaining physical runner
-against the unchanged R021/R013 contract before deciding whether to conduct a
-separately scoped matched-trace physical comparison. Recommend **GPT-6 Astra
-with high reasoning** for this scientific review. R065 rechecked that Astra/high
-and Luna/medium remain in the session catalog; R062 checked official model pages:
-[Luna](https://developers.openai.com/api/docs/models/gpt-5.6-luna) and
+Read that review, its evidence, the archived R033 parent/physical helpers and
+R021/R013 contracts. Create a new disposable harness copy; preserve archived
+sources and all 19 production identities. Fix declared-policy validation,
+source/child-report binding, attempt accounting, finite refusal/unknown-count
+reports, immediate A primary convergence checks, and per-solve factor/event
+checks. Keep one guarded launch path, disabled for actual physical execution
+until a subsequent reviewed launch task.
+
+Use Python 3.12.13 and the exact saved-data/synthetic cases specified by R067.
+Budget: 120 s cumulative/256 MiB for standard-library validation, recording
+all attempts. No DOLFINx/MPI import, JIT, new mesh, numerical fixture,
+factorization, PDE solve, render, encode or package change. Completion is new
+source plus passing focused checks/evidence audit, updated log/handoff,
+authorized scoped commit/push, and stop. Failure or a numerical-semantic change
+requires preserving evidence and recommending Astra/high.
+
+After a successful mechanical repair, recommend Luna/medium for a separately
+bounded portable synthetic monitor task; require Astra/high before a FEM launch
+or scientific interpretation. The later observer/assembly reference is defined
+in R067; its cross-host implementation and Mac memory monitor remain pending.
+A physical solve benchmark and host choice remain scientific decisions.
+
+Model availability was rechecked in the session catalog and with OpenAI Docs:
+[Luna](https://developers.openai.com/api/docs/models/gpt-5.6-luna),
 [Astra](https://developers.openai.com/api/docs/models/gpt-6-astra).
-The review should check the saved P/A/A compatibility logic, the independent
-full-block lifting oracle, refusal preservation and no-factorization sentinel;
-then inspect physical launch gates, report counts, resource checks and output
-validation against the R021 fixed q=64/q=96 experiment and R013 thresholds.
-It should state assumptions, alternatives, unresolved numerical risks and
-whether a separate physical experiment is warranted. Also compare the Mac and
-PC against the estimated physical workload; do not recommend migration from
-installed RAM alone.
-
-Include R056's audit of UFL forms with multiple integrals sharing a quadrature
-rule and the provenance of any relied-upon compiled cache. If a host comparison
-is warranted, specify a repeatable non-campaign reference fixture, expected
-outputs, unchanged scientific thresholds, cross-host comparison rules and
-resource/headroom allowances. Explicitly separate it from the once-only
-physical q=64/q=96 experiment. The next implementation task can then validate
-portable synthetic watchdogs before either host launches that FEM fixture.
-
-Completion is a documented review and a separate decision boundary. Stop before
-physical execution, solver changes, new meshes/orders, pressure/return-flow
-repair, gate integration, campaign, B3, rendering or encoding. If the review
-finds only a clearly understood mechanical defect, recommend GPT-5.6 Luna with
-medium reasoning for a narrow repair. Retain GPT-6 Astra/high for unexplained
-results or any scientific/numerical-method decision. Recommend one concrete
-next PC task from the review's findings; a Mac switch is a separate user choice.
-No model switch or automation occurred. **Next prompt here on the PC: Continue.**
+No switch or automation occurred. **Next prompt on PC: Continue.**
 
 ## Deferred Mac setup check
 

@@ -88,7 +88,7 @@ Primary development environment:
 - Windows 11
 - WSL2 Ubuntu
 - VS Code with Remote - WSL
-- Python 3 + NumPy
+- Python 3.12 + NumPy (preferred on both PC and Mac)
 - POV-Ray
 - ffmpeg
 - Git
@@ -106,11 +106,21 @@ rather than under `/mnt/c/...`.
 
 ### 1. Create a virtual environment
 
+Use Python 3.12 for project work. The existing isolated FEM environment already
+pins 3.12.13 and can run the trajectory utilities too; activate it instead of
+creating another environment if that suits your setup. For a separate
+visualization environment, use an installed Python 3.12:
+
 ```bash
-python3 -m venv .venv
+python3.12 -m venv .venv
 source .venv/bin/activate
-pip install -r requirements.txt
+python -m pip install -r requirements.txt
 ```
+
+After activation, check `python --version` and `python3 --version` (the shell
+renderer invokes `python3`). Both should resolve to the selected 3.12 environment.
+Keep system/MacPorts interpreters intact. See the [FEM setup guide](docs/realizability/B1_SETUP.md)
+for its separate pinned dependencies; a NumPy-only environment cannot run FEM.
 
 ### 2. Generate tracer trajectories
 

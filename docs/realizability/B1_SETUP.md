@@ -3,12 +3,20 @@
 For this Mac's remaining install steps and future comparison with the PC, use
 [MAC_INSTALL_AND_BENCHMARK_PLAN.md](MAC_INSTALL_AND_BENCHMARK_PLAN.md). Its
 installed environment already passed imports/MPI. The general solver commands
-below describe available checks; the [current PC scientific review](../../SESSION_HANDOFF.md#next-task)
-still calls for review before physical execution. A visualization smoke test
+below describe available checks; the [current PC repair task](../../SESSION_HANDOFF.md#next-task)
+permits saved/synthetic checks only. R067's scientific review is complete,
+and physical execution remains deferred. A visualization smoke test
 does not establish FEM readiness.
 
 B1 uses a separate conda-forge environment so the visualization pipeline keeps
 its small NumPy-only dependency set.
+
+Prefer **Python 3.12 on both PC and Mac** for project work (R069). This
+environment already pins **3.12.13**. After activation, check `python --version`
+and `python -c 'import sys; print(sys.executable)'`. Use it for project utilities
+and trajectory checks too, or use a separate Python 3.12/NumPy environment for
+visualization. The historical MacPorts Python 3.10.19 is not the FEM interpreter.
+Keep system interpreters intact and retain the existing reproducibility pins.
 
 Create it with a conda-compatible client:
 
@@ -46,10 +54,10 @@ In restricted sandboxes, MPI may require execution outside the sandbox because
 even a serial communicator initializes local IPC and network interfaces. That
 environment limitation is separate from the mathematical solver.
 
-Run NumPy-only tests with the ordinary interpreter:
+Run NumPy-only tests with the selected Python 3.12 interpreter:
 
 ```bash
-python3 -m unittest discover -s tests/realizability -p 'test_*.py'
+python -m unittest discover -s tests/realizability -p 'test_*.py'
 ```
 
 Run B1 checks inside the isolated environment:
