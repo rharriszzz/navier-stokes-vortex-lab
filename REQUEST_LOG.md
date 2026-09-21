@@ -2966,3 +2966,40 @@ These are user-reported prior-session values, not measurements of this review or
 **Startup/status:** PC/WSL daisy, Linux/x86_64, /home/rharris/git/navier-stokes-vortex-lab; matches retained owner. Clean main/origin/main, empty stashes, no open lifecycle record. Required clean pull was already up to date; HEAD and fetched upstream both 26f7071a54096822fec78b9ebb16d248870103f1. R084 completion and current handoff reviewed; no incoming changes or ignored required inputs. Python 3.12.13 verified at /tmp/navier-fenicsx/bin/python. STARTED publication pending.
 
 **Bounded plan/completion/stop:** Read required research and R081/R083/R084 documents and source. Review G01–G07, all 22 saved fixture results, independent ownership/cleanup, strict R070 acceptance, ledger arithmetic, snapshots and reconciliations. Publish finding-to-evidence map and one next task with explicit OS-harness go/no-go boundary. Source/saved-data checks only; any needed counterexample must be fake and bounded. Stop at unexplained resource/source/lifecycle inconsistencies or required policy decisions, and before native implementation/build/startup, live OS/cgroup/signal/workload, FEM/MPI/JIT or physical execution. Preserve archives/pins and 180 s / 1536 MiB physical limits; q64/q96 remains unused. No delegation or automation requested.
+
+## R086 — 2026-09-21 — Confirm receipt of /status output
+
+**User request:** “idi youb also get the result from /status”
+
+**Scope/outcome:** Clarify receipt while R085 continues. Received the pasted Codex banner, token totals and resume ID, already recorded in R085 and published in 5e70f07. No separate /status result has appeared in this conversation. Answered this directly; no missing output was invented and no private session file was read. This clarification adds no experiment or independent Continue lifecycle.
+
+**R085 supplied /status addendum, 2026-09-21 (also resolves R086):** The user subsequently provided the separate /status output. Preserved below with decorative borders omitted and account email redacted for the shared Git log. Displayed reset times are copied literally; timezone/date interpretation and current balances are not inferred. This is prior-session context, not a new task.
+```text
+Worked for 34m 46s · done 12:12 PM
+/status
+>_ OpenAI Codex (v0.155.1)
+Visit https://chatgpt.com/codex/settings/usage for up-to-date information on rate limits and credits
+Model: gpt-5.6-luna (reasoning medium, summaries auto)
+Model provider: openai
+Directory: ~/git/navier-stokes-vortex-lab
+Permissions: Workspace (Ask for approval)
+Agents.md: AGENTS.md
+Account: [REDACTED account email] (Plus)
+Thread name: Continue
+Collaboration mode: Default
+Session: 01a0c49e-9ab9-7ce2-82af-c5ad80a35d01
+Context window: 91% left (35.2K used / 258K)
+5h limit: 100% left (resets 20:34)
+Weekly limit: 22% left (resets 02:04 on 27 Sep)
+Credits: 373 credits
+Luna Reserve Weekly limit: 1% left (resets 18:03 on 26 Sep)
+```
+No separate /new output or prior final-answer text has been supplied beyond these excerpts. R086's earlier receipt statement describes what was available then; this addendum records the later arrival without rewriting history.
+
+**R085 outcome, 2026-09-21:** Recorded the supplied prior-session banner/token totals/resume ID and later runtime plus /status snapshot; redacted account email and retained displayed reset strings without inferring dates/timezones. R086 is resolved by the later arrival. Clean pull was up to date; STARTED was committed/pushed as 5e70f07 before substantive work. Completed R084's G01–G07 and all-22-function acceptance/ownership/provenance review. New docs/realizability/B2_MONITOR_R084_REVIEW.md and evidence/r085/ confirm 64 source bindings, 192 snapshots, exact registry/saved-result correspondence, both reconciliations, final digest and derived arithmetic. Four residual groups prevent OS implementation: incompatible/unbound ownership cleanup, callback/persistence deadline holes, incomplete terminal/ordered/fixed-bound protocol state, and exact-type/outer-accounting/input-provenance gaps. Positive G04/G05 controls pass. Preserve R084's 15.69079346198123 s charge and 30,060,544 B child peak; attempt 1 lacks saved per-function progress, and no historical full-outer/all-input certification is inferred.
+
+**Audit/checks/skips:** One Python 3.12.13 bounded fake/source audit passed 14 result groups without retry; child 0.067043563 s and 25,903,104 B lifetime RSS, recorder-main through pre-final-persistence 0.107411566 s. Its 10 s child timeout / 5 s CPU / 256 MiB address space / 64 KiB per-file limit was inside a 30 s review reservation; interpreter startup/imports and final fsync are excluded, so no full-recorder compliance claim. No archived validator main/recorder was replayed. Final documentation/preservation checks follow. A later read-only metadata inspection assumed attempt 1 had partial_fixture_progress and raised KeyError; inspection confirmed the field is absent, and the review reports that absence. This was not another fixture attempt or an archive mutation. No native source/build/helper/startup, OS adapter/cgroup/signal/workload, FEM/MPI/JIT, render/encode or physical run occurred.
+
+**Files/next/stop/release:** Changed REQUEST_LOG.md, WORK_SESSIONS.md, SESSION_HANDOFF.md, STATUS.md, PROJECT_TRACKS.md, docs/realizability/B2_NEXT_STEPS.md, B2_MONITOR_ADAPTER_REVIEW.md, B2_MONITOR_LIVE_VALIDATION_CONTRACT.md; added B2_MONITOR_R084_REVIEW.md and evidence/r085/. PC/WSL daisy retains ownership; audit child/recorder have exited, no task background process or ignored input transfer, independent Mac POV-Ray build remains unverified. Current next task: GPT-6 Astra/high, one new fixture-only integration repair of H01–H04, with explicit schema/transition table and composed fake owner/core/transport/acceptance tests, 120 s total fixture reservation / 256 MiB validator. Preserve archives/pins, hard-disabled physical entry, 180 s / 1536 MiB physical limits and unused q64/q96 allowance. Stop at policy/source/lifecycle/resource uncertainty and before native source/build/startup, live OS/cgroup/signal/workload, FEM or physical execution. Review acceptance before the separately bounded conditional OS source task; Luna/medium only when remaining interfaces and work are mechanical, Astra/high at contract/scientific decisions. Availability/efforts checked in session catalog and official OpenAI Docs; prior Luna 1% reserve is historical. No model switch, delegation or automation claimed. Completion/delivery separate: final scoped publication is authorized and prepared, actual outcome/hash follows push with no later log edit.
+
+**R085 final validation, 2026-09-21:** Documentation/integrity checker passed: 1,390 unchanged baseline files including all 1,300 pre-existing evidence files, both published log prefixes, 86 unique request IDs, one R085 STARTED/COMPLETED pair, single handoff task, 189 local links/27 fragments, three new Python syntax files, three finite audit JSON files, all 273 audit input/source bindings, and 61 source bindings each for R076 and R082. Scoped whitespace passed. Evidence: docs/realizability/evidence/r085/documentation_validation.json. First documentation-check invocation stopped on an assertion that did not normalize a Markdown line wrap; corrected the checker, then passed. No audit or archived fixture was rerun. Final staged checks and publication outcome follow; no post-push log edit.

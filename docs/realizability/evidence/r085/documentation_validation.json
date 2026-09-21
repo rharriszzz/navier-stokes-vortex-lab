@@ -1,0 +1,22 @@
+{
+  "append_only_logs": 2,
+  "archive_source_bindings": {
+    "r076": 61,
+    "r082": 61
+  },
+  "audit_bound_files": 273,
+  "audit_runs": 1,
+  "base_commit": "26f7071a54096822fec78b9ebb16d248870103f1",
+  "checker_sha256": "00bd396d50a30edd8a6ac78e48dbade4c7f6a080e286d2952f1499359c16a28f",
+  "delivery_state": "completion prepared; publication outcome reported after push",
+  "finite_json_files": 3,
+  "heading_fragments": 27,
+  "live_or_physical_runs": 0,
+  "local_links": 189,
+  "preserved_evidence_files": 1300,
+  "preserved_files": 1390,
+  "published_start": "5e70f07",
+  "python_syntax_files": 3,
+  "status": "passed",
+  "unique_request_ids": 86
+}

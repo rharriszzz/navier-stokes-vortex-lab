@@ -27,8 +27,9 @@ fixture copy passes all 22 registered groups in attempt 3, after two non-resourc
 fixture assertion failures were preserved and source-bound reconciliations were
 recorded within the original 120 s allowance. The physical CLI/API remains
 disabled. Follow the single [handoff task](../../SESSION_HANDOFF.md#next-task):
-Astra/high reviews R084 acceptance, ownership and provenance before any OS
-implementation is separately bounded. The live suite remains unimplemented
+The [R085 review](B2_MONITOR_R084_REVIEW.md) is complete and selects Astra/high
+for an integrated fixture repair of residual ownership, timing, protocol and
+accounting gaps before OS implementation. The live suite remains unimplemented
 and unauthorized. The
 [Mac/PC performance and memory plan](MAC_PC_PERFORMANCE_MEMORY_PLAN.md) defines
 future comparisons. Live adapters remain unvalidated; physical execution is

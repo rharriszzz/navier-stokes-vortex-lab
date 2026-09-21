@@ -1,0 +1,143 @@
+{
+  "G04_G05_rebound_positive_and_negative_controls": "passed",
+  "H01_held_failure_skips_both_domains": {
+    "calls": [],
+    "state": "OWNED_HELD"
+  },
+  "H01_owner_output_rejected_by_core": "workload cleanup result schema invalid",
+  "H01_unowned_cleanup_accepted": {
+    "child": [
+      [
+        999,
+        999
+      ]
+    ],
+    "status": "complete",
+    "watch": [
+      [
+        10,
+        7
+      ]
+    ]
+  },
+  "H02_cleanup_checkpoint_overrun_accepted": {
+    "cleanup_errors": [],
+    "elapsed_seconds": {
+      "cleanup": 6.0,
+      "report": 0.0,
+      "run": 0.0,
+      "setup": 0.0,
+      "total": 6.0
+    },
+    "status": "completed"
+  },
+  "H03_over_contract_frame_accepted": 4379,
+  "H03_regressing_reply_brackets_accepted": [
+    0.2,
+    0.1
+  ],
+  "H03_request_failure_not_terminal": "valid reply accepted after duplicate pending request",
+  "H04_boolean_returncode_accepted": true,
+  "H04_float_policy_schema_accepted": true,
+  "archive_integrity": {
+    "archived_tests_rerun": false,
+    "charged_seconds": 15.69079346198123,
+    "max_child_rss_bytes": 30060544,
+    "registered_functions": [
+      [
+        "independent launch gates/exact headroom/staleness",
+        "test_launch_gate"
+      ],
+      [
+        "explicit 50ms wait scheduling and clean root completion",
+        "test_scheduler_completion"
+      ],
+      [
+        "absolute sampling schedule retains its original phase",
+        "test_absolute_scheduler_phase"
+      ],
+      [
+        "root exit with remaining descendants refuses completion",
+        "test_root_descendants"
+      ],
+      [
+        "incomplete membership and slow provider freshness fail closed",
+        "test_incomplete_membership_and_provider_freshness"
+      ],
+      [
+        "cleanup exception preserves primary reason and partial report",
+        "test_cleanup_error_is_reported"
+      ],
+      [
+        "cleanup verification enforces the exact five-second boundary",
+        "test_cleanup_deadline"
+      ],
+      [
+        "owned run attempts workload and helper cleanup independently",
+        "test_owned_independent_finalizer"
+      ],
+      [
+        "tree brackets and host identity remain ordered",
+        "test_tree_brackets_and_host_identity"
+      ],
+      [
+        "NaN/Boolean/invalid flags and finite configuration refused",
+        "test_invalid_clock_and_bool_flags"
+      ],
+      [
+        "future/stale provider status failures are fail closed",
+        "test_future_acquisition_and_bad_status"
+      ],
+      [
+        "absolute deadline stops at equality",
+        "test_deadline_boundary"
+      ],
+      [
+        "RSS equality passes and host pressure below threshold stops",
+        "test_rss_boundary_and_host_stop"
+      ],
+      [
+        "partial reporting failure and finite JSON",
+        "test_partial_report_and_finite_json"
+      ],
+      [
+        "host baseline timeout and monotonic clock regression clean up",
+        "test_host_timeout_and_clock_regression"
+      ],
+      [
+        "Linux stat parsing, identity, membership, zero RSS and zombie",
+        "test_proc_stat_parsing_and_membership"
+      ],
+      [
+        "Linux cleanup confirmed/failed/unknown classification",
+        "test_cleanup_classification"
+      ],
+      [
+        "exclusive cumulative ledger refuses open/unknown/failed/resource-stopped history",
+        "test_attempt_accounting_refuses_open_unknown_failed_and_exhausted"
+      ],
+      [
+        "host protocol sequence, nonce and bounded round trip",
+        "test_host_protocol_success_and_sequence"
+      ],
+      [
+        "host protocol malformed/duplicate/oversized/API failures",
+        "test_host_protocol_fail_closed_cases"
+      ],
+      [
+        "R070 default deny, separate sentinel and strict completion binding",
+        "test_disabled_r070_and_completion_binding"
+      ],
+      [
+        "handoff/log/link/source binding and resource-budget integrity",
+        "test_continuity_and_source_bindings"
+      ]
+    ],
+    "saved_checks_reviewed": true,
+    "snapshots": 192,
+    "source_files": 64
+  },
+  "frozen_live_contract_sha256": "d040accdcb43b42edfa7de3931c33642751f51b14f3ed6c16759c1ff774625c4",
+  "physical_guard_default_deny": "passed",
+  "scope": "saved-data review and fake counterexamples only; no archived main/recorder, native or live operation"
+}

@@ -1,24 +1,30 @@
 # Current session handoff
 
-Last updated: 2026-09-21 for
-[R084](REQUEST_LOG.md#r084--2026-09-21--continue-fixture-only-monitor-repairs).
-R084's new fixture-only bundle repairs G01–G07 and ownership/reporting seams;
-all 22 registered checks passed on attempt 3. Attempts 1 and 2 remain preserved
-as non-resource fixture assertion failures with hash-bound reconciliations.
-Total charge is 15.690793/120 s and maximum validator lifetime RSS is
-30,060,544/268,435,456 B. See the [R084 evidence](docs/realizability/evidence/r084/README.md).
-This remains fixture evidence, not live monitor validation.
-Final integrity review passed 185 local links, 24 heading fragments, 136 finite
-JSON files, all 64 R084 source files and 192 per-attempt snapshots, 61 R082
-archive source bindings, attempt/reconciliation/result arithmetic and 22 fixture
-groups. Detailed check evidence is
-[here](docs/realizability/evidence/r084/documentation_validation.json).
+Last updated: 2026-09-21 for R085/R086. R085 recorded the user's prior Codex
+banner, token totals, runtime, resume ID and later `/status` output in
+[REQUEST_LOG.md](REQUEST_LOG.md#r085--2026-09-21--record-session-metadata-pull-and-continue-r084-review),
+with account email redacted. R086's receipt question is resolved. No separate
+`/new` output or private session file was obtained.
 
-**PC/WSL `daisy` retains ownership. Next: GPT-6 Astra/high, review R084 acceptance,
-ownership and provenance before separately bounding the OS harness.** The detailed
+The [R085 review](docs/realizability/B2_MONITOR_R084_REVIEW.md) is complete:
+R084's 64 source bindings, 192 snapshot bodies, 22 saved functions, final digest,
+reconciliations and recorded arithmetic agree. One bounded fake/source audit
+confirmed residual ownership/composition, cleanup-checkpoint deadline,
+protocol-state and exact-type/accounting gaps. Its 14 result groups passed as
+review observations; this is not a live-monitor pass. See
+[R085 evidence](docs/realizability/evidence/r085/README.md).
+
+**PC/WSL `daisy` retains ownership. Next: GPT-6 Astra/high, one new fixture-only
+integration repair of H01–H04 before OS source implementation.** The detailed
 [Next task](#next-task) is authoritative. Stop before native source/build/startup,
-live adapter operations, cgroup writes, signals, workload or physical execution.
-Physical limits remain 180 s / 1536 MiB; the q64/q96 allowance is unused.
+live OS/cgroup/signal/workload, FEM or physical execution and at an unresolved
+policy decision. Physical limits remain 180 s / 1536 MiB; q64/q96 is unused.
+
+R084's recorded charge remains 15.69079346198123/120 s and maximum validator
+lifetime RSS 30,060,544/268,435,456 B. Attempts 1 and 2 remain preserved with
+source-bound reconciliations. Attempt 1 has no saved per-function progress;
+external input snapshots and independently enforced outer persistence remain
+incomplete. Preserve these qualifications and all historical evidence.
 
 R083 received clean `main` at `c5ffc2c`, pulled up to date with HEAD equal to
 upstream, and published STARTED as `13b38ae`. One bounded fake/source audit
@@ -77,16 +83,16 @@ No package installation, pin change or remote Mac check occurred.
 
 | Handoff field | Current value |
 |---|---|
-| Current task/owner | PC/WSL `daisy` retains ownership; R084 fixture repair complete, Astra/high review next |
+| Current task/owner | PC/WSL `daisy` retains ownership; R085 review complete, Astra/high integrated fixture repair next |
 | Observed outgoing identity | Mac `fire.lan`, Darwin/arm64, `/Users/rharris/git/navier-stokes-vortex-lab`; historical R080 release |
-| Observed receiving identity | PC/WSL `daisy`, Linux/x86_64, `/home/rharris/git/navier-stokes-vortex-lab`, verified at R084 start |
+| Observed receiving identity | PC/WSL `daisy`, Linux/x86_64, `/home/rharris/git/navier-stokes-vortex-lab`, verified at R085 start |
 | Branch/upstream | `main` / `origin/main`; clean fast-forward pull, empty stashes, HEAD equaled fetched upstream at start |
-| Source/base commit | `99e701f9f097270803923f698623ea61a580fdfb`, R084 starting tip; STARTED publication `5deca38` |
+| Source/base commit | `26f7071a54096822fec78b9ebb16d248870103f1`, R085 starting tip; STARTED publication `5e70f07` |
 | Delivery state | Completion records prepared separately from delivery; actual final commit/push outcome belongs in final response/Git history |
-| Task processes | All three R084 validator children and the recorder exited; no lock/background task/live workload remains. Independent Mac POV-Ray build remains unverified |
-| Required next inputs | R084 source/evidence, R083 review and R081 frozen live contract. All committed text/source; no ignored input/cache transfer |
+| Task processes | R085 audit child and recorder exited; no task background process or live workload remains. Independent Mac POV-Ray build remains unverified |
+| Required next inputs | R085 review/audit, preserved R084 sources and R083/R081 contracts. All committed text/source; no ignored input/cache transfer |
 | Consumed experiments | R084: three fixture attempts, 15.690793 s charged / 120 s, maximum validator lifetime RSS 30,060,544 / 268,435,456 B; two non-resource assertions reconciled. Historical budgets unchanged; q64/q96 unused; R020 last physical attempt |
-| Next stop | Astra/high source, acceptance and provenance review; stop before native implementation/build/startup, live OS/cgroup/signal/workload, FEM or physical execution. No policy threshold changes |
+| Next stop | Astra/high H01–H04 fixture integration repair and evidence; stop at policy ambiguity and before native source/build/startup, live OS/cgroup/signal/workload, FEM or physical execution |
 
 R079 authorized Mac receipt after R078 pulled R076 completion. R080 requested
 return to PC, and R081 completed receipt after the clean pull and ownership
@@ -696,42 +702,49 @@ native arm64 DOLFINx 0.10.0/Python 3.12.13 package metadata.
 
 ## Next task
 
-**Stay on PC/WSL `daisy`; use GPT-6 Astra/high for a source, acceptance and
-provenance review of R084 before deciding whether to begin the separately
-bounded OS harness.** Read the [R084 evidence](docs/realizability/evidence/r084/README.md),
-the [R083 finding map and harness boundary](docs/realizability/B2_MONITOR_R082_REVIEW.md),
-the [R081 frozen live contract](docs/realizability/B2_MONITOR_LIVE_VALIDATION_CONTRACT.md),
-the R084 versioned source bundle and the preserved R082/R076 inputs.
+**Stay on PC/WSL `daisy`; use GPT-6 Astra/high for one new fixture-only
+integration repair of H01–H04.** Read the
+[R085 review and acceptance criteria](docs/realizability/B2_MONITOR_R084_REVIEW.md),
+[R085 audit](docs/realizability/evidence/r085/README.md), preserved
+[R084 bundle](docs/realizability/evidence/r084/README.md),
+[R083 harness boundary](docs/realizability/B2_MONITOR_R082_REVIEW.md) and
+[R081 frozen contract](docs/realizability/B2_MONITOR_LIVE_VALIDATION_CONTRACT.md).
 
-Review all G01–G07 corrections against their counterexamples, every one of the
-22 registered functions and its saved result, the two append-only non-resource
-reconciliations, source-before/archive/after identities, durable partial/final
-checkpoints, exact zero sentinel counts, strict cleanup/report schemas, inert
-legacy recorder and hard-disabled R070 CLI/API. Verify the derived total, RSS
-maximum, fixture digest and complete source snapshots against the ledger.
-Preserve R082 archives, production pins, scientific assumptions and historical
-budgets. No numerical or physical policy decision is implied by fixture success.
+Make one versioned owner/cleanup/completion schema and transition table explicit,
+then implement a new composed fake owner/core/transport/R070 acceptance path.
+Bind immutable run/attempt identities, every acquired-resource exit and both
+cleanup domains; issue both stop requests before awaiting either, preserve
+errors and make repeated finalization safe. Enforce existing absolute deadlines
+after all callbacks and persistence, terminal/ordered/fixed-bound protocol
+state, exact typed admission and complete input/source/attempt evidence.
+Keep the real physical CLI/API hard-disabled. No archived validator or recorder
+main is to be rerun or edited.
 
-Completion: publish a finding-to-evidence review, identify any residual
-acceptance/provenance gaps, and state whether the frozen OS implementation
-boundary is sufficient or needs explicit review. Give that OS work its own
-bounded task, model/effort, checks and stop conditions. Stop if a resource,
-source-binding or lifecycle inconsistency is unexplained, if a containment,
-timing, cleanup or accounting policy decision is required, and before native
-source/build/startup, live OS operations, cgroup writes/signals, workloads,
-FEM/MPI/JIT or physical execution. Keep 180 s / 1536 MiB physical limits and the
-unused q64/q96 allowance unchanged.
+Completion requires positive composed completion with six exact sentinel zeros,
+H01–H04 counterexample refusals, malformed/mismatched inputs, early/latched
+failures, both cleanup callback failure orders, fake guard independence, exact
+boundary/overrun tests, durable partial/final evidence and reviewable source
+bindings. Use Python 3.12.13; 120 s cumulative fixture execution reservation,
+256 MiB validator address space, reserved setup/final evidence and exclusive
+all-attempt records. Refuse unknown/open/resource-stopped history; no new ID or
+copy resets a consumed allowance. State uncovered measurement scopes explicitly.
 
-After this review, use GPT-5.6 Luna/medium only if the OS implementation has a
-settled interface and strictly mechanical fixture work; use GPT-6 Astra/high
-first or again if containment, ownership, timing, cleanup, resource accounting
-or scientific interpretation remains unsettled. The official model catalog
-currently lists GPT-6 Astra and its model page supports high reasoning; this is
-a model recommendation, not a claimed Codex session switch or proof of account
-entitlement ([Astra](https://developers.openai.com/api/docs/models/gpt-6-astra),
-[official model catalog](https://developers.openai.com/api/docs/models)). The
-R083 harness boundary is future work, not a second active task or live
-authorization. No delegation or automation occurred. **Next prompt: Continue.**
+Stop at a containment/timing/cleanup/accounting policy decision, unexplained
+source/lifecycle/resource inconsistency, or before native source/build/startup,
+live OS/cgroup/signal/workload, FEM/MPI/JIT or physical execution. Preserve
+production pins, scientific assumptions, 180 s / 1536 MiB physical limits and
+unused q64/q96 allowance. Publish the composed fixture result and one next task;
+then require Astra/high acceptance review before the separately bounded future
+OS source task described in R085. No live suite or build is authorized here.
+
+Keep Astra/high while these interfaces need judgment. Recommend GPT-5.6
+Luna/medium only for settled mechanical work, and return to Astra/high if a
+contract/scientific decision arises. Both were rechecked against the current
+session catalog and official [Astra](https://developers.openai.com/api/docs/models/gpt-6-astra)
+and [Luna](https://developers.openai.com/api/docs/models/gpt-5.6-luna) documentation.
+The user's prior Luna `/status` showed 1% reserve remaining; this is historical,
+not current account access. No model switch, delegation or automation is claimed.
+**Next prompt: Continue.**
 
 ## Deferred Mac setup check
 

@@ -17,7 +17,9 @@ This contract freezes interfaces, future commands and test limits; it does
 not implement the missing harness or certify the host. The next bounded work
 is defined by the current handoff. R082 implemented fixture repairs; the
 [R083 review](B2_MONITOR_R082_REVIEW.md) records remaining gaps and bounds the
-later harness. Native collection, live validation, Mac monitor decisions and
+later harness. The [R085 review](B2_MONITOR_R084_REVIEW.md) confirms residual
+R084 integration gaps; its handoff prerequisite comes before OS implementation.
+Native collection, live validation, Mac monitor decisions and
 performance comparisons remain subsequent work.
 
 ## 1. Confirmed findings and required repairs

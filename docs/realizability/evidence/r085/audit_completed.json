@@ -1,0 +1,12 @@
+{
+  "child_elapsed_seconds": 0.06704356300178915,
+  "child_lifetime_peak_rss_bytes": 25903104,
+  "recorder_elapsed_before_final_persistence_seconds": 0.1074115660157986,
+  "returncode": 0,
+  "sources_unchanged": true,
+  "state": "COMPLETED",
+  "stderr": "",
+  "stdout": "{\"status\": \"passed\", \"groups\": 14, \"output\": \"review.json\"}\n",
+  "timed_out": false,
+  "timing_limitations": "startup/imports and final fsync excluded; 30 s reservation is not independently certified whole-recorder time"
+}
