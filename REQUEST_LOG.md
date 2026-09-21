@@ -2267,3 +2267,20 @@ workflow is now being completed; no physical execution is part of this request.
 `origin/main` on branch `main`. No physical work was included. The next bounded
 task and model recommendation remain the Astra/high observer and physical-path
 review recorded in `SESSION_HANDOFF.md`.
+
+## R034 — 2026-09-20 — Evaluate this Mac and update the project records
+
+**User request (verbatim):**
+
+> Your task is to read the files, then evaluate this mac according to any measures you might see in the files, then update the files,
+>   then add commit and push.  thanks!
+
+**Interpreted scope:** Read the handoff and its required research/current-task records, inspect this Mac against the repository's recorded machine and workload measures, document evidence and any implications, update continuity, then commit and push only scoped changes to the configured upstream. Preserve existing work and scientific thresholds.
+
+**Status:** In progress.
+
+**Plan and stop:** Check Git state and current handoff, read required research and physical-task files, collect read-only Mac hardware/OS/capacity/tool/environment facts, compare what can be supported against the recorded PC/workload evidence, document unknowns and decision, run documentation checks, commit/push scoped changes, and stop at the resulting machine-selection boundary. Do not launch physical numerical work.
+
+**Outcome, 2026-09-20:** The Mac is an Apple M4 iMac (4 performance and 6 efficiency cores), arm64, macOS 26.6.2, with 24 GiB RAM. At inspection macOS reported 68% system-wide free memory, no swap-ins/outs since boot, and 591 GiB available on the project volume. The inspected Python 3.10.19 environment has NumPy but not importable DOLFINx, PETSc4py, mpi4py or Gmsh; the FEM environment pinned by the project is not ready in that shell. R033's last PC snapshot recorded 6.294 GiB available in Windows and 6924 MiB in WSL. These dated readings do not establish runtime or physical-job fit. No transfer is recommended before the Astra/high physical-path review and, if that review warrants a physical comparison, Mac environment/monitoring validation plus a small reference comparison.
+
+**Changed files, checks/skips and next task:** Added `docs/realizability/evidence/r034/mac_snapshot.json`; updated `STATUS.md`, `SESSION_HANDOFF.md` and this entry. JSON parsing and `git diff --check` passed. No FEM, render, movie, environment installation or physical calculation was run; no machine setting or app was changed. The next task remains the handoff's Astra/high review of the R033 observer and physical launch path against R021/R013, stopping before physical execution. Official OpenAI model pages were checked on 2026-09-20 and list GPT-6 Astra and GPT-5.6 Luna; account-level availability may differ. No model switch occurred.

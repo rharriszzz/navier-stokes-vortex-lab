@@ -1,8 +1,8 @@
 # Project status: physical preparation and a realistic movie
 
 Updated 2026-09-20 for
-[R033](REQUEST_LOG.md#r033--2026-09-20--continue-r022-prerequisite-coverage),
-after the complete disposable prerequisite and observer suite passed. Resource
+[R034](REQUEST_LOG.md#r034--2026-09-20--evaluate-this-mac-and-update-the-project-records),
+after the Mac capacity/environment assessment. Resource
 guidance below includes the R023/R024 capacity clarifications.
 The goals below preserve the
 [R010 status-report request](REQUEST_LOG.md#r010--2026-09-20--project-status-and-user-goals).
@@ -286,16 +286,17 @@ size a later physical allowance separately. Preserve watchdogs, finite reports,
 scientific acceptance thresholds and the recorded experiment scope. Historical
 R022 resource results remain unchanged.
 
-The user also has a **24 GB Mac** (R031). The prerequisite task has now
-completed on the PC, reaching the promised machine-choice checkpoint before
-the next physical calculation. This work did not require a move. The Mac's CPU,
-available memory and environment remain unverified, and the physical workload
-has not been estimated. Compare both machines against that workload before
-recommending transfer. Flag a move sooner if actual host/guest memory pressure
-prevents comfortable execution or a larger planned run exceeds available PC
-headroom. A watchdog cap alone does not establish that a move is necessary.
-FEniCSx has a [macOS installation route](https://fenicsproject.org/download/),
-but our pinned dependencies and Linux-specific monitoring need a portability
-check and a small numerical comparison before migration. The
-[handoff](SESSION_HANDOFF.md#r031-mac-decision-checkpoint) records the decision
-trigger; no transfer or background reminder has been scheduled.
+The user's Mac was inspected for R034. It is an **Apple M4 iMac with 24 GB
+RAM**, and macOS reported 68% system-wide free memory in that snapshot. The
+project volume had 591 GiB available. The inspected Python environment does
+not contain the pinned DOLFINx/PETSc/MPI/Gmsh stack; see the
+[machine evidence](docs/realizability/evidence/r034/mac_snapshot.json) and
+[handoff assessment](SESSION_HANDOFF.md#r034-mac-assessment). The Mac has more
+installed memory than the PC, but there is no physical-workload memory estimate
+or comparable runtime benchmark. Do not transfer the next physical task yet:
+first complete the prescribed scientific review, then compare live capacity,
+environment reproduction cost and a small reference run under unchanged
+tolerances if a physical attempt is warranted. The current evidence shows the
+inspected shell is not ready for that FEM run; it does not show that the Mac
+cannot host it. No settings/apps were changed and no transfer or numerical
+execution occurred.

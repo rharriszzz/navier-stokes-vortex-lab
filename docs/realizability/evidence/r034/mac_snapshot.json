@@ -1,0 +1,63 @@
+{
+  "request": "R034",
+  "date": "2026-09-20",
+  "scope": "Read-only Mac suitability and environment snapshot; no numerical workload launched",
+  "system": {
+    "model": "iMac Mac16,3",
+    "chip": "Apple M4",
+    "cpu_cores": {
+      "performance": 4,
+      "efficiency": 6
+    },
+    "architecture": "arm64",
+    "macos": "26.6.2",
+    "memory_bytes": 25769803776,
+    "memory_gib": 24.0,
+    "source": "system_profiler SPHardwareDataType; sysctl hw.memsize; uname -a"
+  },
+  "capacity_snapshot": {
+    "memory_pressure_free_percentage": 68,
+    "memory_pressure_source": "memory_pressure",
+    "swapins_since_boot": 0,
+    "swapouts_since_boot": 0,
+    "disk_available_gib": 591,
+    "disk_source": "df -h .",
+    "note": "Snapshot only. Memory pressure percentage and cumulative swap counters are not the project's active-child-tree RSS metric. No exact per-process available-memory figure is inferred."
+  },
+  "installed_tools": {
+    "python": "3.10.19",
+    "python_path": "/opt/local/bin/python3",
+    "numpy": "2.2.6",
+    "numpy_available": true,
+    "petsc4py_available": false,
+    "dolfinx_available": false,
+    "mpi4py_available": false,
+    "gmsh_available": false,
+    "cmake_available": true,
+    "mpiexec_available": false,
+    "povray_available": false,
+    "ffmpeg_available": true,
+    "ffprobe_available": true,
+    "conda_available": false,
+    "micromamba_available": false,
+    "docker_available": false,
+    "podman_available": false,
+    "inspection_note": "command -v and Python importlib.util.find_spec checks in the inspected shell; package presence elsewhere on the Mac was not searched."
+  },
+  "comparison": {
+    "pinned_environment": "environment-b1.yml specifies Python 3.12.13, DOLFINx 0.10.0, PETSc/PETSc4py 3.25.5, MPICH 5.0.1, mpi4py 4.1.2, Gmsh 4.15.2, and related exact versions.",
+    "mac_matches_pinned_fem_environment": false,
+    "pc_reference": "R033 prelaunch snapshot: Windows usable RAM 15.725 GiB with 6.294 GiB available; WSL total 7796 MiB with 6924 MiB available. This was a dated snapshot and the two views are not additive.",
+    "physical_workload_fit_established": false,
+    "relative_runtime_established": false,
+    "decision": "Do not transfer or launch the next physical calculation based on RAM/chip alone. The Mac has higher installed RAM and ample disk, but the inspected shell lacks the pinned FEM stack and its resource accounting has not been adapted or validated. First review the bounded physical task; if warranted, reproduce compatible dependencies, validate monitoring, compare a small reference case under unchanged tolerances, and capture both machines' launch-time capacity before any physical run."
+  },
+  "checks_and_limits": {
+    "read_only": true,
+    "physical_numerical_execution": false,
+    "host_settings_or_app_changes": false,
+    "serial_or_unique_identifiers_recorded": false,
+    "system_profiler_warning": "The utility emitted an hw.cpufamily access warning while reporting the model and M4 chip; the displayed hardware facts were available.",
+    "macos_version_label": "As reported by sw_vers; no compatibility inference is made from the version number."
+  }
+}

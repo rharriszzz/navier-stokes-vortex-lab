@@ -1,14 +1,14 @@
 # Current session handoff
 
 Last updated: 2026-09-20. Latest request:
-[R033](REQUEST_LOG.md#r033--2026-09-20--continue-r022-prerequisite-coverage),
-completed as the scoped Continue task below. The user permits using the PC
+[R034](REQUEST_LOG.md#r034--2026-09-20--evaluate-this-mac-and-update-the-project-records),
+completed as a read-only Mac evaluation and project-record update. The user permits using the PC
 within its capabilities; the former small diagnostic caps are not immutable
 user requirements. R023–R032 did not invoke Continue or authorize publication
 at the time; their resource and machine continuity is included here where
 needed for R033's work. R033 authorizes commit/push of its scoped result. The
 last physical checkpoint remains R020; R033 prerequisites passed
-without a physical run. The last previously committed checkpoint is
+without a physical run. R034 also ran no numerical work. The last previously committed checkpoint is
 `0190893`.
 
 R033's scoped result was committed as `85ebd85` and pushed successfully to
@@ -205,6 +205,36 @@ alone is not evidence that another machine is required. Recommend transferring
 only after comparing the expected workload with actual Mac capacity and the
 cost of reproducing the environment. This is a checkpoint in future project
 work, not a scheduled/background reminder or authorization to migrate now.
+
+## R034 Mac assessment
+
+Read the [captured Mac snapshot](docs/realizability/evidence/r034/mac_snapshot.json).
+On 2026-09-20, this environment reported an **iMac Mac16,3, Apple M4, 4
+performance plus 6 efficiency cores, arm64, macOS 26.6.2, and 24 GiB RAM**.
+`memory_pressure` reported 68% system-wide free memory and zero cumulative
+swap-ins/outs since boot; `df` reported 591 GiB free on the project volume.
+These are one-time machine readings, not a runtime benchmark or the project's
+active-child-tree RSS measure.
+
+The inspected `/opt/local/bin/python3` is Python 3.10.19 with NumPy 2.2.6.
+`dolfinx`, `petsc4py`, `mpi4py`, and `gmsh` were not importable there, and
+`mpiexec`, Conda, Micromamba, Docker and Podman were not found on PATH. The
+project pins Python 3.12.13, DOLFINx 0.10.0, PETSc/PETSc4py 3.25.5, MPICH
+5.0.1, mpi4py 4.1.2 and Gmsh 4.15.2 in `environment-b1.yml`. This establishes
+that the inspected shell is not ready to run the pinned FEM workflow. It does
+not establish that these packages are absent everywhere on the Mac.
+
+Against R033's dated PC snapshot (Windows 15.725 GiB usable with 6.294 GiB
+available; WSL 7796 MiB total with 6924 MiB available), the Mac has more
+installed memory and ample project-volume storage. The readings are not
+simultaneous; PC host/guest views are not additive, and no matched solver
+benchmark or physical-workload peak estimate exists. **Do not transfer the
+next physical run yet.** Complete the handoff's Astra/high review first. If that
+review recommends a physical comparison, compare current launch-time capacity
+on both machines, reproduce the pinned stack on the Mac, adapt and validate
+process-tree monitoring, and run a small reference comparison under unchanged
+scientific tolerances before selecting a host. Do not copy Linux binaries or
+JIT caches.
 
 FEniCSx documents a [macOS installation route](https://fenicsproject.org/download/),
 but this project's exact pinned environment has not been tested there.
