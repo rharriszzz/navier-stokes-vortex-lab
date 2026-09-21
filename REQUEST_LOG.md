@@ -3186,3 +3186,27 @@ Luna Reserve Weekly limit: 1% left (resets 18:03 on 26 Sep)
 **Scope/authorization:** Stage and commit the six pending R089–R092 documentation files, including status/reset records, overhead-reduction plan and consistent next-task pointers, plus this request and handoff delivery note. Commit only; no push or research/implementation execution. Same PC owner and main/origin/main; known pending edits reviewed and preserved, index initially empty.
 
 **Outcome/checks:** Commit prepared after scoped diff, whitespace, append-only history and file-inventory checks. Application tests unnecessary for documentation. Files: REQUEST_LOG.md, SESSION_HANDOFF.md, STATUS.md, PROJECT_TRACKS.md, docs/realizability/B2_NEXT_STEPS.md, docs/WORKFLOW_OVERHEAD_PLAN.md. Evidence is the scoped Git diff and R092 plan. PC retains ownership; no workload or lifecycle started. Next task remains Luna/medium implementation of the plan, with its checks/stops and subsequent Astra/high review. Actual commit hash is reported after Git completes; remote publication remains pending.
+
+## R094 — 2026-09-21 — Implement the overhead-reduction plan
+
+**User request:** “Here is /new and /status. please to the overhead reduction implementation.”
+
+**Scope/status:** Implement the bounded documentation changes in R092's plan, retaining all operative safeguards and the deferred R088 acceptance review. PC/WSL `daisy` owns the task. The known R093 local commit is preserved; it is one commit ahead of upstream and has no push authorization. No clean pull or publication is implied by this request.
+
+**Supplied session excerpts:** `/new` reports GPT-5.6 Luna/medium, total 190,862 tokens (175,508 input; 2,276,096 cached input; 15,354 output, 876 reasoning), prior session `01a0c5a4-3806-7202-9bb4-e7ea99801d20`. `/status` reports GPT-5.6 Luna/medium; new session `01a0c5b7-20de-76d0-8daa-eab1ecf5f7e5`; 5h 82%, weekly 97%, 283 credits, Luna Reserve 1%. Account email redacted. These are user-reported snapshots, not independently verified.
+
+**Completion/checks:** Pending implementation, scoped documentation checks, evidence, changed files, and next task. No application/research workload is authorized. Do not commit or push without user authorization.
+
+**R094 outcome, 2026-09-21:** Implemented the R092 documentation plan. Saved byte-identical pre-edit snapshots; moved full session protocol and track rules to conditional workflow documents; reduced AGENTS plus handoff from 10,948 to 803 words; moved the deferred R088 task verbatim to `R088_ACCEPTANCE_REVIEW_TASK.md`; added the archive/obligation map and reconciled current pointers.
+
+**Checks/files/stop:** Both snapshot SHA-256 values match their pre-edit files; deferred-task body exact; 803-word total is below 2,800; changed Markdown links/fragments resolve; request IDs unique through R094; `git diff --check` passes. One initial deferred-task comparison used the wrong blank-line boundary; the checker was corrected and the exact-content check passed without changing the task. Application/research checks skipped. Changed: AGENTS.md, SESSION_HANDOFF.md, REQUEST_LOG.md, STATUS.md, PROJECT_TRACKS.md, docs/realizability/B2_NEXT_STEPS.md, R088_ACCEPTANCE_REVIEW_TASK.md, docs/history/{AGENTS_BEFORE_R092_IMPLEMENTATION.md,SESSION_HANDOFF_BEFORE_R092_IMPLEMENTATION.md,R092_ARCHIVE_INDEX.md}, docs/workflow/{SESSION_PROTOCOL.md,TRACK_RULES.md}. Evidence is these files and the recorded hashes/check output; no generated bundle. R093 commit remains local and R094 work uncommitted; no commit/push authorization. PC retains ownership. Next: after explicit delivery/reconciliation, GPT-6 Astra/high performs the verbatim R088 acceptance review; stop before archived reruns and all native/live/physical work. Recommend Luna/medium only for a settled mechanical follow-up; retain Astra/high for unresolved semantics or numerical interpretation. No process launched.
+
+## R095 — 2026-09-21 — Publish overhead-reduction implementation
+
+**User request:** “Please add and commit and push , and remind me which model to use for the next step”
+
+**Scope/authorization:** User authorizes staging, committing and pushing the existing R094 implementation and its delivery notes, including the known local R093 commit on `main` to `origin/main`. Preserve all scoped changes; no research work. Report the next-task model recommendation.
+
+**Status:** In progress. Same PC/WSL owner; worktree contains only the identified R094 implementation changes plus this entry. No commit or push has yet been made for R094.
+
+**R095 delivery preparation:** Scoped R093/R094 documentation and R095/handoff notes are ready for delivery. Snapshot hashes, verbatim task text, append-only request history, local links/fragments, 803-word target and whitespace checks pass. Application/research checks are skipped. R094 changed files are listed in its outcome above; R095 adds only this request and handoff delivery state. Next task remains the verbatim Astra/high R088 acceptance review; do not start it in this delivery step. Commit and push outcome follows in final response.

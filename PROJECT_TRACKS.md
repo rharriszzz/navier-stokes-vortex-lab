@@ -162,8 +162,8 @@ physical CLI/API remains disabled. The [R085 review](docs/realizability/B2_MONIT
 saved result and identifies residual ownership/composition, cleanup timing,
 protocol and accounting gaps. [R088](docs/realizability/evidence/r088/README.md)
 adds that composed fixture repair with 14 passing groups in its first attempt.
-The current handoff selects R092's bounded Luna documentation cleanup first;
-acceptance/outer-measurement review remains the next scientific step before OS implementation. The
+The current handoff selects the deferred Astra/high R088 acceptance and
+outer-measurement-boundary review before OS implementation. The
 [Mac/PC performance and memory plan](docs/realizability/MAC_PC_PERFORMANCE_MEMORY_PLAN.md)
 specifies future comparisons and their monitor prerequisites. Follow the single
 [current handoff task](SESSION_HANDOFF.md#next-task) for the task and

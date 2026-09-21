@@ -1,8 +1,9 @@
 # Project status: physical preparation and a realistic movie
 
-Updated 2026-09-21. R092's [overhead-reduction plan](docs/WORKFLOW_OVERHEAD_PLAN.md)
-is ready for Luna/medium documentation implementation; the scientific review
-waits for that bounded cleanup. The latest completed scientific work is the
+Updated 2026-09-21. R094 implements R092's
+[overhead-reduction plan](docs/WORKFLOW_OVERHEAD_PLAN.md); current ownership,
+delivery state and single next task are in the
+[handoff](SESSION_HANDOFF.md#next-task). The latest completed scientific work is the
 [R088 composed fixture repair](docs/realizability/evidence/r088/README.md).
 A [performance and memory test plan for Mac and PC](docs/realizability/MAC_PC_PERFORMANCE_MEMORY_PLAN.md)
 is also ready as documentation; no benchmark has run.
