@@ -3332,3 +3332,35 @@ Luna Reserve Weekly limit: 1% left (resets 18:03 on 26 Sep)
 **Files/next/delivery:** Changed REQUEST_LOG.md, WORK_SESSIONS.md, SESSION_HANDOFF.md, STATUS.md, PROJECT_TRACKS.md, docs/realizability/B2_NEXT_STEPS.md; added B2_MONITOR_R097_REVIEW.md and evidence/r098/*. Next: PC Astra/high documentation-only J04 trusted-adapter contract repair, with field-to-authority and finite event/accounting maps, R081/R083/R097 compatibility and explicit implementable/refused decision. No execution allowance or OS-source admission; stop at an unresolved policy choice and document it without widening limits. Completion checks: links, append-only history, archived bytes and consistent pointers. Retain Astra/high while semantics remain unsettled; smaller model only for later mechanical work after rechecking availability. Session catalog and opened official [Astra page](https://developers.openai.com/api/docs/models/gpt-6-astra) confirm high effort using OpenAI Docs; no model switch/delegation/automation. PC retains ownership, no task background process or ignored transfer input; Mac build unverified. Task completion is separate from final authorized commit/push; actual delivery hash/outcome follows, with no post-push log edit.
 
 **R098 final validation, 2026-09-21:** First documentation check passed: all 1,485 baseline files outside six current documents preserved, including all 1,384 historical evidence files; both published log prefixes; 98 unique IDs, one lifecycle pair; 126 local links/21 fragments; 909-word root+handoff; all 30 R097 review input digests; new checker syntax, redaction/session attribution and current-task pointers. Evidence: `docs/realizability/evidence/r098/documentation_validation.json`. Scoped whitespace passed. Both integrity utilities read saved data only; no behavioral test/fixture rerun. Final staging/whitespace and authorized delivery follow; PC retains ownership.
+
+## R099 — 2026-09-21 — Continue trusted-adapter contract repair
+
+**User request:** Supplied the following excerpts, followed by “continue”. Decorative borders/bars omitted, wrapped resume ID joined and account email redacted. Worked-for/resume text refers to the prior session; `/status` identifies the new session. No explicit `/new` command text or five-hour balance supplied. Values are user-reported snapshots; no private session files accessed.
+```text
+Worked for 7m 49s · done 5:43 PM
+>_ OpenAI Codex (v0.155.1)
+model: gpt-6-astra high /model to change
+directory: ~/git/navier-stokes-vortex-lab
+Tip: New Use /fast to enable our fastest inference with increased plan usage.
+⚠ 1 MCP startup issue · ctrl + t for details
+Token usage: total=123,391 input=110,427 (+ 1,441,408 cached) output=12,964 (reasoning 1,202)
+To continue this session, run codex resume, then select Review Codex session output (01a0c5e5-2f01-70f3-bd2b-9ec5f2f475c8)
+/status
+>_ OpenAI Codex (v0.155.1)
+Visit https://chatgpt.com/codex/settings/usage for up-to-date information on rate limits and credits
+Model: gpt-6-astra (reasoning high, summaries auto)
+Model provider: openai
+Directory: ~/git/navier-stokes-vortex-lab
+Permissions: Workspace (Ask for approval)
+Agents.md: AGENTS.md
+Account: [REDACTED account email] (Plus)
+Collaboration mode: Default
+Session: 01a0c5ed-8489-76b3-8e06-eec8713e8261
+Weekly limit: 99% left (resets 17:37 on 28 Sep)
+Credits: 283 credits
+Luna Reserve Weekly limit: 100% left (resets 17:44 on 28 Sep)
+```
+
+**Scope/authorization/status:** In progress. Continue authorizes scoped STARTED/final commit and push. Write one new documentation-only J04 trusted-adapter contract with Admission/TerminalWitness authority map, complete task event/accounting map, R081/R083/R097 compatibility and explicit implementable/refused decision. No execution allowance, fixture execution, adapter/native source, build/startup, live inspection/mutation, helper/workload, FEM or physical work. Stop at an unresolved policy choice; preserve all historical evidence and allowances.
+
+**Startup:** PC/WSL `daisy`, Linux/x86_64, uid rharris, intended checkout; clean main/origin/main, empty stashes, no open lifecycle or transfer. Required fast-forward pull succeeded, already up to date; HEAD equals freshly fetched upstream `d26b1adbef44d49582a88f058a5cfbcd222bfd32`, confirming R098 delivery. Handoff/latest records rechecked. Python `/tmp/navier-fenicsx/bin/python` is 3.12.13. PC retains ownership; independent Mac build remains user-managed and unverified. STARTED publication precedes substantive work.
