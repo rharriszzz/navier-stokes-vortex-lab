@@ -8,11 +8,10 @@ is complete as documentation; no benchmark or live adapter ran. R076's
 [fixture implementation](docs/realizability/evidence/r076/README.md) is received
 in `f1c24c628f78f21fdffeb079cbe85aa7f58277b9` and must not be repeated.
 
-**Next owner: PC/WSL `daisy`, at the user's explicit request. Resume R076's
-planned GPT-6 Astra/high implementation review and bounded live-adapter
-validation contract.** The detailed [Next task](#next-task) is authoritative.
-The Mac releases this documentation task on successful scoped delivery and
-stops; transfer remains pending if push fails. No new PC session is launched.
+**Current owner: PC/WSL `daisy`, received under R081 after the clean pull of
+`e40ed7b`. R080's Mac release is reconciled with upstream delivery. R081 is
+performing R076's planned implementation review and bounded live-adapter
+validation contract.** The detailed [Next task](#next-task) bounds this work.
 Keep physical execution disabled and the 180 s / 1536 MiB limits unchanged.
 
 The plan, setup-guide consolidation, README/status/index links and ownership
@@ -62,12 +61,12 @@ No package installation, pin change or remote Mac check occurred.
 
 | Handoff field | Current value |
 |---|---|
-| Current task/owner | R077 plan complete; Mac releases after successful final publication under R080; intended next owner PC/WSL `daisy` |
+| Current task/owner | PC/WSL `daisy` received R080 release under R081; implementation/live-validation-contract review in progress |
 | Observed outgoing identity | Mac `fire.lan`, Darwin/arm64, `/Users/rharris/git/navier-stokes-vortex-lab` |
-| Intended receiving identity | PC/WSL `daisy`, Linux/x86_64, `/home/rharris/git/navier-stokes-vortex-lab`; verify locally on receipt |
-| Branch/upstream | `main` / `origin/main`; receiving Mac pull clean and up to date, empty stashes, HEAD equaled fetched upstream |
-| Source/base commit | `f1c24c628f78f21fdffeb079cbe85aa7f58277b9`, R076 delivery; this is an ancestor/base, not this plan's delivery hash |
-| Delivery state | Documentation completion/release prepared under R077/R079/R080 authorization; transfer pending until successful push, exact delivery commit in final response/Git history |
+| Observed receiving identity | PC/WSL `daisy`, Linux/x86_64, `/home/rharris/git/navier-stokes-vortex-lab`, verified at R081 start |
+| Branch/upstream | `main` / `origin/main`; R081 clean fast-forward pull, empty stashes, HEAD equals fetched upstream |
+| Source/base commit | `e40ed7baa536fa607bf99405dbc50ef2782ffb07`, received Mac documentation delivery and R081 base |
+| Delivery state | R077–R080 received from upstream; R081 STARTED publication pending before substantive work |
 | Task processes | No benchmark, render, encoder, live adapter or background task started on Mac; documentation checks exit before delivery. R076 reports PC validator processes exited. Independent user-managed Mac POV-Ray build remains unverified and outside this task |
 | Required next inputs | R076 committed source/manifests/ledger, R074 specification, R067 resource policy, new comparison plan; no new ignored inputs or compiled-cache transfer required |
 | Consumed experiments | No experiments consumed by R077–R080; all prior ledgers unchanged. R076 fixture-only result remains historical; q64/q96 unused, R020 last physical attempt |
