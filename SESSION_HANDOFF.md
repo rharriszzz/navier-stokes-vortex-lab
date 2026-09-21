@@ -1,36 +1,42 @@
 # Current session handoff
 
-Last updated: 2026-09-20. Latest requests:
-[R062](REQUEST_LOG.md#r062--2026-09-20--review-macpc-benchmark-plan-and-handoff-process)
-reviews the benchmark sequence and machine handoff;
-[R063](REQUEST_LOG.md#r063--2026-09-20--detect-an-unannounced-machine-switch)
-adds detection of a possible switch at session start.
-[R064](REQUEST_LOG.md#r064--2026-09-20--publish-benchmark-and-machine-handoff-review)
-authorizes committing and pushing this completed documentation review from the
-PC/WSL checkout. **The PC releases this task to the Mac once the R064 commit
-is pushed successfully.** The receiving session must fetch/pull and verify that
-delivery before claiming ownership. The final publication report supplies the
-actual commit hash; failed publication leaves transfer pending. No installation,
-rendering, FEM work or performance benchmark ran in this review.
+Last updated: 2026-09-20. Current task selection:
+[R065](REQUEST_LOG.md#r065--2026-09-20--make-the-pc-review-next-while-pov-ray-builds-on-the-mac)
+keeps work on the PC while the user builds POV-Ray on the Mac. **The next task
+is the PC scientific review with GPT-6 Astra/high; Mac movie readiness is not
+a prerequisite.** This explicit change of priority supersedes R064's proposed
+Mac handoff. The Mac build is user-reported and its completion is unverified;
+do not restart or interfere with it from this session.
+
+R064 was committed and pushed as `c783db1`; that publication is complete.
+[R066](REQUEST_LOG.md#r066--2026-09-20--publish-the-pc-first-task-sequence)
+authorizes publication of R065's scheduling correction. Verify the delivery
+commit and successful push in the final publication report/Git history. This
+publication retains PC ownership. No scientific review, installation, rendering
+or benchmark was executed during the rearrangement or publication.
 
 | Handoff field | Current value |
 |---|---|
-| Outgoing task/owner | R062/R063 review, R064 publication, PC/WSL; release to Mac takes effect on verified push of this handoff |
+| Current task/owner | PC/WSL retains ownership by R065; documentation rearrangement complete, scientific review next |
 | Observed local identity | Hostname `daisy`, Linux/WSL2, `x86_64`, checkout `/home/rharris/git/navier-stokes-vortex-lab` |
 | Branch/upstream | `main` / `origin/main` |
-| Inspected base/source commit | `ed6a0b66068fb6e2ea210dc87af6fbf049b62427`; local HEAD and cached upstream matched at review start; no fetch/pull performed |
-| Delivery commit | The commit containing the R064 publication entry; get its actual hash from the final publication report/Git history and verify it is on the fetched upstream |
-| Intended next owner/task | Mac: POV-Ray installation and isolated movie smoke test, Luna/medium; unclaimed |
-| Task processes | R062/R063 launched no background workloads; documentation-check commands have exited; other-machine process state was not inspected |
-| Required transfer inputs | Changed documentation and R062 review evidence; the next setup test generates its own fresh movie inputs |
-| Next stop | Setup failure or completed movie-validation report; no automatic FEM launch |
+| Inspected base/source commit | `c783db182d67409e997f5b18774b824bbbcd871a`; clean `main...origin/main` at R065 start; no new fetch/pull performed |
+| Delivery state | R066 authorizes this six-file publication; identify the delivery commit by its R066 entry and verify the push before any future machine switch |
+| Intended next owner/task | Same PC: R021/R013 observer/physical-runner and FFCx form/cache review, Astra/high |
+| Task processes | R065 launched no background workloads; independent Mac POV-Ray build reported by user, not inspected |
+| Required transfer inputs | None for this PC review; required source and archived evidence are already in this checkout |
+| Next stop | Documented scientific decision and, if warranted, reference/monitor contract; stop before numerical execution |
 
 Use [Next task](#next-task) as the single current execution task. The
-[PC scientific review](#queued-pc-scientific-review) is queued after the Mac
-setup handoff; it remains the first FEM decision step. The historical sections
+[deferred Mac movie check](#deferred-mac-setup-check) waits for a later user-selected
+switch and a completed build. The historical sections
 below explain prior results and superseded recommendations, not additional
 current assignments. R062's checks and skips are in
 [review evidence](docs/realizability/evidence/r062/documentation_validation.json).
+R065's documentation checks passed (73 local links, 18 heading fragments,
+seven unchanged shell blocks, preserved request history and whitespace); its
+[request entry](REQUEST_LOG.md#r065--2026-09-20--make-the-pc-review-next-while-pov-ray-builds-on-the-mac)
+records the six changed files and execution skips. All check commands exited.
 
 ## Previous publication and readiness
 
@@ -128,9 +134,10 @@ Use the [Mac/PC handoff protocol](AGENTS.md#switching-between-the-mac-and-pc)
 at bounded task boundaries. Keep one active owner for each task and experiment;
 publish only when the current request authorizes it. The receiving computer
 should pull and verify the handoff before starting, and should run its own
-environment/monitor checks. The current sequence is MacPorts POV-Ray install
-and isolated movie smoke test on the Mac, then the Astra/high R021/R013 review
-on the PC. Default to one active writing/execution session for the repository,
+environment/monitor checks. R065 keeps the Astra/high R021/R013 review on the
+PC as the next task while the user's independent Mac POV-Ray build continues.
+The Mac movie check is deferred until a later switch. Default to one active
+writing/execution session for the repository,
 including shared request/handoff documents. Release and acknowledge ownership,
 preserve consumed run allowances, and verify any ignored inputs on receipt.
 Synchronize a clean receiving checkout before appending its request entry.
@@ -570,30 +577,16 @@ native arm64 DOLFINx 0.10.0/Python 3.12.13 package metadata.
 
 ## Next task
 
-**On the Mac, after verifying the R064 documentation delivery, finish POV-Ray setup
-and the isolated movie smoke test.** This is the current execution task for
-`Continue`. A session still on the PC should complete an authorized handoff and
-stop; it cannot execute this task locally or assume the Mac has received it.
-
-Follow the [updated Mac guide](docs/realizability/MAC_INSTALL_AND_BENCHMARK_PLAN.md)
-to check for and, if still missing, install POV-Ray with existing MacPorts, then validate
-one image and the isolated ten-frame trajectory/render/encode check. Use
-GPT-5.6 Luna/medium for this mechanical task; R062 rechecked the session catalog
-and official model effort support. Record versions, all-frame finite/bounds checks,
-three separated image inspections and decoded MP4 metadata. Stop on failure
-or after the setup report; no FEM run follows automatically. Retain Astra/high
-for a scientific decision or unexplained numerical difference. The PC review
-below should define the separate FEM comparison contract and monitor work.
-After the successful Mac report, hand ownership to the PC and recommend
-GPT-6 Astra/high for that review. **Next prompt on the receiving Mac: Continue.**
-
-## Queued PC scientific review
+**Stay on the PC and perform the R021/R013 scientific review with GPT-6
+Astra/high.** This is the task selected by `Continue`. It can proceed while the
+user's independent POV-Ray build runs on the Mac; no Mac installation, movie
+check or machine transfer is required for this review.
 
 Review the now-exercised disposable observer and remaining physical runner
 against the unchanged R021/R013 contract before deciding whether to conduct a
 separately scoped matched-trace physical comparison. Recommend **GPT-6 Astra
-with high reasoning** for this scientific review. Recheck model availability
-when handing off. R062 rechecked the session catalog and official model pages:
+with high reasoning** for this scientific review. R065 rechecked that Astra/high
+and Luna/medium remain in the session catalog; R062 checked official model pages:
 [Luna](https://developers.openai.com/api/docs/models/gpt-5.6-luna) and
 [Astra](https://developers.openai.com/api/docs/models/gpt-6-astra).
 The review should check the saved P/A/A compatibility logic, the independent
@@ -618,9 +611,20 @@ physical execution, solver changes, new meshes/orders, pressure/return-flow
 repair, gate integration, campaign, B3, rendering or encoding. If the review
 finds only a clearly understood mechanical defect, recommend GPT-5.6 Luna with
 medium reasoning for a narrow repair. Retain GPT-6 Astra/high for unexplained
-results or any scientific/numerical-method decision. No model switch or
-automation occurred. This task becomes current only after the recorded Mac
-setup step or an explicit user change of priority.
+results or any scientific/numerical-method decision. Recommend one concrete
+next PC task from the review's findings; a Mac switch is a separate user choice.
+No model switch or automation occurred. **Next prompt here on the PC: Continue.**
+
+## Deferred Mac setup check
+
+The user reports a POV-Ray build in progress. At a later explicit switch,
+receive the current repository handoff, check the existing build's outcome,
+and verify `povray -version`; do not start a duplicate installation. Once it
+succeeds, follow the [Mac guide](docs/realizability/MAC_INSTALL_AND_BENCHMARK_PLAN.md)
+for the isolated one-frame and ten-frame movie check. Use Luna/medium; record
+versions, all-frame finite/bounds checks, three separated image inspections
+and decoded MP4 metadata. Stop on failure or after the setup report. Rejoin the
+then-current plan rather than repeating the PC review if it has already finished.
 
 ## R035 Git publication setup
 

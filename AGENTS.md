@@ -86,6 +86,12 @@ Establish release from the outgoing handoff and any current user clarification;
 record receipt on the new owner before substantive work. These records are
 coordination notes, not an automatic lock or a remote process check.
 
+An independent user-managed software build outside the shared project files
+(for example, POV-Ray installation on the Mac) may continue while the PC owns
+the repository review. Record it as ongoing and distinguish it from this task's
+processes. It does not itself transfer repository ownership or require a machine
+switch; do not stop or restart it without an applicable user instruction.
+
 ### Catch an unannounced switch
 
 At each session start, even when the user does not mention switching, read the

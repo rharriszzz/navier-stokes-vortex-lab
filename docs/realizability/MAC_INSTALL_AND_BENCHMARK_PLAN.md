@@ -1,26 +1,25 @@
 # Finish Mac setup and compare it with the PC
 
-Updated 2026-09-20 for R062's plan/handoff review. Readiness evidence is from
-R058; neither request installed software, rendered, or ran a benchmark.
+Updated 2026-09-20 for R065's choice to continue on the PC. Inspected Mac
+readiness remains from R058; the user now reports a POV-Ray build in progress.
+Its completion has not been verified by this session.
 
 ## Immediate next step and sequence
 
-**After transferring the current documentation, finish the Mac setup: install
-POV-Ray through existing MacPorts, then complete the isolated one-frame and
-ten-frame movie checks below. Stop after recording that result.** Use GPT-5.6
-Luna/medium. Recheck whether POV-Ray has since been installed before installing
-it. This establishes Mac visualization readiness; it supplies no speed ranking.
+**Stay on the PC for the R021/R013 and FFCx form/cache scientific review using
+GPT-6 Astra/high. Stop after its documented decision, before numerical
+execution.** The Mac POV-Ray build and movie checks are independent of this
+review and do not block it. `Continue` on the PC selects that review.
 
 Use the [machine handoff procedure](../../AGENTS.md#switching-between-the-mac-and-pc)
-before switching. R064 authorizes publication of this review from the PC;
-verify the successful push and receive that commit on the Mac. The Mac task is
-the next execution task, not already running. If remaining on the PC, carry forward this
-handoff rather than silently substituting a different task for `Continue`.
+when the user later chooses to switch. The PC retains repository ownership;
+the independent Mac package build can continue. Do not start a duplicate
+build or assume the Mac checkout has received this local R065 priority change.
 
-The subsequent sequence is:
+The scientific sequence is:
 
-1. Transfer ownership to the PC for the Astra/high R021/R013 and FFCx form/cache
-   review. Finish with a documented decision and, if warranted, a repeatable FEM
+1. Complete the PC Astra/high R021/R013 and FFCx form/cache review. Finish with
+   a documented decision and, if warranted, a repeatable FEM
    reference fixture, acceptance rules and resource contract. Stop before
    execution. The once-only physical q=64/q=96 experiment is a separate task.
 2. Implement and validate the portable benchmark wrapper on each host using
@@ -37,9 +36,14 @@ can be explicitly scheduled independently of the FEM review. They do not need
 to wait for a passing physical accuracy gate. No FEM fixture, launch allowance,
 cross-host tolerance or validated Mac monitor has yet been selected by this guide.
 
+**Deferred Mac task:** after the current POV-Ray build finishes and the user
+chooses to work on the Mac, verify the build and run the isolated movie checks
+below using Luna/medium. This establishes visualization readiness, not a speed
+ranking. Its completion does not require repeating a completed PC review.
+
 ## What remains to install
 
-**Install the command-line POV-Ray using the MacPorts already on this Mac.**
+**Let the existing POV-Ray build finish, then verify the command-line tool.**
 The other identified project dependencies are installed. Then validate the
 movie pipeline; FEM execution needs its own portability and numerical checks.
 
@@ -51,7 +55,7 @@ checks. This is an Apple M4 iMac with 24 GiB RAM.
 |---|---|---|
 | MacPorts | `/opt/local/bin/port` exists; Homebrew was not found on the inspected PATH | Use MacPorts for POV-Ray. |
 | Apple development tools | Xcode selected; `xcrun clang --version` succeeds | No compiler installation identified as missing; actual FEM JIT compilation is still untested. |
-| POV-Ray | No command on PATH; `port installed povray` reports none | Install with the command below. |
+| POV-Ray | Absent in R058; user reports a build in progress in R065 | Check that build's result later; verify the executable before the movie check. |
 | ffmpeg / ffprobe | Both execute, version 4.4.2; `libx264` encoder is listed | Keep them for the first smoke test; record versions for comparison with the PC. |
 | Official Anaconda Miniconda | Existing `navier-stokes-vortex-b1` environment; Python/DOLFINx/PETSc/MPICH metadata identifies `osx-arm64` builds | Activate the existing environment. |
 | FEM dependencies and NumPy | R046 imports and two-rank MPICH startup passed | Preserve `environment-b1.yml`; no reinstall identified as necessary. |
@@ -68,6 +72,10 @@ remained 0.10.0. See [B1 setup](B1_SETUP.md) for the historical-result caveat.
 
 Run these in Mac Terminal. `sudo` asks for your Mac login password; Terminal
 normally does not display characters while you type it.
+
+R065 reports an installation/build already in progress. The install command
+below is the original recipe, not an instruction to launch another copy.
+Inspect the current build's result first and verify its executable when done.
 
 ```bash
 sudo /opt/local/bin/port install povray
@@ -180,7 +188,7 @@ observer/watchdogs; the Mac is a candidate for future FEM work.
 
 Trajectory/render/encode checks can proceed independently of the physical
 research review, as described in [Project Tracks](../../PROJECT_TRACKS.md).
-For FEM, first complete the [queued scientific review](../../SESSION_HANDOFF.md#queued-pc-scientific-review)
+For FEM, first complete the [current PC scientific review](../../SESSION_HANDOFF.md#next-task)
 on the PC: the [R021 contract](B2_COMPATIBLE_TRACE_INTEGRATION_REVIEW.md),
 [R013 limits](B2_MATCHED_TRACE_REVIEW.md), [R033 result](B2_COMPATIBLE_TRACE_PREFLIGHT_FOLLOWUP.md)
 and R056 form/cache audit. Document the proposed small reference fixture,
@@ -379,13 +387,18 @@ both hosts reproduce it.
 
 ## Completion and model handoff
 
-The immediate Mac setup task is complete when counts, coordinates, separated
-images and decoded MP4 metadata pass and evidence is recorded. Stop on an
-install/check failure or after that report. Then recommend Astra/high for the
-queued PC scientific review. Retain Astra/high for numerical choices or
-unexplained differences; recommend Luna/medium for a bounded monitor
+The current PC review is complete when its scientific decision, remaining risks
+and any proposed repeatable reference/monitor contract are documented. Stop
+before numerical execution and choose the next bounded PC task from those
+findings. Retain Astra/high for numerical choices or unexplained differences;
+recommend Luna/medium for a bounded monitor
 implementation only after its contract is settled. Each step of the sequence
 above is a separate bounded task, not one automatic multi-machine execution.
+
+The deferred Mac check is complete when counts, coordinates, separated images
+and decoded MP4 metadata pass and evidence is recorded. Stop on an install/check
+failure or after that report, then follow the current handoff without replaying
+completed research work.
 
 R062 rechecked the session catalog and the official
 [Luna](https://developers.openai.com/api/docs/models/gpt-5.6-luna) and

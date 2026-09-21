@@ -1,10 +1,10 @@
 # Project status: physical preparation and a realistic movie
 
 Updated 2026-09-20 for
-[R062](REQUEST_LOG.md#r062--2026-09-20--review-macpc-benchmark-plan-and-handoff-process)
-and [R063](REQUEST_LOG.md#r063--2026-09-20--detect-an-unannounced-machine-switch),
-after reviewing the Mac/PC benchmark sequence and machine handoff. R058 remains
-the latest live Mac readiness evidence; no new install or benchmark ran. Resource
+[R065](REQUEST_LOG.md#r065--2026-09-20--make-the-pc-review-next-while-pov-ray-builds-on-the-mac),
+making the PC scientific review next while the user builds POV-Ray on the Mac.
+R058 remains the latest inspected Mac readiness evidence; build completion is
+unverified, and this session ran no install or benchmark. Resource
 guidance below includes the R023/R024 capacity clarifications.
 The goals below preserve the
 [R010 status-report request](REQUEST_LOG.md#r010--2026-09-20--project-status-and-user-goals).
@@ -206,10 +206,10 @@ evidence of realizability.
 
 ## Latest scientific checkpoint and the next review
 
-The immediate software task is the Mac POV-Ray install and isolated movie
-check after transfer of the current documentation. The PC review below is the
-next scientific task; see the [current execution handoff](SESSION_HANDOFF.md#next-task)
-for the ordered sequence and ownership state.
+The immediate task is the PC Astra/high scientific review below. The user's
+Mac POV-Ray build can continue independently; its movie check waits for a later
+explicit switch. See the [current execution handoff](SESSION_HANDOFF.md#next-task)
+for completion criteria, ownership and the stop before numerical execution.
 
 The [R033 prerequisite result](docs/realizability/B2_COMPATIBLE_TRACE_PREFLIGHT_FOLLOWUP.md)
 completes the disposable q=64/q=96 fixture and the actual pre-solve observer
@@ -336,17 +336,18 @@ The remaining Mac setup and task-by-task Mac/PC benchmark protocol are in
 [MAC_INSTALL_AND_BENCHMARK_PLAN.md](docs/realizability/MAC_INSTALL_AND_BENCHMARK_PLAN.md).
 R058 confirmed that MacPorts is already installed, POV-Ray is not registered,
 Xcode/clang is available, and ffmpeg/ffprobe 4.4.2 execute with libx264 listed.
-Install POV-Ray with `sudo /opt/local/bin/port install povray`, then use the
-guide's fresh source copy for the one-frame and ten-frame checks. A passing
+R065 reports a POV-Ray build already running; check its outcome at a later Mac
+session rather than launching another install. Once verified, use the guide's
+fresh source copy for the one-frame and ten-frame checks. A passing
 movie check establishes visualization readiness; FEM assembly, solving and
 portable resource-monitor validation remain pending. No install or benchmark
 was run as part of R058. Astra/high should complete the PC R021/R013 review
 and set the small FEM reference case/acceptance thresholds before either host is evaluated
 for the scientific workload.
 
-R062 makes the order explicit: Mac movie readiness, then the PC scientific
-review, portable monitor validation, and a separately scoped matched comparison.
-Visualization benchmarks can be scheduled independently. The workload revision
+R065 puts the PC scientific review first, followed, if warranted, by portable
+monitor validation and a separately scoped matched comparison. Mac movie
+readiness and visualization benchmarks can be scheduled independently. The workload revision
 stays fixed across later evidence commits; ignored benchmark inputs need an
 explicit checksum-verified transfer. R063 adds a local machine/owner check at
 session start. Uncertain ownership requires clarification; local Git cannot
