@@ -3210,3 +3210,37 @@ Luna Reserve Weekly limit: 1% left (resets 18:03 on 26 Sep)
 **Status:** In progress. Same PC/WSL owner; worktree contains only the identified R094 implementation changes plus this entry. No commit or push has yet been made for R094.
 
 **R095 delivery preparation:** Scoped R093/R094 documentation and R095/handoff notes are ready for delivery. Snapshot hashes, verbatim task text, append-only request history, local links/fragments, 803-word target and whitespace checks pass. Application/research checks are skipped. R094 changed files are listed in its outcome above; R095 adds only this request and handoff delivery state. Next task remains the verbatim Astra/high R088 acceptance review; do not start it in this delivery step. Commit and push outcome follows in final response.
+
+## R096 — 2026-09-21 — Record session snapshots and continue R088 acceptance review
+
+**User request:** “Luna just did an overhead reduction step.  Here is the results of /new and /status.” followed by the excerpts below and “continue”.
+
+**Supplied excerpts:** Decorative borders/progress bars omitted, wrapped resume ID joined, account email redacted. Prior session: “Implement overhead reduction”, `01a0c5b7-20de-76d0-8daa-eab1ecf5f7e5`; new status session: `01a0c5c2-abbc-7f30-9c27-4cb5af72e0ca`. Values are user-reported snapshots, not verified billing or measurements of this task. No “Worked for” excerpt was supplied; no private session files accessed.
+```text
+>_ OpenAI Codex (v0.155.1)
+model:     gpt-5.6-luna medium   /model to change
+directory: ~/git/navier-stokes-vortex-lab
+Tip: Join the OpenAI community Discord: http://discord.gg/openai
+Token usage: total=143,430 input=115,649 (+ 4,070,912 cached) output=27,781 (reasoning 8,176)
+To continue this session, run codex resume, then select Implement overhead reduction (01a0c5b7-20de-76d0-8daa-eab1ecf5f7e5)
+• Model changed to gpt-6-astra high
+/status
+>_ OpenAI Codex (v0.155.1)
+Visit https://chatgpt.com/codex/settings/usage for up-to-date information on rate limits and credits
+Model: gpt-6-astra (reasoning high, summaries auto)
+Model provider: openai
+Directory: ~/git/navier-stokes-vortex-lab
+Permissions: Workspace (Ask for approval)
+Agents.md: AGENTS.md
+Account: [REDACTED account email] (Plus)
+Collaboration mode: Default
+Session: 01a0c5c2-abbc-7f30-9c27-4cb5af72e0ca
+5h limit: 81% left (resets 21:37)
+Weekly limit: 97% left (resets 16:37 on 28 Sep)
+Credits: 283 credits
+Luna Reserve Weekly limit: 1% left (resets 18:03 on 26 Sep)
+```
+
+**Scope/authorization/status:** Continue authorizes scoped start/final commit and push. Record supplied metadata, then perform the deferred R088 source/saved-evidence acceptance review; produce an H01–H04 finding-to-evidence map, explicit outer measurement decision and one bounded follow-up. In progress; no archived main replay, native source/build/startup, live OS/cgroup/signal/workload, FEM or physical work. Stop on unresolved containment/timing/accounting policy or unexplained provenance/resource inconsistency. Preserve historical attempts, pins, thresholds and budgets.
+
+**Startup:** PC/WSL `daisy`, Linux/x86_64, intended checkout, clean `main`/`origin/main`, empty stashes, no open lifecycle or ownership transfer. Required `git pull --ff-only --no-rebase --no-autostash` succeeded (already up to date); HEAD equals freshly fetched upstream `aeb7de5b48f142b387cf212b39f31d23204dfacf`, confirming R095 delivery. Reread handoff/latest log after synchronization. Python `/tmp/navier-fenicsx/bin/python` is 3.12.13. PC retains ownership; independent Mac build remains unverified. Start publication precedes substantive review.
