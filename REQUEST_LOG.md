@@ -3520,3 +3520,13 @@ Luna Reserve Weekly limit: 100% left (resets 17:55 on 28 Sep)
 **R108 outcome, 2026-09-21:** Mac receipt completed. Python 3.12.13 CPython ran from `/Users/rharris/miniconda3/envs/navier-stokes-vortex-b1/bin/python` on arm64; `python -m unittest -v tests.test_check_trajectories` passed all 6 tests in 0.303 s. No platform-specific error occurred. No trajectory integration, rendering, encoding, benchmark, OS-helper, monitor, FEM or physical work ran.
 
 **R108 completion/next:** Updated the handoff and lifecycle record before final publication. The next bounded task is actual trajectory-output validation followed by a small movie check, with generator/render/encode requirements applied separately. Retain Luna/medium for routine execution; recommend Astra/high only for a model/format decision or unexpected resource failure.
+
+## R109 — 2026-09-21 — Continue Mac trajectory and movie validation
+
+**User request:** “(no worked for data) … Continue” with a supplied Codex session/status excerpt. The worked-for text was not supplied; the excerpt reports GPT-5.6 Luna/medium, the repository directory, workspace/ask-for-approval permissions, `AGENTS.md`, Default collaboration mode and user-reported usage snapshots. Account and session identifiers are omitted; these values are not independently verified account data.
+
+**Scope/status:** Continue authorizes the recorded Mac workflow, including scoped commit and push. Validate actual trajectory output with the existing bounded generator, render one frame and a short separated-frame sequence with the available POV-Ray setup, inspect at least three separated frames, then—only if those checks pass—encode a small H.264/yuv420p movie and verify it with `ffprobe`. Record expected frame inventory, finite coordinates, numerical bounds, useful radius/z extrema, render/movie metadata and any stop condition. Do not run FEM, physical, broad benchmark or supervision work. In progress.
+
+**Startup/reconciliation:** Mac `fire.lan`, Darwin/arm64, `/Users/rharris/git/navier-stokes-vortex-lab`; clean `main`/`origin/main` at `e4f8599`, empty stash list, no open lifecycle or ownership transfer, and fast-forward pull already up to date. R108 completed and retained Mac ownership; no task process or ignored transfer input is present. Luna/medium remains appropriate; stop on missing tools, malformed state, unexpected resource exhaustion or a model/format decision, recommending Astra/high only for the latter two decision boundaries.
+
+**Status:** R109 request recorded before workload execution. The required lifecycle start publication follows before substantive checks.

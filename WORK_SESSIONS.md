@@ -183,3 +183,8 @@ Checkout: /Users/rharris/git/navier-stokes-vortex-lab | Branch/upstream: main/or
 Task: Receive the R107 handoff and run the bounded Python 3.12 standard-library checker unit test on Mac; record interpreter/result and stop before trajectory integration, rendering, encoding, benchmarks, monitor work, FEM or physical execution.
 COMPLETED | 2026-09-21 22:49:04 UTC | outcome: Mac receipt recorded; Python 3.12.13 checker suite passed 6/6 in 0.303 s | released: no (Mac retains ownership)
 Changed files: REQUEST_LOG.md, SESSION_HANDOFF.md, WORK_SESSIONS.md | Checks/skips: `/Users/rharris/miniconda3/envs/navier-stokes-vortex-b1/bin/python -m unittest -v tests.test_check_trajectories` passed on Darwin/arm64; trajectory generation, render, encode, benchmark, OS helper, monitor, FEM and physical checks skipped | Evidence: six verbose unittest results and recorded interpreter metadata in REQUEST_LOG.md/SESSION_HANDOFF.md | Next task: bounded Mac trajectory-output validation, then one-frame/short-sequence render and small ffprobe-verified movie; stop on missing tools, malformed state, resource failure or model/format decision.
+
+## R109 — Mac trajectory and movie validation
+STARTED | 2026-09-21 22:54:26 UTC | Mac | fire.lan | Darwin/arm64
+Checkout: /Users/rharris/git/navier-stokes-vortex-lab | Branch/upstream: main/origin/main | Starting commit: e4f8599d351fd8e47e79002e67c65848b73d7217
+Task: Validate bounded actual trajectory output, render one frame and a short separated-frame sequence, inspect at least three frames, and encode/ffprobe a small H.264/yuv420p movie only after the preceding checks pass; stop on missing tools, malformed state, resource exhaustion or model/format ambiguity, before FEM/physical/broad benchmark work.
