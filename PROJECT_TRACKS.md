@@ -168,9 +168,10 @@ and independent outer-receipt repairs. [R097](docs/realizability/evidence/r097/R
 implements new admission/receipt gates with nine passing fake groups. The
 [R098 review](docs/realizability/B2_MONITOR_R097_REVIEW.md) accepts J01–J03 in
 the fake interface. The [R099 contract](docs/realizability/B2_MONITOR_TRUSTED_ADAPTER_CONTRACT.md)
-maps outer authority/accounting requirements; the selected manager's concrete
-capabilities remain unestablished. Its documentation-only capability decision
-is the single handoff task.
+maps outer authority/accounting requirements. The
+[R101 capability decision](docs/realizability/B2_MONITOR_MANAGER_CAPABILITY_DECISION.md)
+finds the selected manager unsupported under unchanged requirements. The next
+handoff task is user policy selection A/B/C; no policy change is selected.
 No OS-source admission or live certification is implied. The
 [Mac/PC performance and memory plan](docs/realizability/MAC_PC_PERFORMANCE_MEMORY_PLAN.md)
 specifies future comparisons and their monitor prerequisites. Follow the single

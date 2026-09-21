@@ -36,9 +36,10 @@ new gates with nine passing fake groups. The [R098 review](B2_MONITOR_R097_REVIE
 accepts fake J01–J03 and the injected receipt checks, but requires a concrete
 trusted outer-adapter authority/accounting contract before OS-source admission.
 The [R099 contract](B2_MONITOR_TRUSTED_ADAPTER_CONTRACT.md) now specifies that
-boundary and refuses admission pending concrete manager capabilities. The single
-handoff task is a documentation-only capability decision; live/whole-recorder
-certification remains false.
+boundary. The [R101 capability decision](B2_MONITOR_MANAGER_CAPABILITY_DECISION.md)
+finds the selected manager unsupported under unchanged requirements. The single
+handoff task is user policy selection A/B/C; no policy change is selected and
+live/whole-recorder certification remains false.
 The live suite remains unimplemented
 and unauthorized. The
 [Mac/PC performance and memory plan](MAC_PC_PERFORMANCE_MEMORY_PLAN.md) defines

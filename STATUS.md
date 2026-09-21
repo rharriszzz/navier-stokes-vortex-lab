@@ -1,11 +1,10 @@
 # Project status: physical preparation and a realistic movie
 
-Updated 2026-09-21. The [R099 trusted-adapter contract](docs/realizability/B2_MONITOR_TRUSTED_ADAPTER_CONTRACT.md)
-maps authority and all task-specific accounting. OS-source admission remains
-refused: the selected manager's reservation/setup/final-retention capabilities
-are unestablished. The single next task is a documentation-only capability
-decision in the [handoff](SESSION_HANDOFF.md#next-task); live/whole-recorder
-certification remains false.
+Updated 2026-09-21. The [R101 manager capability decision](docs/realizability/B2_MONITOR_MANAGER_CAPABILITY_DECISION.md)
+finds the selected manager unsupported under unchanged R099 requirements.
+OS-source admission and live/whole-recorder certification remain refused.
+The next task is user policy selection A/B/C in the
+[handoff](SESSION_HANDOFF.md#next-task); no policy change or execution is selected.
 A [performance and memory test plan for Mac and PC](docs/realizability/MAC_PC_PERFORMANCE_MEMORY_PLAN.md)
 is also ready as documentation; no benchmark has run.
 The [technical handoff](SESSION_HANDOFF.md#next-task) records the next task.
@@ -40,8 +39,8 @@ the calculations trustworthy; it is not yet evidence that the apparatus works.
   its first attempt. R096 reviewed all 14 saved functions; durable type binding,
   monitor evidence, admitted deadlines and independent outer receipts required repair.
   R097 added nine passing repair groups; R098 accepts J01–J03 within the fake
-  interface. R099 specifies the outer contract and identifies the concrete
-  manager capability decision still required.
+  interface. R099 specifies the outer contract; R101 completes the API
+  capability decision with an unsupported verdict and explicit user policy choices.
   Live operating-system adapter tests remain pending; further flow
   calculations remain disabled until the required safeguards are validated
   and launch is reviewed.

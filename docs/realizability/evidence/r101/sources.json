@@ -1,0 +1,103 @@
+{
+  "reviewed_on": "2026-09-21",
+  "method": "Opened official upstream pages with web tools; paraphrased observations, not source snapshots. Sufficiency judgments are reviewer inferences.",
+  "limits": "Moving online references, no upstream commit/hash pin or installed-version/live inspection. Freedesktop rendered pages returned 403; raw project manuals used.",
+  "sources": [
+    {
+      "id": "systemd-manager",
+      "url": "https://raw.githubusercontent.com/systemd/systemd/main/man/org.freedesktop.systemd1.xml",
+      "sections": "Manager methods; Unit/Service/Timer properties",
+      "observation": "Transient start and job monitoring; effective properties and main-process observations; no documented application reservation/terminal transaction."
+    },
+    {
+      "id": "systemd-service",
+      "url": "https://raw.githubusercontent.com/systemd/systemd/main/man/systemd.service.xml",
+      "sections": "TimeoutStartSec; RuntimeMaxSec; TimeoutStopSec",
+      "observation": "Separate startup/runtime/stop controls, runtime extension and randomization caveats."
+    },
+    {
+      "id": "systemd-unit",
+      "url": "https://raw.githubusercontent.com/systemd/systemd/main/man/systemd.unit.xml",
+      "sections": "JobTimeoutSec; Unit Garbage Collection; CollectMode",
+      "observation": "Job timeout does not itself change unit state; unloading loses execution results except logging."
+    },
+    {
+      "id": "systemd-timer",
+      "url": "https://raw.githubusercontent.com/systemd/systemd/main/man/systemd.timer.xml",
+      "sections": "AccuracySec; monotonic timer directives",
+      "observation": "Scheduling/coalescing and timer slack do not establish the required whole-transaction deadline."
+    },
+    {
+      "id": "systemd-exec",
+      "url": "https://raw.githubusercontent.com/systemd/systemd/main/man/systemd.exec.xml",
+      "sections": "INVOCATION_ID",
+      "observation": "Runtime-cycle token is shared by unit processes, not an individual process identity."
+    },
+    {
+      "id": "systemd-resource",
+      "url": "https://raw.githubusercontent.com/systemd/systemd/main/man/systemd.resource-control.xml",
+      "sections": "MemoryMax; MemorySwapMax; TasksMax; DelegateSubgroup",
+      "observation": "Unit hierarchy resource controls and delegated subgroup placement; not per-request external-manager attribution."
+    },
+    {
+      "id": "journalctl",
+      "url": "https://raw.githubusercontent.com/systemd/systemd/main/man/journalctl.xml",
+      "sections": "--sync",
+      "observation": "Waits for synchronization of earlier messages; no finite bound specified for that operation."
+    },
+    {
+      "id": "journald-conf",
+      "url": "https://raw.githubusercontent.com/systemd/systemd/main/man/journald.conf.xml",
+      "sections": "SyncIntervalSec; Storage; retention",
+      "observation": "Default periodic sync is five minutes; storage and retention configuration affect evidence."
+    },
+    {
+      "id": "journal-fields",
+      "url": "https://raw.githubusercontent.com/systemd/systemd/main/man/systemd.journal-fields.xml",
+      "sections": "__MONOTONIC_TIMESTAMP; _BOOT_ID",
+      "observation": "Reception timestamps are not persistence-completion timestamps."
+    },
+    {
+      "id": "notify",
+      "url": "https://raw.githubusercontent.com/systemd/systemd/main/man/sd_notify.xml",
+      "sections": "sd_notify_barrier; BARRIER=1",
+      "observation": "Acknowledges processing of previous notifications, not application disk commit."
+    },
+    {
+      "id": "cgroup-v2",
+      "url": "https://docs.kernel.org/admin-guide/cgroup-v2.html",
+      "sections": "Processes; Unpopulated Notification; resource controllers",
+      "observation": "Hierarchical scope, zombie omission from membership, live-population semantics."
+    },
+    {
+      "id": "clone",
+      "url": "https://man7.org/linux/man-pages/man2/clone.2.html",
+      "sections": "CLONE_INTO_CGROUP; CLONE_PIDFD",
+      "observation": "Direct creation into a frozen cgroup and pidfd acquisition are documented primitives."
+    },
+    {
+      "id": "pidfd",
+      "url": "https://man7.org/linux/man-pages/man2/pidfd_open.2.html",
+      "sections": "NOTES",
+      "observation": "Stable descriptor, exit polling and direct-child waiting have distinct semantics."
+    },
+    {
+      "id": "clocks",
+      "url": "https://man7.org/linux/man-pages/man2/clock_gettime.2.html",
+      "sections": "CLOCK_MONOTONIC; CLOCK_BOOTTIME",
+      "observation": "Suspend treatment differs; do not silently mix clocks."
+    },
+    {
+      "id": "fsync",
+      "url": "https://man7.org/linux/man-pages/man2/fsync.2.html",
+      "sections": "DESCRIPTION; ERRORS",
+      "observation": "File synchronization may require directory synchronization, may block/fail, has no timeout argument."
+    },
+    {
+      "id": "astra",
+      "url": "https://developers.openai.com/api/docs/models/gpt-6-astra",
+      "sections": "Model description and reasoning effort",
+      "observation": "High effort supported; availability also checked against session catalog, no account-access inference."
+    }
+  ]
+}
