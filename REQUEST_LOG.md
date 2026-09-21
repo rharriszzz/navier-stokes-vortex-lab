@@ -2460,4 +2460,6 @@ review recorded in `SESSION_HANDOFF.md`.
 
 **Interpreted scope:** Commit and push the pending project continuity updates describing the Mac FEM environment verification and the recommended Mac-versus-PC comparison, so the PC/Astra session can read them.
 
-**Status:** In progress; publication authorized for the reviewed continuity files.
+**Status:** Complete; commit `3271963` pushed to `origin/main`.
+
+**Outcome:** Committed the reviewed `REQUEST_LOG.md` and `SESSION_HANDOFF.md` updates as `3271963` (`Record Mac FEM environment verification`) and pushed successfully to `origin/main`. `git diff --cached --check` passed before commit; no force push was used. The pushed handoff now contains the Mac environment results, FFCx version discrepancy, and the matched Mac/PC workload comparison plan. No source files or numerical evidence changed.

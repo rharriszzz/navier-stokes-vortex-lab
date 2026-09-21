@@ -1,8 +1,8 @@
 # Current session handoff
 
 Last updated: 2026-09-20. Latest request:
-[R047](REQUEST_LOG.md#r047--2026-09-20--identify-useful-mac-versus-pc-decision-checks),
-which identified the measurements needed to compare the Mac and PC for a future FEM job. R034 and the SSH recovery
+[R048](REQUEST_LOG.md#r048--2026-09-20--publish-mac-verification-and-host-comparison-handoff),
+which committed and pushed the Mac verification and host-comparison notes as `3271963` to `origin/main`. R034 and the SSH recovery
 records were committed and pushed successfully. The
 user permits using the PC
 within its capabilities; the former small diagnostic caps are not immutable
