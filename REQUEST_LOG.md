@@ -3382,3 +3382,35 @@ Luna Reserve Weekly limit: 100% left (resets 17:44 on 28 Sep)
 **Outcome/checks/files:** Confirmed supplied phase-start excerpts are recorded in REQUEST_LOG.md, including R099's worked-for time, token usage (including cached/reasoning counts), prior/new session IDs, model/effort, balances/reset strings, credits and MCP warning. Prior-session completion/resume text is distinguished from the new `/status` session. Account email is redacted; decorative borders/bars omitted; missing `/new` command text and absent five-hour balance explicitly noted, with no invented values or private-session inspection. These are user-supplied snapshots, not independently verified account data. Changed REQUEST_LOG.md and SESSION_HANDOFF.md only; append-only/request-ID/whitespace checks follow, application/research checks unnecessary. Evidence is the supplied text and existing R096–R099 entries. No unresolved metadata decision, processes or new lifecycle. PC retains ownership; next task remains the handoff's documentation-only manager capability decision. This confirmation metadata remains local, with no commit/push.
 
 **R100 validation:** Passed preservation of committed log prefix, 100 unique sequential request IDs, supplied token/status/session/redaction fields in R096–R099, unchanged Next task and two-file metadata scope. `git diff --check` passed. No commit/push performed.
+
+
+## R101 — 2026-09-21 — Continue manager capability decision
+
+**User request:** Supplied the following session excerpts followed by “continue”. Decorative borders/bars omitted, account email redacted. Prior completion/resume and new status session are distinguished. No explicit `/new` command text or five-hour balance was supplied. Values are user-reported snapshots, not verified account/billing data; no private session files accessed.
+```text
+Worked for 7m 46s · done 5:52 PM
+>_ OpenAI Codex (v0.155.1)
+model: gpt-6-astra high /model to change
+directory: ~/git/navier-stokes-vortex-lab
+Tip: NEW: Prevent sleep while running is now available in /experimental.
+Token usage: total=187,363 input=172,592 (+ 1,322,368 cached) output=14,771 (reasoning 1,019)
+To continue this session, run codex resume, then select Summarize Codex session (01a0c5ed-8489-76b3-8e06-eec8713e8261)
+/status
+>_ OpenAI Codex (v0.155.1)
+Visit https://chatgpt.com/codex/settings/usage for up-to-date information on rate limits and credits
+Model: gpt-6-astra (reasoning high, summaries auto)
+Model provider: openai
+Directory: ~/git/navier-stokes-vortex-lab
+Permissions: Workspace (Ask for approval)
+Agents.md: AGENTS.md
+Account: [REDACTED account email] (Plus)
+Collaboration mode: Default
+Session: 01a0c5f7-badb-7ef1-bbd1-85d1e0a2ee35
+Weekly limit: 98% left (resets 17:37 on 28 Sep)
+Credits: 283 credits
+Luna Reserve Weekly limit: 100% left (resets 17:55 on 28 Sep)
+```
+
+**Scope/status:** Continue authorizes scoped reconciliation/start/final commit and push. In progress: documentation-only concrete systemd/kernel API capability decision for R099 E0/E1/E8, real identity, time/durability/failure and outside-unit accounting. Produce supported finite design under unchanged limits or unsupported verdict and exact policy choice. No execution allowance, live inspection/mutation, adapter/native source, fixture/build/startup/helper/workload/FEM/physical work. Stop at unsupported/uncertain capability; do not assume another trusted process or weaken accounting.
+
+**Startup/reconciliation:** PC/WSL `daisy`, Linux/x86_64, intended checkout, main/origin/main, empty stashes, no open lifecycle or ownership transfer. Only R100 metadata was dirty; inspected it, fetched origin and confirmed unchanged R099 tip, then preserved/published both files as `c2d700d` under this Continue authorization before pulling. Clean `git pull --ff-only --no-rebase --no-autostash` succeeded; HEAD equals fetched upstream `c2d700d68705f6ad65c5b87f71f5cf550e4b41bb`. Reread handoff/latest logs. Python `/tmp/navier-fenicsx/bin/python` is 3.12.13. PC retains ownership, independent Mac build remains unverified. Start publication precedes substantive work.
