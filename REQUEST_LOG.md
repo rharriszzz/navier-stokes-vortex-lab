@@ -3516,3 +3516,7 @@ Luna Reserve Weekly limit: 100% left (resets 17:55 on 28 Sep)
 **Startup/reconciliation:** Mac `fire.lan`, Darwin/arm64, `/Users/rharris/git/navier-stokes-vortex-lab`; clean `main`/`origin/main` at `14bf4d67afa7e837e4ba5b5751028a5cebb4019e`, empty stash list, and HEAD equal to the freshly pulled upstream. R107 released ownership to this Mac; no task process or ignored transfer input is present. The current receiving checkout and interpreter path will be recorded after verification.
 
 **Status:** Started. The required lifecycle `STARTED` record is published before substantive work. Luna/medium remains suitable for this routine portability check; recommend Astra/high only if a model/format decision or unexpected resource failure occurs.
+
+**R108 outcome, 2026-09-21:** Mac receipt completed. Python 3.12.13 CPython ran from `/Users/rharris/miniconda3/envs/navier-stokes-vortex-b1/bin/python` on arm64; `python -m unittest -v tests.test_check_trajectories` passed all 6 tests in 0.303 s. No platform-specific error occurred. No trajectory integration, rendering, encoding, benchmark, OS-helper, monitor, FEM or physical work ran.
+
+**R108 completion/next:** Updated the handoff and lifecycle record before final publication. The next bounded task is actual trajectory-output validation followed by a small movie check, with generator/render/encode requirements applied separately. Retain Luna/medium for routine execution; recommend Astra/high only for a model/format decision or unexpected resource failure.
