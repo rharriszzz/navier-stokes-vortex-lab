@@ -154,10 +154,16 @@ reproduces eleven remaining gaps and specifies future live tests. R082 repairs
 those cases in a new fixture-only copy. The
 [R083 review](docs/realizability/B2_MONITOR_R082_REVIEW.md) identifies remaining
 acceptance/freshness/provenance gaps and bounds the later harness; the handoff
-selects one further fixture-only repair before OS implementation. The
+selected a further fixture-only repair. [R084](docs/realizability/evidence/r084/README.md)
+completed that copy: all 22 registered groups passed in attempt 3, with two
+understood non-resource fixture assertions retained and reconciled within the
+same 120 s allowance. R082 archives and production pins remain unchanged; the
+physical CLI/API remains disabled. The next handoff is an Astra/high review of
+acceptance, ownership and provenance before the OS implementation is separately
+bounded. The
 [Mac/PC performance and memory plan](docs/realizability/MAC_PC_PERFORMANCE_MEMORY_PLAN.md)
 specifies future comparisons and their monitor prerequisites. Follow the single
-[current handoff task](SESSION_HANDOFF.md#next-task) for implementation and
+[current handoff task](SESSION_HANDOFF.md#next-task) for the review and
 stops; none of these steps authorizes physical execution. The Mac setup and
 machine-handoff sequence remain in that handoff.
 The B2 gate remains failed and campaign readiness false. Use

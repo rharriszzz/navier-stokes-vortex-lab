@@ -1,0 +1,11 @@
+{
+  "address_space_limit_bytes": 268435456,
+  "attempts": 3,
+  "cumulative_elapsed_seconds": 15.69079346198123,
+  "limit_seconds": 120.0,
+  "maximum_child_lifetime_peak_rss_bytes": 30060544,
+  "physical_execution_enabled": false,
+  "schema": 1,
+  "scope": "fixtures only; no live operation, workload, FEM or physical execution",
+  "status": "passed"
+}

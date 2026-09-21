@@ -1,0 +1,12 @@
+{
+  "scope": "R073 synthetic portable monitor only",
+  "base_commit": "172cd70d39d80232c8d07c6c916b7fe4bf4a3e6f",
+  "python": "3.12.13",
+  "files": {
+    "portable_monitor.py": "9759d6875fa91359a506cc1bd728c0b21bf44efa3080d3a0c5e0b52dcca21655",
+    "validate.py": "209c181d1dfa5b0aa933c6f98c3669d0ea183fe8a73a0a811d048e97efeee280",
+    "monitor_contract.md": "92d2ae14c1bec5818a5c97b59fca61e97939991f443c7261dfd030e7ef0df682",
+    "archived_r033_toy_runner.py": "e6860548c3e3168a0cfaceb184652125ac57d127bc816af92e54b7cea41427c6"
+  },
+  "physical_execution_enabled": false
+}

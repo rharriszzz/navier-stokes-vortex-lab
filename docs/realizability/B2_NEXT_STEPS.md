@@ -22,9 +22,14 @@ additional gaps and freezes the future ten-case PC suite.
 R082 repairs those fixture findings in a new copy, preserves the failed
 assertion and explicit reconciliation, and leaves the physical entry disabled.
 The [R083 review](B2_MONITOR_R082_REVIEW.md) maps all repairs, confirms remaining
-acceptance/freshness/provenance gaps and bounds the missing harness. Follow the
-single handoff task for the new fixture-only repair; the live suite remains
-unimplemented and unauthorized. The
+acceptance/freshness/provenance gaps and bounds the missing harness. R084's new
+fixture copy passes all 22 registered groups in attempt 3, after two non-resource
+fixture assertion failures were preserved and source-bound reconciliations were
+recorded within the original 120 s allowance. The physical CLI/API remains
+disabled. Follow the single [handoff task](../../SESSION_HANDOFF.md#next-task):
+Astra/high reviews R084 acceptance, ownership and provenance before any OS
+implementation is separately bounded. The live suite remains unimplemented
+and unauthorized. The
 [Mac/PC performance and memory plan](MAC_PC_PERFORMANCE_MEMORY_PLAN.md) defines
 future comparisons. Live adapters remain unvalidated; physical execution is
 disabled.

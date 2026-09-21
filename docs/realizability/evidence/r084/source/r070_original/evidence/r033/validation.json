@@ -1,0 +1,56 @@
+{
+  "status": "passed",
+  "attempts": 4,
+  "cumulative_wall_seconds": 56.25128577899886,
+  "selected_limits": {
+    "wall_seconds": 600,
+    "child_tree_rss_mib": 1536
+  },
+  "high_order": {
+    "trace_order_cases": 4,
+    "facet_checks": 16
+  },
+  "observer": {
+    "cases": 4,
+    "full_block_oracle_checks": 9,
+    "once_only_calls": true,
+    "all_factor_and_solve_events_zero": true
+  },
+  "maximum_parent_observed_peak_mib": 571.421875,
+  "maximum_peak_attempt": 3,
+  "final_attempt_peak_mib": 171.2421875,
+  "physical_execution": {
+    "meshes": 0,
+    "solves": 0,
+    "child_launched": false
+  },
+  "documentation": {
+    "markdown_files": 9,
+    "local_links_and_anchors": 124,
+    "fenced_blocks": 16,
+    "request_history_prefix_preserved": true,
+    "R033_recorded_once": true
+  },
+  "checkpoint_stages": [
+    "advanced_toys_complete",
+    "after_harmonic_form_compilation",
+    "after_oracle_load_assembly",
+    "after_oracle_matrix_assembly",
+    "after_reference_mesh_construction",
+    "before_harmonic_form_compilation",
+    "before_oracle_load_assembly",
+    "before_oracle_matrix_assembly",
+    "before_reference_mesh_construction",
+    "harmonic_forms_constructed",
+    "high_order_polynomial",
+    "imports",
+    "observer_A_64",
+    "observer_A_96",
+    "observer_P",
+    "observer_case_begin_A_64",
+    "observer_case_begin_A_96",
+    "observer_case_begin_P",
+    "observer_case_begin_compatible",
+    "observer_compatible"
+  ]
+}

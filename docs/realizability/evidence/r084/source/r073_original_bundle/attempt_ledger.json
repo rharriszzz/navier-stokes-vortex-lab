@@ -1,0 +1,34 @@
+{
+  "budget_seconds": 120.0,
+  "budget_max_rss_mib": 256.0,
+  "attempts": [
+    {
+      "attempt": 1,
+      "outcome": "failed: completion_and_one_second_host_sampling assertion; runtime gap comparison exceeded 1.0 by floating-point rounding",
+      "elapsed_seconds": 0.1,
+      "max_rss_mib": null,
+      "rss_measurement": "not collected"
+    },
+    {
+      "attempt": 2,
+      "outcome": "failed: tree_missing_partial_stop assertion; first missing tree sample did not request adapter termination",
+      "elapsed_seconds": 0.1,
+      "max_rss_mib": null,
+      "rss_measurement": "not collected"
+    },
+    {
+      "attempt": 3,
+      "outcome": "passed",
+      "elapsed_seconds": 0.00015258099301718175,
+      "max_rss_mib": 133.48828125
+    },
+    {
+      "attempt": 4,
+      "outcome": "passed",
+      "elapsed_seconds": 0.0001620010007172823,
+      "max_rss_mib": 133.59375
+    }
+  ],
+  "cumulative_elapsed_seconds": 0.20031458199373448,
+  "maximum_sampled_rss_mib": 133.59375
+}

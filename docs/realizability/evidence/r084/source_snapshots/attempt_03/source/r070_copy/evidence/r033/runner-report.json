@@ -1,0 +1,246 @@
+{
+  "status": "passed",
+  "wall_limit_seconds": 600.0,
+  "rss_limit_mib": 1536.0,
+  "physical_meshes": 0,
+  "matrix_solves": 0,
+  "watches": {
+    "wrong_root": {
+      "command": [
+        "/tmp/navier-fenicsx/bin/python",
+        "/tmp/navier-b2-compatible-r033/attempt-04/wrapper_toys.py",
+        "--output",
+        "/tmp/navier-b2-compatible-r033/attempt-04/toys/wrong-root"
+      ],
+      "returncode": 1,
+      "elapsed_seconds": 0.16974435100564733,
+      "parent_observed_peak_rss_mib": 27.15625,
+      "samples": 4,
+      "nominal_poll_seconds": 0.05,
+      "maximum_sample_gap_seconds": 0.0568536400096491,
+      "largest_observed_process_tree": 1,
+      "stop_reason": null,
+      "per_process_at_peak": [
+        {
+          "pid": 340824,
+          "name": "python",
+          "executable": "/tmp/navier-fenicsx/bin/python3.12",
+          "rss_mib": 27.15625
+        }
+      ],
+      "per_process_at_stop": []
+    },
+    "watchdog": {
+      "command": [
+        "/tmp/navier-fenicsx/bin/python",
+        "/tmp/navier-b2-compatible-r033/attempt-04/toy_runner.py",
+        "--self-check",
+        "--output",
+        "/tmp/navier-b2-compatible-r033/attempt-04/toys/watchdog"
+      ],
+      "returncode": 0,
+      "elapsed_seconds": 0.28409013999043964,
+      "parent_observed_peak_rss_mib": 71.03125,
+      "samples": 6,
+      "nominal_poll_seconds": 0.05,
+      "maximum_sample_gap_seconds": 0.0580531119776424,
+      "largest_observed_process_tree": 3,
+      "stop_reason": null,
+      "per_process_at_peak": [
+        {
+          "pid": 340828,
+          "name": "python",
+          "executable": "/tmp/navier-fenicsx/bin/python3.12",
+          "rss_mib": 41.1640625
+        },
+        {
+          "pid": 340825,
+          "name": "python",
+          "executable": "/tmp/navier-fenicsx/bin/python3.12",
+          "rss_mib": 18.49609375
+        },
+        {
+          "pid": 340827,
+          "name": "python",
+          "executable": "/tmp/navier-fenicsx/bin/python3.12",
+          "rss_mib": 11.37109375
+        }
+      ],
+      "per_process_at_stop": []
+    },
+    "kernels": {
+      "command": [
+        "/tmp/navier-fenicsx/bin/python",
+        "/tmp/navier-b2-compatible-r033/attempt-04/toy_runner.py",
+        "--toy-child",
+        "--output",
+        "/tmp/navier-b2-compatible-r033/attempt-04/toys/kernels"
+      ],
+      "returncode": 0,
+      "elapsed_seconds": 4.230762603983749,
+      "parent_observed_peak_rss_mib": 141.28125,
+      "samples": 76,
+      "nominal_poll_seconds": 0.05,
+      "maximum_sample_gap_seconds": 0.05880501298815943,
+      "largest_observed_process_tree": 1,
+      "stop_reason": null,
+      "per_process_at_peak": [
+        {
+          "pid": 340829,
+          "name": "python",
+          "executable": "/tmp/navier-fenicsx/bin/python3.12",
+          "rss_mib": 141.28125
+        }
+      ],
+      "per_process_at_stop": []
+    },
+    "wrapper": {
+      "command": [
+        "/tmp/navier-fenicsx/bin/python",
+        "/tmp/navier-b2-compatible-r033/attempt-04/wrapper_toys.py",
+        "--output",
+        "/tmp/navier-b2-compatible-r033/attempt-04/toys/wrapper"
+      ],
+      "returncode": 0,
+      "elapsed_seconds": 0.32870420400286093,
+      "parent_observed_peak_rss_mib": 137.5,
+      "samples": 7,
+      "nominal_poll_seconds": 0.05,
+      "maximum_sample_gap_seconds": 0.05607547698309645,
+      "largest_observed_process_tree": 1,
+      "stop_reason": null,
+      "per_process_at_peak": [
+        {
+          "pid": 340836,
+          "name": "python",
+          "executable": "/tmp/navier-fenicsx/bin/python3.12",
+          "rss_mib": 137.5
+        }
+      ],
+      "per_process_at_stop": []
+    },
+    "block-rhs": {
+      "command": [
+        "/tmp/navier-fenicsx/bin/python",
+        "/tmp/navier-b2-compatible-r033/attempt-04/block_rhs_toys.py",
+        "--output",
+        "/tmp/navier-b2-compatible-r033/attempt-04/toys/block-rhs"
+      ],
+      "returncode": 0,
+      "elapsed_seconds": 0.3825975169893354,
+      "parent_observed_peak_rss_mib": 144.4375,
+      "samples": 8,
+      "nominal_poll_seconds": 0.05,
+      "maximum_sample_gap_seconds": 0.05443073398782872,
+      "largest_observed_process_tree": 1,
+      "stop_reason": null,
+      "per_process_at_peak": [
+        {
+          "pid": 340840,
+          "name": "python",
+          "executable": "/tmp/navier-fenicsx/bin/python3.12",
+          "rss_mib": 144.4375
+        }
+      ],
+      "per_process_at_stop": []
+    },
+    "disk": {
+      "command": [
+        "/tmp/navier-fenicsx/bin/python",
+        "/tmp/navier-b2-compatible-r033/attempt-04/physical.py",
+        "--extra-toys",
+        "--output",
+        "/tmp/navier-b2-compatible-r033/attempt-04/toys/disk"
+      ],
+      "returncode": 0,
+      "elapsed_seconds": 0.10867521999171004,
+      "parent_observed_peak_rss_mib": 33.30078125,
+      "samples": 3,
+      "nominal_poll_seconds": 0.05,
+      "maximum_sample_gap_seconds": 0.05261972299194895,
+      "largest_observed_process_tree": 1,
+      "stop_reason": null,
+      "per_process_at_peak": [
+        {
+          "pid": 340844,
+          "name": "python",
+          "executable": "/tmp/navier-fenicsx/bin/python3.12",
+          "rss_mib": 33.30078125
+        }
+      ],
+      "per_process_at_stop": []
+    },
+    "parent-refusal": {
+      "command": [
+        "/tmp/navier-fenicsx/bin/python",
+        "/tmp/navier-b2-compatible-r033/attempt-04/run_contract.py",
+        "parent-refusal",
+        "--output",
+        "/tmp/navier-b2-compatible-r033/attempt-04/toys/parent-refusal"
+      ],
+      "returncode": 0,
+      "elapsed_seconds": 0.055458785995142534,
+      "parent_observed_peak_rss_mib": 5.40234375,
+      "samples": 2,
+      "nominal_poll_seconds": 0.05,
+      "maximum_sample_gap_seconds": 0.05177922299480997,
+      "largest_observed_process_tree": 1,
+      "stop_reason": null,
+      "per_process_at_peak": [
+        {
+          "pid": 340845,
+          "name": "python",
+          "executable": "/tmp/navier-fenicsx/bin/python3.12",
+          "rss_mib": 5.40234375
+        }
+      ],
+      "per_process_at_stop": []
+    },
+    "advanced": {
+      "command": [
+        "/tmp/navier-fenicsx/bin/python",
+        "/tmp/navier-b2-compatible-r033/attempt-04/advanced_toys.py",
+        "--output",
+        "/tmp/navier-b2-compatible-r033/attempt-04/toys/advanced"
+      ],
+      "returncode": 0,
+      "elapsed_seconds": 2.3754939769860357,
+      "parent_observed_peak_rss_mib": 171.2421875,
+      "samples": 44,
+      "nominal_poll_seconds": 0.05,
+      "maximum_sample_gap_seconds": 0.056623479002155364,
+      "largest_observed_process_tree": 1,
+      "stop_reason": null,
+      "per_process_at_peak": [
+        {
+          "pid": 340846,
+          "name": "python",
+          "executable": "/tmp/navier-fenicsx/bin/python3.12",
+          "rss_mib": 171.2421875
+        }
+      ],
+      "per_process_at_stop": []
+    }
+  },
+  "prior_elapsed_seconds": 48.31175252300454,
+  "current_attempt_seconds": 7.93953325599432,
+  "elapsed_seconds": 56.25128577899886,
+  "wrong_root_refusal": {
+    "status": "partial_failed",
+    "stage": "imports",
+    "error": {
+      "type": "FileNotFoundError",
+      "message": "[Errno 2] No such file or directory: '/tmp/navier-b2-compatible-r033/attempt-04/toys/invalid-working-directory/realizability/__init__.py'"
+    },
+    "counts": {
+      "physical_meshes": 0,
+      "pde_solves": 0,
+      "matrix_factorizations": 0,
+      "primary_rhs": 0,
+      "returned_primary_solves": 0,
+      "correction_rhs": 0,
+      "matrix_solves": 0
+    },
+    "report_sha256": "0338d4c924742921a377fa17022b8c3cf46cf25bc58484a73eed3ca488c35fb4"
+  }
+}

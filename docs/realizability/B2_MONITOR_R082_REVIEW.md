@@ -236,3 +236,29 @@ The session catalog and official OpenAI Docs were checked for
 This recommendation is task-specific; no model switch, delegation or automation
 occurred. PC retains ownership and stops after scoped delivery. **Next prompt:
 Continue.**
+
+## R084 fixture implementation outcome
+
+R084 implements the G01–G07 and ownership/reporting repairs in a new
+[fixture bundle](evidence/r084/README.md); the R082 source, evidence and three
+attempts remain unchanged. All 22 discovered fixture functions are registered
+once and passed in attempt 3. Attempts 1 and 2 each exposed a known fixture
+assertion (terminal-protocol instance reuse; then a source-manifest path base),
+not a resource stop. Both failures, complete source bodies/hashes, partial
+progress, and source-bound reconciliation events are preserved and fully
+charged; cumulative total is 15.690793/120 s. Maximum validator lifetime RSS
+is 30,060,544/268,435,456 B. Python 3.12.13 was used. The test run also checks
+the saved R082 source manifest and R084 per-attempt snapshots, exact R070
+sentinel count/schema acceptance, parser terminal state, 5 s cleanup boundary,
+absolute sampling phase and independent cleanup after callback failure.
+
+The recorder measures setup/snapshot, validator child and finalization
+intervals; it conservatively charges a five-second final persistence reserve.
+Interpreter startup/imports and that reserve are explicitly outside timed
+intervals, so this is not whole-process resource certification. No native
+implementation/build/startup, live OS operation, cgroup write, signal,
+workload, FEM/MPI/JIT, mesh/solve, render, encode or physical run occurred. The
+R070 physical CLI/API remains disabled; 180 s / 1536 MiB physical limits and
+the unused q64/q96 allowance are unchanged. The current handoff selects
+Astra/high review of acceptance, ownership and provenance before any OS
+harness implementation decision.

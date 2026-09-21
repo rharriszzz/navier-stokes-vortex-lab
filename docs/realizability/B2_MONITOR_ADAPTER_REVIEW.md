@@ -22,8 +22,11 @@ The original implementation and subsequent
 eleven further counterexamples and froze the future live-validation contract;
 R082 implemented fixture repairs. The [R083 review](B2_MONITOR_R082_REVIEW.md)
 finds remaining acceptance/provenance gaps and bounds the missing harness.
-Follow the current [next task](../../SESSION_HANDOFF.md#next-task). Windows collection, live validation
-and physical launch remain separate obligations specified below.
+R084 then completed the next fixture-only repair bundle in a separate copy; its
+[evidence](evidence/r084/README.md) records 22/22 registered groups passing in
+attempt 3 and two preserved non-resource fixture corrections. Follow the
+current [next task](../../SESSION_HANDOFF.md#next-task). Windows collection,
+live validation and physical launch remain separate obligations specified below.
 
 No numerical method, boundary condition, observer, solver, package pin or
 scientific acceptance threshold changes. Physical limits remain **180 s and

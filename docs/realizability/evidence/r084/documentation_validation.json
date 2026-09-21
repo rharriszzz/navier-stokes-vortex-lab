@@ -1,0 +1,28 @@
+{
+  "attempts": 3,
+  "checker_sha256": "9ba1aa4376672b6ac66d01d983723007927df6592e54efb9eecda22574c4fb82",
+  "delivery_state": "completion prepared; final scoped publication follows",
+  "documents": [
+    "REQUEST_LOG.md",
+    "WORK_SESSIONS.md",
+    "SESSION_HANDOFF.md",
+    "STATUS.md",
+    "PROJECT_TRACKS.md",
+    "docs/realizability/B2_NEXT_STEPS.md",
+    "docs/realizability/B2_MONITOR_ADAPTER_REVIEW.md",
+    "docs/realizability/B2_MONITOR_R082_REVIEW.md",
+    "README.md",
+    "AGENTS.md",
+    "docs/realizability/evidence/r084/README.md"
+  ],
+  "finite_json_files": 136,
+  "fixture_checks": 22,
+  "heading_fragments": 24,
+  "local_links": 185,
+  "r082_archive_sources": 61,
+  "reconciliations": 2,
+  "schema": 4,
+  "source_files": 64,
+  "source_snapshot_files": 192,
+  "status": "passed"
+}

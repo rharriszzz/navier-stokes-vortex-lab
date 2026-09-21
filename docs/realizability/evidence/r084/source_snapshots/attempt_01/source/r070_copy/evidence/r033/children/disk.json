@@ -1,0 +1,11 @@
+{
+  "status": "passed",
+  "checks": {
+    "restriction_error": 2.7755575615628914e-17,
+    "stencil_inverse_error": 0.0,
+    "cut_area": 0.125,
+    "vertex_contact_empty": true
+  },
+  "disk_sha256": "52afe6d93ff6886b3bfbc4cd6fb68523ec60c98d0bb336fa22c74f4276199255",
+  "process_peak_rss_mib": 39.76953125
+}
