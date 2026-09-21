@@ -15,8 +15,10 @@ limits**, unused q64/q96 allowance and failed B2 accuracy result are unchanged.
 
 This contract freezes interfaces, future commands and test limits; it does
 not implement the missing harness or certify the host. The next bounded work
-is the fixture-only repair below. Native collection, live validation, Mac
-monitor decisions and performance comparisons remain subsequent work.
+is defined by the current handoff. R082 implemented fixture repairs; the
+[R083 review](B2_MONITOR_R082_REVIEW.md) records remaining gaps and bounds the
+later harness. Native collection, live validation, Mac monitor decisions and
+performance comparisons remain subsequent work.
 
 ## 1. Confirmed findings and required repairs
 
@@ -278,7 +280,9 @@ passed explicitly. A physical attempt file is neither created nor consulted.
 | Live Windows | W01–W03/I01 specified, none run. Need native source/build hashes, handle/Job/API evidence, actual cadence and native helper/launcher cleanup. |
 | Integration | F10 and hard-disabled entry checked; later strict schema/count checks, source bindings, partial checkpoints, refusal CLI/API, all-attempt persistence, untouched physical sentinel and combined cleanup. |
 
-Next use **GPT-5.6 Luna/medium** for a single new fixture-only repair bundle:
+Historical R081 implementation recommendation, carried out by R082 and
+reviewed by [R083](B2_MONITOR_R082_REVIEW.md); the current handoff supersedes
+this assignment. R081 selected **GPT-5.6 Luna/medium** for a fixture-only bundle:
 F01–F11, the recorder/checkpoint findings and strict copied-R070 acceptance.
 Budget **120 s cumulative validator-process wall / 256 MiB address space**,
 with outer startup/setup/final-write intervals measured separately and included

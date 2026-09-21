@@ -20,8 +20,9 @@ and preserved the R033/R070/R073 sources, reports and ledgers.
 The original implementation and subsequent
 [R081 review](B2_MONITOR_LIVE_VALIDATION_CONTRACT.md) are complete. R081 found
 eleven further counterexamples and froze the future live-validation contract;
-the current [next task](../../SESSION_HANDOFF.md#next-task) repairs those cases
-in a new fixture-only bundle. Windows collection, live validation
+R082 implemented fixture repairs. The [R083 review](B2_MONITOR_R082_REVIEW.md)
+finds remaining acceptance/provenance gaps and bounds the missing harness.
+Follow the current [next task](../../SESSION_HANDOFF.md#next-task). Windows collection, live validation
 and physical launch remain separate obligations specified below.
 
 No numerical method, boundary condition, observer, solver, package pin or

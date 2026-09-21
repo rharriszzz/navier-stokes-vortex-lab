@@ -1,29 +1,37 @@
 # Current session handoff
 
 Last updated: 2026-09-21 for
-[R082](REQUEST_LOG.md#r082--2026-09-21--continue-fixture-only-monitor-repairs).
-The fixture-only monitor repairs and integration checks are complete. All
-archives and production pins are preserved; the physical entry remains
-hard-disabled. The ten-case live suite and native/Linux harness remain
-unimplemented and unexecuted.
+[R083](REQUEST_LOG.md#r083--2026-09-21--continue-r082-review-and-harness-boundary).
+The R082 source/provenance review and missing-harness boundary are complete.
+R082 is not ready for live integration: seven finding groups include omitted
+regressions, false completion, host freshness and historical provenance gaps.
+The [R083 review](docs/realizability/B2_MONITOR_R082_REVIEW.md) maps every R081
+finding, qualifies the old records additively, and bounds the later OS harness.
 
-**PC/WSL `daisy` retains ownership. Next: GPT-6 Astra/high, independently review
-R082's repaired interfaces, strict R070 acceptance and attempt provenance, then
-bound the missing native/Linux harness work.** The detailed
-[Next task](#next-task) is authoritative. Stop before live adapter operations,
-helper build/startup, cgroup writes, signals, workload or physical execution;
-retain the physical 180 s / 1536 MiB limits.
+**PC/WSL `daisy` retains ownership. Next: GPT-5.6 Luna/medium, one new fixture-only
+repair bundle for G01–G07 and the frozen ownership/reporting seams.** The detailed
+[Next task](#next-task) is authoritative. Stop before native source/build/startup,
+live adapter operations, cgroup writes, signals, workload or physical execution.
+Physical limits remain 180 s / 1536 MiB; the q64/q96 allowance is unused.
 
-R082 received the clean `main` checkout at `08bda10`, published STARTED as
-`2b359cc`, and completed the fixture-only bundle in
-[R082 evidence](docs/realizability/evidence/r082/README.md). The three-attempt
-ledger includes one resolved fixture assertion and its explicit reconciliation;
-the conservative total charge is 45.247480 s / 120 s and maximum child RSS is
-24,367,104 / 268,435,456 bytes. The outer recorder's per-attempt source hash
-binding is incomplete and recorded as a review question. No cgroup write,
-signal, Windows executable, live workload, benchmark, FEM/MPI/JIT, mesh/solve,
-render or encoder ran. The [Mac/PC plan](docs/realizability/MAC_PC_PERFORMANCE_MEMORY_PLAN.md)
-remains future work; no ignored input/cache transfer is required.
+R083 received clean `main` at `c5ffc2c`, pulled up to date with HEAD equal to
+upstream, and published STARTED as `13b38ae`. One bounded fake/source audit
+confirmed seven finding groups and directly passed the two previously omitted
+regressions. Its child time was 0.046189457 s with 24,981,504 B lifetime peak
+RSS. Recorder time to before final persistence was 0.053310484 s; startup/imports
+and final fsync are excluded, not certified by that measurement. All 63 R082
+final source bindings matched. [Evidence](docs/realizability/evidence/r083/README.md)
+records the executed checks and limits. No live workload, native helper,
+FEM/MPI/JIT, mesh/solve, render, encode or physical run occurred.
+
+R082's recorded charge remains 45.24748005397851 s / 120 s, with ledger maximum
+24,367,104 B child RSS. Missing per-attempt outer sources, incomplete historical
+source bodies and timing intervals prevent full accounting certification.
+Attempt 2's traceback/reconciliation is preserved without retrospective retry
+approval. Attempt 3's embedded ID and result-summary peak are incorrect; the
+review records corrections without editing the archive. The ten-case suite and
+OS harness remain unimplemented and unexecuted. No ignored input/cache transfer
+is required; the independent Mac POV-Ray build remains unverified.
 
 R072 adds a clean fast-forward-only pull at the start of every Continue session
 and the append-only [`WORK_SESSIONS.md`](WORK_SESSIONS.md) start/completion
@@ -63,16 +71,16 @@ No package installation, pin change or remote Mac check occurred.
 
 | Handoff field | Current value |
 |---|---|
-| Current task/owner | PC/WSL `daisy` retains ownership; R082 fixture repairs complete, Astra/high review next |
-| Observed outgoing identity | Mac `fire.lan`, Darwin/arm64, `/Users/rharris/git/navier-stokes-vortex-lab` |
-| Observed receiving identity | PC/WSL `daisy`, Linux/x86_64, `/home/rharris/git/navier-stokes-vortex-lab`, verified at R081 start |
-| Branch/upstream | `main` / `origin/main`; R082 clean fast-forward pull, empty stashes, HEAD equaled upstream at receipt |
-| Source/base commit | `08bda10d7b366c0c3e94e4d29d782a1707210ba6`, R082 starting tip |
-| Delivery state | STARTED record published as `2b359cc`; scoped completion prepared, actual delivery hash/outcome in final response/Git history |
-| Task processes | All three fixture validator processes exited; no live workload or background task remains. Independent user-managed Mac POV-Ray build remains unverified and outside this task |
-| Required next inputs | R081 contract/evidence, R076 bundle and R082 new source/attempt evidence; R074/R067 policies. All local; no ignored input or compiled-cache transfer required |
-| Consumed experiments | R082: attempts 1 and 3 passed (17 groups each); attempt 2 fixture assertion failed and was reconciled without resource stop. Validator wall 0.194446 s total; conservative outer charge 45.247480/120 s; maximum child RSS 24,367,104/268,435,456 bytes. q64/q96 unused; R020 last physical attempt |
-| Next stop | Astra/high source/acceptance/provenance review and bounded native/Linux harness scope only; stop before live OS operations, helper build/startup, cgroup writes/signals, workload, FEM/MPI/JIT or physical execution |
+| Current task/owner | PC/WSL `daisy` retains ownership; R083 review complete, fixture-only repairs next |
+| Observed outgoing identity | Mac `fire.lan`, Darwin/arm64, `/Users/rharris/git/navier-stokes-vortex-lab`; historical R080 release |
+| Observed receiving identity | PC/WSL `daisy`, Linux/x86_64, `/home/rharris/git/navier-stokes-vortex-lab`, verified at R083 start |
+| Branch/upstream | `main` / `origin/main`; clean R083 fast-forward pull, empty stashes, HEAD equaled fetched upstream |
+| Source/base commit | `c5ffc2c8041144d8b0362f44bbcfbb7ae8daaa0d`, R083 starting tip |
+| Delivery state | STARTED published as `13b38ae`; completion prepared separately from delivery, actual final hash/outcome in final response/Git history |
+| Task processes | Both R083 audit processes exited; no background task or live workload started. Independent user-managed Mac POV-Ray build remains unverified |
+| Required next inputs | R083 review/evidence and R082 final source; R081 immutable live contract and R074/R067 policy. All committed text/source; no ignored input transfer |
+| Consumed experiments | R083 one fake/source audit, 0.046189457 s child / 24,981,504 B peak RSS; historical budgets unchanged. R082 recorded charge qualified by R083; q64/q96 unused; R020 last physical attempt |
+| Next stop | New fixture-only G01–G07 and ownership/reporting repairs; stop before native implementation/build/startup, OS mutations/signals/workloads/FEM/physical execution or policy change |
 
 R079 authorized Mac receipt after R078 pulled R076 completion. R080 requested
 return to PC, and R081 completed receipt after the clean pull and ownership
@@ -125,9 +133,9 @@ q64/q96 allowance remain unchanged.
 R081 qualifies R076's resource summary: its 0.5964585269 s / 23,801,856-byte
 maximum records validator-subprocess time/RSS, not whole-recorder overhead.
 Eleven additional input/cleanup/acceptance gaps and recorder/checkpoint gaps
-are documented in the review. R082 repaired them in a new copy with a durable
-all-attempt ledger; its bounded source-hash limitation is called out for the
-next review. No live validation has occurred.
+are documented in the review. R082 implemented new fixture repairs and a ledger.
+R083 found remaining acceptance/freshness/provenance gaps and specified the next repair scope.
+No live validation has occurred.
 
 Use [Next task](#next-task) as the single current execution task. All older
 next-task recommendations below are historical. The
@@ -682,36 +690,43 @@ native arm64 DOLFINx 0.10.0/Python 3.12.13 package metadata.
 
 ## Next task
 
-**Stay on PC/WSL `daisy`; use GPT-6 Astra/high for a source review of R082 and a
-bounded design for the missing monitor harness.** Read the R081 contract and
-evidence, R082 README/source/ledger/reconciliation, R076 preserved inputs, and
-R074/R067 policies. Check all F01–F11 against the repaired copy, strict R070
-acceptance and hard-disabled physical entry. Review the explicit attempt-2
-fixture reconciliation and decide whether the missing per-attempt outer-runner
-hashes need a documentation/provenance repair before any later live work.
+**Stay on PC/WSL `daisy`; use GPT-5.6 Luna/medium for one new fixture-only repair
+bundle.** Read the [R083 review and acceptance criteria](docs/realizability/B2_MONITOR_R082_REVIEW.md#next-bounded-implementation-and-stop),
+its evidence, R082 final source and R081 frozen contract. Repair G01–G07:
+complete test registration, cleanup deadline enforcement, conservative previous-
+send host freshness, canonical sentinel counts, exact acceptance schemas,
+terminal protocol state, and complete attempt/source accounting. Also preserve
+absolute sample phase and implement an injected owner/finalizer seam that
+attempts both cleanup domains independently and binds their observations.
+Bound incremental frames/queues with fakes. Preserve all old evidence/pins and
+keep physical CLI/API hard-disabled; no archived validator main/recorder rerun.
 
-Then specify a small, reviewable implementation boundary for the Linux
-delegated-unit guard and native Windows collector/launcher, including owner
-identity, independent watchdogs, bounded pipes/queues, all-path cleanup,
-durable checkpoints and refusal evidence for each frozen L01–L06/W01–W03/I01
-case. Do not implement or launch that harness in this review. No live OS
-operation, helper build/startup, cgroup write, signal, workload, FEM/MPI/JIT,
-assembly, solve or physical execution is authorized. Preserve the 180 s /
-1536 MiB physical limits and unused q64/q96 allowance. No new fixture attempt
-or benchmark is needed unless the review identifies a concrete correctness
-counterexample; stop and request a research decision for changed containment,
-timing, accounting or physical policy.
+Use Python 3.12.13, a 120 s total execution reservation and 256 MiB validator
+address-space limit. Include failed attempts/startup/setup/final persistence in
+conservative accounting with separately measured intervals and explicit uncovered
+scope; preserve source bodies and hashes for every executable path. Refuse
+unknown/open/resource-stopped history. Do not reset a budget through another
+copy, request or output directory.
 
-Completion requires a source/evidence map for every R081 finding, explicit
-provenance assessment, one bounded follow-on implementation task with
-acceptance/stopping criteria, scoped docs checks and publication. If interfaces,
-containment or resource policy remain unsettled, continue with Astra/high; when
-the scope is mechanical and accepted, recommend GPT-5.6 Luna/medium for that
-implementation and require it to stop before any live suite. Official OpenAI
-model pages currently list Astra/high and Luna/medium reasoning support;
-workspace entitlement can still vary. [Astra model page](https://developers.openai.com/api/docs/models/gpt-6-astra),
-[Luna model page](https://developers.openai.com/api/docs/models/gpt-5.6-luna).
-No model switch or automation occurred. **Next prompt: Continue.**
+Completion: every intended test executes exactly once; F01–F11/G01–G07 and
+exact-boundary/independent-cleanup regressions pass with semantically mutated
+reports rehashed; final accepted sentinel counts are exactly zero; legacy
+recorder paths are inert; all-attempt records/manifests/checkpoints and derived
+summaries agree; archive/pin/docs checks pass and scoped work is published.
+Stop on unexplained failure, resource stop or unsettled policy and before
+native source/build/startup, live OS operations, cgroup writes/signals,
+workloads, FEM/MPI/JIT or physical execution. Preserve physical 180 s / 1536 MiB
+limits and unused q64/q96 allowance.
+
+After this repair, recommend GPT-6 Astra/high for acceptance, ownership and
+provenance review before the separately bounded OS implementation. Use Astra
+earlier if a required containment/timing/accounting choice is unresolved.
+The [R083 harness boundary](docs/realizability/B2_MONITOR_R082_REVIEW.md#missing-harness-implementation-boundary)
+is future work, not a second active task or live authorization. Availability
+and effort support were checked in the session catalog and official OpenAI Docs:
+[Luna](https://developers.openai.com/api/docs/models/gpt-5.6-luna),
+[Astra](https://developers.openai.com/api/docs/models/gpt-6-astra).
+No model switch, delegation or automation occurred. **Next prompt: Continue.**
 
 ## Deferred Mac setup check
 

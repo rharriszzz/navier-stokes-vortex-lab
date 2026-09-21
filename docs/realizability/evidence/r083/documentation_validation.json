@@ -1,0 +1,24 @@
+{
+  "base": "c5ffc2c8041144d8b0362f44bbcfbb7ae8daaa0d",
+  "checker_sha256": "2fe9251a760f1a749a35950b0f6ddf0d8efa5cade7949cf1e6224798d7d9cfec",
+  "checks": [
+    "all prior evidence blobs and production pins unchanged",
+    "append-only log prefixes, unique IDs, lifecycle and single current task",
+    "local Markdown links and heading fragments",
+    "one audit, immutable executed sources, findings and default-deny evidence",
+    "F01\u2013F11 and ten-case maps, frozen contract and physical limits",
+    "new Python syntax and finite evidence JSON without application execution",
+    "scoped unstaged whitespace"
+  ],
+  "counts": {
+    "archived_evidence_files": 1022,
+    "bound_audit_input_sources": 33,
+    "finite_json_inputs": 3,
+    "heading_fragments": 26,
+    "local_links": 175,
+    "new_python_syntax_files": 3,
+    "production_pins": 19
+  },
+  "scope": "documentation/integrity only; no audit replay or live adapters",
+  "status": "passed"
+}

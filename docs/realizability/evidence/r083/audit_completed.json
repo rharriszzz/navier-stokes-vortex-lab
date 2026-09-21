@@ -1,0 +1,11 @@
+{
+  "child_elapsed_seconds": 0.04618945700349286,
+  "child_lifetime_peak_rss_bytes": 24981504,
+  "recorder_elapsed_before_final_persistence_seconds": 0.05331048401421867,
+  "returncode": 0,
+  "state": "COMPLETED",
+  "stderr": "",
+  "stdout": "{\"findings\": 7, \"status\": \"review_counterexamples_confirmed\"}\n",
+  "timed_out": false,
+  "timing_limitations": "recorder startup/imports and this final fsync excluded; no full-wrapper compliance claim"
+}

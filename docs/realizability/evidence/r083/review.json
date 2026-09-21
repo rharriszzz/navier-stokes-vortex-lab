@@ -1,0 +1,110 @@
+{
+  "audit_sources": {
+    "r082/attempt_accounting.py": "4b372dcf21f285c3352197b8f3c4e9002a60581037f45ff368a654609d54f838",
+    "r082/run_fixtures.py": "c11ae30a6c442068d9357d7d99debae109869c336b1449e59e94ce1ba63118ff",
+    "r082/source/host_protocol.py": "42cb25126e332be42face91c27c3a55ee3ebab24fa69c83c2dd6d56fe8ffbebe",
+    "r082/source/linux_adapter.py": "f458b50e341e2b26e55a804abd3d16fdb977e574581ae1a6c3a09c6636e928d6",
+    "r082/source/monitor_core.py": "b6ed2288247e58e3669942a42ede40c004eb5d1a168c59dc5eddbdbab7ecc6b4",
+    "r082/source/r070_copy/launch_guard.py": "e3dbc2fece3cc688a72212f3262f4a143196fe7bcf29daeb4ea4e21bd71ed238",
+    "r082/source/validate.py": "7f008ea1f957b8d8876374e75cba8dbdc1ec19910d7523ddd4f23189f69a875e",
+    "r083/audit.py": "904d021ac15f6432c3da84562df160de575f6f78d0bbb2d8719b0dfbbf6d62ba"
+  },
+  "elapsed_from_after_imports_seconds": 0.022220957005629316,
+  "findings": [
+    {
+      "defined": 19,
+      "direct_R083_calls": "both passed; not retrospective R082 coverage",
+      "id": "G01",
+      "omitted": [
+        "test_incomplete_membership_and_provider_freshness",
+        "test_tree_brackets_and_host_identity"
+      ],
+      "registered": 17
+    },
+    {
+      "elapsed": {
+        "cleanup": 6.0,
+        "report": 0.0,
+        "run": 0.0,
+        "setup": 0.0,
+        "total": 6.0
+      },
+      "id": "G02",
+      "limit": 5,
+      "primary_reasons": [],
+      "status": "completed"
+    },
+    {
+      "first_receipt": 0.4,
+      "first_send": 0,
+      "id": "G03",
+      "limit": 1,
+      "previous_send_to_receipt": 1.1,
+      "second_receipt": 1.1,
+      "second_send": 0.8,
+      "status": "completed"
+    },
+    {
+      "accepted_status": "complete",
+      "contradictory_counts": {
+        "correction_rhs": 7,
+        "matrix_factorizations": 7,
+        "matrix_solves": 7,
+        "physical_meshes": 7,
+        "primary_rhs": 7,
+        "returned_primary_solves": 7
+      },
+      "id": "G04",
+      "output_counts": {
+        "correction_rhs": null,
+        "matrix_factorizations": null,
+        "matrix_solves": null,
+        "physical_meshes": null,
+        "primary_rhs": null,
+        "returned_primary_solves": null
+      }
+    },
+    {
+      "accepted_status": "complete",
+      "floating_schema_accepted": true,
+      "id": "G05",
+      "ignored_watch_errors": [
+        "verification failed"
+      ],
+      "ignored_watch_survivors": [
+        [
+          99,
+          1
+        ]
+      ]
+    },
+    {
+      "id": "G06",
+      "malformed_then_valid_reply": "ok",
+      "terminal_protocol_failure_latch": false
+    },
+    {
+      "actual_final_attempt": 3,
+      "id": "G07",
+      "ledger_peak_bytes": 24367104,
+      "past_source_bytes_available": {
+        "1": false,
+        "2": false,
+        "3": true
+      },
+      "per_attempt_outer_source_bound": false,
+      "recorded_charged_seconds": 45.24748005397851,
+      "saved_final_fixture_attempt": 1,
+      "summary_peak_bytes": 24166400
+    }
+  ],
+  "lifetime_peak_rss_bytes": 24981504,
+  "physical_attempt_created": false,
+  "physical_enabled_launcher_refused": true,
+  "python": "3.12.13",
+  "schema": 1,
+  "scope": "fakes, temporary text files and saved data only; no archived main/recorder or live adapters",
+  "source_bindings_checked": 63,
+  "source_bindings_match": true,
+  "status": "review_counterexamples_confirmed"
+}
