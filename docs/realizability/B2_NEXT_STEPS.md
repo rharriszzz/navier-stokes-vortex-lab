@@ -31,7 +31,9 @@ The [R085 review](B2_MONITOR_R084_REVIEW.md) is complete;
 [R088](evidence/r088/README.md) implements its composed fixture repair and passes
 14 groups in the first attempt. The [R096 acceptance review](B2_MONITOR_R088_REVIEW.md)
 confirms the saved evidence but requires J01–J04 completion-evidence and outer-receipt
-repairs before OS implementation. Follow the handoff for the one bounded task.
+repairs before OS implementation. [R097](evidence/r097/README.md) implements the
+new gates with nine passing fake groups. Acceptance/outer-boundary review is the
+single handoff task; live/whole-recorder certification remains false.
 The live suite remains unimplemented
 and unauthorized. The
 [Mac/PC performance and memory plan](MAC_PC_PERFORMANCE_MEMORY_PLAN.md) defines

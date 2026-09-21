@@ -1,0 +1,12 @@
+{
+  "schema": 1,
+  "request": "R097",
+  "attempt": 1,
+  "state": "STARTED",
+  "total_reservation_seconds": 120,
+  "setup_final_reserved_seconds": 20,
+  "child_wall_limit_seconds": 60,
+  "child_address_space_bytes": 268435456,
+  "python": "3.12.13 | packaged by conda-forge | (main, Mar  5 2026, 16:50:00) [GCC 14.3.0]",
+  "historical_allowances_reset": false
+}

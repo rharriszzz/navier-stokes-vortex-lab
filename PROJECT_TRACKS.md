@@ -164,7 +164,9 @@ protocol and accounting gaps. [R088](docs/realizability/evidence/r088/README.md)
 adds that composed fixture repair with 14 passing groups in its first attempt.
 The [R096 review](docs/realizability/B2_MONITOR_R088_REVIEW.md) confirms those
 saved results but refuses OS implementation admission pending completion-evidence
-and independent outer-receipt repairs. The handoff owns that one next task. The
+and independent outer-receipt repairs. [R097](docs/realizability/evidence/r097/README.md)
+implements new admission/receipt gates with nine passing fake groups; the handoff
+now owns their acceptance review. No live certification is implied. The
 [Mac/PC performance and memory plan](docs/realizability/MAC_PC_PERFORMANCE_MEMORY_PLAN.md)
 specifies future comparisons and their monitor prerequisites. Follow the single
 [current handoff task](SESSION_HANDOFF.md#next-task) for the task and

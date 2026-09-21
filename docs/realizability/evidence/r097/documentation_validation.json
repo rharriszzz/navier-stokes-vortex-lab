@@ -1,0 +1,19 @@
+{
+  "status": "passed",
+  "baseline_commit": "dc73ec008460e2200a6b475bb36d846ca018cb7a",
+  "preserved_baseline_files": 1455,
+  "preserved_historical_evidence_files": 1354,
+  "log_prefixes_preserved": true,
+  "unique_request_ids": 97,
+  "lifecycle_pairs": 1,
+  "local_links": 127,
+  "fragments": 17,
+  "root_and_handoff_words": 886,
+  "fixture_source_input_bindings": 10,
+  "fixture_output_bindings": 17,
+  "fixture_groups": 9,
+  "python_syntax_files": 15,
+  "finite_json_files": 7,
+  "checker_sha256": "da88a2aca68d36b0543c73173e044e8c4e86ec3de18fb5f42eea9ff36839dc20",
+  "archived_mains_executed": false
+}

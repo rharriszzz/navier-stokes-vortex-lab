@@ -1,0 +1,27 @@
+{
+  "schema": 1,
+  "files": {
+    "source/primitives.py": "6d8754b31942812ebe44527e2c4ce71e37f5ca856ad5a3074f1a329ebbfdcfee",
+    "source/validate.py": "45641d4dcf43b99a975b4a08917a67da8158a68a8e66225c6c83016793885c75",
+    "source/integration.py": "6c0fda0db714a5b7fd93429e2569e4195575236d8d5ba3afe2086681a7f5ad9d",
+    "source/certificate.py": "3a0fd7a80e38ee61ed0a1b3b9f9c6e90faf6cd9c2e1938c6cbd3fe7afb1462cb",
+    "source/host_protocol.py": "4c739b0e7c4f5c7d6128c3f04b1f38f11b3277e9be6b06ac120dcf8e7e8cdef0",
+    "source/r070_legacy.py": "dc5abb5cc087ee8c893f289694fa853772214275f7a020153fe66ccda04a7101",
+    "run.py": "daeccbf239e64635f752a3e0205c633f43664b9414c1cb569056c7f31b280d16",
+    "contract.md": "0cde7d67c23dbb3890e87735f1bf02bafe8362bd0a1822c9430dcdbf5a2d98fc",
+    "r096_review.md": "cc665ee2c0d4e2fc8b70295cc38461efcbca5c479fc9556e201905b1b0f640bc",
+    "handoff.md": "4876d5b4ba6f9abb0924221e39fdfc6cd0e1c908f1125e666c0b9c8966d9b031"
+  },
+  "origins": {
+    "source/primitives.py": "docs/realizability/evidence/r097/source/primitives.py",
+    "source/validate.py": "docs/realizability/evidence/r097/source/validate.py",
+    "source/integration.py": "docs/realizability/evidence/r097/source/integration.py",
+    "source/certificate.py": "docs/realizability/evidence/r097/source/certificate.py",
+    "source/host_protocol.py": "docs/realizability/evidence/r097/source/host_protocol.py",
+    "source/r070_legacy.py": "docs/realizability/evidence/r097/source/r070_legacy.py",
+    "run.py": "docs/realizability/evidence/r097/run.py",
+    "contract.md": "docs/realizability/evidence/r097/contract.md",
+    "r096_review.md": "docs/realizability/B2_MONITOR_R088_REVIEW.md",
+    "handoff.md": "SESSION_HANDOFF.md"
+  }
+}

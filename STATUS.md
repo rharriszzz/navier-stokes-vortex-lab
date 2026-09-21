@@ -1,9 +1,10 @@
 # Project status: physical preparation and a realistic movie
 
-Updated 2026-09-21. The [R096 acceptance review](docs/realizability/B2_MONITOR_R088_REVIEW.md)
-confirms R088's saved evidence and identifies remaining completion-evidence and
-outer-measurement gaps. Current ownership, delivery state and one bounded repair
-task are in the [handoff](SESSION_HANDOFF.md#next-task).
+Updated 2026-09-21. The [R097 completion-certificate repair](docs/realizability/evidence/r097/README.md)
+passed all nine new fixture groups. Acceptance and the outer observation boundary
+remain to be reviewed; live/whole-recorder certification stays false. Current
+ownership, delivery state and the single review task are in the
+[handoff](SESSION_HANDOFF.md#next-task).
 A [performance and memory test plan for Mac and PC](docs/realizability/MAC_PC_PERFORMANCE_MEMORY_PLAN.md)
 is also ready as documentation; no benchmark has run.
 The [technical handoff](SESSION_HANDOFF.md#next-task) records the next task.

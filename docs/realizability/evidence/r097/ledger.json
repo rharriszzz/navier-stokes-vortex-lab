@@ -1,0 +1,16 @@
+{
+  "schema": 1,
+  "request": "R097",
+  "attempts": [
+    {
+      "attempt": 1,
+      "state": "COMPLETED",
+      "status": "passed",
+      "charged_seconds": 5.34962656602147,
+      "receipt_sha256": "fb82e07142eb848166a548132d5fd73d57e7a97683cb86086814ea83e530876f"
+    }
+  ],
+  "total_charged_seconds": 5.34962656602147,
+  "total_reservation_seconds": 120,
+  "retry_enabled": false
+}

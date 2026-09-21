@@ -1,14 +1,13 @@
 # Current session handoff
 
-Last updated 2026-09-21 for R096. PC/WSL `daisy` retains ownership.
-The [R088 acceptance review](docs/realizability/B2_MONITOR_R088_REVIEW.md) is
-complete: saved evidence is consistent, but J01–J04 prevent full acceptance
-and OS implementation admission. One source/fake-only completion-certificate
-repair is next. Completion is prepared separately from final publication;
-the delivery hash/outcome is reported after Git completes.
-User-supplied old/new session snapshots are preserved in
-[R096](REQUEST_LOG.md#r096--2026-09-21--record-session-snapshots-and-continue-r088-acceptance-review),
-with account email redacted and missing “Worked for” excerpt noted.
+Last updated 2026-09-21 for R097. PC/WSL `daisy` retains ownership.
+The [completion-certificate repair](docs/realizability/evidence/r097/README.md)
+passed nine new fixture groups on its first attempt. J01–J04 now have explicit
+admission and receipt gates; acceptance review is next. Whole-recorder/live
+certification remains false. Completion is prepared separately from delivery;
+the final delivery hash/outcome is reported after Git completes.
+Supplied worked-for, resume and status excerpts are recorded with account
+redaction in [R097](REQUEST_LOG.md#r097--2026-09-21--continue-completion-certificate-repair).
 
 ## Owner and checkout
 
@@ -17,63 +16,58 @@ with account email redacted and missing “Worked for” excerpt noted.
 | Owner | PC/WSL `daisy`, Linux/x86_64 |
 | Checkout | `/home/rharris/git/navier-stokes-vortex-lab` |
 | Branch/upstream | `main` / `origin/main` |
-| Starting state | Clean synchronized `aeb7de5b48f142b387cf212b39f31d23204dfacf` confirms R095 delivery; R096 STARTED published as `a10d4a5` |
-| Other owner/process | No ownership switch indicated. Independent Mac POV-Ray build is user-managed, outside this task, and unverified. |
-| Task processes | One bounded R096 audit child exited/reaped; fake temporary inputs cleaned; no background task or ignored input transfer. |
+| Starting state | Clean synchronized `dc73ec008460e2200a6b475bb36d846ca018cb7a` confirms R096 delivery; R097 STARTED published as `57b90a1` |
+| Other owner/process | No ownership switch indicated. Independent Mac POV-Ray build remains user-managed and unverified. |
+| Task processes | One R097 fixture child exited/reaped; temporary fake inputs cleaned; no task background process or ignored transfer input. |
 
-## Latest research state and limits
+## Current result and limits
 
-R088's composed fixture passed 14/14 registered groups on its first bounded
-attempt. Child startup-through-persistence/exit was 0.584059735 s; observed
-guard time before final persistence was 0.632527652 s; charged 5.632544718/120
-s; validator peak RSS was 23,941,120/268,435,456 B. Guard startup and its own
-final receipt/ledger fsync/exit are excluded; the five-second reserve is charged
-but not independently enforced. These measurements do not certify whole-
-recorder compliance, live containment or OS guard behavior. Preserve the
-one-attempt limit and evidence. Physical limits remain 180 s / 1536 MiB;
-q64/q96 allowance remains unused; B2 accuracy remains failed.
+R097 adds frozen policy/owner/absolute-deadline admission, independent typed
+canonical persisted validation, complete monitor count/sample schema checks,
+and required outer receipt plus separate terminal witness. All nine registered
+functions passed; saved partial examples retain unknown counts and both-domain
+cleanup failures. Execution sources and inputs were snapshotted and bound before
+release. [Contract](docs/realizability/evidence/r097/contract.md) and
+[evidence](docs/realizability/evidence/r097/README.md) define exact scope.
 
-R096 did source/saved-evidence review and one separate fake audit. No archived
-main replay, native source/build/startup, live OS/cgroup/signal/helper/workload,
-FEM/MPI/JIT, render, encode or physical run occurred. Required prior evidence
-remains linked from the preserved [R088 review task](R088_ACCEPTANCE_REVIEW_TASK.md).
+Child lifetime 0.325711412 s, peak RSS 23,834,624/268,435,456 B; observed guard
+0.349626566 s, charge 5.349626566/120 s. Guard startup before ENTRY and final
+receipt/ledger persistence/exit are excluded; five seconds is an unmeasured,
+unenforced charge. Fake witness facts do not certify actual recorder execution.
+The trusted enclosing adapter/backstop is unimplemented; its own lifetime is
+outside the declared observed boundary. No live or whole-recorder certification.
 
-## Current request
-
-R096 reviewed all 14 function bodies/registrations and H01–H04. The positive
-saved completion and rebound owner/cleanup refusals hold. Acceptance still
-permits a persisted schema type alias, contradictory monitor counts/missing
-samples, and cleanup times without an admitted absolute deadline. The independent
-outer receipt/startup/final-persistence bound remains absent. H03 passes within
-the composed fake interface; complete H01/H02/H04 obligations are refused.
-
-[Audit evidence](docs/realizability/evidence/r096/README.md): nine confirmed
-observations; one child 0.066115114 s / 23,982,080 B peak RSS; charged
-5.091154090/20 s with explicit outer startup/final-write exclusions.
-No whole-recorder or live certification. Prior archives and budgets are preserved.
-R094's compact routing/snapshots and verbatim historical task remain intact.
-Scoped documentation checks and exact changed files are recorded in R096;
-Continue authorizes start/final commit and push.
+R088/R096 archives, attempt limits and charges remain unchanged. Physical
+limits stay 180 s / 1536 MiB, q64/q96 allowance unused, B2 accuracy failed.
+No archived-main replay, native source/build/startup, live OS/cgroup/signal/helper/
+workload, FEM/MPI/JIT, rendering, encoding or physical run occurred. Integrity
+checks and exact changed files are recorded in R097. Continue authorizes scoped
+start/final commit and push; no post-delivery log edit.
 
 ## Next task
 
-Stay on PC/WSL `daisy`; use **GPT-6 Astra/high** for the single
-[J01–J04 completion-certificate repair](docs/realizability/B2_MONITOR_R088_REVIEW.md#one-bounded-follow-up).
-In new source with fake checks only, specify immutable admitted policy/deadlines
-and the independent outer-receipt boundary, then repair canonical persisted
-binding, full monitor evidence validation and absolute-deadline/outer-receipt
-admission. Python 3.12.13; 120 s cumulative new fixture reservation / 256 MiB
-validator address space; preserve failures and declare measurement exclusions.
-No archive rerun, native source/build/startup, live OS operation or physical work.
+Stay on PC/WSL `daisy`; use **GPT-6 Astra/high** for one source/saved-evidence
+acceptance review of the [R097 repair](docs/realizability/evidence/r097/README.md)
+against [R096 J01–J04](docs/realizability/B2_MONITOR_R088_REVIEW.md).
+Review all nine function bodies/registration and saved bindings, strict durable
+and full monitor validation, admitted policy/deadline enforcement, and the
+outer receipt/TerminalWitness trust boundary. Explicitly decide whether the
+observed boundary and unimplemented trusted adapter suffice to bound a later
+OS-source task; do not equate the fake witness with actual measured execution.
+Preserve all source/evidence and allowances; no archived runner/test replay.
 
-Complete the positive composition, J01–J03 and missing/late/mismatched outer
-receipt refusals, source/attempt bindings and partial evidence specified in the
-review. Stop on unexplained failure/resource stop or unsettled containment,
-timing or accounting policy; do not widen limits. End with Astra/high acceptance
-review as next task. Recommend Luna/medium only once those interfaces are settled
-and remaining work is mechanical. Both models/efforts were rechecked against
-the session catalog and official docs in R096; recheck when recommending again.
-No model switch, delegation or automation is implied. **Next prompt: Continue.**
+Produce a J01–J04 evidence/disposition map and one bounded follow-up: a specific
+repair if needed, or a separately specified OS-source task only if every
+admission obligation is settled. This review itself authorizes no native source,
+build/startup, live OS operation, helper/workload, FEM or physical work. Stop at
+unexplained provenance/resource inconsistency or unsettled containment/timing/
+accounting policy. No additional fixture execution is pre-authorized by this
+handoff; source/saved-data review is sufficient unless separately bounded.
+Recommend GPT-5.6 Luna/medium only when interfaces and outer semantics are
+settled and remaining work is mechanical; otherwise retain Astra/high.
+Availability/efforts rechecked in the session catalog and official OpenAI Docs
+in R097; recheck when recommending again. No model switch, delegation or
+automation occurred. **Next prompt: Continue.**
 
 ## Historical handoff anchors
 
