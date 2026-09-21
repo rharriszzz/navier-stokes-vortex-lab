@@ -1,5 +1,12 @@
 # B1 solver environment
 
+For this Mac's remaining install steps and future comparison with the PC, use
+[MAC_INSTALL_AND_BENCHMARK_PLAN.md](MAC_INSTALL_AND_BENCHMARK_PLAN.md). Its
+installed environment already passed imports/MPI. The general solver commands
+below describe available checks; the [current handoff](../../SESSION_HANDOFF.md#next-task)
+still calls for review before physical execution. A visualization smoke test
+does not establish FEM readiness.
+
 B1 uses a separate conda-forge environment so the visualization pipeline keeps
 its small NumPy-only dependency set.
 
@@ -28,6 +35,12 @@ package URL and hashes are recorded in
 R014, R016 and R020 ran after this build was installed in the same environment
 and used `/tmp/navier-fenicsx/bin/python`, so their `ffcx: 0.10.0` fields are
 runtime strings and do not indicate use of the pre-fix Conda package.
+
+R058 checked the Mac environment's Conda records and found the same FFCx
+build, artifact URL and SHA-256 as the PC. Its Python, DOLFINx, PETSc and MPICH
+records identify native `osx-arm64` builds. See
+[Mac readiness evidence](evidence/r058/mac_readiness.json); assembly/solve and
+cross-host numerical comparisons remain unperformed.
 
 In restricted sandboxes, MPI may require execution outside the sandbox because
 even a serial communicator initializes local IPC and network interfaces. That

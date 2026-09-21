@@ -1,9 +1,9 @@
 # Project status: physical preparation and a realistic movie
 
 Updated 2026-09-20 for
-[R057](REQUEST_LOG.md#r057--2026-09-20--record-mac-installation-and-benchmark-plan-integrate-stash-publish),
-after documenting remaining Mac installation steps and the matched host
-benchmark plan. Resource
+[R058](REQUEST_LOG.md#r058--2026-09-20--pull-and-make-mac-setup-and-benchmark-instructions-actionable),
+after checking live Mac readiness and making the installation and host
+benchmark instructions executable. Resource
 guidance below includes the R023/R024 capacity clarifications.
 The goals below preserve the
 [R010 status-report request](REQUEST_LOG.md#r010--2026-09-20--project-status-and-user-goals).
@@ -294,8 +294,9 @@ startup succeeded; no FEM assembly/solve or same-input reference comparison
 has run. Conda reports FFCx 0.10.1 while the imported module reports 0.10.0.
 R055 traced this to upstream v0.10.1 packaging metadata that still declares
 project version 0.10.0; the release contains a critical quadrature-rule
-code-generation fix, so retain the 0.10.1 pin. The live Mac build/channel has
-not been checked from this PC.
+code-generation fix, so retain the 0.10.1 pin. R058 checked the live Mac Conda
+metadata: build, artifact URL and SHA-256 match the R056 PC record. See
+[Mac readiness evidence](docs/realizability/evidence/r058/mac_readiness.json).
 R056 confirmed that the PC already has conda-forge `fenics-ffcx 0.10.1`
 (`pyhbc3ee6d_1`). R014/R016/R020 used this environment after installation, so
 their `ffcx: 0.10.0` report values are module self-reports, not evidence of an
@@ -327,7 +328,12 @@ and [R055 finding](SESSION_HANDOFF.md#r055-ffcx-version-discrepancy).
 
 The remaining Mac setup and task-by-task Mac/PC benchmark protocol are in
 [MAC_INSTALL_AND_BENCHMARK_PLAN.md](docs/realizability/MAC_INSTALL_AND_BENCHMARK_PLAN.md).
-POV-Ray is the one confirmed missing tool; no install or benchmark was run as
-part of R057. Astra/high should complete the PC R021/R013 review and set the
-small FEM reference case/acceptance thresholds before either host is evaluated
+R058 confirmed that MacPorts is already installed, POV-Ray is not registered,
+Xcode/clang is available, and ffmpeg/ffprobe 4.4.2 execute with libx264 listed.
+Install POV-Ray with `sudo /opt/local/bin/port install povray`, then use the
+guide's fresh source copy for the one-frame and ten-frame checks. A passing
+movie check establishes visualization readiness; FEM assembly, solving and
+portable resource-monitor validation remain pending. No install or benchmark
+was run as part of R058. Astra/high should complete the PC R021/R013 review
+and set the small FEM reference case/acceptance thresholds before either host is evaluated
 for the scientific workload.

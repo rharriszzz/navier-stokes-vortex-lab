@@ -1,5 +1,12 @@
 # Mac inventory for the B2 machine comparison
 
+**Historical inventory prompt:** R034/R046 completed the hardware/import checks;
+R058 checked the package manager, encoder and native FEM package provenance.
+For the current remaining installation and benchmark tasks, start with
+[MAC_INSTALL_AND_BENCHMARK_PLAN.md](MAC_INSTALL_AND_BENCHMARK_PLAN.md).
+Use the commands below only for a fresh inventory when needed; this prompt
+does not perform the setup or performance comparison.
+
 Use GPT-5.6 Luna with medium reasoning for this bounded, read-only inventory.
 Run Codex CLI on the Mac from the project checkout, then use this short prompt:
 

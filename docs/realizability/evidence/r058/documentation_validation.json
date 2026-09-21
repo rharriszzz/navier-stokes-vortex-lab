@@ -1,0 +1,68 @@
+{
+  "request": "R058",
+  "scope": "Static documentation and saved-readiness checks only; command blocks were not executed.",
+  "local_link_paths_checked": 76,
+  "missing_local_paths": [],
+  "mac_guide_bash_syntax": [
+    {
+      "block": 1,
+      "exit_code": 0,
+      "stderr": ""
+    },
+    {
+      "block": 2,
+      "exit_code": 0,
+      "stderr": ""
+    },
+    {
+      "block": 3,
+      "exit_code": 0,
+      "stderr": ""
+    },
+    {
+      "block": 4,
+      "exit_code": 0,
+      "stderr": ""
+    },
+    {
+      "block": 5,
+      "exit_code": 0,
+      "stderr": ""
+    },
+    {
+      "block": 6,
+      "exit_code": 0,
+      "stderr": ""
+    },
+    {
+      "block": 7,
+      "exit_code": 0,
+      "stderr": ""
+    }
+  ],
+  "trajectory_options_and_bounds_match_source": true,
+  "readiness_json_and_ffcx_artifact_comparison": "passed",
+  "git_diff_check": {
+    "exit_code": 0,
+    "output": ""
+  },
+  "manual_source_review": [
+    "render.sh",
+    "make_movie.sh",
+    "fluid.pov",
+    "make_trajectories.py",
+    "environment-b1.yml",
+    "docs/realizability/evidence/r033/source/toy_runner.py",
+    "installed dolfinx/jit.py"
+  ],
+  "not_run": [
+    "installation",
+    "compiler/JIT execution",
+    "trajectory generation",
+    "POV-Ray rendering",
+    "movie encoding",
+    "FEM assembly/solve",
+    "performance benchmark",
+    "Mac memory-monitor implementation/self-test"
+  ]
+}

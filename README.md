@@ -28,6 +28,10 @@ experimental mechanism. See [PROJECT_TRACKS.md](PROJECT_TRACKS.md),
 For the current goals, progress, open physical questions, and intended data
 for a separate movie, read [STATUS.md](STATUS.md).
 
+For the M4 Mac's remaining software installation, safe movie checks and a
+repeatable comparison against the PC, start with
+[the Mac setup and benchmark guide](docs/realizability/MAC_INSTALL_AND_BENCHMARK_PLAN.md).
+
 To resume work in a Codex session opened in this repository, say **Continue**.
 The [documented workflow](AGENTS.md#short-continuation-request) includes the
 current task, checks, logging, the next handoff, commit, and push. See

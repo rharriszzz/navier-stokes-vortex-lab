@@ -1,134 +1,342 @@
 # Finish Mac setup and compare it with the PC
 
-Updated 2026-09-20 after R057. This is a software-readiness and machine-choice
-checklist. It does not authorize a physical/campaign calculation or change any
-scientific threshold.
+Updated 2026-09-20 for R058. Start here on the Mac. The commands below are
+instructions for the next setup session; R058 inspected readiness and updated
+documentation, but did not install software, render, or run a benchmark.
 
-## Mac installation checklist
+## What remains to install
 
-The Mac is an Apple M4 iMac with 24 GiB RAM. R046 already verified the project
-Conda environment's Python 3.12.13, DOLFINx/Basix 0.10.0, UFL 2025.2.1,
-PETSc/PETSc4py 3.25.5, MPICH 5.0.1, mpi4py 4.1.2, Gmsh 4.15.2, NumPy 2.5.3
-and SciPy 1.18.1 imports, plus a two-rank MPI startup. R034 found `ffmpeg` and
-`ffprobe`. The only confirmed missing command-line tool for the visualization
-pipeline is POV-Ray. The exact Mac FFCx Conda build/channel and POV-Ray package
-manager are not yet recorded.
+**Install the command-line POV-Ray using the MacPorts already on this Mac.**
+The other identified project dependencies are installed. Then validate the
+movie pipeline; FEM execution needs its own portability and numerical checks.
 
-1. In a fresh Mac Terminal, check which package manager is already installed:
+[R058 live evidence](evidence/r058/mac_readiness.json) supplements the
+[R034 hardware snapshot](evidence/r034/mac_snapshot.json) and R046 import/MPI
+checks. This is an Apple M4 iMac with 24 GiB RAM.
 
-   ```bash
-   command -v port || true
-   command -v brew || true
-   ```
-
-   Use the manager already present; do not install a second manager only for
-   POV-Ray. Homebrew currently documents `brew install povray` and an Apple
-   Silicon bottle. MacPorts documents `sudo port install povray` (its port is
-   the Unix command-line ray tracer). See the [Homebrew formula](https://formulae.brew.sh/formula/povray)
-   and [MacPorts port](https://ports.macports.org/port/povray/). If neither
-   manager is present, choose one before installing it and keep the choice
-   separate from the project's Conda environment.
-
-2. Verify the executable tools:
-
-   ```bash
-   povray -version
-   ffmpeg -version
-   ffprobe -version
-   python3 -c 'import numpy; print("NumPy", numpy.__version__)'
-   ```
-
-3. Verify the FEM environment and capture the real package build separately
-   from Python's version string:
-
-   ```bash
-   conda activate navier-stokes-vortex-b1
-   conda list --show-channel-urls fenics-ffcx
-   python -c 'import dolfinx, basix, ufl, ffcx, petsc4py, mpi4py, gmsh; print("DOLFINx",dolfinx.__version__,"Basix",basix.__version__,"UFL",ufl.__version__,"FFCx module",ffcx.__version__)'
-   mpiexec -n 2 python -c 'from mpi4py import MPI; print(MPI.Get_library_version().splitlines()[0], "ranks", MPI.COMM_WORLD.size)'
-   ```
-
-   Keep the `fenics-ffcx=0.10.1` Conda pin. The v0.10.1 source tag still
-   reports project/module version 0.10.0; this is known upstream metadata, not
-   a reason to downgrade or reinstall. Save the Conda build and channel with
-   future run provenance.
-
-4. Smoke-test the complete movie path at low cost. From the repository root,
-   generate ten frames, render ten preview frames, and encode them:
-
-   ```bash
-   python3 make_trajectories.py --frames 10
-   NFRAMES=10 ./render.sh
-   ./make_movie.sh
-   ffprobe -v error -select_streams v:0 -show_entries stream=codec_name,width,height,pix_fmt,r_frame_rate,nb_frames -show_entries format=duration -of default=noprint_wrappers=1 movie/navier-stokes-vortex-lab.mp4
-   ```
-
-   Inspect the first, middle, and last PNG for successful rendering and visible
-   tracer motion. Confirm the MP4 is H.264, `yuv420p`, 1280x720, 30 fps, and
-   contains ten frames. Generated `positions/`, `frames/`, and `movie/` remain
-   untracked. Once this smoke test passes, the documented Mac software stack is
-   ready for the project's currently implemented visualization and B1/B2
-   verification tasks; it is not evidence of physical-model validity.
-
-## Mac-versus-PC benchmark plan
-
-The current evidence supports the PC for the immediate Astra/high review
-because the disposable Linux runner and resource checks were exercised there.
-The Mac is a plausible memory-sensitive candidate, but there is no matched
-timing or FEM reference result yet. The Mac's 24 GiB and PC's 28 WSL-visible
-logical CPUs do not establish which is faster. Windows and WSL memory readings
-are two views of shared PC RAM and must not be added together.
-
-### Before running benchmarks
-
-1. Finish the Astra/high review of the R021/R013 numerical contract and the
-   FFCx same-quadrature multi-integral/cache question on the PC. Stop before
-   physical execution. Astra should select the small non-campaign FEM reference
-   case, its acceptance checks, and an operational memory-headroom threshold
-   before any FEM comparison.
-2. Refresh capacity snapshots on both machines close together in time. Record
-   machine/CPU, architecture, OS, available RAM, swap, free disk, power mode,
-   and significant background load. On the PC, record Windows host and WSL
-   guest separately; do not sum them. On the Mac, capture `memory_pressure` and
-   available memory at the same time as the run.
-3. Put identical source revisions and input files on local storage on each
-   machine. Record the Git commit, input/mesh hashes, exact command, Python and
-   package builds/channels, MPI implementation/rank count, thread limits,
-   compiler/runtime versions, and all numerical tolerances. Use matching
-   versions and settings as closely as each architecture permits.
-4. Keep the initial comparison small and non-campaign. Use one unmeasured
-   warm-up and three measured repetitions per case; report each result, median,
-   and range. Separate one-time setup/JIT compilation from steady-state timing.
-   For a cold-codegen measurement, use a new task-local FFCx cache; for warm
-   timing, explicitly reuse only that task-local cache. Never delete or modify a
-   shared/global cache to prepare a benchmark.
-
-### Compare by project task
-
-| Task | Matched workload | Compare |
+| Component | Recorded state | Next action |
 |---|---|---|
-| Trajectory generation | Same commit, seed, bead count, frame count and options to `make_trajectories.py` | Wall time; output file count and finite-coordinate/bounds checks; compare generated numerical data, not just speed |
-| POV-Ray rendering | Same trajectory includes, scene, 1280x720 resolution, antialiasing and 10–20 preview frames | Render wall time; inspect first/middle/last images; compare pixel differences if outputs are not byte-identical |
-| Movie encoding | Copy the exact same PNG frames to both machines and use the same FPS/H.264/CRF/pixel-format options | Encoding wall time; use `ffprobe` to compare codec, dimensions, frame rate, frame count, duration and pixel format |
-| FEM verification | Only after Astra approves: same small non-campaign mesh/input, method, tolerances, MPI ranks and stopping criteria | Assembly and solve times separately; peak process-tree RSS; residual/convergence and output agreement under existing tolerances; confirm memory headroom |
+| MacPorts | `/opt/local/bin/port` exists; Homebrew was not found on the inspected PATH | Use MacPorts for POV-Ray. |
+| Apple development tools | Xcode selected; `xcrun clang --version` succeeds | No compiler installation identified as missing; actual FEM JIT compilation is still untested. |
+| POV-Ray | No command on PATH; `port installed povray` reports none | Install with the command below. |
+| ffmpeg / ffprobe | Both execute, version 4.4.2; `libx264` encoder is listed | Keep them for the first smoke test; record versions for comparison with the PC. |
+| Official Anaconda Miniconda | Existing `navier-stokes-vortex-b1` environment; Python/DOLFINx/PETSc/MPICH metadata identifies `osx-arm64` builds | Activate the existing environment. |
+| FEM dependencies and NumPy | R046 imports and two-rank MPICH startup passed | Preserve `environment-b1.yml`; no reinstall identified as necessary. |
+| FFCx | Mac and PC metadata identify the same conda-forge `0.10.1 pyhbc3ee6d_1` noarch artifact, including URL and SHA-256 | The module's `0.10.0` string is explained; keep the pin. |
+| FEM monitor and reference comparison | Not validated on macOS | Follow the benchmark prerequisites below before a FEM run. |
 
-For FEM, also record cold versus warm assembly/code-generation time separately.
-Capture peak memory for the whole process tree, not only the launcher. On the
-PC, include both the WSL process tree and Windows host headroom. On the Mac,
-record the run's peak process memory and system memory pressure. Stop on an
-existing watchdog, acceptance, or memory limit; do not make the comparison
-pass by changing solver methods, tolerances, mesh, trace, or resource guards.
+FFCx identity is compared with [R056 PC evidence](evidence/r056/ffcx_pc_environment.json).
+Matching package metadata is provenance evidence, not a numerical comparison.
+The [v0.10.1 release](https://github.com/FEniCS/ffcx/releases/tag/v0.10.1)
+fixes multiple integrals sharing a quadrature rule; the embedded version string
+remained 0.10.0. See [B1 setup](B1_SETUP.md) for the historical-result caveat.
 
-### How to choose
+### 1. Install and verify POV-Ray
 
-Choose a machine per task only after it completes the same workload correctly
-and leaves the pre-agreed headroom. A faster render does not imply a better FEM
-host, and a larger RAM figure alone is not enough. Keep the PC as the supported
-host for the next scientific review. Use either computer for routine editing;
-use matched timing, peak process-tree RSS, and numerical agreement to choose a
-future FEM host. A failed or memory-limited run is useful evidence and must
-remain in the comparison record.
+Run these in Mac Terminal. `sudo` asks for your Mac login password; Terminal
+normally does not display characters while you type it.
 
-No benchmark was run for R057. The first Mac action is to install/verify POV-Ray
-through an existing package manager and complete the ten-frame render/encode
-smoke test. The first scientific action remains the Astra/high PC review.
+```bash
+sudo /opt/local/bin/port install povray
+/opt/local/bin/povray -version
+```
+
+This is the [official MacPorts installation command](https://ports.macports.org/port/povray/).
+MacPorts installs the required dependencies. If it reports an outdated ports
+index/base, run `sudo /opt/local/bin/port selfupdate`, then retry the install.
+A broad upgrade of all installed ports is not part of this checklist. If the
+build fails, preserve the error and log path and diagnose that failure before
+changing package managers. The existing Xcode version command alone does not
+prove every build prerequisite is present.
+
+If the absolute executable path works but `command -v povray` fails, use
+`export PATH="/opt/local/bin:/opt/local/sbin:$PATH"` in that Terminal. Check
+`povray`, `ffmpeg`, and `ffprobe` with `command -v` after activating Conda too,
+since activation can change command selection.
+
+### 2. Activate the installed Python environment
+
+From the repository root:
+
+```bash
+source "$HOME/miniconda3/etc/profile.d/conda.sh"
+conda activate navier-stokes-vortex-b1
+python -c 'import sys, platform, numpy; print(sys.executable); print(platform.machine()); print("NumPy", numpy.__version__)'
+conda list --show-channel-urls fenics-ffcx
+command -v povray
+command -v ffmpeg
+command -v ffprobe
+```
+
+Use this Python consistently for the checks. This avoids accidentally using
+the older `/opt/local/bin/python3` environment. Use native arm64 on this Mac;
+do not solve the environment for Intel/Rosetta or copy Linux binaries/JIT caches.
+No second Conda distribution, Docker, GPU toolkit, or extra Python dependency
+is identified as required by the current pipeline.
+
+R046 already ran the FEM imports and two-rank MPI check. Repeat those only if
+the environment changes, and record the executable, package build/channel,
+PETSc real scalar type and MPI library. A sandbox `Operation not permitted`
+from MPI networking requires a permitted execution context; it does not alone
+justify reinstalling MPI.
+
+### 3. Validate the movie pipeline in a fresh source copy
+
+Do this after installing POV-Ray. The generator removes existing
+`positions/frame*.inc`; the renderer overwrites matching PNGs; the encoder
+includes **all** matching PNGs and overwrites its MP4. A fresh source copy
+prevents old frames from changing the test or existing output from being lost.
+Use the committed revision intended for the check; `git archive HEAD` omits
+uncommitted edits. Keep the same Terminal open for the following blocks, and
+stop if a command fails.
+
+```bash
+repo_dir="$(git rev-parse --show-toplevel)"
+git -C "$repo_dir" status --short
+git -C "$repo_dir" rev-parse HEAD
+smoke_dir="$(mktemp -d "${TMPDIR:-/tmp}/vortex-mac-smoke.XXXXXX")"
+git -C "$repo_dir" archive HEAD | tar -x -C "$smoke_dir"
+cd "$smoke_dir"
+mkdir -p preview frames movie
+python make_trajectories.py --frames 10 --fps 30 --beads 500 --substeps 8 --seed 20260919
+povray fluid.pov +W1280 +H720 +KFI1 +KFF10 +SF1 +EF1 +KI0 +KF1 +FN -D -V +A0.2 -J +Opreview/frame
+```
+
+Inspect the one image under `preview/` before proceeding. These direct
+POV-Ray options match `render.sh`'s scene, resolution, animation and antialiasing
+settings, with `-D` added for a headless run. They avoid an unexpected GUI
+preview. Leave the standard POV-Ray include-file installation accessible.
+
+```bash
+povray fluid.pov +W1280 +H720 +KFI1 +KFF10 +KI0 +KF1 +FN -D -V +A0.2 -J +Oframes/frame
+FPS=30 bash make_movie.sh
+ffprobe -v error -select_streams v:0 -count_frames \
+  -show_entries stream=codec_name,width,height,pix_fmt,r_frame_rate,avg_frame_rate,nb_frames,nb_read_frames \
+  -show_entries format=duration -of json movie/navier-stokes-vortex-lab.mp4
+```
+
+For the agent performing this check:
+
+- Confirm exactly ten trajectory includes and ten PNGs; verify each include
+  declares 500 finite coordinates. Inspect first/middle/last files and images
+  (frames 1, 5, 10) and confirm numerical and visible tracer motion.
+- Check the nondimensional bounds in `Config`: radius at most 0.92 and
+  `abs(z)` at most 0.98, allowing the documented include serialization rounding
+  (for this check, absolute tolerance `1e-9`). Report extrema over all frames.
+  The generator's final-state check alone does not inspect every saved frame.
+- Expect H.264, `yuv420p`, 1280x720, 30 fps and ten decoded frames. Duration is
+  approximately `10/30 = 0.333333` seconds, allowing container timestamp
+  rounding. If `nb_frames` is missing, use `nb_read_frames` from `-count_frames`.
+- Save the command transcript, versions, counts and inspection outcome before
+  leaving the temporary directory; copy small evidence to the new request's
+  evidence directory. Large includes/PNGs/MP4 stay outside tracked source.
+  Return with `cd "$repo_dir"`; record `smoke_dir` if keeping the outputs.
+
+Passing this check establishes the illustrative movie pipeline. FEM assembly,
+solving, resource monitoring and cross-machine numerical equivalence remain
+separate checks. The kinematic tracer movie is not a physical-flow validation.
+
+## Agent protocol for Mac-versus-PC benchmarks
+
+The purpose is a choice **per project task**, with comparable outputs and
+adequate memory headroom. Imported packages, installed RAM and core counts do
+not establish relative speed. The PC's Linux path has the exercised R033
+observer/watchdogs; the Mac is a candidate for future FEM work.
+
+### 1. Separate visualization readiness from the FEM research decision
+
+Trajectory/render/encode checks can proceed independently of the physical
+research review, as described in [Project Tracks](../../PROJECT_TRACKS.md).
+For FEM, first complete the [session handoff](../../SESSION_HANDOFF.md#next-task)
+review on the PC: the [R021 contract](B2_COMPATIBLE_TRACE_INTEGRATION_REVIEW.md),
+[R013 limits](B2_MATCHED_TRACE_REVIEW.md), [R033 result](B2_COMPATIBLE_TRACE_PREFLIGHT_FOLLOWUP.md)
+and R056 form/cache audit. Document the proposed small reference fixture,
+expected numerical outputs, acceptance checks and resource allowance. That
+review ends before physical execution. A subsequent scoped task may implement
+and run the approved comparison; this checklist itself is not its authorization.
+
+Do not run `B1_SETUP.md`'s general solver examples, a B2 campaign, or an archived
+physical runner merely as an installation check. An archived runner may have
+absolute Linux paths, fixed source identities and Linux-only monitoring.
+Keep production and archived evidence intact and adapt a disposable copy.
+
+### 2. Freeze a reproducible comparison contract
+
+Before either machine runs, save a small manifest with:
+
+- Same Git revision and hashes of input/scene/include/mesh files; exact commands,
+  seed, output directory, case size and acceptance rules. Resolve dirty source
+  changes first and put both checkouts on local storage. Use WSL's Linux
+  filesystem for the PC case; record if `/mnt/c` is used because that measures
+  a different I/O path. A coordinator must collect both machines' evidence;
+  a Mac session cannot infer current PC load or execute there automatically.
+- Full Python/NumPy/FEM versions; Conda package build, channel, subdir and artifact
+  hash; compiler, MPI and BLAS implementation; PETSc scalar/index type and
+  solver options. Native platform binaries differ, even at matching versions.
+  Save `conda list --explicit` and selected `conda-meta` records after checking
+  for credentials/private channel URLs. Never archive an entire environment.
+- POV-Ray version, render flags and worker count; ffmpeg version/build,
+  `libx264`, preset, CRF, frame rate and thread count. Match versions where
+  practical; if they differ, label the result a comparison of installed
+  software stacks and do not attribute the difference solely to hardware.
+- Fresh, timestamped load/capacity readings immediately before and after each
+  measured run: CPU/architecture/OS, power mode, available RAM, swap changes,
+  free disk and background activity. On Mac record `memory_pressure`, `vm_stat`,
+  `sysctl vm.swapusage` and `df -h .`. A memory-pressure percentage is not a
+  directly comparable available-GiB measure. On PC capture Windows host memory
+  and WSL `MemAvailable`/swap separately. They share RAM and cannot be added.
+- Explicit cumulative wall-time and sampled process-tree memory caps for the
+  entire planned sequence, including warm-ups, cold compilation and retries;
+  minimum host/guest headroom; allowed sample gap; and the stop conditions below.
+  Choose these from the reviewed workload and fresh capacity, not installed RAM
+  or an old prerequisite cap. Swap is not extra compute RAM.
+
+Start with one worker/thread (and one MPI rank for an approved FEM fixture):
+
+```bash
+export OMP_NUM_THREADS=1
+export OPENBLAS_NUM_THREADS=1
+export MKL_NUM_THREADS=1
+export VECLIB_MAXIMUM_THREADS=1
+export NUMEXPR_NUM_THREADS=1
+```
+
+Verify the libraries actually honor the settings. Set POV-Ray `+WT1` and ffmpeg
+`-threads 1` explicitly; these environment variables do not control them.
+Only test a second MPI rank if the selected fixture supports it. A later
+throughput comparison can choose suitable worker counts per machine, but record
+it separately from the equal-worker baseline and avoid nested thread oversubscription.
+The two-rank startup result is not proof that a solver fixture supports two ranks.
+
+### 3. Validate portable timing and resource monitoring first
+
+Use a common wrapper timing the complete child lifetime with a monotonic clock,
+including subprocesses, plus stage timing where relevant. Save return codes,
+stdout/stderr and every repetition. The archived R033
+[`toy_runner.py`](evidence/r033/source/toy_runner.py) traverses `/proc` and is
+**not runnable unchanged as a Mac memory monitor**. Before a guarded benchmark:
+
+1. Implement/adapt monitoring in a new disposable runner. On macOS, a process
+   table from `ps` or an explicitly installed/versioned process library can
+   provide PID, parent/session or process-group membership, and RSS. Follow the
+   benchmark child and descendants, including MPI/JIT compiler workers and
+   reparented processes; measure these on Linux too. Exclude the monitoring
+   parent from the budget consistently and record its overhead separately.
+2. Normalize RSS to MiB and validate units on each OS. In particular,
+   `resource.getrusage(...).ru_maxrss` is bytes on macOS and KiB on Linux.
+   Its per-process high-water values and `/usr/bin/time` output are supplementary;
+   they do not replace simultaneous process-tree RSS sampling. Sum RSS across
+   the active tree at each timestamp, then take the maximum of those sums.
+   Do not sum per-process maxima from different times. RSS sums can count
+   shared pages repeatedly, so also record host pressure/headroom separately.
+3. First exercise a synthetic timeout and a parent/child allocating and touching
+   a known memory amount, with no PDE work. Verify discovery of both processes,
+   memory and timeout stops, process-group cleanup and no live descendants.
+   Preserve R033's nominal 0.05-second polling and maximum-gap check of
+   0.1 seconds when porting that contract. If the Mac cannot meet the sampling
+   contract, record the failure and review the monitor before any FEM launch.
+   Unavailable RSS is an error, not zero; retain missing-sample and peak-gap data.
+4. Record per-process RSS at the sampled peak, maximum sample gap, host memory
+   pressure/swap deltas and the exact reason for any stop. Monitor Windows host
+   pressure as well as WSL guest capacity; a WSL-only snapshot is insufficient.
+
+There is no validated Mac monitor shipped by this documentation task. Completing
+and checking that wrapper is a prerequisite for a guarded FEM benchmark.
+
+### 4. Use fixed workloads and check outputs before interpreting speed
+
+Run each case in a fresh source/output directory. For rendering, distribute
+one identical generated include set; for encoding, distribute one identical
+PNG set. Do not compare renderings generated from different trajectories or
+encode times from different images.
+
+| Task | Initial fixed case | Required correctness evidence |
+|---|---|---|
+| Trajectory generation | `python make_trajectories.py --frames 240 --fps 30 --beads 500 --substeps 8 --seed 20260919` | 240 includes; first/middle/last inspection; all finite coordinates and stated bounds; same-host repeat hashes; cross-host numeric/scalar comparison if hashes differ. |
+| POV-Ray | Same 240-frame includes and scene; render frames 1–10 at 1280x720, `+A0.2 -J -D -V +WT1`, overlays unchanged | Ten PNGs; inspect frames 1, 5, 10; compare decoded pixels if hashes differ. Keep `+KFF240` so timeline/numbering matches the input case. |
+| Encoding | Identical ten PNGs; software `libx264`, preset `medium`, CRF 18, 30 fps, `yuv420p`, one thread | `ffprobe` codec/dimensions/fps/count/duration; decode successfully; compare decoded content, not only MP4 hashes/container metadata. |
+| FEM | Fixture selected by the scientific review; identical mesh artifact and tags, method/order/quadrature, parameters, solver, ranks and tolerances | Record mesh/DOF counts, assembly/solve/output checks, residuals, iterations, observables and reference errors. Require both the fixture's acceptance and cross-host agreement under rules fixed before execution. |
+
+The renderer command for the fixed case, after creating empty `frames/`:
+
+```bash
+povray fluid.pov +W1280 +H720 +KFI1 +KFF240 +SF1 +EF10 +KI0 +KF1 +FN -D -V +A0.2 -J +WT1 +Oframes/frame
+```
+
+The encoder command, after creating empty `movie/`:
+
+```bash
+ffmpeg -nostdin -y -framerate 30 -pattern_type glob -i 'frames/frame*.png' \
+  -c:v libx264 -preset medium -crf 18 -threads 1 -pix_fmt yuv420p \
+  -movflags +faststart movie/navier-stokes-vortex-lab.mp4
+```
+
+Freeze acceptable coordinate/scalar and decoded-image differences in the case
+manifest before seeing cross-host output; exact hashes are a useful first
+check, not a requirement for floating-point or container byte identity. A
+mismatch needs investigation before assigning a performance winner. Match FEM
+fields using mesh/global identities rather than local MPI array order. Keep
+same-rank comparisons separate from scaling experiments. These tests establish
+portability of their fixture, not the correctness of the physical experiment.
+
+For FEM report mesh setup, compilation, assembly, factorization, solve and
+postprocessing time separately when the runner exposes them, and always retain
+end-to-end wall time. A cheap smoke fixture cannot predict larger-mesh LU memory
+or high-quadrature cost: relate measured cells, DOFs, nonzeros and peak memory
+to the intended workload and state where scaling is unknown.
+
+### 5. Repetitions, caches, results and stop conditions
+
+Use one explicitly labeled warm-up and three fresh-process measured runs of
+an identical case per host; retain every time, median and range. A cold FEM
+run uses a new empty task-local cache passed through the actual DOLFINx JIT
+`cache_dir` option. A warm run reuses that host's task-local cache, with fresh
+solver/output state. Changing only an environment variable is insufficient if
+the harness specifies its own cache. Never copy compiled caches between hosts
+or delete shared caches. Distinguish cold **JIT** from filesystem/disk cache;
+a new JIT directory does not make the OS disk cache cold.
+
+Report cold compilation/startup separately from warm execution. If a choice
+depends on cold timing, pre-budget and measure three independent cold runs too.
+Do not turn the handoff's once-only physical experiment into repeated runs:
+Astra must select a repeatable fixture or explicitly scope repetition first.
+An interrupted, inaccurate or resource-limited run remains in the record and
+is excluded from a successful-run median. Do not retry automatically or enlarge
+caps after a stop. Stop on a numerical/refusal failure, watchdog limit, unknown
+monitoring, excessive sampling gap, or pre-agreed host/guest pressure threshold.
+
+Save small reviewed provenance, measurements and a comparison report under
+`docs/realizability/evidence/<request-id>/`; large generated data belongs in
+ignored `results/realizability/` or the recorded temporary directories. Suggested
+one row per repetition (use JSON null plus a reason for unavailable values):
+
+```text
+host, source_commit, case, versions_manifest, input_hashes, ranks, threads,
+cache_state, repetition, elapsed_s, stage_times_s, sampled_tree_peak_mib,
+max_sample_gap_s, host_guest_headroom, swap_delta, returncode, stop_reason,
+output_validation, output_metrics
+```
+
+Report the speed ratio as `PC median seconds / Mac median seconds` (>1 favors
+the Mac), together with ranges and memory headroom. If variation overwhelms
+the difference, report no reliable speed winner. Choose per task after
+correctness passes and memory fits. A benchmark failure does not change any
+scientific acceptance threshold; a failed accuracy gate stays failed even if
+both hosts reproduce it.
+
+## Next bounded tasks
+
+- **Mac setup:** install POV-Ray using existing MacPorts and run the isolated
+  one-frame then ten-frame movie check above. Complete when counts, coordinates,
+  separated images and decoded MP4 metadata pass and evidence is recorded. Stop
+  on an install/check failure, or after that report; do not expand into a FEM run.
+  GPT-5.6 Luna with medium reasoning is suitable for this mechanical task.
+- **Scientific review on PC:** GPT-6 Astra with high reasoning should complete
+  the R021/R013 observer/runner and FFCx form/cache review, define a repeatable
+  reference fixture and resource/acceptance contract, and stop before execution.
+  Retain Astra/high for numerical choices or unexplained differences; recommend
+  Luna/medium for a bounded monitor implementation once its contract is settled.
+
+Both models appear in the available session model catalog at R058; no switch
+or background task was started. Recheck availability in the execution session.
+No matched benchmark has yet established a Mac or PC performance winner.

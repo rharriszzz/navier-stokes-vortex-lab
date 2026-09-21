@@ -1,0 +1,180 @@
+{
+  "request": "R058",
+  "captured_utc": "2026-09-21T02:33:38.419238+00:00",
+  "reviewed_source_commit": "096f75a730eed58a00405509c64fce6692a1c447",
+  "scope": "Read-only readiness inspection; no installation, compilation, rendering, FEM solve or performance benchmark.",
+  "executables_on_inspected_path": {
+    "port": "/opt/local/bin/port",
+    "brew": null,
+    "povray": null,
+    "ffmpeg": "/opt/local/bin/ffmpeg",
+    "ffprobe": "/opt/local/bin/ffprobe"
+  },
+  "checks": {
+    "macos": {
+      "command": [
+        "sw_vers"
+      ],
+      "exit_code": 0,
+      "stdout": "ProductName:\t\tmacOS\nProductVersion:\t\t26.6.2\nBuildVersion:\t\t25G83\n",
+      "stderr": ""
+    },
+    "architecture": {
+      "command": [
+        "uname",
+        "-m"
+      ],
+      "exit_code": 0,
+      "stdout": "arm64\n",
+      "stderr": ""
+    },
+    "macports": {
+      "command": [
+        "/opt/local/bin/port",
+        "version"
+      ],
+      "exit_code": 0,
+      "stdout": "Version: 2.12.6\n",
+      "stderr": ""
+    },
+    "povray_installation": {
+      "command": [
+        "/opt/local/bin/port",
+        "installed",
+        "povray"
+      ],
+      "exit_code": 0,
+      "stdout": "None of the specified ports are installed.\n",
+      "stderr": ""
+    },
+    "povray_port": {
+      "command": [
+        "/opt/local/bin/port",
+        "info",
+        "povray"
+      ],
+      "exit_code": 0,
+      "stdout": "povray @3.7.0.8_5 (graphics)\nVariants:             native, universal\n\nDescription:          POVRAY is a free and popular Ray Tracer available for many platforms (including UNIX). This is a port of the UNIX version, not the graphical macOS version.\nHomepage:             http://www.povray.org/\n\nBuild Dependencies:   autoconf, automake, pkgconfig\nLibrary Dependencies: libjpeg-turbo, libpng, libsdl, openexr2, tiff, xorg-libsm, xpm, zlib, boost176\nPlatforms:            darwin\nLicense:              AGPL-3\nMaintainers:          none\n",
+      "stderr": ""
+    },
+    "developer_directory": {
+      "command": [
+        "xcode-select",
+        "-p"
+      ],
+      "exit_code": 0,
+      "stdout": "/Applications/Xcode.app/Contents/Developer\n",
+      "stderr": ""
+    },
+    "compiler": {
+      "command": [
+        "xcrun",
+        "clang",
+        "--version"
+      ],
+      "exit_code": 0,
+      "stdout": "Apple clang version 21.0.0 (clang-2100.3.34.2)\nTarget: arm64-apple-darwin25.6.0\nThread model: posix\nInstalledDir: /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin\n",
+      "stderr": ""
+    },
+    "ffmpeg": {
+      "command": [
+        "/opt/local/bin/ffmpeg",
+        "-version"
+      ],
+      "exit_code": 0,
+      "stdout": "ffmpeg version 4.4.2 Copyright (c) 2000-2021 the FFmpeg developers\nbuilt with Apple clang version 14.0.0 (clang-1400.0.29.202)\nconfiguration: --prefix=/opt/local --enable-swscale --enable-avfilter --enable-avresample --enable-libmp3lame --enable-libvorbis --enable-libopus --enable-librsvg --enable-libtheora --enable-libopenjpeg --enable-libmodplug --enable-libvpx --enable-libsoxr --enable-libspeex --enable-libass --enable-libbluray --enable-libzimg --enable-libzvbi --enable-lzma --enable-gnutls --enable-fontconfig --enable-libfreetype --enable-libfribidi --enable-zlib --disable-libjack --disable-libopencore-amrnb --disable-libopencore-amrwb --disable-libxcb --disable-libxcb-shm --disable-libxcb-xfixes --disable-indev=jack --enable-opencl --disable-outdev=xv --enable-audiotoolbox --enable-videotoolbox --enable-sdl2 --disable-securetransport --mandir=/opt/local/share/man --enable-shared --enable-pthreads --cc=/usr/bin/clang --enable-libaom --enable-librav1e --enable-libsvtav1 --arch=arm64 --enable-gpl --enable-postproc --enable-libx264 --enable-libx265 --enable-libxvid --enable-libvidstab\nlibavutil      56. 70.100 / 56. 70.100\nlibavcodec     58.134.100 / 58.134.100\nlibavformat    58. 76.100 / 58. 76.100\nlibavdevice    58. 13.100 / 58. 13.100\nlibavfilter     7.110.100 /  7.110.100\nlibavresample   4.  0.  0 /  4.  0.  0\nlibswscale      5.  9.100 /  5.  9.100\nlibswresample   3.  9.100 /  3.  9.100\nlibpostproc    55.  9.100 / 55.  9.100\n",
+      "stderr": ""
+    },
+    "ffprobe": {
+      "command": [
+        "/opt/local/bin/ffprobe",
+        "-version"
+      ],
+      "exit_code": 0,
+      "stdout": "ffprobe version 4.4.2 Copyright (c) 2007-2021 the FFmpeg developers\nbuilt with Apple clang version 14.0.0 (clang-1400.0.29.202)\nconfiguration: --prefix=/opt/local --enable-swscale --enable-avfilter --enable-avresample --enable-libmp3lame --enable-libvorbis --enable-libopus --enable-librsvg --enable-libtheora --enable-libopenjpeg --enable-libmodplug --enable-libvpx --enable-libsoxr --enable-libspeex --enable-libass --enable-libbluray --enable-libzimg --enable-libzvbi --enable-lzma --enable-gnutls --enable-fontconfig --enable-libfreetype --enable-libfribidi --enable-zlib --disable-libjack --disable-libopencore-amrnb --disable-libopencore-amrwb --disable-libxcb --disable-libxcb-shm --disable-libxcb-xfixes --disable-indev=jack --enable-opencl --disable-outdev=xv --enable-audiotoolbox --enable-videotoolbox --enable-sdl2 --disable-securetransport --mandir=/opt/local/share/man --enable-shared --enable-pthreads --cc=/usr/bin/clang --enable-libaom --enable-librav1e --enable-libsvtav1 --arch=arm64 --enable-gpl --enable-postproc --enable-libx264 --enable-libx265 --enable-libxvid --enable-libvidstab\nlibavutil      56. 70.100 / 56. 70.100\nlibavcodec     58.134.100 / 58.134.100\nlibavformat    58. 76.100 / 58. 76.100\nlibavdevice    58. 13.100 / 58. 13.100\nlibavfilter     7.110.100 /  7.110.100\nlibavresample   4.  0.  0 /  4.  0.  0\nlibswscale      5.  9.100 /  5.  9.100\nlibswresample   3.  9.100 /  3.  9.100\nlibpostproc    55.  9.100 / 55.  9.100\n",
+      "stderr": ""
+    },
+    "encoders": {
+      "command": [
+        "/opt/local/bin/ffmpeg",
+        "-hide_banner",
+        "-encoders"
+      ],
+      "exit_code": 0,
+      "stdout": " V..... libx264              libx264 H.264 / AVC / MPEG-4 AVC / MPEG-4 part 10 (codec h264)\n V..... libx264rgb           libx264 H.264 / AVC / MPEG-4 AVC / MPEG-4 part 10 RGB (codec h264)",
+      "stderr": ""
+    },
+    "conda_python": {
+      "command": [
+        "/Users/rharris/miniconda3/envs/navier-stokes-vortex-b1/bin/python",
+        "-c",
+        "import platform,sys; print(sys.executable); print(sys.version); print(platform.machine())"
+      ],
+      "exit_code": 0,
+      "stdout": "/Users/rharris/miniconda3/envs/navier-stokes-vortex-b1/bin/python\n3.12.13 | packaged by conda-forge | (main, Mar  5 2026, 17:06:14) [Clang 19.1.7 ]\narm64\n",
+      "stderr": ""
+    }
+  },
+  "conda_packages": {
+    "fenics-ffcx": {
+      "name": "fenics-ffcx",
+      "version": "0.10.1",
+      "build": "pyhbc3ee6d_1",
+      "channel": "https://conda.anaconda.org/conda-forge/noarch",
+      "subdir": "noarch",
+      "url": "https://conda.anaconda.org/conda-forge/noarch/fenics-ffcx-0.10.1-pyhbc3ee6d_1.conda",
+      "sha256": "727926ec2782375707cd036f86ab3d5004d53074ee80cf127619134f763e3473",
+      "md5": "d37671d8e59bdccbc1ef2defa740bdaa"
+    },
+    "fenics-dolfinx": {
+      "name": "fenics-dolfinx",
+      "version": "0.10.0",
+      "build": "py312h29fc43d_107",
+      "channel": "https://conda.anaconda.org/conda-forge/osx-arm64",
+      "subdir": "osx-arm64",
+      "url": "https://conda.anaconda.org/conda-forge/osx-arm64/fenics-dolfinx-0.10.0-py312h29fc43d_107.conda",
+      "sha256": "fdc8bc746ce93a7e098e29e63e7e99108571310dca438482ff6bc9439a13816e",
+      "md5": "425fc91067c88029ca9658d2194e1134"
+    },
+    "python": {
+      "name": "python",
+      "version": "3.12.13",
+      "build": "h8561d8f_0_cpython",
+      "channel": "https://conda.anaconda.org/conda-forge/osx-arm64",
+      "subdir": "osx-arm64",
+      "url": "https://conda.anaconda.org/conda-forge/osx-arm64/python-3.12.13-h8561d8f_0_cpython.conda",
+      "sha256": "e658e647a4a15981573d6018928dec2c448b10c77c557c29872043ff23c0eb6a",
+      "md5": "8e7608172fa4d1b90de9a745c2fd2b81"
+    },
+    "petsc": {
+      "name": "petsc",
+      "version": "3.25.5",
+      "build": "real_h3709958_0",
+      "channel": "https://conda.anaconda.org/conda-forge/osx-arm64",
+      "subdir": "osx-arm64",
+      "url": "https://conda.anaconda.org/conda-forge/osx-arm64/petsc-3.25.5-real_h3709958_0.conda",
+      "sha256": "f0d322bb08bfddb2e5e3d92a94035b4e8c09fda19563e521f246b180f74acf21",
+      "md5": "fb6df8158084d60567700f6bc33ef6f8"
+    },
+    "mpich": {
+      "name": "mpich",
+      "version": "5.0.1",
+      "build": "h7c78743_4",
+      "channel": "https://conda.anaconda.org/conda-forge/osx-arm64",
+      "subdir": "osx-arm64",
+      "url": "https://conda.anaconda.org/conda-forge/osx-arm64/mpich-5.0.1-h7c78743_4.conda",
+      "sha256": "4a321acdffd0dd9ce5ac0331fb87f065d23556656455622124f327e679eec840",
+      "md5": "0026022ffb14d7fd467925ebfc1de0c8"
+    }
+  },
+  "ffcx_matches_recorded_pc_artifact": {
+    "name": true,
+    "version": true,
+    "build": true,
+    "subdir": true,
+    "url": true,
+    "sha256": true,
+    "md5": true
+  },
+  "limits": "Conda metadata identifies the installed artifact; this inspection does not hash every installed source file or prove numerical equivalence. Memory and timing benchmarks remain pending."
+}
