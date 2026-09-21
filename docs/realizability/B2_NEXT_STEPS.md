@@ -35,7 +35,9 @@ repairs before OS implementation. [R097](evidence/r097/README.md) implements the
 new gates with nine passing fake groups. The [R098 review](B2_MONITOR_R097_REVIEW.md)
 accepts fake J01–J03 and the injected receipt checks, but requires a concrete
 trusted outer-adapter authority/accounting contract before OS-source admission.
-That documentation-only repair is the single handoff task; live/whole-recorder
+The [R099 contract](B2_MONITOR_TRUSTED_ADAPTER_CONTRACT.md) now specifies that
+boundary and refuses admission pending concrete manager capabilities. The single
+handoff task is a documentation-only capability decision; live/whole-recorder
 certification remains false.
 The live suite remains unimplemented
 and unauthorized. The

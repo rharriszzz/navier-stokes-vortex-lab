@@ -1,13 +1,13 @@
 # Current session handoff
 
-Last updated 2026-09-21 for R098. PC/WSL `daisy` retains ownership.
-The [R097 acceptance review](docs/realizability/B2_MONITOR_R097_REVIEW.md)
-accepts J01–J03 and the fake J04 receipt gate. The trusted enclosing adapter's
-authority and accounting boundary remain unresolved; OS-source admission and
-whole-recorder/live certification remain false. One documentation-only contract
-repair is next. Completion is prepared separately from final Git delivery.
-Supplied worked-for/resume/status excerpts are recorded with account redaction
-in [R098](REQUEST_LOG.md#r098--2026-09-21--continue-r097-acceptance-review).
+Last updated 2026-09-21 for R099. PC/WSL `daisy` retains ownership.
+The [trusted-adapter contract](docs/realizability/B2_MONITOR_TRUSTED_ADAPTER_CONTRACT.md)
+now maps all Admission/TerminalWitness fields, E0–E9 events, accounting and
+failure outcomes. **OS-source admission remains refused:** the selected manager's
+reservation/setup/final-retention authority and enforcement are unestablished.
+One documentation-only capability decision is next. Completion is prepared
+separately from final Git delivery. Supplied session excerpts, with account
+redaction, are recorded in [R099](REQUEST_LOG.md#r099--2026-09-21--continue-trusted-adapter-contract-repair).
 
 ## Owner and checkout
 
@@ -16,61 +16,59 @@ in [R098](REQUEST_LOG.md#r098--2026-09-21--continue-r097-acceptance-review).
 | Owner | PC/WSL `daisy`, Linux/x86_64 |
 | Checkout | `/home/rharris/git/navier-stokes-vortex-lab` |
 | Branch/upstream | `main` / `origin/main` |
-| Starting state | Clean synchronized `9ed35fca076d413916e2b0ab9bb4a041a9adcb02` confirms R097 delivery; R098 STARTED published as `83b19ba` |
+| Starting state | Clean synchronized `d26b1adbef44d49582a88f058a5cfbcd222bfd32` confirms R098 delivery; R099 STARTED published as `fe67f6a` |
 | Other owner/process | No ownership switch indicated. Independent Mac POV-Ray build remains user-managed and unverified. |
 | Task processes | No fixture/workload or background process launched; no ignored transfer input. |
 
 ## Current result and limits
 
-All nine R097 bodies/registration and saved evidence reviewed. Ten input
-snapshots, 17 output bindings, positive receipt digests, five partial examples
-and one-attempt ledger agree. Evidence: [R098](docs/realizability/evidence/r098/README.md).
-No archived module imported/executed; the checker only reads bytes/JSON/AST.
+R099 is documentation only. It preserves R097 and the
+[R098 acceptance](docs/realizability/B2_MONITOR_R097_REVIEW.md): J01–J03 and the
+injected J04 gate accepted only within the fake interface. Evidence/checks:
+[R099](docs/realizability/evidence/r099/README.md).
 
-J01 independently validates/binds both candidates; J02 validates counts and
-samples; J03 binds authoritative policy/deadlines. Their acceptance is scoped
-to the fake interface. J04 requires an outer receipt and separate witness, but
-the witness is injected. Its trusted construction path and task-specific
-backstop setup/query/final-persistence accounting need a concrete contract.
-An existing manager may be the finite trust root; the lifetime of the whole OS
-need not be measured. No task-specific interval may be silently excluded.
+The existing systemd user manager is the proposed finite trust root, not an
+assumed new helper. Task-specific reservation, arming, both startups, queries,
+cleanup and final retention must count. Pre-existing unrelated manager lifetime
+and passive storage may be excluded. No concrete API mapping currently proves
+coverage of E0/E1/E8, authoritative durable completion, outside-unit resource
+scope or real held-identity bootstrap. These are requirements, not capabilities.
+A typed witness/hash alone cannot authenticate facts. No OS impossibility is
+claimed and no replacement policy is selected.
 
-R097 child lifetime 0.325711412 s, peak RSS 23,834,624/268,435,456 B; observed
-guard 0.349626566 s, charge 5.349626566/120 s. Guard startup before ENTRY and
-final receipt/ledger persistence/exit remain excluded; the five-second charge
-is unmeasured/unenforced. Fake witness facts do not certify actual execution.
-Historical sources, attempts, charges and allowances remain unchanged.
-Physical limits stay 180 s / 1536 MiB; q64/q96 unused; B2 accuracy failed.
-No fixture replay, native source/build/startup, live OS/cgroup/signal/helper/
-workload, FEM/MPI/JIT, rendering, encoding or physical work occurred.
+The 180 s live suite remains 30 setup + ten 12 s cases + 30 final reporting;
+each case retains 5 active + 5 cleanup + 2 evidence seconds. No allowance was
+added. Historical fixture attempts/charges remain unchanged, including R097's
+5.34962656602147/120 s with excluded guard startup/final persistence/exit and
+unmeasured/unenforced five-second charge. Whole-recorder/live certification
+remains false; physical limits remain 180 s / 1536 MiB, q64/q96 unused, B2 accuracy
+failed. No fixture, native/live, FEM, rendering, encoding or physical work ran.
 
 ## Next task
 
 Stay on PC/WSL `daisy`; use **GPT-6 Astra/high** for one **documentation-only
-J04 trusted-adapter contract repair**, specified in the
-[R098 follow-up](docs/realizability/B2_MONITOR_R097_REVIEW.md#one-bounded-follow-up).
-Write one new contract preserving R097. Map Admission and every TerminalWitness
-field to its authority, bound identity/source/clock, observation and refusal.
-Map reservation, task-specific backstop arming, both startups, durable outputs,
-exits and terminal retention into the existing total and enforcement boundary.
-Distinguish pre-existing trusted infrastructure from task-created work.
-Include missing/late/blocked/dead/persistence-failed outcomes and reconcile the
-result with R081/R083 and R097 without enlarging any allowance.
+capability decision** against the
+[R099 decision boundary](docs/realizability/B2_MONITOR_TRUSTED_ADAPTER_CONTRACT.md#compatibility-and-decision-boundary).
+Using official systemd/kernel documentation and saved contracts, map the selected
+existing user manager's concrete APIs to E0 reservation, E1 arming/bootstrap and
+E8 final query/durable retention. Include immutable real identity bootstrap,
+clock/commit bounds, blocked/dead/persistence failures and outside-unit resource
+scope. Produce either a supported finite design within unchanged R081/R083
+limits or an explicit unsupported verdict and exact policy choice for user review.
 
-Completion: field/authority and event/accounting maps, compatibility map and
-explicit implementable/refused decision; local links, append-only logs,
-archived-byte preservation and current-pointer checks. Source/docs review only:
-no fixture execution, adapter/native source, build/startup, live inspection or
-mutation, helper/workload, FEM or physical work. No new execution allowance.
-Stop at a policy choice that cannot satisfy existing requirements; record the
-exact unresolved choice without assuming another trusted process or launching
-an exploratory test. Only settled obligations permit a separately bounded
-OS-source follow-up. Preserve all evidence and allowances.
+Completion: concrete API/obligation/evidence map and explicit decision, local
+links, append-only logs, archived-byte preservation and consistent current
+pointers. No generic contract rewrite, live inspection/mutation, adapter/native
+source, fixture execution, build/startup, helper/workload, FEM or physical work.
+No new execution allowance. Stop if required capabilities are unsupported or
+uncertain; do not add an assumed trusted process or weaken accounting. Only a
+supported, settled boundary permits a separately bounded OS-source follow-up;
+otherwise return the precise policy choice to the user.
 
 Retain Astra/high while authority/accounting semantics remain unsettled;
-recommend a smaller model only for subsequently mechanical work and recheck
-availability then. Astra/high rechecked in session catalog and official OpenAI
-Docs during R098. No model switch, delegation or automation occurred.
+recommend a smaller model only for subsequent mechanical work and recheck
+availability then. Astra/high is in the session catalog; high effort rechecked
+in official OpenAI Docs during R099. No model switch, delegation or automation.
 Continue authorizes scoped start/final commit and push; no post-delivery log
 edit. **Next prompt: Continue.**
 

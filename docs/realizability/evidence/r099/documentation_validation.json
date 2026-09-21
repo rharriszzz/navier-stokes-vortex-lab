@@ -1,0 +1,69 @@
+{
+  "status": "passed",
+  "baseline_commit": "d26b1adbef44d49582a88f058a5cfbcd222bfd32",
+  "preserved_baseline_files": 1491,
+  "preserved_historical_evidence_files": 1389,
+  "log_prefixes_preserved": true,
+  "unique_request_ids": 99,
+  "lifecycle_pairs": 1,
+  "local_links": 128,
+  "fragments": 21,
+  "root_and_handoff_words": 899,
+  "field_map": {
+    "Admission": [
+      "owner_sha256",
+      "policy",
+      "reserved_at",
+      "recorder_deadline",
+      "enclosing_deadline",
+      "clock_domain",
+      "recorder",
+      "observer",
+      "backstop"
+    ],
+    "TerminalWitness": [
+      "receipt_sha256",
+      "observer",
+      "backstop",
+      "clock_domain",
+      "armed_at",
+      "armed_deadline",
+      "receipt_durable_at",
+      "observer_exited_at",
+      "exit_code",
+      "terminal_confirmed",
+      "timed_out",
+      "resource_stop"
+    ],
+    "Policy": [
+      "tree_cap_mib",
+      "deadline",
+      "tree_interval_s",
+      "host_interval_s",
+      "host_minimum_mib",
+      "cleanup_limit_s",
+      "schema"
+    ]
+  },
+  "event_rows": 10,
+  "input_sha256": {
+    "AGENTS.md": "d89d01495f9100a7d0cad17a2ff7c3b081baa6123621d1de33f2220a38f55b22",
+    "docs/workflow/SESSION_PROTOCOL.md": "b53d5c4cf8163acd58b1b2c6a49b11b853f5268a8c2f49e9c71ffa850d1c4db9",
+    "docs/workflow/TRACK_RULES.md": "4cfa4998eecf314c71726048a4fb748bd368447cb5cdfcfb05a5b66857cd896d",
+    "EXPERIMENT.md": "7b0c0217b4edf5954b10a7482f37cd4e47eeb64213f80fc98b58e45f926e2c4b",
+    "PHYSICAL_REALIZABILITY_PLAN.md": "ac1521c35858c3015c5468502c968b9eea5607e015b237ddebbf9cb25c14ec7b",
+    "CONTROL_RESEARCH_ROADMAP.md": "e1130898d09c0ebc24264fac74b725b71a9e850ce05b4fbf60a0c3c779e48d66",
+    "docs/realizability/B2_MONITOR_R097_REVIEW.md": "6d93b19c84bb8792549f3d9373981b7c48906a2c3982b648e698e083ec6f1834",
+    "docs/realizability/B2_MONITOR_R082_REVIEW.md": "159e8c2e13dfc985b870198405aca7b863e286bd855716dd2138e308f28155d1",
+    "docs/realizability/B2_MONITOR_LIVE_VALIDATION_CONTRACT.md": "9e3864bf28219b2dbb4c7a49ef50e41b05809b5a4461015d9f4096d03b84505a",
+    "docs/realizability/evidence/r097/contract.md": "0cde7d67c23dbb3890e87735f1bf02bafe8362bd0a1822c9430dcdbf5a2d98fc",
+    "docs/realizability/evidence/r097/source/certificate.py": "3a0fd7a80e38ee61ed0a1b3b9f9c6e90faf6cd9c2e1938c6cbd3fe7afb1462cb",
+    "docs/realizability/evidence/r097/source/integration.py": "6c0fda0db714a5b7fd93429e2569e4195575236d8d5ba3afe2086681a7f5ad9d",
+    "docs/realizability/evidence/r097/source/primitives.py": "6d8754b31942812ebe44527e2c4ce71e37f5ca856ad5a3074f1a329ebbfdcfee"
+  },
+  "contract_sha256": "b09c6bf94f3435ac0d94935cc0d9d257be09ebb4737fb6d5bcdb14ce8c03b75b",
+  "checker_sha256": "c5251f65882c2daefdbefd15ade63d7e5aa8250d9113001ddcbfefab1891f9a3",
+  "archived_code_executed": false,
+  "fixture_attempts": 0,
+  "limitation": "Structural/integrity checks; no proof of authority or OS capability."
+}
