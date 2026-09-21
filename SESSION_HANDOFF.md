@@ -1,18 +1,20 @@
 # Current session handoff
 
-Last updated: 2026-09-21 for [R072](REQUEST_LOG.md#r072--2026-09-21--add-committed-session-start-and-completion-records), following
-[R070](REQUEST_LOG.md#r070--2026-09-20--short-continuation-request) and [R071](REQUEST_LOG.md#r071--2026-09-21--correct-r070-wrong-root-hash-validation).
-The PC scientific review and disposable launch/report repair are complete.
-**Next: portable synthetic process/resource-monitor validation on this PC using
-GPT-5.6 Luna/medium.** Use the R067 monitor policy and R033 monitor source;
-physical execution remains disabled and is not authorized by this handoff.
+Last updated: 2026-09-21 for [R073](REQUEST_LOG.md#r073--2026-09-21--portable-synthetic-processresource-monitor-validation), following
+[R072](REQUEST_LOG.md#r072--2026-09-21--add-committed-session-start-and-completion-records).
+The PC scientific review, disposable launch/report repair and portable
+synthetic-monitor contract are complete. **Next: use GPT-6 Astra/high on this
+PC to review and specify host-specific process-tree, host-pressure and
+termination adapters for the disabled R070 launch path.** No physical child is
+authorized by this handoff; keep the 180 s / 1536 MiB limits unchanged.
 
 R072 adds a clean fast-forward-only pull at the start of every Continue session
 and the append-only [`WORK_SESSIONS.md`](WORK_SESSIONS.md) start/completion
 records. The next Continue must pull, log the request, publish its `STARTED`
 record before substantive work, then append its outcome/release record before
-the final scoped commit/push. This R072 documentation request did not invoke
-Continue, so it has no open session record and did not start the monitor task.
+the final scoped commit/push. R072 was a documentation request and did not
+invoke Continue. R073 completed the monitor task; its matching start and
+completion record is in `WORK_SESSIONS.md`.
 
 The repaired copy, saved report binding, checks and five-attempt validation
 ledger are in [R070 evidence](docs/realizability/evidence/r070/result.json).
@@ -40,15 +42,25 @@ No package installation, pin change or remote Mac check occurred.
 
 | Handoff field | Current value |
 |---|---|
-| Current task/owner | PC/WSL retains ownership; R067 review and R070 repair complete; R072 protocol update complete; synthetic monitor task next |
+| Current task/owner | PC/WSL retains ownership; R067 review, R070 repair, R072 workflow and R073 synthetic monitor task complete |
 | Observed identity | `daisy`, Linux/WSL2, `x86_64`, `/home/rharris/git/navier-stokes-vortex-lab` |
-| Branch/upstream | `main` / `origin/main`; clean at R070 start, stash list empty |
-| Source/base commit | `a6aa35d`, R072 same-owner workflow update; this non-Continue request did not pull |
-| Delivery state | R072 requests a committed/pushed workflow change; consult the final report/Git history for delivery state and hash |
-| Task processes | All repair/validation commands exited; no background workload. Independent Mac POV-Ray build remains user-reported and unverified |
-| Required next inputs | R067 review, R033 `toy_runner.py`, R070 source/evidence manifests and the bounded monitor task; no ignored inputs or cache transfer |
-| Consumed experiments | R033 prerequisites: four attempts, 56.25128577899886 s; R070 validation: five attempts, 0.133708385 s cumulative, two failed attempts preserved; q64/q96 physical allowance unused. R020 remains last physical attempt |
-| Next stop | Synthetic monitor contract/evidence only; stop before FEM/MPI/JIT, physical child or threshold changes |
+| Branch/upstream | `main` / `origin/main`; R073 started clean, stash list empty; start record published as `0a4a85f` |
+| Source/base commit | R073 started at `172cd70d39d80232c8d07c6c916b7fe4bf4a3e6f` after the required clean fast-forward pull |
+| Delivery state | R073 scoped completion is committed/pushed; final report/Git history supplies the delivery hash |
+| Task processes | All R073 commands exited; no child/background workload. Independent Mac POV-Ray build remains user-reported and unverified |
+| Required next inputs | R067 resource policy, R033 archived `toy_runner.py`, R070 guarded launch path, and R073 monitor contract/evidence; no ignored input/cache transfer |
+| Consumed experiments | R033 prerequisites: four attempts, 56.25128577899886 s; R070 validation: five attempts, 0.133708385 s; R073 synthetic validation: four attempts, 0.200314582 s cumulative, two failed attempts preserved; q64/q96 physical allowance unused. R020 remains last physical attempt |
+| Next stop | Specify/validate platform adapters only; stop before any physical child, FEM/MPI/JIT, or threshold changes |
+
+R073's provider-based [monitor contract](docs/realizability/evidence/r073/monitor_contract.md)
+passed 16/16 fake-reading checks in final attempt 4 using Python 3.12.13.
+Across four preserved attempts, accounted time was 0.200314582 s / 120 s and
+maximum measured RSS was 133.59375 MiB / 256 MiB. The R033 Linux `/proc`
+monitor was preserved byte-for-byte. No real process, Windows memory API,
+platform termination adapter, FEM or physical child was exercised. See the
+[result](docs/realizability/evidence/r073/result.json), [attempt
+ledger](docs/realizability/evidence/r073/attempt_ledger.json) and
+[source manifest](docs/realizability/evidence/r073/source_manifest.json).
 
 Use [Next task](#next-task) as the single current execution task. All older
 next-task recommendations below are historical. The
