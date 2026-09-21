@@ -1,13 +1,14 @@
 # Current session handoff
 
 Last updated: 2026-09-21 for
-[R074](REQUEST_LOG.md#r074--2026-09-21--continue-review-process-changes-and-specify-monitor-adapters).
-The process review and [host monitor adapter specification](docs/realizability/B2_MONITOR_ADAPTER_REVIEW.md)
-are complete. **Next: use GPT-5.6 Luna/medium on this PC to implement the
-versioned monitor core, Linux adapters and host-protocol facade with fixtures
-only.** Keep physical execution disabled and the 180 s / 1536 MiB limits
-unchanged. The detailed [Next task](#next-task) is authoritative; do not repeat
-R073 or the completed R074 review.
+[R076](REQUEST_LOG.md#r076--2026-09-21--continue-fixture-only-monitor-implementation).
+The fixture-only versioned monitor implementation is complete in
+[`R076 evidence`](docs/realizability/evidence/r076/README.md), following the
+[R074 host monitor adapter specification](docs/realizability/B2_MONITOR_ADAPTER_REVIEW.md).
+**Next: use GPT-6 Astra/high on this PC to review the implementation and freeze
+a bounded live-adapter validation contract.** Keep physical execution disabled
+and the 180 s / 1536 MiB limits unchanged. The detailed [Next task](#next-task)
+is authoritative; do not repeat R073, R074 or the completed R076 fixtures.
 
 R072 adds a clean fast-forward-only pull at the start of every Continue session
 and the append-only [`WORK_SESSIONS.md`](WORK_SESSIONS.md) start/completion
@@ -45,15 +46,15 @@ No package installation, pin change or remote Mac check occurred.
 
 | Handoff field | Current value |
 |---|---|
-| Current task/owner | PC/WSL retains ownership; R074 process and adapter review complete; fixture-only implementation next |
+| Current task/owner | PC/WSL retains ownership; R076 fixture-only monitor implementation complete; Astra/high code and bounded live-validation review next |
 | Observed identity | `daisy`, Linux/WSL2, `x86_64`, `/home/rharris/git/navier-stokes-vortex-lab` |
-| Branch/upstream | `main` / `origin/main`; R074 started clean, stash list empty; start record published as `6e85003` |
-| Source/base commit | R074 started at `3fcc82f832737381bed90b7d6073644cd87c52e0`; required clean fast-forward pull was already up to date and HEAD equaled fetched upstream |
-| Delivery state | R074 scoped completion prepared for authorized commit/push; final report/Git history supplies actual delivery outcome and hash |
-| Task processes | R074 review commands exited; no adapter workload or background task. Independent Mac POV-Ray build remains user-reported and unverified |
-| Required next inputs | R074 adapter review/audit, R067 resource policy, R033/R070/R073 saved source and evidence; all committed inputs, no ignored input/cache transfer |
-| Consumed experiments | R033: four prerequisite attempts, 56.25128577899886 s; R070: five validation attempts, recorded 0.133708385 s; R073: four attempts, recorded 0.200314582 s with accounting limitations below; R074: one fake/source audit, 0.024026710 s measured script time. q64/q96 unused; R020 last physical attempt |
-| Next stop | Implement and validate with fixtures only; no real signaling, cgroup writes, Windows helper, live workload, FEM/MPI/JIT or threshold changes |
+| Branch/upstream | `main` / `origin/main`; R076 started clean with empty stash list; STARTED record published as `534fc5a` |
+| Source/base commit | R076 started at `a48a3c790e1ff37d71ccab5e96cd8e73e4df2c26`; mandatory clean fast-forward pull returned up to date and HEAD equaled fetched upstream |
+| Delivery state | R076 scoped completion prepared under Continue's commit/push authorization; final report/Git history supplies the delivery outcome and hash |
+| Task processes | All R076 fixture-validator subprocesses exited; no child workload or background task. Independent Mac POV-Ray build remains user-reported and unverified |
+| Required next inputs | R076 source bundle, manifests, fixture results and attempt ledger; R074 adapter specification; R067 resource policy. No ignored input/cache transfer required |
+| Consumed experiments | R033: four prerequisite attempts, 56.25128577899886 s; R070: five validation attempts, 0.133708385 s; R073: four attempts, 0.200314582 s with accounting limitations below; R074: one audit, 0.024026710 s; R076: fixture/continuity attempts within 120 s / 256 MiB (exact all-attempt results in linked evidence). q64/q96 unused; R020 last physical attempt |
+| Next stop | Review fixture code and freeze the benign live-adapter validation commands, host capability checks, and Windows collector scope; stop before starting any live adapter workload, FEM/MPI/JIT or physical attempt and before changing limits |
 
 R073's provider-based [monitor contract](docs/realizability/evidence/r073/monitor_contract.md)
 passed 16/16 fake-reading checks in final attempt 4 using Python 3.12.13.
@@ -71,9 +72,9 @@ R074's [audit](docs/realizability/evidence/r074/audit_attempt_01.json) reproduce
 nine counterexamples, with 12/12 checks including 19 production pins and
 archive/default-deny preservation. It measured 0.024026710 s from script entry
 through audit and 20.6875 MiB process-lifetime high-water RSS; interpreter
-startup/final writing are excluded from that duration. Root-only completion,
-termination exceptions, scheduling/clock/input gaps and R070 return-code
-acceptance need repair in a new copy. The specification selects task cgroup
+startup/final writing are excluded from that duration. The R076 fixture copy
+repairs root-only completion, termination exceptions, scheduling/clock/input
+gaps and R070 return-code acceptance for the tested cases. The specification selects task cgroup
 membership/cleanup and a separately supervised Windows collector, retaining
 RSS as the workload metric. No live capabilities or platform termination are
 certified; no physical attempt or package/configuration change occurred.
@@ -84,6 +85,19 @@ pass. The first documentation-check attempt encountered an unsupported local
 Git `ls-tree --format` option; its failure is retained, and the corrected
 portable `ls-tree -z` checker passed on attempt 2. Application and live-platform
 checks remain outside this review's scope.
+
+R076 implements the adapter-policy core and fixture-facing Linux/host helpers
+in a new versioned bundle. The final run passed 16 fixture and continuity
+groups; the all-attempt ledger, exact time/RSS measurements, manifests and
+documentation integrity report are in
+[`R076 evidence`](docs/realizability/evidence/r076/README.md). Two source
+copies preserve the original R070/R073 inputs; only the new R070 integration
+copy changed, and its physical entry remains hard-disabled. All execution was
+fake-reading and callback based. No live `/proc`, cgroup, signal, Windows API
+or helper, workload, FEM or physical attempt ran. R076 therefore does not
+certify live containment, host readings, timing, watchdog behavior or cleanup.
+No production solver, package or pin changed; physical limits and unused
+q64/q96 allowance remain unchanged.
 
 Use [Next task](#next-task) as the single current execution task. All older
 next-task recommendations below are historical. The
@@ -638,37 +652,26 @@ native arm64 DOLFINx 0.10.0/Python 3.12.13 package metadata.
 
 ## Next task
 
-**Stay on PC; use GPT-5.6 Luna with medium reasoning for fixture-only monitor
-implementation.** Follow [R074's implementation contract](docs/realizability/B2_MONITOR_ADAPTER_REVIEW.md#next-implementation-contract)
-and its validation table. Start from new copies of R073 and the disabled R070
-guard; preserve every archived source/report/ledger and the 19 production pins.
+**Stay on PC; use GPT-6 Astra with high reasoning for an implementation review
+and live-validation contract.** Review the [R076 source bundle and evidence](docs/realizability/evidence/r076/README.md),
+the [R074 host adapter specification](docs/realizability/B2_MONITOR_ADAPTER_REVIEW.md),
+and the R070/R073 preservation bindings. Resolve any remaining policy or
+cleanup semantics. Specify bounded benign Linux host-capability checks and
+the missing native Windows memory collector/launcher/Job Object protocol,
+including independent watchdog and helper cleanup evidence. Produce executable
+commands, prerequisites, resource caps and refusal criteria; do not run them.
 
-Implement the versioned policy core with explicit clock/wait scheduling,
-Linux membership/RSS/termination adapters with injected OS operations, the
-Windows host-protocol validation facade, finite partial reports and an
-all-attempt recorder. Exercise the nine R074 counterexamples and the core,
-Linux and host-protocol fixture rows. Bind default-deny/sentinel tests to a
-new R070 copy, fixing return-code/cleanup acceptance without enabling a child
-or consuming the real physical attempt record. No live OS adapter operation
-belongs to this task.
-
-Use Python 3.12.13 and a separate 120 s cumulative / 256 MiB standard-library
-validation budget; include startup/import/reporting and retain failed attempts.
-Completion requires the source bundle, deterministic fixtures and passing
-checks, manifest, attempt records, updated continuity and scoped publication.
-Stop on an unexplained failure/resource stop or any required policy change;
-stop before real signaling, cgroup writes, Windows-helper startup, live child
-workloads, FEM/MPI/JIT, mesh/solve or changing the physical 180 s / 1536 MiB caps.
-
-After implementation, recommend GPT-6 Astra/high to review the code and freeze
-a bounded live-adapter validation contract, including remaining Windows native
-collector implementation and actual host capability checks. Recommend Astra
-earlier if containment, time, memory or cleanup semantics need a new decision.
-The observer/assembly reference, Mac monitor and physical launch remain later
-work. The current session catalog and official [Luna](https://developers.openai.com/api/docs/models/gpt-5.6-luna)
-and [Astra](https://developers.openai.com/api/docs/models/gpt-6-astra) pages
-support these model/effort choices; no switch, delegation or automation occurred.
-**Next prompt on PC: Continue.**
+Completion requires a reviewed interface/contract, explicit evidence mapping
+for each R074 live-validation row, and a decision about actual cgroup/pidfd
+and Windows helper capabilities. Preserve physical execution disabled and the
+180 s / 1536 MiB limits. Stop before real signaling, cgroup writes, Windows
+helper startup, live workload, FEM/MPI/JIT, mesh/solve or any physical attempt.
+Recommend GPT-5.6 Luna/medium for implementation after the semantics and
+commands are stable; return to Astra/high if capability evidence changes the
+contract or cleanup/resource behavior is uncertain. The observer/assembly
+reference, Mac monitor and physical launch remain later work. Official OpenAI
+model pages were rechecked for this handoff; this recommendation did not switch
+models or start another session. **Next prompt on PC: Continue.**
 
 ## Deferred Mac setup check
 

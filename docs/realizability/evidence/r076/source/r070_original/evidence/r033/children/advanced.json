@@ -1,0 +1,2040 @@
+{
+  "status": "passed",
+  "stage": "advanced_toys_complete",
+  "physical_meshes": 0,
+  "pde_solves": 0,
+  "matrix_factorizations": 0,
+  "matrix_solves": 0,
+  "high_order": [
+    {
+      "case": 0,
+      "order": 64,
+      "facets": [
+        {
+          "facet": 0,
+          "projection_error": 3.2084412964475094e-16,
+          "projection_tolerance": 3.762034389152454e-14,
+          "weak_load_error": 4.825917718493195e-19,
+          "weak_load_tolerance": 2.0097992092553449e-16,
+          "nonzero_complex_normal": true
+        },
+        {
+          "facet": 1,
+          "projection_error": 1.3877787807814457e-16,
+          "projection_tolerance": 5.216525150801217e-14,
+          "weak_load_error": 2.221504382456048e-19,
+          "weak_load_tolerance": 6.030873507608316e-17,
+          "nonzero_complex_normal": true
+        },
+        {
+          "facet": 2,
+          "projection_error": 1.4946834900704541e-16,
+          "projection_tolerance": 8.908169919930886e-14,
+          "weak_load_error": 1.6940658945086007e-19,
+          "weak_load_tolerance": 6.135140713579176e-17,
+          "nonzero_complex_normal": true
+        },
+        {
+          "facet": 3,
+          "projection_error": 6.206335383118183e-17,
+          "projection_tolerance": 4.9525775470502135e-14,
+          "weak_load_error": 5.187272922672512e-19,
+          "weak_load_tolerance": 1.4761577517777182e-16,
+          "nonzero_complex_normal": true
+        }
+      ],
+      "ufl_error": 4.553729793529082e-19,
+      "ufl_tolerance": 2.3566450263000886e-16,
+      "maximum_target_batch": 256
+    },
+    {
+      "case": 0,
+      "order": 96,
+      "facets": [
+        {
+          "facet": 0,
+          "projection_error": 3.1835838817813215e-16,
+          "projection_tolerance": 3.762034389152454e-14,
+          "weak_load_error": 1.150289454287197e-18,
+          "weak_load_tolerance": 2.0097963706439094e-16,
+          "nonzero_complex_normal": true
+        },
+        {
+          "facet": 1,
+          "projection_error": 6.938893903907228e-17,
+          "projection_tolerance": 5.216525150801218e-14,
+          "weak_load_error": 4.0305953989886717e-19,
+          "weak_load_tolerance": 6.030878761594157e-17,
+          "nonzero_complex_normal": true
+        },
+        {
+          "facet": 2,
+          "projection_error": 1.0838898772828417e-16,
+          "projection_tolerance": 8.908169919930889e-14,
+          "weak_load_error": 3.5470358010097383e-19,
+          "weak_load_tolerance": 6.135143458123506e-17,
+          "nonzero_complex_normal": true
+        },
+        {
+          "facet": 3,
+          "projection_error": 1.0007415106216804e-16,
+          "projection_tolerance": 4.952577547050213e-14,
+          "weak_load_error": 9.128610475519329e-19,
+          "weak_load_tolerance": 1.4761636777927242e-16,
+          "nonzero_complex_normal": true
+        }
+      ],
+      "ufl_error": 1.2690261071493108e-18,
+      "ufl_tolerance": 2.356648913556676e-16,
+      "maximum_target_batch": 256
+    },
+    {
+      "case": 1,
+      "order": 64,
+      "facets": [
+        {
+          "facet": 0,
+          "projection_error": 2.808666774861361e-15,
+          "projection_tolerance": 2.8896982385824653e-13,
+          "weak_load_error": 1.3884562417838567e-18,
+          "weak_load_tolerance": 5.274042479633399e-16,
+          "nonzero_complex_normal": true
+        },
+        {
+          "facet": 1,
+          "projection_error": 1.321837661387452e-16,
+          "projection_tolerance": 1.716885219737644e-13,
+          "weak_load_error": 9.871041557182741e-19,
+          "weak_load_tolerance": 2.7634498149560865e-16,
+          "nonzero_complex_normal": true
+        },
+        {
+          "facet": 2,
+          "projection_error": 2.237726045655905e-16,
+          "projection_tolerance": 1.178117538862753e-13,
+          "weak_load_error": 1.6487360875156885e-18,
+          "weak_load_tolerance": 4.5557159751242e-16,
+          "nonzero_complex_normal": true
+        },
+        {
+          "facet": 3,
+          "projection_error": 3.510833468576701e-16,
+          "projection_tolerance": 1.4853905022910956e-13,
+          "weak_load_error": 1.1727439577597817e-18,
+          "weak_load_tolerance": 4.665920466664759e-16,
+          "nonzero_complex_normal": true
+        }
+      ],
+      "ufl_error": 3.966239169525618e-18,
+      "ufl_tolerance": 8.64140559562266e-16,
+      "maximum_target_batch": 256
+    },
+    {
+      "case": 1,
+      "order": 96,
+      "facets": [
+        {
+          "facet": 0,
+          "projection_error": 2.531698018113677e-15,
+          "projection_tolerance": 2.8896982385824653e-13,
+          "weak_load_error": 2.710505431213761e-18,
+          "weak_load_tolerance": 5.274036783277083e-16,
+          "nonzero_complex_normal": true
+        },
+        {
+          "facet": 1,
+          "projection_error": 2.5133742693021536e-16,
+          "projection_tolerance": 1.7168852197376443e-13,
+          "weak_load_error": 1.9250314129819443e-18,
+          "weak_load_tolerance": 2.7634543588523844e-16,
+          "nonzero_complex_normal": true
+        },
+        {
+          "facet": 2,
+          "projection_error": 2.2887833992611187e-16,
+          "projection_tolerance": 1.178117538862753e-13,
+          "weak_load_error": 3.1302259285395128e-18,
+          "weak_load_tolerance": 4.555720955283868e-16,
+          "nonzero_complex_normal": true
+        },
+        {
+          "facet": 3,
+          "projection_error": 3.510833468576701e-16,
+          "projection_tolerance": 1.485390502291096e-13,
+          "weak_load_error": 2.653384347645192e-18,
+          "weak_load_tolerance": 4.66593084221093e-16,
+          "nonzero_complex_normal": true
+        }
+      ],
+      "ufl_error": 6.355542827338264e-18,
+      "ufl_tolerance": 8.641419798868481e-16,
+      "maximum_target_batch": 256
+    }
+  ],
+  "observer_cases": [
+    {
+      "status": "passed_toy_sentinel",
+      "stage": "observer_case_complete_compatible",
+      "primary_rhs": 0,
+      "attempted_primary_solves": 0,
+      "returned_primary_solves": 0,
+      "correction_rhs": 0,
+      "matrix_solves": 0,
+      "physical_meshes": 0,
+      "injections": [],
+      "oracle_checks": [
+        {
+          "name": "P",
+          "maximum_error": 1.3877787807814457e-17,
+          "tolerance": 2.0884174729489195e-13,
+          "pressure_lifting_norm": 0.0687184270936277,
+          "exact_essential": true
+        },
+        {
+          "name": "A_64",
+          "maximum_error": 6.938893903907228e-18,
+          "tolerance": 2.0884174729489195e-13,
+          "pressure_lifting_norm": 0.0687184270936277,
+          "exact_essential": true
+        },
+        {
+          "name": "A_96",
+          "maximum_error": 6.938893903907228e-18,
+          "tolerance": 2.0884174729489195e-13,
+          "pressure_lifting_norm": 0.0687184270936277,
+          "exact_essential": true
+        }
+      ],
+      "pre_solve_observer": {
+        "anchor_line": 321,
+        "solve_line": 339,
+        "calls": 1,
+        "toy_stop": true,
+        "factor_counts": {
+          "MatLUFactorSym": 0,
+          "MatLUFactorNum": 0,
+          "MatSolve": 0
+        }
+      },
+      "pre_solve_operator": {
+        "digest": "9e269b987cc8d223d4336c9cfead1e14f4d1a7c658962c8696f44dbd327f5c4c",
+        "state": 67,
+        "offsets": [
+          0,
+          30,
+          34,
+          64,
+          68
+        ],
+        "constrained_count": 48,
+        "layout": {
+          "type": "mpi",
+          "local_size": 68,
+          "global_size": 68,
+          "ownership_range": [
+            0,
+            68
+          ],
+          "owned_offsets": [
+            0,
+            30,
+            34,
+            64,
+            68
+          ],
+          "ghost_offsets": [
+            68,
+            68,
+            68,
+            68,
+            68
+          ],
+          "array_size": 68
+        },
+        "factor_counts": {
+          "MatLUFactorSym": 0,
+          "MatLUFactorNum": 0,
+          "MatSolve": 0
+        }
+      },
+      "factor_counts": {
+        "MatLUFactorSym": 0,
+        "MatLUFactorNum": 0,
+        "MatSolve": 0
+      },
+      "pre_solve_nullspace": {
+        "gram": [
+          [
+            1.0,
+            0.0
+          ],
+          [
+            0.0,
+            1.0
+          ]
+        ],
+        "normalization": [
+          {
+            "pressure_block": 1,
+            "pressure_dofs": 4,
+            "expected_coefficient": 0.5,
+            "maximum_coefficient_error": 0.0,
+            "outside_support_nonzeros": 0,
+            "right_residual_norm": 3.3672392448339915e-14,
+            "left_residual_norm": 3.416471050645705e-14
+          },
+          {
+            "pressure_block": 3,
+            "pressure_dofs": 4,
+            "expected_coefficient": 0.5,
+            "maximum_coefficient_error": 0.0,
+            "outside_support_nonzeros": 0,
+            "right_residual_norm": 3.3672392448339915e-14,
+            "left_residual_norm": 3.416471050645705e-14
+          }
+        ],
+        "right_test_passed": true,
+        "transpose_test_passed": true
+      },
+      "completed_rhs_assemblies": 3,
+      "candidates": {
+        "P": {
+          "candidate_layout": {
+            "type": "mpi",
+            "local_size": 68,
+            "global_size": 68,
+            "ownership_range": [
+              0,
+              68
+            ],
+            "owned_offsets": [
+              0,
+              30,
+              34,
+              64,
+              68
+            ],
+            "ghost_offsets": [
+              68,
+              68,
+              68,
+              68,
+              68
+            ],
+            "array_size": 68
+          },
+          "pressure_compatibility": {
+            "pressure_constant_products_before": [
+              -4.5102810375396984e-17,
+              -1.0408340855860843e-17
+            ],
+            "removed_norm": 4.4294933466983516e-17,
+            "rhs_norm": 0.5887053824203564,
+            "tolerance": 3.346402663853248e-14,
+            "raw_sha256": "f982f1fb46ca6f522489f9bb15e0e53cbbb4389d5777faa051711fdadee8226d",
+            "proposed_sha256": "0627ed82a13dfe7a011dc513683ee59cb161b11336a415852ee38628f0f07d10",
+            "raw_unchanged_after_measurement": true,
+            "accepted": true,
+            "removal_applied": false,
+            "accepted_sha256": "f982f1fb46ca6f522489f9bb15e0e53cbbb4389d5777faa051711fdadee8226d"
+          },
+          "same_matrix_digest_and_state": true
+        },
+        "A_64": {
+          "constrained_dofs_per_block": [
+            24,
+            0,
+            24,
+            0
+          ],
+          "flux_ratios": [
+            1.0288106519260857e-16,
+            1.7127345125447468e-16
+          ],
+          "rhs_layout": {
+            "reference": {
+              "type": "mpi",
+              "local_size": 68,
+              "global_size": 68,
+              "ownership_range": [
+                0,
+                68
+              ],
+              "owned_offsets": [
+                0,
+                30,
+                34,
+                64,
+                68
+              ],
+              "ghost_offsets": [
+                68,
+                68,
+                68,
+                68,
+                68
+              ],
+              "array_size": 68
+            },
+            "replacement": {
+              "type": "mpi",
+              "local_size": 68,
+              "global_size": 68,
+              "ownership_range": [
+                0,
+                68
+              ],
+              "owned_offsets": [
+                0,
+                30,
+                34,
+                64,
+                68
+              ],
+              "ghost_offsets": [
+                68,
+                68,
+                68,
+                68,
+                68
+              ],
+              "array_size": 68
+            },
+            "block_sizes": [
+              30,
+              4,
+              30,
+              4
+            ]
+          },
+          "candidate_layout": {
+            "type": "mpi",
+            "local_size": 68,
+            "global_size": 68,
+            "ownership_range": [
+              0,
+              68
+            ],
+            "owned_offsets": [
+              0,
+              30,
+              34,
+              64,
+              68
+            ],
+            "ghost_offsets": [
+              68,
+              68,
+              68,
+              68,
+              68
+            ],
+            "array_size": 68
+          },
+          "pressure_compatibility": {
+            "pressure_constant_products_before": [
+              1.0408340855860843e-17,
+              1.214306433183765e-17
+            ],
+            "removed_norm": 1.7626873426939533e-17,
+            "rhs_norm": 0.5887053824203564,
+            "tolerance": 3.346402663853248e-14,
+            "raw_sha256": "c4cbd4f2828026a5582c932545fff5d5b62e183c0bfaf999311d1f22fec016bb",
+            "proposed_sha256": "2ac5a15123571ed76c229fd7f0424ae6caea8bfc7c5cf198efd2f02f45ad84c7",
+            "raw_unchanged_after_measurement": true,
+            "accepted": true,
+            "removal_applied": true,
+            "accepted_sha256": "2ac5a15123571ed76c229fd7f0424ae6caea8bfc7c5cf198efd2f02f45ad84c7"
+          },
+          "same_matrix_digest_and_state": true
+        },
+        "A_96": {
+          "constrained_dofs_per_block": [
+            24,
+            0,
+            24,
+            0
+          ],
+          "flux_ratios": [
+            1.0288106519260857e-16,
+            1.7127345125447468e-16
+          ],
+          "rhs_layout": {
+            "reference": {
+              "type": "mpi",
+              "local_size": 68,
+              "global_size": 68,
+              "ownership_range": [
+                0,
+                68
+              ],
+              "owned_offsets": [
+                0,
+                30,
+                34,
+                64,
+                68
+              ],
+              "ghost_offsets": [
+                68,
+                68,
+                68,
+                68,
+                68
+              ],
+              "array_size": 68
+            },
+            "replacement": {
+              "type": "mpi",
+              "local_size": 68,
+              "global_size": 68,
+              "ownership_range": [
+                0,
+                68
+              ],
+              "owned_offsets": [
+                0,
+                30,
+                34,
+                64,
+                68
+              ],
+              "ghost_offsets": [
+                68,
+                68,
+                68,
+                68,
+                68
+              ],
+              "array_size": 68
+            },
+            "block_sizes": [
+              30,
+              4,
+              30,
+              4
+            ]
+          },
+          "candidate_layout": {
+            "type": "mpi",
+            "local_size": 68,
+            "global_size": 68,
+            "ownership_range": [
+              0,
+              68
+            ],
+            "owned_offsets": [
+              0,
+              30,
+              34,
+              64,
+              68
+            ],
+            "ghost_offsets": [
+              68,
+              68,
+              68,
+              68,
+              68
+            ],
+            "array_size": 68
+          },
+          "pressure_compatibility": {
+            "pressure_constant_products_before": [
+              1.0408340855860843e-17,
+              1.214306433183765e-17
+            ],
+            "removed_norm": 1.7626873426939533e-17,
+            "rhs_norm": 0.5887053824203564,
+            "tolerance": 3.346402663853248e-14,
+            "raw_sha256": "c4cbd4f2828026a5582c932545fff5d5b62e183c0bfaf999311d1f22fec016bb",
+            "proposed_sha256": "2ac5a15123571ed76c229fd7f0424ae6caea8bfc7c5cf198efd2f02f45ad84c7",
+            "raw_unchanged_after_measurement": true,
+            "accepted": true,
+            "removal_applied": true,
+            "accepted_sha256": "2ac5a15123571ed76c229fd7f0424ae6caea8bfc7c5cf198efd2f02f45ad84c7"
+          },
+          "same_matrix_digest_and_state": true
+        }
+      },
+      "P_pressure_compatibility": {
+        "pressure_constant_products_before": [
+          -4.5102810375396984e-17,
+          -1.0408340855860843e-17
+        ],
+        "removed_norm": 4.4294933466983516e-17,
+        "rhs_norm": 0.5887053824203564,
+        "tolerance": 3.346402663853248e-14,
+        "raw_sha256": "f982f1fb46ca6f522489f9bb15e0e53cbbb4389d5777faa051711fdadee8226d",
+        "proposed_sha256": "0627ed82a13dfe7a011dc513683ee59cb161b11336a415852ee38628f0f07d10",
+        "raw_unchanged_after_measurement": true,
+        "accepted": true,
+        "removal_applied": false,
+        "accepted_sha256": "f982f1fb46ca6f522489f9bb15e0e53cbbb4389d5777faa051711fdadee8226d"
+      },
+      "all_candidates_prepared": true,
+      "sentinel": "toy prepared all candidates before KSP"
+    },
+    {
+      "status": "passed_expected_refusal",
+      "stage": "observer_case_complete_P",
+      "primary_rhs": 0,
+      "attempted_primary_solves": 0,
+      "returned_primary_solves": 0,
+      "correction_rhs": 0,
+      "matrix_solves": 0,
+      "physical_meshes": 0,
+      "injections": [
+        {
+          "name": "P",
+          "amount": 5.354244262165197e-13,
+          "original_unchanged": true
+        }
+      ],
+      "oracle_checks": [
+        {
+          "name": "P",
+          "maximum_error": 1.3877787807814457e-17,
+          "tolerance": 2.0884174729489195e-13,
+          "pressure_lifting_norm": 0.0687184270936277,
+          "exact_essential": true
+        }
+      ],
+      "pre_solve_observer": {
+        "anchor_line": 321,
+        "solve_line": 339,
+        "calls": 1,
+        "toy_stop": true,
+        "factor_counts": {
+          "MatLUFactorSym": 0,
+          "MatLUFactorNum": 0,
+          "MatSolve": 0
+        }
+      },
+      "pre_solve_operator": {
+        "digest": "9e269b987cc8d223d4336c9cfead1e14f4d1a7c658962c8696f44dbd327f5c4c",
+        "state": 67,
+        "offsets": [
+          0,
+          30,
+          34,
+          64,
+          68
+        ],
+        "constrained_count": 48,
+        "layout": {
+          "type": "mpi",
+          "local_size": 68,
+          "global_size": 68,
+          "ownership_range": [
+            0,
+            68
+          ],
+          "owned_offsets": [
+            0,
+            30,
+            34,
+            64,
+            68
+          ],
+          "ghost_offsets": [
+            68,
+            68,
+            68,
+            68,
+            68
+          ],
+          "array_size": 68
+        },
+        "factor_counts": {
+          "MatLUFactorSym": 0,
+          "MatLUFactorNum": 0,
+          "MatSolve": 0
+        }
+      },
+      "factor_counts": {
+        "MatLUFactorSym": 0,
+        "MatLUFactorNum": 0,
+        "MatSolve": 0
+      },
+      "pre_solve_nullspace": {
+        "gram": [
+          [
+            1.0,
+            0.0
+          ],
+          [
+            0.0,
+            1.0
+          ]
+        ],
+        "normalization": [
+          {
+            "pressure_block": 1,
+            "pressure_dofs": 4,
+            "expected_coefficient": 0.5,
+            "maximum_coefficient_error": 0.0,
+            "outside_support_nonzeros": 0,
+            "right_residual_norm": 3.3672392448339915e-14,
+            "left_residual_norm": 3.416471050645705e-14
+          },
+          {
+            "pressure_block": 3,
+            "pressure_dofs": 4,
+            "expected_coefficient": 0.5,
+            "maximum_coefficient_error": 0.0,
+            "outside_support_nonzeros": 0,
+            "right_residual_norm": 3.3672392448339915e-14,
+            "left_residual_norm": 3.416471050645705e-14
+          }
+        ],
+        "right_test_passed": true,
+        "transpose_test_passed": true
+      },
+      "completed_rhs_assemblies": 1,
+      "candidates": {
+        "P": {
+          "candidate_layout": {
+            "type": "mpi",
+            "local_size": 68,
+            "global_size": 68,
+            "ownership_range": [
+              0,
+              68
+            ],
+            "owned_offsets": [
+              0,
+              30,
+              34,
+              64,
+              68
+            ],
+            "ghost_offsets": [
+              68,
+              68,
+              68,
+              68,
+              68
+            ],
+            "array_size": 68
+          },
+          "pressure_compatibility": {
+            "pressure_constant_products_before": [
+              5.353738286029142e-13,
+              -1.0408340855860843e-17
+            ],
+            "removed_norm": 5.353755634022716e-13,
+            "rhs_norm": 0.5887053824203564,
+            "tolerance": 3.346402663853248e-14,
+            "raw_sha256": "f26dc155ef0d99d513b8d07d0415293945fcb411fa236ec683a4a3a254db93ab",
+            "proposed_sha256": "69667f22d51425d30dd41b3fc83032bdc3e271486981e9c7bf4d2cdbb1f057ff",
+            "raw_unchanged_after_measurement": true,
+            "accepted": false,
+            "removal_applied": false
+          }
+        }
+      },
+      "error": "Primal pressure compatibility failed before solve",
+      "failed_raw_unchanged": true
+    },
+    {
+      "status": "passed_expected_refusal",
+      "stage": "observer_case_complete_A_64",
+      "primary_rhs": 0,
+      "attempted_primary_solves": 0,
+      "returned_primary_solves": 0,
+      "correction_rhs": 0,
+      "matrix_solves": 0,
+      "physical_meshes": 0,
+      "injections": [
+        {
+          "name": "A_64",
+          "amount": 5.354244262165197e-13,
+          "original_unchanged": true
+        }
+      ],
+      "oracle_checks": [
+        {
+          "name": "P",
+          "maximum_error": 1.3877787807814457e-17,
+          "tolerance": 2.0884174729489195e-13,
+          "pressure_lifting_norm": 0.0687184270936277,
+          "exact_essential": true
+        },
+        {
+          "name": "A_64",
+          "maximum_error": 6.938893903907228e-18,
+          "tolerance": 2.0884174729489195e-13,
+          "pressure_lifting_norm": 0.0687184270936277,
+          "exact_essential": true
+        }
+      ],
+      "pre_solve_observer": {
+        "anchor_line": 321,
+        "solve_line": 339,
+        "calls": 1,
+        "toy_stop": true,
+        "factor_counts": {
+          "MatLUFactorSym": 0,
+          "MatLUFactorNum": 0,
+          "MatSolve": 0
+        }
+      },
+      "pre_solve_operator": {
+        "digest": "9e269b987cc8d223d4336c9cfead1e14f4d1a7c658962c8696f44dbd327f5c4c",
+        "state": 67,
+        "offsets": [
+          0,
+          30,
+          34,
+          64,
+          68
+        ],
+        "constrained_count": 48,
+        "layout": {
+          "type": "mpi",
+          "local_size": 68,
+          "global_size": 68,
+          "ownership_range": [
+            0,
+            68
+          ],
+          "owned_offsets": [
+            0,
+            30,
+            34,
+            64,
+            68
+          ],
+          "ghost_offsets": [
+            68,
+            68,
+            68,
+            68,
+            68
+          ],
+          "array_size": 68
+        },
+        "factor_counts": {
+          "MatLUFactorSym": 0,
+          "MatLUFactorNum": 0,
+          "MatSolve": 0
+        }
+      },
+      "factor_counts": {
+        "MatLUFactorSym": 0,
+        "MatLUFactorNum": 0,
+        "MatSolve": 0
+      },
+      "pre_solve_nullspace": {
+        "gram": [
+          [
+            1.0,
+            0.0
+          ],
+          [
+            0.0,
+            1.0
+          ]
+        ],
+        "normalization": [
+          {
+            "pressure_block": 1,
+            "pressure_dofs": 4,
+            "expected_coefficient": 0.5,
+            "maximum_coefficient_error": 0.0,
+            "outside_support_nonzeros": 0,
+            "right_residual_norm": 3.3672392448339915e-14,
+            "left_residual_norm": 3.416471050645705e-14
+          },
+          {
+            "pressure_block": 3,
+            "pressure_dofs": 4,
+            "expected_coefficient": 0.5,
+            "maximum_coefficient_error": 0.0,
+            "outside_support_nonzeros": 0,
+            "right_residual_norm": 3.3672392448339915e-14,
+            "left_residual_norm": 3.416471050645705e-14
+          }
+        ],
+        "right_test_passed": true,
+        "transpose_test_passed": true
+      },
+      "completed_rhs_assemblies": 2,
+      "candidates": {
+        "P": {
+          "candidate_layout": {
+            "type": "mpi",
+            "local_size": 68,
+            "global_size": 68,
+            "ownership_range": [
+              0,
+              68
+            ],
+            "owned_offsets": [
+              0,
+              30,
+              34,
+              64,
+              68
+            ],
+            "ghost_offsets": [
+              68,
+              68,
+              68,
+              68,
+              68
+            ],
+            "array_size": 68
+          },
+          "pressure_compatibility": {
+            "pressure_constant_products_before": [
+              -4.5102810375396984e-17,
+              -1.0408340855860843e-17
+            ],
+            "removed_norm": 4.4294933466983516e-17,
+            "rhs_norm": 0.5887053824203564,
+            "tolerance": 3.346402663853248e-14,
+            "raw_sha256": "f982f1fb46ca6f522489f9bb15e0e53cbbb4389d5777faa051711fdadee8226d",
+            "proposed_sha256": "0627ed82a13dfe7a011dc513683ee59cb161b11336a415852ee38628f0f07d10",
+            "raw_unchanged_after_measurement": true,
+            "accepted": true,
+            "removal_applied": false,
+            "accepted_sha256": "f982f1fb46ca6f522489f9bb15e0e53cbbb4389d5777faa051711fdadee8226d"
+          },
+          "same_matrix_digest_and_state": true
+        },
+        "A_64": {
+          "constrained_dofs_per_block": [
+            24,
+            0,
+            24,
+            0
+          ],
+          "flux_ratios": [
+            1.0288106519260857e-16,
+            1.7127345125447468e-16
+          ],
+          "rhs_layout": {
+            "reference": {
+              "type": "mpi",
+              "local_size": 68,
+              "global_size": 68,
+              "ownership_range": [
+                0,
+                68
+              ],
+              "owned_offsets": [
+                0,
+                30,
+                34,
+                64,
+                68
+              ],
+              "ghost_offsets": [
+                68,
+                68,
+                68,
+                68,
+                68
+              ],
+              "array_size": 68
+            },
+            "replacement": {
+              "type": "mpi",
+              "local_size": 68,
+              "global_size": 68,
+              "ownership_range": [
+                0,
+                68
+              ],
+              "owned_offsets": [
+                0,
+                30,
+                34,
+                64,
+                68
+              ],
+              "ghost_offsets": [
+                68,
+                68,
+                68,
+                68,
+                68
+              ],
+              "array_size": 68
+            },
+            "block_sizes": [
+              30,
+              4,
+              30,
+              4
+            ]
+          },
+          "candidate_layout": {
+            "type": "mpi",
+            "local_size": 68,
+            "global_size": 68,
+            "ownership_range": [
+              0,
+              68
+            ],
+            "owned_offsets": [
+              0,
+              30,
+              34,
+              64,
+              68
+            ],
+            "ghost_offsets": [
+              68,
+              68,
+              68,
+              68,
+              68
+            ],
+            "array_size": 68
+          },
+          "pressure_compatibility": {
+            "pressure_constant_products_before": [
+              5.354328092010974e-13,
+              1.214306433183765e-17
+            ],
+            "removed_norm": 5.354328093507365e-13,
+            "rhs_norm": 0.5887053824203565,
+            "tolerance": 3.346402663853249e-14,
+            "raw_sha256": "e335c7d4cf15c115f56a2df0ef9906bfa4604548c9b71b8f76cb443c80f5b9ac",
+            "proposed_sha256": "fdfc3182f853e54d80b5cf940811b46c1c93fb7ac5706bf7633289fc91bdca21",
+            "raw_unchanged_after_measurement": true,
+            "accepted": false,
+            "removal_applied": false
+          }
+        }
+      },
+      "P_pressure_compatibility": {
+        "pressure_constant_products_before": [
+          -4.5102810375396984e-17,
+          -1.0408340855860843e-17
+        ],
+        "removed_norm": 4.4294933466983516e-17,
+        "rhs_norm": 0.5887053824203564,
+        "tolerance": 3.346402663853248e-14,
+        "raw_sha256": "f982f1fb46ca6f522489f9bb15e0e53cbbb4389d5777faa051711fdadee8226d",
+        "proposed_sha256": "0627ed82a13dfe7a011dc513683ee59cb161b11336a415852ee38628f0f07d10",
+        "raw_unchanged_after_measurement": true,
+        "accepted": true,
+        "removal_applied": false,
+        "accepted_sha256": "f982f1fb46ca6f522489f9bb15e0e53cbbb4389d5777faa051711fdadee8226d"
+      },
+      "error": "Primal pressure compatibility failed before solve",
+      "failed_raw_unchanged": true
+    },
+    {
+      "status": "passed_expected_refusal",
+      "stage": "observer_case_complete_A_96",
+      "primary_rhs": 0,
+      "attempted_primary_solves": 0,
+      "returned_primary_solves": 0,
+      "correction_rhs": 0,
+      "matrix_solves": 0,
+      "physical_meshes": 0,
+      "injections": [
+        {
+          "name": "A_96",
+          "amount": 5.354244262165197e-13,
+          "original_unchanged": true
+        }
+      ],
+      "oracle_checks": [
+        {
+          "name": "P",
+          "maximum_error": 1.3877787807814457e-17,
+          "tolerance": 2.0884174729489195e-13,
+          "pressure_lifting_norm": 0.0687184270936277,
+          "exact_essential": true
+        },
+        {
+          "name": "A_64",
+          "maximum_error": 6.938893903907228e-18,
+          "tolerance": 2.0884174729489195e-13,
+          "pressure_lifting_norm": 0.0687184270936277,
+          "exact_essential": true
+        },
+        {
+          "name": "A_96",
+          "maximum_error": 6.938893903907228e-18,
+          "tolerance": 2.0884174729489195e-13,
+          "pressure_lifting_norm": 0.0687184270936277,
+          "exact_essential": true
+        }
+      ],
+      "pre_solve_observer": {
+        "anchor_line": 321,
+        "solve_line": 339,
+        "calls": 1,
+        "toy_stop": true,
+        "factor_counts": {
+          "MatLUFactorSym": 0,
+          "MatLUFactorNum": 0,
+          "MatSolve": 0
+        }
+      },
+      "pre_solve_operator": {
+        "digest": "9e269b987cc8d223d4336c9cfead1e14f4d1a7c658962c8696f44dbd327f5c4c",
+        "state": 67,
+        "offsets": [
+          0,
+          30,
+          34,
+          64,
+          68
+        ],
+        "constrained_count": 48,
+        "layout": {
+          "type": "mpi",
+          "local_size": 68,
+          "global_size": 68,
+          "ownership_range": [
+            0,
+            68
+          ],
+          "owned_offsets": [
+            0,
+            30,
+            34,
+            64,
+            68
+          ],
+          "ghost_offsets": [
+            68,
+            68,
+            68,
+            68,
+            68
+          ],
+          "array_size": 68
+        },
+        "factor_counts": {
+          "MatLUFactorSym": 0,
+          "MatLUFactorNum": 0,
+          "MatSolve": 0
+        }
+      },
+      "factor_counts": {
+        "MatLUFactorSym": 0,
+        "MatLUFactorNum": 0,
+        "MatSolve": 0
+      },
+      "pre_solve_nullspace": {
+        "gram": [
+          [
+            1.0,
+            0.0
+          ],
+          [
+            0.0,
+            1.0
+          ]
+        ],
+        "normalization": [
+          {
+            "pressure_block": 1,
+            "pressure_dofs": 4,
+            "expected_coefficient": 0.5,
+            "maximum_coefficient_error": 0.0,
+            "outside_support_nonzeros": 0,
+            "right_residual_norm": 3.3672392448339915e-14,
+            "left_residual_norm": 3.416471050645705e-14
+          },
+          {
+            "pressure_block": 3,
+            "pressure_dofs": 4,
+            "expected_coefficient": 0.5,
+            "maximum_coefficient_error": 0.0,
+            "outside_support_nonzeros": 0,
+            "right_residual_norm": 3.3672392448339915e-14,
+            "left_residual_norm": 3.416471050645705e-14
+          }
+        ],
+        "right_test_passed": true,
+        "transpose_test_passed": true
+      },
+      "completed_rhs_assemblies": 3,
+      "candidates": {
+        "P": {
+          "candidate_layout": {
+            "type": "mpi",
+            "local_size": 68,
+            "global_size": 68,
+            "ownership_range": [
+              0,
+              68
+            ],
+            "owned_offsets": [
+              0,
+              30,
+              34,
+              64,
+              68
+            ],
+            "ghost_offsets": [
+              68,
+              68,
+              68,
+              68,
+              68
+            ],
+            "array_size": 68
+          },
+          "pressure_compatibility": {
+            "pressure_constant_products_before": [
+              -4.5102810375396984e-17,
+              -1.0408340855860843e-17
+            ],
+            "removed_norm": 4.4294933466983516e-17,
+            "rhs_norm": 0.5887053824203564,
+            "tolerance": 3.346402663853248e-14,
+            "raw_sha256": "f982f1fb46ca6f522489f9bb15e0e53cbbb4389d5777faa051711fdadee8226d",
+            "proposed_sha256": "0627ed82a13dfe7a011dc513683ee59cb161b11336a415852ee38628f0f07d10",
+            "raw_unchanged_after_measurement": true,
+            "accepted": true,
+            "removal_applied": false,
+            "accepted_sha256": "f982f1fb46ca6f522489f9bb15e0e53cbbb4389d5777faa051711fdadee8226d"
+          },
+          "same_matrix_digest_and_state": true
+        },
+        "A_64": {
+          "constrained_dofs_per_block": [
+            24,
+            0,
+            24,
+            0
+          ],
+          "flux_ratios": [
+            1.0288106519260857e-16,
+            1.7127345125447468e-16
+          ],
+          "rhs_layout": {
+            "reference": {
+              "type": "mpi",
+              "local_size": 68,
+              "global_size": 68,
+              "ownership_range": [
+                0,
+                68
+              ],
+              "owned_offsets": [
+                0,
+                30,
+                34,
+                64,
+                68
+              ],
+              "ghost_offsets": [
+                68,
+                68,
+                68,
+                68,
+                68
+              ],
+              "array_size": 68
+            },
+            "replacement": {
+              "type": "mpi",
+              "local_size": 68,
+              "global_size": 68,
+              "ownership_range": [
+                0,
+                68
+              ],
+              "owned_offsets": [
+                0,
+                30,
+                34,
+                64,
+                68
+              ],
+              "ghost_offsets": [
+                68,
+                68,
+                68,
+                68,
+                68
+              ],
+              "array_size": 68
+            },
+            "block_sizes": [
+              30,
+              4,
+              30,
+              4
+            ]
+          },
+          "candidate_layout": {
+            "type": "mpi",
+            "local_size": 68,
+            "global_size": 68,
+            "ownership_range": [
+              0,
+              68
+            ],
+            "owned_offsets": [
+              0,
+              30,
+              34,
+              64,
+              68
+            ],
+            "ghost_offsets": [
+              68,
+              68,
+              68,
+              68,
+              68
+            ],
+            "array_size": 68
+          },
+          "pressure_compatibility": {
+            "pressure_constant_products_before": [
+              1.0408340855860843e-17,
+              1.214306433183765e-17
+            ],
+            "removed_norm": 1.7626873426939533e-17,
+            "rhs_norm": 0.5887053824203564,
+            "tolerance": 3.346402663853248e-14,
+            "raw_sha256": "c4cbd4f2828026a5582c932545fff5d5b62e183c0bfaf999311d1f22fec016bb",
+            "proposed_sha256": "2ac5a15123571ed76c229fd7f0424ae6caea8bfc7c5cf198efd2f02f45ad84c7",
+            "raw_unchanged_after_measurement": true,
+            "accepted": true,
+            "removal_applied": true,
+            "accepted_sha256": "2ac5a15123571ed76c229fd7f0424ae6caea8bfc7c5cf198efd2f02f45ad84c7"
+          },
+          "same_matrix_digest_and_state": true
+        },
+        "A_96": {
+          "constrained_dofs_per_block": [
+            24,
+            0,
+            24,
+            0
+          ],
+          "flux_ratios": [
+            1.0288106519260857e-16,
+            1.7127345125447468e-16
+          ],
+          "rhs_layout": {
+            "reference": {
+              "type": "mpi",
+              "local_size": 68,
+              "global_size": 68,
+              "ownership_range": [
+                0,
+                68
+              ],
+              "owned_offsets": [
+                0,
+                30,
+                34,
+                64,
+                68
+              ],
+              "ghost_offsets": [
+                68,
+                68,
+                68,
+                68,
+                68
+              ],
+              "array_size": 68
+            },
+            "replacement": {
+              "type": "mpi",
+              "local_size": 68,
+              "global_size": 68,
+              "ownership_range": [
+                0,
+                68
+              ],
+              "owned_offsets": [
+                0,
+                30,
+                34,
+                64,
+                68
+              ],
+              "ghost_offsets": [
+                68,
+                68,
+                68,
+                68,
+                68
+              ],
+              "array_size": 68
+            },
+            "block_sizes": [
+              30,
+              4,
+              30,
+              4
+            ]
+          },
+          "candidate_layout": {
+            "type": "mpi",
+            "local_size": 68,
+            "global_size": 68,
+            "ownership_range": [
+              0,
+              68
+            ],
+            "owned_offsets": [
+              0,
+              30,
+              34,
+              64,
+              68
+            ],
+            "ghost_offsets": [
+              68,
+              68,
+              68,
+              68,
+              68
+            ],
+            "array_size": 68
+          },
+          "pressure_compatibility": {
+            "pressure_constant_products_before": [
+              5.354328092010974e-13,
+              1.214306433183765e-17
+            ],
+            "removed_norm": 5.354328093507365e-13,
+            "rhs_norm": 0.5887053824203565,
+            "tolerance": 3.346402663853249e-14,
+            "raw_sha256": "e335c7d4cf15c115f56a2df0ef9906bfa4604548c9b71b8f76cb443c80f5b9ac",
+            "proposed_sha256": "fdfc3182f853e54d80b5cf940811b46c1c93fb7ac5706bf7633289fc91bdca21",
+            "raw_unchanged_after_measurement": true,
+            "accepted": false,
+            "removal_applied": false
+          }
+        }
+      },
+      "P_pressure_compatibility": {
+        "pressure_constant_products_before": [
+          -4.5102810375396984e-17,
+          -1.0408340855860843e-17
+        ],
+        "removed_norm": 4.4294933466983516e-17,
+        "rhs_norm": 0.5887053824203564,
+        "tolerance": 3.346402663853248e-14,
+        "raw_sha256": "f982f1fb46ca6f522489f9bb15e0e53cbbb4389d5777faa051711fdadee8226d",
+        "proposed_sha256": "0627ed82a13dfe7a011dc513683ee59cb161b11336a415852ee38628f0f07d10",
+        "raw_unchanged_after_measurement": true,
+        "accepted": true,
+        "removal_applied": false,
+        "accepted_sha256": "f982f1fb46ca6f522489f9bb15e0e53cbbb4389d5777faa051711fdadee8226d"
+      },
+      "error": "Primal pressure compatibility failed before solve",
+      "failed_raw_unchanged": true
+    }
+  ],
+  "campaign_ready": false,
+  "elapsed_seconds": 2.2306152880191803,
+  "process_peak_rss_mib": 172.3359375,
+  "checkpoints": [
+    {
+      "stage": "imports",
+      "elapsed_seconds": 1.4240213204175234e-06,
+      "process_peak_rss_mib": 37.765625
+    },
+    {
+      "stage": "high_order_polynomial",
+      "elapsed_seconds": 0.24079732701648027,
+      "process_peak_rss_mib": 140.33984375
+    },
+    {
+      "stage": "high_order_polynomial",
+      "elapsed_seconds": 0.3138031020062044,
+      "process_peak_rss_mib": 156.2734375
+    },
+    {
+      "stage": "high_order_polynomial",
+      "elapsed_seconds": 0.3811699649959337,
+      "process_peak_rss_mib": 156.51953125
+    },
+    {
+      "stage": "high_order_polynomial",
+      "elapsed_seconds": 0.4487362370127812,
+      "process_peak_rss_mib": 156.52734375
+    },
+    {
+      "stage": "high_order_polynomial",
+      "elapsed_seconds": 0.5200916760077234,
+      "process_peak_rss_mib": 156.52734375
+    },
+    {
+      "stage": "high_order_polynomial",
+      "elapsed_seconds": 0.5203651020128746,
+      "process_peak_rss_mib": 156.52734375
+    },
+    {
+      "stage": "high_order_polynomial",
+      "elapsed_seconds": 0.5240339120209683,
+      "process_peak_rss_mib": 156.52734375
+    },
+    {
+      "stage": "high_order_polynomial",
+      "elapsed_seconds": 0.6805924430082086,
+      "process_peak_rss_mib": 171.88671875
+    },
+    {
+      "stage": "high_order_polynomial",
+      "elapsed_seconds": 0.8342304349935148,
+      "process_peak_rss_mib": 171.88671875
+    },
+    {
+      "stage": "high_order_polynomial",
+      "elapsed_seconds": 0.9846351479936857,
+      "process_peak_rss_mib": 171.88671875
+    },
+    {
+      "stage": "high_order_polynomial",
+      "elapsed_seconds": 1.1429694870021194,
+      "process_peak_rss_mib": 171.9140625
+    },
+    {
+      "stage": "high_order_polynomial",
+      "elapsed_seconds": 1.1433480940177105,
+      "process_peak_rss_mib": 171.9140625
+    },
+    {
+      "stage": "high_order_polynomial",
+      "elapsed_seconds": 1.1504493380198255,
+      "process_peak_rss_mib": 171.9140625
+    },
+    {
+      "stage": "high_order_polynomial",
+      "elapsed_seconds": 1.2187134039995726,
+      "process_peak_rss_mib": 171.9140625
+    },
+    {
+      "stage": "high_order_polynomial",
+      "elapsed_seconds": 1.2872316980210599,
+      "process_peak_rss_mib": 171.9140625
+    },
+    {
+      "stage": "high_order_polynomial",
+      "elapsed_seconds": 1.354561159008881,
+      "process_peak_rss_mib": 171.9140625
+    },
+    {
+      "stage": "high_order_polynomial",
+      "elapsed_seconds": 1.421889484015992,
+      "process_peak_rss_mib": 171.9140625
+    },
+    {
+      "stage": "high_order_polynomial",
+      "elapsed_seconds": 1.4222602280206047,
+      "process_peak_rss_mib": 171.9140625
+    },
+    {
+      "stage": "high_order_polynomial",
+      "elapsed_seconds": 1.426425094017759,
+      "process_peak_rss_mib": 171.9140625
+    },
+    {
+      "stage": "high_order_polynomial",
+      "elapsed_seconds": 1.576890402007848,
+      "process_peak_rss_mib": 172.09375
+    },
+    {
+      "stage": "high_order_polynomial",
+      "elapsed_seconds": 1.7297377200156916,
+      "process_peak_rss_mib": 172.09375
+    },
+    {
+      "stage": "high_order_polynomial",
+      "elapsed_seconds": 1.882887315005064,
+      "process_peak_rss_mib": 172.3359375
+    },
+    {
+      "stage": "high_order_polynomial",
+      "elapsed_seconds": 2.0355547869985458,
+      "process_peak_rss_mib": 172.3359375
+    },
+    {
+      "stage": "high_order_polynomial",
+      "elapsed_seconds": 2.035935949999839,
+      "process_peak_rss_mib": 172.3359375
+    },
+    {
+      "stage": "before_reference_mesh_construction",
+      "elapsed_seconds": 2.039483200001996,
+      "process_peak_rss_mib": 172.3359375
+    },
+    {
+      "stage": "after_reference_mesh_construction",
+      "elapsed_seconds": 2.0400451280002017,
+      "process_peak_rss_mib": 172.3359375
+    },
+    {
+      "stage": "harmonic_forms_constructed",
+      "elapsed_seconds": 2.052254233014537,
+      "process_peak_rss_mib": 172.3359375
+    },
+    {
+      "stage": "before_harmonic_form_compilation",
+      "elapsed_seconds": 2.053570274001686,
+      "process_peak_rss_mib": 172.3359375
+    },
+    {
+      "stage": "after_harmonic_form_compilation",
+      "elapsed_seconds": 2.064847499015741,
+      "process_peak_rss_mib": 172.3359375
+    },
+    {
+      "stage": "before_oracle_matrix_assembly",
+      "elapsed_seconds": 2.065189661021577,
+      "process_peak_rss_mib": 172.3359375
+    },
+    {
+      "stage": "after_oracle_matrix_assembly",
+      "elapsed_seconds": 2.0668736130173784,
+      "process_peak_rss_mib": 172.3359375
+    },
+    {
+      "stage": "before_oracle_load_assembly",
+      "elapsed_seconds": 2.06722112200805,
+      "process_peak_rss_mib": 172.3359375
+    },
+    {
+      "stage": "after_oracle_load_assembly",
+      "elapsed_seconds": 2.0676716419984587,
+      "process_peak_rss_mib": 172.3359375
+    },
+    {
+      "stage": "observer_case_begin_compatible",
+      "elapsed_seconds": 2.0705481840122957,
+      "process_peak_rss_mib": 172.3359375
+    },
+    {
+      "stage": "observer_compatible",
+      "elapsed_seconds": 2.088076625019312,
+      "process_peak_rss_mib": 172.3359375
+    },
+    {
+      "stage": "observer_compatible",
+      "elapsed_seconds": 2.0890326280205045,
+      "process_peak_rss_mib": 172.3359375
+    },
+    {
+      "stage": "observer_compatible",
+      "elapsed_seconds": 2.0920353599940427,
+      "process_peak_rss_mib": 172.3359375
+    },
+    {
+      "stage": "observer_compatible",
+      "elapsed_seconds": 2.0927407949930057,
+      "process_peak_rss_mib": 172.3359375
+    },
+    {
+      "stage": "observer_compatible",
+      "elapsed_seconds": 2.093527307995828,
+      "process_peak_rss_mib": 172.3359375
+    },
+    {
+      "stage": "observer_compatible",
+      "elapsed_seconds": 2.0942078460066114,
+      "process_peak_rss_mib": 172.3359375
+    },
+    {
+      "stage": "observer_compatible",
+      "elapsed_seconds": 2.095134456001688,
+      "process_peak_rss_mib": 172.3359375
+    },
+    {
+      "stage": "observer_compatible",
+      "elapsed_seconds": 2.0958660950127523,
+      "process_peak_rss_mib": 172.3359375
+    },
+    {
+      "stage": "observer_compatible",
+      "elapsed_seconds": 2.0966788880177774,
+      "process_peak_rss_mib": 172.3359375
+    },
+    {
+      "stage": "observer_compatible",
+      "elapsed_seconds": 2.09747239400167,
+      "process_peak_rss_mib": 172.3359375
+    },
+    {
+      "stage": "observer_compatible",
+      "elapsed_seconds": 2.0982207280176226,
+      "process_peak_rss_mib": 172.3359375
+    },
+    {
+      "stage": "observer_compatible",
+      "elapsed_seconds": 2.1002580280182883,
+      "process_peak_rss_mib": 172.3359375
+    },
+    {
+      "stage": "observer_compatible",
+      "elapsed_seconds": 2.1013077039970085,
+      "process_peak_rss_mib": 172.3359375
+    },
+    {
+      "stage": "observer_compatible",
+      "elapsed_seconds": 2.1021940860082395,
+      "process_peak_rss_mib": 172.3359375
+    },
+    {
+      "stage": "observer_compatible",
+      "elapsed_seconds": 2.1030151410086546,
+      "process_peak_rss_mib": 172.3359375
+    },
+    {
+      "stage": "observer_compatible",
+      "elapsed_seconds": 2.103875112021342,
+      "process_peak_rss_mib": 172.3359375
+    },
+    {
+      "stage": "observer_compatible",
+      "elapsed_seconds": 2.1047014920040965,
+      "process_peak_rss_mib": 172.3359375
+    },
+    {
+      "stage": "observer_compatible",
+      "elapsed_seconds": 2.1058290539949667,
+      "process_peak_rss_mib": 172.3359375
+    },
+    {
+      "stage": "observer_compatible",
+      "elapsed_seconds": 2.106728598999325,
+      "process_peak_rss_mib": 172.3359375
+    },
+    {
+      "stage": "observer_compatible",
+      "elapsed_seconds": 2.1077070360188372,
+      "process_peak_rss_mib": 172.3359375
+    },
+    {
+      "stage": "observer_compatible",
+      "elapsed_seconds": 2.1088704470021185,
+      "process_peak_rss_mib": 172.3359375
+    },
+    {
+      "stage": "observer_compatible",
+      "elapsed_seconds": 2.110062462015776,
+      "process_peak_rss_mib": 172.3359375
+    },
+    {
+      "stage": "observer_compatible",
+      "elapsed_seconds": 2.11209553599474,
+      "process_peak_rss_mib": 172.3359375
+    },
+    {
+      "stage": "observer_compatible",
+      "elapsed_seconds": 2.1132980569964275,
+      "process_peak_rss_mib": 172.3359375
+    },
+    {
+      "stage": "observer_compatible",
+      "elapsed_seconds": 2.1143447420035955,
+      "process_peak_rss_mib": 172.3359375
+    },
+    {
+      "stage": "observer_compatible",
+      "elapsed_seconds": 2.1153576679935213,
+      "process_peak_rss_mib": 172.3359375
+    },
+    {
+      "stage": "observer_compatible",
+      "elapsed_seconds": 2.1164106120122597,
+      "process_peak_rss_mib": 172.3359375
+    },
+    {
+      "stage": "observer_compatible",
+      "elapsed_seconds": 2.1174961740034632,
+      "process_peak_rss_mib": 172.3359375
+    },
+    {
+      "stage": "observer_compatible",
+      "elapsed_seconds": 2.118539151008008,
+      "process_peak_rss_mib": 172.3359375
+    },
+    {
+      "stage": "observer_compatible",
+      "elapsed_seconds": 2.1192560060007963,
+      "process_peak_rss_mib": 172.3359375
+    },
+    {
+      "stage": "observer_case_begin_P",
+      "elapsed_seconds": 2.1197113369998988,
+      "process_peak_rss_mib": 172.3359375
+    },
+    {
+      "stage": "observer_P",
+      "elapsed_seconds": 2.131555091997143,
+      "process_peak_rss_mib": 172.3359375
+    },
+    {
+      "stage": "observer_P",
+      "elapsed_seconds": 2.1327319830015767,
+      "process_peak_rss_mib": 172.3359375
+    },
+    {
+      "stage": "observer_P",
+      "elapsed_seconds": 2.133915539016016,
+      "process_peak_rss_mib": 172.3359375
+    },
+    {
+      "stage": "observer_P",
+      "elapsed_seconds": 2.135005974007072,
+      "process_peak_rss_mib": 172.3359375
+    },
+    {
+      "stage": "observer_P",
+      "elapsed_seconds": 2.136092152009951,
+      "process_peak_rss_mib": 172.3359375
+    },
+    {
+      "stage": "observer_P",
+      "elapsed_seconds": 2.136805752001237,
+      "process_peak_rss_mib": 172.3359375
+    },
+    {
+      "stage": "observer_case_begin_A_64",
+      "elapsed_seconds": 2.1374696209968533,
+      "process_peak_rss_mib": 172.3359375
+    },
+    {
+      "stage": "observer_A_64",
+      "elapsed_seconds": 2.149054525012616,
+      "process_peak_rss_mib": 172.3359375
+    },
+    {
+      "stage": "observer_A_64",
+      "elapsed_seconds": 2.150327206007205,
+      "process_peak_rss_mib": 172.3359375
+    },
+    {
+      "stage": "observer_A_64",
+      "elapsed_seconds": 2.1516493140079547,
+      "process_peak_rss_mib": 172.3359375
+    },
+    {
+      "stage": "observer_A_64",
+      "elapsed_seconds": 2.152834177017212,
+      "process_peak_rss_mib": 172.3359375
+    },
+    {
+      "stage": "observer_A_64",
+      "elapsed_seconds": 2.1541173710138537,
+      "process_peak_rss_mib": 172.3359375
+    },
+    {
+      "stage": "observer_A_64",
+      "elapsed_seconds": 2.155249054019805,
+      "process_peak_rss_mib": 172.3359375
+    },
+    {
+      "stage": "observer_A_64",
+      "elapsed_seconds": 2.1567043240065686,
+      "process_peak_rss_mib": 172.3359375
+    },
+    {
+      "stage": "observer_A_64",
+      "elapsed_seconds": 2.1579818010213785,
+      "process_peak_rss_mib": 172.3359375
+    },
+    {
+      "stage": "observer_A_64",
+      "elapsed_seconds": 2.1592755489982665,
+      "process_peak_rss_mib": 172.3359375
+    },
+    {
+      "stage": "observer_A_64",
+      "elapsed_seconds": 2.160561394994147,
+      "process_peak_rss_mib": 172.3359375
+    },
+    {
+      "stage": "observer_A_64",
+      "elapsed_seconds": 2.161834758007899,
+      "process_peak_rss_mib": 172.3359375
+    },
+    {
+      "stage": "observer_A_64",
+      "elapsed_seconds": 2.1641108010080643,
+      "process_peak_rss_mib": 172.3359375
+    },
+    {
+      "stage": "observer_A_64",
+      "elapsed_seconds": 2.165650854993146,
+      "process_peak_rss_mib": 172.3359375
+    },
+    {
+      "stage": "observer_A_64",
+      "elapsed_seconds": 2.167294169019442,
+      "process_peak_rss_mib": 172.3359375
+    },
+    {
+      "stage": "observer_A_64",
+      "elapsed_seconds": 2.169034680002369,
+      "process_peak_rss_mib": 172.3359375
+    },
+    {
+      "stage": "observer_A_64",
+      "elapsed_seconds": 2.170070840016706,
+      "process_peak_rss_mib": 172.3359375
+    },
+    {
+      "stage": "observer_case_begin_A_96",
+      "elapsed_seconds": 2.170794392004609,
+      "process_peak_rss_mib": 172.3359375
+    },
+    {
+      "stage": "observer_A_96",
+      "elapsed_seconds": 2.18284340199898,
+      "process_peak_rss_mib": 172.3359375
+    },
+    {
+      "stage": "observer_A_96",
+      "elapsed_seconds": 2.1843862810055725,
+      "process_peak_rss_mib": 172.3359375
+    },
+    {
+      "stage": "observer_A_96",
+      "elapsed_seconds": 2.185929747996852,
+      "process_peak_rss_mib": 172.3359375
+    },
+    {
+      "stage": "observer_A_96",
+      "elapsed_seconds": 2.1873900140053593,
+      "process_peak_rss_mib": 172.3359375
+    },
+    {
+      "stage": "observer_A_96",
+      "elapsed_seconds": 2.18878247300745,
+      "process_peak_rss_mib": 172.3359375
+    },
+    {
+      "stage": "observer_A_96",
+      "elapsed_seconds": 2.190224862017203,
+      "process_peak_rss_mib": 172.3359375
+    },
+    {
+      "stage": "observer_A_96",
+      "elapsed_seconds": 2.191873942996608,
+      "process_peak_rss_mib": 172.3359375
+    },
+    {
+      "stage": "observer_A_96",
+      "elapsed_seconds": 2.193518395011779,
+      "process_peak_rss_mib": 172.3359375
+    },
+    {
+      "stage": "observer_A_96",
+      "elapsed_seconds": 2.195271506992867,
+      "process_peak_rss_mib": 172.3359375
+    },
+    {
+      "stage": "observer_A_96",
+      "elapsed_seconds": 2.1968959940131754,
+      "process_peak_rss_mib": 172.3359375
+    },
+    {
+      "stage": "observer_A_96",
+      "elapsed_seconds": 2.198463016015012,
+      "process_peak_rss_mib": 172.3359375
+    },
+    {
+      "stage": "observer_A_96",
+      "elapsed_seconds": 2.201001923007425,
+      "process_peak_rss_mib": 172.3359375
+    },
+    {
+      "stage": "observer_A_96",
+      "elapsed_seconds": 2.202746206021402,
+      "process_peak_rss_mib": 172.3359375
+    },
+    {
+      "stage": "observer_A_96",
+      "elapsed_seconds": 2.2043908630148508,
+      "process_peak_rss_mib": 172.3359375
+    },
+    {
+      "stage": "observer_A_96",
+      "elapsed_seconds": 2.20599855700857,
+      "process_peak_rss_mib": 172.3359375
+    },
+    {
+      "stage": "observer_A_96",
+      "elapsed_seconds": 2.2076813690073323,
+      "process_peak_rss_mib": 172.3359375
+    },
+    {
+      "stage": "observer_A_96",
+      "elapsed_seconds": 2.209279182017781,
+      "process_peak_rss_mib": 172.3359375
+    },
+    {
+      "stage": "observer_A_96",
+      "elapsed_seconds": 2.2111590249987785,
+      "process_peak_rss_mib": 172.3359375
+    },
+    {
+      "stage": "observer_A_96",
+      "elapsed_seconds": 2.2129133109992836,
+      "process_peak_rss_mib": 172.3359375
+    },
+    {
+      "stage": "observer_A_96",
+      "elapsed_seconds": 2.2160123490029946,
+      "process_peak_rss_mib": 172.3359375
+    },
+    {
+      "stage": "observer_A_96",
+      "elapsed_seconds": 2.217822275997605,
+      "process_peak_rss_mib": 172.3359375
+    },
+    {
+      "stage": "observer_A_96",
+      "elapsed_seconds": 2.219566373009002,
+      "process_peak_rss_mib": 172.3359375
+    },
+    {
+      "stage": "observer_A_96",
+      "elapsed_seconds": 2.222838048997801,
+      "process_peak_rss_mib": 172.3359375
+    },
+    {
+      "stage": "observer_A_96",
+      "elapsed_seconds": 2.2247899009962566,
+      "process_peak_rss_mib": 172.3359375
+    },
+    {
+      "stage": "observer_A_96",
+      "elapsed_seconds": 2.2266399649961386,
+      "process_peak_rss_mib": 172.3359375
+    },
+    {
+      "stage": "observer_A_96",
+      "elapsed_seconds": 2.228450487018563,
+      "process_peak_rss_mib": 172.3359375
+    },
+    {
+      "stage": "observer_A_96",
+      "elapsed_seconds": 2.229667222010903,
+      "process_peak_rss_mib": 172.3359375
+    },
+    {
+      "stage": "advanced_toys_complete",
+      "elapsed_seconds": 2.2306152880191803,
+      "process_peak_rss_mib": 172.3359375
+    }
+  ],
+  "factor_counts": {
+    "MatLUFactorSym": 0,
+    "MatLUFactorNum": 0,
+    "MatSolve": 0
+  }
+}

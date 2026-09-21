@@ -1,0 +1,20 @@
+{
+  "attempts_including_current": 14,
+  "checked_documents": [
+    "SESSION_HANDOFF.md",
+    "docs/realizability/B2_MONITOR_ADAPTER_REVIEW.md",
+    "docs/realizability/evidence/r076/README.md",
+    "REQUEST_LOG.md",
+    "WORK_SESSIONS.md"
+  ],
+  "completed_attempts_before_current": 13,
+  "continuity": "R076 request/session/handoff consistent",
+  "cumulative_seconds_before_current": 0.5342260848847218,
+  "finite_json_files": 56,
+  "local_links": 66,
+  "maximum_child_rss_bytes": 23801856,
+  "reconstructed_prior_commands": 13,
+  "schema": 1,
+  "source_hashes": 61,
+  "status": "passed"
+}

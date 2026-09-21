@@ -10,14 +10,17 @@ the archived [R033 monitor](evidence/r033/source/toy_runner.py),
 
 ## Decision and scope
 
-The adapters are specified here, not implemented or validated on the host.
-Keep R070's physical entry disabled. R073's 16 passing fake checks establish
+The adapters were specified here; R076 has since implemented their policy
+core and fixture-facing adapters in a new disposable copy, without validating
+them on the host. R070's physical entry remains disabled. R073's 16 passing
+fake checks establish
 the cases they tested, but do not establish an executable sampling schedule,
-complete process coverage or confirmed cleanup. Use a new versioned copy for
-the implementation; preserve R033/R070/R073 sources, reports and ledgers.
-The [single next task](../../SESSION_HANDOFF.md#next-task) implements the core
-and Linux adapters with fixtures only. Windows collection, live validation and
-physical launch remain separate obligations specified below.
+complete process coverage or confirmed cleanup. R076 used a new versioned copy
+and preserved the R033/R070/R073 sources, reports and ledgers.
+The original implementation task is complete; the current
+[next task](../../SESSION_HANDOFF.md#next-task) reviews the fixture bundle and
+freezes a bounded live-validation contract. Windows collection, live validation
+and physical launch remain separate obligations specified below.
 
 No numerical method, boundary condition, observer, solver, package pin or
 scientific acceptance threshold changes. Physical limits remain **180 s and
@@ -251,25 +254,46 @@ absent, document the exact refusal; do not relax the contract or install/change
 system configuration implicitly. Later Astra review must decide readiness
 from those results before any FEM work.
 
-## Next implementation contract
+## R076 implementation result
 
-Use **GPT-5.6 Luna/medium on this PC** to implement the versioned core, Linux
-membership/RSS/termination adapters and host request/reply validation facade in
-a new disposable source bundle. All OS reads, signals, waits and transport
-operations must be injectable. Execute fixture/fake checks only; no real
+The fixture-only implementation is in
+[`evidence/r076/`](evidence/r076/README.md). It provides the versioned core,
+pure `/proc` stat and membership helpers, a Windows JSON-line protocol
+validator, finite partial reports, explicit waits, cleanup classification,
+an all-outcome attempt recorder and strict completion gates in a new R070
+copy. Completion verifies the source manifest and binds the child report digest
+to the monitor report. The original R070/R073 sources and manifests are preserved. All attempts
+are recorded; the final run passed 16 fixture and continuity groups in Python
+3.12.13 within the 120 s / 256 MiB validation allowance. Two initial failures
+were retained and corrected: a duplicate fake tree sequence in the deadline
+fixture and an R070 disabled-entry branch that reached its launch code.
+
+This is fixture evidence only. It does not certify live `/proc` or cgroup
+membership, process identity races, signal behavior, cgroup cleanup, Windows
+`GlobalMemoryStatusEx`, host transport, Job Object behavior or independent
+watchdogs. The native Windows collector and the actual host capabilities
+remain unimplemented/unverified; R070 physical execution remains disabled.
+The physical 180 s / 1536 MiB policy is unchanged.
+
+## Implementation contract (historical)
+
+R076 used **GPT-5.6 Luna/medium** on this PC to implement the versioned core,
+Linux membership/RSS/termination helpers and host request/reply validation
+facade in a new disposable source bundle. OS reads, signals and transport
+operations are injectable; R076 ran fixture/fake checks only, with no real
 process signaling, child workload, cgroup writes or Windows helper startup.
-Deliver the interfaces, deterministic fixtures, finite reports, source manifest
-and all-attempt recorder, with default-deny integration tests on a new R070 copy.
-Budget this new standard-library validation at 120 s cumulative / 256 MiB;
-include startup/import/reporting and preserve failed attempts. Stop on an
-unexplained failure or resource stop, before live adapters/FEM/physical execution.
+The bundle includes finite reports, a source manifest, an all-attempt recorder
+and default-deny integration checks on a new R070 copy. The prescribed
+120 s / 256 MiB validation allowance included the validator subprocess's
+startup/import/reporting, and failed attempts were preserved. Live adapters,
+FEM and physical execution remain unvalidated.
 
-After successful mechanical implementation recommend **GPT-6 Astra/high** to
-review the code and freeze a bounded live-adapter validation contract, including
-the remaining native Windows collector implementation and actual host
-capabilities. Remain with Astra if containment, timing, cleanup or measurement
-semantics need a new decision; do not turn uncertain behavior into permissive
-fallbacks. Current session catalog and official model pages support these
-model/effort choices; no model switch or delegation occurred.
+After successful mechanical implementation, the task is for **GPT-6 Astra/high**
+to review the code and freeze a bounded live-adapter validation contract,
+including the remaining native Windows collector implementation and actual
+host capabilities. Remain with Astra if containment, timing, cleanup or
+measurement semantics need a new decision; do not turn uncertain behavior into
+permissive fallbacks. Official OpenAI model pages were rechecked on
+2026-09-21; this is a recommendation only, not a model switch.
 [Luna](https://developers.openai.com/api/docs/models/gpt-5.6-luna),
 [Astra](https://developers.openai.com/api/docs/models/gpt-6-astra)

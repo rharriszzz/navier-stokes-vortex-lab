@@ -1,0 +1,156 @@
+{
+  "scope": "synthetic monitor contract only; no subprocess or physical child",
+  "python": "3.12.13",
+  "checks_passed": 16,
+  "checks_total": 16,
+  "checks": {
+    "completion_and_one_second_host_sampling": true,
+    "tree_cap_and_termination": true,
+    "wall_cap_and_termination": true,
+    "host_pressure_and_termination": true,
+    "sample_gap_reported": true,
+    "tree_missing_partial_stop": true,
+    "host_missing_partial_stop": true,
+    "tree_stale_partial_stop": true,
+    "host_stale_partial_stop": true,
+    "tree_nonfinite_partial_stop": true,
+    "host_nonfinite_partial_stop": true,
+    "launch_missing_refused": true,
+    "launch_stale_refused": true,
+    "launch_nonfinite_refused": true,
+    "launch_headroom_refused": true,
+    "interrupted_partial_report_and_stop": true
+  },
+  "representative_reports": {
+    "normal": {
+      "status": "completed",
+      "stop_reason": null,
+      "tree_samples": 46,
+      "host_samples": 3,
+      "maximum_tree_sample_gap_seconds": 0.050000000000000044,
+      "maximum_host_sample_gap_seconds": 1.0000000000000007,
+      "peak_tree_rss_mib": 100.0,
+      "largest_process_count": 2,
+      "last_tree_reading": {
+        "timestamp": 2.25,
+        "rss_mib": 100.0,
+        "process_count": 2,
+        "root_alive": false
+      },
+      "termination_requested": false,
+      "fake_termination_count": 0,
+      "fake_tree_reader_calls": 46,
+      "fake_host_reader_calls": 3
+    },
+    "tree_cap": {
+      "status": "stopped",
+      "stop_reason": "tree_rss_limit",
+      "tree_samples": 2,
+      "host_samples": 1,
+      "maximum_tree_sample_gap_seconds": 0.05,
+      "maximum_host_sample_gap_seconds": 0.0,
+      "peak_tree_rss_mib": 513.0,
+      "largest_process_count": 2,
+      "last_tree_reading": {
+        "timestamp": 0.05,
+        "rss_mib": 513.0,
+        "process_count": 2,
+        "root_alive": true
+      },
+      "termination_requested": true,
+      "fake_termination_count": 1,
+      "fake_tree_reader_calls": 2,
+      "fake_host_reader_calls": 1
+    },
+    "wall_cap": {
+      "status": "stopped",
+      "stop_reason": "wall_time_limit",
+      "tree_samples": 11,
+      "host_samples": 1,
+      "maximum_tree_sample_gap_seconds": 0.05000000000000002,
+      "maximum_host_sample_gap_seconds": 0.0,
+      "peak_tree_rss_mib": 100.0,
+      "largest_process_count": 2,
+      "last_tree_reading": {
+        "timestamp": 0.49999999999999994,
+        "rss_mib": 100.0,
+        "process_count": 2,
+        "root_alive": true
+      },
+      "termination_requested": true,
+      "fake_termination_count": 1,
+      "fake_tree_reader_calls": 11,
+      "fake_host_reader_calls": 1
+    },
+    "host_pressure": {
+      "status": "stopped",
+      "stop_reason": "host_pressure_limit",
+      "tree_samples": 21,
+      "host_samples": 2,
+      "maximum_tree_sample_gap_seconds": 0.050000000000000044,
+      "maximum_host_sample_gap_seconds": 1.0000000000000002,
+      "peak_tree_rss_mib": 100.0,
+      "largest_process_count": 2,
+      "last_tree_reading": {
+        "timestamp": 1.0000000000000002,
+        "rss_mib": 100.0,
+        "process_count": 2,
+        "root_alive": true
+      },
+      "termination_requested": true,
+      "fake_termination_count": 1,
+      "fake_tree_reader_calls": 21,
+      "fake_host_reader_calls": 2
+    },
+    "sample_gap": {
+      "status": "completed",
+      "stop_reason": null,
+      "tree_samples": 4,
+      "host_samples": 1,
+      "maximum_tree_sample_gap_seconds": 0.13,
+      "maximum_host_sample_gap_seconds": 0.0,
+      "peak_tree_rss_mib": 100.0,
+      "largest_process_count": 2,
+      "last_tree_reading": {
+        "timestamp": 0.22999999999999998,
+        "rss_mib": 100.0,
+        "process_count": 2,
+        "root_alive": false
+      },
+      "termination_requested": false,
+      "fake_termination_count": 0,
+      "fake_tree_reader_calls": 4,
+      "fake_host_reader_calls": 1
+    },
+    "interrupted": {
+      "status": "partial",
+      "stop_reason": "monitor_input_failure",
+      "error_type": "KeyboardInterrupt",
+      "error": "synthetic interruption",
+      "tree_samples": 1,
+      "host_samples": 1,
+      "maximum_tree_sample_gap_seconds": 0.0,
+      "maximum_host_sample_gap_seconds": 0.0,
+      "peak_tree_rss_mib": 12.0,
+      "largest_process_count": 1,
+      "last_tree_reading": {
+        "timestamp": 0.0,
+        "rss_mib": 12.0,
+        "process_count": 1,
+        "root_alive": true
+      },
+      "termination_requested": true
+    }
+  },
+  "elapsed_seconds": 0.0001620010007172823,
+  "max_rss_mib": 133.59375,
+  "budgets": {
+    "cumulative_seconds": 120.0,
+    "rss_mib": 256.0
+  },
+  "source_sha256": {
+    "portable_monitor.py": "9759d6875fa91359a506cc1bd728c0b21bf44efa3080d3a0c5e0b52dcca21655",
+    "validate.py": "209c181d1dfa5b0aa933c6f98c3669d0ea183fe8a73a0a811d048e97efeee280",
+    "archived_r033_toy_runner.py": "e6860548c3e3168a0cfaceb184652125ac57d127bc816af92e54b7cea41427c6"
+  }
+}
