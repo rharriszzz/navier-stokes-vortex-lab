@@ -1,8 +1,41 @@
 # Finish Mac setup and compare it with the PC
 
-Updated 2026-09-20 for R058. Start here on the Mac. The commands below are
-instructions for the next setup session; R058 inspected readiness and updated
-documentation, but did not install software, render, or run a benchmark.
+Updated 2026-09-20 for R062's plan/handoff review. Readiness evidence is from
+R058; neither request installed software, rendered, or ran a benchmark.
+
+## Immediate next step and sequence
+
+**After transferring the current documentation, finish the Mac setup: install
+POV-Ray through existing MacPorts, then complete the isolated one-frame and
+ten-frame movie checks below. Stop after recording that result.** Use GPT-5.6
+Luna/medium. Recheck whether POV-Ray has since been installed before installing
+it. This establishes Mac visualization readiness; it supplies no speed ranking.
+
+Use the [machine handoff procedure](../../AGENTS.md#switching-between-the-mac-and-pc)
+before switching. R064 authorizes publication of this review from the PC;
+verify the successful push and receive that commit on the Mac. The Mac task is
+the next execution task, not already running. If remaining on the PC, carry forward this
+handoff rather than silently substituting a different task for `Continue`.
+
+The subsequent sequence is:
+
+1. Transfer ownership to the PC for the Astra/high R021/R013 and FFCx form/cache
+   review. Finish with a documented decision and, if warranted, a repeatable FEM
+   reference fixture, acceptance rules and resource contract. Stop before
+   execution. The once-only physical q=64/q=96 experiment is a separate task.
+2. Implement and validate the portable benchmark wrapper on each host using
+   synthetic processes; freeze its source with the selected cases. Check PC
+   POV-Ray/ffmpeg availability too; existing Mac readiness says nothing about
+   PC visualization tools. Record monitor/version compatibility on both hosts.
+3. Execute the separately scoped matched comparison in sequential host sessions
+   with the same frozen workload and input artifacts. Collect both reports,
+   check outputs first, then recommend a host per task. Stop on the first
+   contract failure; do not run the physical experiment as a benchmark fallback.
+
+Visualization comparisons need their own fixed contract and monitor checks and
+can be explicitly scheduled independently of the FEM review. They do not need
+to wait for a passing physical accuracy gate. No FEM fixture, launch allowance,
+cross-host tolerance or validated Mac monitor has yet been selected by this guide.
 
 ## What remains to install
 
@@ -147,8 +180,8 @@ observer/watchdogs; the Mac is a candidate for future FEM work.
 
 Trajectory/render/encode checks can proceed independently of the physical
 research review, as described in [Project Tracks](../../PROJECT_TRACKS.md).
-For FEM, first complete the [session handoff](../../SESSION_HANDOFF.md#next-task)
-review on the PC: the [R021 contract](B2_COMPATIBLE_TRACE_INTEGRATION_REVIEW.md),
+For FEM, first complete the [queued scientific review](../../SESSION_HANDOFF.md#queued-pc-scientific-review)
+on the PC: the [R021 contract](B2_COMPATIBLE_TRACE_INTEGRATION_REVIEW.md),
 [R013 limits](B2_MATCHED_TRACE_REVIEW.md), [R033 result](B2_COMPATIBLE_TRACE_PREFLIGHT_FOLLOWUP.md)
 and R056 form/cache audit. Document the proposed small reference fixture,
 expected numerical outputs, acceptance checks and resource allowance. That
@@ -164,12 +197,17 @@ Keep production and archived evidence intact and adapt a disposable copy.
 
 Before either machine runs, save a small manifest with:
 
-- Same Git revision and hashes of input/scene/include/mesh files; exact commands,
-  seed, output directory, case size and acceptance rules. Resolve dirty source
+- Same frozen workload Git revision and hashes of runner/input/scene/include/mesh
+  files; exact commands, seed, output directory, case size and acceptance rules. Resolve dirty source
   changes first and put both checkouts on local storage. Use WSL's Linux
   filesystem for the PC case; record if `/mnt/c` is used because that measures
-  a different I/O path. A coordinator must collect both machines' evidence;
-  a Mac session cannot infer current PC load or execute there automatically.
+  a different I/O path. Record the workload `source_commit` separately from
+  the later handoff/evidence `delivery_commit`: results may be committed between
+  host sessions, but each host must archive the frozen source revision rather
+  than whatever `HEAD` happens to be then. Give the comparison and each
+  host/case/repetition a unique ID; track completed and refused runs to avoid
+  accidental repetition on receipt. A coordinator must collect both machines'
+  evidence; a Mac session cannot infer current PC load or execute there automatically.
 - Full Python/NumPy/FEM versions; Conda package build, channel, subdir and artifact
   hash; compiler, MPI and BLAS implementation; PETSc scalar/index type and
   solver options. Native platform binaries differ, even at matching versions.
@@ -190,6 +228,14 @@ Before either machine runs, save a small manifest with:
   minimum host/guest headroom; allowed sample gap; and the stop conditions below.
   Choose these from the reviewed workload and fresh capacity, not installed RAM
   or an old prerequisite cap. Swap is not extra compute RAM.
+
+Make the fixture's time/memory allowance and headroom thresholds explicit for
+each host before launch, and track consumed time across sessions. Use a common
+case allowance for the baseline where both hosts can safely support it. If a
+host needs a different allowance, disclose that in the manifest and report it
+as a capacity constraint; do not silently change the workload or relax a cap
+after observing the other host's result. Capacity snapshots need to be fresh
+at each launch; matched runs need not overlap in wall-clock time.
 
 Start with one worker/thread (and one MPI rank for an approved FEM fixture):
 
@@ -248,7 +294,11 @@ and checking that wrapper is a prerequisite for a guarded FEM benchmark.
 Run each case in a fresh source/output directory. For rendering, distribute
 one identical generated include set; for encoding, distribute one identical
 PNG set. Do not compare renderings generated from different trajectories or
-encode times from different images.
+encode times from different images. Keep generated includes/PNGs/meshes outside
+Git and transfer them explicitly, with an inventory and SHA-256 hashes verified
+on receipt. Identical regeneration is acceptable only after all input hashes
+match; otherwise use the preserved input artifact. Stop if a required artifact
+is missing. Repository synchronization alone does not transfer ignored outputs.
 
 | Task | Initial fixed case | Required correctness evidence |
 |---|---|---|
@@ -288,7 +338,9 @@ to the intended workload and state where scaling is unknown.
 ### 5. Repetitions, caches, results and stop conditions
 
 Use one explicitly labeled warm-up and three fresh-process measured runs of
-an identical case per host; retain every time, median and range. A cold FEM
+an identical case per host; retain every time, median and range. For FEM, let
+the warm-up use a fresh JIT cache and record its cold timing separately; the
+three measured warm runs reuse only that host's cache. A cold FEM
 run uses a new empty task-local cache passed through the actual DOLFINx JIT
 `cache_dir` option. A warm run reuses that host's task-local cache, with fresh
 solver/output state. Changing only an environment variable is insufficient if
@@ -311,7 +363,8 @@ ignored `results/realizability/` or the recorded temporary directories. Suggeste
 one row per repetition (use JSON null plus a reason for unavailable values):
 
 ```text
-host, source_commit, case, versions_manifest, input_hashes, ranks, threads,
+comparison_id, run_id, host, source_commit, delivery_commit, case,
+versions_manifest, input_hashes, ranks, threads,
 cache_state, repetition, elapsed_s, stage_times_s, sampled_tree_peak_mib,
 max_sample_gap_s, host_guest_headroom, swap_delta, returncode, stop_reason,
 output_validation, output_metrics
@@ -324,19 +377,19 @@ correctness passes and memory fits. A benchmark failure does not change any
 scientific acceptance threshold; a failed accuracy gate stays failed even if
 both hosts reproduce it.
 
-## Next bounded tasks
+## Completion and model handoff
 
-- **Mac setup:** install POV-Ray using existing MacPorts and run the isolated
-  one-frame then ten-frame movie check above. Complete when counts, coordinates,
-  separated images and decoded MP4 metadata pass and evidence is recorded. Stop
-  on an install/check failure, or after that report; do not expand into a FEM run.
-  GPT-5.6 Luna with medium reasoning is suitable for this mechanical task.
-- **Scientific review on PC:** GPT-6 Astra with high reasoning should complete
-  the R021/R013 observer/runner and FFCx form/cache review, define a repeatable
-  reference fixture and resource/acceptance contract, and stop before execution.
-  Retain Astra/high for numerical choices or unexplained differences; recommend
-  Luna/medium for a bounded monitor implementation once its contract is settled.
+The immediate Mac setup task is complete when counts, coordinates, separated
+images and decoded MP4 metadata pass and evidence is recorded. Stop on an
+install/check failure or after that report. Then recommend Astra/high for the
+queued PC scientific review. Retain Astra/high for numerical choices or
+unexplained differences; recommend Luna/medium for a bounded monitor
+implementation only after its contract is settled. Each step of the sequence
+above is a separate bounded task, not one automatic multi-machine execution.
 
-Both models appear in the available session model catalog at R058; no switch
-or background task was started. Recheck availability in the execution session.
-No matched benchmark has yet established a Mac or PC performance winner.
+R062 rechecked the session catalog and the official
+[Luna](https://developers.openai.com/api/docs/models/gpt-5.6-luna) and
+[Astra](https://developers.openai.com/api/docs/models/gpt-6-astra) effort support.
+Both are available in this session; recheck availability when executing. No
+model switch or background task was started. No matched benchmark has yet
+established a Mac or PC performance winner.

@@ -3,7 +3,7 @@
 For this Mac's remaining install steps and future comparison with the PC, use
 [MAC_INSTALL_AND_BENCHMARK_PLAN.md](MAC_INSTALL_AND_BENCHMARK_PLAN.md). Its
 installed environment already passed imports/MPI. The general solver commands
-below describe available checks; the [current handoff](../../SESSION_HANDOFF.md#next-task)
+below describe available checks; the [queued scientific review](../../SESSION_HANDOFF.md#queued-pc-scientific-review)
 still calls for review before physical execution. A visualization smoke test
 does not establish FEM readiness.
 

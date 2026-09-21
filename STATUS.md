@@ -1,9 +1,10 @@
 # Project status: physical preparation and a realistic movie
 
 Updated 2026-09-20 for
-[R058](REQUEST_LOG.md#r058--2026-09-20--pull-and-make-mac-setup-and-benchmark-instructions-actionable),
-after checking live Mac readiness and making the installation and host
-benchmark instructions executable. Resource
+[R062](REQUEST_LOG.md#r062--2026-09-20--review-macpc-benchmark-plan-and-handoff-process)
+and [R063](REQUEST_LOG.md#r063--2026-09-20--detect-an-unannounced-machine-switch),
+after reviewing the Mac/PC benchmark sequence and machine handoff. R058 remains
+the latest live Mac readiness evidence; no new install or benchmark ran. Resource
 guidance below includes the R023/R024 capacity clarifications.
 The goals below preserve the
 [R010 status-report request](REQUEST_LOG.md#r010--2026-09-20--project-status-and-user-goals).
@@ -203,7 +204,12 @@ movie can precede physical feasibility, while later validated data should
 replace or constrain its illustrative motion. Visual clarity alone is not
 evidence of realizability.
 
-## Latest checkpoint and the immediate next step
+## Latest scientific checkpoint and the next review
+
+The immediate software task is the Mac POV-Ray install and isolated movie
+check after transfer of the current documentation. The PC review below is the
+next scientific task; see the [current execution handoff](SESSION_HANDOFF.md#next-task)
+for the ordered sequence and ownership state.
 
 The [R033 prerequisite result](docs/realizability/B2_COMPATIBLE_TRACE_PREFLIGHT_FOLLOWUP.md)
 completes the disposable q=64/q=96 fixture and the actual pre-solve observer
@@ -216,7 +222,7 @@ sampled child-tree RSS was 571.42 MiB, below the capacity-sized 1536 MiB cap.
 The final cache-reuse pass peaked at 171.24 MiB. Two understood fixture defects
 were repaired in the disposable copy, and every attempt was preserved.
 **No physical child, PDE solve, factorization or flow response ran.** The B2
-physical accuracy gate remains failed. The next step is an Astra/high review of
+physical accuracy gate remains failed. The next scientific step is an Astra/high review of
 the observer and remaining physical path before any separately scoped physical
 comparison.
 
@@ -323,7 +329,7 @@ For the Mac software inventory (R054), the FEM Conda environment and MPI
 startup have passed import checks, and `ffmpeg`/`ffprobe` are present. POV-Ray
 is the remaining confirmed tool missing from the checked shell for the full
 movie pipeline. The FFCx version-string discrepancy is explained by upstream
-release metadata; retain the pinned 0.10.1 code. See the [Mac install handoff](SESSION_HANDOFF.md#r054-remaining-mac-software)
+release metadata; retain the pinned 0.10.1 code. See the [Mac install handoff](SESSION_HANDOFF.md#next-task)
 and [R055 finding](SESSION_HANDOFF.md#r055-ffcx-version-discrepancy).
 
 The remaining Mac setup and task-by-task Mac/PC benchmark protocol are in
@@ -337,3 +343,11 @@ portable resource-monitor validation remain pending. No install or benchmark
 was run as part of R058. Astra/high should complete the PC R021/R013 review
 and set the small FEM reference case/acceptance thresholds before either host is evaluated
 for the scientific workload.
+
+R062 makes the order explicit: Mac movie readiness, then the PC scientific
+review, portable monitor validation, and a separately scoped matched comparison.
+Visualization benchmarks can be scheduled independently. The workload revision
+stays fixed across later evidence commits; ignored benchmark inputs need an
+explicit checksum-verified transfer. R063 adds a local machine/owner check at
+session start. Uncertain ownership requires clarification; local Git cannot
+detect the other machine's unpublished work or running processes.

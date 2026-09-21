@@ -1,12 +1,41 @@
 # Current session handoff
 
-Last updated: 2026-09-20. Latest request:
-[R061](REQUEST_LOG.md#r061--2026-09-20--publish-cross-computer-handoff-workflow)
-publishes the R059 pull report and R060 cross-computer workflow changes. The
-workflow is in `AGENTS.md` and was published in commit `d2ba3a4` to
-`origin/main`. The worktree is expected clean. Next task: MacPorts POV-Ray
-install and isolated movie smoke test, using GPT-5.6 Luna/medium. Keep the
-separate PC scientific review at GPT-6 Astra/high.
+Last updated: 2026-09-20. Latest requests:
+[R062](REQUEST_LOG.md#r062--2026-09-20--review-macpc-benchmark-plan-and-handoff-process)
+reviews the benchmark sequence and machine handoff;
+[R063](REQUEST_LOG.md#r063--2026-09-20--detect-an-unannounced-machine-switch)
+adds detection of a possible switch at session start.
+[R064](REQUEST_LOG.md#r064--2026-09-20--publish-benchmark-and-machine-handoff-review)
+authorizes committing and pushing this completed documentation review from the
+PC/WSL checkout. **The PC releases this task to the Mac once the R064 commit
+is pushed successfully.** The receiving session must fetch/pull and verify that
+delivery before claiming ownership. The final publication report supplies the
+actual commit hash; failed publication leaves transfer pending. No installation,
+rendering, FEM work or performance benchmark ran in this review.
+
+| Handoff field | Current value |
+|---|---|
+| Outgoing task/owner | R062/R063 review, R064 publication, PC/WSL; release to Mac takes effect on verified push of this handoff |
+| Observed local identity | Hostname `daisy`, Linux/WSL2, `x86_64`, checkout `/home/rharris/git/navier-stokes-vortex-lab` |
+| Branch/upstream | `main` / `origin/main` |
+| Inspected base/source commit | `ed6a0b66068fb6e2ea210dc87af6fbf049b62427`; local HEAD and cached upstream matched at review start; no fetch/pull performed |
+| Delivery commit | The commit containing the R064 publication entry; get its actual hash from the final publication report/Git history and verify it is on the fetched upstream |
+| Intended next owner/task | Mac: POV-Ray installation and isolated movie smoke test, Luna/medium; unclaimed |
+| Task processes | R062/R063 launched no background workloads; documentation-check commands have exited; other-machine process state was not inspected |
+| Required transfer inputs | Changed documentation and R062 review evidence; the next setup test generates its own fresh movie inputs |
+| Next stop | Setup failure or completed movie-validation report; no automatic FEM launch |
+
+Use [Next task](#next-task) as the single current execution task. The
+[PC scientific review](#queued-pc-scientific-review) is queued after the Mac
+setup handoff; it remains the first FEM decision step. The historical sections
+below explain prior results and superseded recommendations, not additional
+current assignments. R062's checks and skips are in
+[review evidence](docs/realizability/evidence/r062/documentation_validation.json).
+
+## Previous publication and readiness
+
+R061 published the R059 pull report and R060 workflow in `d2ba3a4`; its
+publication record is `ed6a0b6`. Those records do not authorize R062 publication.
 Previous request:
 [R059](REQUEST_LOG.md#r059--2026-09-20--pull-and-report-incoming-changes)
 pulled `main` from `096f75a` to `979b174`; upstream added commits `5c4a5a5`
@@ -100,10 +129,19 @@ at bounded task boundaries. Keep one active owner for each task and experiment;
 publish only when the current request authorizes it. The receiving computer
 should pull and verify the handoff before starting, and should run its own
 environment/monitor checks. The current sequence is MacPorts POV-Ray install
-and isolated movie smoke test on the Mac, plus the Astra/high R021/R013 review
-on the PC; do not overlap edits or run a physical experiment while switching.
+and isolated movie smoke test on the Mac, then the Astra/high R021/R013 review
+on the PC. Default to one active writing/execution session for the repository,
+including shared request/handoff documents. Release and acknowledge ownership,
+preserve consumed run allowances, and verify any ignored inputs on receipt.
+Synchronize a clean receiving checkout before appending its request entry.
+At every session start, compare actual machine identity with the owner above,
+even if the user does not announce a switch. A mismatch with no completed
+release/transfer needs clarification before writes or workload execution;
+established handoffs can proceed without another confirmation. See
+[switch detection and limits](AGENTS.md#catch-an-unannounced-switch). Neither a
+clean checkout nor a pull proves the other machine has no live or unpublished work.
 
-## Latest result: R022 toy memory stop
+## Historical R022 toy memory stop (completed by R033 below)
 
 Read the [R022 result and next contract](docs/realizability/B2_COMPATIBLE_TRACE_PREFLIGHT_RESULT.md),
 [evidence index](docs/realizability/B2_COMPATIBLE_TRACE_PREFLIGHT_EVIDENCE.md),
@@ -530,24 +568,32 @@ the project's `conda-forge` source and exact environment pins. R041 performed
 no installation; R046 later verified imports and R058 confirmed the installed
 native arm64 DOLFINx 0.10.0/Python 3.12.13 package metadata.
 
-## Next Mac setup task (separate from the PC scientific review)
+## Next task
 
-Follow the R058 guide to install POV-Ray with existing MacPorts, then validate
+**On the Mac, after verifying the R064 documentation delivery, finish POV-Ray setup
+and the isolated movie smoke test.** This is the current execution task for
+`Continue`. A session still on the PC should complete an authorized handoff and
+stop; it cannot execute this task locally or assume the Mac has received it.
+
+Follow the [updated Mac guide](docs/realizability/MAC_INSTALL_AND_BENCHMARK_PLAN.md)
+to check for and, if still missing, install POV-Ray with existing MacPorts, then validate
 one image and the isolated ten-frame trajectory/render/encode check. Use
-GPT-5.6 Luna/medium for this mechanical task; the current session model catalog
-lists it and GPT-6 Astra. Record versions, all-frame finite/bounds checks,
+GPT-5.6 Luna/medium for this mechanical task; R062 rechecked the session catalog
+and official model effort support. Record versions, all-frame finite/bounds checks,
 three separated image inspections and decoded MP4 metadata. Stop on failure
 or after the setup report; no FEM run follows automatically. Retain Astra/high
 for a scientific decision or unexplained numerical difference. The PC review
 below should define the separate FEM comparison contract and monitor work.
+After the successful Mac report, hand ownership to the PC and recommend
+GPT-6 Astra/high for that review. **Next prompt on the receiving Mac: Continue.**
 
-## Next task
+## Queued PC scientific review
 
 Review the now-exercised disposable observer and remaining physical runner
 against the unchanged R021/R013 contract before deciding whether to conduct a
 separately scoped matched-trace physical comparison. Recommend **GPT-6 Astra
 with high reasoning** for this scientific review. Recheck model availability
-when handing off. R030 rechecked the official model pages:
+when handing off. R062 rechecked the session catalog and official model pages:
 [Luna](https://developers.openai.com/api/docs/models/gpt-5.6-luna) and
 [Astra](https://developers.openai.com/api/docs/models/gpt-6-astra).
 The review should check the saved P/A/A compatibility logic, the independent
@@ -559,13 +605,22 @@ whether a separate physical experiment is warranted. Also compare the Mac and
 PC against the estimated physical workload; do not recommend migration from
 installed RAM alone.
 
+Include R056's audit of UFL forms with multiple integrals sharing a quadrature
+rule and the provenance of any relied-upon compiled cache. If a host comparison
+is warranted, specify a repeatable non-campaign reference fixture, expected
+outputs, unchanged scientific thresholds, cross-host comparison rules and
+resource/headroom allowances. Explicitly separate it from the once-only
+physical q=64/q=96 experiment. The next implementation task can then validate
+portable synthetic watchdogs before either host launches that FEM fixture.
+
 Completion is a documented review and a separate decision boundary. Stop before
 physical execution, solver changes, new meshes/orders, pressure/return-flow
 repair, gate integration, campaign, B3, rendering or encoding. If the review
 finds only a clearly understood mechanical defect, recommend GPT-5.6 Luna with
 medium reasoning for a narrow repair. Retain GPT-6 Astra/high for unexplained
 results or any scientific/numerical-method decision. No model switch or
-automation occurred. **Next prompt: Continue.**
+automation occurred. This task becomes current only after the recorded Mac
+setup step or an explicit user change of priority.
 
 ## R035 Git publication setup
 

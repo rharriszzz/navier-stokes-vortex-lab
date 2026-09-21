@@ -1,0 +1,118 @@
+{
+  "requests": [
+    "R062",
+    "R063",
+    "R064"
+  ],
+  "scope": "Static documentation checks and manual workflow review; shell blocks parsed, not executed.",
+  "source_base_commit": "ed6a0b66068fb6e2ea210dc87af6fbf049b62427",
+  "local_identity": {
+    "label": "PC/WSL",
+    "hostname": "daisy",
+    "os": "Linux",
+    "release": "6.18.33.2-microsoft-standard-WSL2",
+    "architecture": "x86_64",
+    "checkout": "/home/rharris/git/navier-stokes-vortex-lab"
+  },
+  "checked_markdown": [
+    "AGENTS.md",
+    "PROJECT_TRACKS.md",
+    "REQUEST_LOG.md",
+    "SESSION_HANDOFF.md",
+    "STATUS.md",
+    "docs/realizability/B1_SETUP.md",
+    "docs/realizability/MAC_INSTALL_AND_BENCHMARK_PLAN.md"
+  ],
+  "local_link_paths_checked": 93,
+  "missing_local_paths": [],
+  "heading_fragments_checked": 21,
+  "missing_heading_fragments": [],
+  "mac_guide_bash_syntax": [
+    {
+      "block": 1,
+      "exit_code": 0,
+      "stderr": ""
+    },
+    {
+      "block": 2,
+      "exit_code": 0,
+      "stderr": ""
+    },
+    {
+      "block": 3,
+      "exit_code": 0,
+      "stderr": ""
+    },
+    {
+      "block": 4,
+      "exit_code": 0,
+      "stderr": ""
+    },
+    {
+      "block": 5,
+      "exit_code": 0,
+      "stderr": ""
+    },
+    {
+      "block": 6,
+      "exit_code": 0,
+      "stderr": ""
+    },
+    {
+      "block": 7,
+      "exit_code": 0,
+      "stderr": ""
+    }
+  ],
+  "trajectory_options_and_bounds_match_source": true,
+  "historical_request_log_prefix_unchanged": true,
+  "new_request_ids": [
+    62,
+    63,
+    64
+  ],
+  "production_source_pins_and_archived_evidence_unchanged": true,
+  "git_diff_check": {
+    "exit_code": 0,
+    "output": ""
+  },
+  "manual_review_findings": [
+    "One current next task: receive handoff on Mac, install missing POV-Ray, validate isolated movie and stop; PC scientific review queued.",
+    "Scientific reference fixture, acceptance rules and portable monitor remain prerequisites for any FEM benchmark; once-only physical case remains separate.",
+    "Frozen workload revision is separate from delivery commits; generated input inventories and hashes must arrive independently of Git.",
+    "Receiving ownership/status and synchronization precede request-ID allocation; use largest ID because historical entries are out of order.",
+    "One writing/execution owner for shared files; release and receipt, explicit no-autostash fast-forward, divergence refusal, and no post-push dirty delivery note.",
+    "Session-start local identity comparison flags possible unannounced switches; inspect fetched handoff if stale; clarify uncertain ownership before dependent work.",
+    "Unpublished remote work and live processes cannot be detected from local Git; no remote-process monitoring or background lock was implemented.",
+    "R033 completion supersedes PROJECT_TRACKS historical R022 toy next-step recommendation."
+  ],
+  "manual_source_review": [
+    "make_trajectories.py",
+    "fluid.pov",
+    "render.sh",
+    "make_movie.sh",
+    "docs/realizability/B2_COMPATIBLE_TRACE_INTEGRATION_REVIEW.md",
+    "docs/realizability/B2_MATCHED_TRACE_REVIEW.md",
+    "docs/realizability/B2_COMPATIBLE_TRACE_PREFLIGHT_FOLLOWUP.md"
+  ],
+  "official_documentation_checked": [
+    "https://git-scm.com/docs/git-pull",
+    "https://git-scm.com/docs/git-merge-base",
+    "https://developers.openai.com/api/docs/models/gpt-5.6-luna",
+    "https://developers.openai.com/api/docs/models/gpt-6-astra"
+  ],
+  "model_catalog": "Session catalog lists gpt-5.6-luna medium and gpt-6-astra high; no switch or agent launched.",
+  "not_run": [
+    "Mac tool inventory",
+    "package installation",
+    "trajectory generation",
+    "POV-Ray rendering",
+    "movie encoding",
+    "FEM assembly/solve",
+    "performance benchmark",
+    "portable monitor implementation/self-test",
+    "other-machine process inspection",
+    "live two-machine handoff rehearsal"
+  ],
+  "passed": true
+}

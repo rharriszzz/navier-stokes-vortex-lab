@@ -138,9 +138,13 @@ shared-potential moment alternative is deferred. No new numerical work ran in th
 implemented the disposable 64/96 runner and pre-solve observer. Its five original
 prerequisites and all 16 high-order polynomial facet checks passed, then the
 advanced child hit the 512 MiB RSS cap before any actual observer case. No
-physical child or PDE solve ran. The next task is Luna/medium toy-process
-isolation and resource reporting under the same caps, with full observer
-coverage required and a stop before physical execution.
+physical child or PDE solve ran. The subsequent
+[R033 prerequisite completion](docs/realizability/B2_COMPATIBLE_TRACE_PREFLIGHT_FOLLOWUP.md)
+passed the full toy/observer suite under its capacity-sized resource allowance;
+that work is complete and should not be repeated as a new task. The next
+scientific task is the Astra/high R021/R013 observer/physical-runner and FFCx
+form/cache review, stopping before physical execution. The Mac setup task and
+machine-handoff sequence are recorded in the current session handoff.
 The B2 gate remains failed and campaign readiness false. Use
 [SESSION_HANDOFF.md](SESSION_HANDOFF.md) for completion criteria and stops.
 
