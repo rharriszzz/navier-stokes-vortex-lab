@@ -2769,3 +2769,11 @@ No DOLFINx/MPI import, JIT, mesh, factorization, PDE solve, physical child, rend
 **Outcome, 2026-09-21:** Added a mandatory fast-forward-only, no-rebase, no-autostash upstream pull for every Continue start, including same-owner sessions. Added an append-only `WORK_SESSIONS.md` lifecycle record: publish `STARTED` before substantive work and append `COMPLETED` with evidence and owner-release state before final scoped publication. Dirty worktrees and failed/divergent pulls stop for reconciliation. Open starts are resumed or resolved through the existing handoff process. The log explicitly says this coordination record is not a lock and cannot detect unpublished remote work or live processes.
 
 **Changed files and checks:** `AGENTS.md`, `REQUEST_LOG.md`, `SESSION_HANDOFF.md`, and new `WORK_SESSIONS.md`. Reviewed the workflow and handoff diffs and verified the session-log links/anchors by inspection; `git diff --check` passed. No application tests, task workload, pull, push, or commit occurred in this request; it did not invoke Continue. The pending monitor task remains next, owned by PC/WSL `daisy`; use GPT-5.6 Luna/medium, stop after portable synthetic monitor evidence, and recommend GPT-6 Astra/high if resource semantics or thresholds need interpretation or before physical FEM work. No unresolved workflow choice remains. The final response supplies the actual publication state/hash if these changes are committed and pushed under this request's authorization.
+
+## R073 — 2026-09-21 — Portable synthetic process/resource-monitor validation
+
+**User request:** “continue”
+
+**Interpreted scope:** Continue the pending PC synthetic-monitor task from the current handoff. Validate a portable monitor interface using synthetic/fake process and host readings, preserving the R033 monitor and all prior attempts. Use Python 3.12.13 and a separate 120 s cumulative / 256 MiB standard-library validation budget. Do not run a FEM/physical child or change the physical 180 s / 1536 MiB caps. The Continue workflow authorizes commit/push of this scoped task.
+
+**Status:** Started; ownership record published before substantive work.

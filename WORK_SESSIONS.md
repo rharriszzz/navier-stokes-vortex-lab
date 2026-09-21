@@ -24,3 +24,8 @@ Changed files: ... | Checks/skips: ... | Evidence: ... | Next task: ...
 
 No session has been started by this file's creation. The current R072 request
 was a workflow change, not a `Continue` task instruction.
+
+## R073 — Portable synthetic process/resource-monitor validation
+STARTED | 2026-09-21 04:20:46 UTC | PC/WSL | daisy | Linux/x86_64
+Checkout: /home/rharris/git/navier-stokes-vortex-lab | Branch/upstream: main/origin/main | Starting commit: 172cd70d39d80232c8d07c6c916b7fe4bf4a3e6f
+Task: Use Python 3.12.13 and fake process/host readings to validate the portable monitor contract within 120 s / 256 MiB; no FEM/physical child; stop before changing physical caps.
