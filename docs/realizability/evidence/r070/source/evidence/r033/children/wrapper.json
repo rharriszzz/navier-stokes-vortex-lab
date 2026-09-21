@@ -1,0 +1,97 @@
+{
+  "status": "passed",
+  "stage": "toy_repair_complete",
+  "campaign_ready": false,
+  "physical_meshes": 0,
+  "pde_solves": 0,
+  "matrix_factorizations": 0,
+  "primary_rhs": 0,
+  "returned_primary_solves": 0,
+  "correction_rhs": 0,
+  "matrix_solves": 0,
+  "source_sha256": {
+    "realizability/__init__.py": "197df2cae0b7fcc3908afebfd9359b21244fc8aa0460b0167af04a2f1c7f219c",
+    "realizability/backends/__init__.py": "8b40aa33331d5a627dbd4aa1681f9da523a21e31e2b0e71f48203967481f20b2",
+    "realizability/backends/b1_verification.py": "287512f423a3c147c009802c2de9d6cf11538d3c80fc3fbc98dffaf586bb1e5c",
+    "realizability/backends/b2_coercivity.py": "be10e484ffd5c36aef45962242dea2bcaaaa3cbad37df83e297fcc366bf96bcc",
+    "realizability/backends/b2_gate.py": "3151ac8a85de4b242e53b28a3d2815d7ecf5e8e6ed8c654f440aa5a8778a6d05",
+    "realizability/backends/b2_stability.py": "18b2e75712255a681a0c22f012d81ab3a129e147c41f3f8974bb46cf6a8df9f1",
+    "realizability/backends/b2_verification.py": "42e11041c5f1edbca13737010456247f059d92e874a9398454bf4b6f17498d25",
+    "realizability/backends/fem_observables.py": "f5dbc8a47d2f5c61d9228daf49c80ae1011ab542ee12335398a52eaf89ed0a64",
+    "realizability/backends/fenicsx_stokes.py": "37ecd62121553e13f273fb99c7bc2649f51d9cea57658f4bce8069c4ac80a206",
+    "realizability/backends/hdiv_stokes.py": "f23b252f91c406e3e279c7e6e7049e301ad604fae232dd0a610a73319864d2e9",
+    "realizability/boundary_modes.py": "586d2667b8ac4b6a460d590afc884a05be5f9843484df74de8a4568261f84d18",
+    "realizability/cli.py": "c163e6a3dc8e6a2c08c7dc48a7205624947fce938dea1aec3489ef62135bd850",
+    "realizability/config.py": "3cb3edbb28e203226056cf4ac5e7832951c33e5f932b13a5ec438de88c786d12",
+    "realizability/observables.py": "428fd794b00669593f87b694bca10a94454ccbd9ee012fa656a61c7b30375a05",
+    "realizability/reference.py": "7f032634768a3f8b8a7a649e4d83dc45fd6f969a1c1ba679d1628867d2f13305",
+    "realizability/response.py": "5318e4d6ea917433909e6e9718c90ed9cf48a5ee4b779b4446b83b3452d71317",
+    "realizability/sensors.py": "c93cd68cc902970f27ecdce7deb1d272f146890cfe99b076b87e190222483d9a",
+    "realizability/swirl_reference.py": "375e057ff365858cb5dc698e1b397eb34b18a9898d5a82482e2391ea11d81e4a",
+    "configs/realizability/pilot.json": "0e60a6ee85063f5d86b84db5af053f2166126249255edeafae4b4e6242db10d0"
+  },
+  "repository_root": "/home/rharris/git/navier-stokes-vortex-lab",
+  "source_archive_sha256": "e0bfff861a9be6c7adf2c403ee958493e419875dce6e2d2aaea684671c8e705c",
+  "elapsed_seconds": 0.22422190100769512,
+  "process_peak_rss_mib": 140.07421875,
+  "tetrahedron": {
+    "block_sizes": [
+      30,
+      4,
+      30,
+      4
+    ],
+    "offsets": [
+      0,
+      30,
+      34,
+      64,
+      68
+    ],
+    "constrained_dofs_per_block": [
+      24,
+      0,
+      24,
+      0
+    ],
+    "velocity_free_interior_dofs": [
+      6,
+      6
+    ],
+    "pressure_constraints": 0,
+    "exact_assignment": true,
+    "unchanged_constraint_sets": true,
+    "complex_target_assignment": [
+      {
+        "real_value": 0.0,
+        "imaginary_value": 0.0,
+        "exact": true
+      },
+      {
+        "real_value": 0.125,
+        "imaginary_value": -0.375,
+        "exact": true
+      }
+    ]
+  },
+  "refusal_cases": [
+    {
+      "case": "missing imaginary block",
+      "refused": true
+    },
+    {
+      "case": "wrong-space block",
+      "refused": true
+    }
+  ],
+  "pressure_compatibility_fixtures": {
+    "compatible_accepted": true,
+    "incompatible_refused": true,
+    "compatible_removed_norm": 0.0,
+    "incompatible_removed_norm": 1.0
+  },
+  "failure_reporting": {
+    "compatibility_pre_removal_persisted": true,
+    "returned_solve_and_factor_counts_persisted": true
+  }
+}

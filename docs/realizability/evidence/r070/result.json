@@ -1,0 +1,57 @@
+{
+  "request_ids": ["R070", "R071"],
+  "date": "2026-09-21",
+  "status": "passed",
+  "scope": "Disposable R033 physical-runner launch/report repair; no physical execution",
+  "python": {
+    "version": "3.12.13",
+    "executable": "/tmp/navier-fenicsx/bin/python"
+  },
+  "repairs": [
+    "One declared 600 s / 1536 MiB prerequisite policy, with 180 s / 1536 MiB physical caps retained",
+    "Source, saved R033 parent report, all eight child reports, original runner hashes and 19 production-source hashes bound by manifests",
+    "Atomic contract-specific once-only attempt record support",
+    "Structured prelaunch refusal counts and postlaunch unknown-count/interrupted-checkpoint reporting",
+    "Immediate returned-primary convergence checks, including A_64 and A_96",
+    "Stage-local factorization and solve-event checks after each primary and correction",
+    "Legacy physical CLI launch paths disabled; guarded parent defaults to physical execution disabled"
+  ],
+  "validation": {
+    "status": "passed",
+    "attempt_ledger": "attempt.json",
+    "documentation_validation": "documentation_validation.json",
+    "attempts": 5,
+    "failed_attempts_preserved": 2,
+    "passed_attempts": 3,
+    "cumulative_wall_seconds": 0.1337083850230556,
+    "cumulative_wall_limit_seconds": 120,
+    "maximum_attempt_rss_mib": 24.1640625,
+    "address_space_limit_mib": 256,
+    "final_attempt_tests": 12,
+    "cases": [
+      "Saved final R033 prerequisite report and source/child evidence binding",
+      "61 s and 600 MiB cases accepted; true cumulative budget excess refused",
+      "Missing/modified source and child hashes, failed observer flags, nonfinite data and wrong-root success refused",
+      "Already-consumed attempt, prelaunch exception, missing child report and interrupted checkpoint handled",
+      "Unsuccessful A primary and unexpected factor/solve counts refused at the returned stage",
+      "Successful fake path returned a labelled sentinel; default and refusal paths invoked no child",
+      "All 19 production-source pins and all files in the R033 archive manifest matched byte-for-byte",
+      "All 12 copied Python source files parsed"
+    ]
+  },
+  "physical_attempt": {
+    "used": false,
+    "child_launched": false,
+    "meshes": 0,
+    "factorizations": 0,
+    "solves": 0,
+    "dolphinx_or_mpi_imported": false,
+    "jit_or_pde_execution": false
+  },
+  "fem_unexercised_paths": [
+    "Actual PETSc primary/correction convergence and stage-local event checks in physical.py",
+    "Actual subprocess/resource-watch and child-checkpoint parsing on a physical run",
+    "The repaired parent refusal, consumed-attempt and evidence-binding sequence with a real child"
+  ],
+  "next_review": "Before enabling physical execution, review the guarded launch wiring and decide the scoped FEM validation required for every listed unexercised path."
+}

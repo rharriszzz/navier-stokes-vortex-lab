@@ -1,0 +1,13 @@
+{
+  "cumulative_wall_limit_seconds": 600,
+  "active_child_tree_rss_limit_mib": 1536,
+  "prior_elapsed_seconds": 48.31175252300454,
+  "attempts": 3,
+  "resource_snapshot": "../resources.json",
+  "previous_attempts": [
+    "attempt-01: all original phases/refusals and high-order checks passed; stopped at known stale global FFCx C-cache artifact before compilation.",
+    "attempt-02: fresh-cache compilation completed and all high-order checks passed; observer stopped because the toy tried to read a PETSc Vec through a writable array accessor while the vector was read-locked.",
+    "attempt-03: full prerequisite suite passed, but intermediate advanced-stage checkpoint history was overwritten by the final report; adding a persisted checkpoint list and repeating under the cumulative budget with cache reuse."
+  ],
+  "note": "attempt-03 uses a read-only PETSc array accessor for read-only hashes/normalization. Fresh-cache compile is charged to this cumulative allowance; no cache prewarming and global cache untouched."
+}

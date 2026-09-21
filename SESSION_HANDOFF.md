@@ -1,15 +1,24 @@
 # Current session handoff
 
-Last updated: 2026-09-20 for [R067](REQUEST_LOG.md#r067--2026-09-20--short-continuation-request)
-and R068/R069's Python clarification/preference. **The PC scientific review is
-complete. Next: a disposable launch/report repair on this PC using GPT-5.6
-Luna/medium, with saved-data and synthetic checks only.** Read the
-[R067 review and exact repair contract](docs/realizability/B2_PHYSICAL_RUNNER_REVIEW.md).
-No physical execution or FEM benchmark is authorized by this handoff.
+Last updated: 2026-09-21 for [R070](REQUEST_LOG.md#r070--2026-09-20--short-continuation-request)
+and [R071](REQUEST_LOG.md#r071--2026-09-21--correct-r070-wrong-root-hash-validation).
+The PC scientific review and disposable launch/report repair are complete.
+**Next: portable synthetic process/resource-monitor validation on this PC using
+GPT-5.6 Luna/medium.** Use the R067 monitor policy and R033 monitor source;
+physical execution remains disabled and is not authorized by this handoff.
 
-The observer's saved P/A/A tests pass. The archived physical parent still has
-stale prerequisite caps, incomplete evidence binding and early-failure reports;
-primary convergence/event checkpoints also need repair. R067 verified the
+The repaired copy, saved report binding, checks and five-attempt validation
+ledger are in [R070 evidence](docs/realizability/evidence/r070/result.json).
+Attempt 5 passed 12 focused checks after preserving two earlier failed harness
+attempts; cumulative validation was 0.133708385 s / 120 s and maximum sampled
+RSS was 24.1641 MiB / 256 MiB. All 19 production hashes and all files listed
+by the R033 archive manifest matched. No DOLFINx/MPI import, JIT, mesh,
+factorization, PDE solve or physical child ran. R020 remains the last physical
+attempt; the q64/q96 allowance is unused and B2 accuracy remains failed.
+
+The observer's saved P/A/A tests pass. The archived R033 parent remains
+unchanged with its original launch/report gaps; the R070 disposable copy repairs
+those paths and stays disabled for physical execution. R067 verified the
 patched FFCx package files and symbolic form grouping; no reinstall or historical
 physical rerun is indicated. Its [audit](docs/realizability/evidence/r067/review.json)
 preserves all 19 production pins and 796 old evidence files. No physical mesh,
@@ -24,26 +33,27 @@ No package installation, pin change or remote Mac check occurred.
 
 | Handoff field | Current value |
 |---|---|
-| Current task/owner | PC/WSL retains ownership; R067 review complete, mechanical repair next |
+| Current task/owner | PC/WSL retains ownership; R067 review and R070 repair complete; synthetic monitor task next |
 | Observed identity | `daisy`, Linux/WSL2, `x86_64`, `/home/rharris/git/navier-stokes-vortex-lab` |
-| Branch/upstream | `main` / `origin/main`; clean at R067 start, stash list empty |
-| Source/base commit | `73416243fb9857c834d6663cca2235a116253537`, the R066 publication; no new fetch/pull required for same-owner continuation |
-| Delivery state | R067's Continue authorizes this scoped review and R068/R069 documentation; final report/Git history gives the actual delivery hash and push result |
-| Task processes | Review/check commands exited; no background workload started. Independent Mac POV-Ray build remains user-reported and unverified |
-| Required next inputs | Committed R033 source/reports and R067 contract; no irreplaceable ignored input, cache or binary transfer required |
-| Consumed experiments | R033 prerequisites: four attempts, 56.25128577899886 s; q64/q96 physical attempt: unused. R020 remains last physical attempt |
-| Next stop | New disposable parent/report source and saved/synthetic validation; stop before FEM/MPI/JIT or physical work |
+| Branch/upstream | `main` / `origin/main`; clean at R070 start, stash list empty |
+| Source/base commit | `6e67a20`, same-owner continuation; no receiving pull required |
+| Delivery state | R070's Continue authorizes its scoped commit/push to `origin/main`; consult the final report/Git history for delivery state and hash |
+| Task processes | All repair/validation commands exited; no background workload. Independent Mac POV-Ray build remains user-reported and unverified |
+| Required next inputs | R067 review, R033 `toy_runner.py`, R070 source/evidence manifests and the bounded monitor task; no ignored inputs or cache transfer |
+| Consumed experiments | R033 prerequisites: four attempts, 56.25128577899886 s; R070 validation: five attempts, 0.133708385 s cumulative, two failed attempts preserved; q64/q96 physical allowance unused. R020 remains last physical attempt |
+| Next stop | Synthetic monitor contract/evidence only; stop before FEM/MPI/JIT, physical child or threshold changes |
 
 Use [Next task](#next-task) as the single current execution task. All older
 next-task recommendations below are historical. The
 [deferred Mac movie check](#deferred-mac-setup-check) waits for a later
-user-selected switch and verification of the existing build. R067 also
-specifies an observer/assembly reference for later host comparison, contingent
-on repaired launch reporting and validated monitors; it is not a solve benchmark.
-The [documentation checks](docs/realizability/evidence/r067/documentation_validation.json)
-cover links/headings, Bash syntax without execution, Python/JSON, request
-continuity and preserved source pins. Changed-file and skip inventories are in
-R067's request-log outcome. All check commands exited; no child workload remains.
+user-selected switch and verification of the existing build. R067 specifies an
+observer/assembly reference for later host comparison, contingent on validated
+monitors; it is not a solve benchmark. The [R070 source
+manifest](docs/realizability/evidence/r070/source/source_manifest.json) binds
+the disposable repair and saved R033 evidence. Solver/event checks and the
+actual physical launch/report sequence remain unexercised by FEM. The
+independent Mac POV-Ray build remains outside repository ownership and
+unverified.
 
 ## Previous publication and readiness
 
@@ -584,36 +594,30 @@ native arm64 DOLFINx 0.10.0/Python 3.12.13 package metadata.
 
 ## Next task
 
-**Stay on PC; use GPT-5.6 Luna with medium reasoning for the
-[R067 launch/report repair](docs/realizability/B2_PHYSICAL_RUNNER_REVIEW.md#next-task-launch-and-report-repair).**
-`Continue` selects that bounded implementation, not another scientific review.
+**Stay on PC; use GPT-5.6 Luna with medium reasoning for a portable synthetic
+process/resource-monitor task.** The R070 parent stays disabled for physical
+execution. Begin from [R067's resource policy](docs/realizability/B2_PHYSICAL_RUNNER_REVIEW.md#workload-and-host-decision),
+the archived [R033 Linux monitor](docs/realizability/evidence/r033/source/toy_runner.py),
+and the [R070 guarded source and evidence](docs/realizability/evidence/r070/).
 
-Read that review, its evidence, the archived R033 parent/physical helpers and
-R021/R013 contracts. Create a new disposable harness copy; preserve archived
-sources and all 19 production identities. Fix declared-policy validation,
-source/child-report binding, attempt accounting, finite refusal/unknown-count
-reports, immediate A primary convergence checks, and per-solve factor/event
-checks. Keep one guarded launch path, disabled for actual physical execution
-until a subsequent reviewed launch task.
+Implement or isolate a portable monitor interface in a new disposable copy.
+Use synthetic/fake process and host readings to check process-tree RSS,
+one-second Windows host-pressure sampling, sample-gap reporting, missing,
+stale and nonfinite readings, cap crossings, termination and partial reports.
+Preserve the R033 monitor and all prior attempt records. Do not execute a FEM or
+physical child. Use Python 3.12.13 and a separate 120 s cumulative / 256 MiB
+standard-library validation budget with an attempt ledger. Completion is a
+documented monitor contract, passing synthetic checks, evidence and continuity
+update; stop before FEM, JIT, mesh, solve or changing the 180 s / 1536 MiB
+physical caps.
 
-Use Python 3.12.13 and the exact saved-data/synthetic cases specified by R067.
-Budget: 120 s cumulative/256 MiB for standard-library validation, recording
-all attempts. No DOLFINx/MPI import, JIT, new mesh, numerical fixture,
-factorization, PDE solve, render, encode or package change. Completion is new
-source plus passing focused checks/evidence audit, updated log/handoff,
-authorized scoped commit/push, and stop. Failure or a numerical-semantic change
-requires preserving evidence and recommending Astra/high.
-
-After a successful mechanical repair, recommend Luna/medium for a separately
-bounded portable synthetic monitor task; require Astra/high before a FEM launch
-or scientific interpretation. The later observer/assembly reference is defined
-in R067; its cross-host implementation and Mac memory monitor remain pending.
-A physical solve benchmark and host choice remain scientific decisions.
-
-Model availability was rechecked in the session catalog and with OpenAI Docs:
-[Luna](https://developers.openai.com/api/docs/models/gpt-5.6-luna),
-[Astra](https://developers.openai.com/api/docs/models/gpt-6-astra).
-No switch or automation occurred. **Next prompt on PC: Continue.**
+Recommend Luna/medium while work remains mechanical. Recommend Astra/high if
+monitor semantics require a resource-policy decision, if a threshold change is
+proposed, or before enabling or interpreting any physical FEM launch. The
+observer/assembly reference and Mac memory monitor remain later work; no
+cross-host solve benchmark or host winner is established. Current session
+model choices still include Luna and Astra; no switch or automation occurred.
+**Next prompt on PC: Continue.**
 
 ## Deferred Mac setup check
 

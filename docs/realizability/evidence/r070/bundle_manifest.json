@@ -1,0 +1,127 @@
+{
+  "file_count": 30,
+  "files": {
+    "attempt.json": {
+      "bytes": 1983,
+      "sha256": "7a42fd15885142ccc5fc443969e6a38b01287fc2935b0f853fae5170a7b551bd"
+    },
+    "attempt_state.json": {
+      "bytes": 655,
+      "sha256": "f21e51151df3b8f290d38760f5edf7eb4dc1f27e28ca8a9c425af8fdf8eb2d46"
+    },
+    "documentation_validation.json": {
+      "bytes": 1805,
+      "sha256": "8eff3c7f125f6055103d3ddaafe19609424317d3b4fa9470a34759ab3b711134"
+    },
+    "result.json": {
+      "bytes": 2870,
+      "sha256": "0ba5ca6206f29f690cf3e4be584b5b156ee44921053ae11e663ffd10f1cfd34f"
+    },
+    "source/advanced_toys.py": {
+      "bytes": 16219,
+      "sha256": "f32a583e0c19bf89cf0b3beb3d955db1965454b04cf71459de4b25219acc188d"
+    },
+    "source/block_rhs_toys.py": {
+      "bytes": 13614,
+      "sha256": "503e1dd8bf9867fa3e9dc829c40b1e82a4b75c7e698e0f3d58e72180186aa214"
+    },
+    "source/disk.py": {
+      "bytes": 8598,
+      "sha256": "52afe6d93ff6886b3bfbc4cd6fb68523ec60c98d0bb336fa22c74f4276199255"
+    },
+    "source/evidence/r033/children/advanced.json": {
+      "bytes": 56542,
+      "sha256": "4b1846ffaa18dc28f038fab4bd2f35fb342b3f2207e851d59c25356d098b43f5"
+    },
+    "source/evidence/r033/children/block-rhs.json": {
+      "bytes": 6586,
+      "sha256": "e85b3e1f55542a266395a449f07660cdb4646c3a44ef0af2c1b6ad33a2efface"
+    },
+    "source/evidence/r033/children/disk.json": {
+      "bytes": 307,
+      "sha256": "ddd066bf551cecad878944396cb3425cbee0ada0154651a7dd485972c410981f"
+    },
+    "source/evidence/r033/children/kernels.json": {
+      "bytes": 10617,
+      "sha256": "5e45f4b04ea6ee2db78ca43f4ee80dee28087fdb05c378ddf03933fb783b8c86"
+    },
+    "source/evidence/r033/children/parent-refusal.json": {
+      "bytes": 266,
+      "sha256": "eda8e1deacd6705b0d47f0be7652a3f7adf1b8f935251fa02c268abf34bfcf98"
+    },
+    "source/evidence/r033/children/watchdog.json": {
+      "bytes": 2111,
+      "sha256": "747abc0b25964e4d4b44d54e00a4fb0c97bc5a87457c66ba2c59c4723735385c"
+    },
+    "source/evidence/r033/children/wrapper.json": {
+      "bytes": 3711,
+      "sha256": "2d9e5e64d0605491d911c153700187232698d905f7e0a9acaa45291fda868543"
+    },
+    "source/evidence/r033/children/wrong-root.json": {
+      "bytes": 752,
+      "sha256": "0338d4c924742921a377fa17022b8c3cf46cf25bc58484a73eed3ca488c35fb4"
+    },
+    "source/evidence/r033/evidence_binding.json": {
+      "bytes": 3747,
+      "sha256": "159c2007d6ff4bb8ea8adb331920fa952810dd1ccf4acbe429bca1cbff933175"
+    },
+    "source/evidence/r033/runner-report.json": {
+      "bytes": 7626,
+      "sha256": "84a1dd2396b7e42d3b529b0190ba9c87ec66c696d44e2a8fe34af9ce43aa193b"
+    },
+    "source/evidence/r033/validation.json": {
+      "bytes": 1455,
+      "sha256": "c290578a1c0ca11f2dda16ea6cba8e355e31b4b66b789b673c01be61b6f19dc7"
+    },
+    "source/kernels.py": {
+      "bytes": 14716,
+      "sha256": "9e8110d929a9af1a46cad811f69ba86c1123ebf24f9d852d7cecf13585ead2d6"
+    },
+    "source/launch_guard.py": {
+      "bytes": 15258,
+      "sha256": "66f903f46511daae6d3477c071fc62e02f6a454b449d52d0096a803b5836736e"
+    },
+    "source/physical.py": {
+      "bytes": 35431,
+      "sha256": "a9bfd3420d0d2ec3046cd0f9f303be4f568c67872b4399adb58c93c3c46f6db3"
+    },
+    "source/preflight.json": {
+      "bytes": 4597,
+      "sha256": "9c0aaa313bb097feb955ce9715eca64abd5d3caad50e343c11f8147649102a3b"
+    },
+    "source/presolve.py": {
+      "bytes": 8908,
+      "sha256": "ffdde78bee4803e18e500d038e0e4b0e5215a7a1ec76829abdd6bc07fe6e07bc"
+    },
+    "source/run_contract.py": {
+      "bytes": 1558,
+      "sha256": "83ec94ff73ececbb6bdc6f4b4b376f71ff428f6a45151514b8953b34fe282a66"
+    },
+    "source/source_manifest.json": {
+      "bytes": 2495,
+      "sha256": "f6e1f6c02b7b7290a51286f63f3303b09d6faa0f9dafaf4202555012b021a2a2"
+    },
+    "source/toy_budget.json": {
+      "bytes": 1027,
+      "sha256": "a56b861b114098fc445d74843efc5e5b24857392a3df5e77489e24cb3584ff0a"
+    },
+    "source/toy_runner.py": {
+      "bytes": 11999,
+      "sha256": "e6860548c3e3168a0cfaceb184652125ac57d127bc816af92e54b7cea41427c6"
+    },
+    "source/wrapper_toys.py": {
+      "bytes": 10402,
+      "sha256": "8d4820d52353ff074fce6d54f43c0c287c60ad2eea43eb0b7b7abd75782e6b98"
+    },
+    "validate.py": {
+      "bytes": 12885,
+      "sha256": "ecac065cf39e48db90a3d48496f8fa1c2d089b8a6532dea4dd4f8cf0cdc0dc2d"
+    },
+    "validate_docs.py": {
+      "bytes": 3417,
+      "sha256": "ce972d72290611b31a89c17d9bcc04a7e47c7535992564e3ca052430ff2e362f"
+    }
+  },
+  "schema": 1,
+  "scope": "R070/R071 disposable source, saved evidence, validation attempts and result"
+}

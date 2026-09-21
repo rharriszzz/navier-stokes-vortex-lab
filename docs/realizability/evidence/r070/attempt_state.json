@@ -1,0 +1,22 @@
+{
+  "schema": 1,
+  "contract_id": "R021-q64-q96",
+  "historical_r033_prerequisites": {
+    "attempts_consumed": 4,
+    "cumulative_wall_seconds": 56.25128577899886,
+    "retained_as_history": true
+  },
+  "physical_q64_q96_attempt": {
+    "allowed_attempts": 1,
+    "attempts_consumed": 0,
+    "child_launched": false,
+    "consumed_record_created": false
+  },
+  "r070_validation": {
+    "attempts": 5,
+    "failed_attempts_preserved": 2,
+    "cumulative_wall_seconds": 0.1337083850230556,
+    "physical_execution": false
+  },
+  "note": "The R070 atomic claim mechanism was validated with a synthetic temporary record. No physical attempt was consumed."
+}

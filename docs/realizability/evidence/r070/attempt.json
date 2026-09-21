@@ -1,0 +1,73 @@
+{
+  "address_space_limit_mib": 256,
+  "attempts": [
+    {
+      "address_space_limit_mib": 256,
+      "attempt": 1,
+      "command": "/tmp/navier-fenicsx/bin/python validate.py",
+      "elapsed_seconds": 0.013469447003444657,
+      "errors": 2,
+      "failures": 1,
+      "peak_rss_mib": 21.7421875,
+      "python": "3.12.13",
+      "status": "failed",
+      "tests_run": 10,
+      "wall_limit_seconds": 120
+    },
+    {
+      "address_space_limit_mib": 256,
+      "attempt": 2,
+      "command": "/tmp/navier-fenicsx/bin/python validate.py",
+      "elapsed_seconds": 0.011547000001883134,
+      "errors": 2,
+      "failures": 0,
+      "peak_rss_mib": 21.7265625,
+      "python": "3.12.13",
+      "status": "failed",
+      "tests_run": 10,
+      "wall_limit_seconds": 120
+    },
+    {
+      "address_space_limit_mib": 256,
+      "attempt": 3,
+      "command": "/tmp/navier-fenicsx/bin/python validate.py",
+      "elapsed_seconds": 0.03131214500172064,
+      "errors": 0,
+      "failures": 0,
+      "peak_rss_mib": 24.01171875,
+      "python": "3.12.13",
+      "status": "passed",
+      "tests_run": 11,
+      "wall_limit_seconds": 120
+    },
+    {
+      "address_space_limit_mib": 256,
+      "attempt": 4,
+      "command": "/tmp/navier-fenicsx/bin/python validate.py",
+      "elapsed_seconds": 0.033207313012098894,
+      "errors": 0,
+      "failures": 0,
+      "peak_rss_mib": 23.91015625,
+      "python": "3.12.13",
+      "status": "passed",
+      "tests_run": 11,
+      "wall_limit_seconds": 120
+    },
+    {
+      "address_space_limit_mib": 256,
+      "attempt": 5,
+      "command": "/tmp/navier-fenicsx/bin/python validate.py",
+      "elapsed_seconds": 0.04417248000390828,
+      "errors": 0,
+      "failures": 0,
+      "peak_rss_mib": 24.1640625,
+      "python": "3.12.13",
+      "status": "passed",
+      "tests_run": 12,
+      "wall_limit_seconds": 120
+    }
+  ],
+  "cumulative_wall_limit_seconds": 120,
+  "cumulative_wall_seconds": 0.1337083850230556,
+  "status": "passed"
+}

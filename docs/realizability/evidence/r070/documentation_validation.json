@@ -1,0 +1,50 @@
+{
+  "attempt_history": [
+    {
+      "attempt": 1,
+      "reason": "The first request-history check counted the R071 outcome subheading as a duplicate request ID; changed it to a dated bold outcome note.",
+      "status": "failed"
+    },
+    {
+      "attempt": 2,
+      "reason": "The first next-task check expected a literal \u201cNo\u201d; updated the check to match the stated \u201cDo not execute a FEM\u201d stop.",
+      "status": "failed"
+    },
+    {
+      "attempt": 3,
+      "reason": "44 local links, 11 heading fragments, request-prefix continuity, sequential IDs, current handoff task and git diff --check passed before the final dated log note.",
+      "status": "passed"
+    },
+    {
+      "attempt": 4,
+      "reason": "Repeated after the final log note; all checks passed and result hashes match the committed inputs.",
+      "status": "passed"
+    },
+    {
+      "attempt": 5,
+      "reason": "Repeated after publication-state wording was made valid both before and after push; all continuity and whitespace checks passed.",
+      "status": "passed"
+    },
+    {
+      "attempt": 6,
+      "reason": "Updated the handoff to distinguish the unchanged archive from the repaired disposable copy; all final links, request-history and whitespace checks passed.",
+      "status": "passed"
+    }
+  ],
+  "files_sha256": {
+    "REQUEST_LOG.md": "82df6bc1870af10f168057cb4e081a4e0b41681ac0b51b5421aeb8d5b5b46066",
+    "SESSION_HANDOFF.md": "4f03775196f4439e14b15e834d1b335bfe97dcd27381f8a606946a902f01a76b"
+  },
+  "heading_fragments": 11,
+  "history_prefix_preserved": true,
+  "local_links": 44,
+  "markdown_files": 2,
+  "new_request_ids": [
+    70,
+    71
+  ],
+  "physical_execution_disabled": true,
+  "scoped_diff_whitespace": "passed",
+  "single_current_next_task": true,
+  "status": "passed"
+}
