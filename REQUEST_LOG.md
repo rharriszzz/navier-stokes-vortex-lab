@@ -3003,3 +3003,35 @@ No separate /new output or prior final-answer text has been supplied beyond thes
 **Files/next/stop/release:** Changed REQUEST_LOG.md, WORK_SESSIONS.md, SESSION_HANDOFF.md, STATUS.md, PROJECT_TRACKS.md, docs/realizability/B2_NEXT_STEPS.md, B2_MONITOR_ADAPTER_REVIEW.md, B2_MONITOR_LIVE_VALIDATION_CONTRACT.md; added B2_MONITOR_R084_REVIEW.md and evidence/r085/. PC/WSL daisy retains ownership; audit child/recorder have exited, no task background process or ignored input transfer, independent Mac POV-Ray build remains unverified. Current next task: GPT-6 Astra/high, one new fixture-only integration repair of H01–H04, with explicit schema/transition table and composed fake owner/core/transport/acceptance tests, 120 s total fixture reservation / 256 MiB validator. Preserve archives/pins, hard-disabled physical entry, 180 s / 1536 MiB physical limits and unused q64/q96 allowance. Stop at policy/source/lifecycle/resource uncertainty and before native source/build/startup, live OS/cgroup/signal/workload, FEM or physical execution. Review acceptance before the separately bounded conditional OS source task; Luna/medium only when remaining interfaces and work are mechanical, Astra/high at contract/scientific decisions. Availability/efforts checked in session catalog and official OpenAI Docs; prior Luna 1% reserve is historical. No model switch, delegation or automation claimed. Completion/delivery separate: final scoped publication is authorized and prepared, actual outcome/hash follows push with no later log edit.
 
 **R085 final validation, 2026-09-21:** Documentation/integrity checker passed: 1,390 unchanged baseline files including all 1,300 pre-existing evidence files, both published log prefixes, 86 unique request IDs, one R085 STARTED/COMPLETED pair, single handoff task, 189 local links/27 fragments, three new Python syntax files, three finite audit JSON files, all 273 audit input/source bindings, and 61 source bindings each for R076 and R082. Scoped whitespace passed. Evidence: docs/realizability/evidence/r085/documentation_validation.json. First documentation-check invocation stopped on an assertion that did not normalize a Markdown line wrap; corrected the checker, then passed. No audit or archived fixture was rerun. Final staged checks and publication outcome follow; no post-push log edit.
+
+**R085 later session-status addendum, 2026-09-21:** The user supplied the following completion/status context after delivery 87a1ea3f5153f40aa01563c1fb028f24a468a1cb. This continues the original request to preserve session metadata; it is not a new task or Continue invocation, so no request ID or lifecycle event is allocated. Decorative borders/progress bars are omitted and account email is redacted. Values and reset strings are user-reported snapshots, not live account verification.
+```text
+Next: GPT-6 Astra/high, then Continue.
+Worked for 12m 29s · done 3:55 PM
+/status
+>_ OpenAI Codex (v0.155.1)
+Visit https://chatgpt.com/codex/settings/usage for up-to-date information on rate limits and credits
+Model: gpt-6-astra (reasoning high, summaries auto)
+Model provider: openai
+Directory: ~/git/navier-stokes-vortex-lab
+Permissions: Workspace (Ask for approval)
+Agents.md: AGENTS.md
+Account: [REDACTED account email] (Plus)
+Thread name: Record status and continue
+Collaboration mode: Default
+Session: 01a0c579-9ed4-7393-8006-ef2c95fc1b5d
+Context window: 46% left (145K used / 258K)
+5h limit: 53% left (resets 20:43)
+Weekly limit: 15% left (resets 02:04 on 27 Sep)
+Credits: 373 credits
+Luna Reserve Weekly limit: 1% left (resets 18:03 on 26 Sep)
+```
+Read-only checks before append: same PC/WSL daisy, Linux/x86_64, /home/rharris/git/navier-stokes-vortex-lab; clean main/origin/main, empty stashes, completed R085 and retained PC ownership. Only REQUEST_LOG.md changed; prior bytes preserved and scoped whitespace checked. No workload, pull, new lifecycle, commit or push is part of this context-only addendum; local publication remains pending. The handoff's Astra/high H01–H04 fixture integration repair remains the next task. Preserve and deliberately reconcile this known local log addition before the next Continue's clean-pull/start-publication procedure. No private session files accessed.
+
+## R087 — 2026-09-21 — Commit the latest session-status snapshot
+
+**User request:** “please commit it,  next I will give you the output from /new”
+
+**Scope/authorization:** Commit the pending R085 status addendum and this request record, with a brief handoff continuity note. Commit only; no push or Continue task is requested. The /new output is forthcoming and is not inferred.
+
+**Outcome/checks:** Reviewed the sole pending REQUEST_LOG.md change on PC/WSL daisy, Linux/x86_64, main/origin/main; it is the known user-supplied status snapshot with account email redacted. Preserve all previous log bytes. Changed REQUEST_LOG.md and SESSION_HANDOFF.md; scoped whitespace and staged-file checks precede commit. No application tests or workload are needed for this metadata-only change. Local commit is prepared; actual hash/outcome is reported after Git completes. Publication remains pending and PC retains ownership. Next interaction: receive the user's /new output. The bounded research task remains the handoff's Astra/high H01–H04 fixture integration repair; no lifecycle record, experiment or automation is started.

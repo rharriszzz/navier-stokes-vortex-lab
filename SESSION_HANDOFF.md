@@ -6,6 +6,12 @@ banner, token totals, runtime, resume ID and later `/status` output in
 with account email redacted. R086's receipt question is resolved. No separate
 `/new` output or private session file was obtained.
 
+R087 records the later Astra/high status snapshot and authorizes its local
+commit only. The user will provide `/new` output next. Publication of this
+metadata update remains pending; reconcile its local commit before the next
+Continue synchronization. PC retains ownership and the research task below
+remains current. See the appended records in REQUEST_LOG.md.
+
 The [R085 review](docs/realizability/B2_MONITOR_R084_REVIEW.md) is complete:
 R084's 64 source bindings, 192 snapshot bodies, 22 saved functions, final digest,
 reconciliations and recorded arithmetic agree. One bounded fake/source audit
