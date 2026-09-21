@@ -32,8 +32,11 @@ The [R085 review](B2_MONITOR_R084_REVIEW.md) is complete;
 14 groups in the first attempt. The [R096 acceptance review](B2_MONITOR_R088_REVIEW.md)
 confirms the saved evidence but requires J01–J04 completion-evidence and outer-receipt
 repairs before OS implementation. [R097](evidence/r097/README.md) implements the
-new gates with nine passing fake groups. Acceptance/outer-boundary review is the
-single handoff task; live/whole-recorder certification remains false.
+new gates with nine passing fake groups. The [R098 review](B2_MONITOR_R097_REVIEW.md)
+accepts fake J01–J03 and the injected receipt checks, but requires a concrete
+trusted outer-adapter authority/accounting contract before OS-source admission.
+That documentation-only repair is the single handoff task; live/whole-recorder
+certification remains false.
 The live suite remains unimplemented
 and unauthorized. The
 [Mac/PC performance and memory plan](MAC_PC_PERFORMANCE_MEMORY_PLAN.md) defines

@@ -1,0 +1,104 @@
+{
+  "status": "passed",
+  "method": "saved bytes, JSON arithmetic and AST only; no fixture execution",
+  "baseline_commit": "9ed35fca076d413916e2b0ab9bb4a041a9adcb02",
+  "snapshot_bindings": 10,
+  "output_bindings": 17,
+  "historical_handoff_verified": true,
+  "groups": [
+    {
+      "name": "test_positive_composed_and_physical_deny",
+      "start": 196,
+      "end": 208
+    },
+    {
+      "name": "test_j01_independent_durable_types",
+      "start": 211,
+      "end": 222
+    },
+    {
+      "name": "test_j02_counts_and_samples",
+      "start": 225,
+      "end": 240
+    },
+    {
+      "name": "test_j03_rebased_cleanup_and_admission",
+      "start": 243,
+      "end": 253
+    },
+    {
+      "name": "test_exact_active_cleanup_and_enclosing_boundaries",
+      "start": 256,
+      "end": 267
+    },
+    {
+      "name": "test_outer_missing_mismatched_open_or_stopped",
+      "start": 270,
+      "end": 280
+    },
+    {
+      "name": "test_witness_unpersisted_late_unconfirmed",
+      "start": 283,
+      "end": 289
+    },
+    {
+      "name": "test_partial_cleanup_both_domains_and_unknown_counts",
+      "start": 292,
+      "end": 304
+    },
+    {
+      "name": "test_sources_registry_and_owner_binding",
+      "start": 307,
+      "end": 319
+    }
+  ],
+  "saved_partial_examples": [
+    "fail_observe_helper",
+    "fail_observe_workload",
+    "fail_stop_helper",
+    "fail_stop_workload",
+    "persist_failure"
+  ],
+  "child_seconds": 0.3257114120060578,
+  "observed_guard_seconds": 0.34962656602147035,
+  "charged_seconds": 5.34962656602147,
+  "peak_child_rss_bytes": 23834624,
+  "exclusions": [
+    "guard interpreter startup before ENTRY",
+    "guard final receipt/ledger persistence and exit"
+  ],
+  "whole_recorder_certified": false,
+  "input_sha256": {
+    "docs/realizability/evidence/r097/README.md": "baeb8e7a6472e483b574d8aeed57241b4dcce4c4b313b37268d87d7aeaa52a6c",
+    "docs/realizability/evidence/r097/attempt_01/bound.json": "a2b87b992131b74d30d394dbd1397c61498536b4fab03217daee5b2bb1999f9b",
+    "docs/realizability/evidence/r097/attempt_01/output/fixtures.json": "12288103aee9b74c0994bd9c6e9060c98239d574318dc9de61ee1192fd1cbf78",
+    "docs/realizability/evidence/r097/attempt_01/output/progress.json": "e081862fe1a84fdd81a300c7b7b6fb5d6c949e5eaab1d92bae42eb16d4b1cfe1",
+    "docs/realizability/evidence/r097/attempt_01/receipt.json": "fb82e07142eb848166a548132d5fd73d57e7a97683cb86086814ea83e530876f",
+    "docs/realizability/evidence/r097/attempt_01/snapshot/contract.md": "0cde7d67c23dbb3890e87735f1bf02bafe8362bd0a1822c9430dcdbf5a2d98fc",
+    "docs/realizability/evidence/r097/attempt_01/snapshot/handoff.md": "4876d5b4ba6f9abb0924221e39fdfc6cd0e1c908f1125e666c0b9c8966d9b031",
+    "docs/realizability/evidence/r097/attempt_01/snapshot/inventory.json": "b5e14bb7b322187ed4d08bc9dc9c1fcc8271fb9ee2e4a76e0822091065d1829d",
+    "docs/realizability/evidence/r097/attempt_01/snapshot/r096_review.md": "cc665ee2c0d4e2fc8b70295cc38461efcbca5c479fc9556e201905b1b0f640bc",
+    "docs/realizability/evidence/r097/attempt_01/snapshot/run.py": "daeccbf239e64635f752a3e0205c633f43664b9414c1cb569056c7f31b280d16",
+    "docs/realizability/evidence/r097/attempt_01/snapshot/source/certificate.py": "3a0fd7a80e38ee61ed0a1b3b9f9c6e90faf6cd9c2e1938c6cbd3fe7afb1462cb",
+    "docs/realizability/evidence/r097/attempt_01/snapshot/source/host_protocol.py": "4c739b0e7c4f5c7d6128c3f04b1f38f11b3277e9be6b06ac120dcf8e7e8cdef0",
+    "docs/realizability/evidence/r097/attempt_01/snapshot/source/integration.py": "6c0fda0db714a5b7fd93429e2569e4195575236d8d5ba3afe2086681a7f5ad9d",
+    "docs/realizability/evidence/r097/attempt_01/snapshot/source/primitives.py": "6d8754b31942812ebe44527e2c4ce71e37f5ca856ad5a3074f1a329ebbfdcfee",
+    "docs/realizability/evidence/r097/attempt_01/snapshot/source/r070_legacy.py": "dc5abb5cc087ee8c893f289694fa853772214275f7a020153fe66ccda04a7101",
+    "docs/realizability/evidence/r097/attempt_01/snapshot/source/validate.py": "45641d4dcf43b99a975b4a08917a67da8158a68a8e66225c6c83016793885c75",
+    "docs/realizability/evidence/r097/attempt_01/started.json": "5c3d4567f6ab4dd954c7cde3634635683ece3389eea8bd70180cc4a8aa994f1a",
+    "docs/realizability/evidence/r097/attempt_01/stderr.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "docs/realizability/evidence/r097/attempt_01/stdout.txt": "d003d0d41c79094b47bc832976cf7fba326508db3f450f682ef7d0463627e638",
+    "docs/realizability/evidence/r097/contract.md": "0cde7d67c23dbb3890e87735f1bf02bafe8362bd0a1822c9430dcdbf5a2d98fc",
+    "docs/realizability/evidence/r097/documentation_validation.json": "ca6cbefe411a54e95f4db927270c63e826cfc46c0bfd3b610b4373bfe87e9b6a",
+    "docs/realizability/evidence/r097/ledger.json": "b083695b2f552f1767f77be2623eed2d74d65d2a0952d6ac386f3b8f20433dea",
+    "docs/realizability/evidence/r097/run.py": "daeccbf239e64635f752a3e0205c633f43664b9414c1cb569056c7f31b280d16",
+    "docs/realizability/evidence/r097/source/certificate.py": "3a0fd7a80e38ee61ed0a1b3b9f9c6e90faf6cd9c2e1938c6cbd3fe7afb1462cb",
+    "docs/realizability/evidence/r097/source/host_protocol.py": "4c739b0e7c4f5c7d6128c3f04b1f38f11b3277e9be6b06ac120dcf8e7e8cdef0",
+    "docs/realizability/evidence/r097/source/integration.py": "6c0fda0db714a5b7fd93429e2569e4195575236d8d5ba3afe2086681a7f5ad9d",
+    "docs/realizability/evidence/r097/source/primitives.py": "6d8754b31942812ebe44527e2c4ce71e37f5ca856ad5a3074f1a329ebbfdcfee",
+    "docs/realizability/evidence/r097/source/r070_legacy.py": "dc5abb5cc087ee8c893f289694fa853772214275f7a020153fe66ccda04a7101",
+    "docs/realizability/evidence/r097/source/validate.py": "45641d4dcf43b99a975b4a08917a67da8158a68a8e66225c6c83016793885c75",
+    "docs/realizability/evidence/r097/validate_docs.py": "da88a2aca68d36b0543c73173e044e8c4e86ec3de18fb5f42eea9ff36839dc20"
+  },
+  "checker_sha256": "b8486325939d8d6b713e170692d77ef7db2831ba8de126afb1c167c48f374d09"
+}

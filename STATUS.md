@@ -1,10 +1,10 @@
 # Project status: physical preparation and a realistic movie
 
-Updated 2026-09-21. The [R097 completion-certificate repair](docs/realizability/evidence/r097/README.md)
-passed all nine new fixture groups. Acceptance and the outer observation boundary
-remain to be reviewed; live/whole-recorder certification stays false. Current
-ownership, delivery state and the single review task are in the
-[handoff](SESSION_HANDOFF.md#next-task).
+Updated 2026-09-21. The [R098 acceptance review](docs/realizability/B2_MONITOR_R097_REVIEW.md)
+accepts R097 J01–J03 and its fake receipt gate. The trusted enclosing adapter's
+authority/accounting contract remains unresolved; OS-source admission and
+live/whole-recorder certification remain false. The single next task is a
+documentation-only contract repair in the [handoff](SESSION_HANDOFF.md#next-task).
 A [performance and memory test plan for Mac and PC](docs/realizability/MAC_PC_PERFORMANCE_MEMORY_PLAN.md)
 is also ready as documentation; no benchmark has run.
 The [technical handoff](SESSION_HANDOFF.md#next-task) records the next task.
@@ -37,7 +37,9 @@ the calculations trustworthy; it is not yet evidence that the apparatus works.
   R085 verified the saved evidence but found residual ownership, cleanup timing,
   protocol and accounting gaps. R088 now passes 14 composed fixture groups on
   its first attempt. R096 reviewed all 14 saved functions; durable type binding,
-  monitor evidence, admitted deadlines and independent outer receipts still need repair.
+  monitor evidence, admitted deadlines and independent outer receipts required repair.
+  R097 added nine passing repair groups; R098 accepts J01–J03 within the fake
+  interface and leaves the trusted outer-adapter contract as the remaining task.
   Live operating-system adapter tests remain pending; further flow
   calculations remain disabled until the required safeguards are validated
   and launch is reviewed.
@@ -69,7 +71,7 @@ fluid calculation has not yet passed its physical accuracy checks.
 | Milestone | Position now | Work still needed |
 |---|---|---|
 | Explain the apparatus and intended motion | Illustrative movie pipeline implemented | Further visual refinement is possible; label the prescribed flow clearly. |
-| Trust the numerical boundary response | R088 passes composed fixtures; acceptance review pending, live adapters unvalidated and physical accuracy failed | Complete the [current handoff task](SESSION_HANDOFF.md#next-task), then review OS implementation and live validation before physical execution. |
+| Trust the numerical boundary response | R098 accepts fake J01–J03; outer-adapter contract unresolved, live adapters unvalidated and physical accuracy failed | Complete the [current handoff task](SESSION_HANDOFF.md#next-task), then review OS implementation and live validation before physical execution. |
 | Determine what exterior actuators can influence | Benchmark commands/features defined; full six-input response campaign has not begun | Validate responses, then assess independent influence, conditioning and required amplitudes/times. |
 | Determine what exterior sensors can distinguish | Basic sensor fixtures exist; B3 sensing study has not begun | Test pressure/PIV information with realistic noise, resolution and delay. |
 | Prepare the desired initial flow | Concept and candidate hardware only | Define acceptable initial-state errors; test a finite actuator layout and its physical limits. |
