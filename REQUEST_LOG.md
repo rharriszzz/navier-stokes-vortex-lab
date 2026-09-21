@@ -2899,3 +2899,9 @@ No DOLFINx/MPI import, JIT, mesh, factorization, PDE solve, physical child, rend
 
 
 **R081 final validation, 2026-09-21:** Nine documentation/integrity groups passed on the first check: all 935 pre-existing evidence files and 19 production/config pins are unchanged; both published log prefixes preserved; unique IDs through R081 and one STARTED/COMPLETED pair; one consistent handoff task; 175 local links/29 heading fragments; Bash syntax for five command blocks without execution; new Python syntax, finite JSON and audit/source bindings; ten-case budget arithmetic/default-deny contract; scoped whitespace. Exact results are in `docs/realizability/evidence/r081/documentation_validation.json`. Final staged whitespace and delivery outcome are checked/reported at publication. No live or physical validation is implied by these passes.
+
+## R082 — 2026-09-21 — Continue fixture-only monitor repairs
+
+**User request:** “conttinue”
+
+**Interpreted scope/status:** Invoke the repository Continue workflow. On PC/WSL `daisy`, receive the clean `main` checkout at the fetched upstream tip and complete the handoff-selected new fixture-only monitor repair bundle: fix F01–F11 plus durable checkpoints, exclusive all-attempt accounting and strict R070-copy integration. Use Python 3.12.13; preserve archived evidence, production hashes and historical budgets. Reserve 120 seconds total including outer startup/setup/final persistence and 256 MiB validator address space; refuse open/unknown/failed-resource attempts. Complete fixtures, manifests, ledger and documentation checks, then scoped commit/push. Stop on unexplained failure, resource stop or policy decision and before live OS operations, native helper build/startup, cgroup writes/signals, workloads, FEM/MPI/JIT or physical execution. R081 handoff chooses Luna/medium for settled implementation, followed by Astra/high review. Start publication pending.
