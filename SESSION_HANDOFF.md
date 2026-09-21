@@ -441,7 +441,8 @@ The autostash's R034–R037 request additions duplicate/restate the current
 R049–R052 history; its old inventory-pending handoff/status is superseded by
 R046 and later host/software records. The Mac inventory prompt remains in the
 repository. The crosswalk and removal are recorded in R057; no unique source,
-evidence, or prompt file was lost.
+evidence, or prompt file was lost. R057 was published as commit `63d6891` to
+`origin/main`; the stash list is empty.
 
 ## R053 Machine task allocation checkpoint
 
