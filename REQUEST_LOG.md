@@ -2599,7 +2599,9 @@ review recorded in `SESSION_HANDOFF.md`.
 
 **Interpreted scope:** Publish the prepared R059 pull report and R060 Mac/PC handoff workflow documentation to the current branch's configured upstream. Stage only these related request-log, handoff, and agent-instruction changes; preserve history and do not force-push.
 
-**Status:** In progress. User explicitly authorized committing and pushing the pending scoped changes.
+**Outcome, 2026-09-20:** Published the R059 pull report and R060 cross-computer handoff procedure. The procedure is now in `AGENTS.md`; `SESSION_HANDOFF.md` points to it and records the next Mac setup task. `git diff --cached --check` passed. No tests, rendering, package operations, or numerical runs were needed.
+
+**Delivery:** Commit `d2ba3a4` (`Document safe Mac and PC handoffs`) was pushed to `origin/main` without force. **Status:** Complete.
 
 ## R060 — 2026-09-20 — Establish a safe cross-computer handoff workflow
 

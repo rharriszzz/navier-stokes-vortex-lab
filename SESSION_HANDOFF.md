@@ -3,10 +3,10 @@
 Last updated: 2026-09-20. Latest request:
 [R061](REQUEST_LOG.md#r061--2026-09-20--publish-cross-computer-handoff-workflow)
 publishes the R059 pull report and R060 cross-computer workflow changes. The
-user authorized commit and push; the current worktree has those scoped
-documentation changes pending publication. After publishing, the next task is
-the MacPorts POV-Ray install and isolated movie smoke test, using GPT-5.6
-Luna/medium. Keep the separate PC scientific review at GPT-6 Astra/high.
+workflow is in `AGENTS.md` and was published in commit `d2ba3a4` to
+`origin/main`. The worktree is expected clean. Next task: MacPorts POV-Ray
+install and isolated movie smoke test, using GPT-5.6 Luna/medium. Keep the
+separate PC scientific review at GPT-6 Astra/high.
 Previous request:
 [R059](REQUEST_LOG.md#r059--2026-09-20--pull-and-report-incoming-changes)
 pulled `main` from `096f75a` to `979b174`; upstream added commits `5c4a5a5`
