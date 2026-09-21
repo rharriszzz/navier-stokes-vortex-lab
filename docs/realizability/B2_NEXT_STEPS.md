@@ -17,9 +17,11 @@ fake monitor checks are complete within their recorded scope. The
 [R074 adapter review](B2_MONITOR_ADAPTER_REVIEW.md) specifies the remaining
 monitor/integration work and records counterexamples;
 [R076](evidence/r076/README.md) completes the fixture implementation.
+[R081](B2_MONITOR_LIVE_VALIDATION_CONTRACT.md) reviews it, reproduces eleven
+additional gaps and freezes the future ten-case PC suite.
 The [Mac/PC performance and memory plan](MAC_PC_PERFORMANCE_MEMORY_PLAN.md)
 defines future comparisons. Live adapters remain unvalidated and physical
-execution remains disabled; the handoff selects the next source/contract review.
+execution remains disabled; the handoff selects new fixture-only repairs next.
 The following R033 reading sequence and older assignments are historical.
 
 Historical review sequence after R033: review the completed

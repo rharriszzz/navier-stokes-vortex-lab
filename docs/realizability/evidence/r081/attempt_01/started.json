@@ -1,0 +1,11 @@
+{
+  "argv": [
+    "docs/realizability/evidence/r081/audit.py",
+    "--output",
+    "docs/realizability/evidence/r081/attempt_01"
+  ],
+  "executable": "/tmp/navier-fenicsx/bin/python",
+  "scope": "source/fake counterexamples and read-only capability inspection",
+  "state": "STARTED",
+  "utc": "2026-09-21T14:39:07.555733+00:00"
+}

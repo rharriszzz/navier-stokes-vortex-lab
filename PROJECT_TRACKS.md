@@ -149,9 +149,12 @@ R073 added fake monitor checks. The
 remaining scheduling, membership, cleanup and report-acceptance gaps and
 specifies the adapters; [R076](docs/realizability/evidence/r076/README.md)
 implements the fixture-only contract. The
+[R081 review](docs/realizability/B2_MONITOR_LIVE_VALIDATION_CONTRACT.md)
+reproduces eleven remaining gaps and specifies future live tests; new
+fixture-only repairs come first. The
 [Mac/PC performance and memory plan](docs/realizability/MAC_PC_PERFORMANCE_MEMORY_PLAN.md)
 specifies future comparisons and their monitor prerequisites. Follow the single
-[current handoff task](SESSION_HANDOFF.md#next-task) for review and
+[current handoff task](SESSION_HANDOFF.md#next-task) for implementation and
 stops; none of these steps authorizes physical execution. The Mac setup and
 machine-handoff sequence remain in that handoff.
 The B2 gate remains failed and campaign readiness false. Use

@@ -1,27 +1,26 @@
 # Current session handoff
 
 Last updated: 2026-09-21 for
-[R077](REQUEST_LOG.md#r077--2026-09-21--plan-mac-and-pc-performance-and-memory-tests)
-and [R080](REQUEST_LOG.md#r080--2026-09-21--return-ownership-to-pc-after-planning).
-The [Mac/PC performance and memory test plan](docs/realizability/MAC_PC_PERFORMANCE_MEMORY_PLAN.md)
-is complete as documentation; no benchmark or live adapter ran. R076's
-[fixture implementation](docs/realizability/evidence/r076/README.md) is received
-in `f1c24c628f78f21fdffeb079cbe85aa7f58277b9` and must not be repeated.
+[R081](REQUEST_LOG.md#r081--2026-09-21--pull-receive-pc-ownership-and-review-live-adapter-contract).
+The [implementation review and live-validation contract](docs/realizability/B2_MONITOR_LIVE_VALIDATION_CONTRACT.md)
+is complete. Eleven additional R076 counterexamples were reproduced; the
+archives and disabled physical entry are preserved. The future PC suite is
+specified, not implemented or executed. Read-only host checks found a candidate
+systemd user delegation; this Python build exposes neither pidfd API.
 
-**Current owner: PC/WSL `daisy`, received under R081 after the clean pull of
-`e40ed7b`. R080's Mac release is reconciled with upstream delivery. R081 is
-performing R076's planned implementation review and bounded live-adapter
-validation contract.** The detailed [Next task](#next-task) bounds this work.
-Keep physical execution disabled and the 180 s / 1536 MiB limits unchanged.
+**PC/WSL `daisy` retains ownership. Next: GPT-5.6 Luna/medium, new fixture-only
+repair of the eleven findings, recorder/checkpoint gaps and copied-R070
+acceptance.** The detailed [Next task](#next-task) is authoritative. Stop before
+live adapter operations and retain the physical 180 s / 1536 MiB limits.
 
-The plan, setup-guide consolidation, README/status/index links and ownership
-records changed. Documentation-only checks passed using Mac Python 3.12.13:
-local links/fragments, shell syntax without execution, source option inspection,
-preserved log prefixes, request/next-task continuity and whitespace. See the
-[validation evidence](docs/realizability/evidence/r077/documentation_validation.json).
-No application tests, benchmarks, live monitoring, FEM/JIT, render or encoding
-ran. Mac memory/membership semantics and actual platform readiness remain open;
-the existing PC review is still next, with no new ignored inputs required.
+R081 received R080's Mac release through a clean fast-forward pull of `e40ed7b`
+and published STARTED as `c1e1a71`. Its audit/evidence and documentation checks
+are in [R081 evidence](docs/realizability/evidence/r081/README.md). No cgroup
+write, signal, Windows executable, live workload, benchmark, FEM/MPI/JIT,
+mesh/solve, render or encoder ran. The
+[Mac/PC plan](docs/realizability/MAC_PC_PERFORMANCE_MEMORY_PLAN.md) remains
+future work; Mac monitor semantics and actual platform operations need later
+validation. No ignored input/cache transfer is required.
 
 R072 adds a clean fast-forward-only pull at the start of every Continue session
 and the append-only [`WORK_SESSIONS.md`](WORK_SESSIONS.md) start/completion
@@ -52,7 +51,7 @@ JIT, assembly, factorization or PDE solve ran. B2 accuracy remains failed.
 
 Prefer **Python 3.12 on both machines**, retaining `environment-b1.yml`'s
 **3.12.13** pin. The PC executable `/tmp/navier-fenicsx/bin/python` was checked
-live again in R074; the Mac Conda interpreter was checked live for R077
+live again in R081; the Mac Conda interpreter was checked live for R077
 documentation validation: Python 3.12.13, native arm64, at
 `/Users/rharris/miniconda3/envs/navier-stokes-vortex-b1/bin/python`.
 Activate the intended environment and verify its version/path. The
@@ -61,24 +60,21 @@ No package installation, pin change or remote Mac check occurred.
 
 | Handoff field | Current value |
 |---|---|
-| Current task/owner | PC/WSL `daisy` received R080 release under R081; implementation/live-validation-contract review in progress |
+| Current task/owner | PC/WSL `daisy` retains ownership; R081 review complete, new fixture-only repairs next |
 | Observed outgoing identity | Mac `fire.lan`, Darwin/arm64, `/Users/rharris/git/navier-stokes-vortex-lab` |
 | Observed receiving identity | PC/WSL `daisy`, Linux/x86_64, `/home/rharris/git/navier-stokes-vortex-lab`, verified at R081 start |
 | Branch/upstream | `main` / `origin/main`; R081 clean fast-forward pull, empty stashes, HEAD equals fetched upstream |
 | Source/base commit | `e40ed7baa536fa607bf99405dbc50ef2782ffb07`, received Mac documentation delivery and R081 base |
-| Delivery state | R077–R080 received from upstream; R081 STARTED publication pending before substantive work |
-| Task processes | No benchmark, render, encoder, live adapter or background task started on Mac; documentation checks exit before delivery. R076 reports PC validator processes exited. Independent user-managed Mac POV-Ray build remains unverified and outside this task |
-| Required next inputs | R076 committed source/manifests/ledger, R074 specification, R067 resource policy, new comparison plan; no new ignored inputs or compiled-cache transfer required |
-| Consumed experiments | No experiments consumed by R077–R080; all prior ledgers unchanged. R076 fixture-only result remains historical; q64/q96 unused, R020 last physical attempt |
-| Next stop | PC source/contract review only, as previously planned; stop before live signaling, cgroup writes, Windows helper startup, workload, FEM/MPI/JIT or changing physical limits |
+| Delivery state | Mac delivery received; R081 STARTED published as `c1e1a71`; scoped completion prepared, actual delivery hash/outcome in final response/Git history |
+| Task processes | R081 audit and read-only inspections exited; no child workload or background task started. Independent user-managed Mac POV-Ray build remains unverified and outside this task |
+| Required next inputs | R081 findings, audit and contract; R076 source/manifests/ledger; R074/R067 policies. All committed; no ignored inputs or compiled-cache transfer required |
+| Consumed experiments | R081: one fake/source audit, 0.160194137 s script-entry-through-checks, 20.9141 MiB lifetime RSS, startup/final write excluded. Prior ledgers unchanged; q64/q96 unused, R020 last physical attempt |
+| Next stop | New fixture repair only, 120 s total reserved execution / 256 MiB validator address space; stop on unexplained failure/resource stop/policy decision or before live signaling, cgroup writes, helper startup, workload, FEM/MPI/JIT or physical-limit changes |
 
-R079 authorized Mac receipt after R078 pulled R076 completion. R080 now explicitly
-requests return to the PC at its previously planned step. Before PC work, check
-identity/status/stashes, make the mandatory clean fast-forward-only pull, review
-this delivery, confirm HEAD equals fetched upstream and acknowledge receipt.
-A dirty checkout or unpublished work must be reconciled before pulling or
-allocating an ID. This release applies to the repository task; it neither
-stops nor restarts the independent user-managed Mac software build.
+R079 authorized Mac receipt after R078 pulled R076 completion. R080 requested
+return to PC, and R081 completed receipt after the clean pull and ownership
+checks. Future Continue sessions still require that pull/status workflow.
+This transfer neither stops nor restarts the independent Mac software build.
 
 R073's provider-based [monitor contract](docs/realizability/evidence/r073/monitor_contract.md)
 passed 16/16 fake-reading checks in final attempt 4 using Python 3.12.13.
@@ -122,6 +118,12 @@ or helper, workload, FEM or physical attempt ran. R076 therefore does not
 certify live containment, host readings, timing, watchdog behavior or cleanup.
 No production solver, package or pin changed; physical limits and unused
 q64/q96 allowance remain unchanged.
+
+R081 qualifies R076's resource summary: its 0.5964585269 s / 23,801,856-byte
+maximum records validator-subprocess time/RSS, not whole-recorder overhead.
+Eleven additional input/cleanup/acceptance gaps and recorder/checkpoint gaps
+are documented in the new review. The old evidence remains unchanged; next
+repair those cases in a new version before live validation.
 
 Use [Next task](#next-task) as the single current execution task. All older
 next-task recommendations below are historical. The
@@ -676,38 +678,46 @@ native arm64 DOLFINx 0.10.0/Python 3.12.13 package metadata.
 
 ## Next task
 
-**Receive on PC/WSL `daisy`; use GPT-6 Astra with high reasoning for the
-implementation review and live-validation contract already selected by R076.**
-R080 explicitly returns ownership to this step after Mac documentation delivery.
-Review the [R076 source bundle and evidence](docs/realizability/evidence/r076/README.md),
-the [R074 host adapter specification](docs/realizability/B2_MONITOR_ADAPTER_REVIEW.md),
-and the R070/R073 preservation bindings. Resolve remaining policy or cleanup
-semantics. Specify bounded benign Linux capability checks and the missing native
-Windows memory collector/launcher/Job Object protocol, including independent
-watchdog and helper cleanup evidence. Produce executable validation commands,
-prerequisites, resource caps and refusal criteria; do not run them.
+**Stay on PC/WSL `daisy`; use GPT-5.6 Luna with medium reasoning for one
+new fixture-only monitor repair bundle.** R081's review is complete; do not
+repeat its audit or R076's archived validator. Read the
+[R081 repair contract](docs/realizability/B2_MONITOR_LIVE_VALIDATION_CONTRACT.md),
+[R081 evidence](docs/realizability/evidence/r081/README.md),
+[R076 inputs](docs/realizability/evidence/r076/README.md) and R074/R067 policy.
 
-Completion requires a reviewed interface/contract and explicit evidence mapping
-for each R074 live-validation row. Record which cgroup/pidfd and Windows helper
-capabilities can be established read-only and which remain subject to the later
-bounded live tests; do not certify unexecuted operations. The new
-[Mac/PC plan](docs/realizability/MAC_PC_PERFORMANCE_MEMORY_PLAN.md) supplies future
-workloads and proposed budgets; it does not validate them or require a Mac
-adapter implementation in this PC step. Record any implications for the plan.
+Repair F01–F11 in new copies: immediate incomplete-membership refusal,
+conservative freshness after provider work, all-path workload/helper finalization,
+strict cleanup/protocol/schema/count validation, root-absent membership and safe
+finite fallback reporting. Also repair durable checkpoints and exclusive
+all-attempt accounting, refusing open/unknown/failed-resource attempts. Keep
+R070 CLI/API and physical.py hard-disabled and use a distinct test sentinel.
+Preserve archived evidence, production hashes and all historical budgets.
 
-Preserve physical execution disabled and the 180 s / 1536 MiB limits. Stop
-before real signaling, cgroup writes, Windows helper startup, live workload,
-FEM/MPI/JIT, mesh/solve or any physical attempt. Recommend GPT-5.6 Luna/medium
-for one bounded implementation task after semantics and commands are stable;
-return to Astra/high if capabilities, cleanup, timing, resource semantics or
-numerical interpretation need a decision. The Mac adapter, frozen benchmark
-runner, assembly/observer reference and physical launch remain later work.
+Use Python 3.12.13. Reserve a new **120 s total execution ceiling**, including
+outer startup/setup/final persistence; validator-process wall must fit its
+remaining reserved share and **256 MiB address-space** cap. Measure outer and
+validator intervals separately, preserving failures and source versions.
+No live-suite time is consumed by these fake checks. Completion requires the
+new source, passing regression/boundary/refusal fixtures, manifests, ledger,
+documentation checks and scoped publication. Stop on unexplained failure,
+resource stop or needed policy change, and before live OS operations, native
+helper build/startup, cgroup writes, signals, workload, FEM/MPI/JIT or physical
+execution. Keep the physical 180 s / 1536 MiB limits and q64/q96 allowance.
+
+Then recommend **GPT-6 Astra/high** to review repairs and bound the missing
+native/Linux harness implementation; recommend Astra earlier if containment,
+cleanup, timing, accounting or numerical interpretation needs a decision.
+The future ten-case PC suite is frozen in
+[live_suite.json](docs/realizability/evidence/r081/live_suite.json), but its
+runner/native helper are not implemented and no live test is authorized by
+this next step. The Mac adapter, benchmark runner, observer/assembly reference
+and physical launch remain later work.
 
 Both choices are available in this session's catalog; official
-[Astra](https://developers.openai.com/api/docs/models/gpt-6-astra) and
-[Luna](https://developers.openai.com/api/docs/models/gpt-5.6-luna) effort support
-was checked on 2026-09-21. No model switch, delegated session or automation
-occurred. After receiving this delivery, **next prompt on PC: Continue.**
+[Luna](https://developers.openai.com/api/docs/models/gpt-5.6-luna) and
+[Astra](https://developers.openai.com/api/docs/models/gpt-6-astra) effort support
+was rechecked on 2026-09-21 using OpenAI Docs. No model switch, delegated session
+or automation occurred. **Next prompt: Continue.**
 
 ## Deferred Mac setup check
 

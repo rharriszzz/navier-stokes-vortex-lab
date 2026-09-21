@@ -1,0 +1,60 @@
+{
+  "base": "e40ed7baa536fa607bf99405dbc50ef2782ffb07",
+  "checks": [
+    {
+      "files": 935,
+      "name": "historical evidence byte preservation"
+    },
+    {
+      "files": 19,
+      "name": "production source/config pins unchanged"
+    },
+    {
+      "max_request": 81,
+      "name": "append-only log prefixes, unique IDs, R081 lifecycle"
+    },
+    {
+      "name": "handoff opening and next task agree"
+    },
+    {
+      "fragments": 29,
+      "links": 175,
+      "name": "local links/fragments and shell syntax only",
+      "shell_blocks_not_executed": 5
+    },
+    {
+      "json_files": 5,
+      "name": "finite evidence JSON and Python syntax"
+    },
+    {
+      "bindings": 61,
+      "name": "audit source binding and 61 R076 source bindings"
+    },
+    {
+      "name": "future ten-case contract arithmetic and disabled execution"
+    },
+    {
+      "name": "scoped changes and whitespace"
+    }
+  ],
+  "checks_passed": 9,
+  "executable": "/tmp/navier-fenicsx/bin/python",
+  "python": "3.12.13",
+  "schema": 1,
+  "skips": [
+    "future command execution",
+    "live Linux/Windows adapter workloads",
+    "FEM/MPI/JIT",
+    "application/render/encoder tests"
+  ],
+  "source_and_contract_sha256": {
+    "audit.py": "2ca5fbb7abc5d46951d0131b7d76f17ffeebb4fbd3d6137da64e1f9f1dfe9968",
+    "check_documentation.py": "97e4f37f3009a484f5c1a27cd17c8f005a73d62ce7cc18a3b4821e2e072ffd61",
+    "delegation_candidates.json": "ff879d6fcf0d84c4b35020cead778a3c0c15c4bd11d5c2288cc853ee73d4d51b",
+    "host_readonly_capabilities.json": "850a455abca6a9360bd8923da8fee7440d6c9d4846756a99e2f66824129127b0",
+    "live_suite.json": "d040accdcb43b42edfa7de3931c33642751f51b14f3ed6c16759c1ff774625c4"
+  },
+  "start_commit": "c1e1a71",
+  "status": "passed",
+  "utc": "2026-09-21T14:50:46.220256+00:00"
+}

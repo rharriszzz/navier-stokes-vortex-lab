@@ -17,6 +17,15 @@ installation and movie-readiness instructions. The
 [current handoff](../../SESSION_HANDOFF.md#next-task) is the single next task;
 the stages below are a roadmap, not an instruction to launch them all.
 
+R081 completed the PC source review and froze the
+[ten-case PC live-validation contract](B2_MONITOR_LIVE_VALIDATION_CONTRACT.md),
+including 180 s cumulative / 512 MiB workload RSS, separate outer/native
+backstops, calibration tolerances and commands for a future harness. It also
+reproduced eleven remaining fixture gaps, so repairs must precede live work.
+Its read-only delegation metadata is not tested containment. The new contract
+refines section 5 for PC only; Mac membership/memory decisions and live tests
+remain unvalidated. No comparison budget or physical limit changes.
+
 ## 1. Sequence and readiness gates
 
 | Stage | Work on each machine | Completion evidence / stop |
@@ -314,16 +323,12 @@ unchanged by this plan.
 
 ## 8. Next bounded task and model handoff
 
-Under R080, return ownership to **PC/WSL `daisy`** after publishing this plan.
-Use **GPT-6 Astra/high** for the step R076 already selected: review its fixture
-implementation and freeze the bounded Linux/WSL and Windows live-adapter
-validation contract, including exact benign commands, evidence mapping,
-independent watchdog, cap accounting and remaining native Windows helper work.
-Review source and read-only capability evidence only; record untested
-capabilities explicitly. Stop before live workloads, cgroup writes, signals,
-Windows helper startup, FEM/JIT or benchmarks. Mac memory/membership decisions
-and the rest of Stage A remain later, separately bounded tasks. This preserves
-the planned PC step rather than starting the benchmark roadmap in this turn.
+R080 returned ownership to **PC/WSL `daisy`**; R081 received the delivery and
+completed the source review and bounded PC contract. The single
+[handoff task](../../SESSION_HANDOFF.md#next-task) now selects a new fixture-only
+repair bundle before native/Linux harness implementation or live execution.
+Mac memory/membership decisions and the rest of Stage A remain later,
+separately bounded tasks. Do not repeat R081 or start benchmarks from this plan.
 
 After those decisions are settled, recommend **GPT-5.6 Luna/medium** for one
 bounded implementation task with fixtures and unchanged acceptance rules;

@@ -17,9 +17,11 @@ fake checks establish
 the cases they tested, but do not establish an executable sampling schedule,
 complete process coverage or confirmed cleanup. R076 used a new versioned copy
 and preserved the R033/R070/R073 sources, reports and ledgers.
-The original implementation task is complete; the current
-[next task](../../SESSION_HANDOFF.md#next-task) reviews the fixture bundle and
-freezes a bounded live-validation contract. Windows collection, live validation
+The original implementation and subsequent
+[R081 review](B2_MONITOR_LIVE_VALIDATION_CONTRACT.md) are complete. R081 found
+eleven further counterexamples and froze the future live-validation contract;
+the current [next task](../../SESSION_HANDOFF.md#next-task) repairs those cases
+in a new fixture-only bundle. Windows collection, live validation
 and physical launch remain separate obligations specified below.
 
 No numerical method, boundary condition, observer, solver, package pin or
@@ -288,10 +290,12 @@ and default-deny integration checks on a new R070 copy. The prescribed
 startup/import/reporting, and failed attempts were preserved. Live adapters,
 FEM and physical execution remain unvalidated.
 
-After successful mechanical implementation, the task is for **GPT-6 Astra/high**
-to review the code and freeze a bounded live-adapter validation contract,
-including the remaining native Windows collector implementation and actual
-host capabilities. Remain with Astra if containment, timing, cleanup or
+That **GPT-6 Astra/high** review completed as R081; its
+[contract](B2_MONITOR_LIVE_VALIDATION_CONTRACT.md) supersedes this historical
+next-task recommendation. It qualifies R076's recorded time/RSS as validator
+subprocess measurements, identifies remaining fixture/recorder gaps, and maps
+future native/Linux cases without running them. Follow the single handoff task.
+Use Astra if containment, timing, cleanup or
 measurement semantics need a new decision; do not turn uncertain behavior into
 permissive fallbacks. Official OpenAI model pages were rechecked on
 2026-09-21; this is a recommendation only, not a model switch.

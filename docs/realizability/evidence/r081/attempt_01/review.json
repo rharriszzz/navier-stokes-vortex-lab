@@ -1,0 +1,212 @@
+{
+  "audit_source_sha256": "2ca5fbb7abc5d46951d0131b7d76f17ffeebb4fbd3d6137da64e1f9f1dfe9968",
+  "capabilities": {
+    "cgroup2_mounts": [
+      "739 738 0:25 / /sys/fs/cgroup ro,nosuid,nodev,noexec,relatime master:23 - cgroup2 cgroup2 rw,nsdelegate"
+    ],
+    "cgroup_access_metadata": [
+      {
+        "access_read": true,
+        "access_write": false,
+        "gid": 65534,
+        "mode": "0o555",
+        "path": "/sys/fs/cgroup",
+        "uid": 65534
+      },
+      {
+        "access_read": true,
+        "access_write": false,
+        "gid": 65534,
+        "mode": "0o644",
+        "path": "/sys/fs/cgroup/cgroup.procs",
+        "uid": 65534
+      },
+      {
+        "error": "[Errno 2] No such file or directory: '/sys/fs/cgroup/cgroup.events'",
+        "path": "/sys/fs/cgroup/cgroup.events"
+      },
+      {
+        "error": "[Errno 2] No such file or directory: '/sys/fs/cgroup/cgroup.kill'",
+        "path": "/sys/fs/cgroup/cgroup.kill"
+      },
+      {
+        "access_read": true,
+        "access_write": false,
+        "gid": 65534,
+        "mode": "0o444",
+        "path": "/sys/fs/cgroup/cgroup.controllers",
+        "uid": 65534
+      },
+      {
+        "access_read": true,
+        "access_write": false,
+        "gid": 65534,
+        "mode": "0o644",
+        "path": "/sys/fs/cgroup/cgroup.subtree_control",
+        "uid": 65534
+      }
+    ],
+    "cgroup_write_migration_kill": "not exercised; access metadata is not validation",
+    "checkout": "/home/rharris/git/navier-stokes-vortex-lab",
+    "executable": "/tmp/navier-fenicsx/bin/python",
+    "gid": 1000,
+    "guest_meminfo_bytes": {
+      "MemAvailable": 7166476288,
+      "MemTotal": 8175431680,
+      "SwapFree": 1950896128,
+      "SwapTotal": 2147483648
+    },
+    "hostname": "daisy",
+    "kernel": "6.18.33.2-microsoft-standard-WSL2",
+    "launch_readiness": false,
+    "machine": "x86_64",
+    "os": "Linux",
+    "page_size": 4096,
+    "pid1_comm": {
+      "error": null,
+      "value": "codex"
+    },
+    "pidfd": {
+      "os_pidfd_open": false,
+      "self_handle_open_close": "module 'os' has no attribute 'pidfd_open'",
+      "signal_pidfd_send_signal": false,
+      "signals_sent": 0
+    },
+    "python": "3.12.13 | packaged by conda-forge | (main, Mar  5 2026, 16:50:00) [GCC 14.3.0]",
+    "self_cgroup": {
+      "error": null,
+      "value": "0::/"
+    },
+    "tool_paths_only_no_launch": {
+      "csc.exe": null,
+      "dotnet": null,
+      "dotnet.exe": "/mnt/c/Program Files/dotnet/dotnet.exe",
+      "powershell.exe": "/mnt/c/Windows/System32/WindowsPowerShell/v1.0/powershell.exe",
+      "pwsh.exe": null,
+      "x86_64-w64-mingw32-gcc": null
+    },
+    "uid": 1000,
+    "utc": "2026-09-21T14:39:07.557972+00:00",
+    "windows_native_API_job_assignment_transport": "not exercised"
+  },
+  "counterexamples": [
+    {
+      "id": "F01",
+      "observed": {
+        "calls": {
+          "cleanup": 0,
+          "host": 1,
+          "tree": 2
+        },
+        "incomplete_membership_then_completion": "completed"
+      },
+      "status": "reproduced"
+    },
+    {
+      "id": "F02",
+      "observed": {
+        "calls": {
+          "cleanup": 0,
+          "host": 1,
+          "tree": 1
+        },
+        "cleanup_confirmed_without_callback": true
+      },
+      "status": "reproduced"
+    },
+    {
+      "id": "F03",
+      "observed": {
+        "host_end": 10.0,
+        "stale_host_after_tree_read_status": "completed",
+        "tree_end": 11.1
+      },
+      "status": "reproduced"
+    },
+    {
+      "id": "F04",
+      "observed": {
+        "100_second_acquisition_launch": {
+          "guest_age_seconds": 0.0,
+          "guest_available_mib": 8192.0,
+          "host_age_seconds": 0.0,
+          "host_available_bytes": 8589934592,
+          "host_required_bytes": 1610612736,
+          "status": "passed"
+        }
+      },
+      "status": "reproduced"
+    },
+    {
+      "id": "F05",
+      "observed": {
+        "regressed_tree_timestamp_status": "completed"
+      },
+      "status": "reproduced"
+    },
+    {
+      "id": "F06",
+      "observed": {
+        "contradictory_cleanup_confirmed": true,
+        "numeric_flags_confirm_cleanup": {
+          "confirmed": true,
+          "errors": [],
+          "status": "cleanup_confirmed",
+          "survivors": []
+        }
+      },
+      "status": "reproduced"
+    },
+    {
+      "id": "F07",
+      "observed": {
+        "nonfinite_cleanup_escapes_report_boundary": "report is not finite JSON: Out of range float values are not JSON compliant: nan"
+      },
+      "status": "reproduced"
+    },
+    {
+      "id": "F08",
+      "observed": {
+        "unsolicited_second_host_reply_accepted": 2
+      },
+      "status": "reproduced"
+    },
+    {
+      "id": "F09",
+      "observed": {
+        "duplicate_status_and_API_error_accepted": "ok"
+      },
+      "status": "reproduced"
+    },
+    {
+      "id": "F10",
+      "observed": {
+        "contradictory_watch_and_missing_counts_status": "complete",
+        "counts": {
+          "correction_rhs": null,
+          "matrix_factorizations": null,
+          "matrix_solves": null,
+          "physical_meshes": null,
+          "primary_rhs": null,
+          "returned_primary_solves": null
+        }
+      },
+      "status": "reproduced"
+    },
+    {
+      "id": "F11",
+      "observed": {
+        "empty_membership_helper_refusal": "owned root identity is absent from membership snapshot"
+      },
+      "status": "reproduced"
+    }
+  ],
+  "default_deny": "enabled=True with injected launcher refused; no attempt claimed",
+  "measurement_limits": "duration excludes interpreter startup and final report write; RSS is one process, not a tree",
+  "physical_execution_enabled": false,
+  "preservation": "R070/R073 original copies match archives; R076 manifest verified",
+  "process_lifetime_peak_rss_bytes": 21929984,
+  "script_entry_to_checks_seconds": 0.16019413698813878,
+  "source_bindings": 61,
+  "status": "passed"
+}

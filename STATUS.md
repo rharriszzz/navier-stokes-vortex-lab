@@ -1,8 +1,9 @@
 # Project status: physical preparation and a realistic movie
 
 Updated 2026-09-21. The latest completed work is the
-[fixture-only monitor implementation](docs/realizability/evidence/r076/README.md)
-and a [performance and memory test plan for Mac and PC](docs/realizability/MAC_PC_PERFORMANCE_MEMORY_PLAN.md).
+[monitor implementation review and bounded test contract](docs/realizability/B2_MONITOR_LIVE_VALIDATION_CONTRACT.md).
+A [performance and memory test plan for Mac and PC](docs/realizability/MAC_PC_PERFORMANCE_MEMORY_PLAN.md)
+is also ready as documentation; no benchmark has run.
 The [technical handoff](SESSION_HANDOFF.md#next-task) records the next task.
 
 Our goal is to determine whether exterior actuators and sensors can prepare
@@ -22,9 +23,11 @@ the calculations trustworthy; it is not yet evidence that the apparatus works.
   complete.** Examples include accepting a success report despite an abnormal
   process exit, or declaring completion while supporting processes remain
   active. The required corrections are now specified, including checks that
-  work has actually stopped and memory readings are current. R076 implemented
-  the corrections in a disposable copy and passed 16 fixture/continuity groups.
-  Tests of actual operating-system adapters are still pending; further flow
+  work has actually stopped and memory readings are current. R076 passed 16
+  fixture/continuity groups; R081's deeper review reproduced eleven additional
+  cases needing repair, including stale memory readings and unconfirmed helper
+  cleanup. The next step repairs those cases in a new copy. Tests of actual
+  operating-system adapters are still pending; further flow
   calculations remain disabled until the required safeguards are validated
   and launch is reviewed.
 - **There is no new result yet on physical feasibility.** Previous experiment
@@ -55,7 +58,7 @@ fluid calculation has not yet passed its physical accuracy checks.
 | Milestone | Position now | Work still needed |
 |---|---|---|
 | Explain the apparatus and intended motion | Illustrative movie pipeline implemented | Further visual refinement is possible; label the prescribed flow clearly. |
-| Trust the numerical boundary response | R033 observer coverage passes; R076 monitor/integration fixtures pass; physical accuracy still fails | Review the implementation and validate live adapters, then decide separately on physical execution. |
+| Trust the numerical boundary response | R033 observer coverage passes; R081 identifies remaining monitor repairs; physical accuracy still fails | Repair fixture logic, validate live adapters, then decide separately on physical execution. |
 | Determine what exterior actuators can influence | Benchmark commands/features defined; full six-input response campaign has not begun | Validate responses, then assess independent influence, conditioning and required amplitudes/times. |
 | Determine what exterior sensors can distinguish | Basic sensor fixtures exist; B3 sensing study has not begun | Test pressure/PIV information with realistic noise, resolution and delay. |
 | Prepare the desired initial flow | Concept and candidate hardware only | Define acceptable initial-state errors; test a finite actuator layout and its physical limits. |
@@ -238,8 +241,13 @@ reproduces root/descendant completion, cleanup-exception, clock/scheduling/input
 and return-code acceptance gaps. It specifies Linux containment/RSS/cleanup
 and Windows host-pressure semantics. R073's ledger is preserved, with incomplete
 all-attempt timing/RSS evidence explicitly noted. R076 implemented the fixture
-contract and passed 16 check groups. Follow the handoff's implementation review
-and measurement-contract task; archived passes are not live adapter validation.
+contract and passed 16 check groups. R081's
+[review](docs/realizability/B2_MONITOR_LIVE_VALIDATION_CONTRACT.md) reproduced
+eleven remaining gaps and froze a ten-case future PC suite. It found a candidate
+user-owned cgroup delegation read-only, with operations still untested; this
+Python build lacks the pidfd wrappers. R076's timing covers its validator
+subprocesses, not all recorder overhead. Follow the handoff's new fixture-only
+repair task; archived passes are not live adapter validation.
 The later observer/assembly reference retains unchanged numerical screens;
 monitors must pass first. No comparative solver performance or physical
 execution is established by these reviews.
@@ -385,8 +393,8 @@ and comparison screens, with no solve benchmark or host winner inferred.
 
 R065 retained PC ownership historically; R079 transferred it to Mac
 for this documentation task after receipt of R076's published completion.
-R080 returns ownership to PC after publication to resume its planned review.
-R067/R070/R073/R074/R076 are complete within their recorded scope; live
+R080 returned ownership to PC; R081 received the delivery and completed the review.
+R067/R070/R073/R074/R076/R081 are complete within their recorded scope; live
 validation remains ahead of a separately scoped reference. Follow the current
 handoff instead of replaying older tasks. Mac movie readiness and visualization
 benchmarks can be scheduled independently. The workload revision stays fixed

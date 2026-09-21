@@ -1,0 +1,89 @@
+{
+  "cgroup2_mounts": [
+    "122 113 0:25 / /sys/fs/cgroup rw,nosuid,nodev,noexec,relatime shared:23 - cgroup2 cgroup2 rw,nsdelegate"
+  ],
+  "cgroup_access_metadata": [
+    {
+      "access_read": true,
+      "access_write": false,
+      "gid": 0,
+      "mode": "0o555",
+      "path": "/sys/fs/cgroup",
+      "uid": 0
+    },
+    {
+      "access_read": true,
+      "access_write": false,
+      "gid": 0,
+      "mode": "0o644",
+      "path": "/sys/fs/cgroup/cgroup.procs",
+      "uid": 0
+    },
+    {
+      "error": "[Errno 2] No such file or directory: '/sys/fs/cgroup/cgroup.events'",
+      "path": "/sys/fs/cgroup/cgroup.events"
+    },
+    {
+      "error": "[Errno 2] No such file or directory: '/sys/fs/cgroup/cgroup.kill'",
+      "path": "/sys/fs/cgroup/cgroup.kill"
+    },
+    {
+      "access_read": true,
+      "access_write": false,
+      "gid": 0,
+      "mode": "0o444",
+      "path": "/sys/fs/cgroup/cgroup.controllers",
+      "uid": 0
+    },
+    {
+      "access_read": true,
+      "access_write": false,
+      "gid": 0,
+      "mode": "0o644",
+      "path": "/sys/fs/cgroup/cgroup.subtree_control",
+      "uid": 0
+    }
+  ],
+  "cgroup_write_migration_kill": "not exercised; access metadata is not validation",
+  "checkout": "/home/rharris/git/navier-stokes-vortex-lab",
+  "executable": "/tmp/navier-fenicsx/bin/python",
+  "gid": 1000,
+  "guest_meminfo_bytes": {
+    "MemAvailable": 7243005952,
+    "MemTotal": 8175431680,
+    "SwapFree": 1950896128,
+    "SwapTotal": 2147483648
+  },
+  "hostname": "daisy",
+  "kernel": "6.18.33.2-microsoft-standard-WSL2",
+  "launch_readiness": false,
+  "machine": "x86_64",
+  "os": "Linux",
+  "page_size": 4096,
+  "pid1_comm": {
+    "error": null,
+    "value": "systemd"
+  },
+  "pidfd": {
+    "os_pidfd_open": false,
+    "self_handle_open_close": "module 'os' has no attribute 'pidfd_open'",
+    "signal_pidfd_send_signal": false,
+    "signals_sent": 0
+  },
+  "python": "3.12.13 | packaged by conda-forge | (main, Mar  5 2026, 16:50:00) [GCC 14.3.0]",
+  "self_cgroup": {
+    "error": null,
+    "value": "0::/"
+  },
+  "tool_paths_only_no_launch": {
+    "csc.exe": null,
+    "dotnet": null,
+    "dotnet.exe": "/mnt/c/Program Files/dotnet/dotnet.exe",
+    "powershell.exe": "/mnt/c/Windows/System32/WindowsPowerShell/v1.0/powershell.exe",
+    "pwsh.exe": null,
+    "x86_64-w64-mingw32-gcc": null
+  },
+  "uid": 1000,
+  "utc": "2026-09-21T14:39:37.447132+00:00",
+  "windows_native_API_job_assignment_transport": "not exercised"
+}
