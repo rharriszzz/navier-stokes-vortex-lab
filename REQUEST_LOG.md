@@ -3068,3 +3068,121 @@ The prior session's “Worked for 12m 29s · done 3:55 PM” and `/status` are a
 **R088 final validation, 2026-09-21:** First documentation/integrity check passed: 1,398 baseline files preserved, including all 1,308 historical evidence files; both published log prefixes retained; 88 unique request IDs and one R088 STARTED/COMPLETED pair; one current acceptance-review task; 191 local links/25 heading fragments; 17 Python syntax files and 10 finite JSON files; all 16 snapshotted sources/inputs, output/receipt hashes, exact 14-function registry, one-attempt ledger arithmetic and the byte-identical copied legacy guard. Evidence: evidence/r088/documentation_validation.json. No fixture rerun or application/live check occurred. Final staged checks and scoped publication follow; delivery remains distinct from this prepared completion.
 
 **R088 staged whitespace qualification, 2026-09-21:** Full staged `git diff --cached --check` reported only an extra blank line at EOF in new `source/primitives.py` and its exact executed snapshot. Retained those bytes to preserve the successful attempt's source hashes rather than rewriting executed evidence or spending another attempt on formatting. This is a recorded whitespace exception, not a clean staged-whitespace claim; no trailing-space or conflict-marker finding. The checker records these two findings explicitly below. All other preservation/semantic checks remain passed.
+
+## R089 — 2026-09-21 — Record completion, token totals and new-session status
+
+**User request:** “please record this: /status” followed by the supplied status snapshot. Before any write, the user supplied the associated “Worked for” message, banner/token totals/resume output and the same `/status` snapshot again. This later message supplies context for the same recording request, not a Continue instruction or separate task.
+
+**Scope/status:** Record the supplied excerpts with old/new session attribution and account email redaction; update handoff continuity and stop after document validation. No commit or push requested. The interrupted initial turn performed read-only checks only; no pending command or partial write remains from those checks.
+
+**Startup:** PC/WSL `daisy`, Linux/x86_64, `/home/rharris/git/navier-stokes-vortex-lab`, matches retained owner. Clean `main` / `origin/main`, empty stashes; latest R088 lifecycle is completed and retains PC ownership. Local HEAD is `031312b` (R088 delivery commit); no fresh upstream fetch/pull was performed for this same-owner metadata request. No claim about another checkout's unpublished work or processes is made.
+
+**Supplied prior-session completion and `/new`-associated output:** Attribution follows the supplied order and resume ID: prior session “Record the worked-for message”, `01a0c58d-d88f-7520-9009-de5604d8b0ac`. Decorative borders omitted, wrapped resume ID joined; the excerpt does not show a literal `/new` command. Values are user-reported, not independently measured usage or billing.
+```text
+Worked for 21m 2s · done 4:23 PM
+
+>_ OpenAI Codex (v0.155.1)
+model:     gpt-6-astra high   /model to change
+directory: ~/git/navier-stokes-vortex-lab
+
+Tip: Paste an image with Ctrl+V to attach it to your next message.
+
+Token usage: total=179,963 input=147,187 (+ 2,904,448 cached) output=32,776 (reasoning 4,192)
+To continue this session, run codex resume, then select Record the worked-for message (01a0c58d-d88f-7520-9009-de5604d8b0ac)
+```
+
+**Supplied new-session `/status`:** Session `01a0c5a4-3806-7202-9bb4-e7ea99801d20`, distinct from the prior resume ID above. Both user messages contain the same status values; recorded once below. Decorative borders/progress bars omitted and account email redacted. Reset strings are copied literally; their timezone and current balances are not inferred.
+```text
+/status
+>_ OpenAI Codex (v0.155.1)
+Visit https://chatgpt.com/codex/settings/usage for up-to-date information on rate limits and credits
+Model: gpt-6-astra (reasoning high, summaries auto)
+Model provider: openai
+Directory: ~/git/navier-stokes-vortex-lab
+Permissions: Workspace (Ask for approval)
+Agents.md: AGENTS.md
+Account: [REDACTED account email] (Plus)
+Collaboration mode: Default
+Session: 01a0c5a4-3806-7202-9bb4-e7ea99801d20
+5h limit: 0% left (resets 20:43)
+Weekly limit: 7% left (resets 02:04 on 27 Sep)
+Credits: 334 credits
+Luna Reserve Weekly limit: 1% left (resets 18:03 on 26 Sep)
+```
+
+The completion line, `/new`-associated output and new-session `/status` are now supplied. The full prior final answer, a literal `/new` command, and new-session context-window/thread-name fields were not supplied; none is invented. No private session file or live account data was accessed. Earlier missing-excerpt statements remain historical.
+
+**R089 outcome/validation, 2026-09-21:** Recording complete in REQUEST_LOG.md and SESSION_HANDOFF.md. Python 3.12.13 at `/tmp/navier-fenicsx/bin/python` verified append-only log history, 89 unique request IDs, account redaction, both session identities, supplied token/credit values, unchanged Next task and exact two-file scope; `git diff --check` passed. Application/fixture/research checks skipped for this metadata-only request. Evidence is the excerpts above and scoped document diff; no separate artifact needed. No unresolved recording decision. PC retains ownership; no workload or lifecycle started. Existing R088 acceptance review remains next, with its recorded checks/stops; it is not launched here. Changes remain local and uncommitted, with publication pending user authorization. Stop after final scoped whitespace/status checks.
+
+## R090 — 2026-09-21 — Summarize usage depletion and compare reset with Pro
+
+**User request:** “before continuing, please summarize the recent /status reports, and comment on how rapidly this work used up my 5h limit.  should I use a reset, or upgrade to pro?”
+
+**Scope/status:** In progress: compare supplied snapshots and session totals, distinguish observed depletion from inferred attribution, and check official OpenAI guidance on resets, credits and Pro before recommending a spending choice. Clarify the possible meanings of reset without inferring account-specific offers. Research execution remains paused at the existing handoff; this is not Continue and authorizes no commit, push or plan purchase. Same PC owner and known uncommitted R089 metadata preserved; no synchronization over those edits. Stop after recording the advice and document checks.
+
+**R090 findings/advice, 2026-09-21:** The three supplied snapshots associated with completion labels 12:12 PM, 3:55 PM and 4:23 PM show 5h remaining 100% → 53% → 0%; weekly 22% → 15% → 7%; credits 373 → 373 → 334; Luna reserve 1% throughout. Completion labels are not independently timestamped status captures. The earlier 5h reset is 20:34; the latter two both show 20:43, making the latter pair the clearest comparison. Approximately 53 percentage points disappeared across 28 minutes between the latter completion labels, roughly 1.89 points/minute, plus eight weekly points and 39 credits. This is approximate account-wide net depletion, not a measured task-only billing rate or a reliable forecast. Latest session reported 179,963 input/output tokens plus 2,904,448 cached input tokens; the separate 21m 2s worked-for duration is not the status-to-status interval. Repeated context/tool/source processing and Astra/high are plausible contributors; exact attribution, fast-mode activation and dollar cost are unverified. Five hours denotes an allowance window, not five guaranteed hours of active agent work.
+
+Recommendation: use an already-earned eligible reset first for an immediate one-off continuation, or wait for the displayed automatic reset if convenient. With weekly remaining only 7%, check which windows a banked reset actually replenishes; do not assume it restores weekly or Luna reserve. `/new` starts another conversation and is not an account-quota reset, consistent with the supplied new-session snapshot still showing 0%. For recurring work at this intensity, Pro is reasonable; official pricing offers 5x/20x usage, starting at $100/month, but no unlimited Codex claim or account-specific checkout terms are inferred. Available credits can bridge occasional overage. Preserve Astra/high for the pending acceptance decision; use available GPT-5.6 Luna/medium for later settled metadata/documentation work with scoped diff/redaction/link checks, stopping after that task and recommending Astra/high again for contract/scientific ambiguity. This is advice only; no model, speed, subscription, reset or credit setting changed. Reduce repeated broad history reads and verbose bookkeeping before buying capacity; no repository policy change made.
+
+**R090 validation, 2026-09-21:** `git diff --check` passed; Python checked preserved committed log prefix, 90 unique IDs and unchanged research Next task. Earlier local R089 records remain present. No numerical/application test was needed.
+
+**Sources/checks/outcome:** OpenAI Docs skill used. Opened official [pricing and usage guidance](https://learn.chatgpt.com/docs/pricing), [earned-reset documentation](https://learn.chatgpt.com/docs/app-server#8-earned-rate-limit-resets-chatgpt), [developer commands](https://learn.chatgpt.com/docs/developer-commands?surface=cli) and [Astra model page](https://developers.openai.com/api/docs/models/gpt-6-astra). Current source confirms usage varies with model/context/reasoning/tool use/caching; Astra Fast consumes more allowance, but supplied snapshots do not establish its use. Arithmetic checked with Python 3.12.13. Changed only REQUEST_LOG.md and SESSION_HANDOFF.md, preserving R089 additions; final whitespace/history/ID checks follow. No application test, fixture replay, research workload, private-session/account access, purchase, reset redemption, commit or push. Evidence is the supplied snapshots and cited sources. Advice complete; account-specific reset eligibility/coverage and upgrade checkout terms remain unverified. PC retains ownership and the existing Next task/checks/stops; wait for the user's decision before research continuation.
+
+## R091 — 2026-09-21 — Clarify available full usage resets
+
+**User-supplied clarification:**
+```text
+Usage limit resets
+Use a reset to restore your 5-hour limit, weekly limit, or both.
+
+Full reset (Weekly + 5 hr)
+Expires Oct 3, 9:07 PM
+
+Use reset
+Full reset (Weekly + 5 hr)
+Expires Oct 4, 6:45 PM
+
+Use reset
+```
+
+**Scope/outcome:** Record the supplied account UI text and refine R090's advice. The two offers explicitly cover weekly plus five-hour limits, resolving that scope uncertainty. Expiry strings are preserved literally without inferred year/timezone. Recommend using the earlier-expiring full reset (Oct 3, 9:07 PM) when ready to resume, saving the Oct 4 reset, then checking `/status`. Defer a Pro purchase while evaluating work after the reset; consider Pro later if frequent heavy use still makes limits disruptive. The text does not separately establish Luna Reserve coverage. No redemption is requested or performed, and no refreshed balance is inferred.
+
+**Checks/files/stop:** Same-owner ongoing session; Git shows only the known REQUEST_LOG.md and SESSION_HANDOFF.md edits, which are preserved. Changed those two documents only; scoped whitespace check follows, application checks unnecessary. Evidence is the supplied UI excerpt above. No additional account access, research execution, lifecycle, model switch, commit or push. PC retains ownership; research Next task and its checks/stops unchanged. Metadata remains local and publication pending. Stop after advice; next user action is to redeem the chosen reset and supply fresh `/status` before deciding to continue.
+
+## R092 — 2026-09-21 — Plan lower-overhead workflow for Luna
+
+**User request:** “Plan a way to lower overhead, please; we can leave it to Luna to implement.  I did a usage limit reset just now.”
+
+**Scope/status:** In progress: produce a concrete overhead-reduction plan and bounded GPT-5.6 Luna/medium implementation handoff, preserving scientific safeguards, machine ownership and request/publication history. Record the reset as user-reported; no new balances or Luna Reserve restoration inferred. Planning only: no implementation, delegation, research execution, commit or push requested. Same-owner session with known R089–R091 local metadata preserved. Stop after reviewable plan, consistent next-task pointers and documentation checks.
+
+**R092 supplied post-reset status, 2026-09-21:** Context for the same request; borders/bars omitted, account email redacted. This later supplied snapshot resolves the missing refreshed balances; it is not independent account verification. Reset strings are literal. Credits fell by 51 since the previous 334 snapshot; the excerpts do not establish a reset fee or task-level attribution. Luna Reserve remains at 1%.
+```text
+>_ OpenAI Codex (v0.155.1)
+Visit https://chatgpt.com/codex/settings/usage for up-to-date information on rate limits and credits
+Model: gpt-6-astra (reasoning high, summaries auto)
+Model provider: openai
+Directory: ~/git/navier-stokes-vortex-lab
+Permissions: Workspace (Ask for approval)
+Agents.md: AGENTS.md
+Account: [REDACTED account email] (Plus)
+Thread name: Record status
+Collaboration mode: Default
+Session: 01a0c5a4-3806-7202-9bb4-e7ea99801d20
+Context window: 67% left (94.4K used / 258K)
+5h limit: 100% left (resets 21:37)
+Weekly limit: 100% left (resets 16:37 on 28 Sep)
+Credits: 283 credits
+Luna Reserve Weekly limit: 1% left (resets 18:03 on 26 Sep)
+```
+
+**R092 outcome, 2026-09-21:** Wrote `docs/WORKFLOW_OVERHEAD_PLAN.md`: one Luna/medium documentation task targeting AGENTS/current handoff at most 2,800 words combined (baseline 10,604), with preserved snapshots, conditional full rules, narrow reads, concise future records, proportional checks and explicit obligation mapping. No helper framework or extra research validation cycle. Updated SESSION_HANDOFF.md opening/owner/Next task and STATUS.md, PROJECT_TRACKS.md, docs/realizability/B2_NEXT_STEPS.md pointers; preserved the entire deferred Astra/high R088 acceptance task verbatim. Captured the supplied post-reset status above. Current catalog confirms both recommended models/efforts; existing R090 official guidance remains applicable. No agent/model change or implementation occurred.
+
+**Checks/skips/delivery:** Python 3.12 verified preserved committed request prefix, 92 unique IDs, exact deferred task text, new plan existence, expected tracked scope, redaction and unchanged lifecycle file; scoped whitespace passed. New plan links resolve to the created file; existing Next task anchors remain. Initial inventory searches included absent optional pyproject.toml/scripts/tools paths and returned those missing-path diagnostics; no dependency or checker was required. A final append briefly inserted a blank line at an earlier matching status block; removed it immediately and rechecked append-only preservation. Application, fixture and numerical checks skipped for planning. Evidence: the plan, supplied status and scoped Markdown diff; no generated evidence bundle. Prior R089–R091 local edits preserved. Publication is not authorized in this turn; all six scoped documents (including the new plan) remain local, PC retains ownership. No process/background task launched. Next: select Luna/medium and Continue; reconcile pending documentation under that authorization, implement the plan, pass its checks, restore the deferred Astra review and stop. No unresolved scientific decision is introduced by the plan.
+
+## R093 — 2026-09-21 — Add and commit pending documentation
+
+**User request:** “Please add and commit.”
+
+**Scope/authorization:** Stage and commit the six pending R089–R092 documentation files, including status/reset records, overhead-reduction plan and consistent next-task pointers, plus this request and handoff delivery note. Commit only; no push or research/implementation execution. Same PC owner and main/origin/main; known pending edits reviewed and preserved, index initially empty.
+
+**Outcome/checks:** Commit prepared after scoped diff, whitespace, append-only history and file-inventory checks. Application tests unnecessary for documentation. Files: REQUEST_LOG.md, SESSION_HANDOFF.md, STATUS.md, PROJECT_TRACKS.md, docs/realizability/B2_NEXT_STEPS.md, docs/WORKFLOW_OVERHEAD_PLAN.md. Evidence is the scoped Git diff and R092 plan. PC retains ownership; no workload or lifecycle started. Next task remains Luna/medium implementation of the plan, with its checks/stops and subsequent Astra/high review. Actual commit hash is reported after Git completes; remote publication remains pending.

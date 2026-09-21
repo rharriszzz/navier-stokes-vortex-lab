@@ -1,6 +1,64 @@
 # Current session handoff
 
-Last updated: 2026-09-21 for R088. The user's reporting procedure is recorded:
+Last updated: 2026-09-21 for R093. The user authorized adding and committing
+the six pending R089–R092 documentation files and these coordination notes.
+Scoped commit is prepared; the actual hash follows in the final response.
+No push is authorized by R093; publication remains pending. PC ownership and
+the Luna implementation task remain unchanged. Document checks apply;
+application checks are unnecessary. Earlier pending/uncommitted statements
+below describe the planning checkpoint before this commit request.
+
+R092: The
+[overhead-reduction plan](docs/WORKFLOW_OVERHEAD_PLAN.md) is complete.
+**Next: GPT-5.6 Luna/medium implements that bounded documentation cleanup on
+PC/WSL `daisy`, then stops.** The [Next task](#next-task) is authoritative.
+The R088 Astra/high acceptance review is deferred intact below. No research
+execution, model switch or delegation occurred. The user reports using a reset;
+the supplied post-reset status shows main 5h/weekly 100%, credits 283 and
+Luna Reserve 1%. No account-side action was performed here.
+R089–R092 documentation remains local, uncommitted and not authorized for
+publication by this planning request. Reconcile it under a later Continue
+authorization before the clean-pull/new-start procedure. Plan validation uses
+scoped diff, links and continuity; application checks are unnecessary.
+
+The following R089–R091 usage notes are historical; R092 supersedes their
+next-action and reset-receipt statements.
+
+R091: The supplied UI lists two full resets
+(Weekly + 5 hr), expiring Oct 3, 9:07 PM and Oct 4, 6:45 PM. Recommend using
+the earlier-expiring reset when ready to resume, then checking `/status`;
+defer Pro while evaluating the renewed allowance. No reset was redeemed here;
+Luna Reserve coverage is not established. [R091](REQUEST_LOG.md#r091--2026-09-21--clarify-available-full-usage-resets)
+preserves the exact supplied text. R089–R091 metadata remains local and
+uncommitted; PC ownership and the research Next task remain unchanged.
+
+R090 usage/reset/Pro advice is recorded in
+[R090](REQUEST_LOG.md#r090--2026-09-21--summarize-usage-depletion-and-compare-reset-with-pro).
+The latter snapshots show 53% → 0% 5h remaining, 15% → 7% weekly and
+373 → 334 credits across roughly 28 minutes between associated completion
+labels; exact task-only billing is unverified. Recommend an eligible banked
+reset for immediate occasional use, checking affected windows; consider Pro
+for recurring heavy work. No reset, purchase, model switch or continuation
+was performed. Advice and document checks only; application checks skipped.
+Wait for the user's usage decision; PC ownership and the research Next task
+remain unchanged. R089/R090 metadata is local and uncommitted; reconcile it
+before the next Continue clean pull. Scoped whitespace/history checks apply.
+
+R089 recorded the supplied completion line
+(`21m 2s`, done `4:23 PM`) and 179,963 token total for prior session
+`01a0c58d-d88f-7520-9009-de5604d8b0ac`, plus the new-session `/status` for
+`01a0c5a4-3806-7202-9bb4-e7ea99801d20`, in
+[R089](REQUEST_LOG.md#r089--2026-09-21--record-completion-token-totals-and-new-session-status).
+Account email is redacted; values are user-reported snapshots. Only
+REQUEST_LOG.md and this handoff change; document preservation/redaction and
+scoped whitespace checks apply, with application checks skipped. This metadata
+request authorizes no publication or research execution. Local changes await
+deliberate reconciliation/publication before the next Continue clean pull.
+PC/WSL `daisy` retains ownership and the [Next task](#next-task) remains the
+R088 acceptance review; no new lifecycle or task process was started.
+
+R088 reporting history (superseded excerpt receipt status is retained here):
+The user's reporting procedure is recorded:
 final “worked for” message, then `/new`, then `/status`; preserve supplied text
 with old/new session attribution and account/secret redaction. The later `/new`
 excerpt is appended to R088: Astra/high, 167,449 total tokens, prior resume ID
@@ -10,8 +68,9 @@ Continue authorization, then the clean fast-forward pull was up to date.
 R088 STARTED was published as `ab41139` before substantive work.
 
 **R088's composed fixture implementation is complete; PC/WSL `daisy` retains
-ownership. Next: GPT-6 Astra/high acceptance review of the new composition and
-outer measurement boundary before OS source implementation.** The detailed
+ownership. Its deferred scientific next step is GPT-6 Astra/high acceptance
+review of the composition and outer measurement boundary after the R092
+documentation cleanup.** The detailed
 [Next task](#next-task) is authoritative. No live or physical task is authorized.
 
 The [R088 evidence](docs/realizability/evidence/r088/README.md) records 14/14
@@ -98,7 +157,7 @@ No package installation, pin change or remote Mac check occurred.
 
 | Handoff field | Current value |
 |---|---|
-| Current task/owner | PC/WSL `daisy` retains ownership; R088 fixture composition complete, Astra/high acceptance review next |
+| Current task/owner | PC/WSL `daisy` retains ownership; R092 overhead plan complete, Luna/medium documentation implementation next; R088 acceptance review deferred |
 | Observed outgoing identity | Mac `fire.lan`, Darwin/arm64, `/Users/rharris/git/navier-stokes-vortex-lab`; historical R080 release |
 | Observed receiving identity | PC/WSL `daisy`, Linux/x86_64, `/home/rharris/git/navier-stokes-vortex-lab`, verified at R088 start |
 | Branch/upstream | `main` / `origin/main`; clean fast-forward pull, empty stashes, HEAD equaled fetched upstream at start |
@@ -107,7 +166,7 @@ No package installation, pin change or remote Mac check occurred.
 | Task processes | R088 validator and fixture guard exited; no task background process or live workload remains. Independent Mac POV-Ray build remains unverified |
 | Required next inputs | R088 composed source/snapshot/results, R085 review and R083/R081 contracts. All committed text/source; no ignored input/cache transfer |
 | Consumed experiments | R088: one fixture attempt, 5.632544718/120 s charge, 23,941,120 B peak validator RSS; no reset/replay. R084: three fixture attempts, 15.690793 s charged / 120 s, maximum validator lifetime RSS 30,060,544 / 268,435,456 B; two non-resource assertions reconciled. Historical budgets unchanged; q64/q96 unused; R020 last physical attempt |
-| Next stop | Astra/high R088 acceptance/measurement-boundary review; stop at policy ambiguity and before native source/build/startup, live OS/cgroup/signal/workload, FEM or physical execution |
+| Next stop | Complete R092 documentation implementation and scoped checks, then stop; no research/fixture/live execution or rule relaxation |
 
 R079 authorized Mac receipt after R078 pulled R076 completion. R080 requested
 return to PC, and R081 completed receipt after the clean pull and ownership
@@ -716,6 +775,26 @@ no installation; R046 later verified imports and R058 confirmed the installed
 native arm64 DOLFINx 0.10.0/Python 3.12.13 package metadata.
 
 ## Next task
+
+Use **GPT-5.6 Luna/medium on PC/WSL `daisy`** to implement
+[R092's overhead-reduction plan](docs/WORKFLOW_OVERHEAD_PLAN.md).
+Complete its six documentation changes, preserve historical content and
+operative rules, and validate word counts, log prefixes, moved links, obligation
+mapping and scoped diff. Target AGENTS plus current handoff at most 2,800 words;
+preservation takes precedence if that target conflicts with a rule.
+
+First reconcile the known pending R089–R092 plan/metadata under the next user's
+Continue authorization; follow the plan's delivery section and existing clean
+pull/start-publication procedure. No publication is authorized by R092 alone.
+Do not create a helper framework, replay historical tests or run research.
+Stop at a semantic/ownership/publication conflict or after documentation
+delivery. Then restore the verbatim deferred review below as the single next
+task and recommend Astra/high for it. Both models/efforts remain available in
+the current tool catalog; no switch is implied. **Next prompt: Continue.**
+
+## Deferred R088 acceptance review
+
+The following task is preserved for after the R092 documentation implementation.
 
 **Stay on PC/WSL `daisy`; use GPT-6 Astra/high for one acceptance review of
 R088's composed fixture implementation and outer measurement boundary.** Read

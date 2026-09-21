@@ -29,7 +29,8 @@ recorded within the original 120 s allowance. The physical CLI/API remains
 disabled. Follow the single [handoff task](../../SESSION_HANDOFF.md#next-task):
 The [R085 review](B2_MONITOR_R084_REVIEW.md) is complete;
 [R088](evidence/r088/README.md) implements its composed fixture repair and passes
-14 groups in the first attempt. The handoff selects Astra/high acceptance and
+14 groups in the first attempt. The handoff selects R092's bounded Luna
+documentation cleanup first, then the deferred Astra/high acceptance and
 outer-measurement-boundary review before OS implementation. The live suite remains unimplemented
 and unauthorized. The
 [Mac/PC performance and memory plan](MAC_PC_PERFORMANCE_MEMORY_PLAN.md) defines
