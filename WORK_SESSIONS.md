@@ -65,6 +65,11 @@ Outcome: Mac/PC performance and memory plan written, related documentation recon
 Changed files: README.md, STATUS.md, PROJECT_TRACKS.md, REQUEST_LOG.md, SESSION_HANDOFF.md, WORK_SESSIONS.md, docs/realizability/B2_NEXT_STEPS.md, docs/realizability/MAC_INSTALL_AND_BENCHMARK_PLAN.md, new docs/realizability/MAC_PC_PERFORMANCE_MEMORY_PLAN.md and evidence/r077/documentation_validation.json. Checks: Python 3.12.13 documentation/link/fragment/Bash-syntax/log-prefix/source-option/continuity and whitespace checks passed, final scoped recheck before publication. Skips: all application tests, benchmarks, live adapters, FEM/MPI/JIT, render and encode. Evidence: docs/realizability/evidence/r077/documentation_validation.json. No workload or background task started; all documentation commands exit before delivery. Independent user-managed Mac POV-Ray build remains unverified and outside this task.
 Next task: PC receives clean main/origin/main delivery, acknowledges ownership and uses Astra/high for R076 source/interface and bounded benign live-validation-contract review; stop before live operations or physical execution. Luna/medium follows only for settled mechanical work. Source/base: f1c24c628f78f21fdffeb079cbe85aa7f58277b9; exact delivery hash/outcome is in the final response/Git history. Failed/uncertain push retains Mac responsibility and transfer pending; after successful delivery the Mac agent stops with no post-push edit. No ignored input/cache transfer or PC automation is required/started.
 
+## R108 — Mac checker portability test
+STARTED | 2026-09-21 22:48:17 UTC | Mac | fire.lan | Darwin/arm64
+Checkout: /Users/rharris/git/navier-stokes-vortex-lab | Branch/upstream: main/origin/main | Starting commit: 14bf4d67afa7e837e4ba5b5751028a5cebb4019e
+Task: Receive the R107 handoff and run the bounded Python 3.12 standard-library checker unit test on Mac; record interpreter/result and stop before trajectory integration, rendering, encoding, benchmarks, monitor work, FEM or physical execution.
+
 ## R081 — PC receipt and bounded live-adapter contract review
 STARTED | 2026-09-21 14:33:42 UTC | PC/WSL | daisy | Linux/x86_64
 Checkout: /home/rharris/git/navier-stokes-vortex-lab | Branch/upstream: main/origin/main | Starting commit: e40ed7baa536fa607bf99405dbc50ef2782ffb07

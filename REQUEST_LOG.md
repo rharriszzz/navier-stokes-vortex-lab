@@ -3506,3 +3506,13 @@ Luna Reserve Weekly limit: 100% left (resets 17:55 on 28 Sep)
 **Handoff outcome/files/next:** Record the supplied session metadata and release repository ownership to the Mac after this publication. Update `SESSION_HANDOFF.md` so the Mac is the receiving owner, with checkout/interpreter details to be recorded on receipt. The next task remains the bounded Python 3.12 checker test from the handoff, with its Mac interpreter path, result and any platform-specific error recorded; no cross-platform claim follows from PC evidence. The Mac must stop on unexpected resource exhaustion or a model/format decision. Retain Luna/medium for the routine check; recommend Astra/high only for a model/format decision or unexpected resource failure. No task process remains and no ignored input requires transfer.
 
 **R107 validation/delivery:** Documentation-only scope; verify append-only log history, current handoff owner/next-task pointers and `git diff --check`. No application or Mac test ran here. Commit and push are explicitly authorized by this request; after a successful push, do not edit the log again in this turn. The Mac is the next owner.
+
+## R108 — 2026-09-21 — Continue Mac checker portability test
+
+**User request:** “continue”
+
+**Interpreted scope:** Receive the repository on the Mac, verify the intended Python 3.12 interpreter, run the bounded standard-library trajectory-checker unit test, record the result and any platform-specific issue, then complete the lifecycle record and publish the scoped handoff. Do not run trajectory integration, rendering, encoding, benchmarks, OS helpers, monitor workloads, FEM, or physical work. Stop on unexpected resource exhaustion or a model/format decision.
+
+**Startup/reconciliation:** Mac `fire.lan`, Darwin/arm64, `/Users/rharris/git/navier-stokes-vortex-lab`; clean `main`/`origin/main` at `14bf4d67afa7e837e4ba5b5751028a5cebb4019e`, empty stash list, and HEAD equal to the freshly pulled upstream. R107 released ownership to this Mac; no task process or ignored transfer input is present. The current receiving checkout and interpreter path will be recorded after verification.
+
+**Status:** Started. The required lifecycle `STARTED` record is published before substantive work. Luna/medium remains suitable for this routine portability check; recommend Astra/high only if a model/format decision or unexpected resource failure occurs.
