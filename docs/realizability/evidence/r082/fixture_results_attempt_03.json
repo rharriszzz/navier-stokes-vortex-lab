@@ -1,0 +1,84 @@
+{
+  "attempt": 1,
+  "checks": [
+    {
+      "name": "independent launch gates/exact headroom/staleness",
+      "status": "passed"
+    },
+    {
+      "name": "explicit 50ms wait scheduling and clean root completion",
+      "status": "passed"
+    },
+    {
+      "name": "root exit with remaining descendants refuses completion",
+      "status": "passed"
+    },
+    {
+      "name": "cleanup exception preserves primary reason and partial report",
+      "status": "passed"
+    },
+    {
+      "name": "NaN/Boolean/invalid flags and finite configuration refused",
+      "status": "passed"
+    },
+    {
+      "name": "future/stale provider status failures are fail closed",
+      "status": "passed"
+    },
+    {
+      "name": "absolute deadline stops at equality",
+      "status": "passed"
+    },
+    {
+      "name": "RSS equality passes and host pressure below threshold stops",
+      "status": "passed"
+    },
+    {
+      "name": "partial reporting failure and finite JSON",
+      "status": "passed"
+    },
+    {
+      "name": "host baseline timeout and monotonic clock regression clean up",
+      "status": "passed"
+    },
+    {
+      "name": "Linux stat parsing, identity, membership, zero RSS and zombie",
+      "status": "passed"
+    },
+    {
+      "name": "Linux cleanup confirmed/failed/unknown classification",
+      "status": "passed"
+    },
+    {
+      "name": "exclusive cumulative ledger refuses open/unknown/failed/resource-stopped history",
+      "status": "passed"
+    },
+    {
+      "name": "host protocol sequence, nonce and bounded round trip",
+      "status": "passed"
+    },
+    {
+      "name": "host protocol malformed/duplicate/oversized/API failures",
+      "status": "passed"
+    },
+    {
+      "name": "R070 default deny, separate sentinel and strict completion binding",
+      "status": "passed"
+    },
+    {
+      "name": "handoff/log/link/source binding and resource-budget integrity",
+      "status": "passed"
+    }
+  ],
+  "checks_passed": 17,
+  "schema": 1,
+  "scope": "deterministic fixtures only; no live OS operations or workloads",
+  "source_sha256": {
+    "host_protocol.py": "42cb25126e332be42face91c27c3a55ee3ebab24fa69c83c2dd6d56fe8ffbebe",
+    "linux_adapter.py": "f458b50e341e2b26e55a804abd3d16fdb977e574581ae1a6c3a09c6636e928d6",
+    "monitor_core.py": "b6ed2288247e58e3669942a42ede40c004eb5d1a168c59dc5eddbdbab7ecc6b4",
+    "r073_original.py": "9759d6875fa91359a506cc1bd728c0b21bf44efa3080d3a0c5e0b52dcca21655",
+    "run_attempt.py": "fe670c058e9ab625e68d6d716fddb24716e593bf9650ea989ea3ba1126275a0e"
+  },
+  "status": "passed"
+}

@@ -1,0 +1,8 @@
+{
+  "files": {
+    "attempt_accounting.py": "4b372dcf21f285c3352197b8f3c4e9002a60581037f45ff368a654609d54f838",
+    "run_fixtures.py": "c11ae30a6c442068d9357d7d99debae109869c336b1449e59e94ce1ba63118ff"
+  },
+  "schema": 1,
+  "scope": "final outer recorder and attempt-accounting source only; not a per-attempt historical binding"
+}

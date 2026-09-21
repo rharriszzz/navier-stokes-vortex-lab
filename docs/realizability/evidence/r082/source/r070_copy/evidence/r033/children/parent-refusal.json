@@ -1,0 +1,13 @@
+{
+  "status": "passed",
+  "actual_parent_refusal": true,
+  "child_launched": false,
+  "counts": {
+    "physical_meshes": 0,
+    "primary_rhs": 0,
+    "returned_primary_solves": 0,
+    "correction_rhs": 0,
+    "matrix_factorizations": 0,
+    "matrix_solves": 0
+  }
+}

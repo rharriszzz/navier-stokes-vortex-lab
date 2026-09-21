@@ -19,9 +19,13 @@ monitor/integration work and records counterexamples;
 [R076](evidence/r076/README.md) completes the fixture implementation.
 [R081](B2_MONITOR_LIVE_VALIDATION_CONTRACT.md) reviews it, reproduces eleven
 additional gaps and freezes the future ten-case PC suite.
+R082 repairs those fixture findings in a new copy, preserves the failed
+assertion and explicit reconciliation, and leaves the physical entry disabled.
+The next task is the Astra/high source/provenance review and bounded missing-
+harness specification; the live suite remains unimplemented and unauthorized.
 The [Mac/PC performance and memory plan](MAC_PC_PERFORMANCE_MEMORY_PLAN.md)
 defines future comparisons. Live adapters remain unvalidated and physical
-execution remains disabled; the handoff selects new fixture-only repairs next.
+execution remains disabled; follow the current handoff's Astra/high review.
 The following R033 reading sequence and older assignments are historical.
 
 Historical review sequence after R033: review the completed

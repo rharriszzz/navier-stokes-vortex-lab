@@ -19,15 +19,17 @@ the calculations trustworthy; it is not yet evidence that the apparatus works.
 
 ## Recent results and their practical meaning
 
-- **The review found ways a failed or unfinished calculation could appear
+- **The reviews found ways a failed or unfinished calculation could appear
   complete.** Examples include accepting a success report despite an abnormal
   process exit, or declaring completion while supporting processes remain
   active. The required corrections are now specified, including checks that
   work has actually stopped and memory readings are current. R076 passed 16
   fixture/continuity groups; R081's deeper review reproduced eleven additional
   cases needing repair, including stale memory readings and unconfirmed helper
-  cleanup. The next step repairs those cases in a new copy. Tests of actual
-  operating-system adapters are still pending; further flow
+  cleanup. R082's new copy passes 17 fixture groups, with all three attempts and
+  one reconciled fixture-only assertion preserved. Astra/high source and
+  provenance review comes next. Tests of actual operating-system adapters are
+  still pending; further flow
   calculations remain disabled until the required safeguards are validated
   and launch is reviewed.
 - **There is no new result yet on physical feasibility.** Previous experiment
@@ -58,7 +60,7 @@ fluid calculation has not yet passed its physical accuracy checks.
 | Milestone | Position now | Work still needed |
 |---|---|---|
 | Explain the apparatus and intended motion | Illustrative movie pipeline implemented | Further visual refinement is possible; label the prescribed flow clearly. |
-| Trust the numerical boundary response | R033 observer coverage passes; R081 identifies remaining monitor repairs; physical accuracy still fails | Repair fixture logic, validate live adapters, then decide separately on physical execution. |
+| Trust the numerical boundary response | R033 observer coverage passes; R082 fixture repairs pass; physical accuracy still fails | Review repairs and provenance, scope the live harness, validate live adapters, then decide separately on physical execution. |
 | Determine what exterior actuators can influence | Benchmark commands/features defined; full six-input response campaign has not begun | Validate responses, then assess independent influence, conditioning and required amplitudes/times. |
 | Determine what exterior sensors can distinguish | Basic sensor fixtures exist; B3 sensing study has not begun | Test pressure/PIV information with realistic noise, resolution and delay. |
 | Prepare the desired initial flow | Concept and candidate hardware only | Define acceptable initial-state errors; test a finite actuator layout and its physical limits. |
@@ -246,8 +248,12 @@ contract and passed 16 check groups. R081's
 eleven remaining gaps and froze a ten-case future PC suite. It found a candidate
 user-owned cgroup delegation read-only, with operations still untested; this
 Python build lacks the pidfd wrappers. R076's timing covers its validator
-subprocesses, not all recorder overhead. Follow the handoff's new fixture-only
-repair task; archived passes are not live adapter validation.
+subprocesses, not all recorder overhead. R082's new copy passed 17 fixture
+groups; its explicit attempt-2 fixture reconciliation and outer-source hash
+limitation are documented in
+[R082 evidence](docs/realizability/evidence/r082/README.md). The next handoff
+task reviews those repairs and scopes the missing harness; archived or fake
+passes are not live adapter validation.
 The later observer/assembly reference retains unchanged numerical screens;
 monitors must pass first. No comparative solver performance or physical
 execution is established by these reviews.
@@ -394,7 +400,7 @@ and comparison screens, with no solve benchmark or host winner inferred.
 R065 retained PC ownership historically; R079 transferred it to Mac
 for this documentation task after receipt of R076's published completion.
 R080 returned ownership to PC; R081 received the delivery and completed the review.
-R067/R070/R073/R074/R076/R081 are complete within their recorded scope; live
+R067/R070/R073/R074/R076/R081/R082 are complete within their recorded scope; live
 validation remains ahead of a separately scoped reference. Follow the current
 handoff instead of replaying older tasks. Mac movie readiness and visualization
 benchmarks can be scheduled independently. The workload revision stays fixed

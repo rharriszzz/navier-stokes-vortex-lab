@@ -1,0 +1,43 @@
+{
+  "attempt_count": 3,
+  "checks": [
+    {
+      "name": "exclusive attempts, known-failure reconciliation and cumulative caps",
+      "status": "passed"
+    },
+    {
+      "name": "final source manifests and hard-disabled R070 physical entry",
+      "status": "passed"
+    },
+    {
+      "name": "17 final fixture groups and R076 archive source bindings",
+      "status": "passed"
+    },
+    {
+      "name": "request/lifecycle/handoff continuity and single next task",
+      "status": "passed"
+    },
+    {
+      "name": "local Markdown links (143)",
+      "status": "passed"
+    },
+    {
+      "name": "finite JSON evidence (43 files)",
+      "status": "passed"
+    },
+    {
+      "name": "tracked historical evidence archives unchanged",
+      "status": "passed"
+    }
+  ],
+  "checks_passed": 7,
+  "conservative_cumulative_seconds": 45.24748005397851,
+  "finite_json_files": 43,
+  "historical_archives_modified": false,
+  "local_links": 143,
+  "maximum_child_lifetime_rss_bytes": 24367104,
+  "schema": 1,
+  "scope": "documentation, ledger and source-integrity checks; no fixture rerun",
+  "status": "passed",
+  "validator_process_seconds": 0.19444608798949048
+}

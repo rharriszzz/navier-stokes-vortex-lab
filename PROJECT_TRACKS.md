@@ -150,8 +150,9 @@ remaining scheduling, membership, cleanup and report-acceptance gaps and
 specifies the adapters; [R076](docs/realizability/evidence/r076/README.md)
 implements the fixture-only contract. The
 [R081 review](docs/realizability/B2_MONITOR_LIVE_VALIDATION_CONTRACT.md)
-reproduces eleven remaining gaps and specifies future live tests; new
-fixture-only repairs come first. The
+reproduces eleven remaining gaps and specifies future live tests. R082 repairs
+those cases in a new fixture-only copy; GPT-6 Astra/high review and live-harness
+scope definition come next. The
 [Mac/PC performance and memory plan](docs/realizability/MAC_PC_PERFORMANCE_MEMORY_PLAN.md)
 specifies future comparisons and their monitor prerequisites. Follow the single
 [current handoff task](SESSION_HANDOFF.md#next-task) for implementation and
