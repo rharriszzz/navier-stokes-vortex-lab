@@ -1,14 +1,12 @@
 # Current session handoff
 
-Last updated 2026-09-21 for R101. PC/WSL `daisy` retains ownership.
-The [manager capability decision](docs/realizability/B2_MONITOR_MANAGER_CAPABILITY_DECISION.md)
-is complete: **unsupported under unchanged R099 requirements; OS-source
-admission remains refused.** Official APIs do not establish bounded E0
-reservation, complete E1 identity/arming or durable E8 terminal accounting for
-the selected existing user manager. The next task is user policy selection A/B/C,
-not another generic contract rewrite. Completion is prepared separately from
-final delivery. Supplied prior/new session excerpts are recorded with account
-redaction in [R101](REQUEST_LOG.md#r101--2026-09-21--continue-manager-capability-decision).
+Last updated 2026-09-21 for R105. PC/WSL `daisy` retains ownership.
+Practical supervision and Mac usability requirements are recorded in the
+[policy](docs/realizability/B2_MONITOR_PRACTICAL_SUPERVISION_POLICY.md).
+The small planning step is complete. Next: implement a **portable trajectory
+output checker** that catches bad saved frames before rendering. This is one
+useful increment, with no new supervision framework. R102–R105 documentation
+is prepared for the user's authorized commit/push; actual delivery follows Git.
 
 ## Owner and checkout
 
@@ -17,60 +15,83 @@ redaction in [R101](REQUEST_LOG.md#r101--2026-09-21--continue-manager-capability
 | Owner | PC/WSL `daisy`, Linux/x86_64 |
 | Checkout | `/home/rharris/git/navier-stokes-vortex-lab` |
 | Branch/upstream | `main` / `origin/main` |
-| Starting state | R100 metadata deliberately preserved/published as `c2d700d`; clean fast-forward synchronization confirmed that tip; R101 STARTED published as `4b6c4db`. |
+| Starting state | `3c213cc`; pending R102–R104 documentation preserved; empty stashes; R105 fetch confirms unchanged upstream. |
 | Other owner/process | No ownership switch indicated. Independent Mac POV-Ray build remains user-managed and unverified. |
 | Task processes | No fixture/workload or background process launched; no ignored transfer input. |
-| Delivery state | R101 documentation completion prepared; final commit/push outcome follows Git, no post-push log edit. |
+| Delivery state | R105 explicitly authorizes scoped commit/push of R102–R105 and the plan. Completion prepared separately from actual delivery; no post-push log edit. |
 
 ## Current result and limits
 
-The [API/obligation map](docs/realizability/B2_MONITOR_MANAGER_CAPABILITY_DECISION.md#concrete-api-and-obligation-map)
-checks reservation, timer phases, immutable held identity, independent exit,
-clock/commit bounds, journal synchronization and outside-unit resource scope.
-Service/job timers do not establish whole E0–E8 enforcement; sync acknowledgement
-does not establish a bounded immutable terminal transaction. Manager/bus/journal
-work outside the unit has no established per-invocation resource scope. Missing,
-blocked, dead, late or unpersisted facts remain partial/unknown. No alternative
-trusted helper or weakened accounting is assumed; no universal OS impossibility
-is claimed. Documentation was retrieved from official upstream sources, with no
-installed-version/configuration inspection.
+R103 removes recursive infrastructure certification while preserving process
+safeguards, observed accounting, cleanup and incomplete-result refusal. R104
+requires Mac usability, small increments tied to useful work, and deferral of
+optional platform/benchmark features. Ordinary disclosed OS trust is accepted.
+No live failure rate or Mac capability has been measured.
 
-Evidence: [R101](docs/realizability/evidence/r101/README.md).
-All historical contracts/evidence remain unchanged, including R097's fake J01–J04
-acceptance scope and 5.34962656602147/120 s historical charge with excluded guard
-startup/final persistence/exit and an unmeasured/unenforced five-second charge.
-Whole-recorder/live certification remains false. Live limits remain 180 s
-(30 + ten 12 s + 30), 5 active + 5 cleanup + 2 evidence per case, 768 MiB whole
+R105 source review found a useful, independent first increment:
+`make_trajectories.py` writes every frame but only checks finiteness of final
+in-memory coordinates. A separate reader can validate all saved frames before
+POV-Ray uses them. It needs no subprocess launcher, OS adapter, watchdog or
+R097 witness changes. Its claim is saved-data validity, never runtime/resource
+certification or physical correctness. The generator also deletes matching
+output files; the new checker must be read-only on its inputs.
+
+Historical scientific documents, monitor contracts, fixture evidence and budgets
+remain unchanged. Practical OS supervision remains deferred, not certified.
+The future PC monitor suite retains 180 s (30 + ten 12 s + 30), 768 MiB whole
 Linux unit/no swap/32 PIDs, 512 MiB sampled workload RSS and <=128 MiB native
 working set. Physical limits remain 180 s / 1536 MiB, q64/q96 unused, B2 accuracy
-failed. No fixture, native/live, FEM, rendering, encoding or physical work ran.
+failed. No trajectory, fixture, native/live, FEM, render or encode work ran here.
 
 ## Next task
 
-Stay on PC/WSL `daisy`; use **GPT-6 Astra/high** for **user policy selection
-A/B/C and recording its exact scope** against the
-[completed decision](docs/realizability/B2_MONITOR_MANAGER_CAPABILITY_DECISION.md#exact-policy-choice-for-user-review).
+Stay on PC/WSL `daisy`; use **GPT-5.6 Luna/medium** to implement the
+**portable trajectory output checker**. The useful outcome is a quick check of
+saved tracer files before spending time rendering them, usable by the same
+command on PC and Mac.
 
-- **A (recommended pending user decision):** Retain current whole E0–E8 requirements and hold OS-source/live admission closed; reopen only for a specifically evidenced alternative.
-- **B:** Explicitly narrow assurance to enforced task-process limits plus observed setup/finalization; preserve the 180 s success ceiling and unknown/late refusal, but relinquish independently enforced whole-transaction/bounded terminal-commit claims and disclose outside-unit infrastructure costs. Documentation-only policy revision first.
-- **C:** Authorize a documentation-only review of a named alternative authority under unchanged requirements; no assumed capability or installation. The user must name or authorize selection of that candidate.
+1. Add `check_trajectories.py`, `tests/test_check_trajectories.py` and a short
+   README usage example. Use Python 3.12 standard library only. Leave the
+   generator, renderer, encoders, realizability code and historical evidence intact.
+2. Read only the restricted include-file format emitted by `write_include`;
+   never execute POV-Ray text or use `eval`. Accept a directory plus explicit
+   expected frame/bead counts. Require exactly consecutive frame indices from 1,
+   required declarations once each, finite scalar/coordinate values, matching
+   bead counts and increasing simulation times. Check radius <=0.92 and
+   abs(z)<=0.98 with 1e-9 serialization tolerance. Report whether coordinates
+   change across frames, distinguishing one-frame input from motion evidence.
+3. Give a concise human summary and optional JSON report: pass/fail, checked
+   counts, extrema, motion observation and actionable filename/error details.
+   Return nonzero on invalid/incomplete input or failed report writing. Do not
+   modify input files or allow a report path to overwrite an input. Stream bounded
+   input parsing and reject oversized/malformed files with a clear error. This
+   report is not a run-time or scientific certificate.
+4. Test tiny temporary examples of valid generator-format output and missing,
+   truncated, duplicate-declaration, wrong-count, nonfinite, out-of-bounds and
+   non-increasing-time data. Check exact/tolerance bounds, source preservation,
+   report-path protection and CLI exit/JSON behavior. No trajectory integration,
+   renderer, benchmark, OS helper or FEM launch. Allow at most 60 s cumulative
+   deterministic checker tests; stop on unexpected resource exhaustion rather
+   than building a new test supervisor. Preserve failed-test diagnostics and
+   repair understood ordinary test/code errors within that bound.
+5. Completion: implemented command, meaningful tests passing, one README example,
+   preserved unrelated bytes and a short result. Do not add a framework or another
+   design contract. Prepare the same tiny test command for an early Mac check
+   after an explicit ownership handoff; do not claim Mac validation from PC tests.
+   After that check, return to validating actual trajectory output and a small
+   movie task under its own bounded execution scope.
 
-No policy change is selected. Do not infer B/C approval from a bare Continue.
-Completion: record the user's explicit choice, its exact claim/scope and one
-bounded subsequent task; check links, append-only logs, preserved archives and
-current pointers. If no choice is supplied, present these concrete options and
-stop dependent work. No new execution allowance, live inspection/mutation,
-adapter/native source, fixture execution, build/startup, helper/workload, FEM
-or physical work. Only a separately settled and reviewed boundary can permit
-an OS-source follow-up.
+This planned test allowance becomes active on the next Continue, not R105.
+Stop for a needed change to model bounds/format semantics or unexpected resource
+failure; refer those to Astra/high. Otherwise retain Luna/medium for the Mac
+checker test and mechanical follow-up, rechecking availability. Process/memory
+supervision, full platform parity, benchmark matrices and B2 numerical work are
+explicitly deferred. No physical-run admission follows from this checker.
 
-Retain Astra/high while policy semantics are unsettled. It is available in the
-session catalog; high effort rechecked using OpenAI Docs and the official
-[Astra page](https://developers.openai.com/api/docs/models/gpt-6-astra).
-Recommend a smaller model only for later mechanical work and recheck availability.
-No model switch, delegation or automation. Continue authorizes scoped lifecycle
-commit/push, not a policy change; no post-delivery log edit.
-**Next prompt: Continue — policy A, B, or C (with candidate).**
+Luna is available in this session's catalog; medium effort was rechecked through
+OpenAI Docs and the official [Luna page](https://developers.openai.com/api/docs/models/gpt-5.6-luna).
+No model switch, delegation or automation occurred. Continue authorizes the scoped
+session workflow and commit/push. **Next prompt: Continue.**
 
 ## Historical handoff anchors
 

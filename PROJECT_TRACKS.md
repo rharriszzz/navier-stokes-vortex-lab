@@ -170,9 +170,14 @@ implements new admission/receipt gates with nine passing fake groups. The
 the fake interface. The [R099 contract](docs/realizability/B2_MONITOR_TRUSTED_ADAPTER_CONTRACT.md)
 maps outer authority/accounting requirements. The
 [R101 capability decision](docs/realizability/B2_MONITOR_MANAGER_CAPABILITY_DECISION.md)
-finds the selected manager unsupported under unchanged requirements. The next
-handoff task is user policy selection A/B/C; no policy change is selected.
-No OS-source admission or live certification is implied. The
+finds the selected manager unsupported under the former strict requirements.
+The user now supports simplifying those requirements; the
+[R103 practical supervision policy](docs/realizability/B2_MONITOR_PRACTICAL_SUPERVISION_POLICY.md)
+keeps practical safeguards and observed accounting without recursive infrastructure
+certification. R105 completes planning and selects a portable trajectory output
+checker as the next handoff task, with an early Mac check. It validates saved
+visualization data without claiming runtime safety or physical correctness.
+Practical OS supervision is deferred. Mac support remains unverified. The
 [Mac/PC performance and memory plan](docs/realizability/MAC_PC_PERFORMANCE_MEMORY_PLAN.md)
 specifies future comparisons and their monitor prerequisites. Follow the single
 [current handoff task](SESSION_HANDOFF.md#next-task) for the task and

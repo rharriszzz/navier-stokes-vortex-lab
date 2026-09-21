@@ -37,9 +37,14 @@ accepts fake J01–J03 and the injected receipt checks, but requires a concrete
 trusted outer-adapter authority/accounting contract before OS-source admission.
 The [R099 contract](B2_MONITOR_TRUSTED_ADAPTER_CONTRACT.md) now specifies that
 boundary. The [R101 capability decision](B2_MONITOR_MANAGER_CAPABILITY_DECISION.md)
-finds the selected manager unsupported under unchanged requirements. The single
-handoff task is user policy selection A/B/C; no policy change is selected and
-live/whole-recorder certification remains false.
+finds the selected manager unsupported under the former strict requirements.
+The user now supports simplification. The
+[R103 practical supervision policy](B2_MONITOR_PRACTICAL_SUPERVISION_POLICY.md)
+keeps process safeguards and observed accounting while removing recursive
+infrastructure certification. R105 selects a portable trajectory output checker
+as the next handoff task, with an early Mac check. It checks saved visualization
+data; it does not certify runtime safety or physical correctness. Practical OS
+supervision and benchmarking remain deferred. Mac support is unverified.
 The live suite remains unimplemented
 and unauthorized. The
 [Mac/PC performance and memory plan](MAC_PC_PERFORMANCE_MEMORY_PLAN.md) defines

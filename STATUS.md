@@ -1,10 +1,15 @@
 # Project status: physical preparation and a realistic movie
 
-Updated 2026-09-21. The [R101 manager capability decision](docs/realizability/B2_MONITOR_MANAGER_CAPABILITY_DECISION.md)
-finds the selected manager unsupported under unchanged R099 requirements.
-OS-source admission and live/whole-recorder certification remain refused.
-The next task is user policy selection A/B/C in the
-[handoff](SESSION_HANDOFF.md#next-task); no policy change or execution is selected.
+Updated 2026-09-21. The user supports simplifying excessive supervision
+requirements. The [R103 practical supervision policy](docs/realizability/B2_MONITOR_PRACTICAL_SUPERVISION_POLICY.md)
+keeps process safeguards and honest accounting while removing recursive proof
+requirements for infrastructure. R105 selects a portable trajectory output checker
+as the first useful increment: check saved frames before rendering. Its concrete
+implementation plan is in the [handoff](SESSION_HANDOFF.md#next-task).
+No live reliability rate is known; OS supervision and physical work remain pending.
+R104 requires Mac usability and small infrastructure increments that unblock
+named useful tasks; Mac support remains unverified and a complete benchmark
+platform is not a prerequisite for unrelated work.
 A [performance and memory test plan for Mac and PC](docs/realizability/MAC_PC_PERFORMANCE_MEMORY_PLAN.md)
 is also ready as documentation; no benchmark has run.
 The [technical handoff](SESSION_HANDOFF.md#next-task) records the next task.
@@ -40,7 +45,8 @@ the calculations trustworthy; it is not yet evidence that the apparatus works.
   monitor evidence, admitted deadlines and independent outer receipts required repair.
   R097 added nine passing repair groups; R098 accepts J01–J03 within the fake
   interface. R099 specifies the outer contract; R101 completes the API
-  capability decision with an unsupported verdict and explicit user policy choices.
+  capability decision with an unsupported verdict under the former strict requirements.
+  R103 records user support for practical supervision and narrows those requirements.
   Live operating-system adapter tests remain pending; further flow
   calculations remain disabled until the required safeguards are validated
   and launch is reviewed.
