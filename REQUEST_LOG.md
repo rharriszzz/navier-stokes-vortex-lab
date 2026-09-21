@@ -2287,6 +2287,8 @@ review recorded in `SESSION_HANDOFF.md`.
 
 **Delivery update, 2026-09-20:** Commit `da46593` (`Record Mac capacity and environment assessment`) was created on `main`. Push to `origin/main` failed because HTTPS could not read a password in this session; the bounded SSH check also returned `Permission denied (publickey)`. `gh` is not installed. The local branch is one commit ahead of `origin/main`. No credential configuration was changed. Push remains pending usable GitHub authentication.
 
+**Resolution, 2026-09-20:** R037 confirmed the existing Ed25519 key fingerprint and explicit SSH authentication. `origin` now uses the sibling repositories' SSH URL, and R034 plus its continuity records were pushed successfully as commits `da46593` and `b15a562` to `origin/main`.
+
 ## R035 — 2026-09-20 — Check sibling Git connection and explain push fix
 
 **User request (verbatim):**
@@ -2295,9 +2297,11 @@ review recorded in `SESSION_HANDOFF.md`.
 
 **Interpreted scope:** Check the interrupted R034 continuity update's Git state, inspect sibling repository Git connection configuration and available credential tooling without disclosing secrets, then explain the matching setup to fix authenticated push. Do not change Git credentials or remote settings without the user's follow-up.
 
-**Status:** Recommendation provided; waiting for the user to configure GitHub SSH authentication.
+**Status:** Complete; the SSH route was confirmed and used for publication.
 
 **Outcome, 2026-09-20:** Sibling repositories `beads`, `beads2`, `hsv_tools`, `madweave` and `sound` use SSH `git@github.com:` remotes. Their Git configuration has a credential helper, but two read-only sibling SSH checks failed in this session with `Permission denied (publickey)`, so their remote style alone does not establish working authentication. This repository currently uses HTTPS. Its current shell cannot prompt for a password, `gh` is not installed, and SSH authentication also failed. A local `~/.ssh/id_ed25519` key pair and SSH config file exist; no GitHub host entry was detected. The existing Ed25519 public key should be added to the GitHub account, then authentication verified before changing this repository's remote. No key, credential, helper or remote was changed.
+
+**Resolution, 2026-09-20:** The initial read-only SSH checks had no agent identity. The explicit-key test succeeded, R037 matched its fingerprint against GitHub Settings, and the repository was switched to SSH and published successfully. No key was generated or replaced.
 
 **Recommendation and next action:** Use the sibling repositories' SSH plan with the existing Ed25519 key; do not install another Git client. In a normal Mac Terminal, copy only the public key using `pbcopy < ~/.ssh/id_ed25519.pub`, add it at GitHub **Settings → SSH and GPG keys → New SSH key**, then check `ssh -T git@github.com`. If needed, load/configure the key with macOS Keychain (`ssh-add --apple-use-keychain ~/.ssh/id_ed25519`, and an SSH `Host github.com` entry using `UseKeychain yes`, `AddKeysToAgent yes`, and `IdentityFile ~/.ssh/id_ed25519`). Once the SSH test succeeds, update this repo's remote to `git@github.com:rharriszzz/navier-stokes-vortex-lab.git` and push `main`. Do not send or paste the private key. The pending R034 commit is `da46593`; R034 continuity edits remain in the worktree after an interrupted staging attempt. Finish/publish the scoped records after SSH authentication works.
 
@@ -2321,6 +2325,8 @@ review recorded in `SESSION_HANDOFF.md`.
 
 **Interpreted scope:** Compare the supplied GitHub key fingerprint with the explicitly selected local key fingerprint and, as part of the still-active R034 publication task, complete the authenticated SSH push if they match.
 
-**Status:** In progress.
+**Status:** Complete; fingerprint matched and publication succeeded.
 
 **Outcome, 2026-09-20:** The supplied fingerprint exactly matches the local `id_ed25519` fingerprint from the successful explicit SSH diagnostic; GitHub accepted the key and authenticated `rharriszzz`. The issue was SSH identity selection in the session, not key expiry. The R034 commit is being published over SSH.
+
+**Delivery update, 2026-09-20:** Changed `origin` to `git@github.com:rharriszzz/navier-stokes-vortex-lab.git`. Commits `da46593` and `b15a562` pushed successfully to `origin/main`. No force push was used.

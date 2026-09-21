@@ -1,26 +1,24 @@
 # Current session handoff
 
 Last updated: 2026-09-20. Latest request:
-[R036](REQUEST_LOG.md#r036--2026-09-20--clarify-whether-the-ssh-key-expired-and-repeat-recovery-steps),
-and the follow-up [R037](REQUEST_LOG.md#r037--2026-09-20--confirm-the-github-ssh-key-fingerprint),
+[R037](REQUEST_LOG.md#r037--2026-09-20--confirm-the-github-ssh-key-fingerprint),
 which confirmed the GitHub fingerprint matches the existing Ed25519 key.
-GitHub accepted that key when explicitly selected; finish the pending R034
-publication over SSH. The user permits using the PC
+R034 and the SSH recovery records were committed and pushed successfully. The
+user permits using the PC
 within its capabilities; the former small diagnostic caps are not immutable
 user requirements. R023–R032 did not invoke Continue or authorize publication
 at the time; their resource and machine continuity is included here where
 needed for R033's work. R033 authorizes commit/push of its scoped result. The
 last physical checkpoint remains R020; R033 prerequisites passed
 without a physical run. R034 also ran no numerical work. The last previously committed checkpoint is
-`0190893`.
+`b15a562`.
 
 R033's scoped result was committed as `85ebd85` and pushed successfully to
 `origin/main` on branch `main`. The request log records the delivery outcome.
-R034's scoped files are in local commit `da46593`, one commit ahead of
-`origin/main`. HTTPS password input and default SSH identity selection failed,
-but an explicit test with the existing Ed25519 key succeeded and its
-fingerprint matches GitHub Settings. Switch `origin` to SSH and publish the
-existing commit; do not recreate or duplicate the R034 changes.
+R034's scoped files are in commit `da46593`; the SSH recovery/history update is
+in `b15a562`. Both are pushed to `origin/main`, and `origin` now uses the
+sibling repositories' SSH URL. The key itself was neither replaced nor
+regenerated.
 
 ## User goals
 
@@ -307,3 +305,10 @@ R034's commit `da46593` remains one commit ahead of upstream; continuity edits
 from the interrupted R035 staging attempt are unstaged and must be reviewed
 before any follow-up commit. No GitHub CLI is installed. Do not install another
 Git client solely for this issue.
+
+**R037 resolution:** The supplied settings fingerprint matched exactly. The
+explicit-key SSH test authenticated successfully, `origin` was changed to SSH,
+and commits `da46593` and `b15a562` were pushed to `origin/main`. The push used
+no force option. The remaining R035 notes above describe the diagnosis and
+recommended persistent Keychain setup; the remote switch and publication are
+complete.
