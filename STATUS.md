@@ -286,17 +286,21 @@ size a later physical allowance separately. Preserve watchdogs, finite reports,
 scientific acceptance thresholds and the recorded experiment scope. Historical
 R022 resource results remain unchanged.
 
-The user's Mac is an **Apple M4 iMac with 24 GiB RAM**. A dated snapshot
+The user's Mac is an **Apple M4 iMac with 24 GiB RAM**. Its dated snapshot
 recorded 68% system-wide free memory and 591 GiB free project-volume storage.
-The pinned FEM packages now import in its Conda environment, and two-rank MPICH
+The pinned FEM packages import in its Conda environment, and two-rank MPICH
 startup succeeded; no FEM assembly/solve or same-input reference comparison
 has run. Conda reports FFCx 0.10.1 while the imported module reports 0.10.0.
-See the [machine evidence](docs/realizability/evidence/r034/mac_snapshot.json)
-and [handoff assessment](SESSION_HANDOFF.md#r052-machine-task-allocation-checkpoint).
-The PC remains the better-supported host for the immediate physical-path
-review because the disposable Linux observer/runner and resource checks were
-exercised there. The Mac is a plausible candidate for a later memory-sensitive
-FEM comparison, but neither its workload fit nor its relative runtime is
-established. Complete the Astra/high review first; then refresh capacity on
-both hosts and perform the same small, non-campaign reference case only if the
-review warrants it. No physical calculation is authorized by these records.
+The latest PC snapshot showed 15.72 GiB total/5.44 GiB free in Windows and
+7.61 GiB total/6.73 GiB available in WSL; these are overlapping views of
+shared host RAM. The Mac's 4 performance/6 efficiency cores and the PC's 28
+WSL-visible logical CPUs do not establish comparative speed; no matched run
+exists. The PC's R033 Linux observer/runner and resource checks were
+exercised, so it is the better-supported host for the immediate Astra/high
+physical-path review. The Mac is a plausible future memory-sensitive FEM
+candidate, but neither workload fit nor relative runtime is established. See
+the [R053 comparison evidence](docs/realizability/evidence/r053/machine_snapshot.json)
+and [handoff assessment](SESSION_HANDOFF.md#r053-machine-task-allocation-checkpoint).
+Complete the review first; only then, if warranted, refresh capacity on both
+hosts and run the same small reference case under unchanged tolerances. No
+physical calculation or matched benchmark was run for this comparison.

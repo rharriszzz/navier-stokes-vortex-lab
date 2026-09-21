@@ -1,10 +1,11 @@
 # Current session handoff
 
 Last updated: 2026-09-20. Latest request:
-[R052](REQUEST_LOG.md#r052--2026-09-20--pull-and-review-mac-side-work),
-which pulled and reviewed the Mac records through commit `8c27290`. The Mac
-environment now imports the pinned FEM stack and starts two-rank MPI; no FEM
-assembly/solve or matched benchmark has run. The
+[R053](REQUEST_LOG.md#r053--2026-09-20--commit-reconciled-mac-comparison-notes-and-continue-host-assessment),
+which committed and pushed the reconciled pull notes as `6cc842f`, then
+compared current PC capacity with the recorded Mac evidence. The Mac
+environment imports the FEM stack and starts two-rank MPI; no FEM assembly,
+solve or matched benchmark has run. The
 user permits using the PC
 within its capabilities; the former small diagnostic caps are not immutable
 user requirements. R023–R032 did not invoke Continue or authorize publication
@@ -321,21 +322,39 @@ handoff's GPT-6 Astra/high review remains the next task and must stop before
 physical execution; it should include workload sizing and treat the FFCx
 distribution/module version discrepancy as an open reproducibility detail.
 
-## R052 Machine task allocation checkpoint
+## R053 Machine task allocation checkpoint
 
-The pull advanced `main` from `4a55bdf` to `8c27290`. Keep the PC for the
-immediate R021/R013 observer and physical-runner review: the disposable Linux
-path, guard checks and resource monitoring were actually exercised there. The
-Mac is a promising candidate for a future memory-sensitive FEM comparison
-because it has 24 GiB installed and the pinned packages import with MPI startup
-verified. It has not passed FEM assembly, solve, monitoring or same-input output
-checks, and its FFCx version identity needs resolution. Neither machine has a
-matched timing/RSS benchmark for the next physical workload. Take fresh
-capacity readings on both machines and run the same small reference case only
-after the Astra/high review defines that case and its unchanged tolerances.
-The short Mac inventory prompt is at
+The pull advanced `main` from `4a55bdf` to `8c27290`; the reconciled records and
+Mac prompt were committed and pushed as `6cc842f`. A fresh PC snapshot at
+2026-09-21T01:56:57Z showed Windows with 15.72 GiB total and 5.44 GiB free;
+WSL showed 7.61 GiB total and 6.73 GiB available, with 28 logical CPUs. The
+Windows and WSL readings are two views of shared RAM, not additive. The Mac's
+24 GiB and 68% free-memory reading come from a separate 2026-09-20 snapshot, so
+they are not contemporaneous or directly comparable. The full records are in
+[R053 machine evidence](docs/realizability/evidence/r053/machine_snapshot.json).
+
+For the immediate R021/R013 observer and physical-runner review, use the PC:
+the disposable Linux path, guard checks and resource monitoring were actually
+exercised there. The Mac is a promising future FEM candidate: its pinned
+packages import and two-rank MPI starts, and it has more installed RAM. It has
+not passed FEM assembly, a solve, process-tree monitoring or same-input output
+checks; its FFCx version identity needs resolution. Neither machine has a
+matched timing/RSS benchmark for the physical workload.
+
+For the eventual FEM host choice, estimate the reviewed workload, refresh both
+machines' capacity near the same time, then compare an identical small
+non-campaign case by wall time, peak process-tree RSS and output agreement
+under unchanged tolerances. No such run was part of R053. For rendering, the
+Mac snapshot found `ffmpeg`/`ffprobe` but not POV-Ray; current PC tool
+availability was not measured here, so no render-host preference is supported.
+The Mac has 4 performance and 6 efficiency CPU cores; the PC CPU model was not
+captured, and WSL's 28 visible logical CPUs do not provide a matched CPU
+performance measure. Use either machine for ordinary editing according to
+convenience; that does not answer compute performance. The short Mac inventory
+prompt is at
 [MAC_INVENTORY_PROMPT.md](docs/realizability/MAC_INVENTORY_PROMPT.md); no
-additional Mac run is needed before returning to the PC.
+additional Mac run is needed before returning to the PC for the Astra/high
+review. Stop that review before physical execution.
 
 R041 clarifies the user's preference for software published by Anaconda Inc.
 Recommend the official Miniconda Apple Silicon `.sh` installer, not Miniforge.

@@ -1,0 +1,79 @@
+{
+  "captured_at_utc": "2026-09-21T01:56:57Z",
+  "pc": {
+    "host": {
+      "platform": "Windows host running this project under WSL",
+      "total_visible_memory_kib": 16488680,
+      "free_physical_memory_kib": 5706968,
+      "source": "Get-CimInstance Win32_OperatingSystem"
+    },
+    "wsl": {
+      "memory_total_bytes": 8175431680,
+      "memory_available_bytes": 7225069568,
+      "swap_total_bytes": 2147483648,
+      "swap_free_bytes": 1950724096,
+      "logical_cpus": 28,
+      "source": "free -b; nproc"
+    },
+    "project_filesystem": {
+      "available_bytes": 1009001476096,
+      "source": "df -B1 ."
+    },
+    "validated_work": {
+      "reference": "R033 observer/prerequisite runs",
+      "cumulative_seconds": 56.2513,
+      "maximum_sampled_child_tree_rss_mib": 571.421875,
+      "physical_solver_or_factorization_run": false
+    }
+  },
+  "mac": {
+    "source": "R034 mac_snapshot.json and R046/R047 entries in REQUEST_LOG.md",
+    "snapshot_date": "2026-09-20",
+    "model": "iMac Mac16,3 / Apple M4",
+    "architecture": "arm64",
+    "macos": "26.6.2",
+    "cpu_cores": {
+      "performance": 4,
+      "efficiency": 6
+    },
+    "memory_bytes": 25769803776,
+    "memory_pressure_free_percentage_at_snapshot": 68,
+    "swapins_and_swapouts_since_boot_at_snapshot": 0,
+    "project_volume_available_gib_at_snapshot": 591,
+    "tools_in_original_inspected_shell": {
+      "ffmpeg": true,
+      "ffprobe": true,
+      "povray": false
+    },
+    "fem_environment": {
+      "python": "3.12.13",
+      "dolfinx": "0.10.0",
+      "basix": "0.10.0",
+      "ufl": "2025.2.1",
+      "petsc_and_petsc4py": "3.25.5",
+      "mpich": "5.0.1",
+      "mpi4py": "4.1.2",
+      "gmsh": "4.15.2",
+      "numpy": "2.5.3",
+      "scipy": "1.18.1",
+      "fenics_ffcx_conda_distribution": "0.10.1",
+      "ffcx_imported_module_version": "0.10.0",
+      "two_rank_mpi_startup": "passed",
+      "finite_element_assembly_or_solve": "not run",
+      "same_input_reference_comparison": "not run"
+    }
+  },
+  "comparison": {
+    "direct_performance_comparison": "not available; no matched runtime or peak-RSS run",
+    "memory_readings_comparable": false,
+    "immediate_task_recommendation": "Use the PC for the Astra/high review of the R021/R013 observer and physical runner because that disposable Linux path and its resource checks were exercised there.",
+    "future_mac_candidate": "The Mac is a credible candidate for a memory-sensitive FEM reference comparison after resolving the FFCx identity discrepancy and validating resource monitoring.",
+    "physical_execution": "Stop before any physical run. First define a bounded same-input reference case, refresh launch-time capacity on both hosts, and compare runtime, peak process-tree RSS and numerical output under unchanged tolerances."
+  },
+  "limitations": [
+    "The Mac snapshot predates or is separate from the R046 environment verification and is not a live capacity reading at this capture time.",
+    "The PC snapshot was captured on 2026-09-21 UTC; the Mac capacity snapshot is dated 2026-09-20. Neither implies current availability on the other host.",
+    "Windows host memory and WSL memory are views of shared resources and must not be added.",
+    "No solver benchmark, FEM assembly, physical calculation or host migration was performed."
+  ]
+}
