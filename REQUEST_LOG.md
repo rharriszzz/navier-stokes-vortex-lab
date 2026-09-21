@@ -2945,3 +2945,24 @@ No DOLFINx/MPI import, JIT, mesh, factorization, PDE solve, physical child, rend
 **Next task/release/publication:** PC/WSL `daisy` retains ownership. The single current task is GPT-6 Astra/high review of R084 acceptance, ownership and provenance against R083 and R081, then a separate go/no-go and bounded OS-harness task definition. Stop on unexplained source/lifecycle/resource-accounting gaps, unsettled policy, and before native implementation/startup or any live operation/workload/FEM/physical run. Physical 180 s / 1536 MiB limits and unused q64/q96 allowance are unchanged; no ignored input is needed. Official OpenAI model docs were rechecked: Astra is listed with high reasoning support; no model switch or account-specific Codex availability is claimed. STARTED was published as `5deca38`. Completion is recorded before scoped commit/push; delivery hash/outcome follows the final push.
 
 **R084 final documentation validation, 2026-09-21:** Passed for 185 local links, 24 heading fragments, 136 finite JSON files, 64 source files, 192 per-attempt source snapshot bodies, all 61 R082 archive source bindings, all 22 fixture groups, both reconciliation-to-following-source bindings, three-attempt total/max-RSS arithmetic, fixture digest, and R084 lifecycle/handoff continuity. Evidence: `docs/realizability/evidence/r084/documentation_validation.json`; checker SHA-256 `9ba1aa4376672b6ac66d01d983723007927df6592e54efb9eecda22574c4fb82`. Its first run found and corrected a checker-only heading-slug whitespace issue; no fixture attempt was rerun.
+
+## R085 — 2026-09-21 — Record session metadata, pull and continue R084 review
+
+**User request:** “I am going to give the last bit of output from the last conversation, the result of /status, and /new.  If you can find a good way to record this information in one of your logs, that would be great.  After that, pull, and continue.”
+
+**Interpreted scope:** Preserve the supplied prior-session metadata here, then carry out the handoff-selected bounded R084 acceptance/ownership/provenance review under Continue authorization, including scoped start/final commit and push. Startup synchronization precedes log writes under AGENTS.md's ordering exception. The subsequent pasted terminal output is context for this request, not a separate work request.
+
+**User-supplied session metadata (verbatim content, decorative border omitted):**
+```text
+>_ OpenAI Codex (v0.155.1)
+model:     gpt-5.6-luna medium   /model to change
+directory: ~/git/navier-stokes-vortex-lab
+Tip: New Use /fast to enable our fastest inference with increased plan usage.
+Token usage: total=435,883 input=340,492 (+ 21,707,008 cached) output=95,391 (reasoning 46,591)
+To continue this session, run codex resume, then select Continue (01a0c49e-9ab9-7ce2-82af-c5ad80a35d01)
+```
+These are user-reported prior-session values, not measurements of this review or independently verified billing. No private session file was accessed or copied. Separate final-conversation output, /status and /new results have not yet been supplied; do not infer their contents. Further supplied excerpts can be appended to this entry.
+
+**Startup/status:** PC/WSL daisy, Linux/x86_64, /home/rharris/git/navier-stokes-vortex-lab; matches retained owner. Clean main/origin/main, empty stashes, no open lifecycle record. Required clean pull was already up to date; HEAD and fetched upstream both 26f7071a54096822fec78b9ebb16d248870103f1. R084 completion and current handoff reviewed; no incoming changes or ignored required inputs. Python 3.12.13 verified at /tmp/navier-fenicsx/bin/python. STARTED publication pending.
+
+**Bounded plan/completion/stop:** Read required research and R081/R083/R084 documents and source. Review G01–G07, all 22 saved fixture results, independent ownership/cleanup, strict R070 acceptance, ledger arithmetic, snapshots and reconciliations. Publish finding-to-evidence map and one next task with explicit OS-harness go/no-go boundary. Source/saved-data checks only; any needed counterexample must be fake and bounded. Stop at unexplained resource/source/lifecycle inconsistencies or required policy decisions, and before native implementation/build/startup, live OS/cgroup/signal/workload, FEM/MPI/JIT or physical execution. Preserve archives/pins and 180 s / 1536 MiB physical limits; q64/q96 remains unused. No delegation or automation requested.
