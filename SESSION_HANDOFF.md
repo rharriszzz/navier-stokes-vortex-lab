@@ -1,14 +1,28 @@
 # Current session handoff
 
 Last updated: 2026-09-21 for
-[R076](REQUEST_LOG.md#r076--2026-09-21--continue-fixture-only-monitor-implementation).
-The fixture-only versioned monitor implementation is complete in
-[`R076 evidence`](docs/realizability/evidence/r076/README.md), following the
-[R074 host monitor adapter specification](docs/realizability/B2_MONITOR_ADAPTER_REVIEW.md).
-**Next: use GPT-6 Astra/high on this PC to review the implementation and freeze
-a bounded live-adapter validation contract.** Keep physical execution disabled
-and the 180 s / 1536 MiB limits unchanged. The detailed [Next task](#next-task)
-is authoritative; do not repeat R073, R074 or the completed R076 fixtures.
+[R077](REQUEST_LOG.md#r077--2026-09-21--plan-mac-and-pc-performance-and-memory-tests)
+and [R080](REQUEST_LOG.md#r080--2026-09-21--return-ownership-to-pc-after-planning).
+The [Mac/PC performance and memory test plan](docs/realizability/MAC_PC_PERFORMANCE_MEMORY_PLAN.md)
+is complete as documentation; no benchmark or live adapter ran. R076's
+[fixture implementation](docs/realizability/evidence/r076/README.md) is received
+in `f1c24c628f78f21fdffeb079cbe85aa7f58277b9` and must not be repeated.
+
+**Next owner: PC/WSL `daisy`, at the user's explicit request. Resume R076's
+planned GPT-6 Astra/high implementation review and bounded live-adapter
+validation contract.** The detailed [Next task](#next-task) is authoritative.
+The Mac releases this documentation task on successful scoped delivery and
+stops; transfer remains pending if push fails. No new PC session is launched.
+Keep physical execution disabled and the 180 s / 1536 MiB limits unchanged.
+
+The plan, setup-guide consolidation, README/status/index links and ownership
+records changed. Documentation-only checks passed using Mac Python 3.12.13:
+local links/fragments, shell syntax without execution, source option inspection,
+preserved log prefixes, request/next-task continuity and whitespace. See the
+[validation evidence](docs/realizability/evidence/r077/documentation_validation.json).
+No application tests, benchmarks, live monitoring, FEM/JIT, render or encoding
+ran. Mac memory/membership semantics and actual platform readiness remain open;
+the existing PC review is still next, with no new ignored inputs required.
 
 R072 adds a clean fast-forward-only pull at the start of every Continue session
 and the append-only [`WORK_SESSIONS.md`](WORK_SESSIONS.md) start/completion
@@ -39,22 +53,33 @@ JIT, assembly, factorization or PDE solve ran. B2 accuracy remains failed.
 
 Prefer **Python 3.12 on both machines**, retaining `environment-b1.yml`'s
 **3.12.13** pin. The PC executable `/tmp/navier-fenicsx/bin/python` was checked
-live again in R074; the Mac Conda environment's 3.12.13 is from saved readiness
-records. Activate the intended environment and verify its version/path. The
+live again in R074; the Mac Conda interpreter was checked live for R077
+documentation validation: Python 3.12.13, native arm64, at
+`/Users/rharris/miniconda3/envs/navier-stokes-vortex-b1/bin/python`.
+Activate the intended environment and verify its version/path. The
 historical MacPorts Python 3.10.19 is not the required project interpreter.
 No package installation, pin change or remote Mac check occurred.
 
 | Handoff field | Current value |
 |---|---|
-| Current task/owner | PC/WSL retains ownership; R076 fixture-only monitor implementation complete; Astra/high code and bounded live-validation review next |
-| Observed identity | `daisy`, Linux/WSL2, `x86_64`, `/home/rharris/git/navier-stokes-vortex-lab` |
-| Branch/upstream | `main` / `origin/main`; R076 started clean with empty stash list; STARTED record published as `534fc5a` |
-| Source/base commit | R076 started at `a48a3c790e1ff37d71ccab5e96cd8e73e4df2c26`; mandatory clean fast-forward pull returned up to date and HEAD equaled fetched upstream |
-| Delivery state | R076 scoped completion prepared under Continue's commit/push authorization; final report/Git history supplies the delivery outcome and hash |
-| Task processes | All R076 fixture-validator subprocesses exited; no child workload or background task. Independent Mac POV-Ray build remains user-reported and unverified |
-| Required next inputs | R076 source bundle, manifests, fixture results and attempt ledger; R074 adapter specification; R067 resource policy. No ignored input/cache transfer required |
-| Consumed experiments | R033: four prerequisite attempts, 56.25128577899886 s; R070: five validation attempts, 0.133708385 s; R073: four attempts, 0.200314582 s with accounting limitations below; R074: one audit, 0.024026710 s; R076: fixture/continuity attempts within 120 s / 256 MiB (exact all-attempt results in linked evidence). q64/q96 unused; R020 last physical attempt |
-| Next stop | Review fixture code and freeze the benign live-adapter validation commands, host capability checks, and Windows collector scope; stop before starting any live adapter workload, FEM/MPI/JIT or physical attempt and before changing limits |
+| Current task/owner | R077 plan complete; Mac releases after successful final publication under R080; intended next owner PC/WSL `daisy` |
+| Observed outgoing identity | Mac `fire.lan`, Darwin/arm64, `/Users/rharris/git/navier-stokes-vortex-lab` |
+| Intended receiving identity | PC/WSL `daisy`, Linux/x86_64, `/home/rharris/git/navier-stokes-vortex-lab`; verify locally on receipt |
+| Branch/upstream | `main` / `origin/main`; receiving Mac pull clean and up to date, empty stashes, HEAD equaled fetched upstream |
+| Source/base commit | `f1c24c628f78f21fdffeb079cbe85aa7f58277b9`, R076 delivery; this is an ancestor/base, not this plan's delivery hash |
+| Delivery state | Documentation completion/release prepared under R077/R079/R080 authorization; transfer pending until successful push, exact delivery commit in final response/Git history |
+| Task processes | No benchmark, render, encoder, live adapter or background task started on Mac; documentation checks exit before delivery. R076 reports PC validator processes exited. Independent user-managed Mac POV-Ray build remains unverified and outside this task |
+| Required next inputs | R076 committed source/manifests/ledger, R074 specification, R067 resource policy, new comparison plan; no new ignored inputs or compiled-cache transfer required |
+| Consumed experiments | No experiments consumed by R077–R080; all prior ledgers unchanged. R076 fixture-only result remains historical; q64/q96 unused, R020 last physical attempt |
+| Next stop | PC source/contract review only, as previously planned; stop before live signaling, cgroup writes, Windows helper startup, workload, FEM/MPI/JIT or changing physical limits |
+
+R079 authorized Mac receipt after R078 pulled R076 completion. R080 now explicitly
+requests return to the PC at its previously planned step. Before PC work, check
+identity/status/stashes, make the mandatory clean fast-forward-only pull, review
+this delivery, confirm HEAD equals fetched upstream and acknowledge receipt.
+A dirty checkout or unpublished work must be reconciled before pulling or
+allocating an ID. This release applies to the repository task; it neither
+stops nor restarts the independent user-managed Mac software build.
 
 R073's provider-based [monitor contract](docs/realizability/evidence/r073/monitor_contract.md)
 passed 16/16 fake-reading checks in final attempt 4 using Python 3.12.13.
@@ -652,26 +677,38 @@ native arm64 DOLFINx 0.10.0/Python 3.12.13 package metadata.
 
 ## Next task
 
-**Stay on PC; use GPT-6 Astra with high reasoning for an implementation review
-and live-validation contract.** Review the [R076 source bundle and evidence](docs/realizability/evidence/r076/README.md),
+**Receive on PC/WSL `daisy`; use GPT-6 Astra with high reasoning for the
+implementation review and live-validation contract already selected by R076.**
+R080 explicitly returns ownership to this step after Mac documentation delivery.
+Review the [R076 source bundle and evidence](docs/realizability/evidence/r076/README.md),
 the [R074 host adapter specification](docs/realizability/B2_MONITOR_ADAPTER_REVIEW.md),
-and the R070/R073 preservation bindings. Resolve any remaining policy or
-cleanup semantics. Specify bounded benign Linux host-capability checks and
-the missing native Windows memory collector/launcher/Job Object protocol,
-including independent watchdog and helper cleanup evidence. Produce executable
-commands, prerequisites, resource caps and refusal criteria; do not run them.
+and the R070/R073 preservation bindings. Resolve remaining policy or cleanup
+semantics. Specify bounded benign Linux capability checks and the missing native
+Windows memory collector/launcher/Job Object protocol, including independent
+watchdog and helper cleanup evidence. Produce executable validation commands,
+prerequisites, resource caps and refusal criteria; do not run them.
 
-Completion requires a reviewed interface/contract, explicit evidence mapping
-for each R074 live-validation row, and a decision about actual cgroup/pidfd
-and Windows helper capabilities. Preserve physical execution disabled and the
-180 s / 1536 MiB limits. Stop before real signaling, cgroup writes, Windows
-helper startup, live workload, FEM/MPI/JIT, mesh/solve or any physical attempt.
-Recommend GPT-5.6 Luna/medium for implementation after the semantics and
-commands are stable; return to Astra/high if capability evidence changes the
-contract or cleanup/resource behavior is uncertain. The observer/assembly
-reference, Mac monitor and physical launch remain later work. Official OpenAI
-model pages were rechecked for this handoff; this recommendation did not switch
-models or start another session. **Next prompt on PC: Continue.**
+Completion requires a reviewed interface/contract and explicit evidence mapping
+for each R074 live-validation row. Record which cgroup/pidfd and Windows helper
+capabilities can be established read-only and which remain subject to the later
+bounded live tests; do not certify unexecuted operations. The new
+[Mac/PC plan](docs/realizability/MAC_PC_PERFORMANCE_MEMORY_PLAN.md) supplies future
+workloads and proposed budgets; it does not validate them or require a Mac
+adapter implementation in this PC step. Record any implications for the plan.
+
+Preserve physical execution disabled and the 180 s / 1536 MiB limits. Stop
+before real signaling, cgroup writes, Windows helper startup, live workload,
+FEM/MPI/JIT, mesh/solve or any physical attempt. Recommend GPT-5.6 Luna/medium
+for one bounded implementation task after semantics and commands are stable;
+return to Astra/high if capabilities, cleanup, timing, resource semantics or
+numerical interpretation need a decision. The Mac adapter, frozen benchmark
+runner, assembly/observer reference and physical launch remain later work.
+
+Both choices are available in this session's catalog; official
+[Astra](https://developers.openai.com/api/docs/models/gpt-6-astra) and
+[Luna](https://developers.openai.com/api/docs/models/gpt-5.6-luna) effort support
+was checked on 2026-09-21. No model switch, delegated session or automation
+occurred. After receiving this delivery, **next prompt on PC: Continue.**
 
 ## Deferred Mac setup check
 

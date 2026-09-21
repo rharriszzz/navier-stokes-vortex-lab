@@ -28,8 +28,10 @@ experimental mechanism. See [PROJECT_TRACKS.md](PROJECT_TRACKS.md),
 For the current goals, progress, open physical questions, and intended data
 for a separate movie, read [STATUS.md](STATUS.md).
 
-For the M4 Mac's remaining software installation, safe movie checks and a
-repeatable comparison against the PC, start with
+For fixed workloads, timing, memory measurements and checks on both computers,
+use the [Mac/PC performance and memory test plan](docs/realizability/MAC_PC_PERFORMANCE_MEMORY_PLAN.md).
+The tests are planned, not yet run. For the M4 Mac's remaining software
+installation and movie-readiness checks, use
 [the Mac setup and benchmark guide](docs/realizability/MAC_INSTALL_AND_BENCHMARK_PLAN.md).
 
 To resume work in a Codex session opened in this repository, say **Continue**.

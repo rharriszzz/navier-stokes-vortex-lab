@@ -1,7 +1,8 @@
 # Project status: physical preparation and a realistic movie
 
-Updated 2026-09-21. The latest completed work is a
-[review of how calculations are monitored and reported](docs/realizability/B2_MONITOR_ADAPTER_REVIEW.md).
+Updated 2026-09-21. The latest completed work is the
+[fixture-only monitor implementation](docs/realizability/evidence/r076/README.md)
+and a [performance and memory test plan for Mac and PC](docs/realizability/MAC_PC_PERFORMANCE_MEMORY_PLAN.md).
 The [technical handoff](SESSION_HANDOFF.md#next-task) records the next task.
 
 Our goal is to determine whether exterior actuators and sensors can prepare
@@ -21,15 +22,22 @@ the calculations trustworthy; it is not yet evidence that the apparatus works.
   complete.** Examples include accepting a success report despite an abnormal
   process exit, or declaring completion while supporting processes remain
   active. The required corrections are now specified, including checks that
-  work has actually stopped and memory readings are current. Implementation
-  and tests on the PC are still pending; further flow calculations remain
-  disabled until the required safeguards are validated and launch is reviewed.
+  work has actually stopped and memory readings are current. R076 implemented
+  the corrections in a disposable copy and passed 16 fixture/continuity groups.
+  Tests of actual operating-system adapters are still pending; further flow
+  calculations remain disabled until the required safeguards are validated
+  and launch is reviewed.
 - **There is no new result yet on physical feasibility.** Previous experiment
   records were preserved, and the latest numerical boundary response still
   fails its accuracy comparison. This review adds no evidence about achievable
   contraction, adequate exterior sensing or practical actuator demands. Those
   questions remain open, and the existing numerical failure does not establish
   that the physical concept is impossible.
+- **We now have a plan to choose a computer for each workload.** It compares
+  trajectory generation, rendering, encoding and a small assembly/observer
+  reference using fixed inputs, repeated timings and peak resident memory.
+  Live monitor validation comes first. No benchmark has run under the plan,
+  and neither computer has been shown faster or suitable for a larger solve.
 - **The movie can still illustrate the concept.** The latest work supplies no
   new validated flow history for a physically supported animation. Connecting
   the movie to reliable fluid calculations remains a later milestone; the
@@ -47,7 +55,7 @@ fluid calculation has not yet passed its physical accuracy checks.
 | Milestone | Position now | Work still needed |
 |---|---|---|
 | Explain the apparatus and intended motion | Illustrative movie pipeline implemented | Further visual refinement is possible; label the prescribed flow clearly. |
-| Trust the numerical boundary response | R033 observer coverage passes; R070 launch repair and R073 fake monitor checks exist; R074 identifies remaining monitor/integration gaps; physical accuracy still fails | Implement and validate the specified adapters, then decide separately on physical execution. |
+| Trust the numerical boundary response | R033 observer coverage passes; R076 monitor/integration fixtures pass; physical accuracy still fails | Review the implementation and validate live adapters, then decide separately on physical execution. |
 | Determine what exterior actuators can influence | Benchmark commands/features defined; full six-input response campaign has not begun | Validate responses, then assess independent influence, conditioning and required amplitudes/times. |
 | Determine what exterior sensors can distinguish | Basic sensor fixtures exist; B3 sensing study has not begun | Test pressure/PIV information with realistic noise, resolution and delay. |
 | Prepare the desired initial flow | Concept and candidate hardware only | Define acceptable initial-state errors; test a finite actuator layout and its physical limits. |
@@ -229,13 +237,15 @@ The [R074 adapter review](docs/realizability/B2_MONITOR_ADAPTER_REVIEW.md)
 reproduces root/descendant completion, cleanup-exception, clock/scheduling/input
 and return-code acceptance gaps. It specifies Linux containment/RSS/cleanup
 and Windows host-pressure semantics. R073's ledger is preserved, with incomplete
-all-attempt timing/RSS evidence explicitly noted. Follow the handoff's new-copy
-implementation task; archived passes are not live adapter validation.
+all-attempt timing/RSS evidence explicitly noted. R076 implemented the fixture
+contract and passed 16 check groups. Follow the handoff's implementation review
+and measurement-contract task; archived passes are not live adapter validation.
 The later observer/assembly reference retains unchanged numerical screens;
 monitors must pass first. No comparative solver performance or physical
 execution is established by these reviews.
 The independent Mac POV-Ray build remains outside this task; its movie check
-waits for a later explicit switch. See the [handoff](SESSION_HANDOFF.md#next-task).
+is deferred. R080 returns ownership to PC after this plan is published. See the
+[handoff](SESSION_HANDOFF.md#next-task).
 
 The [R033 prerequisite result](docs/realizability/B2_COMPATIBLE_TRACE_PREFLIGHT_FOLLOWUP.md)
 completes the disposable q=64/q=96 fixture and the actual pre-solve observer
@@ -359,8 +369,10 @@ movie pipeline. The FFCx version-string discrepancy is explained by upstream
 release metadata; retain the pinned 0.10.1 code. See the [Mac install handoff](SESSION_HANDOFF.md#next-task)
 and [R055 finding](SESSION_HANDOFF.md#r055-ffcx-version-discrepancy).
 
-The remaining Mac setup and task-by-task Mac/PC benchmark protocol are in
-[MAC_INSTALL_AND_BENCHMARK_PLAN.md](docs/realizability/MAC_INSTALL_AND_BENCHMARK_PLAN.md).
+The remaining Mac setup is in
+[MAC_INSTALL_AND_BENCHMARK_PLAN.md](docs/realizability/MAC_INSTALL_AND_BENCHMARK_PLAN.md);
+the new [Mac/PC test plan](docs/realizability/MAC_PC_PERFORMANCE_MEMORY_PLAN.md)
+is the comparison protocol for both machines.
 R058 confirmed that MacPorts is already installed, POV-Ray is not registered,
 Xcode/clang is available, and ffmpeg/ffprobe 4.4.2 execute with libx264 listed.
 R065 reports a POV-Ray build already running; check its outcome at a later Mac
@@ -371,11 +383,14 @@ portable resource-monitor validation remain pending. No install or benchmark
 was run as part of R058. R067 has now specified an observer/assembly reference
 and comparison screens, with no solve benchmark or host winner inferred.
 
-R065 retained PC ownership. R067/R070/R073 are complete within their recorded
-scope; R074 specifies the remaining monitor work before a separately scoped
-reference. Follow the current handoff instead of replaying older tasks. Mac movie
-readiness and visualization benchmarks can be scheduled independently. The workload revision
-stays fixed across later evidence commits; ignored benchmark inputs need an
+R065 retained PC ownership historically; R079 transferred it to Mac
+for this documentation task after receipt of R076's published completion.
+R080 returns ownership to PC after publication to resume its planned review.
+R067/R070/R073/R074/R076 are complete within their recorded scope; live
+validation remains ahead of a separately scoped reference. Follow the current
+handoff instead of replaying older tasks. Mac movie readiness and visualization
+benchmarks can be scheduled independently. The workload revision stays fixed
+across later evidence commits; ignored benchmark inputs need an
 explicit checksum-verified transfer. R063 adds a local machine/owner check at
 session start. Uncertain ownership requires clarification; local Git cannot
 detect the other machine's unpublished work or running processes.

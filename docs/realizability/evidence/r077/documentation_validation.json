@@ -1,0 +1,37 @@
+{
+  "request": "R077",
+  "checked_utc": "2026-09-21T14:31:45.085962+00:00",
+  "base_commit": "f1c24c628f78f21fdffeb079cbe85aa7f58277b9",
+  "python": "3.12.13",
+  "executable": "/Users/rharris/miniconda3/envs/navier-stokes-vortex-b1/bin/python",
+  "checked_files": [
+    "PROJECT_TRACKS.md",
+    "README.md",
+    "REQUEST_LOG.md",
+    "SESSION_HANDOFF.md",
+    "STATUS.md",
+    "WORK_SESSIONS.md",
+    "docs/realizability/B2_NEXT_STEPS.md",
+    "docs/realizability/MAC_INSTALL_AND_BENCHMARK_PLAN.md",
+    "docs/realizability/MAC_PC_PERFORMANCE_MEMORY_PLAN.md"
+  ],
+  "local_links": 167,
+  "heading_fragments": 29,
+  "bash_syntax_blocks": 16,
+  "incoming_setup_guide_fragments": 1,
+  "log_prefixes_preserved": true,
+  "unique_request_ids_through": 80,
+  "existing_evidence_and_non_markdown_source_unchanged": true,
+  "generator_cli_source_check": "pass",
+  "pc_next_task_and_limits": "pass",
+  "whitespace": "pass",
+  "errors": [],
+  "skipped": [
+    "benchmark execution",
+    "live monitors",
+    "FEM/MPI/JIT",
+    "render/encode",
+    "application tests"
+  ],
+  "status": "pass"
+}

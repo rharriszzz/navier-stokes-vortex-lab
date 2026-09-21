@@ -147,8 +147,11 @@ is complete. R070 subsequently repaired the disposable launch/report paths;
 R073 added fake monitor checks. The
 [R074 adapter review](docs/realizability/B2_MONITOR_ADAPTER_REVIEW.md) records
 remaining scheduling, membership, cleanup and report-acceptance gaps and
-specifies the adapters. Follow the single
-[current handoff task](SESSION_HANDOFF.md#next-task) for implementation and
+specifies the adapters; [R076](docs/realizability/evidence/r076/README.md)
+implements the fixture-only contract. The
+[Mac/PC performance and memory plan](docs/realizability/MAC_PC_PERFORMANCE_MEMORY_PLAN.md)
+specifies future comparisons and their monitor prerequisites. Follow the single
+[current handoff task](SESSION_HANDOFF.md#next-task) for review and
 stops; none of these steps authorizes physical execution. The Mac setup and
 machine-handoff sequence remain in that handoff.
 The B2 gate remains failed and campaign readiness false. Use

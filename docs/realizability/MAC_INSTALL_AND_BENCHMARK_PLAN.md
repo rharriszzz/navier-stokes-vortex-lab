@@ -1,47 +1,32 @@
 # Finish Mac setup and compare it with the PC
 
-Updated 2026-09-20 after R067's PC scientific review and R069's Python 3.12
-preference. Mac readiness remains from R058; the user's POV-Ray build completion
-has not been verified by this session.
+Updated 2026-09-21 for R077–R080. This page retains Mac installation and
+movie-readiness instructions. Use the new
+[Mac and PC performance and memory test plan](MAC_PC_PERFORMANCE_MEMORY_PLAN.md)
+for the staged comparison, fixed cases, measurements, proposed budgets,
+repetitions, correctness rules and evidence requirements.
 
 ## Immediate next step and sequence
 
-**Stay on PC for the disposable launch/report repair using GPT-5.6 Luna/medium.**
-Use the [R067 contract](B2_PHYSICAL_RUNNER_REVIEW.md#next-task-launch-and-report-repair):
-saved-data and synthetic checks only, then stop before FEM execution. `Continue`
-selects that repair. The scientific review is complete and must not be repeated
-as a new task. Mac movie readiness is independent.
+R070 launch/report repair and R076 fixture-only monitor implementation are
+complete. R079 transferred ownership to Mac for documentation; R080 returns
+it to PC after publication. Follow the single
+[current handoff task](../../SESSION_HANDOFF.md#next-task): the previously
+planned Astra/high review of R076 and bounded live-adapter contract, stopping
+before live workloads or benchmarks. Do not replay the completed repairs.
 
-Use the [machine handoff procedure](../../AGENTS.md#switching-between-the-mac-and-pc)
-when the user later chooses to switch. The PC retains repository ownership;
-the independent Mac package build can continue. Do not start a duplicate build.
+Later steps implement and validate actual OS adapters, establish local movie
+readiness, and run frozen workloads sequentially on both computers under
+[the new plan](MAC_PC_PERFORMANCE_MEMORY_PLAN.md#1-sequence-and-readiness-gates).
+Its optional R067 assembly/observer reference has zero factor/solve events;
+it cannot rank physical solves. The q64/q96 physical experiment remains
+separate and once-only. Each machine change follows the
+[handoff procedure](../../AGENTS.md#switching-between-the-mac-and-pc).
 
-The scientific sequence is:
-
-1. Repair the disposable launch/report safeguards under R067; stop after its
-   saved/synthetic evidence and publication. Preserve old sources and run budgets.
-2. Implement and validate portable process-tree and host-pressure monitoring
-   using synthetic processes, first on PC and later in an explicitly transferred
-   Mac session. Freeze the monitor and selected fixture source before timing.
-3. Execute the separately scoped
-   [R067 observer/assembly reference](B2_PHYSICAL_RUNNER_REVIEW.md#repeatable-reference-decision)
-   sequentially on both hosts after their prerequisites pass. Collect reports,
-   check unchanged correctness screens, then compare cold JIT and warm assembly.
-   This reference has zero factor/solve events; it cannot rank physical LU solves.
-
-R067 defines the polynomial reference, expected outputs, comparison screens and
-provisional 600 s/1536 MiB per-host allowance. Mac available-memory semantics
-and monitoring still require validation. A matched solve fixture and physical
-host choice remain later scientific decisions. The once-only q64/q96 physical
-experiment is separate and must never serve as a repeatable benchmark.
-
-Visualization comparisons need their own frozen contract and monitor checks
-and can be explicitly scheduled independently. Check PC POV-Ray/ffmpeg
-availability too; existing Mac readiness says nothing about PC tools.
-
-**Deferred Mac task:** after the current build finishes and the user chooses to
-work on the Mac, verify the build and run the isolated movie checks below using
-Luna/medium. This establishes visualization readiness, not a speed ranking.
+The independent Mac POV-Ray build's completion is still unverified. Check its
+outcome when the movie-readiness task is selected; do not start a duplicate
+installation or benchmark while it is active. No install, render, benchmark
+or live monitor check ran in this documentation task.
 
 ## What remains to install
 
@@ -183,228 +168,26 @@ separate checks. The kinematic tracer movie is not a physical-flow validation.
 
 ## Agent protocol for Mac-versus-PC benchmarks
 
-The purpose is a choice **per project task**, with comparable outputs and
-adequate memory headroom. Imported packages, installed RAM and core counts do
-not establish relative speed. The PC's Linux path has the exercised R033
-observer/watchdogs; the Mac is a candidate for future FEM work.
+The authoritative comparison protocol is now
+[MAC_PC_PERFORMANCE_MEMORY_PLAN.md](MAC_PC_PERFORMANCE_MEMORY_PLAN.md).
+This heading is retained for existing links. The new plan specifies both
+machines equally, includes explicit benign memory/monitor checks, and keeps
+R067's numerical reference screens and all previous attempt allowances intact.
+It supersedes this page's earlier benchmark sequence and monitoring suggestions.
 
-### 1. Separate visualization readiness from the FEM research decision
-
-Trajectory/render/encode checks can proceed independently of the physical
-research review, as described in [Project Tracks](../../PROJECT_TRACKS.md).
-R067 completed the [PC scientific review](B2_PHYSICAL_RUNNER_REVIEW.md) against
-the [R021 contract](B2_COMPATIBLE_TRACE_INTEGRATION_REVIEW.md),
-[R013 limits](B2_MATCHED_TRACE_REVIEW.md) and [R033 result](B2_COMPATIBLE_TRACE_PREFLIGHT_FOLLOWUP.md),
-including the FFCx audit. Its launch/report repair is next, followed by synthetic
-monitor validation. A subsequent scoped task may implement and run the
-specified observer/assembly comparison; this checklist itself is not its
-execution authorization.
-
-Do not run `B1_SETUP.md`'s general solver examples, a B2 campaign, or an archived
-physical runner merely as an installation check. An archived runner may have
-absolute Linux paths, fixed source identities and Linux-only monitoring.
-Keep production and archived evidence intact and adapt a disposable copy.
-
-### 2. Freeze a reproducible comparison contract
-
-Before either machine runs, save a small manifest with:
-
-- Same frozen workload Git revision and hashes of runner/input/scene/include/mesh
-  files; exact commands, seed, output directory, case size and acceptance rules. Resolve dirty source
-  changes first and put both checkouts on local storage. Use WSL's Linux
-  filesystem for the PC case; record if `/mnt/c` is used because that measures
-  a different I/O path. Record the workload `source_commit` separately from
-  the later handoff/evidence `delivery_commit`: results may be committed between
-  host sessions, but each host must archive the frozen source revision rather
-  than whatever `HEAD` happens to be then. Give the comparison and each
-  host/case/repetition a unique ID; track completed and refused runs to avoid
-  accidental repetition on receipt. A coordinator must collect both machines'
-  evidence; a Mac session cannot infer current PC load or execute there automatically.
-- Full Python/NumPy/FEM versions; Conda package build, channel, subdir and artifact
-  hash; compiler, MPI and BLAS implementation; PETSc scalar/index type and
-  solver options. Native platform binaries differ, even at matching versions.
-  Save `conda list --explicit` and selected `conda-meta` records after checking
-  for credentials/private channel URLs. Never archive an entire environment.
-- POV-Ray version, render flags and worker count; ffmpeg version/build,
-  `libx264`, preset, CRF, frame rate and thread count. Match versions where
-  practical; if they differ, label the result a comparison of installed
-  software stacks and do not attribute the difference solely to hardware.
-- Fresh, timestamped load/capacity readings immediately before and after each
-  measured run: CPU/architecture/OS, power mode, available RAM, swap changes,
-  free disk and background activity. On Mac record `memory_pressure`, `vm_stat`,
-  `sysctl vm.swapusage` and `df -h .`. A memory-pressure percentage is not a
-  directly comparable available-GiB measure. On PC capture Windows host memory
-  and WSL `MemAvailable`/swap separately. They share RAM and cannot be added.
-- Explicit cumulative wall-time and sampled process-tree memory caps for the
-  entire planned sequence, including warm-ups, cold compilation and retries;
-  minimum host/guest headroom; allowed sample gap; and the stop conditions below.
-  Choose these from the reviewed workload and fresh capacity, not installed RAM
-  or an old prerequisite cap. Swap is not extra compute RAM.
-
-Make the fixture's time/memory allowance and headroom thresholds explicit for
-each host before launch, and track consumed time across sessions. Use a common
-case allowance for the baseline where both hosts can safely support it. If a
-host needs a different allowance, disclose that in the manifest and report it
-as a capacity constraint; do not silently change the workload or relax a cap
-after observing the other host's result. Capacity snapshots need to be fresh
-at each launch; matched runs need not overlap in wall-clock time.
-
-Start with one worker/thread (and one MPI rank for an approved FEM fixture):
-
-```bash
-export OMP_NUM_THREADS=1
-export OPENBLAS_NUM_THREADS=1
-export MKL_NUM_THREADS=1
-export VECLIB_MAXIMUM_THREADS=1
-export NUMEXPR_NUM_THREADS=1
-```
-
-Verify the libraries actually honor the settings. Set POV-Ray `+WT1` and ffmpeg
-`-threads 1` explicitly; these environment variables do not control them.
-Only test a second MPI rank if the selected fixture supports it. A later
-throughput comparison can choose suitable worker counts per machine, but record
-it separately from the equal-worker baseline and avoid nested thread oversubscription.
-The two-rank startup result is not proof that a solver fixture supports two ranks.
-
-### 3. Validate portable timing and resource monitoring first
-
-Use a common wrapper timing the complete child lifetime with a monotonic clock,
-including subprocesses, plus stage timing where relevant. Save return codes,
-stdout/stderr and every repetition. The archived R033
-[`toy_runner.py`](evidence/r033/source/toy_runner.py) traverses `/proc` and is
-**not runnable unchanged as a Mac memory monitor**. Before a guarded benchmark:
-
-1. Implement/adapt monitoring in a new disposable runner. On macOS, a process
-   table from `ps` or an explicitly installed/versioned process library can
-   provide PID, parent/session or process-group membership, and RSS. Follow the
-   benchmark child and descendants, including MPI/JIT compiler workers and
-   reparented processes; measure these on Linux too. Exclude the monitoring
-   parent from the budget consistently and record its overhead separately.
-2. Normalize RSS to MiB and validate units on each OS. In particular,
-   `resource.getrusage(...).ru_maxrss` is bytes on macOS and KiB on Linux.
-   Its per-process high-water values and `/usr/bin/time` output are supplementary;
-   they do not replace simultaneous process-tree RSS sampling. Sum RSS across
-   the active tree at each timestamp, then take the maximum of those sums.
-   Do not sum per-process maxima from different times. RSS sums can count
-   shared pages repeatedly, so also record host pressure/headroom separately.
-3. First exercise a synthetic timeout and a parent/child allocating and touching
-   a known memory amount, with no PDE work. Verify discovery of both processes,
-   memory and timeout stops, process-group cleanup and no live descendants.
-   Preserve R033's nominal 0.05-second polling and maximum-gap check of
-   0.1 seconds when porting that contract. If the Mac cannot meet the sampling
-   contract, record the failure and review the monitor before any FEM launch.
-   Unavailable RSS is an error, not zero; retain missing-sample and peak-gap data.
-4. Record per-process RSS at the sampled peak, maximum sample gap, host memory
-   pressure/swap deltas and the exact reason for any stop. Monitor Windows host
-   pressure as well as WSL guest capacity; a WSL-only snapshot is insufficient.
-
-There is no validated Mac monitor shipped by this documentation task. Completing
-and checking that wrapper is a prerequisite for a guarded FEM benchmark.
-
-### 4. Use fixed workloads and check outputs before interpreting speed
-
-Run each case in a fresh source/output directory. For rendering, distribute
-one identical generated include set; for encoding, distribute one identical
-PNG set. Do not compare renderings generated from different trajectories or
-encode times from different images. Keep generated includes/PNGs/meshes outside
-Git and transfer them explicitly, with an inventory and SHA-256 hashes verified
-on receipt. Identical regeneration is acceptable only after all input hashes
-match; otherwise use the preserved input artifact. Stop if a required artifact
-is missing. Repository synchronization alone does not transfer ignored outputs.
-
-| Task | Initial fixed case | Required correctness evidence |
-|---|---|---|
-| Trajectory generation | `python make_trajectories.py --frames 240 --fps 30 --beads 500 --substeps 8 --seed 20260919` | 240 includes; first/middle/last inspection; all finite coordinates and stated bounds; same-host repeat hashes; cross-host numeric/scalar comparison if hashes differ. |
-| POV-Ray | Same 240-frame includes and scene; render frames 1–10 at 1280x720, `+A0.2 -J -D -V +WT1`, overlays unchanged | Ten PNGs; inspect frames 1, 5, 10; compare decoded pixels if hashes differ. Keep `+KFF240` so timeline/numbering matches the input case. |
-| Encoding | Identical ten PNGs; software `libx264`, preset `medium`, CRF 18, 30 fps, `yuv420p`, one thread | `ffprobe` codec/dimensions/fps/count/duration; decode successfully; compare decoded content, not only MP4 hashes/container metadata. |
-| FEM assembly/observer | R067's frozen polynomial reference tetrahedra and R033 advanced observer suite; same method/orders, parameters, ranks and tolerances | Four observer cases, nine oracle comparisons, 16 facet checks, zero factor/solve events and unchanged arithmetic/flux screens; cross-host comparison under R067. A solve benchmark needs a separate contract. |
-
-The renderer command for the fixed case, after creating empty `frames/`:
-
-```bash
-povray fluid.pov +W1280 +H720 +KFI1 +KFF240 +SF1 +EF10 +KI0 +KF1 +FN -D -V +A0.2 -J +WT1 +Oframes/frame
-```
-
-The encoder command, after creating empty `movie/`:
-
-```bash
-ffmpeg -nostdin -y -framerate 30 -pattern_type glob -i 'frames/frame*.png' \
-  -c:v libx264 -preset medium -crf 18 -threads 1 -pix_fmt yuv420p \
-  -movflags +faststart movie/navier-stokes-vortex-lab.mp4
-```
-
-Freeze acceptable coordinate/scalar and decoded-image differences in the case
-manifest before seeing cross-host output; exact hashes are a useful first
-check, not a requirement for floating-point or container byte identity. A
-mismatch needs investigation before assigning a performance winner. Match FEM
-fields using mesh/global identities rather than local MPI array order. Keep
-same-rank comparisons separate from scaling experiments. These tests establish
-portability of their fixture, not the correctness of the physical experiment.
-
-For FEM report mesh setup, compilation, assembly, factorization, solve and
-postprocessing time separately when the runner exposes them, and always retain
-end-to-end wall time. A cheap smoke fixture cannot predict larger-mesh LU memory
-or high-quadrature cost: relate measured cells, DOFs, nonzeros and peak memory
-to the intended workload and state where scaling is unknown.
-
-### 5. Repetitions, caches, results and stop conditions
-
-Use one explicitly labeled warm-up and three fresh-process measured runs of
-an identical case per host; retain every time, median and range. For FEM, let
-the warm-up use a fresh JIT cache and record its cold timing separately; the
-three measured warm runs reuse only that host's cache. A cold FEM
-run uses a new empty task-local cache passed through the actual DOLFINx JIT
-`cache_dir` option. A warm run reuses that host's task-local cache, with fresh
-solver/output state. Changing only an environment variable is insufficient if
-the harness specifies its own cache. Never copy compiled caches between hosts
-or delete shared caches. Distinguish cold **JIT** from filesystem/disk cache;
-a new JIT directory does not make the OS disk cache cold.
-
-Report cold compilation/startup separately from warm execution. If a choice
-depends on cold timing, pre-budget and measure three independent cold runs too.
-Do not turn the handoff's once-only physical experiment into repeated runs:
-Astra must select a repeatable fixture or explicitly scope repetition first.
-An interrupted, inaccurate or resource-limited run remains in the record and
-is excluded from a successful-run median. Do not retry automatically or enlarge
-caps after a stop. Stop on a numerical/refusal failure, watchdog limit, unknown
-monitoring, excessive sampling gap, or pre-agreed host/guest pressure threshold.
-
-Save small reviewed provenance, measurements and a comparison report under
-`docs/realizability/evidence/<request-id>/`; large generated data belongs in
-ignored `results/realizability/` or the recorded temporary directories. Suggested
-one row per repetition (use JSON null plus a reason for unavailable values):
-
-```text
-comparison_id, run_id, host, source_commit, delivery_commit, case,
-versions_manifest, input_hashes, ranks, threads,
-cache_state, repetition, elapsed_s, stage_times_s, sampled_tree_peak_mib,
-max_sample_gap_s, host_guest_headroom, swap_delta, returncode, stop_reason,
-output_validation, output_metrics
-```
-
-Report the speed ratio as `PC median seconds / Mac median seconds` (>1 favors
-the Mac), together with ranges and memory headroom. If variation overwhelms
-the difference, report no reliable speed winner. Choose per task after
-correctness passes and memory fits. A benchmark failure does not change any
-scientific acceptance threshold; a failed accuracy gate stays failed even if
-both hosts reproduce it.
+In particular, a process ancestry scan alone does not establish complete
+containment or cleanup, and the R076 fixture pass does not validate actual
+platform adapters. Follow the review/implementation/live-validation gates
+before timing work. Source/cache/ignored-input transfer, sampling semantics,
+headroom and repetition accounting are specified in the new plan.
 
 ## Completion and model handoff
 
-The PC review is complete. Follow the R067 launch/report repair with Luna/medium,
-then stop after saved/synthetic validation and publication. Recommend Luna/medium
-for a separately bounded monitor implementation once its contract is settled;
-return to Astra/high for FEM launch decisions or unexplained numerical behavior.
-Each step is separate, not one automatic multi-machine execution.
+The future Mac movie-readiness check completes when counts, all-frame finite
+coordinates/bounds, separated image inspections and decoded MP4 metadata pass.
+Stop on failure or after recording that result. Its completion establishes
+the kinematic movie pipeline only.
 
-The deferred Mac check is complete when counts, coordinates, separated images
-and decoded MP4 metadata pass and evidence is recorded. Stop on an install/check
-failure or after that report, then follow the current handoff without replaying
-completed research work.
-
-R067 rechecked the session catalog and the official
-[Luna](https://developers.openai.com/api/docs/models/gpt-5.6-luna) and
-[Astra](https://developers.openai.com/api/docs/models/gpt-6-astra) effort support.
-Both are available in this session; recheck availability when executing. No
-model switch or background task was started. No matched benchmark has yet
-established a Mac or PC performance winner.
+Use the [current handoff](../../SESSION_HANDOFF.md#next-task) for the next task,
+model/effort, completion criteria and stops. The test plan is written; it has
+not launched another session, switched models or established a host winner.

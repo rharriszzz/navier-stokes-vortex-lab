@@ -15,8 +15,11 @@ Current continuation: follow the [single handoff task](../../SESSION_HANDOFF.md#
 R067's observer/compiler review, R070's disposable launch repair and R073's
 fake monitor checks are complete within their recorded scope. The
 [R074 adapter review](B2_MONITOR_ADAPTER_REVIEW.md) specifies the remaining
-monitor/integration work and records counterexamples; live adapters and FEM
-remain unvalidated and physical execution remains disabled.
+monitor/integration work and records counterexamples;
+[R076](evidence/r076/README.md) completes the fixture implementation.
+The [Mac/PC performance and memory plan](MAC_PC_PERFORMANCE_MEMORY_PLAN.md)
+defines future comparisons. Live adapters remain unvalidated and physical
+execution remains disabled; the handoff selects the next source/contract review.
 The following R033 reading sequence and older assignments are historical.
 
 Historical review sequence after R033: review the completed
