@@ -1,11 +1,18 @@
 # Current session handoff
 
-Last updated: 2026-09-21 for [R070](REQUEST_LOG.md#r070--2026-09-20--short-continuation-request)
-and [R071](REQUEST_LOG.md#r071--2026-09-21--correct-r070-wrong-root-hash-validation).
+Last updated: 2026-09-21 for [R072](REQUEST_LOG.md#r072--2026-09-21--add-committed-session-start-and-completion-records), following
+[R070](REQUEST_LOG.md#r070--2026-09-20--short-continuation-request) and [R071](REQUEST_LOG.md#r071--2026-09-21--correct-r070-wrong-root-hash-validation).
 The PC scientific review and disposable launch/report repair are complete.
 **Next: portable synthetic process/resource-monitor validation on this PC using
 GPT-5.6 Luna/medium.** Use the R067 monitor policy and R033 monitor source;
 physical execution remains disabled and is not authorized by this handoff.
+
+R072 adds a clean fast-forward-only pull at the start of every Continue session
+and the append-only [`WORK_SESSIONS.md`](WORK_SESSIONS.md) start/completion
+records. The next Continue must pull, log the request, publish its `STARTED`
+record before substantive work, then append its outcome/release record before
+the final scoped commit/push. This R072 documentation request did not invoke
+Continue, so it has no open session record and did not start the monitor task.
 
 The repaired copy, saved report binding, checks and five-attempt validation
 ledger are in [R070 evidence](docs/realizability/evidence/r070/result.json).
@@ -33,11 +40,11 @@ No package installation, pin change or remote Mac check occurred.
 
 | Handoff field | Current value |
 |---|---|
-| Current task/owner | PC/WSL retains ownership; R067 review and R070 repair complete; synthetic monitor task next |
+| Current task/owner | PC/WSL retains ownership; R067 review and R070 repair complete; R072 protocol update complete; synthetic monitor task next |
 | Observed identity | `daisy`, Linux/WSL2, `x86_64`, `/home/rharris/git/navier-stokes-vortex-lab` |
 | Branch/upstream | `main` / `origin/main`; clean at R070 start, stash list empty |
-| Source/base commit | `6e67a20`, same-owner continuation; no receiving pull required |
-| Delivery state | R070's Continue authorizes its scoped commit/push to `origin/main`; consult the final report/Git history for delivery state and hash |
+| Source/base commit | `a6aa35d`, R072 same-owner workflow update; this non-Continue request did not pull |
+| Delivery state | R072 requests a committed/pushed workflow change; consult the final report/Git history for delivery state and hash |
 | Task processes | All repair/validation commands exited; no background workload. Independent Mac POV-Ray build remains user-reported and unverified |
 | Required next inputs | R067 review, R033 `toy_runner.py`, R070 source/evidence manifests and the bounded monitor task; no ignored inputs or cache transfer |
 | Consumed experiments | R033 prerequisites: four attempts, 56.25128577899886 s; R070 validation: five attempts, 0.133708385 s cumulative, two failed attempts preserved; q64/q96 physical allowance unused. R020 remains last physical attempt |
@@ -140,10 +147,12 @@ In a session opened in this repository, say:
 > Continue
 
 The [short continuation request in AGENTS.md](AGENTS.md#short-continuation-request)
-defines the workflow: log the request, complete the bounded task and checks,
-update continuity, commit/push scoped work, and stop. Explicit qualifications
-such as “Continue without pushing” override that default. It does not switch
-the selected model or schedule another session. No scheduler is installed.
+defines the workflow: check ownership, pull the configured upstream with
+fast-forward-only/no-autostash flags, log the request, publish a start record,
+complete the bounded task and checks, append its completion/release record,
+commit/push scoped work, and stop. Explicit qualifications such as “Continue
+without pushing” override that default. It does not switch the selected model
+or schedule another session. No scheduler is installed.
 
 ## Switching computers safely
 

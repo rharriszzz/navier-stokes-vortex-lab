@@ -43,6 +43,22 @@ Commit/push authorization must come from the user, including the short
 continuation request defined below. Record its scope and honor it without
 asking again; logging alone does not authorize every future push.
 
+For every `Continue` session, also use the append-only `WORK_SESSIONS.md`
+coordination log. After the clean fast-forward pull and request-log entry,
+append a `STARTED` record with the request ID, UTC time, human machine label,
+hostname/OS/architecture, checkout path, branch/upstream, starting commit and
+bounded task. Commit and push this start record before substantive work. If
+that publication fails, stop before the task. At task completion, append a
+matching `COMPLETED` record with the UTC end time, outcome, changed files,
+checks/skips, evidence, next task and release state before staging the scoped
+task changes and making the final commit/push. Do not edit the log after that
+push; report the delivery commit in the final response because a commit cannot
+contain its own hash. If the same request already has an open `STARTED` record,
+resume it rather than adding a duplicate. An open record on another owner
+requires the existing handoff/release procedure. These committed records help
+coordinate owners but are not a lock and cannot reveal another checkout's
+unpublished work or live processes.
+
 ## Short continuation request
 
 When the user says **Continue** as a task instruction in this repository
@@ -50,23 +66,34 @@ When the user says **Continue** as a task instruction in this repository
 This shorthand replaces the long prompt at the user's request, R003 in
 `REQUEST_LOG.md`; it includes authorization to commit and push the scoped work.
 
-1. If receiving a machine handoff, synchronize as described below first.
-   Record the user's actual words in `REQUEST_LOG.md`. Check `git status`, read
-   `SESSION_HANDOFF.md` and its required documents, and identify the current
-   bounded task. Resume unfinished work before starting the next listed task;
-   use recorded outcomes and Git history to avoid repeating completed work.
+1. Perform the read-only identity, ownership, Git status/branch/upstream and
+   stash checks. Read `SESSION_HANDOFF.md`, the latest request entries and any
+   open `WORK_SESSIONS.md` record. Do not pull over staged, unstaged or
+   untracked work; inspect/fetch upstream read-only if needed, then stop to
+   reconcile local work deliberately. On a clean intended branch, always run
+   `git pull --ff-only --no-rebase --no-autostash` against its configured
+   upstream, for same-owner continuations as well as receiving handoffs. If it
+   fails, conflicts, or histories diverge, stop and reconcile explicitly; do
+   not reset, rebase, force, or enable autostash. Review incoming commits and
+   reread the updated handoff/log. Then append the actual user request to
+   `REQUEST_LOG.md`, identify the bounded task, and append/commit/push its
+   `STARTED` record in `WORK_SESSIONS.md` before substantive work. Resume an
+   unfinished same-owner task rather than starting the next listed task.
 2. Carry out that task and its prescribed checks through completion. Preserve
    user work, scientific assumptions, acceptance thresholds, and recorded stop
    conditions. Fix understood implementation errors within the task's scope.
 3. At completion or a research-decision boundary, record evidence, changed
    files, checks/skips, and unresolved questions. Update the request log,
-   relevant Markdown, and `SESSION_HANDOFF.md` with one concrete next task,
-   model/effort recommendation, completion criteria, and stopping conditions.
-   Explain when the next model should recommend a different model/effort.
+   relevant Markdown, `SESSION_HANDOFF.md`, and the matching completion entry
+   in `WORK_SESSIONS.md` with one concrete next task, model/effort
+   recommendation, completion criteria, stopping conditions, and owner release
+   state. Explain when the next model should recommend a different
+   model/effort. Append the completion entry before final staging/commit/push.
 4. Stage only the task's changes, commit, and push to the current branch's
    configured upstream. Honor this authorization without asking the user to
    repeat it. Preserve unrelated changes and Git history; do not force-push.
    Report any actual permission, remote, or publication blocker accurately.
+   Do not make a post-push log edit.
 5. Stop at the bounded task's recorded stopping point. Report the result,
    checks, commit/push outcome, and recommended next model/effort concisely.
    Give **Continue** as the next prompt instead of another long instruction.
