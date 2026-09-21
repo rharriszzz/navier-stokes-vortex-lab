@@ -6,6 +6,8 @@ pulled through `096f75a`, checked the live Mac tools, and revised
 [MAC_INSTALL_AND_BENCHMARK_PLAN.md](docs/realizability/MAC_INSTALL_AND_BENCHMARK_PLAN.md).
 It is the current entry point for remaining installation and future host comparisons.
 R058 authorizes committing and pushing these documentation/readiness updates.
+The guide and readiness evidence were committed as `5c4a5a5` and pushed to
+`origin/main`; this delivery record completes that same authorized publication.
 
 MacPorts is installed at `/opt/local/bin/port`; POV-Ray is absent from PATH and
 the MacPorts registry. The next install command is
