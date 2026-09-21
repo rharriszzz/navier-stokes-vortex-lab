@@ -1,9 +1,9 @@
 # Current session handoff
 
 Last updated: 2026-09-20. Latest request:
-[R037](REQUEST_LOG.md#r037--2026-09-20--confirm-the-github-ssh-key-fingerprint),
-which confirmed the GitHub fingerprint matches the existing Ed25519 key.
-R034 and the SSH recovery records were committed and pushed successfully. The
+[R047](REQUEST_LOG.md#r047--2026-09-20--identify-useful-mac-versus-pc-decision-checks),
+which identified the measurements needed to compare the Mac and PC for a future FEM job. R034 and the SSH recovery
+records were committed and pushed successfully. The
 user permits using the PC
 within its capabilities; the former small diagnostic caps are not immutable
 user requirements. R023–R032 did not invoke Continue or authorize publication
@@ -252,6 +252,71 @@ recreate compatible dependencies, adapt monitoring in a new copy, and run a
 small reference comparison under unchanged scientific tolerances. Preserve
 the PC checkpoint and historical evidence; do not copy Linux binaries/JIT
 caches as a Mac environment or silently upgrade the numerical stack.
+
+## R039 Mac FEM installation guidance
+
+The user wants to install the FEM stack on the M4 Mac. The project pins
+Python 3.12.13, DOLFINx/Basix 0.10.0, UFL 2025.2.1, FFCx 0.10.1,
+PETSc/PETSc4py 3.25.5, MPICH 5.0.1, mpi4py 4.1.2, Gmsh/python-gmsh 4.15.2,
+NumPy 2.5.3 and SciPy 1.18.1 in `environment-b1.yml`. Official FEniCS
+instructions recommend Conda for macOS. The verified package listings show
+DOLFINx 0.11.0 on osx-arm64, while the located DOLFINx 0.10.0 binary is
+osx-64/Python 3.11; native availability of the project's exact 0.10.0/Python
+3.12.13 combination is not established. Do not silently substitute 0.11 or
+edit the existing environment.
+
+Recommended safe first attempt: install the Apple Silicon **Miniforge** build,
+open a fresh Terminal, and verify `conda info` reports `osx-arm64`. From the
+repository root, run
+`conda search --override-channels -c conda-forge 'fenics-dolfinx=0.10.0'`.
+If an osx-arm64 build is listed, try the unchanged
+`conda env create -f environment-b1.yml`. The environment is isolated from
+MacPorts Python. If the exact package or full environment solve is refused,
+stop and preserve the solver message; review a separate candidate stack before
+changing versions. PETSc4py 3.25.5, MPICH 5.0.1 and Gmsh 4.15.2 list arm64
+builds, but that alone does not establish the whole environment solves.
+POV-Ray was not found on PATH; ffmpeg/ffprobe were. No packages were installed
+in R039. Continue the Astra/high physical-path review on the PC while Mac
+environment compatibility remains unresolved.
+
+## R046 Mac FEM environment check
+
+The user created Conda environment `navier-stokes-vortex-b1` at
+`/Users/rharris/miniconda3/envs/navier-stokes-vortex-b1`. Imports succeeded for
+Python 3.12.13, DOLFINx 0.10.0, Basix 0.10.0, UFL 2025.2.1, PETSc/PETSc4py
+3.25.5, mpi4py 4.1.2, Gmsh 4.15.2, NumPy 2.5.3 and SciPy 1.18.1. Conda lists
+the pinned `fenics-ffcx` distribution as 0.10.1, while `ffcx.__version__`
+reports 0.10.0; retain this as a reproducibility discrepancy for the next
+review rather than changing the stack. A two-rank MPI launch succeeded with
+MPICH 5.0.1. The sandbox denied MPICH access to `en1`; the same checks passed
+after an approved out-of-sandbox rerun. No physical solver was run. The Mac
+stack now imports and launches MPI, but no FEM assembly/solve or numerical
+reference comparison was run, so migration suitability remains unestablished.
+
+## R047 Mac versus PC decision measurements
+
+The existing evidence does not establish which machine is faster or better
+suited to the next FEM task: the Mac has a recorded M4/24 GiB snapshot and its
+environment now imports/starts two-rank MPI; PC host/WSL memory readings are
+older and there is no matched benchmark. During the next scientific review,
+estimate the intended workload's mesh/order, solver and memory needs. Before a
+separately authorized reference run, refresh host/guest capacity on both
+machines and run the same small, non-campaign FEM reference workload with the
+same versions, inputs and MPI ranks. Compare wall time, peak process-tree RSS,
+residual/convergence behavior and output agreement under existing tolerances;
+retain memory headroom and watchdogs. Generic CPU tests or RAM capacity alone
+are insufficient. No FEM benchmark or solver was launched for R047. The
+handoff's GPT-6 Astra/high review remains the next task and must stop before
+physical execution; it should include workload sizing and treat the FFCx
+distribution/module version discrepancy as an open reproducibility detail.
+
+R041 clarifies the user's preference for software published by Anaconda Inc.
+Recommend the official Miniconda Apple Silicon `.sh` installer, not Miniforge.
+Anaconda currently lists macOS 12.1+ for Miniconda on Apple Silicon, compatible
+with the recorded macOS 26.6.2. Use Miniconda as the conda manager but retain
+the project's `conda-forge` source and exact environment pins. No software was
+installed; native arm64 availability of the exact DOLFINx 0.10.0/Python 3.12.13
+combination remains unresolved.
 
 ## Next task
 

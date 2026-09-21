@@ -2330,3 +2330,134 @@ review recorded in `SESSION_HANDOFF.md`.
 **Outcome, 2026-09-20:** The supplied fingerprint exactly matches the local `id_ed25519` fingerprint from the successful explicit SSH diagnostic; GitHub accepted the key and authenticated `rharriszzz`. The issue was SSH identity selection in the session, not key expiry. The R034 commit is being published over SSH.
 
 **Delivery update, 2026-09-20:** Changed `origin` to `git@github.com:rharriszzz/navier-stokes-vortex-lab.git`. Commits `da46593` and `b15a562` pushed successfully to `origin/main`. No force push was used.
+
+## R038 — 2026-09-20 — Summarize the Mac configuration
+
+**User request (verbatim):**
+
+> can you please tell me what you learned about this mac's configuration? then I will switch back to my pc for the next step.
+
+**Interpreted scope:** Summarize the recorded Mac hardware, resource snapshot, installed numerical/rendering tools, FEM environment compatibility, and machine-selection implication. No configuration changes requested.
+
+**Status:** Complete; summary provided.
+
+## R039 — 2026-09-20 — Request Mac software installation instructions
+
+**User request (verbatim):**
+
+> I would be happy to install all the required software now, please tell me what to do.
+
+**Interpreted scope:** Check current official macOS installation guidance and compatibility with the repository's pinned FEM environment; recommend and provide safe installation/validation instructions without silently changing scientific versions or installing packages in this session.
+
+**Status:** Complete; exact pinned installation instructions provided with a platform compatibility stop.
+
+**Outcome, 2026-09-20:** The project pins Python 3.12.13, DOLFINx 0.10.0, Basix 0.10.0, UFL 2025.2.1, FFCx 0.10.1, PETSc/PETSc4py 3.25.5, MPICH 5.0.1, mpi4py 4.1.2, Gmsh/python-gmsh 4.15.2, NumPy 2.5.3 and SciPy 1.18.1. Official FEniCS guidance recommends conda on macOS; Miniforge provides an Apple Silicon installer. Current conda-forge listings show DOLFINx 0.11.0 on osx-arm64; the 0.10.0 binary located in the listing is osx-64/Python 3.11, so exact native compatibility with this repository's 0.10.0/Python 3.12.13 pins is not established. PETSc4py 3.25.5, MPICH 5.0.1 and Gmsh 4.15.2 have osx-arm64 builds. Recommended first action is install Miniforge ARM64, verify the platform, search for the exact DOLFINx pin, then try the unchanged environment file only if the package exists; stop on solver refusal. No packages were installed and no project pin was changed.
+
+**Checks/skips and next task:** Reviewed `environment-b1.yml`, the R034 Mac snapshot, official FEniCS download guidance, Miniforge platform support and conda-forge package listings. No Mac command, environment solve or numerical check was run. Continue the Astra/high observer and physical-path review on the PC; any Mac stack update requires a separate isolated candidate environment and comparison under unchanged scientific tolerances.
+
+## R040 — 2026-09-20 — Report macOS version incompatibility
+
+**User request (verbatim):**
+
+> This version is incompatible with the version of macos
+
+**Interpreted scope:** Identify which recommended software/version the user means, compare it with official platform requirements, and provide the compatible installation route without changing project FEM pins.
+
+**Status:** In progress; exact installer/error text not yet known.
+
+**Finding, 2026-09-20:** The official Miniforge requirements list macOS 11.0+ for Apple Silicon; the recorded macOS 26.6.2 is above that minimum, though the project marks Apple Silicon Miniforge builds experimental. The official project also provides a macOS `.sh` installer. The exact version/installer that produced the user's incompatibility message remains unknown, so distinguish a `.pkg` installer rejection from Conda's resolution of the pinned DOLFINx environment before changing anything.
+
+## R041 — 2026-09-20 — Prefer Anaconda's official Conda distribution
+
+**User request (verbatim):**
+
+> I would prefer to install conda from the company that made it.
+
+**Interpreted scope:** Recommend Anaconda's official Conda distribution option for this Apple Silicon Mac, verify current official installer guidance, and provide installation/verification steps without altering project package pins.
+
+**Status:** Complete; official Miniconda ARM64 instructions provided.
+
+**Outcome, 2026-09-20:** Recommended Miniconda from Anaconda Inc. as the official lightweight Conda installer, using Anaconda's Apple Silicon `.sh` installer rather than the previously suggested Miniforge package. Anaconda's current requirements list macOS 12.1+ for Apple Silicon; the recorded macOS 26.6.2 meets that requirement. The project environment still draws FEM packages from conda-forge per its YAML. No software was installed. Exact DOLFINx 0.10.0 native arm64 availability remains unresolved; users should search for that build and stop on a package/solver conflict rather than changing project pins.
+
+## R042 — 2026-09-20 — Choose Conda shell initialization behavior
+
+**User request (verbatim):**
+
+> what do you recommend for this question: Do you wish to update your shell profile to automatically initialize conda?
+> This will activate conda on startup and change the command prompt when activated.
+> If you'd prefer that conda's base environment not be activated on startup,
+>    run the following command when conda is activated:
+>
+> conda config --set auto_activate_base false
+>
+> Note: You can undo this later by running `conda init --reverse $SHELL`
+
+**Interpreted scope:** Recommend whether to initialize Conda in the user's shell and whether to disable automatic base activation; no shell configuration changes requested here.
+
+**Status:** Complete; recommendation provided.
+
+## R043 — 2026-09-20 — Initialize Conda in the current shell
+
+**User request (verbatim):**
+
+> conda is not in this shell yet, remind me what to do
+
+**Interpreted scope:** Provide the commands to activate the newly installed Miniconda and initialize zsh so Conda is available in future Terminal sessions.
+
+**Status:** Complete; commands provided.
+
+## R044 — 2026-09-20 — Ask for the next Mac installation step
+
+**User request (verbatim):**
+
+> what do I install next?
+
+**Interpreted scope:** Give the next Conda setup and exact pinned-package availability check, then the environment creation command only if the project DOLFINx pin is available for Apple Silicon.
+
+**Status:** Complete; next commands provided.
+
+## R045 — 2026-09-20 — Report successful Conda environment creation
+
+**User request (verbatim):**
+
+> It seems to have finished just fine.
+
+**Interpreted scope:** Provide concise post-install checks for the isolated project environment and pinned numerical packages; do not launch any physical computation.
+
+**Status:** Complete; verification commands provided.
+
+## R046 — 2026-09-20 — Verify the Mac FEM Conda environment
+
+**User request (verbatim):**
+
+> Can you do these steps, please? Just check the working directory, activate, then do the complicated stuff
+
+**Interpreted scope:** Confirm the current repository directory, activate `navier-stokes-vortex-b1`, and run the previously provided import/version and two-rank MPI checks. Do not run the physical solver.
+
+**Status:** Complete; environment imports and MPI startup verified.
+
+**Outcome, 2026-09-20:** Confirmed the working directory is the repository root and Conda environment `navier-stokes-vortex-b1` exists under `/Users/rharris/miniconda3/envs`. Python 3.12.13; DOLFINx 0.10.0; Basix 0.10.0; UFL 2025.2.1; PETSc/PETSc4py 3.25.5; mpi4py 4.1.2; Gmsh 4.15.2; NumPy 2.5.3; SciPy 1.18.1. Conda package metadata reports `fenics-ffcx` 0.10.1 as pinned, while the imported `ffcx.__version__` reports 0.10.0. This discrepancy is recorded for review; no package changes were made. A two-process MPICH launch succeeded and reported MPICH 5.0.1. Initial in-sandbox MPI initialization was denied access to interface `en1`; rerunning the requested checks outside the sandbox succeeded. The login zsh emitted harmless session-history write warnings due to sandbox restrictions. No physical solver was run.
+
+**Files/checks/next task:** Updated this log and `SESSION_HANDOFF.md`; no source or environment files changed. Import/version and two-rank MPI checks passed, with the FFCx module/distribution version distinction above. Continue the documented GPT-6 Astra/high scientific review on the PC per the handoff; address the FFCx discrepancy as a reproducibility detail within that review. Stop before physical execution.
+
+## R047 — 2026-09-20 — Identify useful Mac-versus-PC decision checks
+
+**User request (verbatim):**
+
+> Are there any other steps you could run that will help future steps decide wheter the mac or the pc is best for that step?
+
+**Interpreted scope:** Identify useful, safe evidence to choose a host for the next FEM task, respecting the current handoff stop before physical execution.
+
+**Status:** Complete; comparison plan provided. No benchmark or solver run authorized/performed.
+
+**Outcome/checks/skips:** Existing evidence records Mac M4/24 GiB, environment imports and 2-rank MPI startup; PC evidence is an older Windows/WSL capacity snapshot. Neither is a matched performance or peak-memory measurement. Recommend first estimating the reviewed job's runtime and memory from its mesh/order/solver workload, then taking fresh simultaneous host/guest capacity readings and running the same small non-campaign FEM reference workload on both machines with identical environment versions, ranks and inputs. Compare wall time, peak process-tree RSS, convergence/residuals and output agreement under existing tolerances, keeping headroom and watchdogs. The active handoff requires the Astra/high scientific review before any physical run, so no FEM benchmark was launched here. No files beyond this log and handoff were changed; no physical evidence produced.
+
+## R048 — 2026-09-20 — Publish Mac verification and host-comparison handoff
+
+**User request (verbatim):**
+
+> can you please add commit and push, so that the other one will know?
+
+**Interpreted scope:** Commit and push the pending project continuity updates describing the Mac FEM environment verification and the recommended Mac-versus-PC comparison, so the PC/Astra session can read them.
+
+**Status:** In progress; publication authorized for the reviewed continuity files.
