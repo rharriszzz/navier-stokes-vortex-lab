@@ -27,7 +27,9 @@ R084 then completed the next fixture-only repair bundle in a separate copy; its
 attempt 3 and two preserved non-resource fixture corrections. Follow the
 current [next task](../../SESSION_HANDOFF.md#next-task). The
 [R085 review](B2_MONITOR_R084_REVIEW.md) verifies the saved 22-function result
-but identifies residual integration/timing/protocol/accounting gaps. Windows collection,
+but identifies residual integration/timing/protocol/accounting gaps.
+[R088](evidence/r088/README.md) adds a composed fixture path with 14 passing
+groups; acceptance and the excluded outer measurement scope need review. Windows collection,
 live validation and physical launch remain separate obligations specified below.
 
 No numerical method, boundary condition, observer, solver, package pin or

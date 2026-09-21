@@ -18,7 +18,9 @@ not implement the missing harness or certify the host. The next bounded work
 is defined by the current handoff. R082 implemented fixture repairs; the
 [R083 review](B2_MONITOR_R082_REVIEW.md) records remaining gaps and bounds the
 later harness. The [R085 review](B2_MONITOR_R084_REVIEW.md) confirms residual
-R084 integration gaps; its handoff prerequisite comes before OS implementation.
+R084 integration gaps. [R088](evidence/r088/README.md) adds the composed fixture
+repair with 14 passing groups; acceptance/outer-measurement review remains the
+handoff prerequisite before OS implementation.
 Native collection, live validation, Mac monitor decisions and
 performance comparisons remain subsequent work.
 

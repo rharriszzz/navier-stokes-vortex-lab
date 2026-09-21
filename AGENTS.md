@@ -12,6 +12,13 @@ Record only requests actually available in the conversation. Context blocks and
 automatic continuation messages are not new user requests. Redact credentials
 or other secrets and label the redaction; do not copy private session files.
 
+R088's user-supplied session reporting order is: preserve the final “worked for”
+message, then `/new`, then `/status`, and send those excerpts for recording.
+Record the supplied text with session attribution; the completion message may
+belong to the old session while the later status belongs to the new one. Treat
+values as user-reported snapshots, redact account details/secrets, and explicitly
+note missing excerpts. Do not infer command output or read private session files.
+
 At every session start, perform the read-only machine/ownership checks below
 before repository writes or workload execution. For every Continue start and
 receiving-computer handoff, perform ownership/status checks and clean

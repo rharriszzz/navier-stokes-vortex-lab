@@ -1,0 +1,1 @@
+{"attempt":1,"budget_seconds":120.0,"executable":"/tmp/navier-fenicsx/bin/python","python":"3.12.13 | packaged by conda-forge | (main, Mar  5 2026, 16:50:00) [GCC 14.3.0]","schema":1,"setup_final_reserved_seconds":20.0,"started_utc":"2026-09-21T20:15:41Z","state":"STARTED","status":"partial","validator_address_space_bytes":268435456}

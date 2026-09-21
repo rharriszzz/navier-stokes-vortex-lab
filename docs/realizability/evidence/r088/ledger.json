@@ -1,0 +1,1 @@
+{"attempts":[{"charged_seconds":5.632544717984274,"receipt_sha256":"8a7c5965e47c6739dde9dfde9b53e21aa549610bfea5d150124cb0ff1544f65a","resource_stop":false,"returncode":0,"schema":1,"state":"COMPLETED","status":"passed"}],"cumulative_charged_seconds":5.632544717984274,"limit_seconds":120.0,"schema":1,"unknown_intervals_not_zero":true}

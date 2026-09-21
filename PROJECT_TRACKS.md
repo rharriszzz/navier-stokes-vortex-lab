@@ -160,8 +160,9 @@ understood non-resource fixture assertions retained and reconciled within the
 same 120 s allowance. R082 archives and production pins remain unchanged; the
 physical CLI/API remains disabled. The [R085 review](docs/realizability/B2_MONITOR_R084_REVIEW.md) verifies that
 saved result and identifies residual ownership/composition, cleanup timing,
-protocol and accounting gaps. The current handoff selects one integrated
-fixture repair before OS implementation. The
+protocol and accounting gaps. [R088](docs/realizability/evidence/r088/README.md)
+adds that composed fixture repair with 14 passing groups in its first attempt.
+The current handoff selects acceptance/outer-measurement review before OS implementation. The
 [Mac/PC performance and memory plan](docs/realizability/MAC_PC_PERFORMANCE_MEMORY_PLAN.md)
 specifies future comparisons and their monitor prerequisites. Follow the single
 [current handoff task](SESSION_HANDOFF.md#next-task) for the task and

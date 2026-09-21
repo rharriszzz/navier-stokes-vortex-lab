@@ -1,0 +1,24 @@
+{
+  "append_only_logs": 2,
+  "base_commit": "3c281981ea370bd3841aa0bf19f1dd07d4d4e4f2",
+  "checker_sha256": "dcafe81c883d26fd827ea1d761a9f03859f325e4cb8135e419e7b1348557381a",
+  "delivery_state": "completion prepared; actual delivery reported after push",
+  "finite_json_files": 10,
+  "fixture_attempts": 1,
+  "fixture_groups": 14,
+  "heading_fragments": 25,
+  "limitations": "guard startup/final persistence exclusions remain; fixture evidence only",
+  "live_or_physical_runs": 0,
+  "local_links": 191,
+  "preserved_evidence_files": 1308,
+  "preserved_files": 1398,
+  "published_start": "ab41139",
+  "python_syntax_files": 17,
+  "request_ids": 88,
+  "snapshot_bound_files": 16,
+  "staged_whitespace_findings": [
+    "docs/realizability/evidence/r088/attempt_01/snapshot/source/primitives.py:226: new blank line at EOF.",
+    "docs/realizability/evidence/r088/source/primitives.py:226: new blank line at EOF."
+  ],
+  "status": "passed_with_preserved_source_whitespace_exception"
+}
