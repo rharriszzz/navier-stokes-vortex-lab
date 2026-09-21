@@ -1,0 +1,12 @@
+{
+  "status": "passed",
+  "scope": "documentation and current resource-policy consistency only",
+  "markdown_files": 4,
+  "local_links_and_anchors": 58,
+  "production_pins_unchanged": 19,
+  "prior_evidence_unchanged": true,
+  "request_history_preserved": true,
+  "resource_snapshot_valid": true,
+  "proposed_toy_headroom_at_snapshot": true,
+  "numerical_executions": 0
+}

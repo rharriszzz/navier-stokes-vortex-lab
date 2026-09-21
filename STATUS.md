@@ -1,8 +1,9 @@
 # Project status: physical preparation and a realistic movie
 
 Updated 2026-09-20 for
-[R022](REQUEST_LOG.md#r022--2026-09-20--continue-with-overall-progress-in-statusmd),
-following the higher-order prerequisite tests and their memory-cap stop.
+[R033](REQUEST_LOG.md#r033--2026-09-20--continue-r022-prerequisite-coverage),
+after the complete disposable prerequisite and observer suite passed. Resource
+guidance below includes the R023/R024 capacity clarifications.
 The goals below preserve the
 [R010 status-report request](REQUEST_LOG.md#r010--2026-09-20--project-status-and-user-goals).
 
@@ -29,7 +30,7 @@ fluid calculation has not yet passed its physical accuracy checks.
 | Milestone | Position now | Work still needed |
 |---|---|---|
 | Explain the apparatus and intended motion | Illustrative movie pipeline implemented | Further visual refinement is possible; label the prescribed flow clearly. |
-| Trust the numerical boundary response | Current active stage; verification tools exist, physical accuracy gate fails | Finish the capped compatibility tests, then complete the matched-boundary comparison and resolve the resulting accuracy questions. |
+| Trust the numerical boundary response | R033 toy prerequisites and observer coverage pass; physical accuracy gate still fails | Review the exercised observer and physical launch path, then decide separately whether to run the conditional matched-boundary comparison and resolve its accuracy questions. |
 | Determine what exterior actuators can influence | Benchmark commands/features defined; full six-input response campaign has not begun | Validate responses, then assess independent influence, conditioning and required amplitudes/times. |
 | Determine what exterior sensors can distinguish | Basic sensor fixtures exist; B3 sensing study has not begun | Test pressure/PIV information with realistic noise, resolution and delay. |
 | Prepare the desired initial flow | Concept and candidate hardware only | Define acceptable initial-state errors; test a finite actuator layout and its physical limits. |
@@ -203,27 +204,26 @@ evidence of realizability.
 
 ## Latest checkpoint and the immediate next step
 
-The [R022 prerequisite result](docs/realizability/B2_COMPATIBLE_TRACE_PREFLIGHT_RESULT.md)
-adds a disposable implementation of the R021 q=64/q=96 comparison and its
-pre-solve compatibility barrier. The five original prerequisite phases,
-wrong-root refusal and parent refusal passed. Both complex polynomial traces
-passed their high-order projection and load checks on all four faces at both
-orders: **16 checked facet cases**. Those tests validate polynomial integration
-on a toy tetrahedron; they do not establish physical response accuracy.
+The [R033 prerequisite result](docs/realizability/B2_COMPATIBLE_TRACE_PREFLIGHT_FOLLOWUP.md)
+completes the disposable q=64/q=96 fixture and the actual pre-solve observer
+checks. The five original phases, wrong-root and parent refusals, 16 high-order
+facet checks, missing-layout/wrong-offset/lifting refusals, and compatible
+P/A/A plus incompatible P/first-A/second-A cases all passed. The observer ran
+once per case, agreed with the full block oracle, and recorded zero factor or
+solve events. Four attempts used 56.25 seconds cumulatively; the largest
+sampled child-tree RSS was 571.42 MiB, below the capacity-sized 1536 MiB cap.
+The final cache-reuse pass peaked at 171.24 MiB. Two understood fixture defects
+were repaired in the disposable copy, and every attempt was preserved.
+**No physical child, PDE solve, factorization or flow response ran.** The B2
+physical accuracy gate remains failed. The next step is an Astra/high review of
+the observer and remaining physical path before any separately scoped physical
+comparison.
 
-The new test child then reached **513.61 MiB**, exceeding the unchanged
-**512 MiB** child-tree cap, and the watchdog stopped it. Across both recorded
-toy attempts, including a corrected JSON-reporting bug, elapsed time was
-**16.41 seconds**. The actual harmonic pre-solve observer tests were not reached.
-**No physical child, PDE solve, factorization or new flow response ran.** The
-new runner remains unvalidated for physical execution.
-
-The next bounded task is to isolate the high-order and observer toys in separate
-processes and improve stage/memory reporting, preserving all tests and the
-60 s/512 MiB cumulative toy limits. It stops after a complete prerequisite
-result or another finite refusal, before physical execution. The
-[session handoff](SESSION_HANDOFF.md) gives the exact checks and stopping rules.
-A later physical attempt would still need to satisfy the
+R023's qualified 600-second/2048-MiB allowance was sized down for R033 after
+the live Windows host check: the first launch used a 1536-MiB child-tree cap
+with 2.66 GiB host memory available, and subsequent readings showed more
+headroom. The R022 prerequisite work is now complete. Any later physical
+attempt needs its own capacity estimate and must satisfy the unchanged
 [R021 experiment contract](docs/realizability/B2_COMPATIBLE_TRACE_INTEGRATION_REVIEW.md).
 
 The latest physical attempt remains
@@ -234,3 +234,68 @@ allocation and total FEM error floor remain unknown. The physical-response
 campaign stays blocked (`campaign_ready=false`). Preparation, sensing, hardware
 feasibility and a validated movie trajectory remain the later milestones
 listed above.
+
+## What the resource budgets mean
+
+The previous 60-second/512-MiB toy allowance and 180-second/1.5-GiB physical
+allowance were conservative watchdog settings chosen for bounded diagnostic
+tasks. They were not hardware limits, a monetary budget, or numerical accuracy
+criteria. A “toy” is a small verification problem, such as one tetrahedron with
+a known polynomial velocity, used to check the implementation before a larger
+flow calculation.
+
+“Cumulative” applies to wall-clock time across the prerequisite phases and
+failed attempts within that task. Imports, compilation and test reporting
+count; analysis, editing and time between separate attempts do not. R022 used
+5.24 seconds in its first attempt and 11.17 seconds in its second, totaling
+16.41 seconds. This is not a running allowance for the lifetime of the project.
+
+Memory is checked separately: the watchdog samples the sum of resident RAM
+reported for the active test and its descendant processes, including compilers,
+about every 0.05 seconds. Memory peaks from sequential tests are not added
+together. Summed process RSS can count shared pages more than once; it is a
+conservative process-tree measure, not the whole computer's memory usage.
+R022 was stopped at 513.61 MiB by that watchdog, not by a reported system
+out-of-memory condition.
+
+The [R023 resource snapshot](docs/realizability/evidence/r023/resources.json)
+shows approximately **7.6 GiB RAM visible to WSL**, with **6.3 GiB available**
+at inspection, and 28 logical CPUs visible. A subsequent
+[R024 Windows check](docs/realizability/evidence/r024/resources.json) found
+**15.7 GiB usable host RAM, with 2.1 GiB available**. WSL then reported about
+6.8 GiB available inside the guest. The two availability readings describe
+different views of shared physical RAM; they cannot be added. Available RAM
+varies as other applications run.
+
+The user reports Chrome using 2.7 GB. Closing unused tabs/apps can make room
+before larger calculations. The current approximately 8 GiB WSL ceiling was
+sufficient for the completed prerequisite run, so increasing that ceiling was
+unnecessary. It is consistent with the default of half the host's memory;
+the user confirmed **8 GB memory and 2 GB swap** in WSL Settings in R025.
+Swap is disk-backed overflow and is not counted as RAM for the planned test.
+Microsoft documents inspection/configuration through Start-menu WSL Settings
+or `%UserProfile%\.wslconfig` in its
+[WSL configuration guidance](https://learn.microsoft.com/en-us/windows/wsl/wsl-config).
+
+The user authorizes using the PC within its capabilities. Future local jobs
+should use allowances based on available RAM and expected work, leaving room
+for the operating system and other applications. R033 rechecked both Windows
+and WSL before each attempt, did not count swap as RAM, and preserved its
+600-second/1536-MiB limit. The next task is a review before any physical launch;
+size a later physical allowance separately. Preserve watchdogs, finite reports,
+scientific acceptance thresholds and the recorded experiment scope. Historical
+R022 resource results remain unchanged.
+
+The user also has a **24 GB Mac** (R031). The prerequisite task has now
+completed on the PC, reaching the promised machine-choice checkpoint before
+the next physical calculation. This work did not require a move. The Mac's CPU,
+available memory and environment remain unverified, and the physical workload
+has not been estimated. Compare both machines against that workload before
+recommending transfer. Flag a move sooner if actual host/guest memory pressure
+prevents comfortable execution or a larger planned run exceeds available PC
+headroom. A watchdog cap alone does not establish that a move is necessary.
+FEniCSx has a [macOS installation route](https://fenicsproject.org/download/),
+but our pinned dependencies and Linux-specific monitoring need a portability
+check and a small numerical comparison before migration. The
+[handoff](SESSION_HANDOFF.md#r031-mac-decision-checkpoint) records the decision
+trigger; no transfer or background reminder has been scheduled.

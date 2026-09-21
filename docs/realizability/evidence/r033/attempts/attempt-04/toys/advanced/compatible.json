@@ -1,0 +1,403 @@
+{
+  "status": "passed_toy_sentinel",
+  "stage": "observer_case_complete_compatible",
+  "primary_rhs": 0,
+  "attempted_primary_solves": 0,
+  "returned_primary_solves": 0,
+  "correction_rhs": 0,
+  "matrix_solves": 0,
+  "physical_meshes": 0,
+  "injections": [],
+  "oracle_checks": [
+    {
+      "name": "P",
+      "maximum_error": 1.3877787807814457e-17,
+      "tolerance": 2.0884174729489195e-13,
+      "pressure_lifting_norm": 0.0687184270936277,
+      "exact_essential": true
+    },
+    {
+      "name": "A_64",
+      "maximum_error": 6.938893903907228e-18,
+      "tolerance": 2.0884174729489195e-13,
+      "pressure_lifting_norm": 0.0687184270936277,
+      "exact_essential": true
+    },
+    {
+      "name": "A_96",
+      "maximum_error": 6.938893903907228e-18,
+      "tolerance": 2.0884174729489195e-13,
+      "pressure_lifting_norm": 0.0687184270936277,
+      "exact_essential": true
+    }
+  ],
+  "pre_solve_observer": {
+    "anchor_line": 321,
+    "solve_line": 339,
+    "calls": 1,
+    "toy_stop": true,
+    "factor_counts": {
+      "MatLUFactorSym": 0,
+      "MatLUFactorNum": 0,
+      "MatSolve": 0
+    }
+  },
+  "pre_solve_operator": {
+    "digest": "9e269b987cc8d223d4336c9cfead1e14f4d1a7c658962c8696f44dbd327f5c4c",
+    "state": 67,
+    "offsets": [
+      0,
+      30,
+      34,
+      64,
+      68
+    ],
+    "constrained_count": 48,
+    "layout": {
+      "type": "mpi",
+      "local_size": 68,
+      "global_size": 68,
+      "ownership_range": [
+        0,
+        68
+      ],
+      "owned_offsets": [
+        0,
+        30,
+        34,
+        64,
+        68
+      ],
+      "ghost_offsets": [
+        68,
+        68,
+        68,
+        68,
+        68
+      ],
+      "array_size": 68
+    },
+    "factor_counts": {
+      "MatLUFactorSym": 0,
+      "MatLUFactorNum": 0,
+      "MatSolve": 0
+    }
+  },
+  "factor_counts": {
+    "MatLUFactorSym": 0,
+    "MatLUFactorNum": 0,
+    "MatSolve": 0
+  },
+  "pre_solve_nullspace": {
+    "gram": [
+      [
+        1.0,
+        0.0
+      ],
+      [
+        0.0,
+        1.0
+      ]
+    ],
+    "normalization": [
+      {
+        "pressure_block": 1,
+        "pressure_dofs": 4,
+        "expected_coefficient": 0.5,
+        "maximum_coefficient_error": 0.0,
+        "outside_support_nonzeros": 0,
+        "right_residual_norm": 3.3672392448339915e-14,
+        "left_residual_norm": 3.416471050645705e-14
+      },
+      {
+        "pressure_block": 3,
+        "pressure_dofs": 4,
+        "expected_coefficient": 0.5,
+        "maximum_coefficient_error": 0.0,
+        "outside_support_nonzeros": 0,
+        "right_residual_norm": 3.3672392448339915e-14,
+        "left_residual_norm": 3.416471050645705e-14
+      }
+    ],
+    "right_test_passed": true,
+    "transpose_test_passed": true
+  },
+  "completed_rhs_assemblies": 3,
+  "candidates": {
+    "P": {
+      "candidate_layout": {
+        "type": "mpi",
+        "local_size": 68,
+        "global_size": 68,
+        "ownership_range": [
+          0,
+          68
+        ],
+        "owned_offsets": [
+          0,
+          30,
+          34,
+          64,
+          68
+        ],
+        "ghost_offsets": [
+          68,
+          68,
+          68,
+          68,
+          68
+        ],
+        "array_size": 68
+      },
+      "pressure_compatibility": {
+        "pressure_constant_products_before": [
+          -4.5102810375396984e-17,
+          -1.0408340855860843e-17
+        ],
+        "removed_norm": 4.4294933466983516e-17,
+        "rhs_norm": 0.5887053824203564,
+        "tolerance": 3.346402663853248e-14,
+        "raw_sha256": "f982f1fb46ca6f522489f9bb15e0e53cbbb4389d5777faa051711fdadee8226d",
+        "proposed_sha256": "0627ed82a13dfe7a011dc513683ee59cb161b11336a415852ee38628f0f07d10",
+        "raw_unchanged_after_measurement": true,
+        "accepted": true,
+        "removal_applied": false,
+        "accepted_sha256": "f982f1fb46ca6f522489f9bb15e0e53cbbb4389d5777faa051711fdadee8226d"
+      },
+      "same_matrix_digest_and_state": true
+    },
+    "A_64": {
+      "constrained_dofs_per_block": [
+        24,
+        0,
+        24,
+        0
+      ],
+      "flux_ratios": [
+        1.0288106519260857e-16,
+        1.7127345125447468e-16
+      ],
+      "rhs_layout": {
+        "reference": {
+          "type": "mpi",
+          "local_size": 68,
+          "global_size": 68,
+          "ownership_range": [
+            0,
+            68
+          ],
+          "owned_offsets": [
+            0,
+            30,
+            34,
+            64,
+            68
+          ],
+          "ghost_offsets": [
+            68,
+            68,
+            68,
+            68,
+            68
+          ],
+          "array_size": 68
+        },
+        "replacement": {
+          "type": "mpi",
+          "local_size": 68,
+          "global_size": 68,
+          "ownership_range": [
+            0,
+            68
+          ],
+          "owned_offsets": [
+            0,
+            30,
+            34,
+            64,
+            68
+          ],
+          "ghost_offsets": [
+            68,
+            68,
+            68,
+            68,
+            68
+          ],
+          "array_size": 68
+        },
+        "block_sizes": [
+          30,
+          4,
+          30,
+          4
+        ]
+      },
+      "candidate_layout": {
+        "type": "mpi",
+        "local_size": 68,
+        "global_size": 68,
+        "ownership_range": [
+          0,
+          68
+        ],
+        "owned_offsets": [
+          0,
+          30,
+          34,
+          64,
+          68
+        ],
+        "ghost_offsets": [
+          68,
+          68,
+          68,
+          68,
+          68
+        ],
+        "array_size": 68
+      },
+      "pressure_compatibility": {
+        "pressure_constant_products_before": [
+          1.0408340855860843e-17,
+          1.214306433183765e-17
+        ],
+        "removed_norm": 1.7626873426939533e-17,
+        "rhs_norm": 0.5887053824203564,
+        "tolerance": 3.346402663853248e-14,
+        "raw_sha256": "c4cbd4f2828026a5582c932545fff5d5b62e183c0bfaf999311d1f22fec016bb",
+        "proposed_sha256": "2ac5a15123571ed76c229fd7f0424ae6caea8bfc7c5cf198efd2f02f45ad84c7",
+        "raw_unchanged_after_measurement": true,
+        "accepted": true,
+        "removal_applied": true,
+        "accepted_sha256": "2ac5a15123571ed76c229fd7f0424ae6caea8bfc7c5cf198efd2f02f45ad84c7"
+      },
+      "same_matrix_digest_and_state": true
+    },
+    "A_96": {
+      "constrained_dofs_per_block": [
+        24,
+        0,
+        24,
+        0
+      ],
+      "flux_ratios": [
+        1.0288106519260857e-16,
+        1.7127345125447468e-16
+      ],
+      "rhs_layout": {
+        "reference": {
+          "type": "mpi",
+          "local_size": 68,
+          "global_size": 68,
+          "ownership_range": [
+            0,
+            68
+          ],
+          "owned_offsets": [
+            0,
+            30,
+            34,
+            64,
+            68
+          ],
+          "ghost_offsets": [
+            68,
+            68,
+            68,
+            68,
+            68
+          ],
+          "array_size": 68
+        },
+        "replacement": {
+          "type": "mpi",
+          "local_size": 68,
+          "global_size": 68,
+          "ownership_range": [
+            0,
+            68
+          ],
+          "owned_offsets": [
+            0,
+            30,
+            34,
+            64,
+            68
+          ],
+          "ghost_offsets": [
+            68,
+            68,
+            68,
+            68,
+            68
+          ],
+          "array_size": 68
+        },
+        "block_sizes": [
+          30,
+          4,
+          30,
+          4
+        ]
+      },
+      "candidate_layout": {
+        "type": "mpi",
+        "local_size": 68,
+        "global_size": 68,
+        "ownership_range": [
+          0,
+          68
+        ],
+        "owned_offsets": [
+          0,
+          30,
+          34,
+          64,
+          68
+        ],
+        "ghost_offsets": [
+          68,
+          68,
+          68,
+          68,
+          68
+        ],
+        "array_size": 68
+      },
+      "pressure_compatibility": {
+        "pressure_constant_products_before": [
+          1.0408340855860843e-17,
+          1.214306433183765e-17
+        ],
+        "removed_norm": 1.7626873426939533e-17,
+        "rhs_norm": 0.5887053824203564,
+        "tolerance": 3.346402663853248e-14,
+        "raw_sha256": "c4cbd4f2828026a5582c932545fff5d5b62e183c0bfaf999311d1f22fec016bb",
+        "proposed_sha256": "2ac5a15123571ed76c229fd7f0424ae6caea8bfc7c5cf198efd2f02f45ad84c7",
+        "raw_unchanged_after_measurement": true,
+        "accepted": true,
+        "removal_applied": true,
+        "accepted_sha256": "2ac5a15123571ed76c229fd7f0424ae6caea8bfc7c5cf198efd2f02f45ad84c7"
+      },
+      "same_matrix_digest_and_state": true
+    }
+  },
+  "P_pressure_compatibility": {
+    "pressure_constant_products_before": [
+      -4.5102810375396984e-17,
+      -1.0408340855860843e-17
+    ],
+    "removed_norm": 4.4294933466983516e-17,
+    "rhs_norm": 0.5887053824203564,
+    "tolerance": 3.346402663853248e-14,
+    "raw_sha256": "f982f1fb46ca6f522489f9bb15e0e53cbbb4389d5777faa051711fdadee8226d",
+    "proposed_sha256": "0627ed82a13dfe7a011dc513683ee59cb161b11336a415852ee38628f0f07d10",
+    "raw_unchanged_after_measurement": true,
+    "accepted": true,
+    "removal_applied": false,
+    "accepted_sha256": "f982f1fb46ca6f522489f9bb15e0e53cbbb4389d5777faa051711fdadee8226d"
+  },
+  "all_candidates_prepared": true,
+  "sentinel": "toy prepared all candidates before KSP"
+}

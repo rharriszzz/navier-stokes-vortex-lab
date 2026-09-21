@@ -1,5 +1,10 @@
 # R022 compatible-trace prerequisite evidence
 
+The R022 observer-coverage task is completed by the
+[R033 follow-up](B2_COMPATIBLE_TRACE_PREFLIGHT_FOLLOWUP.md). Its exact
+sources, four attempts, cache accounting and saved-data audit are in
+[`evidence/r033`](evidence/r033/).
+
 Read the [result and next bounded task](B2_COMPATIBLE_TRACE_PREFLIGHT_RESULT.md).
 This archive records a toy resource refusal, not a physical response result.
 

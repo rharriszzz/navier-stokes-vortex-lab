@@ -1,0 +1,9 @@
+{
+  "cumulative_wall_limit_seconds": 600,
+  "active_child_tree_rss_limit_mib": 1536,
+  "prior_elapsed_seconds": 17.734145775990328,
+  "attempts": 1,
+  "resource_snapshot": "../resources.json",
+  "previous_attempt": "attempt-01: all original phases and refusals passed; advanced phase stopped at a known stale global FFCx C-cache artifact before form compilation.",
+  "note": "Fresh-cache attempt is included in this cumulative allowance. No cache prewarming; global cache remains untouched."
+}

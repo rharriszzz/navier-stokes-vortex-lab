@@ -1,0 +1,8 @@
+{
+  "cumulative_wall_limit_seconds": 600,
+  "active_child_tree_rss_limit_mib": 1536,
+  "prior_elapsed_seconds": 0,
+  "attempts": 0,
+  "resource_snapshot": "../resources.json",
+  "note": "Fresh R033 task allowance; includes imports, compilation, all phases and any failed attempts. No cache prewarming."
+}

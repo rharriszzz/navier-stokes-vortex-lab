@@ -1,0 +1,54 @@
+{
+  "request": "R024",
+  "date": "2026-09-20",
+  "scope": "Read-only memory inspection; no numerical execution or host configuration changes",
+  "windows": {
+    "source": "powershell.exe -NoProfile -NonInteractive -Command: Get-CimInstance Win32_OperatingSystem | Select-Object TotalVisibleMemorySize,FreePhysicalMemory | ConvertTo-Json -Compress",
+    "reported_kib": {
+      "TotalVisibleMemorySize": 16488680,
+      "FreePhysicalMemory": 2252696
+    },
+    "usable_ram_gib": 15.724830627441406,
+    "available_physical_ram_gib": 2.1483383178710938,
+    "installed_ram_not_measured": true,
+    "sandbox_interop_initially_failed": true,
+    "approved_escalated_read_succeeded": true
+  },
+  "wsl": {
+    "source": "free -h; rounded display from earlier R024 inspection",
+    "total": "7.6Gi",
+    "used": "687Mi",
+    "free": "6.1Gi",
+    "shared": "2.0Mi",
+    "buff_cache": "870Mi",
+    "available": "6.8Gi",
+    "swap_total": "2.0Gi",
+    "swap_used": "187Mi",
+    "swap_free": "1.8Gi"
+  },
+  "configuration": {
+    "checked_path": "C:\\Users\\rharr\\.wslconfig",
+    "file_exists": false,
+    "windows_userprofile_not_independently_verified": true,
+    "observed_wsl_total_consistent_with_default_half_host_memory": true,
+    "configuration_changed": false
+  },
+  "chrome": {
+    "source": "user Task Manager report",
+    "reported_use": "2.7 GB",
+    "independently_measured": false
+  },
+  "interpretation": {
+    "host_and_guest_snapshots_not_simultaneous": true,
+    "host_and_guest_available_memory_not_additive": true,
+    "next_prerequisite_rss_cap_mib": 2048,
+    "next_prerequisite_cumulative_seconds": 600,
+    "minimum_guest_available_mib_at_launch": 4096,
+    "host_headroom_also_required": true,
+    "recommendation": "Close unused tabs/apps as helpful before heavier work; recheck host and guest capacity. Retain the current WSL ceiling for the planned prerequisite test."
+  },
+  "sources": [
+    "https://learn.microsoft.com/en-us/windows/win32/cimwin32prov/win32-operatingsystem",
+    "https://learn.microsoft.com/en-us/windows/wsl/wsl-config"
+  ]
+}

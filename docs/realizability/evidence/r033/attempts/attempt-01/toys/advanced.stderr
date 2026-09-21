@@ -1,0 +1,47 @@
+Traceback (most recent call last):
+  File "/tmp/navier-fenicsx/lib/python3.12/site-packages/ffcx/codegeneration/jit.py", line 97, in get_cached_module
+    with open(c_filename, "x"):
+         ^^^^^^^^^^^^^^^^^^^^^
+FileExistsError: [Errno 17] File exists: '/home/rharris/.cache/fenics/libffcx_forms_bc53fb131fa42354cefbc7ea6a1bb0a796fec431.c'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/tmp/navier-b2-compatible-r033/advanced_toys.py", line 293, in <module>
+    run(args.output)
+  File "/tmp/navier-b2-compatible-r033/advanced_toys.py", line 166, in run
+    compiled_forms = fem.form(forms)
+                     ^^^^^^^^^^^^^^^
+  File "/tmp/navier-fenicsx/lib/python3.12/site-packages/dolfinx/fem/forms.py", line 449, in form
+    return _create_form(form)
+           ^^^^^^^^^^^^^^^^^^
+  File "/tmp/navier-fenicsx/lib/python3.12/site-packages/dolfinx/fem/forms.py", line 445, in _create_form
+    return list(map(lambda sub_form: _create_form(sub_form), form))
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/navier-fenicsx/lib/python3.12/site-packages/dolfinx/fem/forms.py", line 445, in <lambda>
+    return list(map(lambda sub_form: _create_form(sub_form), form))
+                                     ^^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/navier-fenicsx/lib/python3.12/site-packages/dolfinx/fem/forms.py", line 445, in _create_form
+    return list(map(lambda sub_form: _create_form(sub_form), form))
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/navier-fenicsx/lib/python3.12/site-packages/dolfinx/fem/forms.py", line 445, in <lambda>
+    return list(map(lambda sub_form: _create_form(sub_form), form))
+                                     ^^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/navier-fenicsx/lib/python3.12/site-packages/dolfinx/fem/forms.py", line 441, in _create_form
+    return _form(form)
+           ^^^^^^^^^^^
+  File "/tmp/navier-fenicsx/lib/python3.12/site-packages/dolfinx/fem/forms.py", line 361, in _form
+    ufcx_form, module, code = jit.ffcx_jit(
+                              ^^^^^^^^^^^^^
+  File "/tmp/navier-fenicsx/lib/python3.12/site-packages/dolfinx/jit.py", line 60, in mpi_jit
+    return local_jit(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/navier-fenicsx/lib/python3.12/site-packages/dolfinx/jit.py", line 215, in ffcx_jit
+    r = ffcx.codegeneration.jit.compile_forms([ufl_object], options=p_ffcx, **p_jit)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/navier-fenicsx/lib/python3.12/site-packages/ffcx/codegeneration/jit.py", line 207, in compile_forms
+    obj, mod = get_cached_module(module_name, form_names, cache_dir, timeout)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/navier-fenicsx/lib/python3.12/site-packages/ffcx/codegeneration/jit.py", line 122, in get_cached_module
+    raise TimeoutError(
+TimeoutError: JIT compilation timed out, probably due to a failed previous compile. Try cleaning cache (e.g. remove /home/rharris/.cache/fenics/libffcx_forms_bc53fb131fa42354cefbc7ea6a1bb0a796fec431.c) or increase timeout option.

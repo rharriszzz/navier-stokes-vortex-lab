@@ -1,0 +1,41 @@
+Traceback (most recent call last):
+  File "/tmp/navier-b2-compatible-r033/attempt-02/advanced_toys.py", line 250, in run
+    presolve.call_with_barrier(base._block_direct_solve, captured,
+  File "/tmp/navier-b2-compatible-r033/attempt-02/presolve.py", line 180, in call_with_barrier
+    result = support.capture_return(original, captured, *args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/navier-b2-compatible-r033/attempt-02/toy_runner.py", line 162, in capture_return
+    result = function(*args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/rharris/git/navier-stokes-vortex-lab/realizability/backends/fenicsx_stokes.py", line 321, in _block_direct_solve
+    nullspace.remove(vector)
+    ^^^^^^^^^
+  File "/tmp/navier-b2-compatible-r033/attempt-02/presolve.py", line 168, in trace
+    prepare_all(frame.f_locals, expected, candidate_factory, prepared,
+  File "/tmp/navier-b2-compatible-r033/attempt-02/presolve.py", line 78, in prepare_all
+    outside = np.r_[null.array[:start], null.array[end:]]
+                    ^^^^^^^^^^
+  File "petsc4py/PETSc/Vec.pyx", line 3661, in petsc4py.PETSc.Vec.array.__get__
+  File "petsc4py/PETSc/Vec.pyx", line 3642, in petsc4py.PETSc.Vec.array_w.__get__
+  File "petsc4py/PETSc/Vec.pyx", line 1331, in petsc4py.PETSc.Vec.getArray
+  File "petsc4py/PETSc/petscvec.pxi", line 420, in petsc4py.PETSc.vec_getarray_w
+  File "petsc4py/PETSc/arraynpy.pxi", line 73, in petsc4py.PETSc.asarray
+  File "petsc4py/PETSc/petscvec.pxi", line 555, in petsc4py.PETSc._Vec_buffer.__getbuffer__
+  File "petsc4py/PETSc/petscvec.pxi", line 543, in petsc4py.PETSc._Vec_buffer.acquirebuffer
+  File "petsc4py/PETSc/petscvec.pxi", line 529, in petsc4py.PETSc._Vec_buffer.acquire
+  File "petsc4py/PETSc/petscvec.pxi", line 494, in petsc4py.PETSc.Vec_AcquireArray
+petsc4py.PETSc.Error: error code 73
+[0] VecGetArray() at /home/conda/feedstock_root/build_artifacts/bld/rattler-build_petsc_1788117046/work/src/vec/vec/interface/rvector.c:2037
+[0] VecSetErrorIfLocked() at /home/conda/feedstock_root/build_artifacts/bld/rattler-build_petsc_1788117046/work/include/petscvec.h:710
+[0] Object is in wrong state
+[0] Vector 'Vec_0xc4000014_0' (argument #1) was locked for read-only access in unknown_function() at unknown file:0 (line numbers only accurate to function begin)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/tmp/navier-b2-compatible-r033/attempt-02/advanced_toys.py", line 293, in <module>
+    run(args.output)
+  File "/tmp/navier-b2-compatible-r033/attempt-02/advanced_toys.py", line 261, in run
+    assert injected is not None
+           ^^^^^^^^^^^^^^^^^^^^
+AssertionError

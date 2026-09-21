@@ -1,5 +1,9 @@
 # R022 compatible-trace prerequisites: memory stop before observer tests
 
+This is the preserved historical R022 stop report. Its toy-only follow-up was
+completed under [R033](B2_COMPATIBLE_TRACE_PREFLIGHT_FOLLOWUP.md); the observer
+coverage and current next task are recorded there.
+
 Recorded 2026-09-20 for
 [R022](../../REQUEST_LOG.md#r022--2026-09-20--continue-with-overall-progress-in-statusmd),
 starting from `eebc69d`, under the
@@ -134,6 +138,10 @@ integration, campaign, B3, rendering and encoding were outside scope. No
 physical solution coefficients or time-dependent dataset were produced.
 
 ## Next bounded task: isolate toy processes and finish observer coverage
+
+**Status: completed by R033.** The contract below is preserved as the
+historical task specification; see the linked follow-up for the result and
+the new decision boundary.
 
 Recommend **GPT-5.6 Luna, medium reasoning** for this mechanical fixture and
 reporting task. It changes process lifetime and observability of resource use,

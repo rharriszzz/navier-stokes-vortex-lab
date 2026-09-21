@@ -1,0 +1,41 @@
+{
+  "request": "R033",
+  "date": "2026-09-20",
+  "scope": "Read-only launch capacity check for the disposable R022 prerequisite follow-up",
+  "windows": {
+    "source": "powershell.exe Get-CimInstance Win32_OperatingSystem",
+    "reported_kib": {
+      "TotalVisibleMemorySize": 16488680,
+      "FreePhysicalMemory": 2785748
+    },
+    "usable_ram_gib": 15.724830627441406,
+    "available_physical_ram_gib": 2.661,
+    "measurement_note": "Read required escalated Windows interop; earlier sandbox interop failed."
+  },
+  "wsl": {
+    "source": "free -m and /proc/meminfo",
+    "total_mib": 7796,
+    "available_mib": 6941,
+    "swap_total_mib": 2048,
+    "swap_free_mib": 1860,
+    "measurement_note": "Separate view of shared physical resources; not additive with Windows memory."
+  },
+  "allowance": {
+    "cumulative_wall_seconds": 600,
+    "active_child_tree_rss_mib": 1536,
+    "reason": "WSL exceeds the 4096 MiB launch minimum. Windows reported about 2.66 GiB free, so the child-tree cap is reduced from 2048 MiB to preserve approximately 1 GiB of host-reported headroom.",
+    "swap_counted_as_ram": false
+  },
+  "immediate_prelaunch_recheck": {
+    "windows_free_physical_memory_kib": 6599044,
+    "windows_available_physical_memory_gib": 6.294,
+    "wsl_available_memory_mib": 6924,
+    "allowance_unchanged": true,
+    "attempt": "attempt-04 reusing measured attempt-03 cache"
+  },
+  "execution": {
+    "host_or_guest_configuration_changed": false,
+    "apps_closed": false,
+    "physical_execution_authorized": false
+  }
+}

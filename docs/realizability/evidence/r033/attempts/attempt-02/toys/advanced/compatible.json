@@ -1,0 +1,69 @@
+{
+  "status": "partial",
+  "stage": "pre_solve_nullspace_validation",
+  "primary_rhs": 0,
+  "attempted_primary_solves": 0,
+  "returned_primary_solves": 0,
+  "correction_rhs": 0,
+  "matrix_solves": 0,
+  "physical_meshes": 0,
+  "injections": [],
+  "oracle_checks": [],
+  "pre_solve_observer": {
+    "anchor_line": 321,
+    "solve_line": 339,
+    "calls": 1,
+    "toy_stop": true,
+    "factor_counts": {
+      "MatLUFactorSym": 0,
+      "MatLUFactorNum": 0,
+      "MatSolve": 0
+    }
+  },
+  "pre_solve_operator": {
+    "digest": "9e269b987cc8d223d4336c9cfead1e14f4d1a7c658962c8696f44dbd327f5c4c",
+    "state": 67,
+    "offsets": [
+      0,
+      30,
+      34,
+      64,
+      68
+    ],
+    "constrained_count": 48,
+    "layout": {
+      "type": "mpi",
+      "local_size": 68,
+      "global_size": 68,
+      "ownership_range": [
+        0,
+        68
+      ],
+      "owned_offsets": [
+        0,
+        30,
+        34,
+        64,
+        68
+      ],
+      "ghost_offsets": [
+        68,
+        68,
+        68,
+        68,
+        68
+      ],
+      "array_size": 68
+    },
+    "factor_counts": {
+      "MatLUFactorSym": 0,
+      "MatLUFactorNum": 0,
+      "MatSolve": 0
+    }
+  },
+  "factor_counts": {
+    "MatLUFactorSym": 0,
+    "MatLUFactorNum": 0,
+    "MatSolve": 0
+  }
+}

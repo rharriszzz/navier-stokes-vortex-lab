@@ -1739,3 +1739,525 @@ observer or physical experiment. No numerical work was rerun after the cap.
 99 scoped documentation/evidence files, including the completed `STATUS.md`
 progress update. No production source, configuration or historical evidence
 is staged, and no unrelated working-tree change was present.
+
+## R023 — 2026-09-20 — Explain resource budgets and use available PC capacity
+
+**User request (verbatim):**
+
+> please explain "the cumulative toy budget". Please also explain the memory limits.  You can use my pc for things within its capabilities; it is already paid for.
+
+**Interpreted scope:** Explain the locally imposed test runtime and memory
+guards, inspect the resources visible to the execution environment, and record
+the user's authorization to use the PC's available capacity. This preference
+supersedes treating the earlier conservative caps as immutable user limits.
+Preserve scientific acceptance criteria and historical results. This is an
+explanation/resource-policy request, not a new Continue invocation or permission
+to replay a physical experiment or publish unrelated work.
+
+**Status:** In progress.
+
+**Bounded plan and completion criteria:** Check the actual watchdog and
+cumulative-time accounting, inspect current CPU/RAM and environment limits,
+explain the distinction between guardrails, physical capacity and monetary
+cost, and update continuity with capacity-based resource guidance. Validate
+the documentation and stop without numerical execution, commit or push.
+
+**Stopping conditions:** No scientific threshold, solver, trace or mesh change;
+no rerun of archived tests, physical calculation or host configuration change.
+Do not infer total host RAM solely from the WSL-visible allocation.
+
+**Outcome, 2026-09-20:** Explained that “toy” means a small verification
+fixture, and “cumulative” adds elapsed prerequisite execution across phases
+and failed attempts in one bounded task, including child startup, compilation
+and reporting. R022 used 5.2392 + 11.1663 = 16.4055 seconds; analysis/editing
+between attempts and the lifetime of the project are not charged to that
+allowance. Memory is a separate sampled sum of active child-tree RSS, including
+compiler descendants, rather than accumulated memory from successive tests.
+Shared pages can be counted more than once. The R022 stop was imposed by the
+script at 513.6055 MiB against its 512 MiB guard; it was not a reported system
+out-of-memory event. The historical physical guard was 180 s/1536 MiB.
+
+**Capacity and user preference:** The current WSL environment reports an
+Intel Core i7-14700F, 28 visible logical CPUs, 7.614 GiB visible RAM and
+6.321 GiB available at the recorded inspection. This does not establish the
+Windows host's total installed RAM. Standard process RAM/virtual-memory/CPU-time
+ulimits are unlimited; memory.max/high/current and cpu.max are not exposed at
+this cgroup root, so no additional limit was established by those reads.
+These observations are recorded in
+`docs/realizability/evidence/r023/resources.json`. They are a snapshot, not a
+promise of future free memory.
+
+The user explicitly permits using the available PC capacity. Accordingly,
+the next prerequisite allowance is 600 s cumulative and 2048 MiB active
+child-tree RSS, with a fresh launch-time check for at least 4096 MiB available
+RAM. The old fixed caps and mandatory process-splitting goal are superseded;
+process isolation remains an optional implementation choice. Retain sensible
+watchdogs, headroom and finite reporting, and size later physical-run resources
+separately. No accuracy threshold, mathematical trace, numerical-method choice,
+test requirement or physical scope changes. No old refusal is reclassified.
+
+**Changed files and continuity:** Updated `STATUS.md` with the explanation and
+current policy, `SESSION_HANDOFF.md` with the qualified next task, and the
+current introduction of `docs/realizability/B2_NEXT_STEPS.md`; appended this
+log entry and saved the resource snapshot. The next execution task is still
+completion of the prescribed high-order/actual-observer prerequisites before
+any physical child. R022's mechanical-task model recommendation is retained;
+no new model selection, switch, sub-agent or automation occurred.
+
+**Checks/skips and delivery:** Inspected watchdog and parent source, current
+RAM, CPU, WSL identity, exposed cgroup controls and process limits.
+`git diff --check` passed after the policy edits. No numerical test, compilation,
+CFD run, rendering, encoding, host configuration change, commit or push was
+performed. This request is an explanation/preference update, not Continue;
+the changes remain local for the next authorized checkpoint.
+
+**Validation, 2026-09-20:** Documentation/resource-policy checks passed for
+four Markdown files and 58 local links/anchors; all 19 production pins and
+prior evidence remain unchanged. The resource snapshot supports the proposed
+next toy allowance with the stated headroom. Earlier request history is
+byte-preserved and R023 occurs once. Record:
+`docs/realizability/evidence/r023/validation.json`. No numerical checks ran.
+
+## R024 — 2026-09-20 — Chrome memory use and WSL2 allocation
+
+**User request (verbatim):**
+
+> task manager reports google chrome to be using 2.7Gb.  Should I close most of the tabs in it?  Should I check how much memory I have allocated to WSL2?
+
+**Interpreted scope:** Explain whether Chrome's reported RAM use warrants
+closing tabs and how to check Windows memory pressure and WSL2's configured
+ceiling. Inspect current WSL resources and any readily accessible configuration;
+verify current Microsoft guidance. Preserve R023's capacity-based resource
+policy. This is advice/read-only inspection, not authorization to close apps,
+change host settings, restart WSL, run numerical work, commit or push.
+
+**Status:** In progress.
+
+**Completion and stop:** Provide a practical recommendation grounded in visible
+memory and distinguish Windows-host availability from WSL's view. Record
+findings and continuity, validate documentation, and stop without configuration
+or application changes.
+
+**Outcome, 2026-09-20:** Completed the advice and read-only inspection. Windows
+reported 16,488,680 KiB usable RAM (15.725 GiB) and 2,252,696 KiB available
+physical RAM (2.148 GiB). WSL's separate rounded reading was 7.6 GiB total and
+6.8 GiB available. Chrome's 2.7 GB is the user's report, not independently
+measured. Closing unused tabs/apps can help create headroom before heavier
+work; there is no need to close most tabs solely because of the Chrome number.
+Check Task Manager's Performance > Memory > Available to see the host effect.
+
+**Allocation and correction:** No file exists at the checked path
+`C:\Users\rharr\.wslconfig`; the active Windows profile was not independently
+confirmed. The observed guest total is consistent with Microsoft's documented
+default ceiling of half the host RAM. WSL Settings in the Start menu or
+`%UserProfile%\.wslconfig` allows inspection. Keep the present WSL limit for the
+planned 2 GiB prerequisite test. Raising a VM limit adds no physical RAM.
+R023's earlier availability measurement was inside WSL only; its 4 GiB guest
+headroom check is necessary but insufficient. Check Windows headroom as well
+and monitor it during heavier work. Preserve the 600 s/2048 MiB allowance,
+scientific thresholds and stop before physical execution.
+
+**Evidence and changed files:** Saved host/guest observations, their distinct
+sources and limitations in `docs/realizability/evidence/r024/resources.json`.
+Updated `STATUS.md`, `SESSION_HANDOFF.md` and the current introduction of
+`docs/realizability/B2_NEXT_STEPS.md`; appended this log entry. Existing R023
+local work is preserved. Microsoft WSL configuration and Win32_OperatingSystem
+property documentation were checked; links are in the evidence snapshot.
+The Windows read initially failed under sandbox interoperability and succeeded
+with approved escalation. A broad config-file search encountered an unrelated
+profile-directory permission error; the targeted existence check completed.
+
+**Skips, next task and delivery:** No numerical tests, compilation, physical
+run, app closure, configuration change, WSL restart, commit or push. The next
+execution task remains the complete high-order/actual-observer prerequisites
+under the recorded resource policy, after a new Continue. The inherited
+mechanical-task model guidance is unchanged; no new model selection, switch,
+sub-agent or automation occurred. Stop at this advice/documentation boundary.
+
+**Validation, 2026-09-20:** Four Markdown files and 60 local links/anchors
+checked; earlier request text and both R023 evidence files preserved. Resource
+unit conversions checked, tracked changes limited to the four documentation
+files, and `git diff --check` passed. Record:
+`docs/realizability/evidence/r024/validation.json`. No numerical checks ran.
+
+## R025 — 2026-09-20 — Confirm WSL settings and locate Chrome Task Manager
+
+**User request (verbatim):**
+
+> the settings for wsl2 say 8Gb memory and 2Gb swap. Is there a task manager in Chrome?
+
+**Interpreted scope:** Record the user's confirmed WSL settings and explain how
+to open Chrome Task Manager and identify memory-heavy tabs. Verify current
+Google guidance. This is advice, not a Continue invocation.
+
+**Status:** In progress.
+
+**Bounded plan, completion and stop:** Verify the Windows shortcut/menu and
+memory column, give concise instructions, and record the 8 GB RAM/2 GB swap
+settings in continuity. Preserve the next numerical task and resource policy;
+stop after documentation checks without changing apps/settings or running,
+committing or pushing numerical work.
+
+**Outcome, 2026-09-20:** Completed. Chrome has a built-in Task Manager:
+Shift+Esc on Windows, or the three-dot menu > More tools > Task Manager.
+Sort by Memory to find the largest tasks, then close unneeded tabs normally;
+End Process forcibly stops a task and can lose unsaved work. Verified against
+[Google's shortcuts](https://support.google.com/chrome/answer/157179)
+and [Chrome performance help](https://support.google.com/chrome/answer/1385029).
+The user confirms 8 GB memory and 2 GB swap in WSL Settings. Recorded that
+confirmation in `STATUS.md` and `SESSION_HANDOFF.md`; retain these settings
+for the planned prerequisite test and treat swap as disk-backed overflow.
+
+**Checks/skips, continuity and delivery:** Changed only this log, `STATUS.md`
+and `SESSION_HANDOFF.md` for R025, preserving prior local work. Next task,
+scientific thresholds and inherited model guidance are unchanged: finish
+prerequisite coverage on a future Continue, after host/guest capacity checks.
+No new model recommendation, numerical run, app/configuration change, commit
+or push. This advice task stops here.
+
+**Validation, 2026-09-20:** Earlier request history is byte-preserved, R025
+occurs once, its handoff link resolves, and both continuity documents contain
+the confirmed settings. `git diff --check` passed. No numerical tests needed
+or executed for this documentation-only follow-up.
+
+## R026 — 2026-09-20 — YouTube tab memory observation
+
+**User request (verbatim):**
+
+> 6 Chrome tabs are running about 0.2 Gb each, these are all YT tabs.
+
+**Interpreted scope:** Interpret the reported YouTube tab memory usage and
+suggest practical ways to free memory while preserving useful tabs/videos.
+This is a follow-up observation and advice request, not Continue.
+
+**Status:** In progress.
+
+**Bounded plan, completion and stop:** Explain the approximate combined usage,
+verify Chrome's current memory-saving guidance, and record the observation.
+Stop after advice and continuity checks; no app or host-setting changes,
+numerical execution, commit or push.
+
+**Outcome, 2026-09-20:** Completed. The reported six tabs at roughly 0.2 GB
+each total about 1.2 GB, a substantial part of the previously reported Chrome
+usage. Suggested bookmarking and closing unused YouTube tabs while retaining
+the one in use. Memory released is workload-dependent, not a guaranteed sum.
+Chrome Settings > Performance > Memory Saver offers automatic deactivation
+of unused tabs; active audio/video may prevent it. Verified with
+[Google's performance guide](https://support.google.com/chrome/answer/12929150).
+Keep the confirmed WSL settings unchanged.
+
+**Changed files, checks/skips and next task:** Appended this log and updated
+`SESSION_HANDOFF.md`; prior local work is preserved. No tab closure, host/app
+setting change, fresh memory measurement, numerical test, commit or push.
+The next numerical task and inherited model guidance remain unchanged; a new
+Continue resumes prerequisite coverage after host/guest capacity checks.
+No new model recommendation or switch. Stop at this advice boundary.
+
+**Validation, 2026-09-20:** Earlier request history is byte-preserved, R026
+occurs once and its handoff link matches the request heading.
+`git diff --check` passed. No numerical checks required or executed.
+
+## R027 — 2026-09-20 — Chrome Memory Saver Maximum option
+
+**User request (verbatim):**
+
+> It is already on Balanced.  I can switch it to Maximum.
+
+**Interpreted scope:** Record that Chrome Memory Saver is already on Balanced
+and advise whether Maximum would help. This is advice, not confirmation that
+the setting has changed and not a Continue invocation.
+
+**Status:** In progress.
+
+**Bounded plan, completion and stop:** Verify Maximum's behavior and relevant
+YouTube playback exceptions, explain the practical tradeoff, and update
+continuity. Stop after documentation checks; no app/settings changes,
+numerical execution, commit or push.
+
+**Outcome, 2026-09-20:** Completed. Maximum is reasonable to try: it makes
+eligible unused tabs inactive sooner, and returning to an inactive tab reloads
+it. It does not guarantee immediate memory recovery or deactivate every tab.
+Active audio/video can prevent deactivation, so pause videos not being watched.
+Check Windows available memory after leaving those tabs unused. Verified with
+[Google's performance guide](https://support.google.com/chrome/answer/12929150).
+Balanced is confirmed; switching to Maximum is proposed, not confirmed.
+
+**Changed files, checks/skips and next task:** Appended this log and updated
+`SESSION_HANDOFF.md`, preserving prior local work. No app/settings change,
+fresh memory measurement, numerical execution, commit or push. WSL settings,
+resource policy, scientific thresholds, next prerequisite task and inherited
+model guidance remain unchanged. No new model recommendation or switch.
+Stop at this advice boundary; a future Continue resumes the bounded task.
+
+**Validation, 2026-09-20:** Earlier request history is byte-preserved, R027
+occurs once and the handoff link matches its heading. `git diff --check`
+passed. No numerical checks needed or executed.
+
+## R028 — 2026-09-20 — Clarify Chrome deactivation wording
+
+**User request (verbatim):**
+
+> It says "shorter period of time" rather than "optimal period of time"
+
+**Interpreted scope:** Acknowledge the exact wording distinguishing Maximum
+from Balanced and explain its limits. This clarification does not confirm a
+setting change or invoke Continue.
+
+**Status:** In progress.
+
+**Bounded plan, completion and stop:** Use the Google documentation already
+retrieved in R027 to distinguish the labels without inventing exact timeouts.
+Record the clarification and stop after documentation checks; no app changes,
+numerical work or publication.
+
+**Outcome, 2026-09-20:** Completed. Confirmed that Balanced says "optimal
+period of time" and Maximum says "shorter period of time." These describe
+when eligible unused tabs are deactivated; Google's page does not specify
+exact delays, and active playback can still prevent deactivation. Reused the
+[Google guidance](https://support.google.com/chrome/answer/12929150) retrieved
+in R027; no additional lookup or measurement was needed.
+
+**Changed files, checks/skips and next task:** Appended this log and updated
+`SESSION_HANDOFF.md`, preserving prior work. No app/settings change, numerical
+execution, commit or push. The next prerequisite task, resource policy and
+inherited model guidance remain unchanged; no new model recommendation or
+switch. Stop at this clarification boundary.
+
+**Validation, 2026-09-20:** Earlier request history is preserved, R028 occurs
+once and the handoff link matches its heading. `git diff --check` passed.
+No numerical checks needed or executed.
+
+## R029 — 2026-09-20 — Maximum enabled and one-minute Chrome memory reading
+
+**User request (verbatim):**
+
+> I changed it to maximum; task manger says chrome is still at 2.6 Gb.  but it has only been 1 minute since the change
+
+**Interpreted scope:** Record the confirmed change and interpret the early
+reading without attributing memory changes to Maximum or promising a timeout.
+Advice only; not Continue.
+
+**Status:** In progress.
+
+**Plan and stop:** Explain why this early observation is inconclusive and
+suggest a later check of unused tabs and Windows available memory. Update
+continuity and validate documentation; no numerical run, app change or push.
+
+**Outcome, 2026-09-20:** Completed. Maximum is now confirmed by the user.
+The reported 2.6 GB after about one minute does not establish effectiveness;
+Google specifies no exact timeout and active playback can prevent deactivation.
+Suggested pausing unused videos, leaving those tabs unused for several more
+minutes, and checking Windows available memory. This is an observation window,
+not a promised deactivation time. The earlier 2.7 GB and current 2.6 GB are
+rounded user reports; no causal memory saving is inferred. Guidance uses the
+[Google performance documentation](https://support.google.com/chrome/answer/12929150)
+already retrieved in R027.
+
+**Changed files, checks/skips and next task:** Appended this log and updated
+`SESSION_HANDOFF.md`; prior work preserved. No fresh measurement, app/settings
+change by the agent, numerical check, commit or push. Next prerequisite task,
+resource policy and inherited model guidance remain unchanged. No new model
+recommendation or switch; stop at this advice boundary.
+
+**Validation, 2026-09-20:** Earlier request text preserved, R029 occurs once,
+and the handoff link matches its heading. `git diff --check` passed.
+No numerical checks required or executed.
+
+## R030 — 2026-09-20 — Reminder of next model and reasoning level
+
+**User request (verbatim):**
+
+> remind me what model and level we should use for the next step
+
+**Interpreted scope:** Restate the handoff's recommended model/reasoning effort,
+confirm current availability, and identify the bounded next task and escalation
+rule. This reminder does not invoke Continue or request a model switch.
+
+**Status:** In progress.
+
+**Plan and stop:** Check the handoff and current catalog/official model guidance,
+provide a concise recommendation and continuation prompt, and update continuity.
+Stop after documentation checks without numerical execution, model switching,
+commit or push.
+
+**Outcome, 2026-09-20:** Completed. Recommendation remains GPT-5.6 Luna with
+medium reasoning for the next mechanical harness/prerequisite task. Finish
+high-order and actual-observer acceptance/refusal coverage, improve stage and
+per-process memory reporting, preserve scientific thresholds, and archive a
+complete audited pass or finite refusal. Use the recorded 600 s/2048 MiB cap
+subject to fresh host/guest capacity checks. Stop before physical execution.
+After a pass, or if an unexplained result needs scientific/numerical-method
+judgment, recommend GPT-6 Astra with high reasoning; retain Luna/medium for an
+understood mechanical follow-up. Select Luna/medium and use Continue to invoke
+the scoped execution/checkpoint workflow; this reminder does not switch models.
+
+**Availability and sources:** Both model/effort combinations are present in
+the current session's available-model catalog. OpenAI Docs was used to search,
+open and inspect the official
+[Luna](https://developers.openai.com/api/docs/models/gpt-5.6-luna) and
+[Astra](https://developers.openai.com/api/docs/models/gpt-6-astra) pages, which
+confirm the corresponding reasoning efforts. The suitability recommendation
+comes from the repository's bounded task, not an official guarantee about
+this particular workload. No resolver, model switch, sub-agent or automation.
+
+**Changed files, checks/skips and next task:** Appended this log and updated
+`SESSION_HANDOFF.md`, preserving prior local work. No numerical execution,
+host/app change, commit or push. The handoff retains the complete prerequisite
+checks, completion criteria and stopping rules for a future Continue.
+
+**Validation, 2026-09-20:** Earlier request history is preserved, R030 occurs
+once and its handoff link matches the heading. `git diff --check` passed.
+No numerical tests needed or executed for this reminder.
+
+## R031 — 2026-09-20 — Consider the 24 GB Mac and flag when to move
+
+**User request (verbatim):**
+
+> I have 24 Gb memory on my mac, should I transfer the work to there, at some point?  ell me when.
+
+**Interpreted scope:** Assess when the user's 24 GB Mac would benefit this
+project and preserve a concrete instruction to flag that decision during
+future work. Inspect relevant environment/portability requirements; distinguish
+more RAM from verified speed or compatibility. This is planning/advice, not
+an instruction to migrate now, run experiments, or publish local changes.
+
+**Status:** In progress.
+
+**Bounded plan and completion:** Compare the current prerequisite workload
+with recorded PC resources, inspect the numerical environment's portability,
+and define when to reassess moving. Record that trigger in the status and
+handoff and provide concise advice. Stop without Mac access, installation,
+transfer, numerical execution, commit or push; no background reminder is set.
+
+**Outcome, 2026-09-20:** Completed. Retain the existing PC setup for the next
+2 GiB prerequisite task if fresh capacity checks permit it. The user's 24 GB
+Mac is a candidate for larger runs, but installed RAM alone does not establish
+free capacity or speed. Explicitly reassess and tell the user after the
+prerequisites, before the next physical calculation; flag it sooner if actual
+PC memory pressure prevents comfortable execution, or before a larger workload
+is estimated to exceed PC headroom. Compare actual Mac capacity and setup cost
+before recommending transfer. An arbitrary watchdog cap alone is not a reason
+to migrate. This is a future-work checkpoint, not a background reminder.
+
+**Portability evidence:** Read `environment-b1.yml` (pinned Python/FEniCSx,
+PETSc and MPI dependencies), the harmonic backend's real-PETSc coupled-block
+assumption, and R022 monitoring/reporting source. The archived `toy_runner.py`
+reads Linux `/proc`; RSS reporting and dependencies need destination checks.
+The [official FEniCSx download page](https://fenicsproject.org/download/)
+confirms a macOS installation route, not availability of every pinned build on
+this unknown Mac architecture. Migration would recreate compatible dependencies
+and adapt monitoring in a new copy, then run a small reference comparison with
+unchanged tolerances. Preserve the PC checkpoint and old evidence; do not reuse
+Linux binaries/JIT caches as a Mac environment or silently upgrade the solver.
+
+**Changed files, checks/skips and next task:** Updated `STATUS.md` and
+`SESSION_HANDOFF.md` with the machine-decision trigger and appended this log.
+Existing local work is preserved. No Mac access, hardware benchmark,
+installation, transfer, numerical execution, commit or push. Mac chip/OS,
+free memory and exact package compatibility remain unverified and can be
+checked at the decision point. The next prerequisite task and model guidance
+remain unchanged; no new model recommendation, switch or automation. Stop at
+this advice/documentation boundary.
+
+## R032 — 2026-09-20 — Confirm Luna and medium for this step
+
+**User request (verbatim):**
+
+> onfirm please that luna and medium is chosen for this step
+
+**Interpreted scope:** Confirm the handoff's selected model and reasoning effort
+for the next bounded prerequisite task. Do not launch work or switch models.
+
+**Status:** In progress.
+
+**Plan and stop:** Check the current handoff recommendation and available model
+catalog, record the confirmation, and stop without execution or model switching.
+
+**Outcome, 2026-09-20:** Confirmed GPT-5.6 Luna with medium reasoning is the
+selected recommendation for the next bounded prerequisite task described in
+the handoff. Luna is present in the current available-model catalog. This
+confirmation does not switch the active model or launch that task.
+
+**Changed files, checks/skips and next task:** Updated this entry and
+`SESSION_HANDOFF.md`; preserved all existing work. No numerical execution,
+model switch, commit or push. Next task remains the R022 prerequisite coverage
+recorded in the handoff, with its capacity checks and stop-before-physical-run
+boundary.
+
+**Validation, 2026-09-20:** R032 occurs once and its handoff link matches the
+heading. `git diff --check` passed. No numerical checks apply to this
+confirmation.
+
+## R033 — 2026-09-20 — Continue R022 prerequisite coverage
+
+**User request (verbatim):**
+
+> continue
+
+**Interpreted scope:** Invoke the repository's short continuation workflow to
+resume the handoff's bounded R022 prerequisite task, complete its checks and
+continuity updates, then commit and push only scoped task changes to the current
+branch's configured upstream. Stop before physical execution. Preserve existing
+unrelated work and scientific thresholds.
+
+**Status:** In progress.
+
+**Plan and stop:** Check Git status, read the handoff and its required research
+and R022 documents, inspect prior outcomes and exact source, check PC/WSL
+capacity, run prerequisite coverage within the recorded limits, archive
+results, update continuity, commit/push scoped changes, and stop before any
+physical calculation. Stop earlier at a recorded resource or scientific refusal.
+
+**Outcome, 2026-09-20:** Completed the full disposable prerequisite and
+observer suite in four preserved attempts. The first attempt exposed a stale
+FFCx cache artifact already present in the global cache; the second, using a
+fresh measured cache, reached the observer and exposed a PETSc read-only array
+access defect in the disposable check. That read-only check was fixed with the
+PETSc read-only accessor. The third full suite passed; the fourth preserved the
+entire stage-checkpoint history and passed with cache reuse. Total cumulative
+attempt time was 56.2513 seconds. All five original phases, wrong-root and
+parent refusals, synthetic watchdogs, 16 high-order facet checks, nine full
+block-oracle checks and compatible/incompatible observer cases passed. The
+maximum sampled child-tree RSS was 571.4219 MiB under the capacity-sized 1536
+MiB cap. No physical mesh, child, factorization, matrix solve or PDE solve ran.
+The B2 physical gate remains failed.
+
+**Capacity and machine checkpoint:** At initial launch Windows reported 2.66
+GiB free and WSL 6.94 GiB available. The task retained 600 seconds and used a
+1536 MiB child-tree cap, leaving approximately 1 GiB above the cap in the
+initial host reading. The final prelaunch reading was 6.29 GiB available on
+Windows and 6.77 GiB in WSL. The R031 Mac reassessment trigger is reached: the
+PC handled these prerequisites comfortably, but physical workload needs are
+not yet measured and the Mac's chip, OS, free RAM and pinned environment remain
+unknown. Compare both machines against an estimated physical workload before
+any physical launch; there is not yet evidence to recommend transferring the
+current work.
+
+**Changed files and evidence:** Added the R033 resource snapshot, exact
+instrumented sources, four attempt source/output archives, cache accounting,
+saved-data auditor and validation under
+`docs/realizability/evidence/r033/`. Added
+`docs/realizability/B2_COMPATIBLE_TRACE_PREFLIGHT_FOLLOWUP.md`; updated the
+R022 result/evidence index, R021 contract note, `STATUS.md`,
+`docs/realizability/B2_NEXT_STEPS.md`, this request log and
+`SESSION_HANDOFF.md`. Production source/configuration and the global FFCx cache
+were not changed. Audit evidence: `docs/realizability/evidence/r033/validation.json`.
+
+**Checks, skips and next task:** The saved-data `audit.py` passed, including
+production/runner identity checks, all observer invariants, report/source
+hashes, resource limits and checkpoint coverage. `git diff --check` and the
+repository documentation link check passed. No
+physical experiment, production test suite, gate update, campaign, B3, rendering
+or encoding was run, as required by the stop boundary. Next task is GPT-6 Astra
+with high reasoning to review the exercised observer and physical launch path
+against R021/R013, then stop before physical execution. Recommend Luna/medium
+only for a clearly understood mechanical repair; keep Astra/high for unresolved
+scientific or numerical-method decisions. No model switch occurred.
+
+**Final validation, 2026-09-20:** The R033 saved-data audit passed. It parsed
+all 9 scoped Markdown documents, checked 124 local links/anchors and 16 code
+fences, confirmed the request-log prefix was preserved and R033 appears once,
+and rechecked all numerical report assertions and archived hashes.
+`git diff --check` passed. The exact audit output is
+`docs/realizability/evidence/r033/validation.json`. The scoped commit/push
+workflow is now being completed; no physical execution is part of this request.

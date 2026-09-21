@@ -1,0 +1,36 @@
+{
+  "timestamp_utc": "2026-09-20T22:48:49.363119+00:00",
+  "scope": "Resources visible to this WSL process; not total installed Windows-host RAM",
+  "kernel": "6.18.33.2-microsoft-standard-WSL2",
+  "memory": {
+    "MemTotal_bytes": 8175431680,
+    "MemAvailable_bytes": 6787059712,
+    "SwapTotal_bytes": 2147483648,
+    "SwapFree_bytes": 898584576
+  },
+  "cpu_models": [
+    "Intel(R) Core(TM) i7-14700F"
+  ],
+  "logical_cpus_visible": 28,
+  "cpu_affinity_count": 28,
+  "cgroup": {
+    "memory.max": null,
+    "memory.high": null,
+    "memory.current": null,
+    "cpu.max": null,
+    "cpuset.cpus.effective": "0-27"
+  },
+  "missing_cgroup_files": "Not exposed at this cgroup root; not evidence of unlimited host capacity",
+  "historical_guardrails": {
+    "toy_cumulative_wall_seconds": 60,
+    "toy_active_child_tree_rss_mib": 512,
+    "physical_wall_seconds": 180,
+    "physical_active_child_tree_rss_mib": 1536
+  },
+  "next_toy_allowance": {
+    "cumulative_wall_seconds": 600,
+    "active_child_tree_rss_mib": 2048,
+    "minimum_available_ram_at_start_mib": 4096
+  },
+  "policy": "User permits using available local PC capacity. Historical caps are project watchdog settings, not hardware or monetary limits. Preserve accuracy thresholds and review scientific failures separately."
+}

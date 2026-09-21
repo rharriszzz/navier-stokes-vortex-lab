@@ -1,0 +1,252 @@
+{
+  "status": "partial_failed",
+  "stage": "observer_compatible",
+  "physical_meshes": 0,
+  "pde_solves": 0,
+  "matrix_factorizations": 0,
+  "matrix_solves": 0,
+  "high_order": [
+    {
+      "case": 0,
+      "order": 64,
+      "facets": [
+        {
+          "facet": 0,
+          "projection_error": 3.2084412964475094e-16,
+          "projection_tolerance": 3.762034389152454e-14,
+          "weak_load_error": 4.825917718493195e-19,
+          "weak_load_tolerance": 2.0097992092553449e-16,
+          "nonzero_complex_normal": true
+        },
+        {
+          "facet": 1,
+          "projection_error": 1.3877787807814457e-16,
+          "projection_tolerance": 5.216525150801217e-14,
+          "weak_load_error": 2.221504382456048e-19,
+          "weak_load_tolerance": 6.030873507608316e-17,
+          "nonzero_complex_normal": true
+        },
+        {
+          "facet": 2,
+          "projection_error": 1.4946834900704541e-16,
+          "projection_tolerance": 8.908169919930886e-14,
+          "weak_load_error": 1.6940658945086007e-19,
+          "weak_load_tolerance": 6.135140713579176e-17,
+          "nonzero_complex_normal": true
+        },
+        {
+          "facet": 3,
+          "projection_error": 6.206335383118183e-17,
+          "projection_tolerance": 4.9525775470502135e-14,
+          "weak_load_error": 5.187272922672512e-19,
+          "weak_load_tolerance": 1.4761577517777182e-16,
+          "nonzero_complex_normal": true
+        }
+      ],
+      "ufl_error": 4.553729793529082e-19,
+      "ufl_tolerance": 2.3566450263000886e-16,
+      "maximum_target_batch": 256
+    },
+    {
+      "case": 0,
+      "order": 96,
+      "facets": [
+        {
+          "facet": 0,
+          "projection_error": 3.1835838817813215e-16,
+          "projection_tolerance": 3.762034389152454e-14,
+          "weak_load_error": 1.150289454287197e-18,
+          "weak_load_tolerance": 2.0097963706439094e-16,
+          "nonzero_complex_normal": true
+        },
+        {
+          "facet": 1,
+          "projection_error": 6.938893903907228e-17,
+          "projection_tolerance": 5.216525150801218e-14,
+          "weak_load_error": 4.0305953989886717e-19,
+          "weak_load_tolerance": 6.030878761594157e-17,
+          "nonzero_complex_normal": true
+        },
+        {
+          "facet": 2,
+          "projection_error": 1.0838898772828417e-16,
+          "projection_tolerance": 8.908169919930889e-14,
+          "weak_load_error": 3.5470358010097383e-19,
+          "weak_load_tolerance": 6.135143458123506e-17,
+          "nonzero_complex_normal": true
+        },
+        {
+          "facet": 3,
+          "projection_error": 1.0007415106216804e-16,
+          "projection_tolerance": 4.952577547050213e-14,
+          "weak_load_error": 9.128610475519329e-19,
+          "weak_load_tolerance": 1.4761636777927242e-16,
+          "nonzero_complex_normal": true
+        }
+      ],
+      "ufl_error": 1.2690261071493108e-18,
+      "ufl_tolerance": 2.356648913556676e-16,
+      "maximum_target_batch": 256
+    },
+    {
+      "case": 1,
+      "order": 64,
+      "facets": [
+        {
+          "facet": 0,
+          "projection_error": 2.808666774861361e-15,
+          "projection_tolerance": 2.8896982385824653e-13,
+          "weak_load_error": 1.3884562417838567e-18,
+          "weak_load_tolerance": 5.274042479633399e-16,
+          "nonzero_complex_normal": true
+        },
+        {
+          "facet": 1,
+          "projection_error": 1.321837661387452e-16,
+          "projection_tolerance": 1.716885219737644e-13,
+          "weak_load_error": 9.871041557182741e-19,
+          "weak_load_tolerance": 2.7634498149560865e-16,
+          "nonzero_complex_normal": true
+        },
+        {
+          "facet": 2,
+          "projection_error": 2.237726045655905e-16,
+          "projection_tolerance": 1.178117538862753e-13,
+          "weak_load_error": 1.6487360875156885e-18,
+          "weak_load_tolerance": 4.5557159751242e-16,
+          "nonzero_complex_normal": true
+        },
+        {
+          "facet": 3,
+          "projection_error": 3.510833468576701e-16,
+          "projection_tolerance": 1.4853905022910956e-13,
+          "weak_load_error": 1.1727439577597817e-18,
+          "weak_load_tolerance": 4.665920466664759e-16,
+          "nonzero_complex_normal": true
+        }
+      ],
+      "ufl_error": 3.966239169525618e-18,
+      "ufl_tolerance": 8.64140559562266e-16,
+      "maximum_target_batch": 256
+    },
+    {
+      "case": 1,
+      "order": 96,
+      "facets": [
+        {
+          "facet": 0,
+          "projection_error": 2.531698018113677e-15,
+          "projection_tolerance": 2.8896982385824653e-13,
+          "weak_load_error": 2.710505431213761e-18,
+          "weak_load_tolerance": 5.274036783277083e-16,
+          "nonzero_complex_normal": true
+        },
+        {
+          "facet": 1,
+          "projection_error": 2.5133742693021536e-16,
+          "projection_tolerance": 1.7168852197376443e-13,
+          "weak_load_error": 1.9250314129819443e-18,
+          "weak_load_tolerance": 2.7634543588523844e-16,
+          "nonzero_complex_normal": true
+        },
+        {
+          "facet": 2,
+          "projection_error": 2.2887833992611187e-16,
+          "projection_tolerance": 1.178117538862753e-13,
+          "weak_load_error": 3.1302259285395128e-18,
+          "weak_load_tolerance": 4.555720955283868e-16,
+          "nonzero_complex_normal": true
+        },
+        {
+          "facet": 3,
+          "projection_error": 3.510833468576701e-16,
+          "projection_tolerance": 1.485390502291096e-13,
+          "weak_load_error": 2.653384347645192e-18,
+          "weak_load_tolerance": 4.66593084221093e-16,
+          "nonzero_complex_normal": true
+        }
+      ],
+      "ufl_error": 6.355542827338264e-18,
+      "ufl_tolerance": 8.641419798868481e-16,
+      "maximum_target_batch": 256
+    }
+  ],
+  "observer_cases": [
+    {
+      "status": "partial",
+      "stage": "pre_solve_nullspace_validation",
+      "primary_rhs": 0,
+      "attempted_primary_solves": 0,
+      "returned_primary_solves": 0,
+      "correction_rhs": 0,
+      "matrix_solves": 0,
+      "physical_meshes": 0,
+      "injections": [],
+      "oracle_checks": [],
+      "pre_solve_observer": {
+        "anchor_line": 321,
+        "solve_line": 339,
+        "calls": 1,
+        "toy_stop": true,
+        "factor_counts": {
+          "MatLUFactorSym": 0,
+          "MatLUFactorNum": 0,
+          "MatSolve": 0
+        }
+      },
+      "pre_solve_operator": {
+        "digest": "9e269b987cc8d223d4336c9cfead1e14f4d1a7c658962c8696f44dbd327f5c4c",
+        "state": 67,
+        "offsets": [
+          0,
+          30,
+          34,
+          64,
+          68
+        ],
+        "constrained_count": 48,
+        "layout": {
+          "type": "mpi",
+          "local_size": 68,
+          "global_size": 68,
+          "ownership_range": [
+            0,
+            68
+          ],
+          "owned_offsets": [
+            0,
+            30,
+            34,
+            64,
+            68
+          ],
+          "ghost_offsets": [
+            68,
+            68,
+            68,
+            68,
+            68
+          ],
+          "array_size": 68
+        },
+        "factor_counts": {
+          "MatLUFactorSym": 0,
+          "MatLUFactorNum": 0,
+          "MatSolve": 0
+        }
+      },
+      "factor_counts": {
+        "MatLUFactorSym": 0,
+        "MatLUFactorNum": 0,
+        "MatSolve": 0
+      }
+    }
+  ],
+  "campaign_ready": false,
+  "elapsed_seconds": 6.67172319299425,
+  "process_peak_rss_mib": 181.0234375,
+  "error": {
+    "type": "AssertionError",
+    "message": ""
+  }
+}

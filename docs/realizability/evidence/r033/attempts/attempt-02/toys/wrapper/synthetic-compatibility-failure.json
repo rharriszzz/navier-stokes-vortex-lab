@@ -1,0 +1,18 @@
+{
+  "status": "partial",
+  "matrix_solves": 0,
+  "pressure_compatibility": {
+    "pressure_constant_products_before": [
+      1.0
+    ],
+    "removed_norm": 1.0,
+    "rhs_norm": 2.23606797749979,
+    "tolerance": 1.2710574864626038e-13,
+    "raw_sha256": "dc91ce9a50ddc828740aa26743716897fdb2bb64f1db662fe263a59be56145ae",
+    "proposed_sha256": "0827fd05442d5279a37c60207e21a0e11585427eebdf4b2a0a35ded23a7cd9ed",
+    "raw_unchanged_after_measurement": true,
+    "accepted": false,
+    "removal_applied": false
+  },
+  "stage": "synthetic_compatibility"
+}

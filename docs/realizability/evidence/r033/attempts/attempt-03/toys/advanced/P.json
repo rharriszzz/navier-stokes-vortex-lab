@@ -1,0 +1,162 @@
+{
+  "status": "passed_expected_refusal",
+  "stage": "observer_case_complete_P",
+  "primary_rhs": 0,
+  "attempted_primary_solves": 0,
+  "returned_primary_solves": 0,
+  "correction_rhs": 0,
+  "matrix_solves": 0,
+  "physical_meshes": 0,
+  "injections": [
+    {
+      "name": "P",
+      "amount": 5.354244262165197e-13,
+      "original_unchanged": true
+    }
+  ],
+  "oracle_checks": [
+    {
+      "name": "P",
+      "maximum_error": 1.3877787807814457e-17,
+      "tolerance": 2.0884174729489195e-13,
+      "pressure_lifting_norm": 0.0687184270936277,
+      "exact_essential": true
+    }
+  ],
+  "pre_solve_observer": {
+    "anchor_line": 321,
+    "solve_line": 339,
+    "calls": 1,
+    "toy_stop": true,
+    "factor_counts": {
+      "MatLUFactorSym": 0,
+      "MatLUFactorNum": 0,
+      "MatSolve": 0
+    }
+  },
+  "pre_solve_operator": {
+    "digest": "9e269b987cc8d223d4336c9cfead1e14f4d1a7c658962c8696f44dbd327f5c4c",
+    "state": 67,
+    "offsets": [
+      0,
+      30,
+      34,
+      64,
+      68
+    ],
+    "constrained_count": 48,
+    "layout": {
+      "type": "mpi",
+      "local_size": 68,
+      "global_size": 68,
+      "ownership_range": [
+        0,
+        68
+      ],
+      "owned_offsets": [
+        0,
+        30,
+        34,
+        64,
+        68
+      ],
+      "ghost_offsets": [
+        68,
+        68,
+        68,
+        68,
+        68
+      ],
+      "array_size": 68
+    },
+    "factor_counts": {
+      "MatLUFactorSym": 0,
+      "MatLUFactorNum": 0,
+      "MatSolve": 0
+    }
+  },
+  "factor_counts": {
+    "MatLUFactorSym": 0,
+    "MatLUFactorNum": 0,
+    "MatSolve": 0
+  },
+  "pre_solve_nullspace": {
+    "gram": [
+      [
+        1.0,
+        0.0
+      ],
+      [
+        0.0,
+        1.0
+      ]
+    ],
+    "normalization": [
+      {
+        "pressure_block": 1,
+        "pressure_dofs": 4,
+        "expected_coefficient": 0.5,
+        "maximum_coefficient_error": 0.0,
+        "outside_support_nonzeros": 0,
+        "right_residual_norm": 3.3672392448339915e-14,
+        "left_residual_norm": 3.416471050645705e-14
+      },
+      {
+        "pressure_block": 3,
+        "pressure_dofs": 4,
+        "expected_coefficient": 0.5,
+        "maximum_coefficient_error": 0.0,
+        "outside_support_nonzeros": 0,
+        "right_residual_norm": 3.3672392448339915e-14,
+        "left_residual_norm": 3.416471050645705e-14
+      }
+    ],
+    "right_test_passed": true,
+    "transpose_test_passed": true
+  },
+  "completed_rhs_assemblies": 1,
+  "candidates": {
+    "P": {
+      "candidate_layout": {
+        "type": "mpi",
+        "local_size": 68,
+        "global_size": 68,
+        "ownership_range": [
+          0,
+          68
+        ],
+        "owned_offsets": [
+          0,
+          30,
+          34,
+          64,
+          68
+        ],
+        "ghost_offsets": [
+          68,
+          68,
+          68,
+          68,
+          68
+        ],
+        "array_size": 68
+      },
+      "pressure_compatibility": {
+        "pressure_constant_products_before": [
+          5.353738286029142e-13,
+          -1.0408340855860843e-17
+        ],
+        "removed_norm": 5.353755634022716e-13,
+        "rhs_norm": 0.5887053824203564,
+        "tolerance": 3.346402663853248e-14,
+        "raw_sha256": "f26dc155ef0d99d513b8d07d0415293945fcb411fa236ec683a4a3a254db93ab",
+        "proposed_sha256": "69667f22d51425d30dd41b3fc83032bdc3e271486981e9c7bf4d2cdbb1f057ff",
+        "raw_unchanged_after_measurement": true,
+        "accepted": false,
+        "removal_applied": false
+      }
+    }
+  },
+  "error": "Primal pressure compatibility failed before solve",
+  "failed_raw_unchanged": true
+}

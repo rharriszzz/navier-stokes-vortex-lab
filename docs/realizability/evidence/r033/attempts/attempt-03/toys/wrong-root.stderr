@@ -1,0 +1,16 @@
+Traceback (most recent call last):
+  File "/tmp/navier-b2-compatible-r033/attempt-03/wrapper_toys.py", line 193, in <module>
+    run(args.output)
+  File "/tmp/navier-b2-compatible-r033/attempt-03/wrapper_toys.py", line 32, in run
+    production_hashes = {name: support.sha(repository_root / name)
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/navier-b2-compatible-r033/attempt-03/toy_runner.py", line 18, in sha
+    return hashlib.sha256(Path(path).read_bytes()).hexdigest()
+                          ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/navier-fenicsx/lib/python3.12/pathlib.py", line 1019, in read_bytes
+    with self.open(mode='rb') as f:
+         ^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/navier-fenicsx/lib/python3.12/pathlib.py", line 1013, in open
+    return io.open(self, mode, buffering, encoding, errors, newline)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: '/tmp/navier-b2-compatible-r033/attempt-03/toys/invalid-working-directory/realizability/__init__.py'

@@ -1,0 +1,12 @@
+{
+  "status": "passed",
+  "scope": "R024 memory advice and documentation only",
+  "markdown_files": 4,
+  "local_links_and_anchors": 60,
+  "earlier_request_text_preserved": true,
+  "r023_evidence_hashes_unchanged": 2,
+  "tracked_changes_limited_to_documentation": true,
+  "resource_unit_conversions_checked": true,
+  "git_diff_check": "passed",
+  "numerical_executions": 0
+}

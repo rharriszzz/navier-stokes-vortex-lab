@@ -1,10 +1,12 @@
 # R021 compatibility review and revised matched-trace contract
 
-The subsequent [R022 prerequisite attempt](B2_COMPATIBLE_TRACE_PREFLIGHT_RESULT.md)
-implemented a disposable copy of this contract and passed its high-order
-polynomial checks, then stopped at the toy memory cap before actual observer
-coverage. No physical child ran. Follow R022's toy-only next task before a
-physical experiment; the R021 decision below remains the preserved contract.
+The [R022 prerequisite attempt](B2_COMPATIBLE_TRACE_PREFLIGHT_RESULT.md)
+stopped before observer coverage. The follow-up
+[R033 prerequisite result](B2_COMPATIBLE_TRACE_PREFLIGHT_FOLLOWUP.md) later
+passed the high-order fixtures and actual pre-solve observer acceptance and
+refusal cases. No physical child ran. Review the exercised path and remaining
+physical launch conditions before any separately scoped R021 experiment; the
+R021 decision below remains the preserved contract.
 
 Recorded 2026-09-20 for [R021](../../REQUEST_LOG.md#r021--2026-09-20--short-continuation-request),
 starting from `e96f81b`. This completes the
