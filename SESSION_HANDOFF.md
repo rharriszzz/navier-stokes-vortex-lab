@@ -1,6 +1,9 @@
 # Current session handoff
 
-Last updated 2026-09-21 for R106. PC/WSL `daisy` retains ownership.
+Last updated 2026-09-21 for R107. Ownership is released by PC/WSL `daisy` and
+transferred to the Mac for the next bounded checker task after this handoff is
+published. The Mac checkout path and interpreter path are to be recorded on
+receipt.
 Practical supervision and Mac usability requirements are recorded in the
 [policy](docs/realizability/B2_MONITOR_PRACTICAL_SUPERVISION_POLICY.md).
 The small planning step and the first useful implementation increment are
@@ -8,8 +11,8 @@ complete. R106 delivered a **portable trajectory output checker** that catches
 bad saved frames before rendering, with no new supervision framework. The
 checker is a saved-data validity check, not a runtime or scientific certificate.
 
-Next: after an explicit ownership handoff, run the same tiny checker test on the
-Mac and record the result without claiming cross-platform support from PC tests.
+Next: on the receiving Mac, run the same tiny checker test and record the result
+without claiming cross-platform support from PC tests.
 Then validate actual trajectory output and a small movie task under its own
 bounded scope.
 
@@ -17,13 +20,13 @@ bounded scope.
 
 | Field | Current value |
 |---|---|
-| Owner | PC/WSL `daisy`, Linux/x86_64 |
-| Checkout | `/home/rharris/git/navier-stokes-vortex-lab` |
+| Owner | Mac; receipt pending on the receiving checkout |
+| Checkout | Mac repository checkout path not supplied; source branch is `main` / `origin/main` |
 | Branch/upstream | `main` / `origin/main` |
-| Starting state | R106 began at `bcb806f`; empty stashes; R106 delivery follows Git. |
-| Other owner/process | No ownership switch indicated. Independent Mac POV-Ray build remains user-managed and unverified. |
+| Starting state | R107 records the supplied Luna/session metadata; published source is R106 delivery `071ef39`; empty stashes on the sending checkout. |
+| Other owner/process | PC/WSL `daisy` releases ownership after R107 publication. Independent Mac POV-Ray build remains user-managed and unverified. |
 | Task processes | No fixture/workload or background process launched; no ignored transfer input. |
-| Delivery state | R106 completion is prepared separately from final scoped commit/push; no post-push log edit. |
+| Delivery state | R107 handoff metadata is pending this authorized commit/push; no post-push log edit. |
 
 ## Current result and limits
 
@@ -61,7 +64,7 @@ failed. No trajectory, fixture, native/live, FEM, render or encode work ran here
 
 ## Next task
 
-After an explicit ownership handoff to the Mac, use **GPT-5.6 Luna/medium** to
+On the Mac, use **GPT-5.6 Luna/medium** to
 run the same tiny checker command against tiny temporary examples. The useful
 outcome is an early Mac usability check of the shared standard-library command.
 Do not claim Mac support from this PC result.
@@ -70,7 +73,7 @@ Do not claim Mac support from this PC result.
    `/path/to/python -m unittest -v tests.test_check_trajectories` from the
    repository checkout. Keep the test command bounded and stop on unexpected
    resource exhaustion.
-2. Record the Mac interpreter path, test result and any platform-specific error.
+2. Record receipt, the Mac interpreter path, test result and any platform-specific error.
    Do not run trajectory integration, rendering, encoding, benchmark, OS helper,
    FEM or physical work in this check.
 3. If the Mac check passes, return to validating actual trajectory output and a
@@ -85,10 +88,10 @@ unexpected resource failure. Process/memory supervision, full platform parity,
 benchmark matrices and B2 numerical work are explicitly deferred. No
 physical-run admission follows from this checker.
 
-Luna is available in this session's catalog; medium effort was rechecked through
-OpenAI Docs and the official [Luna page](https://developers.openai.com/api/docs/models/gpt-5.6-luna).
-No model switch, delegation or automation occurred. Continue authorizes the scoped
-session workflow and commit/push. **Next prompt: Continue.**
+The supplied session used Luna/medium; medium effort is appropriate for the
+routine Mac test. Recommend Astra/high only for a model/format decision or an
+unexpected resource failure. No model switch, delegation or automation occurred
+here. **Next prompt: Continue.**
 
 ## Historical handoff anchors
 
