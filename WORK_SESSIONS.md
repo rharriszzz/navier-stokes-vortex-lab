@@ -49,3 +49,8 @@ delivery leaves transfer pending. A retained machine owner does not keep the
 old agent running. See AGENTS.md for the full reviewed procedure.
 
 R074 validation | 2026-09-21 04:44:52 UTC | 13 documentation/integrity checks passed; 839 historical evidence files and prior log prefixes unchanged; 132 links/25 fragments checked. First checker attempt failed on unsupported Git formatting and is retained; corrected second attempt passed. Audit remains one attempt with 12 checks. Delivery prepared; no live adapter/FEM/background task.
+
+## R076 — Fixture-only monitor implementation
+STARTED | 2026-09-21 04:52:05 UTC | PC/WSL | daisy | Linux/x86_64
+Checkout: /home/rharris/git/navier-stokes-vortex-lab | Branch/upstream: main/origin/main | Starting commit: a48a3c790e1ff37d71ccab5e96cd8e73e4df2c26
+Task: Implement the versioned monitor core, injected Linux adapters and Windows host-protocol facade with deterministic fixtures in new disposable copies; bind default-deny checks to a new R070 copy. Use Python 3.12.13 and a cumulative 120 s / 256 MiB standard-library budget including startup/import/reporting. Preserve archives/pins; stop before live operations, physical/FEM work or limit changes.
