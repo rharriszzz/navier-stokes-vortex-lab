@@ -1,9 +1,10 @@
 # Current session handoff
 
 Last updated: 2026-09-20. Latest request:
-[R048](REQUEST_LOG.md#r048--2026-09-20--publish-mac-verification-and-host-comparison-handoff),
-which committed and pushed the Mac verification and host-comparison notes as `3271963` to `origin/main`. R034 and the SSH recovery
-records were committed and pushed successfully. The
+[R052](REQUEST_LOG.md#r052--2026-09-20--pull-and-review-mac-side-work),
+which pulled and reviewed the Mac records through commit `8c27290`. The Mac
+environment now imports the pinned FEM stack and starts two-rank MPI; no FEM
+assembly/solve or matched benchmark has run. The
 user permits using the PC
 within its capabilities; the former small diagnostic caps are not immutable
 user requirements. R023–R032 did not invoke Continue or authorize publication
@@ -242,6 +243,13 @@ process-tree monitoring, and run a small reference comparison under unchanged
 scientific tolerances before selecting a host. Do not copy Linux binaries or
 JIT caches.
 
+R046 subsequently verified the pinned FEM package imports and two-rank MPICH
+startup in the Mac Conda environment. It did not run FEM assembly/solve or a
+numerical reference case. Conda metadata lists `fenics-ffcx` 0.10.1 while the
+imported module reports 0.10.0; preserve and resolve this reproducibility
+discrepancy during review. The original MacPorts shell's missing packages are
+not evidence that the packages are absent from the entire Mac.
+
 FEniCSx documents a [macOS installation route](https://fenicsproject.org/download/),
 but this project's exact pinned environment has not been tested there.
 `environment-b1.yml` pins DOLFINx/PETSc/MPI versions; the current harmonic
@@ -265,7 +273,7 @@ osx-64/Python 3.11; native availability of the project's exact 0.10.0/Python
 3.12.13 combination is not established. Do not silently substitute 0.11 or
 edit the existing environment.
 
-Recommended safe first attempt: install the Apple Silicon **Miniforge** build,
+Recommended safe first attempt in R039: install the Apple Silicon **Miniforge** build,
 open a fresh Terminal, and verify `conda info` reports `osx-arm64`. From the
 repository root, run
 `conda search --override-channels -c conda-forge 'fenics-dolfinx=0.10.0'`.
@@ -274,7 +282,10 @@ If an osx-arm64 build is listed, try the unchanged
 MacPorts Python. If the exact package or full environment solve is refused,
 stop and preserve the solver message; review a separate candidate stack before
 changing versions. PETSc4py 3.25.5, MPICH 5.0.1 and Gmsh 4.15.2 list arm64
-builds, but that alone does not establish the whole environment solves.
+builds, but that alone does not establish the whole environment solves. R041
+supersedes the Miniforge installer recommendation with the user's preference
+for Anaconda's official Miniconda ARM64 `.sh` installer; retain the conda-forge
+channel and project pins.
 POV-Ray was not found on PATH; ffmpeg/ffprobe were. No packages were installed
 in R039. Continue the Astra/high physical-path review on the PC while Mac
 environment compatibility remains unresolved.
@@ -309,6 +320,22 @@ are insufficient. No FEM benchmark or solver was launched for R047. The
 handoff's GPT-6 Astra/high review remains the next task and must stop before
 physical execution; it should include workload sizing and treat the FFCx
 distribution/module version discrepancy as an open reproducibility detail.
+
+## R052 Machine task allocation checkpoint
+
+The pull advanced `main` from `4a55bdf` to `8c27290`. Keep the PC for the
+immediate R021/R013 observer and physical-runner review: the disposable Linux
+path, guard checks and resource monitoring were actually exercised there. The
+Mac is a promising candidate for a future memory-sensitive FEM comparison
+because it has 24 GiB installed and the pinned packages import with MPI startup
+verified. It has not passed FEM assembly, solve, monitoring or same-input output
+checks, and its FFCx version identity needs resolution. Neither machine has a
+matched timing/RSS benchmark for the next physical workload. Take fresh
+capacity readings on both machines and run the same small reference case only
+after the Astra/high review defines that case and its unchanged tolerances.
+The short Mac inventory prompt is at
+[MAC_INVENTORY_PROMPT.md](docs/realizability/MAC_INVENTORY_PROMPT.md); no
+additional Mac run is needed before returning to the PC.
 
 R041 clarifies the user's preference for software published by Anaconda Inc.
 Recommend the official Miniconda Apple Silicon `.sh` installer, not Miniforge.

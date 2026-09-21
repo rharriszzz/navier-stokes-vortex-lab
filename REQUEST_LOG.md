@@ -2463,3 +2463,39 @@ review recorded in `SESSION_HANDOFF.md`.
 **Status:** Complete; commit `3271963` pushed to `origin/main`.
 
 **Outcome:** Committed the reviewed `REQUEST_LOG.md` and `SESSION_HANDOFF.md` updates as `3271963` (`Record Mac FEM environment verification`) and pushed successfully to `origin/main`. `git diff --cached --check` passed before commit; no force push was used. The pushed handoff now contains the Mac environment results, FFCx version discrepancy, and the matched Mac/PC workload comparison plan. No source files or numerical evidence changed.
+
+## R049 — 2026-09-20 — Clarify value of recording a stale cache failure
+
+**Recovered user request:** “I understand, almost. I know JITs (although I could only write a toy JIT), I know caches, and stale cache entries, I was just surprised that there was value in keeping a stale cache entry around.”
+
+**Interpreted scope and outcome:** Clarify that the stale cache artifact itself had no preservation value; the useful evidence was the observed failure and the choice not to mutate shared cache state during that diagnostic. Answered before the Mac-side records were pulled. Reindexed here because the Mac branch had independently used R034–R048.
+
+## R050 — 2026-09-20 — Confirm model for Mac assessment
+
+**Recovered user request:** “ok, thats good. Do you think the current model / level is good for evaluating my mac? we can do that next, and after that go back to the pc for the next step.”
+
+**Interpreted scope and outcome:** Confirm GPT-5.6 Luna/medium for gathering and comparing Mac machine facts, followed by the existing Astra/high scientific review on the PC. Answered; the Mac inventory was still pending at that time. Reindexed after the Mac branch used R034–R048.
+
+## R051 — 2026-09-20 — Save Mac inventory commands and short prompt
+
+**Recovered user request:** “Please save this [the preceding Mac inventory checklist] into a file. I will start codex cli on my mac. Plase give me a short prompt to use; maybe make a quick markdown file so my prompt can be short.”
+
+**Interpreted scope and outcome:** Save the supplied read-only commands and short Codex CLI prompt for the Mac checkout. Created `docs/realizability/MAC_INVENTORY_PROMPT.md`; later Mac work superseded its pending-inventory status. Reindexed after the Mac branch used R034–R048.
+
+## R052 — 2026-09-20 — Pull and review Mac-side work
+
+**User request:** “ok  I have done some work on the mac.  Please do a pull and check the files.  We are working on figuring out what taks each machine is best at.”
+
+**Interpreted scope:** Pull the configured upstream updates, inspect the Mac-side files and evidence, and assess what each machine is suited for using recorded capacity and task results. Preserve local edits; do not infer capability from RAM alone or launch physical work.
+
+**Outcome, 2026-09-20:** Fast-forwarded `main` from `4a55bdf` to `8c27290`. The Mac-side record shows an M4/24-GiB iMac with a dated 68% memory-pressure free reading, 591 GiB disk free, pinned FEM package imports and a successful two-rank MPICH startup. No FEM assembly/solve or matched reference benchmark was run. Conda metadata reports FFCx 0.10.1 while the imported module reports 0.10.0. This makes the Mac a credible future comparison candidate, but does not establish performance or physical-workload fit. The PC remains the validated host for the immediate observer/runner review; the Mac has a promising higher-memory profile but still needs FFCx identity review, process-monitor validation and a matched small reference case before choosing it for FEM execution. No physical work was run.
+
+**Checks, preservation and next task:** `docs/realizability/evidence/r034/mac_snapshot.json` and pulled R046/R047 handoff records were inspected; the JSON parsed and `git diff --check` passed. The pull's autostash could not apply cleanly to three continuity files, so its stash was retained while the pulled records were used as the base and the local Mac-prompt notes were reconciled with unique IDs. No commit or push was requested. Next task remains the Astra/high physical-path review on the PC, stopping before physical execution; size and authorize a same-input Mac/PC reference comparison only if that review warrants it.
+
+## R053 — 2026-09-20 — Commit reconciled Mac comparison notes and continue host assessment
+
+**User request:** “I did not realize there were un committed changes. sorry. please resolve them somehow, then add commit and push. then proceed with comparing my mac with my pc for the tasks at hand.”
+
+**Interpreted scope:** Verify and reconcile the local continuity/prompt changes retained across the Mac pull, commit and push those scoped changes, then compare recorded Mac and PC capabilities for the current project tasks. Do not launch a physical calculation or claim a performance winner without matched measurements.
+
+**Status:** In progress.

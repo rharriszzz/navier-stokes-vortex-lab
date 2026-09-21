@@ -286,17 +286,17 @@ size a later physical allowance separately. Preserve watchdogs, finite reports,
 scientific acceptance thresholds and the recorded experiment scope. Historical
 R022 resource results remain unchanged.
 
-The user's Mac was inspected for R034. It is an **Apple M4 iMac with 24 GB
-RAM**, and macOS reported 68% system-wide free memory in that snapshot. The
-project volume had 591 GiB available. The inspected Python environment does
-not contain the pinned DOLFINx/PETSc/MPI/Gmsh stack; see the
-[machine evidence](docs/realizability/evidence/r034/mac_snapshot.json) and
-[handoff assessment](SESSION_HANDOFF.md#r034-mac-assessment). The Mac has more
-installed memory than the PC, but there is no physical-workload memory estimate
-or comparable runtime benchmark. Do not transfer the next physical task yet:
-first complete the prescribed scientific review, then compare live capacity,
-environment reproduction cost and a small reference run under unchanged
-tolerances if a physical attempt is warranted. The current evidence shows the
-inspected shell is not ready for that FEM run; it does not show that the Mac
-cannot host it. No settings/apps were changed and no transfer or numerical
-execution occurred.
+The user's Mac is an **Apple M4 iMac with 24 GiB RAM**. A dated snapshot
+recorded 68% system-wide free memory and 591 GiB free project-volume storage.
+The pinned FEM packages now import in its Conda environment, and two-rank MPICH
+startup succeeded; no FEM assembly/solve or same-input reference comparison
+has run. Conda reports FFCx 0.10.1 while the imported module reports 0.10.0.
+See the [machine evidence](docs/realizability/evidence/r034/mac_snapshot.json)
+and [handoff assessment](SESSION_HANDOFF.md#r052-machine-task-allocation-checkpoint).
+The PC remains the better-supported host for the immediate physical-path
+review because the disposable Linux observer/runner and resource checks were
+exercised there. The Mac is a plausible candidate for a later memory-sensitive
+FEM comparison, but neither its workload fit nor its relative runtime is
+established. Complete the Astra/high review first; then refresh capacity on
+both hosts and perform the same small, non-campaign reference case only if the
+review warrants it. No physical calculation is authorized by these records.
