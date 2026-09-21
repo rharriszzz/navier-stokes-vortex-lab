@@ -36,3 +36,16 @@ Changed files: REQUEST_LOG.md, SESSION_HANDOFF.md, WORK_SESSIONS.md, docs/realiz
 STARTED | 2026-09-21 04:32:10 UTC | PC/WSL | daisy | Linux/x86_64
 Checkout: /home/rharris/git/navier-stokes-vortex-lab | Branch/upstream: main/origin/main | Starting commit: 3fcc82f832737381bed90b7d6073644cd87c52e0
 Task: Review/fix recent coordination process changes, then specify Linux/WSL process-tree, Windows host-pressure and termination adapters with required validation. Review/source/saved-data checks only; stop before live adapter workloads, FEM/physical execution or threshold changes.
+COMPLETED | 2026-09-21 04:43:22 UTC | outcome: process fixes and adapter specification complete; nine fake counterexamples reproduced, 12 audit checks passed; scoped delivery prepared, actual publication outcome reported after push | released: no (PC remains next owner; this task stops after publication)
+Changed files: AGENTS.md, PROJECT_TRACKS.md, REQUEST_LOG.md, SESSION_HANDOFF.md, STATUS.md, WORK_SESSIONS.md, docs/realizability/B2_NEXT_STEPS.md, docs/realizability/B2_MONITOR_ADAPTER_REVIEW.md, docs/realizability/evidence/r074/* | Checks/skips: audit/source checks passed; final documentation/preservation validation recorded below; live platform, FEM, render and encoder checks skipped | Evidence: docs/realizability/evidence/r074/ | Next task: Luna/medium fixture-only monitor core/Linux adapter/host-protocol implementation; stop before live execution, then Astra/high code/live-validation review.
+
+R074 protocol clarification (applies to later events; prior entries unchanged):
+No-edit-after-push applies to the completed turn; later user requests may append.
+For an open session, a new actual Continue gets a request entry linked to it
+and an appended RESUMED note, not another STARTED. Automatic compaction adds
+neither. An interrupted task remains open with an INTERRUPTED note and partial
+evidence/process state. COMPLETED describes task completion; failed/uncertain
+delivery leaves transfer pending. A retained machine owner does not keep the
+old agent running. See AGENTS.md for the full reviewed procedure.
+
+R074 validation | 2026-09-21 04:44:52 UTC | 13 documentation/integrity checks passed; 839 historical evidence files and prior log prefixes unchanged; 132 links/25 fragments checked. First checker attempt failed on unsupported Git formatting and is retained; corrected second attempt passed. Audit remains one attempt with 12 checks. Delivery prepared; no live adapter/FEM/background task.

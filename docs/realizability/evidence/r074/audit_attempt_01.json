@@ -1,0 +1,193 @@
+{
+  "scope": "source review and fake counterexamples only",
+  "python": "3.12.13 | packaged by conda-forge | (main, Mar  5 2026, 16:50:00) [GCC 14.3.0]",
+  "executable": "/tmp/navier-fenicsx/bin/python",
+  "status": "review_findings_reproduced",
+  "findings": {
+    "root_exit_with_remaining_processes": {
+      "report": {
+        "status": "completed",
+        "stop_reason": null,
+        "tree_samples": 1,
+        "host_samples": 1,
+        "maximum_tree_sample_gap_seconds": 0.0,
+        "maximum_host_sample_gap_seconds": 0.0,
+        "peak_tree_rss_mib": 10.0,
+        "largest_process_count": 2,
+        "last_tree_reading": {
+          "timestamp": 0.0,
+          "rss_mib": 10.0,
+          "process_count": 2,
+          "root_alive": false
+        },
+        "termination_requested": false
+      },
+      "termination_calls": []
+    },
+    "termination_error_loses_report_and_retries": {
+      "report": {
+        "raised": "OSError",
+        "message": "synthetic signal failure"
+      },
+      "termination_calls": [
+        "requested",
+        "requested"
+      ]
+    },
+    "invalid_launch_reading_outside_cleanup": {
+      "report": {
+        "raised": "MonitorInputError",
+        "message": "missing launch host reading"
+      },
+      "termination_calls": []
+    },
+    "nan_deadline_accepted": {
+      "report": {
+        "status": "completed",
+        "stop_reason": null,
+        "tree_samples": 1,
+        "host_samples": 1,
+        "maximum_tree_sample_gap_seconds": 0.0,
+        "maximum_host_sample_gap_seconds": 0.0,
+        "peak_tree_rss_mib": 1.0,
+        "largest_process_count": 1,
+        "last_tree_reading": {
+          "timestamp": 0.0,
+          "rss_mib": 1.0,
+          "process_count": 1,
+          "root_alive": false
+        },
+        "termination_requested": false
+      },
+      "termination_calls": []
+    },
+    "boolean_count_accepted": {
+      "report": {
+        "status": "completed",
+        "stop_reason": null,
+        "tree_samples": 1,
+        "host_samples": 1,
+        "maximum_tree_sample_gap_seconds": 0.0,
+        "maximum_host_sample_gap_seconds": 0.0,
+        "peak_tree_rss_mib": 1.0,
+        "largest_process_count": true,
+        "last_tree_reading": {
+          "timestamp": 0.0,
+          "rss_mib": 1.0,
+          "process_count": true,
+          "root_alive": false
+        },
+        "termination_requested": false
+      },
+      "termination_calls": []
+    },
+    "future_tree_sample_accepted": {
+      "report": {
+        "status": "completed",
+        "stop_reason": null,
+        "tree_samples": 1,
+        "host_samples": 1,
+        "maximum_tree_sample_gap_seconds": 0.5,
+        "maximum_host_sample_gap_seconds": 0.0,
+        "peak_tree_rss_mib": 1.0,
+        "largest_process_count": 1,
+        "last_tree_reading": {
+          "timestamp": 0.5,
+          "rss_mib": 1.0,
+          "process_count": 1,
+          "root_alive": false
+        },
+        "termination_requested": false
+      },
+      "termination_calls": []
+    },
+    "valid_five_second_launch_sample_runtime_refusal": {
+      "report": {
+        "status": "partial",
+        "stop_reason": "monitor_input_failure",
+        "error_type": "MonitorInputError",
+        "error": "runtime host sampling gap exceeded one second",
+        "tree_samples": 0,
+        "host_samples": 0,
+        "maximum_tree_sample_gap_seconds": 0.0,
+        "maximum_host_sample_gap_seconds": 0.0,
+        "peak_tree_rss_mib": 0.0,
+        "largest_process_count": 0,
+        "last_tree_reading": null,
+        "termination_requested": true
+      },
+      "termination_calls": [
+        "requested"
+      ],
+      "standalone_launch_acceptance": {
+        "age_seconds": 5.0,
+        "available_mib": 4096.0,
+        "required_mib": 1536.0
+      }
+    },
+    "three_samples_without_clock_advance": {
+      "report": {
+        "status": "completed",
+        "stop_reason": null,
+        "tree_samples": 3,
+        "host_samples": 1,
+        "maximum_tree_sample_gap_seconds": 0.0,
+        "maximum_host_sample_gap_seconds": 0.0,
+        "peak_tree_rss_mib": 1.0,
+        "largest_process_count": 1,
+        "last_tree_reading": {
+          "timestamp": 0.0,
+          "rss_mib": 1.0,
+          "process_count": 1,
+          "root_alive": false
+        },
+        "termination_requested": false
+      },
+      "termination_calls": [],
+      "tree_read_times": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    "nonzero_child_returncode_can_complete": {
+      "status": "complete",
+      "watch": {
+        "stop_reason": null,
+        "returncode": 9
+      }
+    }
+  },
+  "checks": {
+    "root_exit_counterexample": true,
+    "termination_counterexample": true,
+    "prelaunch_cleanup_boundary": true,
+    "nan_deadline_counterexample": true,
+    "boolean_count_counterexample": true,
+    "future_sample_counterexample": true,
+    "aged_launch_counterexample": true,
+    "unpaced_loop_counterexample": true,
+    "nonzero_exit_counterexample": true,
+    "production_pins_unchanged": true,
+    "r073_manifest_matches": true,
+    "r070_physical_entry_still_disabled": true
+  },
+  "production_pin_count": 19,
+  "source_sha256": {
+    "docs/realizability/evidence/r033/source/toy_runner.py": "e6860548c3e3168a0cfaceb184652125ac57d127bc816af92e54b7cea41427c6",
+    "docs/realizability/evidence/r070/source/launch_guard.py": "66f903f46511daae6d3477c071fc62e02f6a454b449d52d0096a803b5836736e",
+    "docs/realizability/evidence/r070/source/run_contract.py": "83ec94ff73ececbb6bdc6f4b4b376f71ff428f6a45151514b8953b34fe282a66",
+    "docs/realizability/evidence/r073/portable_monitor.py": "9759d6875fa91359a506cc1bd728c0b21bf44efa3080d3a0c5e0b52dcca21655",
+    "docs/realizability/evidence/r073/validate.py": "209c181d1dfa5b0aa933c6f98c3669d0ea183fe8a73a0a811d048e97efeee280",
+    "docs/realizability/evidence/r073/attempt_ledger.json": "39f592aa332e98f44f82edd3e3d65120de94906c326441817d1b412046f0a012",
+    "docs/realizability/evidence/r074/audit.py": "dd187fa164b17878dc82c7cc2fcc654e27a9a728af2bcbcd6df3ede01dcf08e5"
+  },
+  "audit_elapsed_seconds": 0.02402671001618728,
+  "process_lifetime_max_rss_mib": 20.6875,
+  "measurement_scope": "script entry through audit; excludes interpreter startup and final write; RSS is Linux process-lifetime high-water, possibly including pre-exec history",
+  "limits": {
+    "address_space_mib": 256,
+    "cpu_seconds": 10,
+    "alarm_seconds_from_script_entry": 120
+  }
+}

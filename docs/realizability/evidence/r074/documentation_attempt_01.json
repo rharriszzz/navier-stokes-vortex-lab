@@ -1,0 +1,11 @@
+{
+  "base": "3fcc82f832737381bed90b7d6073644cd87c52e0",
+  "checks": {},
+  "status": "partial",
+  "scope": "documentation, Git history and source integrity; no application/live adapter tests",
+  "error": {
+    "type": "CalledProcessError",
+    "message": "Command '['git', 'ls-tree', '-r', '--format=%(objectname) %(path)', '3fcc82f832737381bed90b7d6073644cd87c52e0', 'docs/realizability/evidence']' returned non-zero exit status 129."
+  },
+  "elapsed_seconds": 0.001086478994693607
+}

@@ -13,19 +13,24 @@ automatic continuation messages are not new user requests. Redact credentials
 or other secrets and label the redaction; do not copy private session files.
 
 At every session start, perform the read-only machine/ownership checks below
-before repository writes or workload execution. For a receiving-computer handoff,
-perform ownership/status checks and clean fast-forward synchronization **before**
-allocating an ID or editing the log. This is the sole ordering exception to recording first and
-prevents the log itself from dirtying the checkout before the pull. If receiving
-is blocked, retain the request in the conversation until the shared history is
-reconciled; do not invent a globally unique ID from an outdated checkout.
+before repository writes or workload execution. For every Continue start and
+receiving-computer handoff, perform ownership/status checks and clean
+fast-forward synchronization **before** allocating an ID or editing the log.
+This ordering exception prevents the log itself from dirtying the checkout
+before the pull. If synchronization is blocked, retain the request in the
+conversation until shared history is reconciled; do not invent a globally
+unique ID from an outdated checkout.
 
 At session start, read `SESSION_HANDOFF.md` and the latest request entries.
 Follow its current task and read the linked research documents before acting.
 A new user request takes precedence over a stale handoff. Keep a bounded plan,
 completion criteria, and explicit stopping conditions. At completion, record
 changed files, checks and skips, evidence paths, unresolved decisions, and the
-next task in the log and handoff. Do not claim an unexecuted check passed.
+next task in the log and handoff. Keep the handoff opening, owner table and
+`Next task` section consistent; completed request/session outcomes take
+precedence over a stale task recommendation. Current status/index pages should
+link to that single task instead of retaining a competing execution request.
+Do not claim an unexecuted check passed.
 On compaction/resume, continue the existing entry rather than duplicating it.
 The request log is history; do not replay completed requests as new assignments.
 
@@ -51,13 +56,22 @@ bounded task. Commit and push this start record before substantive work. If
 that publication fails, stop before the task. At task completion, append a
 matching `COMPLETED` record with the UTC end time, outcome, changed files,
 checks/skips, evidence, next task and release state before staging the scoped
-task changes and making the final commit/push. Do not edit the log after that
-push; report the delivery commit in the final response because a commit cannot
+task changes and making the final commit/push. Do not edit the log again in that
+completed turn after a successful push; later requests may append new events.
+Report the delivery commit in the final response because a commit cannot
 contain its own hash. If the same request already has an open `STARTED` record,
 resume it rather than adding a duplicate. An open record on another owner
 requires the existing handoff/release procedure. These committed records help
 coordinate owners but are not a lock and cannot reveal another checkout's
 unpublished work or live processes.
+
+Record task completion separately from delivery: a completion prepared before
+push must not claim that push has succeeded. A failed/uncertain push leaves
+transfer pending and the owner responsible for reconciliation, even if a
+COMPLETED event is already committed. Do not mark an interrupted task COMPLETED;
+append an INTERRUPTED note with checkpoints/process state and keep its STARTED
+record open. `released: no` on a completed task retains the machine as next
+owner; it does not mean the old agent should continue running.
 
 ## Short continuation request
 
@@ -75,10 +89,20 @@ This shorthand replaces the long prompt at the user's request, R003 in
    upstream, for same-owner continuations as well as receiving handoffs. If it
    fails, conflicts, or histories diverge, stop and reconcile explicitly; do
    not reset, rebase, force, or enable autostash. Review incoming commits and
-   reread the updated handoff/log. Then append the actual user request to
-   `REQUEST_LOG.md`, identify the bounded task, and append/commit/push its
+   reread the updated handoff/log, and recheck ownership/open records against
+   the pulled history before writes. Confirm HEAD equals the fetched upstream;
+   clean local-only commits still require deliberate reconciliation. Then
+   append the actual user request to `REQUEST_LOG.md`, identify the bounded
+   task, and append/commit/push its
    `STARTED` record in `WORK_SESSIONS.md` before substantive work. Resume an
-   unfinished same-owner task rather than starting the next listed task.
+   unfinished same-owner task rather than starting the next listed task. A
+   new user Continue still gets a request entry, linked to the existing open
+   session; append a RESUMED note under that session and publish the note before
+   substantive work, without a duplicate STARTED or reset experiment budget.
+   Compaction/automatic resume adds no request or lifecycle event. Existing
+   dirty work or unpublished commits must first be deliberately reconciled
+   within their authorization; never pull over them or log a fresh start to
+   bypass a pending start/completion publication.
 2. Carry out that task and its prescribed checks through completion. Preserve
    user work, scientific assumptions, acceptance thresholds, and recorded stop
    conditions. Fix understood implementation errors within the task's scope.
@@ -102,6 +126,10 @@ An explicit qualification in the user's message overrides the default workflow
 (for example, “Continue without pushing”). Quoted examples and mentions of the
 word in a question do not invoke it. The shorthand does not itself change the
 selected model or schedule another session.
+If publication is explicitly excluded, retain local lifecycle records and
+honor the excluded commit/push steps; mark transfer pending and keep ownership
+on this machine. The mandatory start-publication rule does not override that
+user qualification.
 
 ## Switching between the Mac and PC
 

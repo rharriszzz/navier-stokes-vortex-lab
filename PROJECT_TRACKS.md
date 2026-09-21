@@ -143,10 +143,14 @@ physical child or PDE solve ran. The subsequent
 passed the full toy/observer suite under its capacity-sized resource allowance;
 that work is complete and should not be repeated as a new task. The
 [R067 observer/physical-runner and FFCx review](docs/realizability/B2_PHYSICAL_RUNNER_REVIEW.md)
-is now complete. It supports the saved observer tests but requires a disposable
-launch/report repair before physical execution. The next PC task is that
-Luna/medium repair with saved-data and synthetic checks only. The Mac setup task and
-machine-handoff sequence are recorded in the current session handoff.
+is complete. R070 subsequently repaired the disposable launch/report paths;
+R073 added fake monitor checks. The
+[R074 adapter review](docs/realizability/B2_MONITOR_ADAPTER_REVIEW.md) records
+remaining scheduling, membership, cleanup and report-acceptance gaps and
+specifies the adapters. Follow the single
+[current handoff task](SESSION_HANDOFF.md#next-task) for implementation and
+stops; none of these steps authorizes physical execution. The Mac setup and
+machine-handoff sequence remain in that handoff.
 The B2 gate remains failed and campaign readiness false. Use
 [SESSION_HANDOFF.md](SESSION_HANDOFF.md) for completion criteria and stops.
 

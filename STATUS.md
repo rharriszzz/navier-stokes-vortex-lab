@@ -1,8 +1,10 @@
 # Project status: physical preparation and a realistic movie
 
-Updated 2026-09-20 for
-[R067](REQUEST_LOG.md#r067--2026-09-20--short-continuation-request): the PC
-scientific review is complete; a disposable launch/report repair is next.
+Updated 2026-09-21 for
+[R074](REQUEST_LOG.md#r074--2026-09-21--continue-review-process-changes-and-specify-monitor-adapters):
+the process review and host monitor adapter specification are complete.
+See the [single current task](SESSION_HANDOFF.md#next-task) for fixture-only
+monitor implementation on PC; physical execution remains disabled.
 R069 makes Python 3.12 the preference on both machines, retaining the 3.12.13
 FEM pin. R058 remains the latest inspected Mac readiness evidence; POV-Ray
 build completion is unverified. No physical run or benchmark ran in this review.
@@ -32,7 +34,7 @@ fluid calculation has not yet passed its physical accuracy checks.
 | Milestone | Position now | Work still needed |
 |---|---|---|
 | Explain the apparatus and intended motion | Illustrative movie pipeline implemented | Further visual refinement is possible; label the prescribed flow clearly. |
-| Trust the numerical boundary response | R033 toy prerequisites and observer coverage pass; physical accuracy gate still fails | R067 review is complete: repair launch/report safeguards, validate monitors, then decide separately on physical execution. |
+| Trust the numerical boundary response | R033 observer coverage passes; R070 launch repair and R073 fake monitor checks exist; R074 identifies remaining monitor/integration gaps; physical accuracy still fails | Implement and validate the specified adapters, then decide separately on physical execution. |
 | Determine what exterior actuators can influence | Benchmark commands/features defined; full six-input response campaign has not begun | Validate responses, then assess independent influence, conditioning and required amplitudes/times. |
 | Determine what exterior sensors can distinguish | Basic sensor fixtures exist; B3 sensing study has not begun | Test pressure/PIV information with realistic noise, resolution and delay. |
 | Prepare the desired initial flow | Concept and candidate hardware only | Define acceptable initial-state errors; test a finite actuator layout and its physical limits. |
@@ -204,15 +206,21 @@ movie can precede physical feasibility, while later validated data should
 replace or constrain its illustrative motion. Visual clarity alone is not
 evidence of realizability.
 
-## Latest scientific checkpoint and next repair
+## Latest scientific checkpoint and monitor review
 
 The [R067 review](docs/realizability/B2_PHYSICAL_RUNNER_REVIEW.md) confirms the
 saved observer/oracle coverage and the patched FFCx package, but finds stale
 launch limits, incomplete evidence binding and failure/count reporting gaps.
-Next on PC: Luna/medium repair in a new disposable copy using saved-data and
-synthetic checks only. The review specifies a later repeatable observer/assembly
-reference, with unchanged numerical screens; monitors must pass first. It does
-not establish comparative solver performance or authorize physical execution.
+R070 completed the disposable repair and R073 added passing fake monitor checks.
+The [R074 adapter review](docs/realizability/B2_MONITOR_ADAPTER_REVIEW.md)
+reproduces root/descendant completion, cleanup-exception, clock/scheduling/input
+and return-code acceptance gaps. It specifies Linux containment/RSS/cleanup
+and Windows host-pressure semantics. R073's ledger is preserved, with incomplete
+all-attempt timing/RSS evidence explicitly noted. Follow the handoff's new-copy
+implementation task; archived passes are not live adapter validation.
+The later observer/assembly reference retains unchanged numerical screens;
+monitors must pass first. No comparative solver performance or physical
+execution is established by these reviews.
 The independent Mac POV-Ray build remains outside this task; its movie check
 waits for a later explicit switch. See the [handoff](SESSION_HANDOFF.md#next-task).
 
@@ -228,7 +236,7 @@ The final cache-reuse pass peaked at 171.24 MiB. Two understood fixture defects
 were repaired in the disposable copy, and every attempt was preserved.
 **No physical child, PDE solve, factorization or flow response ran.** The B2
 physical accuracy gate remains failed. R067 completed the observer/physical-path
-review without launching that comparison; the mechanical repairs above come next.
+review without launching that comparison; R070/R073/R074 still launch none.
 
 R023's qualified 600-second/2048-MiB allowance was sized down for R033 after
 the live Windows host check: the first launch used a 1536-MiB child-tree cap
@@ -292,9 +300,9 @@ The user authorizes using the PC within its capabilities. Future local jobs
 should use allowances based on available RAM and expected work, leaving room
 for the operating system and other applications. R033 rechecked both Windows
 and WSL before each attempt, did not count swap as RAM, and preserved its
-600-second/1536-MiB limit. R067 completed the review; launch/report repairs and
-validated resource monitoring are required before any physical launch;
-size a later physical allowance separately. Preserve watchdogs, finite reports,
+600-second/1536-MiB limit. R074 specifies the remaining monitor/integration
+requirements before any physical launch. Retain the provisional physical
+180-second/1536-MiB limits. Preserve watchdogs, finite reports,
 scientific acceptance thresholds and the recorded experiment scope. Historical
 R022 resource results remain unchanged.
 
@@ -322,14 +330,14 @@ The latest PC snapshot showed 15.72 GiB total/5.44 GiB free in Windows and
 shared host RAM. The Mac's 4 performance/6 efficiency cores and the PC's 28
 WSL-visible logical CPUs do not establish comparative speed; no matched run
 exists. The PC's R033 Linux observer/runner and resource checks were
-exercised, so retain the PC for the immediate launch/report repair. The Mac is
+exercised, so retain the PC for the current monitor implementation. The Mac is
 a plausible future memory-sensitive FEM
 candidate, but neither workload fit nor relative runtime is established. See
 the [R053 comparison evidence](docs/realizability/evidence/r053/machine_snapshot.json)
 and [handoff assessment](SESSION_HANDOFF.md#r053-machine-task-allocation-checkpoint).
-Complete the repair and synthetic monitor validation before refreshing capacity
-and running the specified observer/assembly reference on both hosts. No
-physical calculation or matched benchmark was run for this comparison.
+Complete the R074 adapter implementation and required live validation before
+refreshing capacity and running the specified observer/assembly reference on
+both hosts. No physical calculation or matched benchmark was run for this comparison.
 
 For the Mac software inventory (R054), the FEM Conda environment and MPI
 startup have passed import checks, and `ffmpeg`/`ffprobe` are present. POV-Ray
@@ -350,8 +358,9 @@ portable resource-monitor validation remain pending. No install or benchmark
 was run as part of R058. R067 has now specified an observer/assembly reference
 and comparison screens, with no solve benchmark or host winner inferred.
 
-R065 retained PC ownership. R067 completed its scientific review; launch/report
-repair, portable monitor validation and a separately scoped reference follow. Mac movie
+R065 retained PC ownership. R067/R070/R073 are complete within their recorded
+scope; R074 specifies the remaining monitor work before a separately scoped
+reference. Follow the current handoff instead of replaying older tasks. Mac movie
 readiness and visualization benchmarks can be scheduled independently. The workload revision
 stays fixed across later evidence commits; ignored benchmark inputs need an
 explicit checksum-verified transfer. R063 adds a local machine/owner check at

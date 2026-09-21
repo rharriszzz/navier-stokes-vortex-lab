@@ -1,0 +1,26 @@
+{
+  "base": "3fcc82f832737381bed90b7d6073644cd87c52e0",
+  "checks": {
+    "all_historical_evidence_unchanged": true,
+    "REQUEST_LOG.md_base_prefix_preserved": true,
+    "WORK_SESSIONS.md_base_prefix_preserved": true,
+    "request_ids_unique_and_next_74": true,
+    "r074_single_start_completion_pair": true,
+    "one_next_task_fixture_implementation": true,
+    "local_links_and_fragments": true,
+    "new_python_syntax": true,
+    "evidence_json_finite": true,
+    "audit_12_checks_reproduced": true,
+    "audit_source_bindings": true,
+    "only_scoped_tracked_changes": true,
+    "git_diff_check": true
+  },
+  "status": "passed",
+  "scope": "documentation, Git history and source integrity; no application/live adapter tests",
+  "historical_evidence_files": 839,
+  "historical_mismatches": [],
+  "local_links": 132,
+  "heading_fragments": 25,
+  "broken_links": [],
+  "elapsed_seconds": 0.058590282016666606
+}

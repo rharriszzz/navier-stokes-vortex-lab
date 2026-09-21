@@ -1,0 +1,14 @@
+{
+  "base": "3fcc82f832737381bed90b7d6073644cd87c52e0",
+  "scope": "R074 review source/evidence only",
+  "physical_execution_enabled": false,
+  "files": {
+    "docs/realizability/B2_MONITOR_ADAPTER_REVIEW.md": "c77348e645278446197a3f93c6c3008e954b5af33cf241ee5ace056e0591e5cc",
+    "docs/realizability/evidence/r074/audit.py": "dd187fa164b17878dc82c7cc2fcc654e27a9a728af2bcbcd6df3ede01dcf08e5",
+    "docs/realizability/evidence/r074/audit_attempt_01.json": "2d23f2e7d723e1f3db664f258cb63dc0f7dc26a2c8910c6ffea982f1186ef6cb",
+    "docs/realizability/evidence/r074/documentation_attempt_01.json": "2e806abbebe02761662175d0f190ae052f5746023065b22754c9d6cab0cb683f",
+    "docs/realizability/evidence/r074/documentation_attempt_02.json": "e455f6d2e979d11099e66af6000accec070da51cdf2d7c6620623165b969856a",
+    "docs/realizability/evidence/r074/process_review.md": "96803e0d2e06b42bc14eadf7fbb3e69b64ea71152f13b0971a561a38f252c2a4",
+    "docs/realizability/evidence/r074/validate.py": "695ee6b4c774a97089b055a7be588528ceaeccf8ad5a726cf1f591842b8c13ed"
+  }
+}

@@ -11,11 +11,12 @@ the two readings must not be added as if they were separate physical RAM.
 Capacity-sized limits supersede the earlier 60 s/512 MiB toy guards. The
 scientific checks and stop before physical execution remain unchanged.
 
-Current continuation after R067: implement the
-[launch/report repair](B2_PHYSICAL_RUNNER_REVIEW.md#next-task-launch-and-report-repair)
-on PC with Luna/medium and saved/synthetic checks only. No FEM execution.
-R067 completed the observer/physical-runner and FFCx form/cache review; the
-reference fixture and later monitor prerequisites are documented there.
+Current continuation: follow the [single handoff task](../../SESSION_HANDOFF.md#next-task).
+R067's observer/compiler review, R070's disposable launch repair and R073's
+fake monitor checks are complete within their recorded scope. The
+[R074 adapter review](B2_MONITOR_ADAPTER_REVIEW.md) specifies the remaining
+monitor/integration work and records counterexamples; live adapters and FEM
+remain unvalidated and physical execution remains disabled.
 The following R033 reading sequence and older assignments are historical.
 
 Historical review sequence after R033: review the completed
