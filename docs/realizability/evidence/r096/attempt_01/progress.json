@@ -1,0 +1,374 @@
+[
+  {
+    "name": "source_outputs_and_all_attempt_accounting",
+    "snapshot_files": 16,
+    "r088_charged_seconds": 5.632544717984274,
+    "r084_charged_seconds": 15.69079346198123,
+    "exclusions": [
+      "guard interpreter startup before ENTRY",
+      "guard final receipt/ledger fsync and exit"
+    ]
+  },
+  {
+    "name": "all_14_saved_functions",
+    "functions": [
+      {
+        "name": "test_positive_composition_and_physical_deny",
+        "line": 164,
+        "end_line": 175
+      },
+      {
+        "name": "test_every_acquired_state_and_idempotency",
+        "line": 178,
+        "end_line": 196
+      },
+      {
+        "name": "test_cleanup_failure_orders",
+        "line": 199,
+        "end_line": 208
+      },
+      {
+        "name": "test_owned_identity_and_schema_refusals",
+        "line": 211,
+        "end_line": 237
+      },
+      {
+        "name": "test_deadline_cleanup_and_persistence_boundaries",
+        "line": 240,
+        "end_line": 253
+      },
+      {
+        "name": "test_clock_faults_and_policy_types",
+        "line": 256,
+        "end_line": 272
+      },
+      {
+        "name": "test_early_launch_and_callback_refusals",
+        "line": 275,
+        "end_line": 286
+      },
+      {
+        "name": "test_protocol_terminal_request_and_order",
+        "line": 296,
+        "end_line": 304
+      },
+      {
+        "name": "test_protocol_framing_timeout_and_exact_types",
+        "line": 307,
+        "end_line": 325
+      },
+      {
+        "name": "test_runtime_boundaries_and_simultaneous_stops",
+        "line": 328,
+        "end_line": 340
+      },
+      {
+        "name": "test_absolute_scheduler_and_tree_refusals",
+        "line": 343,
+        "end_line": 352
+      },
+      {
+        "name": "test_fake_independent_guard_event_order",
+        "line": 355,
+        "end_line": 370
+      },
+      {
+        "name": "test_accounting_exact_returncode_and_history",
+        "line": 373,
+        "end_line": 391
+      },
+      {
+        "name": "test_source_and_saved_evidence_bindings",
+        "line": 394,
+        "end_line": 404
+      }
+    ]
+  },
+  {
+    "name": "saved_positive_acceptance",
+    "result": {
+      "schema": 4,
+      "status": "complete",
+      "counts": {
+        "correction_rhs": 0,
+        "matrix_factorizations": 0,
+        "matrix_solves": 0,
+        "physical_meshes": 0,
+        "primary_rhs": 0,
+        "returned_primary_solves": 0
+      },
+      "ownership": {
+        "attempt": 1,
+        "helper": {
+          "container": "native-job",
+          "identities": [
+            [
+              20,
+              8
+            ]
+          ],
+          "reaper": [
+            21,
+            10
+          ]
+        },
+        "manifest_sha256": "90e4c094364f7404eea59a3f3fcfdc59403acd5b80369e801bd8a3effa024b59",
+        "nonce": "nonce-r088",
+        "run_id": "r088-fake",
+        "workload": {
+          "container": "linux-unit/workload",
+          "identities": [
+            [
+              10,
+              7
+            ]
+          ],
+          "reaper": [
+            11,
+            9
+          ]
+        }
+      },
+      "receipt_sha256": "e2afa4346ac4b3e9d72fc6f53858f144dea4e5b108c5d95ec8d8b3ae7afa33ad"
+    }
+  },
+  {
+    "name": "rebound_owner_attempt_refused",
+    "result": {
+      "schema": 4,
+      "status": "partial_failed",
+      "counts": {
+        "physical_meshes": null,
+        "primary_rhs": null,
+        "returned_primary_solves": null,
+        "correction_rhs": null,
+        "matrix_factorizations": null,
+        "matrix_solves": null
+      },
+      "error": "MonitorError: run/attempt/owner mismatch"
+    }
+  },
+  {
+    "name": "rebound_cleanup_identity_refused",
+    "result": {
+      "schema": 4,
+      "status": "partial_failed",
+      "counts": {
+        "physical_meshes": null,
+        "primary_rhs": null,
+        "returned_primary_solves": null,
+        "correction_rhs": null,
+        "matrix_factorizations": null,
+        "matrix_solves": null
+      },
+      "error": "MonitorError: cleanup owner mismatch"
+    }
+  },
+  {
+    "name": "J01_persisted_schema_alias_accepted",
+    "result": {
+      "schema": 4,
+      "status": "complete",
+      "counts": {
+        "correction_rhs": 0,
+        "matrix_factorizations": 0,
+        "matrix_solves": 0,
+        "physical_meshes": 0,
+        "primary_rhs": 0,
+        "returned_primary_solves": 0
+      },
+      "ownership": {
+        "attempt": 1,
+        "helper": {
+          "container": "native-job",
+          "identities": [
+            [
+              20,
+              8
+            ]
+          ],
+          "reaper": [
+            21,
+            10
+          ]
+        },
+        "manifest_sha256": "90e4c094364f7404eea59a3f3fcfdc59403acd5b80369e801bd8a3effa024b59",
+        "nonce": "nonce-r088",
+        "run_id": "r088-fake",
+        "workload": {
+          "container": "linux-unit/workload",
+          "identities": [
+            [
+              10,
+              7
+            ]
+          ],
+          "reaper": [
+            11,
+            9
+          ]
+        }
+      },
+      "receipt_sha256": "e2afa4346ac4b3e9d72fc6f53858f144dea4e5b108c5d95ec8d8b3ae7afa33ad"
+    },
+    "durable_digest": "d3090d1af8470c0ae59fa41088c655bc59fed71fa8147e77e25f4c031906cd63",
+    "receipt_digest": "502f76951fca49e342f056957996ea4d4b8aa0f2ce8dd35502fde4117f62e2ee"
+  },
+  {
+    "name": "J02_contradictory_monitor_counts_accepted",
+    "monitor_counts": {
+      "correction_rhs": 7,
+      "matrix_factorizations": 7,
+      "matrix_solves": 7,
+      "physical_meshes": 7,
+      "primary_rhs": 7,
+      "returned_primary_solves": 7
+    },
+    "result": {
+      "schema": 4,
+      "status": "complete",
+      "counts": {
+        "correction_rhs": 0,
+        "matrix_factorizations": 0,
+        "matrix_solves": 0,
+        "physical_meshes": 0,
+        "primary_rhs": 0,
+        "returned_primary_solves": 0
+      },
+      "ownership": {
+        "attempt": 1,
+        "helper": {
+          "container": "native-job",
+          "identities": [
+            [
+              20,
+              8
+            ]
+          ],
+          "reaper": [
+            21,
+            10
+          ]
+        },
+        "manifest_sha256": "90e4c094364f7404eea59a3f3fcfdc59403acd5b80369e801bd8a3effa024b59",
+        "nonce": "nonce-r088",
+        "run_id": "r088-fake",
+        "workload": {
+          "container": "linux-unit/workload",
+          "identities": [
+            [
+              10,
+              7
+            ]
+          ],
+          "reaper": [
+            11,
+            9
+          ]
+        }
+      },
+      "receipt_sha256": "e2afa4346ac4b3e9d72fc6f53858f144dea4e5b108c5d95ec8d8b3ae7afa33ad"
+    }
+  },
+  {
+    "name": "J02_missing_samples_accepted",
+    "result": {
+      "schema": 4,
+      "status": "complete",
+      "counts": {
+        "correction_rhs": 0,
+        "matrix_factorizations": 0,
+        "matrix_solves": 0,
+        "physical_meshes": 0,
+        "primary_rhs": 0,
+        "returned_primary_solves": 0
+      },
+      "ownership": {
+        "attempt": 1,
+        "helper": {
+          "container": "native-job",
+          "identities": [
+            [
+              20,
+              8
+            ]
+          ],
+          "reaper": [
+            21,
+            10
+          ]
+        },
+        "manifest_sha256": "90e4c094364f7404eea59a3f3fcfdc59403acd5b80369e801bd8a3effa024b59",
+        "nonce": "nonce-r088",
+        "run_id": "r088-fake",
+        "workload": {
+          "container": "linux-unit/workload",
+          "identities": [
+            [
+              10,
+              7
+            ]
+          ],
+          "reaper": [
+            11,
+            9
+          ]
+        }
+      },
+      "receipt_sha256": "e2afa4346ac4b3e9d72fc6f53858f144dea4e5b108c5d95ec8d8b3ae7afa33ad"
+    }
+  },
+  {
+    "name": "J03_rebased_cleanup_times_accepted",
+    "result": {
+      "schema": 4,
+      "status": "complete",
+      "counts": {
+        "correction_rhs": 0,
+        "matrix_factorizations": 0,
+        "matrix_solves": 0,
+        "physical_meshes": 0,
+        "primary_rhs": 0,
+        "returned_primary_solves": 0
+      },
+      "ownership": {
+        "attempt": 1,
+        "helper": {
+          "container": "native-job",
+          "identities": [
+            [
+              20,
+              8
+            ]
+          ],
+          "reaper": [
+            21,
+            10
+          ]
+        },
+        "manifest_sha256": "90e4c094364f7404eea59a3f3fcfdc59403acd5b80369e801bd8a3effa024b59",
+        "nonce": "nonce-r088",
+        "run_id": "r088-fake",
+        "workload": {
+          "container": "linux-unit/workload",
+          "identities": [
+            [
+              10,
+              7
+            ]
+          ],
+          "reaper": [
+            11,
+            9
+          ]
+        }
+      },
+      "receipt_sha256": "e62f35ac7cf7e7ae7a3438b13c05651ff5200d7f0ca64b54c5e8f0c478ca596c"
+    },
+    "source_fixture_active_deadline": 10,
+    "source_fixture_outer_deadline": 15,
+    "mutated_cleanup_start": 20,
+    "mutated_cleanup_deadline": 25,
+    "limitation": "Acceptance API has no authoritative deadline argument; no supervisor overrun was executed."
+  }
+]

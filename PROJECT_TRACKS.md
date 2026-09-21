@@ -162,8 +162,9 @@ physical CLI/API remains disabled. The [R085 review](docs/realizability/B2_MONIT
 saved result and identifies residual ownership/composition, cleanup timing,
 protocol and accounting gaps. [R088](docs/realizability/evidence/r088/README.md)
 adds that composed fixture repair with 14 passing groups in its first attempt.
-The current handoff selects the deferred Astra/high R088 acceptance and
-outer-measurement-boundary review before OS implementation. The
+The [R096 review](docs/realizability/B2_MONITOR_R088_REVIEW.md) confirms those
+saved results but refuses OS implementation admission pending completion-evidence
+and independent outer-receipt repairs. The handoff owns that one next task. The
 [Mac/PC performance and memory plan](docs/realizability/MAC_PC_PERFORMANCE_MEMORY_PLAN.md)
 specifies future comparisons and their monitor prerequisites. Follow the single
 [current handoff task](SESSION_HANDOFF.md#next-task) for the task and

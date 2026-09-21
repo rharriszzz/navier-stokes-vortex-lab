@@ -1,10 +1,9 @@
 # Project status: physical preparation and a realistic movie
 
-Updated 2026-09-21. R094 implements R092's
-[overhead-reduction plan](docs/WORKFLOW_OVERHEAD_PLAN.md); current ownership,
-delivery state and single next task are in the
-[handoff](SESSION_HANDOFF.md#next-task). The latest completed scientific work is the
-[R088 composed fixture repair](docs/realizability/evidence/r088/README.md).
+Updated 2026-09-21. The [R096 acceptance review](docs/realizability/B2_MONITOR_R088_REVIEW.md)
+confirms R088's saved evidence and identifies remaining completion-evidence and
+outer-measurement gaps. Current ownership, delivery state and one bounded repair
+task are in the [handoff](SESSION_HANDOFF.md#next-task).
 A [performance and memory test plan for Mac and PC](docs/realizability/MAC_PC_PERFORMANCE_MEMORY_PLAN.md)
 is also ready as documentation; no benchmark has run.
 The [technical handoff](SESSION_HANDOFF.md#next-task) records the next task.
@@ -36,7 +35,8 @@ the calculations trustworthy; it is not yet evidence that the apparatus works.
   non-resource fixture assertion failures and their source-bound reconciliations.
   R085 verified the saved evidence but found residual ownership, cleanup timing,
   protocol and accounting gaps. R088 now passes 14 composed fixture groups on
-  its first attempt; acceptance and the outer measurement boundary need review.
+  its first attempt. R096 reviewed all 14 saved functions; durable type binding,
+  monitor evidence, admitted deadlines and independent outer receipts still need repair.
   Live operating-system adapter tests remain pending; further flow
   calculations remain disabled until the required safeguards are validated
   and launch is reviewed.

@@ -29,7 +29,8 @@ current [next task](../../SESSION_HANDOFF.md#next-task). The
 [R085 review](B2_MONITOR_R084_REVIEW.md) verifies the saved 22-function result
 but identifies residual integration/timing/protocol/accounting gaps.
 [R088](evidence/r088/README.md) adds a composed fixture path with 14 passing
-groups; acceptance and the excluded outer measurement scope need review. Windows collection,
+groups. The [R096 review](B2_MONITOR_R088_REVIEW.md) confirms the saved results
+but requires J01–J04 completion-evidence/outer-receipt repairs before OS admission. Windows collection,
 live validation and physical launch remain separate obligations specified below.
 
 No numerical method, boundary condition, observer, solver, package pin or

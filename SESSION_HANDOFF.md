@@ -1,8 +1,14 @@
 # Current session handoff
 
-Last updated 2026-09-21 for R095. PC/WSL `daisy` owns this checkout. R094's
-overhead-reduction documentation implementation is complete. R093's
-commit-only delivery is local commit `0a3d9546a7367e554da2d503ec6c0b56c9a5c4e7`; R095 authorizes publishing it together with R094's scoped changes. Delivery outcome and final commit are reported in the response. R094 request and user-supplied session excerpts are recorded in [REQUEST_LOG.md](REQUEST_LOG.md#r094--2026-09-21--implement-the-overhead-reduction-plan), with account email redacted.
+Last updated 2026-09-21 for R096. PC/WSL `daisy` retains ownership.
+The [R088 acceptance review](docs/realizability/B2_MONITOR_R088_REVIEW.md) is
+complete: saved evidence is consistent, but J01–J04 prevent full acceptance
+and OS implementation admission. One source/fake-only completion-certificate
+repair is next. Completion is prepared separately from final publication;
+the delivery hash/outcome is reported after Git completes.
+User-supplied old/new session snapshots are preserved in
+[R096](REQUEST_LOG.md#r096--2026-09-21--record-session-snapshots-and-continue-r088-acceptance-review),
+with account email redacted and missing “Worked for” excerpt noted.
 
 ## Owner and checkout
 
@@ -11,9 +17,9 @@ commit-only delivery is local commit `0a3d9546a7367e554da2d503ec6c0b56c9a5c4e7`;
 | Owner | PC/WSL `daisy`, Linux/x86_64 |
 | Checkout | `/home/rharris/git/navier-stokes-vortex-lab` |
 | Branch/upstream | `main` / `origin/main` |
-| Starting state | R093 start was clean; HEAD `0a3d9546a7367e554da2d503ec6c0b56c9a5c4e7`; R095 authorizes publishing that commit plus R094 scoped edits |
+| Starting state | Clean synchronized `aeb7de5b48f142b387cf212b39f31d23204dfacf` confirms R095 delivery; R096 STARTED published as `a10d4a5` |
 | Other owner/process | No ownership switch indicated. Independent Mac POV-Ray build is user-managed, outside this task, and unverified. |
-| Task processes | None launched for R094. |
+| Task processes | One bounded R096 audit child exited/reaped; fake temporary inputs cleaned; no background task or ignored input transfer. |
 
 ## Latest research state and limits
 
@@ -27,33 +33,47 @@ recorder compliance, live containment or OS guard behavior. Preserve the
 one-attempt limit and evidence. Physical limits remain 180 s / 1536 MiB;
 q64/q96 allowance remains unused; B2 accuracy remains failed.
 
-No research, fixture replay, live OS operation, native build, FEM/MPI/JIT,
-render, encode or physical run is part of R094. Required evidence and earlier
-reviews are linked from the [deferred review task](R088_ACCEPTANCE_REVIEW_TASK.md).
+R096 did source/saved-evidence review and one separate fake audit. No archived
+main replay, native source/build/startup, live OS/cgroup/signal/helper/workload,
+FEM/MPI/JIT, render, encode or physical run occurred. Required prior evidence
+remains linked from the preserved [R088 review task](R088_ACCEPTANCE_REVIEW_TASK.md).
 
 ## Current request
 
-R094 completed [R092's overhead-reduction plan](docs/WORKFLOW_OVERHEAD_PLAN.md):
-pre-edit snapshots are byte-identical; protocol and track rules are routed to
-conditional documents; the root instructions and handoff are 803 words
-combined; the deferred review is verbatim; current pointers and archive anchors
-resolve. Checks and exact changed files are in [R094](REQUEST_LOG.md#r094--2026-09-21--implement-the-overhead-reduction-plan).
-No application or research checks applied. R094 did not authorize publication;
-R095 now authorizes scoped commit and push. Delivery outcome is recorded in the
-R095 request entry and final response.
+R096 reviewed all 14 function bodies/registrations and H01–H04. The positive
+saved completion and rebound owner/cleanup refusals hold. Acceptance still
+permits a persisted schema type alias, contradictory monitor counts/missing
+samples, and cleanup times without an admitted absolute deadline. The independent
+outer receipt/startup/final-persistence bound remains absent. H03 passes within
+the composed fake interface; complete H01/H02/H04 obligations are refused.
+
+[Audit evidence](docs/realizability/evidence/r096/README.md): nine confirmed
+observations; one child 0.066115114 s / 23,982,080 B peak RSS; charged
+5.091154090/20 s with explicit outer startup/final-write exclusions.
+No whole-recorder or live certification. Prior archives and budgets are preserved.
+R094's compact routing/snapshots and verbatim historical task remain intact.
+Scoped documentation checks and exact changed files are recorded in R096;
+Continue authorizes start/final commit and push.
 
 ## Next task
 
-After R094's documentation implementation and checks are complete, stay on
-PC/WSL `daisy` and use **GPT-6 Astra/high** for the one R088 acceptance review
-preserved verbatim in [R088_ACCEPTANCE_REVIEW_TASK.md](R088_ACCEPTANCE_REVIEW_TASK.md).
-Its required input documents, review scope, completion criteria and stop
-conditions are in that task file. Do not replay the archived validator or
-recorder mains, or begin live/native/physical work. If the review resolves all
-H01–H04 obligations without a scientific or containment ambiguity, recommend
-GPT-5.6 Luna/medium for the bounded mechanical follow-up; retain Astra/high for
-unresolved semantics or numerical interpretation. Recheck current model
-availability then; no model switch or automation is implied.
+Stay on PC/WSL `daisy`; use **GPT-6 Astra/high** for the single
+[J01–J04 completion-certificate repair](docs/realizability/B2_MONITOR_R088_REVIEW.md#one-bounded-follow-up).
+In new source with fake checks only, specify immutable admitted policy/deadlines
+and the independent outer-receipt boundary, then repair canonical persisted
+binding, full monitor evidence validation and absolute-deadline/outer-receipt
+admission. Python 3.12.13; 120 s cumulative new fixture reservation / 256 MiB
+validator address space; preserve failures and declare measurement exclusions.
+No archive rerun, native source/build/startup, live OS operation or physical work.
+
+Complete the positive composition, J01–J03 and missing/late/mismatched outer
+receipt refusals, source/attempt bindings and partial evidence specified in the
+review. Stop on unexplained failure/resource stop or unsettled containment,
+timing or accounting policy; do not widen limits. End with Astra/high acceptance
+review as next task. Recommend Luna/medium only once those interfaces are settled
+and remaining work is mechanical. Both models/efforts were rechecked against
+the session catalog and official docs in R096; recheck when recommending again.
+No model switch, delegation or automation is implied. **Next prompt: Continue.**
 
 ## Historical handoff anchors
 

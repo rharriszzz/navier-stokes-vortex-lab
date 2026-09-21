@@ -1,0 +1,28 @@
+{
+  "schema": 1,
+  "state": "COMPLETED",
+  "request": "R096",
+  "attempt": 1,
+  "status": "passed",
+  "returncode": 0,
+  "timed_out": false,
+  "child_seconds": 0.06611511399387382,
+  "child_lifetime_peak_rss_bytes": 23982080,
+  "unchanged_inputs": true,
+  "output_sha256": {
+    "started.json": "f3bdec5016114c4b107af931db5d5abca81d4e8b587001f0f514167c9009f42e",
+    "progress.json": "abf9188f385df6aafa466205ac0c4a029b0ab488fc570047c0beb8de98c5fead",
+    "review.json": "3351c0e362fb8ec11819be868fa77c6cff9cc407a8d81848b5d871eb5a65fafc",
+    "stdout.txt": "5e8140bb231de7106bde93eaa1f15a6f858d7b1ce68d01ffa890360bcc2d621b",
+    "stderr.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  "observed_guard_seconds": 0.09115367900812998,
+  "unmeasured_final_reserve_seconds": 5,
+  "charged_seconds": 5.091154090012424,
+  "exclusions": [
+    "audit guard startup before ENTRY",
+    "audit guard final receipt fsync and exit"
+  ],
+  "whole_recorder_certified": false,
+  "archived_mains_executed": false
+}
