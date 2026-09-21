@@ -174,9 +174,9 @@ finds the selected manager unsupported under the former strict requirements.
 The user now supports simplifying those requirements; the
 [R103 practical supervision policy](docs/realizability/B2_MONITOR_PRACTICAL_SUPERVISION_POLICY.md)
 keeps practical safeguards and observed accounting without recursive infrastructure
-certification. R105 completes planning and selects a portable trajectory output
-checker as the next handoff task, with an early Mac check. It validates saved
-visualization data without claiming runtime safety or physical correctness.
+certification. R105 completes planning and R106 implements a portable trajectory
+output checker, with an early Mac check next. It validates saved visualization
+data without claiming runtime safety or physical correctness.
 Practical OS supervision is deferred. Mac support remains unverified. The
 [Mac/PC performance and memory plan](docs/realizability/MAC_PC_PERFORMANCE_MEMORY_PLAN.md)
 specifies future comparisons and their monitor prerequisites. Follow the single

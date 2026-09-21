@@ -1,12 +1,17 @@
 # Current session handoff
 
-Last updated 2026-09-21 for R105. PC/WSL `daisy` retains ownership.
+Last updated 2026-09-21 for R106. PC/WSL `daisy` retains ownership.
 Practical supervision and Mac usability requirements are recorded in the
 [policy](docs/realizability/B2_MONITOR_PRACTICAL_SUPERVISION_POLICY.md).
-The small planning step is complete. Next: implement a **portable trajectory
-output checker** that catches bad saved frames before rendering. This is one
-useful increment, with no new supervision framework. R102–R105 documentation
-is prepared for the user's authorized commit/push; actual delivery follows Git.
+The small planning step and the first useful implementation increment are
+complete. R106 delivered a **portable trajectory output checker** that catches
+bad saved frames before rendering, with no new supervision framework. The
+checker is a saved-data validity check, not a runtime or scientific certificate.
+
+Next: after an explicit ownership handoff, run the same tiny checker test on the
+Mac and record the result without claiming cross-platform support from PC tests.
+Then validate actual trajectory output and a small movie task under its own
+bounded scope.
 
 ## Owner and checkout
 
@@ -15,10 +20,10 @@ is prepared for the user's authorized commit/push; actual delivery follows Git.
 | Owner | PC/WSL `daisy`, Linux/x86_64 |
 | Checkout | `/home/rharris/git/navier-stokes-vortex-lab` |
 | Branch/upstream | `main` / `origin/main` |
-| Starting state | `3c213cc`; pending R102–R104 documentation preserved; empty stashes; R105 fetch confirms unchanged upstream. |
+| Starting state | R106 began at `bcb806f`; empty stashes; R106 delivery follows Git. |
 | Other owner/process | No ownership switch indicated. Independent Mac POV-Ray build remains user-managed and unverified. |
 | Task processes | No fixture/workload or background process launched; no ignored transfer input. |
-| Delivery state | R105 explicitly authorizes scoped commit/push of R102–R105 and the plan. Completion prepared separately from actual delivery; no post-push log edit. |
+| Delivery state | R106 completion is prepared separately from final scoped commit/push; no post-push log edit. |
 
 ## Current result and limits
 
@@ -36,6 +41,17 @@ R097 witness changes. Its claim is saved-data validity, never runtime/resource
 certification or physical correctness. The generator also deletes matching
 output files; the new checker must be read-only on its inputs.
 
+R106 implemented that reader in `check_trajectories.py` with a standard-library,
+line-bounded parser for only the declarations emitted by `write_include`.
+It checks exact frame/bead inventories, required declarations, finite values,
+increasing `SimTime`, radius and z bounds with 1e-9 tolerance, extrema and
+motion status. It refuses malformed or oversized files, preserves inputs and
+protects input paths from report writes. Human output and optional new JSON
+reports identify pass/fail and actionable errors. Six focused tests pass under
+Python 3.12.13, including corrupt-input, tolerance, source-preservation and
+CLI cases. No trajectory integration, rendering, encoding, FEM, Mac, live or
+monitor work ran.
+
 Historical scientific documents, monitor contracts, fixture evidence and budgets
 remain unchanged. Practical OS supervision remains deferred, not certified.
 The future PC monitor suite retains 180 s (30 + ten 12 s + 30), 768 MiB whole
@@ -45,48 +61,29 @@ failed. No trajectory, fixture, native/live, FEM, render or encode work ran here
 
 ## Next task
 
-Stay on PC/WSL `daisy`; use **GPT-5.6 Luna/medium** to implement the
-**portable trajectory output checker**. The useful outcome is a quick check of
-saved tracer files before spending time rendering them, usable by the same
-command on PC and Mac.
+After an explicit ownership handoff to the Mac, use **GPT-5.6 Luna/medium** to
+run the same tiny checker command against tiny temporary examples. The useful
+outcome is an early Mac usability check of the shared standard-library command.
+Do not claim Mac support from this PC result.
 
-1. Add `check_trajectories.py`, `tests/test_check_trajectories.py` and a short
-   README usage example. Use Python 3.12 standard library only. Leave the
-   generator, renderer, encoders, realizability code and historical evidence intact.
-2. Read only the restricted include-file format emitted by `write_include`;
-   never execute POV-Ray text or use `eval`. Accept a directory plus explicit
-   expected frame/bead counts. Require exactly consecutive frame indices from 1,
-   required declarations once each, finite scalar/coordinate values, matching
-   bead counts and increasing simulation times. Check radius <=0.92 and
-   abs(z)<=0.98 with 1e-9 serialization tolerance. Report whether coordinates
-   change across frames, distinguishing one-frame input from motion evidence.
-3. Give a concise human summary and optional JSON report: pass/fail, checked
-   counts, extrema, motion observation and actionable filename/error details.
-   Return nonzero on invalid/incomplete input or failed report writing. Do not
-   modify input files or allow a report path to overwrite an input. Stream bounded
-   input parsing and reject oversized/malformed files with a clear error. This
-   report is not a run-time or scientific certificate.
-4. Test tiny temporary examples of valid generator-format output and missing,
-   truncated, duplicate-declaration, wrong-count, nonfinite, out-of-bounds and
-   non-increasing-time data. Check exact/tolerance bounds, source preservation,
-   report-path protection and CLI exit/JSON behavior. No trajectory integration,
-   renderer, benchmark, OS helper or FEM launch. Allow at most 60 s cumulative
-   deterministic checker tests; stop on unexpected resource exhaustion rather
-   than building a new test supervisor. Preserve failed-test diagnostics and
-   repair understood ordinary test/code errors within that bound.
-5. Completion: implemented command, meaningful tests passing, one README example,
-   preserved unrelated bytes and a short result. Do not add a framework or another
-   design contract. Prepare the same tiny test command for an early Mac check
-   after an explicit ownership handoff; do not claim Mac validation from PC tests.
-   After that check, return to validating actual trajectory output and a small
-   movie task under its own bounded execution scope.
+1. On the Mac, verify Python 3.12 availability and run
+   `/path/to/python -m unittest -v tests.test_check_trajectories` from the
+   repository checkout. Keep the test command bounded and stop on unexpected
+   resource exhaustion.
+2. Record the Mac interpreter path, test result and any platform-specific error.
+   Do not run trajectory integration, rendering, encoding, benchmark, OS helper,
+   FEM or physical work in this check.
+3. If the Mac check passes, return to validating actual trajectory output and a
+   small movie task under its own bounded execution scope. If it fails for an
+   ordinary portability issue, repair only that scoped issue and rerun the tiny
+   check; stop for a model/format change or unexpected resource failure.
 
-This planned test allowance becomes active on the next Continue, not R105.
-Stop for a needed change to model bounds/format semantics or unexpected resource
-failure; refer those to Astra/high. Otherwise retain Luna/medium for the Mac
-checker test and mechanical follow-up, rechecking availability. Process/memory
-supervision, full platform parity, benchmark matrices and B2 numerical work are
-explicitly deferred. No physical-run admission follows from this checker.
+The checker test allowance is complete on PC; the same tiny Mac check is the
+next bounded allowance. Retain Luna/medium for the Mac test and mechanical
+follow-up, recommending Astra/high only for a model/format decision or an
+unexpected resource failure. Process/memory supervision, full platform parity,
+benchmark matrices and B2 numerical work are explicitly deferred. No
+physical-run admission follows from this checker.
 
 Luna is available in this session's catalog; medium effort was rechecked through
 OpenAI Docs and the official [Luna page](https://developers.openai.com/api/docs/models/gpt-5.6-luna).

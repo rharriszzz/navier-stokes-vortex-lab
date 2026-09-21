@@ -144,6 +144,19 @@ Each file defines:
 #declare BeadPos = array[NBeads] { ... };
 ```
 
+Before rendering, check the saved trajectory files without executing their
+POV-Ray text. Supply the expected inventory explicitly; the checker reports
+whether more than one frame contains changing coordinates and can write a new
+JSON report:
+
+```bash
+python check_trajectories.py positions --frames 240 --beads 500 \
+  --json-report trajectory-check.json
+```
+
+This is a saved-data check for finite values, bounds, bead counts and increasing
+simulation times. It is not a runtime or scientific certificate.
+
 ### 3. Render the POV-Ray frames
 
 On WSL/Linux:

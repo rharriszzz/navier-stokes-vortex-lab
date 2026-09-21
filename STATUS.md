@@ -3,9 +3,10 @@
 Updated 2026-09-21. The user supports simplifying excessive supervision
 requirements. The [R103 practical supervision policy](docs/realizability/B2_MONITOR_PRACTICAL_SUPERVISION_POLICY.md)
 keeps process safeguards and honest accounting while removing recursive proof
-requirements for infrastructure. R105 selects a portable trajectory output checker
-as the first useful increment: check saved frames before rendering. Its concrete
-implementation plan is in the [handoff](SESSION_HANDOFF.md#next-task).
+requirements for infrastructure. R106 implemented the portable trajectory output
+checker as the first useful increment: check saved frames before rendering. Its
+Python 3.12.13 focused tests pass on PC/WSL; a Mac check remains pending after
+explicit ownership handoff. The next task is in the [handoff](SESSION_HANDOFF.md#next-task).
 No live reliability rate is known; OS supervision and physical work remain pending.
 R104 requires Mac usability and small infrastructure increments that unblock
 named useful tasks; Mac support remains unverified and a complete benchmark
@@ -78,7 +79,7 @@ fluid calculation has not yet passed its physical accuracy checks.
 | Milestone | Position now | Work still needed |
 |---|---|---|
 | Explain the apparatus and intended motion | Illustrative movie pipeline implemented | Further visual refinement is possible; label the prescribed flow clearly. |
-| Trust the numerical boundary response | R098 accepts fake J01–J03; outer-adapter contract unresolved, live adapters unvalidated and physical accuracy failed | Complete the [current handoff task](SESSION_HANDOFF.md#next-task), then review OS implementation and live validation before physical execution. |
+| Trust the numerical boundary response | R098 accepts fake J01–J03; outer-adapter contract unresolved, live adapters unvalidated and physical accuracy failed | Keep the checker/Mac increment separate, then review OS implementation and live validation before physical execution. |
 | Determine what exterior actuators can influence | Benchmark commands/features defined; full six-input response campaign has not begun | Validate responses, then assess independent influence, conditioning and required amplitudes/times. |
 | Determine what exterior sensors can distinguish | Basic sensor fixtures exist; B3 sensing study has not begun | Test pressure/PIV information with realistic noise, resolution and delay. |
 | Prepare the desired initial flow | Concept and candidate hardware only | Define acceptable initial-state errors; test a finite actuator layout and its physical limits. |

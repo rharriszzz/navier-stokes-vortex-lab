@@ -41,10 +41,11 @@ finds the selected manager unsupported under the former strict requirements.
 The user now supports simplification. The
 [R103 practical supervision policy](B2_MONITOR_PRACTICAL_SUPERVISION_POLICY.md)
 keeps process safeguards and observed accounting while removing recursive
-infrastructure certification. R105 selects a portable trajectory output checker
-as the next handoff task, with an early Mac check. It checks saved visualization
-data; it does not certify runtime safety or physical correctness. Practical OS
-supervision and benchmarking remain deferred. Mac support is unverified.
+infrastructure certification. R106 implements the portable trajectory output
+checker and passes its focused PC/WSL tests; it checks saved visualization data
+without certifying runtime safety or physical correctness. An explicit Mac
+ownership handoff and the same tiny test are next. Practical OS supervision and
+benchmarking remain deferred. Mac support is unverified.
 The live suite remains unimplemented
 and unauthorized. The
 [Mac/PC performance and memory plan](MAC_PC_PERFORMANCE_MEMORY_PLAN.md) defines
