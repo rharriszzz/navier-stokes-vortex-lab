@@ -3530,3 +3530,26 @@ Luna Reserve Weekly limit: 100% left (resets 17:55 on 28 Sep)
 **Startup/reconciliation:** Mac `fire.lan`, Darwin/arm64, `/Users/rharris/git/navier-stokes-vortex-lab`; clean `main`/`origin/main` at `e4f8599`, empty stash list, no open lifecycle or ownership transfer, and fast-forward pull already up to date. R108 completed and retained Mac ownership; no task process or ignored transfer input is present. Luna/medium remains appropriate; stop on missing tools, malformed state, unexpected resource exhaustion or a model/format decision, recommending Astra/high only for the latter two decision boundaries.
 
 **Status:** R109 request recorded before workload execution. The required lifecycle start publication follows before substantive checks.
+
+**User follow-up:** “If you fail to debug, suggest searching google, or alternatively, product a test script that I can run to reproduce the problem.”
+
+**Follow-up scope:** Continue the bounded renderer diagnosis. If the Mac POV-Ray failure remains unresolved, provide a runnable minimal reproduction script and concrete search terms rather than claiming a fix. No broader workload is authorized.
+
+**R109 outcome/completion:** The failure reproduced independently of the
+project scene. `reproduce_povray_mac.sh` creates a minimal sphere scene and
+runs a 64x64 headless POV-Ray render under `gtimeout`; on this Mac it returned
+137 after 10 s, emitted no PNG, and logged the same macOS
+`scheduleApplicationNotification`/`Connection invalid` warnings. The earlier
+project-scene attempt returned 124 after 30 s. The script is the runnable
+reproduction and includes search terms for the MacPorts/headless failure.
+
+**R109 files/checks/next:** Changed `REQUEST_LOG.md`, `SESSION_HANDOFF.md`,
+`WORK_SESSIONS.md` and new executable `reproduce_povray_mac.sh`; generated
+trajectory includes and `/tmp/r109-*` files remain local ignored/disposable
+data. Generator/checker passed 240 frames and all requested trajectory bounds
+and extrema. POV-Ray diagnosis failed at startup; separated-frame inspection,
+encoding and ffprobe were skipped. No FEM, physical, broad benchmark,
+supervision or model switch occurred; no background process remains. Next task:
+Luna/medium bounded MacPorts POV-Ray diagnosis/recheck; stop on another timeout,
+missing dependency or model/format decision, recommending Astra/high only for
+the latter decision boundaries. Concrete Google search terms are in the script.
