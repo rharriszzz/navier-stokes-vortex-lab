@@ -16,10 +16,18 @@ amplitudes as coupled real and imaginary Stokes systems. Do not run the solver
 with the repository's ordinary Python interpreter.
 
 Version-reporting note: conda-forge labels the installed `fenics-ffcx` package
-as 0.10.1, while the installed Python distribution metadata and
-`ffcx.__version__` both report 0.10.0. `verification.json` records the runtime
-module version. The environment file retains the conda package label needed to
-recreate the solved environment.
+as 0.10.1, while its embedded Python distribution metadata and
+`ffcx.__version__` report 0.10.0. The [official upstream v0.10.1 tag](https://github.com/FEniCS/ffcx/blob/v0.10.1/pyproject.toml)
+still declares project version 0.10.0 in `pyproject.toml`; its [release notes](https://github.com/FEniCS/ffcx/releases/tag/v0.10.1) say it backports a
+critical code-generation fix for multiple integrals using the same quadrature
+rule. Keep the environment pin at 0.10.1. `verification.json` records the
+runtime module's self-reported version, not the Conda artifact version. R056
+confirmed the PC build as conda-forge `fenics-ffcx 0.10.1 pyhbc3ee6d_1`; its
+package URL and hashes are recorded in
+[`evidence/r056/ffcx_pc_environment.json`](evidence/r056/ffcx_pc_environment.json).
+R014, R016 and R020 ran after this build was installed in the same environment
+and used `/tmp/navier-fenicsx/bin/python`, so their `ffcx: 0.10.0` fields are
+runtime strings and do not indicate use of the pre-fix Conda package.
 
 In restricted sandboxes, MPI may require execution outside the sandbox because
 even a serial communicator initializes local IPC and network interfaces. That

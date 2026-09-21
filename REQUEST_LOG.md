@@ -2509,3 +2509,51 @@ review recorded in `SESSION_HANDOFF.md`.
 **Delivery update, 2026-09-20:** The reconciled prompt/history handoff was pushed as `6cc842f`. The completed Mac/PC capacity evidence and task comparison were pushed as `00ba705` (`Record Mac and PC task comparison`) to `origin/main`. Both commits are on the configured upstream; no force push was used.
 
 **Status:** Complete. The working tree is clean. The temporary pull autostash is retained as a safety copy until its contents are confirmed covered by the pushed commits.
+
+## R054 — 2026-09-20 — Identify remaining Mac software to install
+
+**User request:** “I am hoping we can inform ourselves is a way thatwill allow us go make good choices about whech computer to use. But this can wait until later, if you agree. But I want to finish installing the software today if possible. please tell me what remains”
+
+**Interpreted scope:** Defer the Mac/PC performance decision until matched workload evidence is available; inspect the project's documented software requirements and Mac installation records, then distinguish missing software from unresolved compatibility and numerical-validation checks. Do not install or change packages in this step.
+
+**Outcome, 2026-09-20:** The project's FEM Conda environment is installed and its pinned DOLFINx/PETSc/MPI/Gmsh imports plus two-rank MPICH startup passed in R046. NumPy is present for the trajectory script; `ffmpeg` and `ffprobe` are present for movie assembly. The checked Mac shell did not have POV-Ray, which is the one confirmed missing application for the complete trajectory-render-encode pipeline. The separate Conda `fenics-ffcx` 0.10.1 versus imported `ffcx.__version__` 0.10.0 discrepancy needs read-only package identity verification; it is not a reason to reinstall or change pins yet.
+
+**Remaining action:** Check which existing package manager is available (`port` is suggested by the recorded `/opt/local` path, but was not explicitly checked). Install the command-line POV-Ray through that existing manager, then verify `povray -version`. Homebrew also currently offers an Apple Silicon macOS Tahoe bottle. After software install, a small render/encode smoke test is still needed to validate the full pipeline; no solver/physical run is required for that check. No installation was performed in this request.
+
+**Next task and model:** GPT-5.6 Luna/medium for the mechanical POV-Ray install and pipeline smoke test; retain GPT-6 Astra/high for any decision to alter the pinned FEM stack or interpret numerical compatibility. Mac/PC hardware choice can wait until a same-workload comparison is warranted. The scientific next task remains the Astra/high R021/R013 review on the PC, stopping before physical execution.
+
+**Status:** Answered; the Mac software inventory and remaining checklist are recorded here and in `SESSION_HANDOFF.md`.
+
+**Validation and skips:** `git diff --check` passed. Reviewed `README.md`, `environment-b1.yml`, `requirements.txt`, `render.sh`, `make_movie.sh`, the R034 snapshot and R046 environment result. No Mac package manager or renderer was invoked; no software was installed.
+
+## R055 — 2026-09-20 — Investigate FFCx package/module version discrepancy
+
+**User request:** “please investigate the changes: he FFCx package/module versions disagree (0.10.1 vs. 0.10.0); it might not matter much, it should be easy to make a guess if you look at the changes”
+
+**Interpreted scope:** Inspect the pinned environment, Mac verification and relevant FFCx release/package changes to determine whether the distribution metadata versus module `__version__` discrepancy is expected or consequential. Keep the investigation read-only; do not reinstall, change pins, or run a solver.
+
+**Status:** Answered. R056 subsequently confirmed the PC package artifact and resolved the PC-side build-identity question; the Mac's exact build/channel remains unverified.
+
+## R056 — 2026-09-20 — Assess PC FFCx update and historical result impact
+
+**User request:** “If you think to new minor revision might be neded on the PC as well, please upgrade it, and also figure out how that may effect recorded results, and make a suggestion that astra can ultimately figure out.”
+
+**Interpreted scope:** Inspect the PC FEM environment and recorded numerical evidence for FFCx package/module versions; determine whether upgrading to the project's 0.10.1 patch release is needed. If safe, update the active PC environment without rewriting or invalidating historical records, assess result impact, and leave a bounded Astra/high recommendation. Do not launch a physical calculation.
+
+**Outcome, 2026-09-20:** No upgrade was needed: the PC's `/tmp/navier-fenicsx` environment already contains conda-forge `fenics-ffcx 0.10.1`, build `pyhbc3ee6d_1`, matching `environment-b1.yml`. Python's module and embedded distribution metadata still say 0.10.0 because of the upstream v0.10.1 version-string oversight. The Conda history places installation on 2026-09-19 before the R014/R016/R020 commands, which used this environment's Python; their numerical outcomes are already from the patched package. The recorded `ffcx: 0.10.0` values are runtime self-reports, not proof of pre-fix package use. R033's stale cache stop was an incomplete C artifact discovered before form compilation; later attempts used a fresh task-local cache. No numerical rerun or source change was made.
+
+**Evidence and Astra recommendation:** PC package/build provenance is archived at `docs/realizability/evidence/r056/ffcx_pc_environment.json`. `B1_SETUP.md` and the R033 cache record now clarify the version fields and cache result. Ask Astra/high during the already-planned R021/R013 review to audit whether project UFL forms contain multiple integrals sharing one quadrature rule (the v0.10.1 fix trigger), and check whether any historical outputs used a cache compiled before the 0.10.1 package. Treat existing R014/R016/R020 results as already generated with 0.10.1; do not rerun solely because of the module string. Keep the current package pin and use a fresh isolated FFCx cache plus explicit Conda package build/hash in provenance for the next FEM reference run. Upgrade performed: none required. No physical calculation was launched.
+
+**Checks and next task:** `git diff --check` and the R056 JSON parse passed. Continue the Astra/high R021/R013 review on the PC, stopping before physical execution; its completion criteria should include the targeted form/cache audit above. If source inspection cannot establish the trigger, recommend a tiny isolated code-generation fixture under the pinned environment before any larger reference case. **Status:** Answered; documentation/evidence changes are uncommitted, and no commit/push was requested.
+
+## R057 — 2026-09-20 — Record Mac installation and benchmark plan; integrate stash; publish
+
+**User request:** “Please make a markdown file that reminds what the next steps for full installation of everything on the mac will be and advice on making the encharmarks that we will need to choose between my mac and my pc. Then make sure any stashed chenges are somehow merged in, so we can get rid of the stash. then add commit and push.”
+
+**Interpreted scope:** Write a practical Markdown checklist for completing the Mac software installation and planning comparable Mac/PC benchmarks; inspect and safely reconcile all relevant stash contents into the working tree; remove the stash only after verifying its changes are represented; validate, commit scoped changes and push to the configured upstream. Do not launch a scientific/physical benchmark as part of documentation work.
+
+**Outcome, 2026-09-20:** Added [`MAC_INSTALL_AND_BENCHMARK_PLAN.md`](docs/realizability/MAC_INSTALL_AND_BENCHMARK_PLAN.md) with the remaining POV-Ray installation and visualization smoke test, the existing Conda/MPI checks, and a matched per-task Mac/PC benchmark protocol. No software install or benchmark was run from the PC.
+
+**Stash reconciliation:** Inspected the only stash (`autostash`). Its request-log additions R034–R037 duplicate/restate the later reindexed R049–R052 history (stale-cache explanation, model choice, saved Mac prompt, and Mac pull/review). Its earlier “Mac inventory pending” handoff and 24-GB-unverified status are superseded by the committed/pulled R046 Mac verification, R053 comparison, R054 install checklist, and current R055/R056 FFCx findings. The inventory prompt file and all substantive information remain present in the working tree/current history. No unique code or evidence files were in the stash. After recording this crosswalk, the stash was dropped as explicitly requested.
+
+**Checks and delivery:** `git diff --check` passed; the new checklist, R056 evidence, and existing Mac inventory file were checked, and the stash crosswalk was reviewed against the current request history. Scoped docs and request/handoff/status updates were committed and pushed; no physical benchmark ran. **Status:** Complete.

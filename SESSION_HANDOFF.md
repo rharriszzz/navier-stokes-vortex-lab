@@ -1,11 +1,26 @@
 # Current session handoff
 
 Last updated: 2026-09-20. Latest request:
-[R053](REQUEST_LOG.md#r053--2026-09-20--commit-reconciled-mac-comparison-notes-and-continue-host-assessment),
-which pushed the reconciled notes as `6cc842f` and the completed comparison as
-`00ba705`, then compared current PC capacity with the recorded Mac evidence.
-The Mac environment imports the FEM stack and starts two-rank MPI; no FEM
-assembly, solve or matched benchmark has run. The
+[R057](REQUEST_LOG.md#r057--2026-09-20--record-mac-installation-and-benchmark-plan-integrate-stash-publish),
+which added a Mac installation and Mac/PC benchmark guide at
+[MAC_INSTALL_AND_BENCHMARK_PLAN.md](docs/realizability/MAC_INSTALL_AND_BENCHMARK_PLAN.md).
+The only confirmed missing software is POV-Ray; the installed Conda/MPI stack
+and ffmpeg/ffprobe have already passed their recorded checks. The autostash's
+earlier Mac inventory notes are reconciled with the later R046–R056 records and
+are being removed after that reconciliation is included in the publication.
+No software install or benchmark was run. R056 confirmed the PC already has
+the pinned conda-forge FFCx 0.10.1 build; no upgrade or historical rerun is
+needed. The R014/R016/R020 version fields report the module's embedded 0.10.0
+string, though their commands used the 0.10.1 package. Astra's planned review
+should check whether the project's forms hit the fixed
+multiple-integral/same-quadrature-rule case and confirm future reference runs
+use a fresh isolated FFCx cache. R055 traced the 0.10.1 distribution / 0.10.0
+module version difference to upstream metadata. The release is a critical bug
+fix; retain the project pin. The exact installed Mac build/channel has not been
+independently checked from this PC. R054 found the Mac FEM Conda
+environment and ffmpeg/ffprobe available, with POV-Ray still missing from the
+checked shell. R053's Mac/PC comparison remains in place; the FEM environment
+has not run an assembly or solve. The
 user permits using the PC
 within its capabilities; the former small diagnostic caps are not immutable
 user requirements. R023–R032 did not invoke Continue or authorize publication
@@ -304,6 +319,38 @@ MPICH 5.0.1. The sandbox denied MPICH access to `en1`; the same checks passed
 after an approved out-of-sandbox rerun. No physical solver was run. The Mac
 stack now imports and launches MPI, but no FEM assembly/solve or numerical
 reference comparison was run, so migration suitability remains unestablished.
+R055 traced the version-string difference to upstream v0.10.1 packaging
+metadata: that tag's `pyproject.toml` still declares version 0.10.0. The release
+itself contains the critical quadrature-rule fix, so the 0.10.1 Conda pin is
+important and should not be downgraded. If provenance must be verified before
+the FEM reference case, inspect the Mac's package build/channel with
+`conda list --show-channel-urls fenics-ffcx`; no reinstallation is indicated.
+
+## R054 Remaining Mac software
+
+The numerical environment is installed: R046 verified Python 3.12.13,
+DOLFINx/Basix 0.10.0, UFL 2025.2.1, PETSc/PETSc4py 3.25.5, MPICH 5.0.1,
+mpi4py 4.1.2, Gmsh 4.15.2, NumPy 2.5.3 and SciPy 1.18.1 imports, plus a
+two-rank MPI startup. The trajectory script itself uses NumPy and the Python
+standard library. R034 found `ffmpeg` and `ffprobe` in the Mac shell. It did
+not find POV-Ray, which `render.sh` requires; therefore the full movie tool
+chain is not yet complete on the Mac.
+
+Install POV-Ray through a package manager already on the Mac, then confirm
+`povray -version`. The original Python path was `/opt/local/bin/python3`, so
+check whether MacPorts `port` is available before installing another package
+manager. R055 explained the FFCx report difference (`fenics-ffcx` distribution
+0.10.1 versus imported `ffcx.__version__` 0.10.0): the upstream v0.10.1 source
+tag's `pyproject.toml` still declares version 0.10.0. The release backports a
+critical fix for multiple integrals sharing one quadrature rule. Retain the
+0.10.1 project pin; optionally confirm the live Mac build/channel with
+`conda list --show-channel-urls fenics-ffcx`. This metadata mismatch does not
+currently block the separate FEM reference comparison and is no reason to
+reinstall.
+Once POV-Ray is available, run a small render/encode smoke test before
+considering the Mac movie pipeline ready. No FEM assembly/solve is required to
+finish this software checklist. Recommend Luna/medium for those mechanical
+steps; return to Astra/high for any scientific stack or tolerance decision.
 
 ## R047 Mac versus PC decision measurements
 
@@ -319,8 +366,82 @@ residual/convergence behavior and output agreement under existing tolerances;
 retain memory headroom and watchdogs. Generic CPU tests or RAM capacity alone
 are insufficient. No FEM benchmark or solver was launched for R047. The
 handoff's GPT-6 Astra/high review remains the next task and must stop before
-physical execution; it should include workload sizing and treat the FFCx
-distribution/module version discrepancy as an open reproducibility detail.
+physical execution; it should include workload sizing and the R056 targeted
+audit of same-quadrature multi-integral forms and cache provenance. The current
+PC environment is already at the pinned FFCx 0.10.1 package build. Keep the
+module string `0.10.0` as a runtime self-report in the historical records; no
+recorded R014/R016/R020 calculation needs rerunning for this discrepancy.
+
+## R056 PC FFCx verification and result impact
+
+The PC environment `/tmp/navier-fenicsx` already has conda-forge
+`fenics-ffcx 0.10.1 pyhbc3ee6d_1`, the exact package version pinned by
+`environment-b1.yml`. Conda history shows it was installed on 2026-09-19,
+before R014/R016/R020 on 2026-09-20; their command records use this environment's
+`/tmp/navier-fenicsx/bin/python`. The package's embedded metadata and
+`ffcx.__version__` both report 0.10.0 because the upstream v0.10.1 tag's
+`pyproject.toml` retains that project version. The archived PC package URL and
+hash are in [R056 environment evidence](docs/realizability/evidence/r056/ffcx_pc_environment.json).
+
+Therefore no PC upgrade or numerical rerun was needed. The R014/R016/R020
+JSON fields remain accurate as module self-reports but should not be read as
+the Conda artifact version. R033's incomplete global-cache C file was detected
+before compilation; later attempts used the new isolated cache. It is not
+evidence that R033 ran the unfixed package or that a numerical result changed.
+The Mac's Conda build/channel remains unverified from this PC.
+
+For the planned Astra/high review, inspect whether project UFL forms contain
+multiple integrals with the same quadrature rule, the v0.10.1 fix trigger, and
+whether any relied-upon compiled artifact could predate the patched build.
+Keep the current pin. The next FEM reference run should use a fresh isolated
+FFCx cache and record Conda build/hash separately from `ffcx.__version__`.
+Stop the review before physical execution.
+
+## R055 FFCx version discrepancy
+
+The environment pins the Conda distribution `fenics-ffcx=0.10.1`, while the
+Mac reported `ffcx.__version__ == 0.10.0`. This is explained by upstream
+release metadata: the v0.10.1 tag's `pyproject.toml` still declares version
+0.10.0. The v0.10.1 release backports PR #797, fixing a critical code-generation
+bug when a form contains multiple integrals with the same quadrature rule. Keep
+the 0.10.1 pin. The Mac's imports and two-rank MPI startup passed, but the exact
+installed Conda build/channel has not been independently confirmed from the
+PC; if provenance is needed, run `conda list --show-channel-urls fenics-ffcx`
+there. No reinstall, pin edit, assembly or solve is warranted by this
+version-string mismatch alone.
+
+The next task remains the Astra/high review of R021/R013 on the PC, stopping
+before physical execution. FFCx provenance can be checked before a matched FEM
+reference run if needed; retain Astra/high if package identity or numerical
+behavior remains unclear.
+
+## R057 Mac software completion and host benchmarks
+
+Use [the Mac installation and benchmark plan](docs/realizability/MAC_INSTALL_AND_BENCHMARK_PLAN.md)
+to finish the remaining software check. R046 already passed Conda imports and
+two-rank MPI on the Mac; R034 found `ffmpeg`/`ffprobe`; POV-Ray is the only
+confirmed missing executable. Check which package manager is already present,
+install POV-Ray through that manager, then run the ten-frame trajectory/render/
+encode smoke test and inspect separated frames plus `ffprobe` metadata. Record
+the Mac FFCx Conda build/channel separately from its Python module string.
+
+The user wants evidence to choose between the Mac and PC per task. The next
+scientific action remains the GPT-6 Astra/high R021/R013 method review on the
+PC, including the FFCx form/cache audit, and must stop before physical
+execution. Astra should define and approve a small non-campaign FEM reference
+workload and acceptance/headroom thresholds before any FEM comparison. Then
+refresh near-simultaneous capacity snapshots, run identical trajectory/render/
+encode tasks and the approved FEM reference on both hosts, measure median wall
+time/range and peak process-tree RSS, and check deterministic/numerical outputs
+against unchanged tolerances. Separate cold JIT compilation from warm cache
+timing with isolated task-local caches; never change shared caches or add the
+Windows and WSL memory readings together. No benchmark was launched in R057.
+
+The autostash's R034–R037 request additions duplicate/restate the current
+R049–R052 history; its old inventory-pending handoff/status is superseded by
+R046 and later host/software records. The Mac inventory prompt remains in the
+repository. The crosswalk and removal are recorded in R057; no unique source,
+evidence, or prompt file was lost.
 
 ## R053 Machine task allocation checkpoint
 
@@ -338,7 +459,8 @@ the disposable Linux path, guard checks and resource monitoring were actually
 exercised there. The Mac is a promising future FEM candidate: its pinned
 packages import and two-rank MPI starts, and it has more installed RAM. It has
 not passed FEM assembly, a solve, process-tree monitoring or same-input output
-checks; its FFCx version identity needs resolution. Neither machine has a
+checks; its exact FFCx Conda build/channel has not been independently confirmed,
+although R055 explains the module version string from upstream metadata. Neither machine has a
 matched timing/RSS benchmark for the physical workload.
 
 For the eventual FEM host choice, estimate the reviewed workload, refresh both

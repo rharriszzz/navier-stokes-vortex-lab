@@ -1,0 +1,28 @@
+{
+  "captured_date": "2026-09-20",
+  "environment": "/tmp/navier-fenicsx",
+  "python_executable": "/tmp/navier-fenicsx/bin/python",
+  "conda_package_record": {
+    "name": "fenics-ffcx",
+    "version": "0.10.1",
+    "build": "pyhbc3ee6d_1",
+    "build_number": 1,
+    "channel": "conda-forge",
+    "subdir": "noarch",
+    "filename": "fenics-ffcx-0.10.1-pyhbc3ee6d_1.conda",
+    "url": "https://conda.anaconda.org/conda-forge/noarch/fenics-ffcx-0.10.1-pyhbc3ee6d_1.conda",
+    "sha256": "727926ec2782375707cd036f86ab3d5004d53074ee80cf127619134f763e3473",
+    "md5": "d37671d8e59bdccbc1ef2defa740bdaa",
+    "package_timestamp": 1781021558,
+    "conda_meta_record_mtime": "2026-09-19T22:00:06.685089701-04:00"
+  },
+  "python_runtime_report": {
+    "module": "ffcx",
+    "module_version": "0.10.0",
+    "module_path": "/tmp/navier-fenicsx/lib/python3.12/site-packages/ffcx/__init__.py",
+    "distribution_name": "fenics-ffcx",
+    "distribution_metadata_version": "0.10.0"
+  },
+  "history_observation": "The Conda history shows fenics-ffcx 0.10.1 installed from conda-forge on 2026-09-19 22:00 local time before R014, R016 and R020, whose recorded commands use this environment's Python executable. No later Conda transaction changing FFCx appears in the current history.",
+  "interpretation": "The Conda package version is already at the environment-b1.yml pin. The runtime 0.10.0 strings reflect upstream project metadata in the v0.10.1 source tag; they are not evidence that the PC environment needs an upgrade."
+}

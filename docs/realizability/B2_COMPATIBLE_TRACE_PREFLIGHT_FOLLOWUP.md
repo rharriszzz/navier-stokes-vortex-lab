@@ -65,6 +65,15 @@ orders and acceptance thresholds were preserved. The understood fixture fixes
 are included only in the archived disposable R033 runner. No production source
 or configuration changed.
 
+**FFCx provenance clarification (R056):** The PC environment used by the
+recorded disposable commands already contained conda-forge
+`fenics-ffcx 0.10.1 pyhbc3ee6d_1`; the Python module and embedded distribution
+metadata self-reported 0.10.0. The cache stop above was a C source file without
+its compiled module in the default cache. It is not evidence that the project
+used FFCx 0.10.0 code or that the v0.10.1 quadrature-rule fix failed. Attempt 2
+used an isolated cache, and later attempts reused that task-local compilation.
+See the [R056 package record](evidence/r056/ffcx_pc_environment.json).
+
 Run the saved-data audit from the repository root with:
 
 ```bash

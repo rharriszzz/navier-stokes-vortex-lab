@@ -1,8 +1,9 @@
 # Project status: physical preparation and a realistic movie
 
 Updated 2026-09-20 for
-[R034](REQUEST_LOG.md#r034--2026-09-20--evaluate-this-mac-and-update-the-project-records),
-after the Mac capacity/environment assessment. Resource
+[R057](REQUEST_LOG.md#r057--2026-09-20--record-mac-installation-and-benchmark-plan-integrate-stash-publish),
+after documenting remaining Mac installation steps and the matched host
+benchmark plan. Resource
 guidance below includes the R023/R024 capacity clarifications.
 The goals below preserve the
 [R010 status-report request](REQUEST_LOG.md#r010--2026-09-20--project-status-and-user-goals).
@@ -291,6 +292,18 @@ recorded 68% system-wide free memory and 591 GiB free project-volume storage.
 The pinned FEM packages import in its Conda environment, and two-rank MPICH
 startup succeeded; no FEM assembly/solve or same-input reference comparison
 has run. Conda reports FFCx 0.10.1 while the imported module reports 0.10.0.
+R055 traced this to upstream v0.10.1 packaging metadata that still declares
+project version 0.10.0; the release contains a critical quadrature-rule
+code-generation fix, so retain the 0.10.1 pin. The live Mac build/channel has
+not been checked from this PC.
+R056 confirmed that the PC already has conda-forge `fenics-ffcx 0.10.1`
+(`pyhbc3ee6d_1`). R014/R016/R020 used this environment after installation, so
+their `ffcx: 0.10.0` report values are module self-reports, not evidence of an
+unfixed package; no rerun is required. Astra's planned review should audit
+whether source forms meet the same-quadrature multi-integral fix condition and
+whether any relevant compiled cache could predate the package. The next FEM
+reference run should use a fresh isolated cache and record the Conda build/hash
+separately. See [R056 environment evidence](docs/realizability/evidence/r056/ffcx_pc_environment.json).
 The latest PC snapshot showed 15.72 GiB total/5.44 GiB free in Windows and
 7.61 GiB total/6.73 GiB available in WSL; these are overlapping views of
 shared host RAM. The Mac's 4 performance/6 efficiency cores and the PC's 28
@@ -304,3 +317,17 @@ and [handoff assessment](SESSION_HANDOFF.md#r053-machine-task-allocation-checkpo
 Complete the review first; only then, if warranted, refresh capacity on both
 hosts and run the same small reference case under unchanged tolerances. No
 physical calculation or matched benchmark was run for this comparison.
+
+For the Mac software inventory (R054), the FEM Conda environment and MPI
+startup have passed import checks, and `ffmpeg`/`ffprobe` are present. POV-Ray
+is the remaining confirmed tool missing from the checked shell for the full
+movie pipeline. The FFCx version-string discrepancy is explained by upstream
+release metadata; retain the pinned 0.10.1 code. See the [Mac install handoff](SESSION_HANDOFF.md#r054-remaining-mac-software)
+and [R055 finding](SESSION_HANDOFF.md#r055-ffcx-version-discrepancy).
+
+The remaining Mac setup and task-by-task Mac/PC benchmark protocol are in
+[MAC_INSTALL_AND_BENCHMARK_PLAN.md](docs/realizability/MAC_INSTALL_AND_BENCHMARK_PLAN.md).
+POV-Ray is the one confirmed missing tool; no install or benchmark was run as
+part of R057. Astra/high should complete the PC R021/R013 review and set the
+small FEM reference case/acceptance thresholds before either host is evaluated
+for the scientific workload.
