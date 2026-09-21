@@ -11,6 +11,9 @@ last physical checkpoint remains R020; R033 prerequisites passed
 without a physical run. The last previously committed checkpoint is
 `0190893`.
 
+R033's scoped result was committed as `85ebd85` and pushed successfully to
+`origin/main` on branch `main`. The request log records the delivery outcome.
+
 ## User goals
 
 Read [STATUS.md](STATUS.md), including its new overall milestone table. The
