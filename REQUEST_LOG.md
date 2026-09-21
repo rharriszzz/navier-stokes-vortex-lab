@@ -3252,3 +3252,35 @@ Luna Reserve Weekly limit: 1% left (resets 18:03 on 26 Sep)
 **Changed files/checks/skips/next:** REQUEST_LOG.md, WORK_SESSIONS.md, SESSION_HANDOFF.md, STATUS.md, PROJECT_TRACKS.md, docs/realizability/{B2_NEXT_STEPS.md,B2_MONITOR_ADAPTER_REVIEW.md,B2_MONITOR_LIVE_VALIDATION_CONTRACT.md}, new B2_MONITOR_R088_REVIEW.md and evidence/r096/*. Scoped documentation/preservation checks follow. Application, archived-main replay, native source/build/startup, live OS/cgroup/signal/helper/workload, FEM/MPI/JIT/mesh/solve, render/encode and physical checks skipped. Audit child exited/reaped, temporary fake inputs cleaned; no task background process or ignored transfer input. PC retains ownership; Mac build unverified. One next task: Astra/high J01–J04 completion-certificate repair in new source/fake checks only, with immutable policy/reservation and independent outer-receipt boundary first; 120 s cumulative new fixture reservation / 256 MiB validator. Stop at unsettled containment/timing/accounting policy or unexplained failure/resource stop and before native/live/physical work; do not reset old allowances. Then Astra/high acceptance review; Luna/medium only after semantics settle. Availability/efforts checked in session catalog and opened official OpenAI Astra/Luna pages using OpenAI Docs; supplied account snapshot remains historical. No model switch, delegation or automation. Completion prepared separately from final commit/push; actual delivery follows in final response, with no post-push log edit.
 
 **R096 final validation, 2026-09-21:** Passed preservation of all 1,441 baseline files outside the eight allowed current documents, including all 1,343 historical evidence files; both published log prefixes; 96 unique request IDs; one STARTED/COMPLETED pair; current repair-task continuity; 153 local links/23 fragments; three new Python syntax files/four finite JSON files; all 37 audit source/input bindings and five output bindings. Root instructions plus handoff total 926 words, below the 2,800-word bound. Evidence: `docs/realizability/evidence/r096/documentation_validation.json`. First documentation check stopped because the README linked the checker's not-yet-generated result; the checker now permits only that exact pending output and creates it after all checks pass. Second check passed; no audit replay or historical evidence modification. Scoped whitespace passed; staged review and final publication follow. PC retains ownership and stops after delivery.
+
+## R097 — 2026-09-21 — Continue completion-certificate repair
+
+**User request:** Supplied the following session excerpts, followed by “continue”. Decorative borders/bars omitted, wrapped resume ID joined, account email redacted. Values are user-reported snapshots. The worked-for/resume excerpt belongs to the prior session; `/status` identifies the new session. No explicit `/new` command text supplied; no private session files accessed.
+```text
+Worked for 11m 39s · done 5:11 PM
+>_ OpenAI Codex (v0.155.1)
+model: gpt-6-astra high /model to change
+directory: ~/git/navier-stokes-vortex-lab
+Tip: New Use /fast to enable our fastest inference with increased plan usage.
+Token usage: total=153,060 input=133,197 (+ 2,054,272 cached) output=19,863 (reasoning 2,487)
+To continue this session, run codex resume, then select Review overhead reduction results (01a0c5c2-abbc-7f30-9c27-4cb5af72e0ca)
+/status
+>_ OpenAI Codex (v0.155.1)
+Visit https://chatgpt.com/codex/settings/usage for up-to-date information on rate limits and credits
+Model: gpt-6-astra (reasoning high, summaries auto)
+Model provider: openai
+Directory: ~/git/navier-stokes-vortex-lab
+Permissions: Workspace (Ask for approval)
+Agents.md: AGENTS.md
+Account: [REDACTED account email] (Plus)
+Collaboration mode: Default
+Session: 01a0c5cf-3cc5-7bd2-bb4e-8c63df99efc8
+5h limit: 43% left (resets 21:37)
+Weekly limit: 91% left (resets 16:37 on 28 Sep)
+Credits: 283 credits
+Luna Reserve Weekly limit: 1% left (resets 18:03 on 26 Sep)
+```
+
+**Scope/authorization/status:** Continue authorizes scoped start/final commit and push. Implement the R096 J01–J04 completion-certificate repair in new source/fake checks only; specify immutable policy/deadlines and independent outer-receipt boundary first. Python 3.12.13; 120 s cumulative new fixture reservation / 256 MiB validator address space. Preserve archives, failures and historical allowances. Stop on unexplained failure/resource stop or unsettled containment/timing/accounting policy; no native/live/physical work. End with Astra/high acceptance review.
+
+**Startup:** Same PC/WSL `daisy`, Linux/x86_64, intended checkout; clean main/origin/main, empty stashes and no open lifecycle/transfer. Sandbox initially refused `.git/FETCH_HEAD`; approved escalated fast-forward pull succeeded, already up to date. HEAD equals fetched upstream `dc73ec008460e2200a6b475bb36d846ca018cb7a`, confirming R096 delivery. Updated handoff/log/lifecycle reread. Mac build remains unverified. Start publication precedes substantive work.
