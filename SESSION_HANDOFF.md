@@ -2,10 +2,10 @@
 
 Last updated: 2026-09-20. Latest request:
 [R053](REQUEST_LOG.md#r053--2026-09-20--commit-reconciled-mac-comparison-notes-and-continue-host-assessment),
-which committed and pushed the reconciled pull notes as `6cc842f`, then
-compared current PC capacity with the recorded Mac evidence. The Mac
-environment imports the FEM stack and starts two-rank MPI; no FEM assembly,
-solve or matched benchmark has run. The
+which pushed the reconciled notes as `6cc842f` and the completed comparison as
+`00ba705`, then compared current PC capacity with the recorded Mac evidence.
+The Mac environment imports the FEM stack and starts two-rank MPI; no FEM
+assembly, solve or matched benchmark has run. The
 user permits using the PC
 within its capabilities; the former small diagnostic caps are not immutable
 user requirements. R023–R032 did not invoke Continue or authorize publication

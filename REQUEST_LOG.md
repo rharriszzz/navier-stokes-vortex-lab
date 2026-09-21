@@ -2506,4 +2506,6 @@ review recorded in `SESSION_HANDOFF.md`.
 
 **Checks, skips and next task:** The R053 snapshot JSON parsed and `git diff --check` passed. The initial reconciliation/prompt commit `6cc842f` was pushed to `origin/main`; the fresh capacity comparison and updated handoff are part of this same authorized task. No solver, FEM assembly, physical calculation or matched Mac/PC benchmark was run. The next task remains GPT-6 Astra/high review of R021/R013 on the PC, stopping before physical execution; consider a same-input reference case only if that review warrants it.
 
-**Status:** Comparison complete; final evidence and continuity update are ready for the scoped commit/push.
+**Delivery update, 2026-09-20:** The reconciled prompt/history handoff was pushed as `6cc842f`. The completed Mac/PC capacity evidence and task comparison were pushed as `00ba705` (`Record Mac and PC task comparison`) to `origin/main`. Both commits are on the configured upstream; no force push was used.
+
+**Status:** Complete. The working tree is clean. The temporary pull autostash is retained as a safety copy until its contents are confirmed covered by the pushed commits.
