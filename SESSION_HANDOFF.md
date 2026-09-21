@@ -1,6 +1,22 @@
 # Current session handoff
 
 Last updated: 2026-09-20. Latest request:
+[R061](REQUEST_LOG.md#r061--2026-09-20--publish-cross-computer-handoff-workflow)
+publishes the R059 pull report and R060 cross-computer workflow changes. The
+user authorized commit and push; the current worktree has those scoped
+documentation changes pending publication. After publishing, the next task is
+the MacPorts POV-Ray install and isolated movie smoke test, using GPT-5.6
+Luna/medium. Keep the separate PC scientific review at GPT-6 Astra/high.
+Previous request:
+[R059](REQUEST_LOG.md#r059--2026-09-20--pull-and-report-incoming-changes)
+pulled `main` from `096f75a` to `979b174`; upstream added commits `5c4a5a5`
+and `979b174`. They make the Mac install/benchmark guide actionable from live
+Mac readiness evidence, add documentation validation results, and update the
+README, status, B1 setup, inventory prompt and handoff. MacPorts is present,
+POV-Ray is missing, and the Mac/PC FFCx Conda artifact hashes match. No install
+or benchmark ran. The pull autostash contained only the R059 request-log entry;
+that entry is preserved, the duplicate R058 ID was resolved, and the autostash
+has been dropped. Previous request:
 [R058](REQUEST_LOG.md#r058--2026-09-20--pull-and-make-mac-setup-and-benchmark-instructions-actionable)
 pulled through `096f75a`, checked the live Mac tools, and revised
 [MAC_INSTALL_AND_BENCHMARK_PLAN.md](docs/realizability/MAC_INSTALL_AND_BENCHMARK_PLAN.md).
@@ -76,6 +92,16 @@ defines the workflow: log the request, complete the bounded task and checks,
 update continuity, commit/push scoped work, and stop. Explicit qualifications
 such as “Continue without pushing” override that default. It does not switch
 the selected model or schedule another session. No scheduler is installed.
+
+## Switching computers safely
+
+Use the [Mac/PC handoff protocol](AGENTS.md#switching-between-the-mac-and-pc)
+at bounded task boundaries. Keep one active owner for each task and experiment;
+publish only when the current request authorizes it. The receiving computer
+should pull and verify the handoff before starting, and should run its own
+environment/monitor checks. The current sequence is MacPorts POV-Ray install
+and isolated movie smoke test on the Mac, plus the Astra/high R021/R013 review
+on the PC; do not overlap edits or run a physical experiment while switching.
 
 ## Latest result: R022 toy memory stop
 

@@ -2581,3 +2581,32 @@ review recorded in `SESSION_HANDOFF.md`.
 **Next task and stop:** On the Mac, install POV-Ray with MacPorts and complete the isolated movie checks, then record evidence and stop. GPT-5.6 Luna/medium is suitable; the session model catalog currently lists Luna and Astra. The separate PC task remains GPT-6 Astra/high review of R021/R013 and FFCx forms/cache provenance, ending with a repeatable FEM comparison and resource contract before execution. Retain Astra/high for numerical decisions and unexplained differences; use Luna/medium for bounded mechanical work. No model switch occurred. Documentation is complete and ready for the authorized commit/push.
 
 **Delivery, 2026-09-20:** Commit `5c4a5a5` (`Clarify Mac setup and reproducible host benchmarks`) was pushed successfully to the configured `origin/main` without force. Nine scoped documentation/evidence files were committed; the staged whitespace check passed. **Status:** Complete. This delivery note is a follow-up within the same publication authorization.
+## R059 — 2026-09-20 — Pull and report incoming changes
+
+**User request:** “please do a git pull, and report on what changed”
+
+**Interpreted scope:** Check the working tree and handoff, pull from the current branch's configured upstream, inspect the commits/files brought in, and report the changes and resulting repository state. Preserve local work; do not add unrelated modifications.
+
+**Outcome, 2026-09-20:** Fast-forwarded `main` from `096f75a` to `979b174`, bringing in upstream commits `5c4a5a5` and `979b174`. The first commit refines the Mac installation/benchmark guide and adds readiness/validation evidence; the second updates the project status, README, Mac inventory prompt and handoff, and records publication. No numerical benchmark or solver ran during this pull. The R058 diff conflict was resolved by retaining upstream R058 and reindexing this pull request as R059. `git diff --check` passed after resolution. The pull-created autostash contained only this R059 entry, which is preserved in the working tree; the stash was dropped after verification.
+
+**Incoming change details:** R058's live evidence establishes MacPorts at `/opt/local/bin/port`, no Homebrew/POV-Ray on the inspected PATH, Xcode/clang available, and ffmpeg/ffprobe 4.4.2 with libx264. The Mac's `fenics-ffcx` 0.10.1 Conda artifact has the same build and hashes as the PC; the other selected FEM package records are native `osx-arm64`. The revised guide gives an exact MacPorts install command, a fresh-source-copy render/encode smoke test, and a more rigorous per-task benchmark contract with portable process-tree monitoring as a prerequisite for FEM. Documentation validation reports 76 local links checked, seven shell blocks syntax-checked, trajectory options/bounds checked, and no packages installed or numerical/render benchmarks run. See `docs/realizability/evidence/r058/mac_readiness.json` and `documentation_validation.json`.
+
+**Status:** Answered; no commit or push requested for this pull report.
+
+## R061 — 2026-09-20 — Publish cross-computer handoff workflow
+
+**User request:** “yes, please add commit and push”
+
+**Interpreted scope:** Publish the prepared R059 pull report and R060 Mac/PC handoff workflow documentation to the current branch's configured upstream. Stage only these related request-log, handoff, and agent-instruction changes; preserve history and do not force-push.
+
+**Status:** In progress. User explicitly authorized committing and pushing the pending scoped changes.
+
+## R060 — 2026-09-20 — Establish a safe cross-computer handoff workflow
+
+**User request:** “should there be some sort of modification to the workflow, so that I can switch computers after the completion of a step, without stepping on toes?”
+
+**Interpreted scope:** Assess the current repository handoff/Git workflow and document a lightweight procedure for transferring ownership between the Mac and PC at bounded task boundaries, preventing concurrent edits/runs, preserving evidence, and avoiding pull/stash conflicts. Do not launch numerical work or publish unless separately authorized.
+
+**Outcome, 2026-09-20:** Added a reusable “Switching between the Mac and PC” procedure to `AGENTS.md` and summarized it in `SESSION_HANDOFF.md`. It defines one active owner per task/run, a published or explicit patch handoff at completed boundaries, clean-checkout/fast-forward-only receiving steps, request-ID allocation after pulling, host-specific environment/monitor verification, no cross-OS JIT-cache transfer, and careful autostash reconciliation. This directly addresses the R059 request-ID collision after the upstream R058 addition.
+
+**Checks and next task:** `git diff --check` passed. No tests, package commands or numerical runs were needed. The policy and handoff updates are local and uncommitted; no commit/push authorization was included in this question. Next: publish these workflow notes with the user's authorization, then use the documented handoff to perform the MacPorts POV-Ray install and isolated movie smoke test; keep the PC Astra/high review as the scientific track. Stop the Mac setup task after the movie smoke check and do not start FEM comparison until the Astra review/monitor gate is satisfied. **Status:** Answered.

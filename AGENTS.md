@@ -67,6 +67,43 @@ An explicit qualification in the user's message overrides the default workflow
 word in a question do not invoke it. The shorthand does not itself change the
 selected model or schedule another session.
 
+## Switching between the Mac and PC
+
+Treat a computer switch as a handoff between task owners. Only one checkout
+should edit a given task's files or run a given numerical experiment at a time.
+At the end of a bounded step:
+
+1. Stop or confirm completion of all child processes. Record the result,
+   machine, branch and commit, changed files, evidence paths, checks/skips, and
+   the next task and stopping condition in `REQUEST_LOG.md` and
+   `SESSION_HANDOFF.md`.
+2. Keep large generated outputs and machine-specific environments local. Put
+   only the small evidence needed to interpret a result in the repository;
+   never transfer compiled binaries or JIT caches between macOS and Linux.
+3. If the user authorized publication for this step, commit only its scoped
+   changes and push the current branch. Otherwise do not publish implicitly:
+   leave a clear patch/handoff and do not start overlapping edits on the other
+   checkout until the user chooses how to transfer them.
+
+Before the other computer starts:
+
+1. Read `SESSION_HANDOFF.md` and the latest request-log entry, then check
+   `git status`. Do not pull over local changes; first preserve and reconcile
+   them deliberately. Avoid `git pull --autostash` as a routine handoff method:
+   parallel request-log edits can collide, including on request IDs.
+2. Pull the configured upstream with fast-forward-only behavior, review the
+   incoming commits and files, and confirm the handoff's branch/commit matches
+   the checked-out revision. Allocate the next request ID only after pulling
+   and reading the updated log.
+3. Verify the receiving machine's own package builds, architecture, paths and
+   resource-monitor behavior before running. Do not assume a successful import
+   on one OS validates the other. Never launch the same once-only experiment
+   on both machines.
+
+If a pull creates an autostash or a conflict, preserve both histories, resolve
+the request-ID collision explicitly, and drop the stash only after confirming
+all of its unique content is present in the worktree or committed history.
+
 ## Project purpose
 
 This repository develops a reproducible visualization and later experimental-design framework for a **finite-scale analogue** of a contracting, stretching, swirling Navier–Stokes flow.
