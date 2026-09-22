@@ -42,3 +42,9 @@ def validate(data):
         raise Refusal('manifest must retain existing FEM pins')
     if data.get('quadrature_degree') != 24 or data.get('quadrature_check_degree') != 26:
         raise Refusal('frozen quadrature rules required')
+    adapter = data.get('adapter', {})
+    if (adapter.get('global_order') != ['mixed_u_p', 'P_minus', 'P_plus', 'eta']
+            or adapter.get('scope') != 'serial affine tetrahedral unit cube only'
+            or adapter.get('energy_divergence_terms') !=
+            ['rho/2 integral |u|^2 div(u)', '-integral p div(u)']):
+        raise Refusal('missing reviewed adapter/gauge/budget contract')

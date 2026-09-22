@@ -1,9 +1,10 @@
 # Fixed-core operating point and detectability — R192
 
-R195 update: [verification source and fixture algebra](NONLINEAR_VERIFICATION_R195.md)
-are complete; FEM remains untested. Earlier next-step recommendations below are
-historical. Follow the single [current task](../../SESSION_HANDOFF.md#next-task)
-for the small cube adapter/review, stopping before FEM imports or execution.
+R196 update: [cube adapter and diagnostic source](CUBE_ADAPTER_R196.md) pass
+24 import-free checks; FEM remains untested and execution unadmitted. Earlier
+next-step recommendations below are historical. Follow the single
+[current task](../../SESSION_HANDOFF.md#next-task) for the one-fixture driver
+and finite supervision source; stop before FEM execution.
 
 2026-09-22; PC/WSL `daisy`. **Neither actuator route is admitted for execution.**
 The candidate below makes the R191 test quantitative, but boundary-to-core gains,

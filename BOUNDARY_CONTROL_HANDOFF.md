@@ -6,12 +6,13 @@ scientific thresholds below are retained unless explicitly labelled proposals.
 
 ## Start here
 
-**R195 verification source result:** the [prototype and fixture review](docs/realizability/NONLINEAR_VERIFICATION_R195.md)
-completes exact oracles, mixed gauge/rank/lifting checks and nonlinear/time
-iteration kernels. Fifteen standard-library checks pass; no FEM import or solve
-ran. Implement/review only the tiny cube assembly adapter and bounded launch
-contract next, following the [single task](SESSION_HANDOFF.md#next-task).
-Stop before FEM imports/JIT/meshing/assembly/solves. The [R194 boundary contract](docs/realizability/PORT_BASE_FLOW_CONTRACT_R194.md)
+**R196 adapter source result:** the [cube adapter/diagnostic review](docs/realizability/CUBE_ADAPTER_R196.md)
+completes sparse bordering, retained lifting and signed budget/error source.
+Twenty-four import-free checks pass; FEM construction/assembly/convergence are
+untested. Execution remains unadmitted with zero attempts. Implement the
+single-fixture driver and finite supervision path next, following the
+[single task](SESSION_HANDOFF.md#next-task); stop before FEM execution.
+The [R194 boundary contract](docs/realizability/PORT_BASE_FLOW_CONTRACT_R194.md)
 and [R192 gates](docs/realizability/FIXED_CORE_OPERATING_POINT_R192.md) remain;
 no tank or actuator route is admitted and B2 accuracy remains failed.
 

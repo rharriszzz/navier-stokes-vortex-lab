@@ -1,5 +1,10 @@
 # Nonlinear verification prototype and fixture review — R195
 
+R196 update: the [cube adapter/diagnostic source](CUBE_ADAPTER_R196.md) is now
+implemented and passes 24 import-free checks with these kernels. This historical
+review's missing-adapter statements describe R195. FEM execution remains
+unadmitted; follow the [current task](../../SESSION_HANDOFF.md#next-task).
+
 2026-09-22; PC/WSL `daisy`. The [isolated source](../../verification/nonlinear_port/README.md)
 implements P2/P1 weak-form builders and nonlinear/time iteration kernels.
 **Fifteen standard-library checks pass; no FEM stack was imported and no PDE

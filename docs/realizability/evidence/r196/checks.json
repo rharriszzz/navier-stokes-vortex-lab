@@ -1,0 +1,25 @@
+{
+  "request": "R196",
+  "python": "3.12.14",
+  "tests_run": 24,
+  "failures": 0,
+  "errors": 0,
+  "passed": true,
+  "forbidden_imports": [],
+  "fem_executed": false,
+  "execution_admitted": false,
+  "attempts_granted": 0,
+  "scope": "source and standard-library algebra only",
+  "source_sha256": {
+    "verification/nonlinear_port/cube_adapter.py": "a606b475774d9322f14ab8844e41c6489e614de4c1d9c461a6d3f5414063c6a2",
+    "verification/nonlinear_port/diagnostics.py": "5053a893cc4bc2272840b654299d2ae585a52c1c8b9dd9620cc1f9ee08710906",
+    "verification/nonlinear_port/fixtures.py": "91e5c8a971efe1687ad5856192b37436932a4ac094fce4b26ed994697431c584",
+    "verification/nonlinear_port/manifest.py": "3c343522aa294e0fa3971ffa109b9060d3bea0cfb7e998a7194f5abd779a0269",
+    "verification/nonlinear_port/polynomial.py": "418a3ac9338f14c659716579abb3404b95ad550de062083606de13b7b4e159b3",
+    "verification/nonlinear_port/prototype.py": "883f4df2765930655a859aa9e5f9882b90c122632f823f0a081e366284e34c96",
+    "verification/nonlinear_port/sparse.py": "3617eefef0da8c28a41355ab3fb9e6fc45f502667013eba5850a664661a66681",
+    "verification/nonlinear_port/test_adapter.py": "1fa9bfbccc34648e398c5f2d7c12c1833f0fef4522aba39d9e8e74ca75ac6e00",
+    "verification/nonlinear_port/test_algebra.py": "fe72afaecb029a341858f1c8fb791e4bb00d8be5ba8b7a5a6c3c7eb3d3fa5661",
+    "verification/nonlinear_port/future_fem.json": "7a8bda917e6b46994ad24c68e0b6c6013b7d6776f90c86a6de763f31f52fa558"
+  }
+}

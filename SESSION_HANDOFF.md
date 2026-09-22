@@ -1,17 +1,18 @@
 # Current session handoff
 
-Last updated 2026-09-22 (America/New_York) for R195.
+Last updated 2026-09-22 (America/New_York) for R196.
 **PC/WSL `daisy` owns the repository.** No transfer; Mac remains released.
-R195 completed [isolated nonlinear verification source and exact fixture checks](docs/realizability/NONLINEAR_VERIFICATION_R195.md).
-Fifteen standard-library checks pass: manufactured closed balances, independent
-Poiseuille/rotation, joint gauge/rank, compatible lift, Newton refusals and
-BE/BDF2 history. Weak-form construction, FEM assembly and convergence remain
-untested; the prototype has no mesh/assembly driver. No FEM stack was imported.
-**Next: implement/review the small cube adapter, diagnostics and bounded launch
-contract; stop before FEM imports/JIT, meshing, assembly or PDE solves.**
+R196 completed [cube adapter and diagnostic source](docs/realizability/CUBE_ADAPTER_R196.md).
+Twenty-four standard-library checks pass, including sparse bordering/lifting,
+constraint rank, signed energy terms, refinement and refusal cases. FEM imports,
+UFL construction, mesh/assembly/solves and convergence remain untested.
+**Next: implement the single-fixture n=2 Poiseuille driver and finite supervision
+path; review admission after import-free checks. Stop before FEM execution.**
+Execution remains unadmitted, with zero attempts; the adapter has no supervised
+entry point. Full convergence-suite and tank launches remain unadmitted.
 Tank implementation/execution remains unadmitted. No actual base, gain or feasible
 contraction range is established. Retain GPT-6 Astra / high / PC-WSL `daisy`;
-no model or machine switch. R191 similarity and R192 operating/error gates remain.
+no agent-initiated model switch or machine transfer. R191 similarity and R192 operating/error gates remain.
 The ideal 0.3927 micro-N m contrast, separate 0.1309 micro-N m residual/confound
 limits and 1.528e-7 m²/s² covariance allocation remain unverified requirements.
 R185 permits interior tracers seen by exterior cameras; hidden CFD truth remains
@@ -19,14 +20,15 @@ unavailable to feedback. R188 permits different profiles/timing; R186 retains
 radius/time/elapsed comparisons. The fixed-core point has radius ratio 1,
 no contraction and no claimed similarity-time decades. R182's whole-Gaussian
 obstruction remains valid; both central faces and the exterior inventory count.
-R194 completion 630e880 was verified on fetched upstream. R195 began with a
-clean required fast-forward pull there and published STARTED 9fbcc0c.
+R195 completion 9c7e849 was verified on fetched upstream. R196 began with a
+clean required fast-forward pull there and published STARTED 61aa5f9.
 Completion publication is prepared; actual delivery hash/push result follows in
 the final response and Git history. No post-push documentation edit.
-User supplied medium-effort status and explicitly noted other-project usage;
-account snapshots cannot measure this project's consumption. No model switch.
+User reports R195 used Astra medium, followed by a switch to high for the new
+session. Account snapshots include other-project usage and cannot measure this
+project's consumption. No agent-initiated model switch or account access.
 B2 accuracy remains failed, q64/q96 unused and R021 launch integration deferred.
-Only isolated verification kernels/oracles were implemented; no CFD/FEM, procurement, hardware, physical/
+Only isolated verification adapter/diagnostic source was implemented; no CFD/FEM, procurement, hardware, physical/
 optical, trajectory, render or encode workload ran. No task workload child was
 launched; only source review and short standard-library analytical/documentation checks ran.
 R168's bounded comparison passed: the same installed default POV-Ray
@@ -103,12 +105,12 @@ and physical-work limits remain unchanged.
 | Owner | PC/WSL `daisy`; Mac `fire.lan` released after published R161 handoff and R162 receipt. |
 | Checkout | `/home/rharris/git/navier-stokes-vortex-lab`. |
 | Branch/upstream | `main` / `origin/main` |
-| Starting state | R195 clean required fast-forward pull succeeded at 630e880, equal to fetched origin/main; empty stashes, same owner, no conflicting open task. STARTED 9fbcc0c published. |
+| Starting state | R196 clean required fast-forward pull succeeded at 9c7e849, equal to fetched origin/main; empty stashes, same owner, no conflicting open task. STARTED 61aa5f9 published. |
 | Interpreter | `/home/rharris/git/navier-stokes-vortex-lab/.venv/bin/python`, CPython 3.12.14 with NumPy 2.5.3 |
 | Other owner/process | Mac `fire.lan` released in the published R161 handoff. Local Git cannot inspect another checkout's unpublished state. |
-| Task processes | R195 source/algebra checks completed; no FEM/CFD/render/physical workload child launched. All short check commands exited. |
+| Task processes | R196 source/algebra checks completed; no FEM/CFD/render/physical workload child launched. All short check commands exited. |
 | Symbolic environment | `/tmp/navier-r183-sympy/bin/python`, Python 3.12.14, SymPy 1.14.0, mpmath 1.3.0; recreate using `requirements-symbolic.txt` if missing. Existing environments unchanged. |
-| Delivery state | R194 completion 630e880 verified upstream; R195 STARTED 9fbcc0c published. Completion prepared for scoped publication; delivery hash/result in final response. PC retains ownership. |
+| Delivery state | R195 completion 9c7e849 verified upstream; R196 STARTED 61aa5f9 published. Completion prepared for scoped publication; delivery hash/result in final response. PC retains ownership. |
 
 ## Current result and limits
 
@@ -239,46 +241,46 @@ agent-side POV-Ray backtraces are unavailable.
 
 ## Next task
 
-**Implement/review the smallest unit-cube FEM adapter and diagnostics for the
-R195 prototype, plus its bounded execution contract; stop before FEM imports
-or execution.** Use the [source and fixture review](docs/realizability/NONLINEAR_VERIFICATION_R195.md),
-[prototype](verification/nonlinear_port/README.md) and
+**Implement the smallest end-to-end n=2 Poiseuille fixture driver and finite
+supervision path, then make a concrete execution-admission decision. Stop before
+FEM imports/JIT/mesh/assembly/solves in this source increment.** Use the
+[R196 adapter/launch review](docs/realizability/CUBE_ADAPTER_R196.md),
+[prototype source](verification/nonlinear_port/README.md) and
 [non-executable manifest](verification/nonlinear_port/future_fem.json).
-Retain GPT-6 Astra / high / PC-WSL `daisy`: mixed assembly, traction, pressure
-gauge and error isolation require scientific judgment. Official OpenAI Docs
-was rechecked in R195; high is supported. The user reports medium in the
-supplied snapshot; no switch, account-access check or transfer occurred.
+Retain GPT-6 Astra / high / PC-WSL `daisy`; model support was rechecked through
+OpenAI Docs in R196. User reports the preceding medium-to-high change; no
+agent-initiated switch or account-specific capability claim.
 
-1. Implement a small fixture-only cube/tagging and sparse block assembly adapter
-   around the existing builders, with both global return multipliers, the
-   pressure gauge and eta compatibility diagnostic. Preserve all lift rows.
-   Review actual library interfaces against the existing pins without importing
-   the FEM stack. Do not touch production B1/B2 or physical entry points.
-2. Implement exact error/budget outputs and refusal reporting. Separate spatial
-   discrete forcing from the affine temporal companion; retain body work/torque,
-   all boundaries and BDF2 energy terms. Rigid rotation is a constitutive/balance
-   oracle, not a P1 pressure-exactness test. Verify adapter algebra using small
-   standard-library fixtures and source/syntax checks only.
-3. Review the concrete launch/report path under the practical supervision policy,
-   including observed setup/JIT/cleanup costs, process limits and refusal on
-   unknown cleanup. Keep the proposed 180 s / 1536 MiB one-suite caps and zero
-   granted attempts until an explicit later admission decision. Avoid a general
-   monitor rewrite. Decide whether a tiny FEM fixture can be admitted next;
-   do not launch it during this task.
+1. Join the existing cube, exact data, sparse assembly/Newton and diagnostic
+   helpers for one n=2 Poiseuille check. Use exact history and lateral trace,
+   a non-exact free-dof initial guess and at least one checked linear correction.
+   Measure assembled compatibility/constraint rank, freeze scales and evaluate
+   both returns at the actual quadrature points. Complete all result gates and
+   persistence; a field/step report cannot accept the whole run.
+2. Implement only the finite task-specific supervision/recording path in the
+   R196 checklist. Check actual host containment read-only; do not infer it from
+   the restricted namespace. Retain 180 s end-to-end / 1536 MiB whole-task,
+   no swap, 32 PIDs, one rank/thread; independent process expiry and explicit
+   cleanup evidence. Test success/failure/missing/late/unknown-cleanup decisions
+   with standard-library fixtures. Avoid general monitor or platform rewrites.
+3. Keep attempts zero during implementation. After source/acceptance/supervision
+   review, decide whether a later **single tiny fixture** can be admitted and
+   define its attempt allocation explicitly. Do not silently launch the full
+   n=2/4/8 spatial or temporal suite. No runtime costs or numerical convergence
+   have been measured. A missing safeguard refuses the affected launch.
 
-Completion: reviewable cube adapter/diagnostic source, import-free checks and a
-specific execution-admission decision. **Stop before FEM imports/JIT, mesh
-creation, assembly, PDE solves, tank code, dependency changes, physical/optical
-execution or rendering.** A code/algebra pass cannot validate discretization.
-B2 accuracy failed; q64/q96 unused; R021 deferred. Physical caps, production
-operators/pins/thresholds and once-only allowances are unchanged. No preview
-retry or Mac work. An early future Mac check may run portable algebra only after
-normal explicit ownership handoff; optional platform comparisons do not block PC.
+Completion: reviewable one-fixture entry point, finite supervision/recording
+source, import-free checks and a specific later execution decision. Stop before
+FEM imports/JIT/meshing/assembly/solves, dependencies, tank/controller,
+physical/optical or render work. No budget/threshold relaxation or automatic
+retry. B2 accuracy failed, q64/q96 unused, R021 deferred; production science and
+pins unchanged. Early Mac validation is portable algebra only after normal
+ownership handoff; optional platform comparisons do not block PC source work.
 
-Keep Astra/high while method/assembly decisions remain. Recommend a cheaper
-model/effort only when work is mechanical and availability is checked. This does
-not switch models or schedule a session. Next prompt: **Continue**.
-R195 files/checks/evidence and remaining choices are in REQUEST_LOG.md and
+Keep Astra/high while mixed assembly and admission choices remain. Recommend a
+cheaper model only once work is mechanical and availability is rechecked. This
+does not schedule work or change models. Next prompt: **Continue**.
+R196 files/checks/evidence and remaining choices are in REQUEST_LOG.md and
 WORK_SESSIONS.md. PC retains ownership; completion publication is prepared,
 with delivery hash/result in final response.
 

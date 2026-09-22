@@ -1,12 +1,11 @@
 # Physical Realizability Plan for `navier-stokes-vortex-lab`
 
-R195 completed the [isolated nonlinear verification source and fixture algebra](docs/realizability/NONLINEAR_VERIFICATION_R195.md).
-Fifteen standard-library checks pass, including exact balances, gauge/rank,
-lifting and BE/BDF2 iteration checks. FEM construction/assembly and convergence
-remain untested. Next implement/review the small cube assembly adapter and
-bounded launch contract; follow the single [handoff task](SESSION_HANDOFF.md#next-task).
-Stop before FEM imports/JIT, meshing, assembly or solves. No tank or hardware
-route is admitted and no feasible contraction range is established.
+R196 completed [cube adapter and diagnostic source](docs/realizability/CUBE_ADAPTER_R196.md).
+Twenty-four import-free checks pass; FEM construction/assembly and convergence
+remain untested. Execution is unadmitted, with zero attempts. Next implement the
+single-fixture driver and finite supervision path; follow the single
+[handoff task](SESSION_HANDOFF.md#next-task). Stop before FEM execution.
+No tank/hardware route or feasible contraction range is established.
 
 R188 priority update (2026-09-22): establish measurable essential dynamical
 similarity before further movie work. Numerical profiles and timing may differ;

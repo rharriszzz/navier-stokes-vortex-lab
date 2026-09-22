@@ -1,30 +1,37 @@
-# Isolated nonlinear port verification prototype — R195
+# Isolated nonlinear port verification source — R195/R196
 
-This is **verification source and algebra evidence, not a validated FEM solver**.
-The [review](../../docs/realizability/NONLINEAR_VERIFICATION_R195.md) derives the
-fixtures, gauge equivalence, lifting, signs and remaining implementation boundary.
-No production B1/B2 module imports this directory. No dependencies changed.
+**Source and algebra evidence, not a validated FEM solver.** The
+[R195 fixture review](../../docs/realizability/NONLINEAR_VERIFICATION_R195.md)
+derives the exact data. The [R196 adapter review](../../docs/realizability/CUBE_ADAPTER_R196.md)
+records implementation, tests and the execution refusal. No production B1/B2
+module imports this directory; no dependency pins changed.
 
-- `polynomial.py` and `fixtures.py`: standard-library rational polynomial oracles,
-  exact manufactured data, plane Poiseuille and rigid rotation.
-- `prototype.py`: injected P2/P1 space and UFL residual/Jacobian block builders,
-  coupled gauge/return constraints, strong-lifting treatment, damped Newton and
-  fixed-step BE/BDF2 iteration kernels. Imports no FEM libraries. `launch()`
-  always refuses. There is no mesh or assembly driver.
-- `future_fem.json` and `manifest.py`: a proposed bounded verification manifest
-  and checks for its non-executable state, pins, sequences, gates and caps.
-- `test_algebra.py`: exact identities, independent special cases, rank/lifting,
-  time integration, iteration failures and scope checks; no FEM imports/JIT.
-
-From the repository root:
+- `polynomial.py`, `fixtures.py`: exact rational manufactured fields and
+  independent Poiseuille/rigid-rotation oracles.
+- `prototype.py`: injected P2/P1 weak forms, damped Newton and BE/BDF2 kernels;
+  dense toy and sparse CSR paths. `launch()` always refuses.
+- `cube_adapter.py`: injected serial tetrahedral cube/tagging, exact fixture
+  loads, boundary-value extraction, mixed-plus-three-scalar assembly and sparse
+  PETSc LU source. No external imports, CLI or supervised driver.
+- `sparse.py`: CSR bordering, retained lifting rows, fixed step scaling and
+  a three-constraint Gram rank/condition screen.
+- `diagnostics.py`: unassembled field/error/budget forms, signed reductions,
+  numerical step gates, refinement/quadrature checks and physical endpoint
+  versus discrete time-integrated balances. It cannot accept a whole run.
+- `future_fem.json`, `manifest.py`: frozen **non-executable** proposal; zero
+  granted attempts. The 180 s / 1536 MiB one-suite caps remain proposals.
+- `test_algebra.py`, `test_adapter.py`: 24 standard-library tests; no FEM imports.
 
 ```sh
-.venv/bin/python -m unittest verification.nonlinear_port.test_algebra -v
+.venv/bin/python -m unittest verification.nonlinear_port.test_algebra verification.nonlinear_port.test_adapter -v
 ```
 
-The future adapter must assemble the returned blocks, install current boundary
-values before evaluating every residual row, select a sparse linear solve,
-implement diagnostic acceptance and obey external resource supervision. Passing
-these algebra checks does not establish that UFL construction, DOLFINx assembly,
-mesh inf-sup stability or numerical convergence works. No tank/campaign entry
-exists. Follow the single [handoff task](../../SESSION_HANDOFF.md#next-task).
+A future driver must inject the pinned modules under admitted supervision,
+verify actual geometry/pins, install the current trace before all residual
+rows, screen assembled compatibility/rank, freeze scales, and retain historical
+velocities. It must sample both returns at the actual quadrature points,
+collect/validate every diagnostic, reject failures before advancing history,
+and record process exit/cleanup. None of that orchestration has run.
+The sparse and analytical checks do not establish UFL validity, actual mesh
+rank, inf-sup stability, sparse factorization success or convergence. No tank
+entry exists. Follow the single [handoff task](../../SESSION_HANDOFF.md#next-task).

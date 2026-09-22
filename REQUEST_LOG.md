@@ -6421,3 +6421,70 @@ Read-only identity: rharris; PC/WSL daisy; Linux x86_64; user-owned checkout
 same owner, Mac released, R195 completed, no conflicting open lifecycle.
 Required clean fast-forward pull succeeded (already up to date); HEAD equals
 fetched upstream 9c7e8496046491bbad7f881fe814fd6740c9f31e, verifying R195 delivery.
+
+
+**R196 outcome:** Complete at the adapter/diagnostic source and admission-review
+boundary. Implemented serial affine cube tags, exact fixture data/history,
+raw mixed-plus-three-scalar assembly, CSR border/lifting/scaling and checked
+PETSc sparse LU source. Extended Newton with a CSR path; the three-constraint
+Gram condition screen is explicitly not a whole-system inf-sup certificate.
+Added error/traction/flux/gauge/eta outputs, signed six-face angular/energy
+budgets, both conservative and pressure divergence terms, BE/BDF2 energy
+identity and separate physical-endpoint versus discrete integrated budgets.
+Refinement/quadrature/missing-term checks refuse unsupported passes.
+
+Twenty-four standard-library tests pass. No FEM imports, UFL construction, JIT,
+mesh, assembly or PDE solve ran. No numerical contraction or convergence claim.
+The source has no supervised end-to-end entry point. Execution decision:
+**not admitted, zero attempts**. The review gives a concrete finite launch path
+under the unchanged 180 s / 1536 MiB ceiling, while recording unknown runtime
+costs and required effective containment/cleanup evidence. Restricted-namespace
+PID 1/cgroup observations do not establish host capabilities. No host or cgroup
+configuration was changed; no generic supervision infrastructure was added.
+
+Changed files (28 across start/completion): REQUEST_LOG.md, WORK_SESSIONS.md,
+SESSION_HANDOFF.md, STATUS.md, BOUNDARY_CONTROL_HANDOFF.md,
+CONTROL_RESEARCH_ROADMAP.md, EXPERIMENT.md, PHYSICAL_REALIZABILITY_PLAN.md,
+PROJECT_TRACKS.md; docs/realizability/{BOUNDARY_HARDWARE_FEASIBILITY_R185.md,
+ESSENTIAL_SIMILARITY_CONTRACT_R191.md,FIXED_CORE_OPERATING_POINT_R192.md,
+INWARD_TRANSPORT_SCREEN_R193.md,PORT_BASE_FLOW_CONTRACT_R194.md,
+NONLINEAR_VERIFICATION_R195.md,CUBE_ADAPTER_R196.md};
+docs/realizability/evidence/r196/{README.md,check_source.py,algebra_checks.txt,
+checks.json}; verification/nonlinear_port/{README.md,prototype.py,sparse.py,
+cube_adapter.py,diagnostics.py,manifest.py,future_fem.json,test_adapter.py}.
+Earlier research pages receive only forward status updates. Handoff opening,
+owner table and Next task agree; current status pages link to that task.
+
+Checks passed: identity/ownership/clean required fast-forward synchronization,
+HEAD equals fetched upstream R195 delivery, empty stashes; 24 import-free tests
+under project Python 3.12.14, including independent non-solenoidal budget signs,
+sparse versus dense border/lift equivalence, rank/condition refusals, Newton,
+time history, missing diagnostics and floor/rate/quadrature decisions; retained
+source hashes/no-FEM import record; syntax/JSON/fences, 197 local links/anchors,
+196 unique request IDs, append-only logs at 9c7e849, unchanged benchmark science
+and production/dependency scope; whitespace. Disposable documentation checker:
+/tmp/r196_validate.py. Final post-append/staged verification follows.
+Installed DOLFINx Python source and official assembly/mesh/PETSc APIs were
+reviewed read-only; no runtime compatibility claim. OpenAI Docs fetched official
+Astra/high support, without account access or a model change by the agent.
+
+Skips: FEM imports/JIT/mesh/assembly/solves, actual constraint rank/inf-sup or
+convergence, runtime containment/cleanup trials, dependencies, production B1/B2,
+tank/controller/physical/optical/hardware/procurement, trajectory/render/encode,
+Mac transfer or delegation. No task workload child launched; all short checks
+exited. B2 accuracy failed, q64/q96 unused, R021 deferred; scientific gates,
+physical caps and once-only attempt allowances unchanged. User reports the prior
+step used medium and the new session switched to high. Account snapshots include
+other-project usage; no project-consumption inference or private session access.
+
+Next: Astra/high on PC/WSL daisy implements the one-fixture n=2 Poiseuille driver
+and finite task-specific supervision/recording path, completing actual return
+sampling and whole-result gates. Run import-free/mock-supervisor checks; stop
+before FEM execution and make a concrete later admission decision. A later tiny
+fixture must receive an explicit attempt allocation; it does not admit the full
+convergence suite or tank. Reconsider a cheaper model only when remaining work
+is mechanical and availability is checked. Early Mac portable algebra checks
+require normal ownership handoff; no platform switch now. PC retains ownership,
+released: no. STARTED 61aa5f9 published successfully. Completion prepared for
+scoped commit/push; actual delivery hash/result in final response and Git
+history. No post-push documentation edit. Next prompt: Continue.

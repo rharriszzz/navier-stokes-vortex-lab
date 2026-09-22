@@ -1,18 +1,18 @@
 # Project status: a boundary-controlled engineering approximation
 
-Updated 2026-09-22 (America/New_York), through R195. PC/WSL `daisy` owns the
-repository. Latest work: [nonlinear verification source and algebra](docs/realizability/NONLINEAR_VERIFICATION_R195.md).
-Fifteen checks passed. FEM forms have not been constructed or assembled, and
-numerical convergence is untested. No boundary-driven core has been calculated
-or measured; tank implementation/execution and hardware remain unadmitted.
+Updated 2026-09-22 (America/New_York), through R196. PC/WSL `daisy` owns the
+repository. Latest work: [cube adapter and diagnostics](docs/realizability/CUBE_ADAPTER_R196.md).
+Twenty-four import-free checks passed. FEM forms have not been constructed or
+assembled, and convergence is untested. Execution remains unadmitted with zero
+attempts. No boundary-driven core or feasible contraction range is established.
 
 | Current question | Answer |
 |---|---|
-| What works? | The illustrative animation pipeline, saved-data checks and separate reference/analysis tools. |
+| What works? | Illustrative animation, saved-data checks and separate reference/analysis tools. |
 | Is the engineering goal demonstrated? | No validated boundary-driven contraction or boundary-only state estimator exists yet. |
-| What did the latest step establish? | Isolated nonlinear weak-form/iteration source and exact fixture checks are complete. [Evidence and limits](docs/realizability/NONLINEAR_VERIFICATION_R195.md). |
-| What blocks trusted numerical control results? | B2 still fails its independent response-accuracy comparison; q64/q96 remains unrun. |
-| What is next? | Implement/review the small cube assembly adapter and bounded launch contract, stopping before FEM imports or execution; follow the single [next task](SESSION_HANDOFF.md#next-task). |
+| What did the latest step establish? | Cube/sparse assembly source, retained lifting and signed budget/error diagnostics. [Evidence and limits](docs/realizability/CUBE_ADAPTER_R196.md). |
+| What blocks trusted numerical control results? | The nonlinear fixture has not run; B2 still fails its independent response-accuracy comparison and q64/q96 remain unused. |
+| What is next? | Implement the one-fixture driver and finite supervision path, with import-free checks and later admission decision; follow the single [next task](SESSION_HANDOFF.md#next-task). |
 
 ## Goal and present conclusion
 

@@ -78,7 +78,10 @@
     "actual_versions",
     "mesh_dofs",
     "elapsed_and_memory",
-    "exit_cleanup"
+    "exit_cleanup",
+    "pressure_divergence_work",
+    "physical_endpoint_budgets",
+    "constraint_gram_condition"
   ],
   "gates": {
     "spatial_rates": {
@@ -112,7 +115,7 @@
     "unresolved spatial or temporal rate",
     "unconfirmed child cleanup"
   ],
-  "review": "Source/algebra reviewed in R195; FEM assembly adapter, sparse block solver, diagnostics and supervised execution contract remain to implement/review before any execution. This file grants no attempt.",
+  "review": "R196 adds unexecuted cube/CSR adapter and diagnostic source. No FEM imports, JIT or assembly tested. Execution refused pending the minimal supervised fixture driver, measured return samples, complete acceptance/persistence and actual containment checks. Zero attempts granted.",
   "oracles": {
     "poiseuille": {
       "subdivisions": 2,
@@ -124,5 +127,22 @@
       "absolute_tolerance": 1e-10,
       "type": "exact-field stress and centrifugal balance assembly; no PDE pressure-exactness claim"
     }
+  },
+  "adapter": {
+    "scope": "serial affine tetrahedral unit cube only",
+    "global_order": [
+      "mixed_u_p",
+      "P_minus",
+      "P_plus",
+      "eta"
+    ],
+    "matrix": "CSR border, zero Dirichlet increments, PETSc serial LU",
+    "row_scaling": "initial step Jacobian absolute row sums, frozen",
+    "column_scaling": "dimensionless identity",
+    "spatial_history": "exact UFL expression; no old-field interpolation in spatial BE residual",
+    "energy_divergence_terms": [
+      "rho/2 integral |u|^2 div(u)",
+      "-integral p div(u)"
+    ]
   }
 }

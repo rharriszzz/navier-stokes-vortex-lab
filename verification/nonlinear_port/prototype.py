@@ -1,11 +1,12 @@
-"""Isolated P2/P1 nonlinear verification kernel; no mesh/assembly/launch driver.
+"""Isolated P2/P1 nonlinear verification kernel; no admitted launch driver.
 
 Imports only the standard library. UFL/FEM objects are injected into builders
-by a future, separately admitted adapter. No production backend is imported.
+by the unexecuted cube adapter. No production backend is imported.
 """
 from dataclasses import dataclass
 from math import isfinite, sqrt
 from sys import float_info
+from .sparse import CSR
 
 
 class Refusal(ValueError):
@@ -51,7 +52,7 @@ def make_space(fem, basix_ufl, mesh, fixture):
 
 def build_forms(U, w, previous, older, test, increment, normal, dx, ds,
                 return_tags, pressures, eta, force, offsets, targets, volume,
-                step, dt, fixture, rho=1.0, mu=.1):
+                step, dt, fixture, rho=1.0, mu=.1, exact_history=None):
     """Unassembled residual/Jacobian blocks for (w=(u,p), P-, P+, eta).
 
     eta augments continuity, paired with the integral(p)=0 row. With exactly
@@ -70,6 +71,10 @@ def build_forms(U, w, previous, older, test, increment, normal, dx, ds,
     u, p = U.split(w)
     old_u, _ = U.split(previous)
     older_u, _ = U.split(older)
+    if exact_history is not None:
+        if fixture != 'manufactured' or step != 1 or len(exact_history) != 2:
+            raise Refusal('exact history override only for spatial BE fixture')
+        old_u, older_u = exact_history
     v, q = U.split(test)
     du, dp = U.split(increment)
     a0, a1, a2 = time_coefficients(step, dt)
@@ -124,9 +129,18 @@ def newton(initial, evaluate, linear_solve, options=NewtonOptions()):
 
     def checked(state):
         r, j = evaluate(state)
-        if (len(r) != len(x) or len(j) != len(x)
-                or any(len(row) != len(x) for row in j)
-                or not all(isfinite(v) for v in [*r, *(v for row in j for v in row)])):
+        if isinstance(j, CSR):
+            try:
+                j.validate(len(x))
+            except ValueError as exc:
+                raise Refusal(str(exc)) from exc
+            valid_matrix = True
+        else:
+            valid_matrix = (len(j) == len(x)
+                and all(len(row) == len(x) for row in j)
+                and all(isfinite(v) for row in j for v in row))
+        if (len(r) != len(x) or not valid_matrix
+                or not all(isfinite(v) for v in r)):
             raise Refusal('invalid residual or Jacobian')
         norm = sqrt(sum(v*v for v in r))
         if not isfinite(norm):
@@ -146,8 +160,9 @@ def newton(initial, evaluate, linear_solve, options=NewtonOptions()):
         if len(delta) != len(x) or not all(isfinite(v) for v in delta):
             raise Refusal('invalid linear correction')
         # Check the supplied linear solve, rather than trusting its status.
-        linear_defect = sqrt(sum((sum(a*b for a, b in zip(row, delta))+ri)**2
-                                 for row, ri in zip(j, r)))
+        action = (j.matvec(delta) if isinstance(j, CSR) else
+                  [sum(a*b for a, b in zip(row, delta)) for row in j])
+        linear_defect = sqrt(sum((v+ri)**2 for v, ri in zip(action, r)))
         if linear_defect > max(options.absolute*.1, norm*1e-8):
             raise Refusal('linear correction residual failed')
         for k in range(options.backtracks+1):
@@ -185,7 +200,7 @@ def enforce_lifting(residual, jacobian, state, fixed_values):
 
 
 def launch(*args, **kwargs):
-    raise Refusal('FEM execution unadmitted: no driver, imports, JIT or tank launch')
+    raise Refusal('FEM execution unadmitted: no supervised driver or tank launch')
 
 
 def advance(initial, dt, steps, step_problem, linear_solve):
