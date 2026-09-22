@@ -6374,3 +6374,50 @@ released: no. STARTED 9fbcc0c published successfully (initial sandbox index-writ
 denial resolved by elevated authorized publication). Completion prepared for
 scoped commit/push; actual delivery hash/result in final response and Git
 history. No post-push documentation edit. Next prompt: Continue.
+
+
+## R196 — 2026-09-22 (America/New_York) — Continue cube adapter and diagnostics
+
+**User wording:** “Worked for 15m 16s · done 4:24 PM  I did a small amount of work on another project while this step was running, also the work for the current project used gpt-6-astra medium” followed by:
+
+```text
+model: gpt-6-astra medium /model to change
+directory: ~/git/navier-stokes-vortex-lab
+Tip: New Use /fast to enable our fastest inference with increased plan usage.
+Token usage: total=120,404 input=93,818 (+ 1,323,136 cached) output=26,586 (reasoning 4,214)
+To continue this session, run codex resume, then select Clarify status results scope (01a0cabc-3375-74a1-b0ad-cee15c8a690c)
+• Model changed to gpt-6-astra high
+/status
+OpenAI Codex (v0.155.1)
+Visit https://chatgpt.com/codex/settings/usage for up-to-date information on rate limits and credits
+Model: gpt-6-astra (reasoning high, summaries auto)
+Model provider: openai
+Directory: ~/git/navier-stokes-vortex-lab
+Permissions: Workspace (Ask for approval)
+Agents.md: AGENTS.md
+Account: [REDACTED account address] (Plus)
+Collaboration mode: Default
+Session: 01a0cade-7dbe-7560-9286-eb387560765c
+Weekly limit: 65% left (resets 17:37 on 28 Sep)
+Credits: 283 credits
+Luna Reserve Weekly limit: 100% left (resets 16:46 on 29 Sep)
+please continue
+```
+
+Box borders/progress glyphs omitted; wrapped resume identifier joined. `/new`
+excerpt missing. Worked-for/token/resume excerpt belongs to the prior session;
+status identifies the new session. User reports prior project work at medium,
+then a switch to high; no agent-initiated switch. Account snapshots are
+user-reported and include another project's usage; no project cost inference,
+account access or private session inspection.
+
+**Scope/status:** Started. Continue authorizes scoped lifecycle/task commit and
+push. Implement/review fixture-only cube adapter, error/budget diagnostics and
+bounded execution contract; import-free checks only. Decide later execution
+admission; zero attempts granted now. Stop before FEM imports/JIT/meshing,
+assembly/PDE solves, tank code or dependency changes.
+Read-only identity: rharris; PC/WSL daisy; Linux x86_64; user-owned checkout
+/home/rharris/git/navier-stokes-vortex-lab; main/origin/main; clean, no stashes,
+same owner, Mac released, R195 completed, no conflicting open lifecycle.
+Required clean fast-forward pull succeeded (already up to date); HEAD equals
+fetched upstream 9c7e8496046491bbad7f881fe814fd6740c9f31e, verifying R195 delivery.
