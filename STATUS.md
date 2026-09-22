@@ -1,17 +1,17 @@
 # Project status: a boundary-controlled engineering approximation
 
-Updated 2026-09-22 (America/New_York), through R192. PC/WSL `daisy` owns the
-repository. Latest work: [fixed-core operating point and detectability](docs/realizability/FIXED_CORE_OPERATING_POINT_R192.md).
-Sixteen conditional arithmetic/balance checks passed. Neither actuator route
-is admitted; no fluid simulation, physical test or achievable range is established.
+Updated 2026-09-22 (America/New_York), through R193. PC/WSL `daisy` owns the
+repository. Latest work: [inward-transport screen](docs/realizability/INWARD_TRANSPORT_SCREEN_R193.md).
+Fifteen analytical check groups passed. Transport can improve scalar transmission,
+but neither actuator route has a justified tank gain or execution admission.
 
 | Current question | Answer |
 |---|---|
 | What works? | The illustrative animation pipeline, saved-data checks and separate reference/analysis tools. |
 | Is the engineering goal demonstrated? | No validated boundary-driven contraction or boundary-only state estimator exists yet. |
-| What did the latest step establish? | One candidate vessel/core/optical geometry, port versus wall demand, and quantitative response/torque/noise gates. The 0.3927 micro-N m phase target needs unknown gains and torque matching below 0.1309 micro-N m. [Sheet and checks](docs/realizability/FIXED_CORE_OPERATING_POINT_R192.md). |
+| What did the latest step establish? | Conditional advection can defeat quiescent wall attenuation, but actual delivery needs connected paths, wall entrainment, both m=4 traveling responses and coupled velocity/pressure. [Screen and checks](docs/realizability/INWARD_TRANSPORT_SCREEN_R193.md). |
 | What blocks trusted numerical control results? | B2 still fails its independent response-accuracy comparison; q64/q96 remains unrun. |
-| What is next? | Assess inward transport versus distant-wall diffusion in a bounded analytical screen; follow the single [next task](SESSION_HANDOFF.md#next-task). |
+| What is next? | Specify the smallest credible port-driven base-flow calculation and verification plan; follow the single [next task](SESSION_HANDOFF.md#next-task). |
 
 ## Goal and present conclusion
 

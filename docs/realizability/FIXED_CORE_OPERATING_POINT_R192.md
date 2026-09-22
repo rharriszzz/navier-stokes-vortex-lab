@@ -292,6 +292,12 @@ here proves all boundary-driven vortex analogues impossible.
 
 ## Decision and next task
 
+R193 completed the [requested transport screen](INWARD_TRANSPORT_SCREEN_R193.md).
+It cannot bound tank gains without a realized base and coupled response; neither
+route is admitted. The single [current task](../../SESSION_HANDOFF.md#next-task)
+now specifies the port-driven base-flow calculation. The paragraphs below
+preserve R192's original decision and next-step specification.
+
 **Neither route passes an evidence-based admission now.** Ports require an
 unmeasured normal gain near 0.10, tangential gain near 0.1414 in the simple
 uncoupled screen, and external torque contrast below 0.1309 µN m. The wall

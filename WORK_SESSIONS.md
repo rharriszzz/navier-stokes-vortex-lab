@@ -547,3 +547,38 @@ Continue authorizes scoped start/completion publication; excerpts in R193.
 Bounded task: analytical advection–diffusion screen and validity/decision sheet
 for R192, with m=4 swirl, port delivery and band geometry. No new solver,
 CFD/FEM, procurement, hardware, physical/optical or render/encode execution.
+
+### R193 completion
+COMPLETED | 2026-09-22T15:04:54Z | PC/WSL daisy | released: no
+Outcome: bounded analytical inward-transport screen complete. Advection improves
+scalar transmission conditionally but cannot bound actual tank gains. Finite
+band geometry, solid-belt entrainment, both standing-mode traveling components,
+path cancellation and pressure/velocity coupling remain essential. Neither
+route admitted; no physical feasibility or achievable contraction range claim.
+Files (16): BOUNDARY_CONTROL_HANDOFF.md, CONTROL_RESEARCH_ROADMAP.md,
+EXPERIMENT.md, PHYSICAL_REALIZABILITY_PLAN.md, PROJECT_TRACKS.md, REQUEST_LOG.md,
+SESSION_HANDOFF.md, STATUS.md, WORK_SESSIONS.md,
+docs/realizability/BOUNDARY_HARDWARE_FEASIBILITY_R185.md,
+docs/realizability/ESSENTIAL_SIMILARITY_CONTRACT_R191.md,
+docs/realizability/FIXED_CORE_OPERATING_POINT_R192.md,
+docs/realizability/INWARD_TRANSPORT_SCREEN_R193.md, and
+ docs/realizability/evidence/r193/{README.md,check_transport.py,transport_screen.json}.
+Checks: required synchronization/owner/stashes; track/source review; 15 retained
+analytical groups under Python 3.12.14, manual coupling/geometry/boundary/error
+review; 157 links/anchors, fences, 193 unique request IDs, append-only logs at
+two bases, unchanged benchmark science, table agreement, scope and whitespace.
+Evidence: R193 sheet/checker/JSON; disposable /tmp/r193_validate.py. Final
+post-append/staged checks follow. Official Astra/high guidance rechecked.
+Skips: no solver/controller, CFD/FEM, field sampling, physical/optical test,
+procurement, hardware, trajectory/render/encode or dependencies. No workload
+child launched; short check commands exited. B2 failed, q64/q96 unused, R021
+deferred; production science/pins/operators and attempt budgets unchanged.
+Next: Astra/high on PC/WSL daisy specifies/reviews the smallest credible
+port-driven base-flow calculation: compatible finite boundaries, returns,
+finite/averaged geometry validity and numerical verification. Stop before
+solver code/dependencies/CFD/FEM or physical execution, with an explicit
+implementation-admission decision. Reconsider a cheaper model only when
+scientific choices settle and implementation becomes mechanical.
+PC retains ownership. STARTED cb407ec published successfully; completion
+prepared for scoped commit/push. Actual delivery hash/result in final response
+and Git history; no post-push documentation edit.

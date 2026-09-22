@@ -1,0 +1,114 @@
+{
+  "classification": "analytical comparison only; no tank solution or gain bound",
+  "python": "3.12.14",
+  "checks_passed": 15,
+  "checks": [
+    "characteristic PDE residual and decaying branch grid",
+    "quiescent Stokes limit",
+    "negative detuning conjugacy",
+    "zero detuning and transverse wave number gives unity",
+    "high transport inviscid phase limit",
+    "radial plus axial distance",
+    "finite band makes radial-only distance too short",
+    "independent real attenuation expression",
+    "angular momentum cylindrical diffusion transform",
+    "standing-wave decomposition",
+    "strain path invariant z*r^2",
+    "conditional upper-band path reaches cap before diagnostic radius",
+    "two-path phase cancellation",
+    "scalar residual no-growth error bound",
+    "gain point-one thresholds independently satisfy real characteristic equation"
+  ],
+  "geometry": {
+    "nearest_surface_m": 0.07762087348130013,
+    "band_center_surface_m": 0.08276472678623424,
+    "nearest_equatorial_peak_m": 0.09954310762330836,
+    "diffusion_time_s": 6025.000000000002
+  },
+  "swirl": {
+    "Omega_side_rad_s": 1.2511592140860373,
+    "Omega_peak_rad_s": 4.460675662474893,
+    "detunings_side_rad_s": [
+      4.37631832562619,
+      5.632955387062108
+    ],
+    "detunings_peak_rad_s": [
+      17.214384119181613,
+      18.47102118061753
+    ],
+    "azimuthal_diffusion_side_s": 39.06250000000001,
+    "azimuthal_diffusion_peak_s": 7.852695053913562
+  },
+  "rows": [
+    {
+      "V_m_s": 0,
+      "Pe": 0.0,
+      "travel_s": null,
+      "no_swirl_gain": 1.274667499258314e-19,
+      "side_frozen_plus_gain": 9.731857315338696e-51,
+      "side_frozen_minus_gain": 1.983422178498695e-57
+    },
+    {
+      "V_m_s": 0.0005,
+      "Pe": 38.81043674065007,
+      "travel_s": 155.24174696260027,
+      "no_swirl_gain": 3.724735732813831e-12,
+      "side_frozen_plus_gain": 1.141328716240994e-42,
+      "side_frozen_minus_gain": 2.567843197113836e-49
+    },
+    {
+      "V_m_s": 0.002,
+      "Pe": 155.24174696260027,
+      "travel_s": 38.81043674065007,
+      "no_swirl_gain": 0.0321782470789878,
+      "side_frozen_plus_gain": 5.0589124780201114e-23,
+      "side_frozen_minus_gain": 5.95919035503191e-29
+    },
+    {
+      "V_m_s": 0.005,
+      "Pe": 388.1043674065007,
+      "travel_s": 15.524174696260026,
+      "no_swirl_gain": 0.7831917056377286,
+      "side_frozen_plus_gain": 2.0955865396739473e-05,
+      "side_frozen_minus_gain": 7.207937310545209e-08
+    },
+    {
+      "V_m_s": 0.01,
+      "Pe": 776.2087348130015,
+      "travel_s": 7.762087348130013,
+      "no_swirl_gain": 0.9698271242380695,
+      "side_frozen_plus_gain": 0.18843087519383603,
+      "side_frozen_minus_gain": 0.0728120632781213
+    },
+    {
+      "V_m_s": 0.02,
+      "Pe": 1552.417469626003,
+      "travel_s": 3.8810436740650065,
+      "no_swirl_gain": 0.9961769372661212,
+      "side_frozen_plus_gain": 0.752020298300444,
+      "side_frozen_minus_gain": 0.6657831341192921
+    }
+  ],
+  "scalar_gain_point1_speed_m_s": [
+    0.0023203777686922108,
+    0.00889161354498096,
+    0.01047397235395188
+  ],
+  "time_scales": {
+    "port_bore_speed_m_s": 0.08289319952702884,
+    "normal_speed_distance_ratio_s": 0.936396157033249,
+    "angled_radial_speed_distance_ratio_s": 1.324264145030467,
+    "volume_turnover_wall_s": 188.49555921538763,
+    "volume_turnover_ports_s": 94.24777960769381,
+    "conditional_strain_radial_time_s": 69.31471805599453,
+    "conditional_strain_exit_s": 12.770640594149768,
+    "conditional_strain_exit_radius_m": 0.07745966692414835
+  },
+  "phase": {
+    "five_degree_time_at_drive_s": 0.1388888888888889,
+    "five_degree_time_at_side_detunings_s": [
+      0.01994061128705254,
+      0.015492127418610833
+    ]
+  }
+}

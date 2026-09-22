@@ -6093,3 +6093,63 @@ no conflicting open task. Required pull first failed because sandbox denied
 succeeded, already up to date. HEAD and fetched upstream both
  d1ed7cb92e26d0a8031edf9bac12a9fc52ae71a9, verifying R192 delivery. No transfer,
 model switch or incoming changes. Publish STARTED before substantive work.
+
+**R193 outcome:** Complete at the analytical validity/decision boundary. Added
+`docs/realizability/INWARD_TRANSPORT_SCREEN_R193.md` and retained comparison
+arithmetic. Inward transport can defeat quiescent diffusion attenuation in a
+constant-coefficient scalar equation, but no actual port/wall gain bound follows.
+Nearest band-to-diagnostic distance is 77.621 mm with axial displacement; port
+bore speed is not a transit speed. Solid belts require viscous entrainment into
+a connected interior stream. The standing m=4 forcing contains two traveling
+components with different Doppler shifts; path dispersion can cancel response.
+Neither route admitted; no achievable contraction range established.
+
+Derived the coupled linearized angular-momentum equation, explicitly retaining
+pressure and radial/axial perturbation coupling, and a soluble scalar comparison
+with its limits. Comparison gain 0.1 needs 2.3204 mm/s without swirl versus
+8.8916/10.4740 mm/s with the two frozen local-side detunings; these are artificial
+path parameters, not tank requirements or response predictions. Invalid global
+strain extrapolation would send band fluid to the cap before the diagnostic
+radius. R192's full-face stress, torque/confound and optical uncertainty gates
+remain unverified. Quantified discrepancy/observation error is required before
+using any reduction as a bound.
+
+Changed files (16): BOUNDARY_CONTROL_HANDOFF.md, CONTROL_RESEARCH_ROADMAP.md,
+EXPERIMENT.md, PHYSICAL_REALIZABILITY_PLAN.md, PROJECT_TRACKS.md, REQUEST_LOG.md,
+SESSION_HANDOFF.md, STATUS.md, WORK_SESSIONS.md,
+docs/realizability/BOUNDARY_HARDWARE_FEASIBILITY_R185.md,
+docs/realizability/ESSENTIAL_SIMILARITY_CONTRACT_R191.md,
+docs/realizability/FIXED_CORE_OPERATING_POINT_R192.md,
+docs/realizability/INWARD_TRANSPORT_SCREEN_R193.md, and
+ docs/realizability/evidence/r193/{README.md,check_transport.py,transport_screen.json}.
+Current handoff opening/owner/Next task and status/overview links agree.
+
+Checks passed: required identity/ownership/clean fast-forward synchronization;
+track/research inputs; 15 retained analytical groups under Python 3.12.14,
+including characteristic PDE residual grid, independent real attenuation,
+angular-momentum diffusion transform, limiting cases, standing-wave identity,
+geometry/strain path, phase cancellation and threshold identities; manual units,
+signs, coupling, boundary injection and uncertainty review; 157 local links and
+anchors, Markdown fences, 193 unique request IDs, append-only logs at
+d1ed7cb/cb407ec, unchanged benchmark scientific Sections 3–7.8 and 8–10,
+retained table/output agreement and whitespace. Disposable documentation checker:
+/tmp/r193_validate.py. Final post-append/staged checks follow.
+Sources: MIT/Sonin cylindrical momentum equations and Gallay–Maekawa imposed
+strain baseline rechecked; comparison equations and error analysis are our
+explicitly conditional derivations. OpenAI Docs skill rechecked official
+Astra/high support; no account availability or quota claim.
+
+Skips: no solver/controller implementation, dependency changes, CFD/FEM,
+reference-field sampling, physical/optical execution, procurement, hardware,
+trajectory/render/encode or machine transfer. No task workload child launched;
+short check commands exited. B2 failed, q64/q96 unused, R021 deferred; production
+code/pins, operators, scientific thresholds and attempt allowances unchanged.
+Remaining inputs: realized boundary-driven base, connected paths/entrainment,
+full coupled response, torque and calibrated observation uncertainty.
+Next: Astra/high on PC/WSL daisy specifies/reviews the smallest credible
+port-driven base-flow calculation, finite versus averaged boundary assumptions,
+return closure, numerical method/verification path and implementation-admission
+decision. Stop before solver code, dependencies, CFD/FEM or physical execution.
+PC retains ownership, released: no. R193 STARTED cb407ec pushed successfully;
+completion publication prepared. Actual delivery hash/push result follows in
+final response/Git history; no post-push documentation edit. Next prompt: Continue.

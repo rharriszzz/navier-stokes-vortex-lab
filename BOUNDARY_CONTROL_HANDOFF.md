@@ -6,12 +6,14 @@ scientific thresholds below are retained unless explicitly labelled proposals.
 
 ## Start here
 
-**R192 design result:** the [operating-point/detectability sheet](docs/realizability/FIXED_CORE_OPERATING_POINT_R192.md)
-compares port and wall routes at an explicit candidate geometry. Sixteen
-arithmetic/balance checks pass; neither route is admitted. Unknown response,
-return/wall torque and optical bias block a feasibility verdict. The
-[next task](SESSION_HANDOFF.md#next-task) assesses inward transport versus wall
-diffusion using an analytical screen, with no solver or physical launch.
+**R193 analytical result:** the [inward-transport screen](docs/realizability/INWARD_TRANSPORT_SCREEN_R193.md)
+finds that advection can improve scalar transmission, but cannot bound actual
+port/wall gains without a realized base and coupled response. Fifteen check
+groups pass; neither route is admitted. The [next task](SESSION_HANDOFF.md#next-task)
+specifies the port-driven base-flow calculation and verification path, stopping
+before solver implementation or any physical/numerical launch. R192's
+[operating-point gates](docs/realizability/FIXED_CORE_OPERATING_POINT_R192.md)
+remain conditional and unchanged.
 
 **R191 design result:** the [measurable similarity contract](docs/realizability/ESSENTIAL_SIMILARITY_CONTRACT_R191.md)
 defines analogue and mechanism claims separately, with hardware/evidence mapping,
@@ -36,7 +38,7 @@ compares commercially offered components and buildable assemblies. Historical
 pressure-only operators and numerical thresholds below are retained as a
 comparison case, not a current prohibition on optical feedback. No optical
 estimator or new numerical result is claimed. The single
-[next task](SESSION_HANDOFF.md#next-task) now follows the R192 analytical response-screen decision.
+[next task](SESSION_HANDOFF.md#next-task) now follows the R193 base-flow specification decision.
 
 **R182 result:** [Section 7.8](#78-gaussian-reference-deficit-and-whole-support-compatibility)
 derives the Gaussian reference's angular-momentum deficit with every fixed
