@@ -634,3 +634,14 @@ Reconsider a cheaper model only when work is fully mechanical and availability
 is checked. PC retains ownership. STARTED 4d7a823 pushed successfully;
 completion prepared for scoped commit/push. Actual delivery hash/result in
 final response and Git history; no post-push documentation edit.
+
+## R195 — Isolated nonlinear verification prototype
+STARTED | 2026-09-22T20:11:26Z | PC/WSL daisy | released: no
+Identity: rharris; Linux x86_64; /home/rharris/git/navier-stokes-vortex-lab;
+main/origin/main; clean required fast-forward pull at
+630e880b5f3a4661fe6adde9343236b304c6da14, equal to fetched upstream.
+Same owner, empty stashes, no conflicting open task. User reports cross-project
+account usage; snapshots do not measure this project's consumption.
+Continue authorizes scoped publication. Bounded task: derive fixture/rank/lift,
+implement isolated prototype if consistent, algebra/schema/syntax checks and
+future FEM manifest; stop before FEM imports/JIT/mesh/assembly/solves or tank code.

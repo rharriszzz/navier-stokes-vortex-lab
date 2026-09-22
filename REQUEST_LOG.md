@@ -6263,3 +6263,48 @@ STARTED 4d7a823 published successfully; its initial sandbox Git-index denial
 was resolved by elevated authorized publication. Completion prepared for scoped
 commit/push; actual delivery hash/result in final response and Git history.
 No post-push documentation edit. Next prompt: Continue.
+
+## R195 — 2026-09-22 (America/New_York) — Continue nonlinear verification prototype
+
+**User wording:** “Worked for 12m 56s · done 11:21 AM  I did another project earlier  so the status results are not solely from this project.” Followed by:
+
+```text
+OpenAI Codex (v0.155.1)
+model: gpt-6-astra medium /model to change
+directory: ~/git/navier-stokes-vortex-lab
+Tip: New Use /fast to enable our fastest inference with increased plan usage.
+Token usage: total=133,104 input=111,708 (+ 1,568,640 cached) output=21,396 (reasoning 3,585)
+To continue this session, run codex resume, then select Summarize Codex session (01a0c9a9-4289-75c0-887f-7704d100857b)
+/status
+OpenAI Codex (v0.155.1)
+Visit https://chatgpt.com/codex/settings/usage for up-to-date information on rate limits and credits
+Model: gpt-6-astra (reasoning medium, summaries auto)
+Model provider: openai
+Directory: ~/git/navier-stokes-vortex-lab
+Permissions: Workspace (Ask for approval)
+Agents.md: AGENTS.md
+Account: [REDACTED account address] (Plus)
+Collaboration mode: Default
+Session: 01a0cabc-3375-74a1-b0ad-cee15c8a690c
+Weekly limit: 66% left (resets 17:37 on 28 Sep)
+Credits: 283 credits
+Luna Reserve Weekly limit: 100% left (resets 16:08 on 29 Sep)
+continue
+```
+
+Box borders/progress glyphs omitted; wording/values retained. `/new` excerpt
+missing. Prior worked-for/token/resume excerpt and new status have different
+session attribution. Account redacted. All snapshots user-reported/unverified;
+the user explicitly reports other-project usage, so status changes cannot be
+attributed solely to this repository. No private session files inspected.
+
+**Scope/status:** Started. Continue authorizes scoped start/completion commits
+and pushes. Derive isolated nonlinear verification fixtures, gauge/rank and
+lifting; implement only if consistent; run algebra/schema/syntax checks and
+prepare a bounded future FEM manifest. Stop before FEM imports/JIT, meshing,
+assembly, PDE solves, tank code, dependency changes or physical/render work.
+Read-only checks: rharris; Linux x86_64; PC/WSL daisy; user-owned checkout;
+main/origin/main, clean worktree, empty stashes, same owner, Mac released and
+R194 completed. Required clean fast-forward pull succeeded (already up to date).
+HEAD equals fetched upstream 630e880b5f3a4661fe6adde9343236b304c6da14;
+R194 delivery verified. No incoming changes or conflicting open lifecycle.
