@@ -430,3 +430,13 @@ existing arithmetic and whitespace. No science/code/workload change. Scoped
 stage/commit/push and final clean/remote-tip verification follow; actual hash
 and result in final response/Git history, with no post-push edit. Next task
 remains measurable essential similarity and a discriminating first test.
+
+## R190 — Next model/machine reminder
+COMPLETED | 2026-09-22 (America/New_York) | PC/WSL daisy | released: no
+Repeated recorded GPT-6 Astra/high/PC-WSL daisy guidance. OpenAI Docs skill and
+official Astra page confirm high support; no new model comparison or workload.
+R189 research publication is 241f2b5, verified remotely in the preceding turn;
+this turn began clean at equal locally recorded tips. Reminder metadata only:
+REQUEST_LOG.md, WORK_SESSIONS.md, SESSION_HANDOFF.md; remains uncommitted.
+Checks: owner/identity/Git/stashes, handoff/source, append-only logs, whitespace.
+Next task unchanged: essential-similarity contract and discriminating first test.

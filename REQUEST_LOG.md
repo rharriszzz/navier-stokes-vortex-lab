@@ -5804,3 +5804,24 @@ No post-push documentation edit. PC retains ownership. Remaining decisions:
 essential-property evidence criteria, radius/time balance and engineering
 operating points. Next: define the measurable similarity contract and one
 discriminating first test. No movie or overnight workload.
+
+## R190 — 2026-09-22 (America/New_York) — Remind next model, reasoning and machine
+
+**User wording:** “remind me which model level and machine is next.  thanks.  goodnight.”
+
+**Scope/status:** Started. Remind the user of the recorded GPT-6 Astra / high /
+PC-WSL daisy selection; no new model choice or machine transfer. Initial checks:
+rharris/daisy, user-owned checkout, clean main/origin/main at 241f2b5, empty
+stashes. R189's publication succeeded in the preceding turn. This reminder
+creates only continuity metadata; scoped R189 publication is already complete.
+
+**R190 outcome:** Complete. Next remains GPT-6 Astra with high reasoning on
+PC/WSL daisy; no machine/model switch. OpenAI Docs skill consulted; official
+Astra model documentation confirms high reasoning support. This repeats the
+handoff's selection, not a new quota/performance/account claim. Changed only
+REQUEST_LOG.md, WORK_SESSIONS.md and SESSION_HANDOFF.md to record this reminder
+and the observed R189 delivery. Checks: identity/owner/Git/stashes, handoff,
+official model page, append-only log prefixes and whitespace. No workload or
+scientific check. Reminder metadata remains local/uncommitted; publication of
+the research documentation is already complete at 241f2b5. Next: define the
+measurable essential-similarity contract and first discriminating test. PC owns.
