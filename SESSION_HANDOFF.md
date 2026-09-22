@@ -1,6 +1,6 @@
 # Current session handoff
 
-Last updated 2026-09-22 (America/New_York) for R185–R190.
+Last updated 2026-09-22 (America/New_York) for R191 (started).
 **PC/WSL `daisy` owns the repository.** R161/R162 completed Mac release and
 PC receipt; there is no new transfer. R185 prioritizes understanding physical
 fidelity before a movie and explicitly allows interior tracer measurements
@@ -19,8 +19,9 @@ tracking with different surrounding flow remains open. Its central/exterior
 budget derivation is supporting work, not the sole next task. R182–R184 were
 delivered in `ad11d02`, present at HEAD and locally recorded origin/main.
 R189 published the research documentation in 241f2b5; push and remote tip were
-verified. R190 confirms the same Astra/high/PC-WSL daisy selection. Only R190
-reminder metadata is now uncommitted; no new research or workload.
+verified. R190 confirms the same Astra/high/PC-WSL daisy selection. R190
+reminder metadata is now published as b323f60. R191 starts the recorded
+essential-similarity design task after clean fast-forward synchronization.
 B2 accuracy remains failed and q64/q96 unused. Historical pressure-only tests
 retain their declared operators; optical permission does not rewrite evidence.
 R021 launch integration remains deferred. No solver/render/physical workload
@@ -104,7 +105,7 @@ and physical-work limits remain unchanged.
 | Other owner/process | Mac `fire.lan` released in the published R161 handoff. Local Git cannot inspect another checkout's unpublished state. |
 | Task processes | R185 source review, arithmetic and documentation checks only; no numerical/FEM/render/physical workload child. |
 | Symbolic environment | `/tmp/navier-r183-sympy/bin/python`, Python 3.12.14, SymPy 1.14.0, mpmath 1.3.0; recreate using `requirements-symbolic.txt` if missing. Existing environments unchanged. |
-| Delivery state | R182–R184 delivery `ad11d02` is present locally and at the recorded upstream tip. R185–R189 published as 241f2b5, with successful push/remote verification. R190 reminder metadata remains local. PC retains ownership. |
+| Delivery state | R182–R184 delivery `ad11d02` is present locally and at the recorded upstream tip. R185–R189 published as 241f2b5, with successful push/remote verification. R190 metadata published as b323f60; R191 STARTED publication pending. PC retains ownership. |
 
 ## Current result and limits
 

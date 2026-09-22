@@ -5825,3 +5825,53 @@ official model page, append-only log prefixes and whitespace. No workload or
 scientific check. Reminder metadata remains local/uncommitted; publication of
 the research documentation is already complete at 241f2b5. Next: define the
 measurable essential-similarity contract and first discriminating test. PC owns.
+
+## R191 — 2026-09-22 (America/New_York) — Continue essential-similarity design
+
+**User wording:** “continue”, following a supplied Codex banner, token-usage
+excerpt, resume instruction and `/status` snapshot. Supplied text values:
+
+```text
+OpenAI Codex (v0.155.1)
+model: gpt-6-astra high /model to change
+directory: ~/git/navier-stokes-vortex-lab
+Tip: New Use /fast to enable our fastest inference with increased plan usage.
+Token usage: total=157,498 input=133,799 (+ 3,700,736 cached) output=23,699 (reasoning 1,188)
+To continue this session, run codex resume, then select Summarize Codex session (01a0c75d-1c87-7f32-b97b-2fc383e9c72f)
+/status
+OpenAI Codex (v0.155.1)
+Visit https://chatgpt.com/codex/settings/usage for up-to-date information on rate limits and credits
+Model: gpt-6-astra (reasoning high, summaries auto)
+Model provider: openai
+Directory: ~/git/navier-stokes-vortex-lab
+Permissions: Workspace (Ask for approval)
+Agents.md: AGENTS.md
+Account: [REDACTED account address] (Plus)
+Collaboration mode: Default
+Session: 01a0c985-0a6d-7802-897e-80926080a829
+Weekly limit: 78% left (resets 17:37 on 28 Sep)
+Credits: 283 credits
+Luna Reserve Weekly limit: 100% left (resets 10:28 on 29 Sep)
+continue
+```
+
+Box borders/progress-bar glyphs omitted; wording/values retained. These are
+user-reported snapshots, not independently verified account or usage facts.
+The usage/resume excerpt refers to the old session; `/status` names the new
+session. Final “worked for” and `/new` excerpts were not supplied. No private
+session files inspected.
+
+**Scope/status:** Started. Continue carries scoped commit/push authorization.
+Define a reviewable essential-similarity contract, hardware/evidence mapping,
+radius-duration comparison and one discriminating first test; design/source/
+symbolic reasoning only. Stop before solver/controller implementation, CFD/FEM,
+procurement, hardware, physical tests, trajectory/render/encode work. PC/WSL
+daisy retains ownership; no transfer or model switch. Initial identity:
+rharris, Linux 6.18.33.2-microsoft-standard-WSL2 x86_64, user-owned checkout,
+main/origin/main, empty stashes; only known R190 metadata dirty. Fresh fetch
+confirmed equal tips 241f2b5. Preserved and published those three files as
+b323f60 under this Continue authorization, then clean required
+`git pull --ff-only --no-rebase --no-autostash` succeeded with equal tips.
+Initial sandbox Git index write was denied; approved elevated Git completed
+reconciliation. No request ID allocated before synchronization. R190 metadata
+is now published. Publish STARTED before substantive work.

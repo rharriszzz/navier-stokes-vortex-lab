@@ -440,3 +440,17 @@ this turn began clean at equal locally recorded tips. Reminder metadata only:
 REQUEST_LOG.md, WORK_SESSIONS.md, SESSION_HANDOFF.md; remains uncommitted.
 Checks: owner/identity/Git/stashes, handoff/source, append-only logs, whitespace.
 Next task unchanged: essential-similarity contract and discriminating first test.
+
+## R191 — Essential-similarity contract and first test
+STARTED | 2026-09-22T14:30:22Z | PC/WSL daisy | released: no
+Identity: rharris; Linux 6.18.33.2-microsoft-standard-WSL2 x86_64;
+/home/rharris/git/navier-stokes-vortex-lab; main / origin/main.
+Starting commit: b323f60, equal to upstream after successful clean required
+fast-forward pull. Empty stashes; no ownership transfer/open conflicting task.
+Known R190 reminder metadata was preserved and published first as b323f60;
+Continue authorizes scoped start/completion publication. User-supplied usage
+and session excerpts recorded in R191 with account address redacted.
+Bounded task: define observable essential-similarity criteria, allowed
+variations, hardware/uncertainty mapping, radius-duration tradeoffs and one
+first discriminating test. Source/design/symbolic work only; no solver, CFD,
+physical test, procurement, hardware, render/encode or model/machine switch.
