@@ -3988,3 +3988,36 @@ script and documentation are the scoped files for R135 publication.
 **Scope/status:** Stage and publish the R134 centered-object test script and
 its renderer-level diagnosis/handoff. Preserve the recorded test result; do
 not run another POV-Ray workload. In progress.
+
+**R135 delivery reconciliation — 2026-09-21:** At R136 start, clean fast-forward
+synchronization confirmed published commit `1373c46c75c1a91f2e240d510996cbc2af68a9f0`
+contains this request and the R134 result. No prior request was replayed.
+
+## R136 — 2026-09-21 — Continue POV-Ray renderer diagnosis
+
+**User request:** “we are trying to get povray to work, but there are problems.
+please continue”
+
+**Supplied session excerpts (user-reported):** Codex v0.155.1, directory
+`~/git/navier-stokes-vortex-lab`, initial model `gpt-5.6-luna medium`;
+token usage total=504,983 input=408,942 (+ 21,107,584 cached) output=96,041
+(reasoning 33,270). Resume label `Fix data workflow`, prior session
+`01a0c62b-29d3-7d70-a335-a821e42f4bb3`. “Model changed to gpt-6-astra xhigh”.
+Supplied `/status`: model `gpt-6-astra` (reasoning xhigh, summaries auto),
+provider openai, permissions Workspace (Ask for approval), AGENTS.md,
+account [redacted account details] (Pro Lite), collaboration Default, session
+`01a0c68d-28fb-7572-a1ef-3d0d7e724f21`; weekly limit 96% left
+(resets 17:37 on 28 Sep), 283 credits, Luna Reserve Weekly limit 100% left
+(resets 20:38 on 28 Sep). No “worked for” or `/new` excerpt supplied.
+These are supplied snapshots, not independently verified account/model data;
+no private session files were inspected.
+
+**Scope/status:** Continue the bounded renderer-build/runtime diagnosis on Mac
+`fire.lan`, Darwin 25.6.0/arm64. The continuation instruction carries scoped
+commit/push authorization under the session protocol. Clean pull is up to date;
+HEAD equals origin/main at `1373c46`, stashes empty, Mac ownership retained.
+Inspect installed build/configuration and primary upstream sources; reproduce
+with bounded external host invocations and establish a visible centered sphere
+before project-frame checks. Preserve trajectory/scene semantics. Stop before
+unsupported installation changes, elevated tracing, unbounded processes, FEM,
+physical or broad benchmarks; no movie until visual gates pass. In progress.
