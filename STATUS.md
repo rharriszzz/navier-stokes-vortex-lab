@@ -1,6 +1,6 @@
 # Project status: a boundary-controlled engineering approximation
 
-Updated 2026-09-21 (America/New_York), R171–R176. PC/WSL `daisy` owns the
+Updated 2026-09-21 (America/New_York), R171–R177. PC/WSL `daisy` owns the
 repository. This assessment uses current source, saved experiment records and
 the motivating paper; it launches no simulation or rendering workload.
 The single [next task](SESSION_HANDOFF.md#next-task) is recorded in the handoff.
@@ -205,7 +205,9 @@ floor or the attainable physical contraction.
 
 ## What “the first few orders of magnitude” must mean
 
-We still need a measured quantity, finite interval and allowable error. The
+R177 now proposes measured quantities, a finite interval and explicit error
+budgets in the [revised benchmark](BOUNDARY_CONTROL_HANDOFF.md#9-target-errors-and-interpretable-outcomes).
+They remain proposals for user review, not achieved or finally approved limits. The
 paper motivates a radial scale proportional to the square root of remaining
 similarity time. Using that relation as a finite-range target gives:
 
@@ -231,9 +233,9 @@ range.
 
 ## What remains between today's preview and the intended simulation
 
-1. Define the finite paper-inspired target, units, observables, tolerances and
-   exact boundary measurement allowance. Distinguish target, truth used only
-   for validation, sensor output and estimated state.
+1. Review the R177 finite-target proposal and its remaining user-level choices;
+   its units, observables, tolerances and strict boundary sensing baseline are
+   now explicit. Keep target, validation truth, sensors and estimates distinct.
 2. Obtain an accurate small boundary-response benchmark; resolve the current
    B2 comparison before trusting a campaign built on it. Preserve independent
    reference checks and practical execution limits.
@@ -332,30 +334,29 @@ user's finite-range boundary-only engineering approximation is impossible.
 
 ## Next task and execution status
 
-The next useful task is to revise the existing boundary-control benchmark
-specification around the confirmed paper and boundary-only sensing: propose a
-finite target/measurement definition, an interpretable negative-result test,
-and connect both to the unresolved B2 accuracy check. Its concrete scope and
-completion criteria live only in the
-[current handoff](SESSION_HANDOFF.md#next-task). Reviewing or extending the
-illustrative movie can proceed separately; a longer render does not advance
-the boundary-control evidence by itself.
+R177 completed the [benchmark revision](BOUNDARY_CONTROL_HANDOFF.md). It proposes
+300 s preparation from rest and 100 s tracking of the existing 10 mm → 3 mm
+reference, six replayable command histories, strict wall-pressure/actuator
+measurements, and explicit whole-history and uncertainty criteria. It separates
+actuation limits, sensor-blind states, command-budget failures and numerical
+inconclusiveness. The proposed range is 0.523 radius decades / 1.046
+radius-squared decades, not the longer-term “few orders” goal achieved.
 
-R176 recommends **GPT-6 Astra / high reasoning / PC-WSL `daisy`** for that
-bounded specification task. Remain on the current model and machine: the
-work requires scientific judgment and the PC holds the relevant evidence.
-The deliverable is one revised existing benchmark, including timed command
-histories, strict boundary measurements and interpretable success/failure
-criteria, plus the accuracy prerequisite for its eventual execution.
-See the [handoff](SESSION_HANDOFF.md#next-task) for checks, stopping conditions
-and the later model-selection rule. No new numerical experiment is launched
-by this recommendation.
+The single [next task](SESSION_HANDOFF.md#next-task) is concrete, bounded launch
+integration for the existing R021 matched-trace diagnostic using the completed
+R033 prerequisites and R070 repairs. Prepare and benign-test a default-disabled
+physical path under practical supervision; stop before physical/FEM execution.
+Do not restart completed toy work or create another general monitoring plan.
+Retain GPT-6 Astra/high on PC/WSL daisy for numerical interfaces and scope
+judgment. B2 accuracy remains failed and the q64/q96 physical comparison unused.
 
-The rendering repair is complete. R169 completion is committed as `6deb9d0`;
-R176 authorizes publication of the R170–R176 documentation. The delivery
-commit and push outcome are reported after publication. The old PC
-display-enabled crash is not diagnosed, but the accepted headless one-thread
-preview needs no retry. No Mac work is currently required.
+Unresolved user choices remain the proposed engineering tolerances/preparation
+and command budgets, whether interior optical feedback is allowed, and later
+credible hardware/noise limits. Strict boundary measurement support remains
+the baseline. None of these changes the unchanged B2 accuracy diagnostic.
+The rendering repair/preview is complete in `6deb9d0`; R170–R176's assessment
+was delivered in `22cf3d7`. R177's start was published in `ace8311`, with completion
+publication prepared in the logs. No preview retry or Mac work is required.
 
 The [R103/R104 practical supervision policy](docs/realizability/B2_MONITOR_PRACTICAL_SUPERVISION_POLICY.md)
 retains limits, cleanup and honest incomplete-result reporting while removing
@@ -391,3 +392,10 @@ R176's final publication review passed 33 local link/anchor checks, both
 append-only log-prefix checks, unique request IDs through R176, four-file
 documentation scope and whitespace. Fresh fetch confirmed equal local/upstream
 tips before the authorized documentation commit; staged checks follow.
+
+R177 reviewed the benchmark against the implemented configuration/reference,
+R020/R021/R033/R070 evidence and R103/R104 policy; it rechecked the primary
+paper and official model guidance. Only the benchmark and four continuity
+documents changed. No numerical workloads, FEM tests, trajectory, render,
+encode, controller, hardware or package work ran. Documentation checks and
+actual delivery are recorded in the request/work logs and final response.

@@ -1,21 +1,22 @@
 # Current session handoff
 
-Last updated 2026-09-21 (America/New_York) for R176.
-**PC/WSL `daisy` owns the repository.** R161's published Mac release and R162's
-receipt completed the transfer; R164 completion is published in `97d9fcf`.
-R171–R173 complete a goal-centered assessment in [STATUS.md](STATUS.md).
-The goal is a finite engineering approximation of the recent OpenAI paper,
-with forcing and sensing on the boundary only. A clearly explained negative
-result is acceptable. The movie pipeline works, but boundary-driven contraction
-and boundary-only estimation remain unvalidated; B2 accuracy still fails.
-Next: revise the existing boundary-control benchmark specification with a
-finite target, allowed measurements and explicit positive/negative criteria.
-R176 records GPT-6 Astra / high reasoning / PC-WSL `daisy` for that next task
-and authorizes publication of this session's assessment and handoff.
-R174 adds timed boundary forcing as a candidate to assess: include finite-time
-response and phase/timing, inspired by the likely FloWave example, without
-assuming that surface-wave focusing demonstrates vortex control or sensing.
-This supersedes R170's suggestion to prioritize a longer movie decision.
+Last updated 2026-09-21 (America/New_York) for R177.
+**PC/WSL `daisy` owns the repository.** R161/R162 completed the Mac release
+and PC receipt. R170–R176's assessment is published in `22cf3d7`.
+R177 completes the [finite boundary-only benchmark proposal](BOUNDARY_CONTROL_HANDOFF.md):
+300 s boundary preparation from rest, then the existing 10 mm → 3 mm reference
+for 100 s, explicit command histories, strict wall measurements and separate
+actuation/sensing/numerical verdicts. These are proposed engineering limits,
+not an approved final target or achieved result. Interior PIV remains validation
+only; the user's allowance for interior optical feedback is still undecided.
+B2 accuracy remains failed; q64/q96 physical comparison remains unused.
+Next: implement the smallest practical launch integration for that existing
+R021 diagnostic, building on completed R033 prerequisites and R070 repairs,
+with a default-disabled physical entry and bounded benign checks. Stop before
+FEM/physical execution. Retain GPT-6 Astra/high on this PC; see the single task below.
+R177's STARTED record was published in `ace8311`; completion publication is
+prepared in this handoff and its actual delivery hash follows in the final report.
+No numerical, rendering, controller or hardware work ran in R177.
 R168's bounded comparison passed: the same installed default POV-Ray
 3.7.0.10.unofficial rendered the unchanged sphere and project frame 1 at
 160x120 with explicit `-d +WT1 -J`. Both exited 0 and produced visible geometry.
@@ -90,11 +91,11 @@ and physical-work limits remain unchanged.
 | Owner | PC/WSL `daisy`; Mac `fire.lan` released after published R161 handoff and R162 receipt. |
 | Checkout | `/home/rharris/git/navier-stokes-vortex-lab`. |
 | Branch/upstream | `main` / `origin/main` |
-| Starting state | R176 started at `6deb9d0`; fresh fetch confirmed HEAD = origin/main and stashes empty. This session's R170–R175 edits were reviewed and included in the explicit publication authorization. No pull over local edits. |
+| Starting state | R177 began clean at `22cf3d7`; required fast-forward pull was already up to date, HEAD = fetched origin/main, stashes empty. Start publication `ace8311` succeeded. |
 | Interpreter | `/home/rharris/git/navier-stokes-vortex-lab/.venv/bin/python`, CPython 3.12.14 with NumPy 2.5.3 |
 | Other owner/process | Mac `fire.lan` released in the published R161 handoff; no PC child process remains. |
-| Task processes | R169 recorded child cleanup. R170–R176 launched no simulation/render/encode child. |
-| Delivery state | R169 completion is in `6deb9d0`. R176 authorizes publication of the R170–R176 documentation; completion is prepared here, with actual commit/push outcome reported after delivery. |
+| Task processes | R177 launched no simulation/render/encode/FEM child; documentation commands exited. |
+| Delivery state | R170–R176 assessment delivered in `22cf3d7`; R177 STARTED delivered in `ace8311`. R177 completion is prepared for scoped commit/push; actual delivery follows in final response, with no post-push edit. |
 
 ## Current result and limits
 
@@ -225,84 +226,83 @@ agent-side POV-Ray backtraces are unavailable.
 
 ## Next task
 
-R171–R175 assessment and R176 next-step selection are complete. Next: revise
-`BOUNDARY_CONTROL_HANDOFF.md` to specify one finite, boundary-only engineering
-benchmark tied to the confirmed OpenAI paper and current numerical evidence.
+R177's specification is complete. **Implement a task-specific practical launch
+integration for the existing R021 matched-trace accuracy diagnostic, then stop
+before any physical/FEM execution.** Deliver a usable default-disabled runner
+and bounded dry-run/refusal evidence, not another general monitoring plan.
+The scientific question is unchanged: compare original P with matched A_64/A_96
+to locate the unresolved central-response discrepancy on the fixed mesh.
 
-**Recommended model / level / platform:** GPT-6 Astra / high reasoning /
-PC-WSL `daisy`, in this repository. Stay on the current model and machine.
-This step needs scientific judgment about a finite-time target, sensing and
-the meaning of a negative result. PC already owns the checkout and holds the
-relevant numerical evidence; no platform benchmark or Mac transfer is needed
-for a source-and-document review. This is not a claim that PC solves faster.
-[Official OpenAI documentation](https://developers.openai.com/api/docs/models/gpt-6-astra)
-confirms Astra's research/complex-reasoning role and high effort support;
-the task-fit recommendation is judgment, not an account/quota check.
+**Model / reasoning / platform:** GPT-6 Astra / high / PC-WSL `daisy`.
+The current session catalog includes Astra and Luna; official
+[Astra documentation](https://developers.openai.com/api/docs/models/gpt-6-astra)
+confirms high reasoning support. Retain Astra for numerical-interface and
+supervision-scope decisions. Recommend
+[Luna/medium](https://developers.openai.com/api/docs/models/gpt-5.6-luna) only
+when a later remaining fix is fully specified and mechanical; return to Astra
+on unexplained scientific behavior. No switch or remote-account check occurred.
 
-**Deliverable:** revise the existing benchmark document into one testable
-finite-time boundary-actuation/sensing proposal. Specify what to command,
-what to measure, what would count as success or a meaningful failure, and the
-one numerical accuracy prerequisite that must be addressed before running it.
-Do not create another general infrastructure plan. The checklist below bounds
-this specification step; it does not authorize the proposed experiment.
+1. Read the benchmark's [accuracy prerequisite](BOUNDARY_CONTROL_HANDOFF.md#10-one-accuracy-prerequisite-and-one-subsequent-task),
+   [R021](docs/realizability/B2_COMPATIBLE_TRACE_INTEGRATION_REVIEW.md),
+   [R033 completion](docs/realizability/B2_COMPATIBLE_TRACE_PREFLIGHT_FOLLOWUP.md),
+   [R070 repair result](docs/realizability/evidence/r070/result.json) and
+   [R103/R104 policy](docs/realizability/B2_MONITOR_PRACTICAL_SUPERVISION_POLICY.md).
+   Reuse their committed sources/evidence; do not repeat historical toy suites
+   or repair assignments. Inspect later fixture-only monitor work only for a
+   needed reusable component, not as permission to restart its full programme.
+2. Put new code in a new task-scoped directory under `tools/realizability/`
+   and its focused checks under `tests/realizability/`; preserve all archived
+   sources/evidence and production/configuration pins. Wire the repaired R070
+   evidence binding, reservation, child/checkpoint and count/refusal paths to
+   practical supervision for this one diagnostic. Keep the physical API/CLI
+   disabled. Prepare the exact later physical command and report format for
+   review; do not invoke it or silently change numerical semantics.
+3. Support a benign dry-run using saved evidence and an inert child. Check
+   success, invalid binding, prior reservation, nonzero exit, missing/partial
+   report, timeout and owned-child cleanup; exercise independent stop behavior
+   only within the applicable preserved benign suite and resource bounds.
+   Report unsupported capabilities and untested paths explicitly. No DOLFINx/
+   MPI import, JIT, physical mesh, Bessel reference, quadrature, solve or R033
+   rerun. Inventory remaining real-FEM stage-check validation from R070.
+4. Use the retained PC benign-suite ceilings: 180 s cumulative (30 setup + ten
+   12 s cases + 30 final); each case 5 active + 5 cleanup + 2 evidence seconds;
+   768 MiB whole Linux unit/no swap/32 PIDs, 512 MiB sampled workload RSS and
+   <=128 MiB native working set where used. Establish necessary containment
+   and independent process stops before any live child; refresh capacity and
+   record actual enforced/observed scopes. No extra trials, allowance reset or
+   extrapolated reliability claim. If a required safeguard is unavailable,
+   preserve the implemented path and a finite refusal; do not launch dependent
+   work. Optional native/platform features must not block unrelated code work.
+5. Share the dry-run/report interface where practical. The first later Mac
+   increment is an inert-child/report check under a separately recorded owner
+   transfer and supported local limits, not the physical diagnostic. Defer
+   platform performance comparison, broad monitor framework and recursive
+   certification. PC owns this task; no transfer is requested now.
 
-1. Propose explicit observables, physical units, finite interval, scale-range
-   measure and error criteria. Distinguish the paper, the existing Gaussian
-   reference, the kinematic movie and the future boundary-driven solution.
-   Treat 10 mm → 3 mm in 100 s as the existing reference proposal, not an
-   achieved result or a newly approved final target. Explain any proposed change.
-   Include finite-time preparation and command timing/phase in the proposed
-   response definition; a single-frequency/static test does not settle dynamic
-   reachability. Distinguish a transient peak from a useful contraction history.
-   FloWave is an analogy, not a selection of free-surface physics for this model.
-2. Specify strict boundary measurement support as the current baseline. Interior
-   CFD/PIV values may validate or visualize the result, but do not feed the
-   controller. The user's exact allowance for exterior cameras measuring the
-   interior remains unanswered; present it as an alternative requiring a choice.
-3. Include an interpretable negative-result criterion: distinguish an
-   inaccessible target direction, a sensor-blind state, demands beyond stated
-   hardware limits and unresolved numerical error. Use the existing pure-swirl
-   pressure blind direction as a scoped example, not a general impossibility
-   claim. Explain what could still succeed if the selected case fails.
-4. Connect the benchmark to the unresolved B2 accuracy comparison and existing
-   R021/R033 diagnostic, under the R103/R104 practical supervision policy.
-   Identify the smallest necessary next numerical step without changing solver
-   physics, thresholds, resource limits or granting a physical attempt. Do not
-   restart completed toy or infrastructure work from historical recommendations.
-5. Completion: one revised existing benchmark document with explicit
-   assumptions, observables, input/measurement maps, success/failure meaning
-   and a bounded implementation/check proposal. Stop before new numerical
-   workloads, controller implementation, hardware selection or movie rendering.
+Completion: concrete integration code, bounded relevant checks or explicit
+capability refusal, source/evidence bindings, consumed-attempt/process cleanup
+record, and exact remaining conditions for a separately authorized physical
+attempt. Update logs/status/handoff, scoped commit/push, stop. Do not unlock or
+launch the physical path, reset the unused q64/q96 allowance, or proceed to a
+six-input campaign. Physical limits remain 180 s / 1536 MiB; all R013/R021
+accuracy, mesh, form, trace and count requirements remain unchanged. The
+engineering benchmark's new proposed tolerances do not relax them.
 
-Acceptance for this next step: the benchmark must give a reproducible proposed
-input history and timing horizon, explicit target and measurement definitions,
-numerical-error checks, finite success/negative/inconclusive criteria, and a
-single subsequent implementation or diagnostic task. Identify any remaining
-user-level choice explicitly. Retain Astra/high for unresolved physical or
-numerical interpretation. Recommend Luna/medium only if the remaining work is
-a fully specified mechanical implementation with tests and a stopping point;
-do not switch automatically. Next prompt after this publication: **Continue**.
+Remaining user-level choices for the later engineering benchmark: finite target
+and error budgets, 300 s preparation/command limits, strict wall sensing versus
+interior optical feedback, eventual hardware/noise limits. These do not block
+preparing the unchanged B2 diagnostic. Next prompt: **Continue**.
 
-The preview remains complete in `6deb9d0`: separated frames 1/225/450 and
-30 sequence frames passed their recorded visual/render/encode checks, at
-320x180 using headless one-thread POV-Ray. The MP4 is one second at 30 fps,
-H.264/yuv420p, in `/tmp/r169-preview-EnjJq0/preview.mp4`. Preserve that local
-evidence; the user plans to watch it. Its first 30 frames precede scheduled
-marker contraction, and no physical contraction is established by the movie.
+R177 changed BOUNDARY_CONTROL_HANDOFF.md, STATUS.md, SESSION_HANDOFF.md,
+REQUEST_LOG.md and WORK_SESSIONS.md. Evidence is the specification, existing
+scientific records and primary-source review; no new physical result is claimed.
+Documentation checks cover link targets/anchors, fence balance, append-only log
+history, unique request IDs, file scope and whitespace. Final staged checks and
+actual delivery result follow publication preparation. PC retains ownership.
 
-R171–R175 changed STATUS.md, REQUEST_LOG.md and SESSION_HANDOFF.md, preserving
-R170's local work. Checks: identity/ownership/status/upstream/stashes, source
-and saved-frame review, scientific evidence review, primary-paper verification,
-documentation link/whitespace checks. R174 reviewed the FloWave primary sources
-and finite-time control analogy; R175 acknowledges the harder vortex problem.
-No new solver tests, trajectories, rendering, encoding, ffprobe, package changes
-or physical experiments ran.
-Unresolved decisions: exact finite range and tolerances, detailed allowed
-boundary sensors, and subsequent numerical method/accuracy resolution.
-Those assessment turns did not publish. R176 explicitly authorizes their
-publication together with this next-task recommendation. No workload child was
-launched. R176 also updates WORK_SESSIONS.md; final staged checks and actual
-delivery outcome follow in the publishing turn. PC retains ownership.
+The preview remains complete in `6deb9d0`. Preserve its local
+`/tmp/r169-preview-EnjJq0/preview.mp4`; the user will review it independently.
+Its first 30 frames precede scheduled marker contraction; no rerender is due.
 
 ### Note for the next Mac session
 

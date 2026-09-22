@@ -5103,3 +5103,57 @@ tracking origin/main, empty stashes; recorded PC ownership and completed prior
 lifecycle. Required clean fast-forward pull returned already up to date; HEAD
 and fetched upstream both 22cf3d7d8749ea6e4039c525c6fcce8246771a0b. No incoming
 changes or ownership conflict. Publish STARTED before substantive review.
+
+**R177 outcome/files/checks/next:** Specification complete; publication prepared.
+Revised BOUNDARY_CONTROL_HANDOFF.md around the confirmed paper and implemented
+reference: proposed 300 s boundary preparation from rest, 100 s tracking of the
+existing 10 mm → 3 mm Gaussian target, replayable six-mode histories with 10 s
+knots and a fully specified delayed-swirl baseline, explicit speed/slew budgets,
+strict 48-patch wall-pressure and actuator
+readback measurements, and independent interior validation truth. Proposed
+criteria require whole-history radius/swirl/strain agreement, resolved core,
+centering and mode limits, scale-range reporting and numerical uncertainty.
+The target spans 0.522879 radius decades / 1.045757 radius-squared decades,
+not the user's full longer-range goal. Parameters/tolerances remain proposals;
+no final hardware or optical-sensing choice was inferred.
+
+The document distinguishes inaccessible response directions, sensor-blind state
+pairs, command-budget limits, failed particular preparation histories and
+numerical inconclusiveness. Rest-Stokes pure swirl remains a scoped pressure
+blind direction, not proof of general boundary impossibility. It preserves the
+B2 failed gate and exact R021 q64/q96 diagnostic, recognizes completed R033
+prerequisites and R070 repairs, and grants no physical attempt. The new finite
+engineering tolerances do not change scientific/solver acceptance thresholds.
+
+Changed files: BOUNDARY_CONTROL_HANDOFF.md, STATUS.md, SESSION_HANDOFF.md,
+REQUEST_LOG.md and WORK_SESSIONS.md. Checks passed: identity/ownership/clean
+fast-forward synchronization; source/evidence and primary-paper review; 52
+current-document local links/anchors; fence balance; 177 unique request IDs;
+both published append-only log prefixes; all 19 R033 production/configuration
+hash pins unchanged; five-file scope; preserved benchmark Sections 3–4 and
+whitespace. The temporary link checker initially mistook a literal indexed
+formula for a link; excluding fenced/inline code fixed that checker-only false
+positive. Validation used repository Python 3.12.14; disposable evidence is
+/tmp/r177_validation.json. No numerical test, reference evaluation, FEM/JIT,
+controller, hardware selection, package change, trajectory, rendering, encoding
+or physical workload ran. No task workload child launched. Final post-append
+and staged checks follow; no unrun numerical check is claimed.
+
+Start publication ace8311 succeeded after sandbox Git-write/network refusal
+and an approved host retry. Continue authorizes the scoped completion commit
+and push. Actual delivery outcome/hash follows in the final report; no
+post-push log edit. PC/WSL daisy retains ownership, released: no.
+
+Next: Astra/high on PC/WSL daisy implements the smallest practical launch
+integration for the unchanged R021 diagnostic, using R070's repaired runner,
+saved R033 evidence and R103/R104 safeguards. Deliver a default-disabled
+physical entry, bounded benign dry-run/refusal/cleanup checks and an exact
+remaining launch checklist; stop before FEM/physical execution. Do not restart
+completed toys or generic infrastructure design. Early Mac checking is later
+limited to the shared benign interface under an explicit ownership handoff.
+Remaining user-level choices are finite engineering target/tolerances,
+preparation and command limits, interior optical feedback allowance and later
+credible hardware/noise limits; none blocks the unchanged accuracy diagnostic's
+preparation. OpenAI Docs verified Astra/high and Luna/medium support; the model
+recommendation is task judgment, no switch or quota/account verification.
+Next prompt: Continue.

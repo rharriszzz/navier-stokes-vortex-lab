@@ -1,105 +1,84 @@
 # Boundary-control research handoff
 
-Prepared 2026-09-19 against repository commit `1fbd82d`.
+Revised 2026-09-21 (America/New_York), R177, from repository `22cf3d7`.
+The original specification remains in Git history; implemented formulas and
+scientific thresholds below are retained unless explicitly labelled proposals.
 
 ## Start here
 
-**Next deliverable: a verified boundary-mode response benchmark, with an honest
-account of what its inputs and sensors can resolve.** Do not start with an
-optimizer, estimator, full contracting-core simulation, or hardware purchase.
+**Proposed benchmark: prepare a vortex from rest using the cylinder boundary,
+then track the existing 10 mm → 3 mm Gaussian reference for 100 s, while testing
+whether strictly boundary-supported measurements distinguish the required
+interior features.** This is one finite engineering question with separate
+actuation, sensing and numerical verdicts. It is not an achieved contraction,
+a final user-approved target, or authorization to run the experiment.
 
-Implement work packages B0–B3 below in order. B0 is useful without any CFD
-installation. B1–B3 produce the first actual fluid-response calculation. Return
-a short report and reproducible commands at each package boundary. B4 describes
-the next research decision; it is not part of the initial coding assignment.
+Use a proposed 300 s preparation interval followed by 100 s of tracking;
+Section 7 defines the commands and Section 9 defines success and useful failure.
+The modest range is deliberate: it is 0.523 radius decades, or 1.046 decades
+in the reference's radius-squared similarity variable, short of the user's
+longer-term “first few orders of magnitude” goal. Neither the paper nor the
+movie certifies this benchmark. A transient spike alone does not pass.
 
-Read `AGENTS.md` and the four research documents it names first. This document
-makes their next step concrete. Where older plans suggest tracking optimization
-before response experiments, follow `CONTROL_RESEARCH_ROADMAP.md`: response
-and sensing studies come first.
+**Immediate prerequisite:** resolve the B2 small-response accuracy comparison
+before deriving a response campaign from it. Section 10 preserves the existing
+R021/R033 diagnostic and gives the single next implementation task. B0 and the
+R033 prerequisites are completed work, not assignments to repeat. No new CFD,
+controller, hardware selection, physical attempt or movie belongs to R177.
+The authoritative execution scope is [the current handoff](SESSION_HANDOFF.md#next-task).
 
-The choices below are **proposed research defaults for a reversible numerical
-benchmark**, stated here for review. They are not previously approved apparatus
-specifications or demonstrated physical results. The coding agent can implement
-these defaults without inventing a different geometry, actuator mechanism,
-target, or interpretation. Flag a necessary scientific change before adopting
-it; routine implementation choices do not need another review.
+## 1. Evidence and boundaries of the claim
 
-## 1. Findings from the existing repository
+The confirmed inspiration is OpenAI's
+[*Finite time blowup for Navier–Stokes*, Theorem 1.1 and Section 2](https://cdn.openai.com/pdf/32d9f210-8b73-45e0-91bc-82a30aef8a9a/navier-stokes.pdf).
+Its construction starts from rest with smooth forcing in the volume, develops
+unbounded velocity with bounded energy, and has shrinking radial and axial
+core scales. Boundary-only engineering is an additional problem. Our Gaussian
+reference does not reproduce its oscillatory stress construction or axial
+scale law. Material axial stretching is different from growth of core height.
 
-- There is no Navier–Stokes solver, control dataset, or solver verification suite
-  here yet. `make_trajectories.py` prescribes velocities and clips escaped
-  tracers. Its displayed `CoreRadius` is a separate animation formula, not a
-  radius measured from the velocity field. Neither is a CFD initial condition
-  or validated target trajectory.
-- `tank.inc` depicts a box; `actuators.inc` depicts internal rings. An internal
-  ring of objects is not a continuous fluid-domain boundary. The new benchmark
-  must explicitly define its own physical boundary.
-- The roadmap's state `[r_c, U_theta, U_z, a_1, ...]` needs measurement definitions.
-  Core radius does not exist at rest, and an azimuthal amplitude without phase
-  loses information. A scalar positive amplitude is also unsuitable for a
-  derivative at zero amplitude.
-- The initial environment has Python 3.10.12, NumPy, SciPy, and Matplotlib.
-  DOLFINx, PETSc Python bindings, Gmsh, MPI executables, OpenFOAM, Docker, and
-  Podman were not found in the initial inspection. Do not report CFD results
-  until a solver actually runs. Keep Track A's dependencies unchanged.
-
-The external reference repository describes a periodic, manufactured-force
-surrogate, not a bounded-tank boundary-control calculation. Its README also
-distinguishes profile contraction from the axial scale and reports unresolved
-wave-packet limitations. Importing it is not necessary for the first experiment.
-If used later, pin a commit, audit its measured profiles, and specify length,
-time, velocity, and viscosity scaling together; a movie does not supply those
-scales. [nsblowup source](https://github.com/CokieMiner/nsblowup)
-
-The porous-wall study is relevant background, but reports substantial
-limitations on relating its profiles to the motivating construction. It does
-not establish that our apparatus works.
-[Duraiswami, 2026 preprint](https://arxiv.org/html/2609.17642v1)
-
-The boundary-controllability theorem concerns local steering to an admissible
-Navier–Stokes trajectory with mathematical boundary controls. It does not make
-an arbitrary manufactured-force target an unforced solution, or supply a finite
-actuator count and hardware limits.
-[Rodrigues, author preprint](https://www.ricam.oeaw.ac.at/files/reports/12/rep12-12.pdf)
-
-## 2. Decisions and their scope
-
-| Question | Default for the next calculation | Why / alternative retained |
+| Object | What it supplies | What it does not establish |
 |---|---|---|
-| Geometry | Fixed cylinder, radius R = 0.10 m, half-height H = 0.15 m | Exact azimuthal mode definitions and useful symmetry checks. A box and discrete internal hardware remain later geometries. |
-| Fluid | Incompressible Newtonian fluid, nu = 1e-6 m²/s, rho = 1000 kg/m³ | Nominal water parameters; record them as assumptions, not measured properties. |
-| First operating point | Rest, governed by unsteady Stokes equations | Valid small-signal limit and inexpensive verification. Cannot assess contraction of an established vortex. |
-| First CFD backend | DOLFINx, mixed P2 velocity / P1 pressure, Gmsh cylinder | Explicit weak form, boundary basis and sensor operators. Keep a narrow backend interface. |
-| Initial inputs | Six balanced normal/tangential modes defined below | Axisymmetric strain/swirl and both phases of m = 4. Expand only after verification. |
-| First outputs | Six signed, linear velocity features | Defined at rest; avoid an invented core radius and phase singularity. |
-| Reference | Separate, windowed Gaussian-vorticity vortex, 10 mm → 3 mm in 100 s | Explicit finite dimensional target and diagnostic fixtures; not the original mathematical construction. |
-| First response tests | Harmonic response at 0.01 Hz, then 0.1 and 1 Hz if resolved; one transient pulse | Harmonic solves avoid waiting thousands of seconds for spin-up. Transients expose finite-horizon limits. |
-| First sensing test | Finite pressure patches versus horizontal and vertical planar PIV | Test measurement ambiguities before choosing an observer. |
+| Paper | Mathematical motivation and finite-scale comparisons | A finite boundary-actuated/sensed tank |
+| [Gaussian reference](realizability/reference.py) | Divergence-free SI target, core/swirl/strain formulas | An unforced bounded-domain solution or attainable trajectory |
+| [Kinematic movie](make_trajectories.py) | Prescribed tracer motion and working rendering pipeline | CFD, measured core contraction or wall-generated motion |
+| B1/B2 Stokes backends | Verification tools and saved pilot evidence | Accurate B2 physical response, nonlinear preparation or control |
+| Future benchmark solution | Must solve unforced-interior Navier–Stokes with recorded boundary histories | No solution or feasibility verdict exists yet |
 
-The cylinder contains about 9.42 liters. Interpret its normal-velocity boundary
-as an ideal distributed porous liner with balanced recirculation plumbing. Its
-tangential boundary is an ideal distribution of moving surface elements. These
-are two different hardware mechanisms; the combined Dirichlet boundary is an
-ideal upper-level actuator model, not a finished liner design. A perforated
-moving liner or interleaved pumping/shear patches would need separate design.
-Endcaps are stationary and impermeable. No free surface, buoyancy dynamics,
-or volumetric actuation is included.
+B0 implements configuration, six boundary modes, features, sensors and matrix
+analysis. B1's Taylor–Hood strong-divergence check failed. B2's BDM2/DG1
+formulation supplies scoped stability and arithmetic evidence, but the
+[R020 original-command response](docs/realizability/B2_MATCHED_TRACE_COMPATIBILITY_RESULT.md)
+has amplitude ratio **28,963.4968** and phase error **74.1175 degrees** against
+its independent reference. Matched-trace solves were not reached. The
+[R033 prerequisites](docs/realizability/B2_COMPATIBLE_TRACE_PREFLIGHT_FOLLOWUP.md)
+passed without a physical solve. `campaign_ready=false` remains unchanged.
 
-OpenFOAM remains an alternative for later finite-port engineering geometries;
-spectral elements remain an alternative if resolution/cost demands it. A custom
-NumPy projection solver would create substantial verification work. Do not
-implement three backends or choose a solver solely to avoid an installation.
+The movie's internal actuator rings are not the tank boundary; its separate
+CoreRadius formula is not a fluid measurement. This benchmark uses the actual
+cylindrical wall below. The nominal water properties are assumptions, not
+measurements. See [STATUS.md](STATUS.md) for the broader evidence inventory.
 
-Use the versioned DOLFINx 0.10.0 examples as the initial reproducible API target;
-this is a deliberate documented version, not a claim that it is the latest.
-Pin the compatible environment actually installed, including PETSc scalar type,
-MPI, Basix, UFL, FFCx, and Gmsh. A different version is acceptable if documented
-and verified against its matching examples. The official download page is the
-installation starting point; do not make unreviewed system-wide changes.
-[Installation](https://fenicsproject.org/download/),
-[mixed Stokes example](https://docs.fenicsproject.org/dolfinx/v0.10.0/python/demos/demo_stokes.html),
-[Gmsh integration](https://docs.fenicsproject.org/dolfinx/v0.10.0/python/demos/demo_gmsh.html)
+## 2. Proposed decisions and retained assumptions
+
+| Item | Definition for this proposal | Limitation / retained alternative |
+|---|---|---|
+| Domain | Fixed cylinder R = 0.10 m, half-height H = 0.15 m | About 9.42 litres; box and discrete hardware deferred |
+| Fluid | nu = 1e-6 m²/s, rho = 1000 kg/m³ | Incompressible Newtonian fluid, nominal water |
+| Boundary | Six side-wall velocity modes in Section 4; zero velocity on caps | Ideal balanced porous recirculation plus moving tangential elements |
+| Interior | No imposed volume actuation | Hydrostatic gravity may be absorbed in pressure; no free surface/buoyancy dynamics |
+| Numerical prerequisite | Existing B2 harmonic Stokes problem about rest | Same method/mesh/thresholds; no new solver selected |
+| Finite engineering model | Nonlinear Navier–Stokes, initial velocity zero at t = 0 | Requires later nonlinear verification; Stokes cannot be rescaled to this regime |
+| Target | Existing Gaussian reference, local time s = t - 300 s, 0 <= s <= 100 s | Proposed initial milestone, not the paper's witness or approved final range |
+| Commands | Six time histories, fixed 10 s knots on 0...400 s, defined in Section 7 | Finite command family; failure does not exclude other timing/bases |
+| Measurements | 48 finite wall-pressure patches and boundary actuator readbacks | Pressure-only fluid sensing baseline; interior PIV is validation only |
+| Alternative sensing | Interior PIV from exterior cameras, or added wall shear/torque | Requires an explicit later choice; neither is silently available |
+
+The ideal combined Dirichlet wall would require interleaved pumping/shear
+patches or another separately designed liner. No actuator product, finite array,
+force/power capability or experimentally realistic pressure/noise specification
+is selected. Proposed speed/noise budgets below are transparent test assumptions.
+A pump interpretation does not confer unlimited diaphragm stroke.
 
 ## 3. Physics questions resolved before coding
 
@@ -310,9 +289,8 @@ Values independently calculated while preparing this handoff:
 The passive-radius estimate alone would give initial a = 0.00455/s, missing
 the viscous contribution. The target has `U_peak*r_c/nu = 100`; a rest Stokes
 calculation cannot be extrapolated to it. The time scale 100 s and circulation
-are chosen benchmarks, not optimized experimental settings. Repeat the target
-arithmetic for T = 30 and 300 s to expose the time/strain tradeoff; no CFD is
-needed for that sensitivity table.
+are chosen benchmarks, not optimized experimental settings. B0 already contains target-time sensitivity diagnostics. R177 retains T = 100 s;
+no new sensitivity sweep is assigned.
 
 ### 5.2 Linear features for the first response calculation
 
@@ -369,7 +347,14 @@ not an unvalidated wave packet grafted into the reference field.
 
 ### 6.1 Solve the equations being claimed
 
-For B1–B3 solve, with pi = p/rho,
+The following verification obligations are retained, not an instruction to
+restart B1. B2 uses its existing H(div) weak boundary formulation and pinned
+penalty; the R021/R013 contract controls its immediate diagnostic. The future
+finite-amplitude benchmark adds `(u · grad)u` to the left side of the transient
+momentum equation and needs separate nonlinear verification.
+
+For the existing small-signal prerequisite and later linear response screens,
+solve, with pi = p/rho,
 
 ```text
 partial_t u = -grad(pi) + nu*laplacian(u),   div(u) = 0
@@ -395,7 +380,7 @@ All velocity boundaries are Dirichlet. Pressure has a constant nullspace: impose
 a zero spatial mean or a proper pressure-only nullspace and solve the compatible
 system. For a real/imaginary formulation there are two pressure gauges. Do not
 make the entire mixed vector constant when constructing a nullspace. Convert
-pi to Pa for sensor outputs. The official mixed example and
+pi to Pa for sensor outputs. The [official mixed example](https://docs.fenicsproject.org/dolfinx/v0.10.0/python/demos/demo_stokes.html) and
 [PETSc nullspace documentation](https://petsc.org/release/manualpages/Mat/MatNullSpaceCreate/)
 are implementation references.
 
@@ -449,296 +434,369 @@ Resolve dominant gains to 5% and phases to 5 degrees across refinement. Phase
 is meaningless below the measured numerical error floor. Weak singular values
 need an absolute matrix-error comparison, not just the dominant-gain check.
 
-## 7. Response experiments and defensible interpretation
+## 7. Finite command histories and response maps
 
-### 7.1 Pilot dataset
+### 7.1 One clock, preparation and tracking
 
-Use physical probe amplitude `U_probe = 1e-7 m/s`; `U_probe*R/nu = 0.01`.
-This sets a small-amplitude rest linearization. Solve numerically in sensible
-scaled units and convert outputs back to SI, rather than relying on tiny
-unscaled residuals. Large-amplitude hardware commands are not validated by
-rescaling a Stokes solution.
+Use laboratory time t in seconds. Start from rest at t = 0; prepare during
+0...300 s; track the Section 5 reference during 300...400 s. The 300 s allowance
+is a proposed finite budget, not a predicted spin-up time. It is much shorter
+than the 8100 s diffusion estimate in Section 3.2: preparation failure would
+therefore be informative but specific to this horizon and transport mechanism.
+No initialized reference vortex may be substituted for boundary preparation.
+Reference time is s = t - 300 s; Section 5's t is s when evaluating that target.
 
-Run all six columns at 0.01 Hz first. Add 0.1 Hz, then 1 Hz only after the
-corresponding wall layers and solver cost are checked. Save complex gain and
-phase for velocity features and sensor channels. An optional f = 0 Stokes solve
-is an infinite-settling-time comparison, not a finite-time achievable gain.
-Harmonic response likewise assumes periodic steady state.
-
-For `N_02c` and `T_00c`, also start from rest and prescribe
-`A(t) = U_probe*sin(pi*t/10 s)^2` on 0...10 s and zero afterward. Integrate to
-100 s, initially dt = 0.1 s, with backward Euler; halve dt and compare features.
-Use the same mixed spatial formulation. This finite pulse is not a normalized
-Dirac impulse. Save the actual input, its integral, displacement interpretation,
-and response. If the core has barely responded, report that and the diffusion
-estimate; an optional longer run requires a cost estimate, not an automatic
-10,000-second simulation.
-
-### 7.2 Scaling and singular values
-
-Let G(omega) map physical mode velocities to the six physical features. Save G
-before normalization. Set L = R and output scales
+Define six coefficient rows c[j,k] in m/s, ordered as Section 4, at
+`t_k = 10*k s`, k = 0,...,40. Set c[j,0] = c[j,40] = 0. Between knots use
 
 ```text
-D_x = diag(U_probe/L, U_probe/L, U_probe, U_probe, U_probe, U_probe)
-G_scaled = inverse(D_x) * G * U_probe * inverse_sqrt(M).
+v = (t-t_k)/(10 s),   S(v) = 3*v² - 2*v³
+A_j(t) = (1-S(v))*c[j,k] + S(v)*c[j,k+1]
+u_side(x,t) = sum_j A_j(t)*b_j(x);  u_caps = 0
 ```
 
-Here M is the physical boundary Gram matrix. This compares equal boundary RMS
-velocity; it does not equate hardware power or equal actuator stroke. Preserve
-the transform to actual mode coefficients. Later hardware-constrained studies
-must use their own documented effort and output-error budgets.
+Set commands zero outside 0...400 s. This C1 interpolation fixes timing and
+avoids step accelerations. The 234 free coefficients (six times 39) define the
+entire proposed command family. A saved coefficient table, mode normalization,
+clock origin and interpolation rule are sufficient to replay a candidate.
+No optimized coefficient table exists yet. Continue does not launch a search.
 
-Compare normal-only, tangential-only, and combined matrices. Report all
-singular values, left/right singular vectors, null output directions, and
-singular values before and after scaling. Raw mixed-unit singular values are
-stored for reproducibility only; they have no unit-independent interpretation.
-For a rectangular or rank-deficient
-matrix, state how many of the six output directions are absent. Do not report
-a finite condition number on its nonzero subspace as full six-state coverage.
+For a fully specified baseline candidate, set `c[N_02c,k] = 0.010 m/s` for
+k = 1,...,39 and `c[T_00c,k] = 0.010 m/s` for k = 2,...,39, all other entries
+zero. Normal pumping ramps up over 0...10 s, swirl over 10...20 s, and both
+ramp down over 390...400 s. This satisfies the proposed command bounds and
+makes the initial relative timing reproducible. It is an untested baseline,
+not a prediction that constant driving will follow the contracting target.
+Later selected histories must publish their full coefficient tables before
+validation; failure of this single candidate cannot reject the whole family.
 
-Estimate matrix uncertainty from mesh/time-step/quadrature refinement after
-using identical coordinates and normalization. Mark a singular value reliable
-only if it exceeds, conservatively, ten times the estimated spectral-norm
-matrix error. Separately show sensor/noise resolution. This factor is a
-reporting convention, not a physical controllability threshold.
+A reproducible diagnostic input, rather than an invented successful controller,
+is one nonzero coefficient `c[j,k] = U_probe = 1e-7 m/s`, all others zero. Its
+20 s pulse rises for 10 s and falls for 10 s, with integral `10 s * U_probe`.
+For a bounded first temporal screen use j = N_02c or T_00c and k = 1,5,9,
+all starting from rest and observed at the same terminal t = 100 s. Six columns
+then distinguish early/middle/late strain/swirl response. These are proposed
+future solves, subject to their own cost/accuracy admission, not authorized now.
+They extend the old single 10 s pulse to independent command times; they do not
+replace or consume the frozen R021 harmonic diagnostic.
 
-Call these **frequency-dependent input-to-feature gains**. They are not a
-controllability Gramian. Stacking output times for one pulse measures response
-signatures, not arbitrary finite-horizon controllability. For a later
-finite-horizon reachability calculation, columns must correspond to independent
-input time functions and outputs at the same terminal time; normalize by their
-space-time input Gram matrix. Report the horizon and zero initial perturbation.
+For later six-mode analysis define each column by one independent (j,k)
+coefficient and keep outputs at common times. Positive/negative coefficients
+and both m=4 spatial quadratures allow signed combinations and relative timing.
+For `C*cos(4*theta)+S*sin(4*theta)`, report phase `atan2(S,C)` with the explicit
+convention `amplitude*cos(4*theta-phase)`; phase is invalid at zero amplitude.
+Temporal phase is encoded by the complete histories, not an assumed wave delay.
+The 10 s knots restrict time structure; no claim of a strict Fourier bandlimit
+is made. A failed coarse time basis does not exclude faster or longer commands.
+The FloWave analogy motivates timing only, not free-surface physics here.
 
-Do not fit `dot(x_lin) = A*x_lin+B*u` just because x_lin is short. These features
-need not be a closed dynamical state. If a reduced dynamical model is introduced,
-validate its predictions on held-out input histories and retain unresolved
-state/memory effects. A weak response about rest is a result about rest, the
-chosen boundary, frequency, and outputs only.
+### 7.2 Command budgets and finite-time maps
 
-## 8. Sensor experiment: distinguish visibility from observability
-
-Save sensor operators now, before any feedback code:
-
-- Pressure: averages over finite side-wall patches centered at z = -0.08,0,0.08 m,
-  with 16 evenly spaced angles per ring; initial patch extent 5 mm in arc length
-  and 5 mm in height. Compute differences to a declared reference patch and
-  account for shared-reference noise covariance. This 48-patch layout is an
-  ideal comparison, not a commitment to buy 48 sensors. Compare decimated
-  8-per-ring and 4-per-ring layouts and document the aliasing.
-- Horizontal 2C PIV: u_x,u_y on z = 0, field of view x,y in [-0.03,0.03] m.
-- Vertical 2C PIV: u_x,u_z on y = 0, field of view x,z in [-0.03,0.03] m.
-- Start with 1 mm spatial averaging cells and 0.5 mm sheet thickness. Make
-  masks explicit. These are proposed measurement resolutions, not instrument
-  specifications; 3 mm core work will need refinement/error checks.
-- Compare pressure only, each sheet alone, and both sheets. Simultaneous sheets
-  require synchronized optical hardware; sequential acquisition has separate
-  timestamps and cannot be treated as simultaneous in a transient experiment.
-
-Use provisional sensitivity sweeps, not fabricated sensor specifications:
-pressure standard deviation 0.01, 0.1, 1 Pa; velocity standard deviation 0.0001,
-0.0005, 0.001 m/s. Use 50 Hz PIV with 40 ms latency and 200 Hz pressure with
-5 ms latency as explicitly hypothetical timing cases. Propagate averaging,
-shared-reference covariance, and temporal sampling. Report when the physical
-U_probe is far below these noise levels; conditioning alone is not SNR.
-
-Input-to-sensor transfer functions are not state observability. A driven
-pressure signal may simply reveal the known command. Do not regress sensors
-against six features and assume a unique mapping `y = H*x_lin` exists.
-
-For B3, construct a small declared family of divergence-free, homogeneous-wall
-initial perturbations using curls of smooth potentials, then evolve with zero
-boundary perturbation. Include independent radial/axial shapes with identical
-or similar x_lin, not only states reached by the six input columns. A concrete
-first family is `curl(A)` on a unit cube mapped inside `|x|,|y| < 0.03 m`,
-`|z| < 0.05 m`: use compact C2 bumps and each Cartesian direction for A, with
-constant, x, y, z polynomial factors. Normalize their velocity fields by
-kinetic-energy inner product and remove numerical dependencies. Also include
-an explicitly axisymmetric compact pure-swirl perturbation for the pressure
-blind-direction test. Record all shapes; the conclusions apply to this family.
-Project initial fields into the discretely divergence-free, homogeneous-wall
-velocity space and report projection error; interpolation alone need not
-preserve discrete incompressibility.
-
-Let columns of Q be normalized desired-feature signatures of these states at
-t = 0, and columns of P be their noise-whitened sensor histories over a stated
-observation horizon, initially 10 s. With identical known inputs, target
-features are identifiable on this family only if `ker(P) is a subset of
-ker(Q)`. Compute Q acting on P's numerical nullspace, and quantify near-null
-directions relative to noise and discretization error. Validate on held-out
-linear combinations. This asks whether sensor histories distinguish the
-features of the initial state; an online estimator of the evolving state is
-a separate later task. Do not claim full-flow observability from a finite test
-family. A positive result warrants a richer family; a null direction is a
-useful counterexample.
-
-## 9. Coding work packages and acceptance criteria
-
-Keep the first change set small enough to review. Suggested organization:
+For the finite-amplitude proposal require at every instant
 
 ```text
-realizability/
-  __init__.py
-  config.py                 # SI units, validation, canonical mode ordering
-  boundary_modes.py         # analytic basis, normalization, flux and Gram matrix
-  reference.py              # independent divergence-free target fixture
-  observables.py            # quadrature, signed features, invalid-core handling
-  sensors.py                # masks, averaging, reference-pressure operator
-  response.py               # normalization, error-aware SVD, nullspace checks
-  cli.py                    # preflight / verify / response / sensors subcommands
-  backends/fenicsx_stokes.py # loaded only for PDE work
-configs/realizability/      # small versioned JSON configuration files
-tests/realizability/        # NumPy tests separated from optional solver tests
-docs/realizability/         # setup instructions and compact scientific reports
-results/realizability/      # ignored generated arrays, meshes and field files
+sum_j |A_j(t)| <= 0.020 m/s
+sum_j |dA_j/dt| <= 0.005 m/s².
 ```
 
-Use Python/NumPy/standard library for B0; isolate optional CFD dependencies.
-SciPy and Matplotlib can support later analysis/plots in a separate environment.
-Do not modify `make_trajectories.py`, the renderer, or the movie scripts for
-these packages. Do not build an elaborate plugin framework, dashboard, or
-generic experiment service.
+Peak-normalized spatial modes make these conservative bounds on wall speed
+and its time derivative. Check the interpolants, not only sampled commands:
+on an interval the derivative bound is
+`1.5*sum_j |c[j,k+1]-c[j,k]|/(10 s)`. The coefficient bound is satisfied if it
+holds at both endpoints. These are proposed computational limits, not verified
+hardware ratings; the small-signal probe uses a different, much smaller scale.
 
-### B0 — Pure-Python scientific contract and preflight
+Report actual peak/RMS wall speed, instantaneous flux, inbound recirculation
+`Q_in = integral_side max(-u_side·n,0) dS` in m³/s, its time integral in m³,
+and cumulative local displacement `integral u_side dt` in m. The latter is a
+stroke demand only under an explicitly valid moving-wall interpretation.
+Report boundary pressure/traction and work if resolved. Pump head, force,
+efficiency and power ratings are **not assessed**, so no complete hardware
+feasibility pass is possible from the velocity budgets alone.
 
-Implement configuration, boundary modes, target evaluator, quadrature and
-features, SVD normalization, and a small preflight report. Add the new results
-directory to `.gitignore`. Use fixed seeds for noisy fixtures; exact quadrature
-and analytic fixtures should be deterministic without randomness.
+For rest Stokes with zero initial perturbation, compute the causal map
 
-Required independent checks:
-
-- Axial integrals above; reject N_00c; peak normalization and positive Gram matrix.
-- Discrete azimuthal design-matrix ranks for 8,12,16 samples and M = 6 are
-  respectively 8,12,13. Both m = 4 quadratures fail with eight equal samples.
-- Finite-difference divergence of the target decreases under refinement,
-  including transition regions; exact boundary velocity vanishes; all values
-  are finite on-axis. Compare analytic Cartesian axis limits independently.
-- Sampled swirl peaks recover 10 mm, 7.382 mm, 3 mm and the table's velocities
-  under radial refinement; rest/multiple/edge peaks return invalid reasons.
-- a_r,a_z recover known strain. Fourier coefficients recover signed cosine and
-  sine fixtures and the stated angular/time correlation factors.
-- Changing units together with the metric leaves scaled singular values
-  unchanged. Known rank-deficient matrices report missing output directions.
-- A constructed measurement null direction with nonzero Q signature fails
-  identifiability; a null direction also in ker(Q) does not.
-
-Generate a concise preflight table including viscous lengths, probe Reynolds
-number, reference parameter sensitivity, and ideal ring aliasing. This is a
-complete useful deliverable even before CFD dependencies are available.
-
-### B1 — Verified solver, no campaign yet
-
-Install/pin a separate environment using the platform's approval rules.
-Implement the verification cases in Section 6, pressure gauge, cylinder mesh
-tags, actual boundary-flux check, harmonic and transient solve. Record setup
-commands and successful solver versions. Run one normal and one tangential
-0.01 Hz pilot before generalizing. If installation is blocked, report the exact
-blocker and completed B0 work; do not replace PDE outputs with synthetic gains.
-
-### B2 — Six-input boundary-response report
-
-Run the pilot and convergence checks; expand frequencies only when affordable
-and resolved. Compare all three actuator subsets. Save velocity cross sections,
-gain/phase plots, scaled spectra with error floors, input budgets, and the two
-finite-pulse histories. Include pressure/PIV transfer channels for reuse.
-
-The report must answer: which features responded; which were symmetry-forbidden
-or unresolved; whether tangential inputs added independent directions; and how
-gain/phase depended on frequency. A converged negative result completes the
-package. It is not a reason to tune definitions until a positive result appears.
-
-### B3 — Measurement visibility and limited observability report
-
-Apply finite sensor footprints/noise/timing; compare layouts. Run the independent
-initial-state family and the Q/P test. Demonstrate the pure-swirl pressure blind
-direction and the value of horizontal PIV. Report the tested state family and
-horizon, ambiguous directions, SNR, and missing velocity components. Do not
-implement a controller or estimator in this package.
-
-Suggested interface, to implement rather than assume already exists:
-
-```bash
-python3 -m unittest discover -s tests/realizability -p 'test_*.py'
-python3 -m realizability.cli preflight --config configs/realizability/pilot.json
-python3 -m realizability.cli verify --config configs/realizability/pilot.json
-python3 -m realizability.cli response --config configs/realizability/pilot.json
-python3 -m realizability.cli sensors --config configs/realizability/pilot.json
+```text
+delta_x_i(t) = sum_j integral_0^t K_ij(t-s)*A_j(s) ds.
 ```
 
-Separate NumPy-only and optional CFD tests so missing solver dependencies are
-clearly reported, not counted as successful PDE validation. Before a campaign,
-time one solve and record degrees of freedom, memory, and estimated total cost.
-Do not automatically launch all 77 modes or high-frequency fine meshes.
+K must come from a verified solver/response dataset. A single harmonic gain at
+0.01 Hz does not determine K. A terminal matrix has all columns evaluated at
+the same time. A trajectory matrix stacks the same common output times for
+all independent input histories; one pulse sampled at many times does not
+supply independent controls. For a moving nonlinear base use a two-time
+linearized kernel K(t,s), with both convection derivatives, or the verified
+nonlinear map directly. Do not assume the six features form a closed ODE.
 
-Every generated run must record: schema version; repository commit and dirty
-state/source hashes; configuration; solver/dependency versions and scalar type;
-geometry/mesh hash and boundary tags; nu/rho; initial and boundary conditions;
-mode order/normalizations/Gram matrix; forcing status; frequencies or time step
-and horizon; sensor masks/units/noise/timing; solver tolerances; convergence
-errors; raw and scaled matrices; singular values and error floors; runtime and
-memory. Store compact JSON plus CSV/NPZ using relative paths. JSON should use
-null plus validity flags for invalid features, not nonstandard NaN tokens.
-Retain small reports/configs in Git, not large generated fields.
+Save SI maps first. Retain the spatial Gram matrix M from Section 4 and the
+space-time input Gram matrix
+`W[(j,k),(l,m)] = M[j,l]*integral phi_k(t)*phi_m(t) dt`, where phi is the nodal
+interpolation basis above. Normalize outputs using declared error allowances
+and inputs using this effort metric; save the inverse transformations. This
+measures boundary velocity effort, not power. Compare normal-only, tangential-
+only and combined allowed columns at identical horizons. Keep singular values
+reliable only above ten times the estimated normalized matrix error, as in the
+original contract; a small unresolved value is not a proven zero.
 
-For inputs also report actual peak and RMS boundary speed, normal volume flow
-`Q_in = integral max(-u_n,0) dS`, cumulative stroke where relevant, acceleration,
-and frequency. Report ideal boundary traction/work if computed, with conventions.
-Pressure demand, pump efficiency, force, and power limits not modeled must say
-“not assessed,” not zero or “within hardware limits.”
+Fit response models on declared histories and validate them on held-out
+combinations/timing. For nonlinear preparation, a linear predictor's success
+needs verification in the full equations; its failure is local evidence only.
+Do not prolong preparation or alter the basis after a failure without recording
+a new problem. Track errors over the whole 100 s, rather than selecting the
+best instant or shifting the time origin to a favorable peak.
 
-## 10. B4: what follows, and what still needs scientific judgment
+## 8. Strict boundary measurement and independent truth
 
-After B0–B3, the next substantial calculation should introduce convection and
-a **boundary-generated** base vortex, not a controller. Reuse the mixed backend
-for incompressible Navier–Stokes only after nonlinear verification. Ramp the
-balanced axisymmetric normal input and tangential input from rest, measure
-the resulting core, and test preparation time, saturation, and stability.
-There may be no useful localized core for this boundary geometry; that is a
-result requiring a design review.
+### 8.1 Allowed measurement operator
 
-A separately labeled initialized-vortex release experiment is useful to study
-maintenance over a short interval, but it does not demonstrate that the
-actuators can create the initial vortex. Likewise, linearizing around the
-manufactured reference does not remove the nonzero base momentum residual.
+Use 48 wall patches with centres `(theta,z) = (2*pi*l/16, z_h)`, l = 0,...,15,
+`z_h = -0.08, 0, 0.08 m`. Each spans 5 mm of side-wall arc and 5 mm in height.
+Patch support is on r = R, never in the volume. Let
 
-For an actual base trajectory u0, the perturbation equation must include both
-`(u0 · grad)delta_u` and `(delta_u · grad)u0`. Recompute boundary gains and sensor
-signatures about that trajectory, including nonstationarity if appreciable.
-Use symmetric perturbations at several amplitudes to distinguish a local
-derivative from nonlinear effects. Then assess finite-horizon feature tracking,
-finite actuator footprints, amplitude/stroke/flow/bandwidth limits, and robust
-sensing before feedback.
+```text
+p_bar[h,l](t) = area_average_patch(p(x,t))   # Pa, p = rho*pi
+reference patch = (h=0,l=0), z = -0.08 m, theta = 0
+y_p[h,l](t) = p_bar[h,l](t) - p_bar[0,0](t)  # other 47 patches
+```
 
-Bring back these specific decisions with data, rather than choosing silently:
+Use a proposed sample period 0.005 s (200 Hz), 5 ms availability latency,
+and independent pre-difference Gaussian pressure noise sigma_p = 0.1 Pa per
+patch/sample. The 47 difference channels have covariance
+`sigma_p²*(I + 1*1^T)`; they are not independent. Time independence is a declared
+ideal noise model, not an instrument fact. Retain 0.01 and 1 Pa only as later
+sensitivity alternatives, not extra runs in this task. Hydrostatic offsets
+must use the same subtraction/calibration in truth and observations.
 
-1. Does the side-wall return geometry form useful axial strain and localized
-   swirl, or are endcap ports/a different recirculation path required?
-2. Is the relevant failure diffusion from rest, inadequate transport in a
-   developed base, finite actuator effort, sensor ambiguity, or numerical error?
-3. Which measurable features and contraction interval remain meaningful for the
-   resulting vortex? Does its swirl profile even have a unique core radius?
-4. What measured or vendor-supported actuator limits and sensor errors replace
-   the hypothetical budgets? Which simultaneous PIV arrangement is feasible?
-5. Is a different solver/discretization justified by measured cost or accuracy?
+Permitted actuator readbacks are the six realized boundary-mode velocity
+coefficients, in m/s, at the same timing, provisionally sigma_A = 1e-5 m/s
+independent noise per coefficient/sample. A future instrument would need
+encoders and flow measurement/calibration to infer these coefficients. In an
+ideal Dirichlet model they merely report known commands and add no information
+about an unknown interior perturbation. Motor current or torque is not silently
+included: its fluid-dependent measurement map is a separate proposed extension.
 
-The near-term goal is to replace these unknowns with reproducible evidence.
-A controller becomes justified only after the available boundary inputs and
-measurements have demonstrated useful influence and information around a
-physically prepared flow.
+Only the available history of these channels, commands, clock and fixed model
+parameters may enter a later estimator/controller. Never give it a CFD/PIV
+core radius, full velocity, true centre, pressure gauge, hidden perturbation
+coefficient or future sensor sample. Exact initialization/model prediction
+alone is not proof of sensing. All sensing claims must include unknown states.
 
-## 11. What was checked when preparing this document
+Interior CFD/PIV fields are **validation truth only**, used offline to compute
+Section 5 features and the Section 9 errors. Keep truth, sensor and estimated
+state outputs separate. External cameras observing interior particles still
+have interior measurement support. Allowing that feedback requires the user's
+explicit choice; strict boundary support remains the baseline. Boundary shear
+or torque might help while preserving boundary support, but needs its own
+hardware/noise/operator definition before selection.
 
-The handoff's scalar target values, diffusion lengths, axial flux integrals,
-and 8/12/16-sample Fourier ranks were independently evaluated with NumPy.
-Sampled swirl-profile maxima reproduced the three tabulated radii to within
-0.00025 mm. The proposed reference was finite on-axis and exactly zero at the
-tested cylinder-boundary points. A centered finite-difference divergence check
-at 2,000 fixed-seed points gave RMS errors approximately 2.12e-6, 5.30e-7,
-1.33e-7 /s at spacings 0.1, 0.05, 0.025 mm, respectively.
+### 8.2 What the sensing test must distinguish
 
-These are arithmetic and reference-formula checks, not CFD validation. No
-boundary-response gains, reachability results, sensor performance, or hardware
-feasibility have been computed. Markdown links, code-fence balance, and
-whitespace were checked. The visualization code and generated outputs were
-not changed.
+Input-to-pressure transfer is not state observability. Test unknown,
+divergence-free, homogeneous-wall initial perturbations under the **same known
+commands**, including states not produced by the six actuator columns.
+Retain the finite family of curls of compact C2 potentials inside
+`|x|,|y| < 0.03 m`, `|z| < 0.05 m`: each Cartesian potential direction times
+1,x,y,z, plus a compact axisymmetric pure-swirl field. Save exact shapes and
+kinetic-energy normalization; project into the discretely divergence-free
+space and report projection error. No family has been run for this proposal.
+
+At rest first use x_lin, not an invented core radius. Over a common 10 s
+observation interval, let P map initial-family coefficients to noise-whitened
+boundary sensor histories and Q map them to the normalized desired initial
+features. Exact identifiability requires `ker(P) subset ker(Q)`. Show Q on the
+nullspace and compare near-null signatures with numerical error and noise.
+State the finite family/horizon; test held-out combinations. A finite-family
+pass is not full-flow observability or an implemented observer.
+
+In particular, an axisymmetric pure-swirl perturbation about rest has constant
+pressure in linear Stokes while its Omega changes. Identical commands produce
+identical readbacks. It therefore provides an exact pressure/readback blind
+state for this model. No better pressure sampling or command timing can repair
+that exact null direction in the rest linearization. Boundary shear sensing or
+a developed nonlinear base could change the result; neither is assumed here.
+
+Around a future boundary-prepared vortex, repeat the finite-family test using
+its actual evolving base and the available histories; the rest null result
+cannot be transplanted unchanged. For the engineering target, desired Q must
+include core, signed peak swirl and strain wherever their derivatives exist.
+A valid sensing pass needs uncertainty in those features below Section 9's
+budgets under the stated noise/latency, with held-out state errors reported.
+Do not build a controller merely because P has a numerically nonzero rank.
+
+## 9. Target, errors and interpretable outcomes
+
+### 9.1 Proposed finite acceptance criteria
+
+Keep the existing Section 5 reference and circulation. For s = 0...100 s,
+
+```text
+r_star(s) = sqrt(1e-4 - 9.1e-7*s) m   # s supplied in seconds
+U_star(s) = (1e-4 m²/s)/r_star(s), positive swirl
+strain_star(s) = Section 5 a(s)       # s^-1; includes viscous spreading
+x_required = [r_c, U_peak, a_r, a_z]
+```
+
+Use the unique resolved swirl peak and fixed-plane integrals of Section 5,
+not a fitted reference imposed as truth. Report centre displacement separately;
+require <= 1 mm throughout tracking, so recentering cannot hide a displaced
+core. Keep fixed-origin Fourier diagnostics. Initially target all four m=4
+coefficients at zero; require each absolute value <= 0.001 m/s. Report their
+phases when resolved and R_rtheta in m²/s², but do not claim reproduction of
+the paper's perturbation-stress mechanism from this axisymmetric milestone.
+
+For each required nonzero feature define
+`e_i(s) = (x_i(s)-x_star_i(s))/|x_star_i(s)|`. Proposed acceptance is RMS over
+100 s <= 10% and maximum absolute error <= 20%, with both endpoints <= 10%.
+Require a valid core and positive swirl/strain throughout; a missing or
+unresolved peak fails the measurement gate, not a zero-radius success.
+Evaluate at all retained solver times, initially output spacing <= 0.1 s,
+and refine temporal sampling/integration to bound missed peaks. These new
+engineering tolerances do not alter the existing B2 <5%/<5-degree gate.
+
+Compute observed scale range independently of prescribed TauRatio:
+
+```text
+D_r = log10(r_c(300 s)/r_c(400 s))
+D_r2 = 2*D_r
+reference: D_r = log10(10/3) = 0.522879; D_r2 = 1.045757
+```
+
+D_r2 describes the observed radius-squared range; interpret it as similarity-
+time range only to the extent the trajectory matches r_star(s)². Require a
+conservative lower bound D_r >= 0.48 (approximately threefold contraction), in addition to
+the full-history error checks. This blocks a marginal endpoint-only claim.
+Report the smaller achieved range if this fails, without relabelling it as
+“two decades.” A 10 mm → 1 mm target would span two radius-squared decades
+but remains a later proposed problem, not an automatic extension.
+
+Use identical normalizations for estimated-feature errors against independent
+truth. Report error histories and uncertainty, including startup/latency; do
+not hide transients in an average. A joint simulation success needs boundary-
+only estimation within these budgets as well as actual flow tracking and
+command compliance. Open-loop tracking without sensing can be a partial success,
+but does not fulfill the boundary-only actuation-and-sensing goal. Feedback
+implementation, nonlinear robustness and real-apparatus claims are later stages.
+
+### 9.2 Numerical uncertainty is a gate
+
+Before drawing physical conclusions require the applicable independent
+reference checks, at least two resolved meshes/time steps and independent
+feature quadrature comparisons; refine again if the trend is unclear. Treat
+these differences as estimated uncertainty, not a rigorous bound by themselves.
+For the finite benchmark reserve at most 2% of each nonzero target feature for
+the combined numerical/measurement-extraction error, <= 0.2 mm for centre,
+and <= 0.0002 m/s for each m=4 coefficient. Include all identified components
+rather than assigning that budget separately to each. Radius sampling starts
+at <= r_c/10 and must be refined. These are future engineering budgets, not
+permission to refine the once-only fixed-mesh R021 diagnostic.
+
+A pass requires errors plus their uncertainty to meet every limit. A negative
+threshold claim requires errors minus uncertainty to exceed the limit. An
+overlap is inconclusive. For D_r use the adverse endpoint uncertainties;
+report an uncertainty interval as well as the nominal value. Use response-map
+error and sensor noise separately when interpreting weak directions.
+Missing temporal, spatial, geometry or operator error estimates cannot be
+replaced by small linear residuals. The current B2 evidence does not pass.
+
+### 9.3 What success, failure and inconclusiveness mean
+
+| Outcome | Required evidence | Scope of conclusion and what may still work |
+|---|---|---|
+| Joint finite success | Boundary-generated preparation; whole-history errors/range within budget; command compliance; independently validated boundary-only estimation | Success for these equations, target, input family and sensor model; hardware and the paper's full mechanism remain unvalidated |
+| Actuation success, sensing failure | Validated flow tracks, but two admissible states have indistinguishable wall histories and required features differ beyond tolerance | Open-loop production might work; this feedback inference task cannot. A different boundary observable/base could help |
+| Inaccessible target direction | A resolved left-null witness w for the finite-time map with nonzero target component, or a certified lower bound on best tracking error | Failure for that basis, operating point and horizon, not every boundary actuator or nonlinear flow |
+| Beyond specified command limits | A verified constrained lower bound exceeds tolerance with the speed/slew budgets, while a larger command family can meet it | This declared budget fails; stronger/faster hardware or more preparation might help. Unknown force/power ratings preclude a complete apparatus conclusion |
+| Preparation failure | A particular reproducible command never forms a valid target core by 300 s | That command failed. Universal failure over the family needs a lower bound or other proof; an optimizer stopping is insufficient |
+| Numerical or measurement inconclusive | Accuracy, resolution, compatibility, uncertainty or signal-to-noise checks cannot resolve the criterion | No physical impossibility or feasibility inference; preserve partial data and the first unresolved gate |
+
+For a linear normalized trajectory map G and bounded coefficient set C, use
+`min_(c in C) ||G*c-d||` with the same declared error metric as the proposed
+criterion. An optimizer's candidate is an upper bound, not a proof of failure;
+a dual bound or explicit separating direction can supply a lower bound.
+Discount the lower bound by the uncertainty in G and d over C before rejecting
+the target. State what time/space discretization and linearization it covers.
+For sensing exhibit a concrete invisible/near-invisible state pair, not only a
+condition number. Preserve physical units for both witnesses.
+
+Section 3.5's nonzero curl of the target residual forbids exact full-field
+unforced matching where that residual is nonzero; it does not forbid these
+reduced-feature tolerances. The pressure-blind rest swirl is a separate scoped
+obstruction. Neither the B2 discrepancy nor failure to reproduce an interior
+volume-forced field proves the entire engineering goal impossible.
+
+## 10. One accuracy prerequisite and one subsequent task
+
+**The next numerical question is the existing R021 matched-trace comparison,
+not a new transient or control campaign.** It tests whether the large central
+response error persists with a known solution's full boundary trace on the
+same mesh, versus the original wall command. Read the
+[R021 preserved contract](docs/realizability/B2_COMPATIBLE_TRACE_INTEGRATION_REVIEW.md),
+[R033 completed prerequisites](docs/realizability/B2_COMPATIBLE_TRACE_PREFLIGHT_FOLLOWUP.md),
+and [R070 completed launch/report repair](docs/realizability/evidence/r070/result.json).
+R067's launch/report repair recommendation has already been implemented in
+R070; neither it nor R033 should be restarted from historical next-task prose.
+
+Keep the exact 482-cell mesh, 22,900 real unknowns, BDM2/DG1 alpha=96,
+0.01 Hz, U_probe=1e-7 m/s, 128-term reference, fixed q=64/q=96 pair and all
+production/configuration pins. P is the original command; A_64/A_96 use the
+matched trace. All three complete lifted RHS compatibility checks must precede
+factorization. Preserve one common factorization, three primary solves and
+one correction each, stage-local checks and finite refusal on the first failed
+arithmetic/PDE/resource condition. No extra mesh, quadrature, retry or solver.
+
+Retain `G_star = 2.0662858857221768e-5 - 6.595106312048072e-5 i 1/m`,
+strict magnitude error <5% and wrapped phase error <5 degrees; preserve
+`E5 = 3.4556100991268897e-6 1/m`, output/correction screens E5/100,
+load-step screen E5/10, pressure-removal and all R013/R021 checks unchanged.
+The difference P-A measures discrete boundary-data sensitivity, not a clean
+continuum geometry-error decomposition. A good A result alone neither fixes P
+nor clears the campaign. A failed compatible A points toward unresolved
+approximation/measurement error; failed compatibility means no comparison.
+
+**Single next implementation deliverable:** connect the already-repaired R070
+runner to a minimal task-specific practical launch path for this diagnostic,
+with a default-disabled physical command and a reviewable dry-run result.
+Reuse existing source/evidence binding and refusal/count handling. Add only
+what is needed for reservation, independent task timeout, resource observation,
+owned-child cleanup and complete/partial result acceptance under
+[R103/R104](docs/realizability/B2_MONITOR_PRACTICAL_SUPERVISION_POLICY.md).
+Identify remaining actual-FEM validation of the R070 stage checks explicitly.
+Validate the connection using saved evidence and benign children/fake events;
+do not run the physical cylinder, Bessel trace, JIT or completed R033 toys.
+Produce code and focused checks, not another general infrastructure contract.
+
+Physical execution remains separately gated and **unauthorized by this
+specification**. Its unused q64/q96 allowance stays 180 s / 1536 MiB, including
+its prescribed extraction/reporting; old attempts and prerequisite charges
+remain recorded. The implementation must not enlarge or reset any allowance.
+If using the existing benign monitor suite, retain its separate 180 s/768 MiB
+whole-unit, 512 MiB workload RSS, no-swap/32-PID and native <=128 MiB limits.
+R103 allows ordinary disclosed OS trust; no recursive supervisor certification
+or complete PC/Mac performance benchmark is a prerequisite. An early Mac check
+of the shared dry-run/report interface belongs to a later explicit ownership
+handoff; it cannot consume the physical attempt. No Mac transfer is needed now.
+The next task's exact files, benign-check limits and stopping point are in
+[SESSION_HANDOFF.md](SESSION_HANDOFF.md#next-task).
+
+## 11. Review status and remaining choices
+
+R177 is a source-and-document specification. It checked the implemented
+reference/configuration, saved B2/R020/R021/R033/R070 evidence, practical policy
+and the primary paper. No reference evaluation, numerical workload, solver
+test, controller, hardware selection, rendering or package change ran. Existing
+Section 5 scalar values and Section 6 verification thresholds are inherited
+records, not newly measured results. Documentation checks and delivery are
+recorded in [REQUEST_LOG.md](REQUEST_LOG.md) and [WORK_SESSIONS.md](WORK_SESSIONS.md).
+
+Remaining user-level choices before a full engineering experiment: accept or
+revise the proposed finite range/tolerances, 300 s preparation budget and command
+limits; retain strict wall sensing or explicitly allow interior optical
+feedback; later select credible hardware/noise limits. None prevents preparing
+the unchanged accuracy diagnostic. The present proposal defaults to strict
+support and retains the existing 10 mm → 3 mm reference for review.
+
+The single next task is the diagnostic launch integration in Section 10 and
+the current handoff. Retain GPT-6 Astra/high on PC/WSL daisy for its numerical
+interfaces and scope decisions. A later purely mechanical, fully specified
+fix can use Luna/medium; unexplained numerical behavior returns to Astra/high.
+No model change or experiment was launched by this recommendation.
