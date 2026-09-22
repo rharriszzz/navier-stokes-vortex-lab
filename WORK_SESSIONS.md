@@ -582,3 +582,15 @@ scientific choices settle and implementation becomes mechanical.
 PC retains ownership. STARTED cb407ec published successfully; completion
 prepared for scoped commit/push. Actual delivery hash/result in final response
 and Git history; no post-push documentation edit.
+
+## R194 — Port-driven base-flow specification
+STARTED | 2026-09-22T15:09:53Z | PC/WSL daisy | released: no
+Identity: rharris; Linux 6.18.33.2-microsoft-standard-WSL2 x86_64;
+/home/rharris/git/navier-stokes-vortex-lab; main/origin/main.
+Starting commit 95f7065defcacd20799c6ddbf9a89dc1f7b2a427 equals fetched
+upstream after clean required fast-forward pull. Empty stashes, same owner,
+no conflicting open task. Continue authorizes scoped publication; excerpts R194.
+Bounded task: finite inlet/return and preparation contract, averaged versus
+sector geometry validity, existing solver/B2 review, numerical verification and
+implementation-admission decision. No solver code/dependencies/CFD/FEM or
+physical/optical/render execution. Publish start before substantive work.

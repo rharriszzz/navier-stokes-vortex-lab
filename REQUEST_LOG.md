@@ -6153,3 +6153,51 @@ decision. Stop before solver code, dependencies, CFD/FEM or physical execution.
 PC retains ownership, released: no. R193 STARTED cb407ec pushed successfully;
 completion publication prepared. Actual delivery hash/push result follows in
 final response/Git history; no post-push documentation edit. Next prompt: Continue.
+
+## R194 — 2026-09-22 (America/New_York) — Continue base-flow specification
+
+**User wording:** “continue”, following these supplied session excerpts:
+
+```text
+Worked for 10m 32s · done 11:06 AM
+OpenAI Codex (v0.155.1)
+model: gpt-6-astra high /model to change
+directory: ~/git/navier-stokes-vortex-lab
+Tip: New Use /fast to enable our fastest inference with increased plan usage.
+Token usage: total=123,391 input=106,693 (+ 1,379,456 cached) output=16,698 (reasoning 1,553)
+To continue this session, run codex resume, then select Summarize Codex session (01a0c99d-a141-7223-9475-43ed88eb5d9c)
+/status
+OpenAI Codex (v0.155.1)
+Visit https://chatgpt.com/codex/settings/usage for up-to-date information on rate limits and credits
+Model: gpt-6-astra (reasoning high, summaries auto)
+Model provider: openai
+Directory: ~/git/navier-stokes-vortex-lab
+Permissions: Workspace (Ask for approval)
+Agents.md: AGENTS.md
+Account: [REDACTED account address] (Plus)
+Collaboration mode: Default
+Session: 01a0c9a9-4289-75c0-887f-7704d100857b
+Weekly limit: 75% left (resets 17:37 on 28 Sep)
+Credits: 283 credits
+Luna Reserve Weekly limit: 100% left (resets 11:08 on 29 Sep)
+continue
+```
+
+Box borders/progress glyphs omitted; supplied wording/values retained. Worked-for,
+usage and resume excerpts concern the prior session; status identifies the new
+session. `/new` excerpt missing. Account redacted; snapshots user-reported and
+unverified. No private session files inspected.
+
+**Scope/status:** Started. Specify/review the smallest credible port-driven
+base-flow boundary and verification contract at R192, inspect existing solver
+and failed B2 evidence, and decide implementation admission. Source/algebra and
+read-only code review only; no solver/controller code, dependency changes,
+CFD/FEM, physical/optical execution, procurement, hardware or rendering.
+Continue authorizes scoped STARTED/completion commit and push.
+Read-only identity/ownership checks: rharris; PC/WSL daisy; Linux
+6.18.33.2-microsoft-standard-WSL2 x86_64; user-owned checkout
+/home/rharris/git/navier-stokes-vortex-lab; main/origin/main; clean worktree,
+empty stashes, no conflicting open task, Mac released. Required clean
+`git pull --ff-only --no-rebase --no-autostash` succeeded, already up to date.
+HEAD equals fetched upstream 95f7065defcacd20799c6ddbf9a89dc1f7b2a427,
+verifying R193 delivery. No incoming changes or owner/model switch.
