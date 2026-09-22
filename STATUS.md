@@ -2,14 +2,24 @@
 
 ## Current PC plan and completed Mac rendering checkpoint — 2026-09-22
 
+R168 passed the bounded PC comparison: the same default renderer produced a
+visible centered sphere and project frame 1 at 160x120 with `-d +WT1 -J`.
+Both exited 0 with nonzero intersections. R167's failed run had graphic display
+On; its root cause remains unisolated because resolution and thread count also
+changed. [Commands and evidence](docs/rendering/POVRAY_PC_R168_COMPARISON.md).
+The comparison is complete and the preview remains paused at the prescribed
+decision checkpoint. The [next task](SESSION_HANDOFF.md#next-task) proposes
+Luna/medium to resume the bounded preview with explicit headless/one-thread
+settings; no package or scene change is needed on present evidence.
+
 R167 validated the existing 450-frame/128-bead PC inventory with the
 repository-local Python 3.12.14 checker, including observed motion and finite
 extrema. The first requested POV-Ray 3.7.0.10.unofficial 320x180 render
 segfaulted during parsing before producing a PNG, so separated-frame, sequence,
 visual, encode and ffprobe gates did not run. The disposable failure log is
 `/tmp/r167-preview-LKKwQU/separated/frame001.log`; no child remains and no
-source/input changed. GPT-6 Astra/high is recommended for a bounded
-renderer/build investigation. PC/WSL `daisy` owns the repository; R164
+source/input changed. R168 completed the subsequent bounded comparison.
+PC/WSL `daisy` owns the repository; R164
 completion is published as `97d9fcf`. The PC inventory differs
 from the previously validated Mac data; its saved-data check passed before the
 renderer failure.
@@ -32,8 +42,8 @@ unverified and is not a reason alone to rebuild. No movie was encoded. R155
 confirms PC work never started. R161 transferred ownership back to PC/WSL, and
 R162 received that handoff. R163 created the repository-local `.venv` with
 Python 3.12.14 and NumPy 2.5.3; no sudo or system-wide package change was
-needed. The [next repository task](SESSION_HANDOFF.md#next-task) is the R165
-bounded PC preview. R157 verifies the user's OpenEXR 3.4.15_0 reactivation;
+needed. Follow the [next repository task](SESSION_HANDOFF.md#next-task) for
+the proposed preview settings. R157 verifies the user's OpenEXR 3.4.15_0 reactivation;
 openexr2 and POV-Ray revision 6 also remain active. R158 authorizes publication
 of the notes before a fresh Mac chat; this is not a PC ownership transfer.
 POV-Ray on Mac still runs outside the agent sandbox, but no Mac workload is

@@ -1,14 +1,17 @@
 # Current session handoff
 
-Last updated 2026-09-22 (America/New_York) for R167.
+Last updated 2026-09-21 (America/New_York; 2026-09-22 UTC) for R168.
 **PC/WSL `daisy` owns the repository.** R161's published Mac release and R162's
 receipt completed the transfer; R164 completion is published in `97d9fcf`.
-R167 passed the saved-data gate for the bounded PC visualization preview, then
-stopped when POV-Ray 3.7.0.10.unofficial segfaulted while parsing the first
-frame before producing a PNG. No sequence render, encode or ffprobe check ran.
-The task is interrupted at an unresolved renderer/build boundary; GPT-6
-Astra/high is recommended for the next bounded investigation. R166 confirms
-no return to the Mac is needed and fresh fetch found no incoming commits.
+R168's bounded comparison passed: the same installed default POV-Ray
+3.7.0.10.unofficial rendered the unchanged sphere and project frame 1 at
+160x120 with explicit `-d +WT1 -J`. Both exited 0 and produced visible geometry.
+R167's failed run had display enabled; the crash cause remains unisolated
+because thread count and resolution also changed. The comparison is complete;
+the R167 preview lifecycle remains open at the prescribed decision checkpoint.
+No sequence, encode or ffprobe check ran. Recommend Luna/medium for the
+proposed headless preview below; no Mac work or rebuild is needed.
+[Commands, hashes and observed results](docs/rendering/POVRAY_PC_R168_COMPARISON.md).
 
 The Mac renderer repair is complete historical evidence, not a pending task.
 The user ran the [MacPorts launcher](packaging/macports/README.md): revision 6
@@ -69,11 +72,11 @@ and physical-work limits remain unchanged.
 | Owner | PC/WSL `daisy`; Mac `fire.lan` released after published R161 handoff and R162 receipt. |
 | Checkout | `/home/rharris/git/navier-stokes-vortex-lab`. |
 | Branch/upstream | `main` / `origin/main` |
-| Starting state | R165 started clean at `97d9fcf`; fresh fetch confirmed HEAD = origin/main; stashes empty. |
+| Starting state | R168 started clean at `b5215b5`; clean fast-forward pull up to date, HEAD = origin/main; stashes empty. |
 | Interpreter | `/home/rharris/git/navier-stokes-vortex-lab/.venv/bin/python`, CPython 3.12.14 with NumPy 2.5.3 |
 | Other owner/process | Mac `fire.lan` released in the published R161 handoff; no PC child process remains. |
-| Task processes | R167 POV-Ray child exited after a segmentation fault; no task child remains. |
-| Delivery state | R167 start publication is `e21725b`; interruption records await scoped publication. |
+| Task processes | R168 sphere and project children exited 0; no POV-Ray process visible in the final local check. |
+| Delivery state | R167 interruption published in `b5215b5`; R168 resume published in `7cb90e4`; comparison result prepared for scoped publication. |
 
 ## Current result and limits
 
@@ -204,41 +207,43 @@ agent-side POV-Ray backtraces are unavailable.
 
 ## Next task
 
-After switching to **GPT-6 Astra / high**, say **Continue** on PC/WSL `daisy`.
-Investigate the R167 PC POV-Ray segmentation fault with one fresh, bounded
-renderer/build comparison. This is an unresolved renderer/build decision, so
-do not retry the full preview, change scene semantics, regenerate trajectories,
-encode a movie or alter packages until the comparison establishes a safe
-direction.
+Recommended next task: switch to **GPT-5.6 Luna / medium** and say **Continue**
+on PC/WSL `daisy` to accept the proposed explicit-headless preview settings.
+R168 stops before that decision; no preview retry occurred in R168. Resume
+the open R167 lifecycle with a RESUMED event, not a duplicate STARTED record.
 
-1. Activate `.venv`, confirm the existing POV-Ray binary and Linux tools, and
-   preserve the R167 input checker result. Inspect the saved R167 log and exact
-   command. Keep all outputs in a fresh `/tmp` directory.
-2. Run one minimal comparison that distinguishes parser/scene failure from
-   renderer/build failure, such as an unchanged centered sphere and then one
-   unchanged project frame, each at a small resolution with `-d`, one thread,
-   no jitter and a 30-second bound. Require successful exit, PNG output and
-   nonzero geometry intersections before drawing conclusions.
-3. If the minimal comparison fails or remains unexplained, stop and record the
-   evidence; do not retry the 30-frame preview. If it passes, inspect the
-   output and stop for a user/model decision before changing the bounded
-   preview plan.
-4. Record commands, exact exit status, intersection statistics, visual result,
-   changed files, skipped work and one next task. Keep trajectory/scene/package
-   files unchanged. Recommend Luna/medium only after the renderer decision is
-   settled; otherwise keep Astra/high for the unresolved comparison.
+1. Follow the clean synchronization/ownership/publication protocol. Activate
+   `.venv`, confirm `/usr/local/bin/povray` against the R168 hash and check
+   `timeout`, ffmpeg/libx264 and ffprobe. Preserve prior evidence. Validate
+   the actual existing 450-frame/128-bead inputs with the read-only checker;
+   do not regenerate trajectories or change scene/package/configuration files.
+2. In a fresh `/tmp` directory render unchanged `fluid.pov` frames 1, 225 and
+   450 at 320x180, using explicit `-d +WT1 -J +A0.2 +FN` and animation
+   `+KFI1 +KFF450 +KI0 +KF1`, selecting one frame per invocation with
+   `+SF<n> +EF<n>`. Use 30-second Linux timeout per render, two-second KILL
+   grace, and disable core dumps in the child-launch shell. Inspect each PNG;
+   require exit 0, display Off, nonzero geometry intersections and visible
+   tank/tracers with changing distributions. Preserve three-digit filenames.
+3. Only after all separated frames pass, render frames 1–30 once with the
+   same settings under a 180-second timeout, then encode 30 fps H.264/yuv420p
+   under a 30-second timeout. Verify exactly 30 PNGs, and use ffprobe to
+   confirm 30 frames, 1 second, 30 fps, 320x180, H.264 and yuv420p. The sequence
+   selects `+SF1 +EF30` while retaining `+KFF450`; do not remap simulation time.
+4. Record commands, results, artifact paths and checks; complete R167 only
+   if the preview/ffprobe gates pass. Stop on missing input/tool, changed
+   binary, checker failure, timeout, segfault, invisible geometry or an
+   unexplained output/format failure. Keep failure evidence and return to
+   Astra/high before any retry, larger workload or renderer/build change.
 
-Use Linux `timeout`; do not use the broad render/encode scripts. Stop on
-missing tools, timeout, invisible geometry, segmentation fault or unexplained
-resource failure; ensure this task's children have exited. Do not enlarge a
-failed workload.
+This selects the working headless/one-thread configuration for useful work;
+it does not claim the R167 crash is diagnosed. Do not use broad pipeline
+scripts or test display-enabled mode. No physical/FEM or full movie work.
+All task children must exit before publication; PC retains ownership.
 
-Model choice is task-fit judgment informed by official
-[Luna](https://developers.openai.com/api/docs/models/gpt-5.6-luna) and
-[Astra](https://developers.openai.com/api/docs/models/gpt-6-astra) documentation.
-The supplied UI shows Luna/medium available; no current account quota or
-automatic model switch is claimed. This preview exercises routine existing
-tools, so another Astra review is unnecessary unless a stated stop occurs.
+Model choice is task-fit judgment: OpenAI Docs was rechecked for
+[Luna's medium reasoning support](https://developers.openai.com/api/docs/models/gpt-5.6-luna).
+The supplied UI shows Luna/medium and Astra/high; no account availability,
+quota or automatic model switch is inferred from API documentation.
 
 ### Note for the next Mac session
 

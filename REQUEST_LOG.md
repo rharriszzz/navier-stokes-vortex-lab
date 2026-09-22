@@ -4777,3 +4777,33 @@ before retrying the preview. Scoped commit/push authorized by Continue.
 Clean fast-forward pull was already up to date at `b5215b5`, HEAD equals
 origin/main, stashes empty, and published ownership remains PC. Publish this
 RESUMED checkpoint before substantive investigation.
+
+**R168 outcome/files/checks/next:** Bounded comparison complete. The unchanged
+default `/usr/local/bin/povray` rendered the centered sphere and project frame
+1 successfully at 160x120, explicit `-d +WT1 -J +A0.2`, each within its
+30-second timeout. Both exited 0; sphere intersection successes were 16509
+and 1737 respectively. Individual visual inspection found a shaded red sphere
+and the transparent tank with visible tracers. R167's failure log reports
+graphic display On; display, thread count and resolution were not isolated,
+so the crash cause is still unknown. No rebuild or scene change is indicated
+by this result. R167's preview lifecycle remains open at the handoff's explicit
+post-comparison decision boundary; no preview/encode retry occurred.
+
+Changed files: REQUEST_LOG.md, WORK_SESSIONS.md, SESSION_HANDOFF.md, STATUS.md,
+and docs/rendering/POVRAY_PC_R168_COMPARISON.md. Checks: identity/ownership,
+clean fast-forward/equal upstream/stashes, Python/tool selection, preserved
+checker report, binary/scene hashes before/after, two bounded renders and
+visual inspections, local POV-Ray process absence, reviewed diff, whitespace,
+unique IDs, append-only log prefixes and 46 local documentation targets.
+Final staged checks follow. Skips: new trajectory/checker execution, sequence,
+encoding/ffprobe, packages/builds, physical/FEM and broad tests. Raw evidence
+is in `/tmp/r168-render-CCQtFZ`; commands, exit statuses, statistics and hashes
+are retained in the new evidence note. No task child remains.
+
+Next: Luna/medium, Continue on PC to accept the proposed headless/one-thread
+320x180 separated-frame and 30-frame preview in SESSION_HANDOFF.md#next-task.
+OpenAI Docs confirmed medium reasoning support; model fit is judgment, no
+switch or account-access claim. Escalate to Astra/high on renewed failure or
+build/format ambiguity. PC retains ownership. Resume publication is `7cb90e4`;
+result publication is prepared here, with actual delivery outcome reported
+after commit/push. No post-push log edit.
