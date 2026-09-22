@@ -1,6 +1,6 @@
 # Current session handoff
 
-Last updated 2026-09-21 for R133. The missing optional POV-Ray user
+Last updated 2026-09-21 for R134. The missing optional POV-Ray user
 configuration warning is resolved by an empty
 `/Users/rharris/.povray/3.7/povray.conf`; the file was created only after
 confirming that the path did not exist. The externally executed minimal
@@ -153,6 +153,12 @@ is one centered-object POV-Ray comparison, followed by one project frame only
 if that object is visibly rendered. Astra/high is not warranted unless the
 comparison creates a model/format or unexpected renderer-build decision.
 
+R134 ran that centered-object comparison. A canonical red sphere and camera
+produced a valid PNG with status 0, but POV-Ray reported zero successful sphere
+intersections and inspection found only the background. This is now an
+unexpected renderer/build-level failure even outside the restricted sandbox;
+the project scene and saved trajectory should not be changed in response.
+
 R117 verified the execution environment as macOS 26.6.2/Darwin arm64 on
 `fire.lan`, user `rharris`, with ordinary command execution and repository/tmp
 write access. The tool sandbox denies `.git` writes, `ps`, unrestricted
@@ -161,12 +167,13 @@ agent-side POV-Ray backtraces are unavailable.
 
 ## Next task
 
-On the Mac, use **GPT-5.6 Luna/medium** for one known-good centered-object or
-renderer-level comparison if the blank project render remains worth pursuing.
-Do not change project camera/material semantics or encode a movie until a
-centered test object is visibly rendered. Recommend Astra/high only if that
-comparison creates a model/format or unexpected renderer-build decision;
-otherwise return to Luna/medium for the small render recheck.
+On the Mac host, use **GPT-6 Astra/high** for renderer-build/runtime diagnosis
+of the canonical centered-sphere failure: compare the MacPorts executable and
+its documented build/runtime behavior with a known-good POV-Ray build or
+minimal invocation, without changing project scene semantics. Stop if the
+diagnosis requires an unsupported installation change or remains ambiguous;
+then return to Luna/medium for a small render recheck after a visible sphere is
+established. Do not encode a movie, run FEM, physical or broad benchmark work.
 
 If one tiny frame succeeds, render only frames 1, 120 and 240 at a small
 resolution, inspect all three, and only then encode a small H.264/yuv420p movie

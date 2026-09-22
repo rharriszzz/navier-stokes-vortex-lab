@@ -3959,3 +3959,32 @@ from a normal user Terminal/external execution context. The next task is one
 centered-object POV-Ray comparison, followed by one project frame only if the
 centered object is visibly rendered. Astra/high is reserved for a genuine
 model/format or unexpected renderer-build decision. No new workload ran.
+
+## R134 — 2026-09-21 — Run the bounded centered-object POV-Ray test
+
+**User request:** “Can you please do step 1, now?”
+
+**Scope/status:** Run only the next centered-object POV-Ray comparison on the
+Mac host outside the restricted sandbox, capture its output and inspect the
+resulting PNG. Do not run a project render, encode a movie, or perform FEM,
+physical or broad benchmark work. In progress.
+
+**R134 outcome/files/checks/next:** Added and ran
+`centered_object_external.sh` outside the restricted sandbox at 256x256. The
+MacPorts POV-Ray process exited 0 and emitted a valid PNG in about 0.007 s of
+trace time, but its statistics reported `Sphere ... Succeeded 0`; image
+inspection confirmed a uniform background with no red sphere. This canonical
+test rules out the project trajectory, tank, materials and camera as the sole
+explanation and establishes an unexpected renderer/build-level boundary. No
+project frame, movie, ffprobe, FEM, physical or broad benchmark work ran. The
+next handoff should use Astra/high on the Mac host for renderer-build/runtime
+diagnosis; return to Luna/medium after that boundary is explained. The new
+script and documentation are the scoped files for R135 publication.
+
+## R135 — 2026-09-21 — Publish the centered-object renderer diagnosis
+
+**User request:** “ok good. please add commit and push”
+
+**Scope/status:** Stage and publish the R134 centered-object test script and
+its renderer-level diagnosis/handoff. Preserve the recorded test result; do
+not run another POV-Ray workload. In progress.
