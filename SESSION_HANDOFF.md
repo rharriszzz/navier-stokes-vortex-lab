@@ -1,6 +1,6 @@
 # Current session handoff
 
-Last updated 2026-09-21 for R131. The missing optional POV-Ray user
+Last updated 2026-09-21 for R133. The missing optional POV-Ray user
 configuration warning is resolved by an empty
 `/Users/rharris/.povray/3.7/povray.conf`; the file was created only after
 confirming that the path did not exist. The externally executed minimal
@@ -36,7 +36,7 @@ work.
 | Interpreter | `/Users/rharris/miniconda3/envs/navier-stokes-vortex-b1/bin/python`, CPython 3.12.13 |
 | Other owner/process | PC/WSL `daisy` released ownership in R107. Independent Mac POV-Ray build remains user-managed and unverified. |
 | Task processes | R109 generator and bounded POV-Ray attempts exited; no trajectory/workload or background process remains; generated `positions/frame*.inc` is ignored local data. |
-| Delivery state | R131 STARTED record published as `a68ae63`; final R131 completion publication is pending. |
+| Delivery state | R131 completion published as `00f8e53`; R132 cleanup documentation is pending publication in the current commit. |
 
 ## Current result and limits
 
@@ -142,6 +142,16 @@ it exited 0, emitted a valid 64x64 PNG, and no longer printed the missing-user-
 configuration warning. POV-Ray still reports the expected MacPorts
 unofficial-build notice; its trace time was approximately 0.001 seconds.
 No project-scene movie, ffprobe, FEM, physical or broad benchmark work ran.
+
+R132 removed the stale diagnostic shell and its child `povray -version`
+process after verifying their exact PIDs. A follow-up process check found both
+gone; no unrelated process was targeted.
+
+R133 selected the next execution boundary: GPT-5.6 Luna/medium on the Mac host
+from a normal user Terminal/external execution context. The next bounded task
+is one centered-object POV-Ray comparison, followed by one project frame only
+if that object is visibly rendered. Astra/high is not warranted unless the
+comparison creates a model/format or unexpected renderer-build decision.
 
 R117 verified the execution environment as macOS 26.6.2/Darwin arm64 on
 `fire.lan`, user `rharris`, with ordinary command execution and repository/tmp

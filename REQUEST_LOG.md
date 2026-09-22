@@ -3927,3 +3927,35 @@ benchmark work ran. Next: Luna/medium may perform one centered-object or
 renderer-level comparison if the blank project render remains worth pursuing;
 recommend Astra/high only for a model/format or unexpected renderer-build
 decision. R131 completion publication follows the final scoped checks.
+
+## R132 — 2026-09-21 — Remove stale POV-Ray diagnostic process
+
+**User request:** “I don't want that povray, if you don't want it either,
+please get rid of it”
+
+**Scope/status:** Identify the previously observed stale `povray -version`
+diagnostic process and its parent shell, terminate only those processes if
+still present, verify cleanup, and leave unrelated processes untouched. No
+repository or POV-Ray configuration changes are requested. In progress.
+
+**R132 outcome:** The exact previously observed processes were still present:
+the diagnostic shell PID 52593 and its child `/opt/local/bin/povray -version`
+PID 52596. Both were sent `TERM`; a follow-up process check found neither
+process. No other process was targeted, and no repository or POV-Ray config
+file was changed.
+
+## R133 — 2026-09-21 — Recommend the next model/platform and publish cleanup
+
+**User request:** “I look forward to (1) further work, or (2) tell me which
+model/level/platform I should run next, then add commit and push”
+
+**Scope/status:** Choose the next bounded renderer task and recommend the
+model, reasoning level and execution platform; record the recommendation and
+publish the pending R132 cleanup documentation. No new POV-Ray workload is
+needed in this step. In progress.
+
+**R133 outcome:** Recommend GPT-5.6 Luna with medium reasoning on the Mac host
+from a normal user Terminal/external execution context. The next task is one
+centered-object POV-Ray comparison, followed by one project frame only if the
+centered object is visibly rendered. Astra/high is reserved for a genuine
+model/format or unexpected renderer-build decision. No new workload ran.
