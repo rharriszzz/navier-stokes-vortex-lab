@@ -1,7 +1,9 @@
 # Project status: a boundary-controlled engineering approximation
 
-Updated 2026-09-22 (America/New_York), through R196. PC/WSL `daisy` owns the
-repository. Latest work: [cube adapter and diagnostics](docs/realizability/CUBE_ADAPTER_R196.md).
+Updated 2026-09-22 (America/New_York), through R198. PC/WSL `daisy` owns the
+repository. **Paused at the user's request while they work on another project;
+wait for a new instruction.** Usage snapshot recorded in REQUEST_LOG.md (R197).
+Latest technical work: [cube adapter and diagnostics](docs/realizability/CUBE_ADAPTER_R196.md).
 Twenty-four import-free checks passed. FEM forms have not been constructed or
 assembled, and convergence is untested. Execution remains unadmitted with zero
 attempts. No boundary-driven core or feasible contraction range is established.
@@ -12,7 +14,7 @@ attempts. No boundary-driven core or feasible contraction range is established.
 | Is the engineering goal demonstrated? | No validated boundary-driven contraction or boundary-only state estimator exists yet. |
 | What did the latest step establish? | Cube/sparse assembly source, retained lifting and signed budget/error diagnostics. [Evidence and limits](docs/realizability/CUBE_ADAPTER_R196.md). |
 | What blocks trusted numerical control results? | The nonlinear fixture has not run; B2 still fails its independent response-accuracy comparison and q64/q96 remain unused. |
-| What is next? | Implement the one-fixture driver and finite supervision path, with import-free checks and later admission decision; follow the single [next task](SESSION_HANDOFF.md#next-task). |
+| What is next? | Wait for the user to resume, then implement the one-fixture driver and finite supervision path with import-free checks and later admission decision; follow the single [next task](SESSION_HANDOFF.md#next-task). |
 
 ## Goal and present conclusion
 

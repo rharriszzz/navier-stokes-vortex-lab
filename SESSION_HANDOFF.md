@@ -1,12 +1,19 @@
 # Current session handoff
 
-Last updated 2026-09-22 (America/New_York) for R196.
+Last updated 2026-09-22 (America/New_York) for R198.
 **PC/WSL `daisy` owns the repository.** No transfer; Mac remains released.
+**Paused at the user's request: record the supplied snapshot, then wait while
+the user works on another project. Resume only on a new user instruction.**
+R197 records the supplied 17m 52s / 5:06 PM completion, 222,143 total tokens
+(191,120 input, 2,134,016 cached, 31,023 output, 5,308 reasoning), Astra/high,
+and account snapshot: 63% weekly remaining (17:37 on 28 Sep reset), 283 credits,
+100% Luna Reserve (17:06 on 29 Sep reset). These are user-reported values;
+the separate resume/status session IDs are retained in REQUEST_LOG.md.
 R196 completed [cube adapter and diagnostic source](docs/realizability/CUBE_ADAPTER_R196.md).
 Twenty-four standard-library checks pass, including sparse bordering/lifting,
 constraint rank, signed energy terms, refinement and refusal cases. FEM imports,
 UFL construction, mesh/assembly/solves and convergence remain untested.
-**Next: implement the single-fixture n=2 Poiseuille driver and finite supervision
+**After the user resumes: implement the single-fixture n=2 Poiseuille driver and finite supervision
 path; review admission after import-free checks. Stop before FEM execution.**
 Execution remains unadmitted, with zero attempts; the adapter has no supervised
 entry point. Full convergence-suite and tank launches remain unadmitted.
@@ -22,8 +29,9 @@ no contraction and no claimed similarity-time decades. R182's whole-Gaussian
 obstruction remains valid; both central faces and the exterior inventory count.
 R195 completion 9c7e849 was verified on fetched upstream. R196 began with a
 clean required fast-forward pull there and published STARTED 61aa5f9.
-Completion publication is prepared; actual delivery hash/push result follows in
-the final response and Git history. No post-push documentation edit.
+R197 observes R196 completion ea1346d at HEAD and locally stored origin/main;
+no fresh remote check was performed. R198 authorizes a local commit of the
+snapshot and pause records; no push requested. Commit result is in Git history.
 User reports R195 used Astra medium, followed by a switch to high for the new
 session. Account snapshots include other-project usage and cannot measure this
 project's consumption. No agent-initiated model switch or account access.
@@ -105,12 +113,12 @@ and physical-work limits remain unchanged.
 | Owner | PC/WSL `daisy`; Mac `fire.lan` released after published R161 handoff and R162 receipt. |
 | Checkout | `/home/rharris/git/navier-stokes-vortex-lab`. |
 | Branch/upstream | `main` / `origin/main` |
-| Starting state | R196 clean required fast-forward pull succeeded at 9c7e849, equal to fetched origin/main; empty stashes, same owner, no conflicting open task. STARTED 61aa5f9 published. |
+| Starting state | R197 began clean at ea1346d, equal to locally stored origin/main; empty stashes, same owner, R196 lifecycle completed. No fresh fetch/pull for this metadata request. |
 | Interpreter | `/home/rharris/git/navier-stokes-vortex-lab/.venv/bin/python`, CPython 3.12.14 with NumPy 2.5.3 |
 | Other owner/process | Mac `fire.lan` released in the published R161 handoff. Local Git cannot inspect another checkout's unpublished state. |
-| Task processes | R196 source/algebra checks completed; no FEM/CFD/render/physical workload child launched. All short check commands exited. |
+| Task processes | R197 launches no task workload; project paused pending user instruction. R196 source/algebra checks completed. |
 | Symbolic environment | `/tmp/navier-r183-sympy/bin/python`, Python 3.12.14, SymPy 1.14.0, mpmath 1.3.0; recreate using `requirements-symbolic.txt` if missing. Existing environments unchanged. |
-| Delivery state | R195 completion 9c7e849 verified upstream; R196 STARTED 61aa5f9 published. Completion prepared for scoped publication; delivery hash/result in final response. PC retains ownership. |
+| Delivery state | R196 completion ea1346d is the base and locally stored origin/main. R198 authorizes committing the R197 snapshot/pause and R198 request record locally; no push requested. PC retains ownership during pause. |
 
 ## Current result and limits
 
@@ -241,6 +249,10 @@ agent-side POV-Ray backtraces are unavailable.
 
 ## Next task
 
+**Wait for the user to resume.** R197 explicitly pauses project work while the
+user works on another project. The following concrete implementation task is
+deferred until a new user instruction; no automatic continuation is scheduled.
+
 **Implement the smallest end-to-end n=2 Poiseuille fixture driver and finite
 supervision path, then make a concrete execution-admission decision. Stop before
 FEM imports/JIT/mesh/assembly/solves in this source increment.** Use the
@@ -281,8 +293,15 @@ Keep Astra/high while mixed assembly and admission choices remain. Recommend a
 cheaper model only once work is mechanical and availability is rechecked. This
 does not schedule work or change models. Next prompt: **Continue**.
 R196 files/checks/evidence and remaining choices are in REQUEST_LOG.md and
-WORK_SESSIONS.md. PC retains ownership; completion publication is prepared,
-with delivery hash/result in final response.
+WORK_SESSIONS.md. PC retains ownership. R197 changed only REQUEST_LOG.md,
+SESSION_HANDOFF.md and STATUS.md to record the snapshot and pause. Identity,
+ownership, Git/stashes, local commit equality, append preservation and whitespace
+are the metadata checks; scientific/runtime tests are skipped. Evidence is the
+supplied transcript and observed local Git state. No new scientific decision;
+fixture admission remains unresolved. R198 authorizes staging and committing
+these three metadata files, with whitespace and request-log preservation checks;
+commit result is in Git history. No push or workload requested. Next: wait for
+the user to resume; the deferred implementation task above remains unchanged.
 
 ### Note for the next Mac session
 

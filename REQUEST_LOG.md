@@ -6488,3 +6488,84 @@ require normal ownership handoff; no platform switch now. PC retains ownership,
 released: no. STARTED 61aa5f9 published successfully. Completion prepared for
 scoped commit/push; actual delivery hash/result in final response and Git
 history. No post-push documentation edit. Next prompt: Continue.
+
+## R197 — 2026-09-22 (America/New_York) — Record usage snapshot and wait
+
+**User wording / supplied transcript:**
+
+```text
+Worked for 17m 52s · done 5:06 PM
+OpenAI Codex (v0.155.1)
+model: gpt-6-astra high /model to change
+directory: ~/git/navier-stokes-vortex-lab
+Tip: Press Tab to queue a message when a task is running; otherwise it sends immediately (except !).
+Token usage: total=222,143 input=191,120 (+ 2,134,016 cached) output=31,023 (reasoning 5,308)
+To continue this session, run codex resume, then select Summarize project work (01a0cade-7dbe-7560-9286-eb387560765c)
+/status
+OpenAI Codex (v0.155.1)
+Visit https://chatgpt.com/codex/settings/usage for up-to-date information on rate limits and credits
+Model: gpt-6-astra (reasoning high, summaries auto)
+Model provider: openai
+Directory: ~/git/navier-stokes-vortex-lab
+Permissions: Workspace (Ask for approval)
+Agents.md: AGENTS.md
+Account: [REDACTED account address] (Plus)
+Collaboration mode: Default
+Session: 01a0caf1-52cd-7b40-a8df-7409e1933a56
+Weekly limit: 63% left (resets 17:37 on 28 Sep)
+Credits: 283 credits
+Luna Reserve Weekly limit: 100% left (resets 17:06 on 29 Sep)
+record this info, then wait.  I am going to work on another project for a while.
+```
+
+Box borders/progress glyphs omitted; wording and values retained. No intervening
+session-start excerpt supplied. Worked-for/token/resume excerpt and status have
+different session IDs. Snapshot is user-reported, not independently verified;
+account-wide limits are not project-specific consumption. No account access or
+private session inspection.
+
+**Scope/status:** Started; metadata only. Record supplied information, then wait
+while the user works on another project. No continuation, workload, transfer,
+commit or push authorized by this request. Pre-write checks: rharris on daisy,
+user-owned checkout, clean main/origin/main, empty stashes; HEAD and locally
+stored origin/main both ea1346decc86d36939426863da28e4598b7b763e (R196 completion).
+No fetch performed; remote live state and another checkout's unpublished work
+or processes are not established. PC retains ownership; Mac remains released.
+
+**R197 outcome:** Complete; supplied snapshot recorded and project paused pending
+new user instruction. Changed files: REQUEST_LOG.md, SESSION_HANDOFF.md,
+STATUS.md. Handoff opening, owner table and Next task agree on waiting and
+retained PC ownership; status links to that task. Checks passed: identity,
+ownership, clean starting Git/stashes, local HEAD/tracking-ref equality,
+append-only preservation of prior request-log bytes, unique request IDs through
+R197, exactly these three metadata files changed, and git diff --check.
+Evidence: user-supplied transcript above and observed local Git state. Skipped:
+scientific/runtime tests, workloads, account/private-session access, network
+synchronization, model/machine changes, commits and pushes. No new unresolved
+decision; future fixture execution admission remains pending. Next: wait for
+the user; once resumed, implement the single n=2 Poiseuille driver and finite
+supervision path with import-free checks, stopping before FEM execution.
+R197 edits remain local and uncommitted; no ownership release.
+
+## R198 — 2026-09-22 (America/New_York) — Commit the recorded snapshot and pause
+
+**User wording:** “please add and commit”
+
+**Scope/status:** Started. Stage and commit the R197 metadata changes plus this
+request record and corresponding handoff/status updates. No push requested;
+project work stays paused and PC/WSL daisy retains ownership. Pre-write checks:
+rharris on daisy; user-owned checkout; main/origin/main; empty stashes; exactly
+the three expected R197 files modified, with no unrelated changes. Reviewed
+the pending metadata diff; whitespace check passed. No ownership conflict.
+
+**R198 outcome:** Metadata prepared for the requested local commit. Changed
+files: REQUEST_LOG.md, SESSION_HANDOFF.md, STATUS.md. Checks passed: identity,
+ownership, branch/upstream and stashes; review of the three-file scope;
+append-only request-log preservation against HEAD, unique IDs through R198,
+and whitespace. Staged checks and commit verification follow; actual commit
+hash/result is reported in the final response and Git history. Scientific and
+runtime tests skipped for this metadata-only change; no workload or push.
+Evidence: supplied R197 transcript and local Git diff/checks. No new unresolved
+decision; future fixture admission remains pending. Next: wait for the user
+to resume, retaining the deferred single-fixture implementation task and PC
+ownership. This request authorizes no restart of project work.
