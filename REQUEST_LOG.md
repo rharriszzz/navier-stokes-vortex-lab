@@ -4592,3 +4592,30 @@ movie, FEM, physical, benchmark or build work is authorized by this transfer.
 Mac release is contingent on the published handoff; the receiving PC must
 perform its own clean pull, identity/ownership checks and input/tool checks
 before any workload.
+
+## R162 — 2026-09-21 — Receive PC handoff and continue
+
+**User request:** “ok I have just worked on the mac for a while, and I am back
+on the pc.  /new is olde info, /status is [supplied Codex status excerpt]
+please do a pull, confirm that 5.6 Luna medium is the correct model for this
+step, then continue”
+
+**Scope/status:** Apply the receiving-PC continuation protocol: verify identity,
+ownership, Git state, upstream and stashes; pull the published Mac-to-PC
+handoff; confirm the model/effort recommendation; record receipt and perform
+the handoff's bounded tool/input checks. No renderer, package, trajectory,
+movie, FEM, physical, benchmark or build workload is selected by this request;
+stop at the receipt checkpoint unless a later request names a bounded task.
+Continue authorizes the scoped lifecycle commit/push. Do not infer private
+session data or account balances from the supplied status excerpt.
+
+**In progress:** PC/WSL `daisy`, Linux 6.18.33.2-microsoft-standard-WSL2,
+x86_64, `/home/rharris/git/navier-stokes-vortex-lab`, clean `main`/`origin/main`
+at `14bf4d6` before pull, empty stashes. The required fast-forward pull was
+blocked once by the restricted sandbox's read-only `.git`, then succeeded with
+approved Git metadata access to `fadeb9d`. The current handoff releases Mac
+`fire.lan` after receipt and requires no workload yet. `python3` is
+`/usr/bin/python3` 3.10.12; Python 3.12 is unavailable under the checked
+command name and this is recorded as an environment exception, not a test
+result. POV-Ray and ffprobe are present; shared checker/trajectory sources and
+saved position inputs are present. No workload has run.

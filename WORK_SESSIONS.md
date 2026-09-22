@@ -257,3 +257,8 @@ HANDOFF PREPARED | 2026-09-22 02:05:00 UTC | Mac fire.lan, Darwin/arm64 -> PC/WS
 Checkout: /Users/rharris/git/navier-stokes-vortex-lab | Branch/upstream: main/origin/main | Source commit: 9e1b803
 Task: Transfer ownership back to PC because the current checkpoint has no Mac-required workload. PC must cleanly pull this handoff, verify identity/ownership/status/upstream/stashes and required tools/inputs, record receipt, and stop before any workload unless a new bounded task is selected. No renderer, package, trajectory, movie, FEM, physical, benchmark or build work is authorized by this handoff.
 Changed files: REQUEST_LOG.md, WORK_SESSIONS.md, SESSION_HANDOFF.md, STATUS.md | Checks: R160 publication complete; Mac checkout clean before this handoff; no child process or Mac workload remains | Skips: all execution and scientific work. Evidence: source commit `9e1b803`; PC `/tmp` outputs are not required or transferred. Next: PC receipt and tool/input verification; then user-selected bounded task. Luna/medium for routine validation; Astra/high only for a new build, format decision or unexplained failure.
+
+## R162 — Receive PC handoff and continue
+STARTED | 2026-09-22 02:15:39 UTC | PC/WSL | daisy | Linux 6.18.33.2-microsoft-standard-WSL2/x86_64
+Checkout: /home/rharris/git/navier-stokes-vortex-lab | Branch/upstream: main/origin/main | Starting commit: fadeb9d6bc80c548adb6d135cf312d6a537c4150
+Task: Receive the published Mac handoff, verify identity/ownership/status/upstream/stashes and shared tools/inputs, confirm Luna/medium is appropriate, and stop before any renderer, trajectory, movie, package, FEM, physical, benchmark or build workload unless a new bounded task is selected.
