@@ -4807,3 +4807,20 @@ switch or account-access claim. Escalate to Astra/high on renewed failure or
 build/format ambiguity. PC retains ownership. Resume publication is `7cb90e4`;
 result publication is prepared here, with actual delivery outcome reported
 after commit/push. No post-push log edit.
+
+## R169 — 2026-09-22 — Continue bounded PC visualization preview
+
+**User request:** “switch models, fix the instructions first, then add commit
+push. otherwise let me know.” The request included the prior Codex resume
+transcript and `/status` context; account details are retained only as
+user-reported context.
+
+**Scope/status:** Continue the open R167 lifecycle on PC/WSL `daisy` using the
+selected GPT-5.6 Luna/medium model. First correct the stale handoff wording
+that still asks for a model switch, then publish the resumed checkpoint and
+execute the bounded headless/one-thread 320x180 preview and ffprobe gates.
+Preserve scenes, trajectory inputs and prior failure evidence; keep generated
+outputs outside Git. Continue authorizes the scoped commit and push. Stop on
+the recorded missing-tool, checker, timeout, crash, invisible-geometry or
+format-failure conditions and recommend Astra/high for any unresolved retry or
+build/format decision.

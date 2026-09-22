@@ -1,6 +1,6 @@
 # Current session handoff
 
-Last updated 2026-09-21 (America/New_York; 2026-09-22 UTC) for R168.
+Last updated 2026-09-21 (America/New_York; 2026-09-22 UTC) for R169.
 **PC/WSL `daisy` owns the repository.** R161's published Mac release and R162's
 receipt completed the transfer; R164 completion is published in `97d9fcf`.
 R168's bounded comparison passed: the same installed default POV-Ray
@@ -9,8 +9,8 @@ R168's bounded comparison passed: the same installed default POV-Ray
 R167's failed run had display enabled; the crash cause remains unisolated
 because thread count and resolution also changed. The comparison is complete;
 the R167 preview lifecycle remains open at the prescribed decision checkpoint.
-No sequence, encode or ffprobe check ran. Recommend Luna/medium for the
-proposed headless preview below; no Mac work or rebuild is needed.
+No sequence, encode or ffprobe check ran. GPT-5.6 Luna/medium is selected for
+the bounded headless preview below; no Mac work or rebuild is needed.
 [Commands, hashes and observed results](docs/rendering/POVRAY_PC_R168_COMPARISON.md).
 
 The Mac renderer repair is complete historical evidence, not a pending task.
@@ -72,11 +72,11 @@ and physical-work limits remain unchanged.
 | Owner | PC/WSL `daisy`; Mac `fire.lan` released after published R161 handoff and R162 receipt. |
 | Checkout | `/home/rharris/git/navier-stokes-vortex-lab`. |
 | Branch/upstream | `main` / `origin/main` |
-| Starting state | R168 started clean at `b5215b5`; clean fast-forward pull up to date, HEAD = origin/main; stashes empty. |
+| Starting state | R169 started clean at `f0c6937`; clean fast-forward pull up to date, HEAD = origin/main; stashes empty. |
 | Interpreter | `/home/rharris/git/navier-stokes-vortex-lab/.venv/bin/python`, CPython 3.12.14 with NumPy 2.5.3 |
 | Other owner/process | Mac `fire.lan` released in the published R161 handoff; no PC child process remains. |
-| Task processes | R168 sphere and project children exited 0; no POV-Ray process visible in the final local check. |
-| Delivery state | R167 interruption published in `b5215b5`; R168 resume published in `7cb90e4`; comparison result prepared for scoped publication. |
+| Task processes | R168 sphere and project children exited 0; no POV-Ray process visible before R169 launch. |
+| Delivery state | R167 interruption published in `b5215b5`; R168 resume/result published in `7cb90e4`/`f0c6937`; R169 start publication is pending. |
 
 ## Current result and limits
 
@@ -207,10 +207,9 @@ agent-side POV-Ray backtraces are unavailable.
 
 ## Next task
 
-Recommended next task: switch to **GPT-5.6 Luna / medium** and say **Continue**
-on PC/WSL `daisy` to accept the proposed explicit-headless preview settings.
-R168 stops before that decision; no preview retry occurred in R168. Resume
-the open R167 lifecycle with a RESUMED event, not a duplicate STARTED record.
+Current task: execute the proposed explicit-headless preview settings under
+**GPT-5.6 Luna / medium**. R169 has resumed the open R167 lifecycle with a
+RESUMED event, not a duplicate STARTED record.
 
 1. Follow the clean synchronization/ownership/publication protocol. Activate
    `.venv`, confirm `/usr/local/bin/povray` against the R168 hash and check
