@@ -1,0 +1,3 @@
+# Optional exact symbolic research checks; independent of the movie/FEM stacks.
+sympy==1.14.0
+mpmath==1.3.0

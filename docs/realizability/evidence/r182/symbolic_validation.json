@@ -1,0 +1,30 @@
+{
+  "status": "passed",
+  "python": "3.12.14",
+  "sympy": "1.14.0",
+  "checks": [
+    "meridional incompressibility",
+    "raw swirl time derivative",
+    "raw swirl radial diffusion",
+    "unwindowed swirl balance",
+    "all-cutoff deficit formula",
+    "central plateau deficit",
+    "radial transition formula",
+    "axial transition formula",
+    "cutoff derivative factorization",
+    "cutoff value at 0",
+    "cutoff derivative 1 at 0",
+    "cutoff derivative 2 at 0",
+    "cutoff value at 1",
+    "cutoff derivative 1 at 1",
+    "cutoff derivative 2 at 1",
+    "exact cutoff integral",
+    "axial advection integration by parts",
+    "radial advection integration by parts",
+    "radial viscous integral is face torque",
+    "angular momentum storage integrand",
+    "positive required torque under stated assumptions"
+  ],
+  "reference_numerical_evaluation": false,
+  "scope": "symbolic identities only; no stress realizability or boundary reachability claim"
+}

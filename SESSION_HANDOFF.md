@@ -1,23 +1,23 @@
 # Current session handoff
 
-Last updated 2026-09-22 (America/New_York) for R181.
+Last updated 2026-09-22 (America/New_York) for R182–R184.
 **PC/WSL `daisy` owns the repository.** R161/R162 completed the Mac release
-and PC receipt. R180's conceptual/modal review is published in `382e7f2`.
-R181 derives the finite annular angular-momentum balance, gives an incompressible
-counterexample with identical midplane observables but different transfer,
-and specifies offline flux/closure and finite-target diagnostics.
-**Next: derive the existing Gaussian reference's angular-momentum deficit
-and whole-support torque compatibility, including its fixed cutoffs.**
+and PC receipt. R181's annular balance/diagnostic was delivered in `262c3e3`.
+R182 derives the Gaussian cutoff deficit and proves that compact internal
+stress cannot supply its increasing total angular momentum while the entire
+prescribed mean and zero exterior flux are retained. Approximate central
+tracking remains open. R183/R184 add optional SymPy reproduction: 21 checks pass.
+STATUS.md now leads with current results, limitations and the immediate task.
+**Next: derive the central-cylinder exchange and surrounding-fluid budget.**
 Retain GPT-6 Astra / high reasoning / PC-WSL `daisy`; no model/platform switch.
 The Gaussian benchmark remains a surrogate. Its 300 s preparation, 10 mm →
 3 mm / 100 s tracking and tolerances remain proposals. No paper witness,
 response gain, mechanism verdict or attained contraction was computed.
 Strict wall sensing remains the baseline; interior CFD/PIV is validation truth.
 B2 accuracy remains failed and q64/q96 unused. R021 launch integration remains
-deferred. R181 start publication `1fbd681` succeeded after approved host retry
-for Git/network sandbox restrictions. Completion publication is prepared;
-actual delivery hash/result follows in the final response. PC retains ownership;
-no numerical/render/FEM workload launched.
+deferred. R182 start publication is `0dde461`. R182–R184 completion is recorded
+in the logs; consult Git history/final response for its delivery commit and
+push result. PC retains ownership; no numerical/render/FEM workload launched.
 R168's bounded comparison passed: the same installed default POV-Ray
 3.7.0.10.unofficial rendered the unchanged sphere and project frame 1 at
 160x120 with explicit `-d +WT1 -J`. Both exited 0 and produced visible geometry.
@@ -92,11 +92,12 @@ and physical-work limits remain unchanged.
 | Owner | PC/WSL `daisy`; Mac `fire.lan` released after published R161 handoff and R162 receipt. |
 | Checkout | `/home/rharris/git/navier-stokes-vortex-lab`. |
 | Branch/upstream | `main` / `origin/main` |
-| Starting state | R181 began clean at `382e7f2`; required fast-forward pull already up to date, HEAD = fetched origin/main, empty stashes, no incoming commits. |
+| Starting state | R182 began clean at `262c3e3`; required fast-forward pull already up to date, HEAD = fetched origin/main, empty stashes, no incoming commits. |
 | Interpreter | `/home/rharris/git/navier-stokes-vortex-lab/.venv/bin/python`, CPython 3.12.14 with NumPy 2.5.3 |
-| Other owner/process | Mac `fire.lan` released in the published R161 handoff; R181 launched no task workload child. Local Git cannot inspect another checkout's unpublished state. |
-| Task processes | R181 launched only source/documentation inspection and validation commands; no numerical/render/encode/FEM workload child. |
-| Delivery state | R181 STARTED published in `1fbd681`; five-file documentation completion prepared, actual final commit/push follows in the final response. |
+| Other owner/process | Mac `fire.lan` released in the published R161 handoff. Local Git cannot inspect another checkout's unpublished state. |
+| Task processes | R182–R184 ran source/documentation checks, temporary package installation and exact symbolic verification; commands exited, no numerical/render/encode/FEM workload child. |
+| Symbolic environment | `/tmp/navier-r183-sympy/bin/python`, Python 3.12.14, SymPy 1.14.0, mpmath 1.3.0; recreate using `requirements-symbolic.txt` if missing. Existing environments unchanged. |
+| Delivery state | R181 delivery verified in fetched upstream; R182 STARTED published in `0dde461`. R182–R184 completion is in the logs; final response/Git history records actual delivery. PC retains ownership. |
 
 ## Current result and limits
 
@@ -227,65 +228,62 @@ agent-side POV-Ray backtraces are unavailable.
 
 ## Next task
 
-**Derive the Gaussian reference's required angular-momentum transfer and its
-whole-support compatibility condition.** R181 completed the general balance,
-counterexample and diagnostic in [benchmark Sections 7.5–7.7](BOUNDARY_CONTROL_HANDOFF.md#75-finite-annular-angular-momentum-balance).
-This next step is one symbolic necessary-condition calculation using the
-existing [Section 5.1 reference](BOUNDARY_CONTROL_HANDOFF.md#51-reference-field-implemented-separately-from-track-a),
-not a paper-witness implementation or numerical experiment.
+**Derive the central-cylinder angular-momentum exchange and the compensating
+surrounding-fluid budget.** R182 completed the whole-support necessary-condition
+calculation in [benchmark Section 7.8](BOUNDARY_CONTROL_HANDOFF.md#78-gaussian-reference-deficit-and-whole-support-compatibility).
+Its exact-field obstruction leaves central matching with a different exterior
+open. The next step makes that distinction quantitative without changing the
+reference or selecting a controller.
 
 **Model / reasoning level / platform: GPT-6 Astra / high / PC-WSL `daisy`.**
-Retain the current model and machine. The session catalog and freshly checked
-[official Astra documentation](https://developers.openai.com/api/docs/models/gpt-6-astra)
-support this model/effort. Task fit is judgment, not a speed, quota or account-
-access claim. Use [Luna/medium](https://developers.openai.com/api/docs/models/gpt-5.6-luna)
-only for a later fully specified mechanical implementation, with checks and
-stops; return to Astra/high for unresolved mathematical/numerical interpretation.
-No model switch or future session launch occurred.
+Retain the current model and machine. The session catalog and official
+[Astra documentation](https://developers.openai.com/api/docs/models/gpt-6-astra)
+confirm high reasoning support; research-task fit is judgment, not a speed,
+quota or account-access claim. Use [Luna/medium](https://developers.openai.com/api/docs/models/gpt-5.6-luna)
+only for a later fully specified mechanical task; unresolved mathematical or
+numerical interpretation returns to Astra/high. No switch or future session
+launch occurred.
 
-1. Substitute the existing divergence-free Gaussian mean and its fixed f(r),
-   g(z) cutoffs into Section 7.7's D* with f_adm,theta=0. Use symbolic
-   derivatives, retain every cutoff term and the existing b(t), a(t), Gamma,
-   time interval and viscosity. Distinguish core, radial transition and axial
-   transition; check units/signs and the cutoff-free swirl balance.
-2. Derive the volume-integrated compatibility condition if an added
-   perturbation stress is compactly supported inside a region enclosing the
-   reference. Compare the required net transfer with the time derivative of
-   total reference angular momentum and all external surface terms. State
-   whether internal redistribution alone can meet that necessary condition,
-   and what nonzero boundary torque/transport would have to supply instead.
-   Do not confuse this exact mean-field obstruction with failure of approximate
-   central-feature tracking, or assume a realizable stress/command from a
-   satisfied integral identity.
-3. Record the result and one concrete next scientific decision/calculation in
-   the existing benchmark, update status/log/handoff and publish through the
-   Continue protocol. Keep the paper-specific target gaps explicit: finite
-   profiles/mean corrections, derivative-aware truncation error, comparison
-   axial extent and angular-impulse budgets remain unspecified.
+1. Use a fixed diagnostic cylinder 0 <= r <= 0.025 m, |z| <= 0.025 m,
+   entirely inside the Gaussian plateau. This is an offline control volume,
+   not a new sensor, wall, or change to the existing midplane features.
+   Derive H_c*, side/endcap mean fluxes and viscous torque symbolically;
+   verify dH_c*/dt = -Phi_mean,c* + T_visc,c* and zero net required
+   perturbation contribution. Retain individual faces and their signs.
+2. Partition a larger fixed enclosing cylinder into that core and surrounding
+   fluid. Let only the central mean be prescribed; derive the required change
+   in surrounding angular momentum in terms of net external angular impulse.
+   State the zero-external-input case and the preparation dependence. If a
+   bound on exterior velocity error is useful, derive it symbolically from
+   Cauchy–Schwarz with its volume/radius weight; introduce no numerical budget
+   or approved tolerance. Do not assume an arbitrary reservoir is reachable.
+3. Relate the result to the existing selected-feature objective. Separate exact
+   central-profile matching from approximate features, necessary integral
+   compatibility from stress realizability, and both from boundary reachability.
+   Record one concrete next scientific task in benchmark/status/logs/handoff.
 
-Completion means a checkable symbolic D* and whole-support compatibility
-result with a precise surrogate-specific claim. Stop before reference numerical
-evaluation, finite paper extraction/implementation, FEM/JIT, solver/controller
+Completion means checkable symbolic face/storage and surrounding-fluid balances
+with precise assumptions and scoped interpretation. Reuse or extend the optional
+[SymPy check](docs/realizability/evidence/r182/README.md) where useful; dependency
+changes are allowed when justified (R184). Stop before reference numerical
+sampling, finite paper extraction/implementation, FEM/JIT, new solver/controller
 code, hardware/sensor choices, rendering or physical execution. No new numerical
 allowance; do not restart completed toys. Next prompt: **Continue**.
 
-R021 launch integration stays deferred. Its unchanged R021/R033/R070 evidence
-and accuracy prerequisite remain in the benchmark's
-[accuracy section](BOUNDARY_CONTROL_HANDOFF.md#10-one-accuracy-prerequisite-and-one-subsequent-task).
-B2 remains failed; q64/q96 remains unused. No production method, resource limit,
-scientific tolerance or once-only allowance changes. Later physical work must
-first resolve numerical accuracy and apply R103/R104 practical safeguards.
+R021 launch integration stays deferred. B2 accuracy remains failed; q64/q96 is
+unused. No production method, resource limit, scientific tolerance or once-only
+allowance changes. Later physical work must first resolve numerical accuracy
+and apply R103/R104 practical safeguards.
 
-R181 changed only BOUNDARY_CONTROL_HANDOFF.md, STATUS.md, SESSION_HANDOFF.md,
-REQUEST_LOG.md and WORK_SESSIONS.md. Manual source/algebra review covered
-cylindrical curvature, units, all face signs, incompressibility, counterexample
-flux/volume agreement and special cases. Documentation validation and delivery
-are recorded in the logs/final response. No workload child launched.
-Remaining decisions: finite paper target/error, axial comparison interval and
+R182–R184 changed the benchmark, status, handoff and both logs, plus optional
+symbolic dependencies and three small reproducibility files under
+`docs/realizability/evidence/r182/`. Checks: 21 exact SymPy identities, manual
+units/signs/axis/face review and documentation validation. No numerical or
+physical workload child launched; installation/check commands exited.
+Remaining choices: finite paper target/error, axial comparison interval and
 angular-impulse tolerances, engineering budgets, optical feedback allowance and
-eventual hardware/noise limits. Strict wall sensing is unchanged.
-The preview remains complete in `6deb9d0`; preserve its local MP4 for the user's
-independent viewing. No rerender or Mac transfer is needed.
+hardware/noise limits. Strict wall sensing is unchanged. The preview remains
+complete in `6deb9d0`; no rerender or Mac transfer is needed.
 
 ### Note for the next Mac session
 

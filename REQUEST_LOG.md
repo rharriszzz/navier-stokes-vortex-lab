@@ -5515,3 +5515,93 @@ Required fast-forward pull already up to date; equal fetched tips at
 262c3e3b4a110776075219edccebf333536904ef confirm R181 delivery is in upstream.
 No transfer/open lifecycle conflict found; local Git cannot reveal unpublished
 work or processes on another checkout. Publish STARTED before substantive work.
+
+## R183 — 2026-09-22 (America/New_York) — Make SymPy available for the active derivation
+
+**User wording:** “You or I can get sympy for you.”
+
+**Scope/status:** Started during R182. Install SymPy in an isolated temporary
+Python 3.12 environment and use it for exact symbolic validation of R182's
+derivation. Preserve project requirements and existing environments. No
+numerical reference evaluation, CFD or physical workload is authorized by
+this addition. R182 lifecycle/publication remains active; this is a supporting
+request, not a duplicate Continue lifecycle. Identity/owner remain rharris on
+PC/WSL daisy; only R182's benchmark edit is pending and stashes remain empty.
+
+## R184 — 2026-09-22 (America/New_York) — Permit useful dependency changes
+
+**User wording:** “But I am happy to change the dependencies whenever it is useful.”
+
+**Scope/status:** Started during R182/R183. Treat dependency changes as allowed
+when useful; add an optional pinned symbolic-research dependency file and
+reproduction instructions for the successful SymPy check. Keep visualization
+installation requirements focused on that pipeline. This updates R183's
+initial preference to avoid any project dependency declaration; no solver or
+scientific assumption changes. Include the small reproducibility artifacts in
+R182's scoped completion publication.
+
+**R182 outcome (2026-09-22 America/New_York):** Complete. STATUS.md was
+scientifically current through R181, but its publication note was stale and
+the current result/next task were buried. It now opens with a short progress
+table, records verified R181 delivery `262c3e3`, includes the new R182 result
+and replaces repetitive check history with evidence/log links. The handoff
+opening, owner table and single next task agree. Prior request/work records
+and the status report's scientific goal/evidence body are preserved.
+
+Benchmark Section 7.8 derives the exact Gaussian angular-momentum deficit,
+retaining every fixed cutoff derivative, with separate core/radial/axial cases.
+The plateau satisfies the swirl equation; total windowed-reference angular
+momentum strictly increases. Compact internal perturbation stress supplies
+zero enclosing net transfer, so it cannot sustain that exact whole mean with
+zero exterior mean transport/viscous torque and zero volume torque. Noncompact
+transfer, external torque or a changed surrounding mean are distinguished.
+This is a precise necessary-condition obstruction, not a general impossibility
+of approximate central tracking or a paper-specific mechanism verdict.
+
+**R183 outcome:** Complete. Neither existing Python environment had SymPy.
+Created `/tmp/navier-r183-sympy` with Python 3.12.14. The initial pip invocation
+failed on sandbox DNS/network restrictions; approved host retry installed
+SymPy 1.14.0 and mpmath 1.3.0. All 21 exact symbolic checks pass, including
+independently differentiated deficit, cutoff restrictions and whole-support
+integration-by-parts identities. No numerical reference evaluation ran.
+
+**R184 outcome:** Complete. Useful dependency changes are permitted. Added
+`requirements-symbolic.txt` with the observed optional versions and retained
+`docs/realizability/evidence/r182/{README.md,check_symbolic.py,symbolic_validation.json}`
+for reproduction. The declared dependency is useful for this symbolic research;
+no existing visualization/FEM environment was changed. `pip check` passed.
+
+Changed files: BOUNDARY_CONTROL_HANDOFF.md, STATUS.md, SESSION_HANDOFF.md,
+REQUEST_LOG.md, WORK_SESSIONS.md, requirements-symbolic.txt and the three R182
+evidence files above (nine files total). Checks passed: clean required
+fast-forward sync/equal fetched tips, ownership/stashes; required track/source
+review; 21 exact symbolic checks; manual units, signs, regular axis and enclosing
+face review; 68 local links/anchors, Markdown fences, 184 unique request IDs,
+both append-only log prefixes against base and start publication, all 19 R033
+production/configuration pins, unchanged reference/configuration and visualization
+requirements, preserved benchmark Sections 3–7.4 and 8–10, preserved STATUS
+scientific body, nine-file scope and whitespace. Disposable documentation
+check: `/tmp/r182_validate.py`, `/tmp/r182_validation.json`. Final post-append
+and staged validation follows; no unrun numerical tests claimed.
+
+Sources: existing reference/configuration and benchmark balance; primary
+Gallay–Maekawa introduction checked for the stationary Gaussian/strain baseline.
+The time-dependent cutoff calculation is our derivation. OpenAI Docs skill
+rechecked official Astra/high and Luna/medium support; task fit is judgment,
+not account availability/quota or performance verification. No model switch.
+
+Skips: reference numerical sampling, paper witness extraction, FEM/JIT,
+solver/controller, hardware/sensor selection, trajectory/render/encode and
+physical experiments. Inspection, installation and symbolic commands exited;
+no numerical/physical workload child launched. B2 failed, q64/q96 unused,
+R021 integration deferred; no scientific threshold or allowance changes.
+
+Next: retain Astra/high on PC/WSL daisy; derive the plateau cylinder's separate
+side/endcap angular-momentum budget and compensating surrounding-fluid impulse
+when only the central mean is prescribed. Exact symbolic result only; stop
+before numerical/physical or solver/controller work. Remaining decisions:
+finite paper mean/error, axial interval/impulse tolerance, engineering budgets,
+optical feedback and hardware/noise limits. Strict wall sensing remains the
+baseline. Start publication `0dde461` succeeded; scoped completion publication
+is prepared. Actual delivery hash/push outcome follows in the final response.
+PC retains ownership, released: no. No post-push log edit. Next prompt: Continue.

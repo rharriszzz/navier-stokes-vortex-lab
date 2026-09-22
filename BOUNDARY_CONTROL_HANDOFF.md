@@ -1,19 +1,20 @@
 # Boundary-control research handoff
 
-Revised 2026-09-22 (America/New_York), R181, from repository `382e7f2`.
+Revised 2026-09-22 (America/New_York), R182, from repository `262c3e3`.
 The original specification remains in Git history; implemented formulas and
 scientific thresholds below are retained unless explicitly labelled proposals.
 
 ## Start here
 
-**R181 result:** [Sections 7.5–7.7](#75-finite-annular-angular-momentum-balance)
-derive the finite annular angular-momentum budget, give an incompressible
-counterexample to midplane-feature sufficiency, and specify offline stress-flux
-closure and target tests. A nonzero correlation alone cannot establish the
-needed transfer. The [next task](SESSION_HANDOFF.md#next-task) applies the
-balance symbolically to the Gaussian reference, including its cutoffs and
-whole-support torque compatibility. Section 10's launch integration remains
-deferred. R177's benchmark assumptions and numerical gates are unchanged.
+**R182 result:** [Section 7.8](#78-gaussian-reference-deficit-and-whole-support-compatibility)
+derives the Gaussian reference's angular-momentum deficit with every fixed
+cutoff term. Its central plateau needs no perturbation contribution to the
+swirl balance, but its total angular momentum increases. Compact internal
+stress cannot supply that net increase while the entire prescribed mean and
+its zero exterior flux are retained. This exact-field obstruction does not
+exclude approximate central-feature tracking. The [next task](SESSION_HANDOFF.md#next-task)
+derives the central-volume exchange and surrounding-fluid budget. Section 10's
+launch integration remains deferred; benchmark assumptions/gates are unchanged.
 
 **Proposed benchmark: prepare a vortex from rest using the cylinder boundary,
 then track the existing 10 mm → 3 mm Gaussian reference for 100 s, while testing
@@ -1074,14 +1075,178 @@ stress target. Therefore this session reaches a research boundary without a
 numerical mechanism verdict or a new numerical allowance. B2 remains failed,
 q64/q96 unused, and all existing Section 9/B2 criteria remain unchanged.
 
-**Next scientific calculation:** apply this balance symbolically to the
-existing Gaussian reference and its fixed cutoffs. Derive D* in the core and
-transition regions, and the whole-support angular-momentum compatibility
-condition for a compactly supported perturbation stress with no volume torque.
-Determine what can be redistributed internally and what requires external
-boundary transport/torque. This is a surrogate-specific necessary-condition
-check, not paper-witness extraction or a numerical feasibility test. See the
-single [next task](SESSION_HANDOFF.md#next-task) for completion criteria/stops.
+R182 applies this diagnostic symbolically to the existing Gaussian reference
+below. It supplies a surrogate-specific necessary condition, not a numerical
+mechanism verdict or paper-witness extraction.
+
+### 7.8 Gaussian reference deficit and whole-support compatibility
+
+**Result.** The unwindowed central Gaussian satisfies its angular-momentum
+equation without added perturbation stress. The fixed spatial windows change
+that result: the reference has increasing total angular momentum, although
+its enclosing surface carries no mean transport or viscous torque. Thus no
+compactly supported perturbation stress can sustain this **exact whole mean**
+with zero volume torque. Boundary control of approximate central features
+remains a separate, open problem.
+
+This is a direct derivation from [reference.py](realizability/reference.py),
+[config.py](realizability/config.py) and Sections 5.1/7.5–7.7. Retain the
+100 s tracking interval, 10 mm → 3 mm core, constant positive Gamma, nominal
+nu = 1e-6 m²/s and rho = 1000 kg/m³. Time t here is reference tracking time,
+not the preceding proposed preparation interval. No reference values are
+numerically evaluated in this calculation.
+
+**Fixed windows and raw swirl.** Write B(t) = b(t)², c = Gamma/(2*pi),
+E = exp(-r²/B), h = 1-E. Then
+
+```text
+B = [r0² + (rf²-r0²)*t/T]/q,  Bdot = (rf²-r0²)/(T*q) < 0
+a = (4*nu-Bdot)/(2*B),  L* = c*f*g*h
+U_r* = -a*r*f*(g+z*g'),  U_z* = a*z*(2*f+r*f')*g
+h_t = -r²*E*Bdot/B²,  h_r = 2*r*E/B
+h_rr-h_r/r = -4*r²*E/B²
+h_t-a*r*h_r-nu*(h_rr-h_r/r)
+  = -(r²*E/B²)*(Bdot+2*a*B-4*nu) = 0.
+```
+
+The last line is the cutoff-free swirl check; it follows from the configured
+strain law. It is consistent with the straining Gaussian/Burgers baseline
+in Section 3.3; see [Gallay and Maekawa, introduction](https://arxiv.org/html/1002.2489#S1)
+for the stationary Gaussian and linear strain. The time-dependent and cutoff
+identities here are derived for this repository's reference, not taken as a
+bounded-domain existence result from that paper.
+
+For clarity, all cutoff derivatives are fixed spatial derivatives. Put
+R_p = 0.04 m, R_s = 0.08 m, Z_p = 0.05 m, Z_s = 0.12 m and
+
+```text
+W(v) = 1-10*v³+15*v⁴-6*v⁵
+W'(v) = -30*v²+60*v³-30*v⁴
+W''(v) = -60*v+180*v²-120*v³.
+```
+
+In the radial transition, v = (r-R_p)/(R_s-R_p), f = W(v),
+f' = W'(v)/(R_s-R_p), f'' = W''(v)/(R_s-R_p)².
+In the axial transition, w = (|z|-Z_p)/(Z_s-Z_p), g = W(w),
+g' = sign(z)*W'(w)/(Z_s-Z_p), g'' = W''(w)/(Z_s-Z_p)².
+Each window is one on its plateau and zero outside its support; its first
+and second derivatives vanish there and at both joins. The absolute value
+causes no axis-plane singularity because g is constant near z = 0. The C2
+swirl and its derivatives introduce no distributional surface torque.
+
+**Required local contribution.** Set f_adm,theta = 0 in Section 7.7.
+Substituting L* and the divergence-free meridional mean gives the direct form
+
+```text
+D*/c = f*g*h_t
+       - a*r*f*(g+z*g')*g*(f'*h+f*h_r)
+       + a*z*(2*f+r*f')*g*f*g'*h
+       - nu*{g*[f*(h_rr-h_r/r)+2*f'*h_r+(f''-f'/r)*h]
+              + f*g''*h}.
+```
+
+Using the raw-swirl identity above cancels the baseline terms. The mixed
+f'*g' advection terms cancel each other, leaving
+
+```text
+D*/c = a*r*f*g*[1-f*(g+z*g')]*h_r
+       + a*f*g*(2*z*f*g'-r*f'*g)*h
+       - nu*{2*f'*g*h_r + g*(f''-f'/r)*h + f*g''*h}.
+```
+
+No a-dot term belongs in this azimuthal component: L* depends on B and
+constant Gamma, while a enters meridional advection. The other momentum
+components have additional requirements and are not solved by this identity.
+Every term in D* has units m²/s²; multiplying its volume integral by rho
+gives torque. Smooth axis limits apply: h = O(r²), h_r = O(r), and f' is
+identically zero near r = 0, so D* = O(r²) there.
+
+| Region | D*/c |
+|---|---|
+| Central plateau, f = g = 1 | `0` |
+| Radial transition with g = 1 | `a*r*f*(1-f)*h_r - a*r*f*f'*h - nu*[2*f'*h_r+(f''-f'/r)*h]` |
+| Axial transition with f = 1 | `a*r*g*(1-g-z*g')*h_r + 2*a*z*g*g'*h - nu*g''*h` |
+| Both transitions | Full expression above; neither one-transition formula suffices |
+| Outside either support | 0 |
+
+For exact mean matching, C = D* would be required. D* = 0 in the plateau
+does not imply zero individual fluxes or zero Q; it requires zero perturbation
+flux divergence there. No pointwise sign is asserted in the transitions.
+
+**Whole-support compatibility.** Enclose both mean and proposed compact
+perturbation stress in a fixed coaxial cylinder V_e, with radius R_e > R_s
+and half-height Z_e > Z_s (within the tank). The axis is included by its
+regular limit. The exact reference and its swirl gradients vanish near the
+enclosing faces. Consequently Phi_mean* = T_visc* = 0 there. Pressure supplies
+no axial torque through these cylindrical/horizontal faces. Define
+
+```text
+G = integral_-Zs^Zs g(z) dz = Z_p+Z_s > 0
+H*(t) = rho*Gamma*G * integral_0^Rs r*f(r)*[1-exp(-r²/B(t))] dr
+dH*/dt = -rho*Gamma*G*(Bdot/B²)
+          * integral_0^Rs r³*f(r)*exp(-r²/B) dr > 0.
+```
+
+The expression for G uses integral_0^1 W(v) dv = 1/2, exactly. All factors
+fix the strict sign: Gamma > 0, B > 0, Bdot < 0, and f is nonnegative and
+positive on a nonempty radial interval. For any t_b > t_a in the tracking
+window, the required net angular impulse is therefore
+
+```text
+Delta H* = rho*Gamma*G * integral_0^Rs r*f(r)
+           * [exp(-r²/B(t_a))-exp(-r²/B(t_b))] dr > 0.
+```
+
+On any enclosing cylinder the general compatibility condition, with zero
+volume torque, is
+
+```text
+integral_Ve rho*D* dV = dH*/dt + Phi_mean* - T_visc*
+                     = -Phi_pert.
+```
+
+For the stated whole reference the left side is dH*/dt > 0. Compact support
+strictly inside V_e makes Q_r = Q_z = 0 on its faces and hence Phi_pert = 0:
+a contradiction. Internal interfaces cancel when cells are summed; arbitrarily
+large internal correlations cannot repair the missing total. Zero angular mean
+perturbations contribute no separate total angular momentum, since that
+quantity is linear in u_theta. Initial preparation cannot change the mismatch
+in the prescribed derivative during tracking.
+
+If compact stress support is relaxed while the mean is fixed on V_e, the
+necessary inward perturbation transfer is -Phi_pert = dH*/dt. If the exterior
+mean/traction is allowed to change, the more general requirement is
+
+```text
+-Phi_mean - Phi_pert + T_visc = dH/dt,  T_vol = 0.
+```
+
+At an actual impermeable tank wall the advective fluxes vanish, so wall shear
+torque must supply a positive total increase. At a porous boundary, angular
+momentum can also arrive with through-flow; zero net volume flow does not
+remove that transport. A wall velocity alone is not a known torque. Applying
+nonzero wall traction while insisting on the reference's zero velocity and
+zero gradients near every wall is inconsistent with exact full-field matching.
+
+Allowing the surrounding mean to depart from the reference also permits an
+interior region to gain momentum at the expense of a surrounding reservoir.
+This is precisely why the result does **not** rule out the proposed central
+features, central-profile approximation, or every boundary-driven contraction.
+No realizable stress, boundary command, numerical accuracy, or paper-specific
+mechanism is established by satisfying one integral identity. A finite paper
+target still needs its mean/corrections, derivative error, axial interval and
+angular-impulse budgets. B2 remains failed and q64/q96 unused.
+
+Verification: [retained symbolic evidence](docs/realizability/evidence/r182/README.md)
+records 21 passing exact SymPy checks, the optional dependency versions and
+reproduction commands. Manual checks additionally cover units, face signs,
+axis limits and the scope of the necessary-condition claim.
+
+**Next scientific calculation:** derive the exchange budget of a fixed central
+cylinder entirely inside the plateau, separating side and endcap transport,
+and the compensating surrounding-fluid/angular-impulse budget when only the
+central target is retained. See the single [next task](SESSION_HANDOFF.md#next-task)
+for the precise geometry, checks and stopping point.
 
 ## 8. Strict boundary measurement and independent truth
 

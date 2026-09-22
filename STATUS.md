@@ -1,9 +1,16 @@
 # Project status: a boundary-controlled engineering approximation
 
-Updated 2026-09-22 (America/New_York), R171–R181. PC/WSL `daisy` owns the
-repository. This assessment uses current source, saved experiment records and
-the motivating paper; it launches no simulation or rendering workload.
-The single [next task](SESSION_HANDOFF.md#next-task) is recorded in the handoff.
+Updated 2026-09-22 (America/New_York), through R184. PC/WSL `daisy` owns the
+repository. Latest work: a symbolic reference calculation and status review;
+no new fluid simulation or rendering run.
+
+| Current question | Answer |
+|---|---|
+| What works? | The illustrative animation pipeline, saved-data checks and separate reference/analysis tools. |
+| Is the engineering goal demonstrated? | No validated boundary-driven contraction or boundary-only state estimator exists yet. |
+| What did the latest step establish? | The exact windowed Gaussian mean needs net angular-momentum input that compact internal stresses cannot supply. This leaves approximate central-feature tracking open. [Derivation](BOUNDARY_CONTROL_HANDOFF.md#78-gaussian-reference-deficit-and-whole-support-compatibility). |
+| What blocks trusted numerical control results? | B2 still fails its independent response-accuracy comparison; q64/q96 remains unrun. |
+| What is next? | Derive the central-cylinder exchange and surrounding-fluid budget. Follow the single [next task](SESSION_HANDOFF.md#next-task); no solver run or movie retry is next. |
 
 ## Goal and present conclusion
 
@@ -365,9 +372,22 @@ No paper-specific mechanism verdict is possible yet: target mean/corrections,
 derivative error, axial comparison interval and angular-impulse budgets are
 missing. No new numerical result or sensing permission is claimed.
 
-The single [next task](SESSION_HANDOFF.md#next-task) is to derive the Gaussian
-reference's required angular-momentum transfer and whole-support compatibility
-condition, including its fixed cutoffs. Use **GPT-6 Astra / high / PC-WSL daisy**.
+R182 derives the [Gaussian deficit and whole-support compatibility](BOUNDARY_CONTROL_HANDOFF.md#78-gaussian-reference-deficit-and-whole-support-compatibility).
+The central plateau satisfies the swirl balance without a perturbation
+contribution. Across the full fixed support, however, total reference angular
+momentum increases while its enclosing mean flux and viscous torque vanish.
+Compact internal perturbation stresses cannot supply that increase. This
+rules out the specified exact whole-mean match without external transfer or
+torque; it does not rule out central tracking with a different surrounding
+flow. No paper-specific or general boundary-control impossibility is claimed.
+R183 supplied SymPy; R184 permits useful dependency changes. All 21 exact
+[symbolic checks](docs/realizability/evidence/r182/README.md) pass, with optional
+pinned dependencies and a retained reproduction script.
+
+The single [next task](SESSION_HANDOFF.md#next-task) is to derive the central
+cylinder's side/endcap exchange and compensating surrounding-fluid budget.
+Retain **GPT-6 Astra / high / PC-WSL daisy**; the linked handoff records the
+model guidance and scope.
 Stop before numerical evaluation, solver/controller code or hardware/sensor
 selection. R021 launch integration stays deferred; its accuracy diagnostic,
 completed R033 prerequisites and R070 repairs remain relevant. B2 is still
@@ -379,7 +399,8 @@ credible hardware/noise limits. Strict boundary measurement support remains
 the baseline. None of these changes the unchanged B2 accuracy diagnostic.
 The rendering repair/preview is complete in `6deb9d0`; R170–R176's assessment
 was delivered in `22cf3d7`. R177 was delivered in `72065c6`; R178–R179 in
-`8aa9245`; R180 in `382e7f2`. No preview retry or Mac work is required.
+`8aa9245`; R180 in `382e7f2`; R181 in `262c3e3`, verified in fetched upstream
+at R182 start. No preview retry or Mac work is required.
 
 The [R103/R104 practical supervision policy](docs/realizability/B2_MONITOR_PRACTICAL_SUPERVISION_POLICY.md)
 retains limits, cleanup and honest incomplete-result reporting while removing
@@ -401,44 +422,23 @@ remain linked from the [handoff](SESSION_HANDOFF.md) and
 
 ## Evidence and checks for this update
 
-R171–R174 reviewed source/configuration, existing frame headers, recorded
-R169 acceptance, B2 stability/accuracy/R020/R033 evidence, and the paper's
-Theorem 1.1 and Section 2. The source review also checked the movie's default
-visibility flags, interior hardware markers and separate radius formula.
-R174 additionally checked primary FloWave facility and experimental sources
-and added the timing/phase analogy with its free-surface and sensing limits.
-No new solver test, trajectory integration, renderer, encode, ffprobe, package
-change or physical experiment ran. Documentation validation passed for 32 local
-targets/anchors, unique request IDs, preserved committed request history and
-diff whitespace; historical numerical test passes are not claimed as new runs.
-R176's final publication review passed 33 local link/anchor checks, both
-append-only log-prefix checks, unique request IDs through R176, four-file
-documentation scope and whitespace. Fresh fetch confirmed equal local/upstream
-tips before the authorized documentation commit; staged checks follow.
+The latest result is symbolic. The retained [R182 evidence](docs/realizability/evidence/r182/README.md)
+contains the exact checker, 21 passing identities and reproduction instructions.
+It checks cutoff terms and whole-support cancellations; it does not calculate
+an achieved contraction, actuator command, response gain or paper witness.
+Manual review covers units, signs, axis limits and the scope of the obstruction.
+Documentation checks cover local links/anchors, unchanged scientific baselines,
+append-only logs and whitespace; final counts are recorded in the request log.
 
-R177 reviewed the benchmark against the implemented configuration/reference,
-R020/R021/R033/R070 evidence and R103/R104 policy; it rechecked the primary
-paper and official model guidance. Only the benchmark and four continuity
-documents changed. No numerical workloads, FEM tests, trajectory, render,
-encode, controller, hardware or package work ran. Documentation checks and
-actual delivery are recorded in the request/work logs and final response.
+The earlier results and checks remain in [REQUEST_LOG.md](REQUEST_LOG.md) and
+[WORK_SESSIONS.md](WORK_SESSIONS.md): R169 preview, R171–R176 goal assessment,
+R177 benchmark, R180 modal review and R181 annular diagnostic. Those historical
+numerical/rendering checks were not rerun for this update. R181 completion is
+published in `262c3e3`; the old pending-delivery wording has been corrected.
+R182–R184 completion and actual delivery are recorded in the logs and final
+response/Git history. PC retains ownership.
 
-R179 records the continued research direction and authorizes publication of the
-pending R178 clarification and this recommendation. Only documentation changed;
-metadata checks and delivery are recorded in the logs/final response. PC retains
-ownership. No new paper extraction, numerical result or implementation is claimed.
-
-R180 records the supplied session snapshots with account email redacted and
-missing excerpts identified. Start publication b294a12 succeeded. The bounded
-review changed only the benchmark and four continuity documents. Source,
-algebraic and documentation checks are recorded in the logs; no numerical,
-FEM/JIT, controller, render/encode or package work ran. Completion was delivered in `382e7f2`. PC retains ownership.
-
-R181 recorded the supplied worked-for/token/status excerpts with account email
-redacted and missing /new/intermediate excerpts noted. Start publication
-`1fbd681` succeeded after approved host retry for sandbox Git/network restrictions.
-The bounded symbolic task changed only the benchmark and four continuity
-documents. Algebraic/documentation checks and skips are recorded in the logs;
-no numerical evaluation, FEM/JIT, solver/controller, render/encode, hardware
-or package work ran. Completion publication is prepared; actual delivery hash
-and outcome follow in the final response. PC retains ownership.
+No numerical reference evaluation, FEM/JIT, solver/controller, hardware/sensor,
+trajectory, renderer, encoding or physical experiment ran. The only package
+addition was the user-authorized temporary SymPy environment and optional
+research dependency declaration; visualization and FEM environments are unchanged.
