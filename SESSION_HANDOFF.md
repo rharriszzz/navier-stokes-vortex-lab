@@ -1,9 +1,13 @@
 # Current session handoff
 
-Last updated 2026-09-21 for R109. Mac `fire.lan` validated actual trajectory
-output, but the available MacPorts POV-Ray CLI did not produce a frame within
-the bounded render check. Ownership remains on the Mac for the next separately
-scoped renderer repair/recheck task.
+Last updated 2026-09-21 for R131. The missing optional POV-Ray user
+configuration warning is resolved by an empty
+`/Users/rharris/.povray/3.7/povray.conf`; the file was created only after
+confirming that the path did not exist. The externally executed minimal
+reproduction now exits 0 and emits a valid 64x64 PNG without that warning.
+The restricted agent environment still times out before producing a PNG across
+minimal and project variants, while elevated host execution succeeds; this is
+an execution-context difference, not a project-scene or trajectory conclusion.
 Practical supervision and Mac usability requirements are recorded in the
 [policy](docs/realizability/B2_MONITOR_PRACTICAL_SUPERVISION_POLICY.md).
 The small planning step and the first useful implementation increment are
@@ -11,11 +15,15 @@ complete. R106 delivered a **portable trajectory output checker** that catches
 bad saved frames before rendering, with no new supervision framework. The
 checker is a saved-data validity check, not a runtime or scientific certificate.
 
-Next: diagnose the MacPorts POV-Ray non-rendering state, then rerun one small
-frame and three separated frames under a fresh bounded task. Do not encode a
-movie until those images exist and are inspected. The trajectory generator and
-saved-data checker passed on Mac; this does not establish rendering or movie
-readiness.
+Next: keep the user config file in place and, if visual project output is still
+desired, use **GPT-5.6 Luna/medium** for one known-good centered-object or
+renderer-level comparison before changing project camera/material semantics.
+Do not encode a movie until a centered test object and then frames 1, 120 and
+240 are visibly rendered and inspected. Recommend Astra/high only if the next
+comparison requires a model/format or unexpected renderer-build decision;
+otherwise return to Luna/medium for the small render recheck. Do not pursue
+elevated tracing, an unbounded agent process, FEM, physical or broad benchmark
+work.
 
 ## Owner and checkout
 
@@ -24,11 +32,11 @@ readiness.
 | Owner | Mac `fire.lan`, Darwin/arm64 |
 | Checkout | `/Users/rharris/git/navier-stokes-vortex-lab` |
 | Branch/upstream | `main` / `origin/main` |
-| Starting state | R109 received published R108 delivery `e4f8599`; clean checkout, empty stash list, and HEAD matched upstream before the start record. |
+| Starting state | R131 refreshed `origin/main`; HEAD matched `origin/main` at `b5b067b` before the R131 start record. |
 | Interpreter | `/Users/rharris/miniconda3/envs/navier-stokes-vortex-b1/bin/python`, CPython 3.12.13 |
 | Other owner/process | PC/WSL `daisy` released ownership in R107. Independent Mac POV-Ray build remains user-managed and unverified. |
 | Task processes | R109 generator and bounded POV-Ray attempts exited; no trajectory/workload or background process remains; generated `positions/frame*.inc` is ignored local data. |
-| Delivery state | R109 start published as `ad76511`; completion is pending this final scoped commit/push. |
+| Delivery state | R131 STARTED record published as `a68ae63`; final R131 completion publication is pending. |
 
 ## Current result and limits
 
@@ -75,12 +83,80 @@ script `reproduce_povray_mac.sh` timed out after 10 s and returned 137 after
 separated-frame inspection or encoding ran. This is a renderer/tooling failure,
 not evidence against the trajectory data or a scientific result.
 
+R110 tested the suggested lowercase `-d` headless switch in
+`reproduce_povray_mac.sh`. The minimal 64x64 scene still timed out after 10 s,
+returned 137 under `gtimeout --signal=KILL`, emitted no PNG, and produced the
+same macOS service-connection warnings. Thus the failure is not explained by
+the uppercase/lowercase display switch used in the earlier attempt.
+
+R111 corrected the minimal scene's missing camera angle (`angle 45`), after
+which POV-Ray parsed the scene but still hung until the 10 s kill. The project
+scene also hung under the same lowercase-`-d` command. The reproduction now
+distinguishes scene syntax from the remaining MacPorts/runtime failure.
+
+R113 records a successful interactive Mac reproduction reported by the user,
+with only the `assumed_gamma` warning, and adds the explicit gamma setting.
+The same invocation from this restricted agent environment still timed out;
+this discrepancy is not treated as a Mac capability claim. Interactive project
+rendering remains the next bounded check.
+
+R114 tested environment, startup, headless-flag, output-path and project-scene
+variants in the restricted agent sandbox. All POV-Ray variants were killed by
+the short diagnostic timeout with no PNG, while temporary writes worked and
+the environment exposed an XQuartz `DISPLAY` value but denied process
+listing. R115 prepared a no-timeout interactive launcher; it was not run here.
+
+R116 launched a sandbox POV-Ray child and attempted `sample`; the child was
+alive, but macOS refused inspection with the explicit “try running with sudo”
+message. The child was terminated and cleaned up. This confirms that useful
+backtrace collection is blocked by sandbox observability permissions.
+
+R120 also attempted a bounded `lldb` attach inside the sandbox. It reported
+`attach failed: no such process`, while `sample` again refused process
+inspection. No usable backtrace was obtained; no SIP change was attempted.
+
+R126 ran the minimal reproduction through elevated host execution rather than
+the restricted sandbox with a 300 s timeout. It exited 0, rendered the 64x64
+PNG in approximately 0.001 s with graphic display off, and emitted no
+LaunchServices warnings. This confirms the timeout was sandbox-specific. The
+optional POV-Ray configuration file was absent, but rendering succeeded.
+
+R128 externally rendered frames 1, 120 and 240 after fixing the animation
+selection and three-digit output naming in the bundled script. All three
+renders exited 0 in approximately 0.016–0.019 s at 640x360, but inspection
+found uniform pale images; frame 1 signal statistics were constant across all
+pixels. No movie or ffprobe check ran because visible scene output was not
+established.
+
+R130 externally ran bundled visibility probes. Full, overlay, tracer-only and
+known-sphere camera variants all exited 0 but produced background-only images;
+POV-Ray reported zero successful plane, bounding-box and sphere intersections.
+Display-enabled mode and reversed/canonical camera variants did not change
+that. The evidence rules out the saved trajectory and transparent tank as the
+sole cause, but does not justify changing project scene semantics yet.
+
+R131 confirmed that `/Users/rharris/.povray/3.7/povray.conf` and its parent
+directories were absent, then created only the empty user configuration file.
+The existing external minimal reproduction was rerun with a 300-second bound:
+it exited 0, emitted a valid 64x64 PNG, and no longer printed the missing-user-
+configuration warning. POV-Ray still reports the expected MacPorts
+unofficial-build notice; its trace time was approximately 0.001 seconds.
+No project-scene movie, ffprobe, FEM, physical or broad benchmark work ran.
+
+R117 verified the execution environment as macOS 26.6.2/Darwin arm64 on
+`fire.lan`, user `rharris`, with ordinary command execution and repository/tmp
+write access. The tool sandbox denies `.git` writes, `ps`, unrestricted
+`sysctl`, and `sample` process inspection. These restrictions explain why
+agent-side POV-Ray backtraces are unavailable.
+
 ## Next task
 
-On the Mac, use **GPT-5.6 Luna/medium** for a bounded POV-Ray diagnosis and
-recheck. Run `reproduce_povray_mac.sh` (or its printed command) after checking
-the MacPorts POV-Ray installation and headless/display dependencies. Stop on
-another timeout, missing scene/dependency, or a model/format decision.
+On the Mac, use **GPT-5.6 Luna/medium** for one known-good centered-object or
+renderer-level comparison if the blank project render remains worth pursuing.
+Do not change project camera/material semantics or encode a movie until a
+centered test object is visibly rendered. Recommend Astra/high only if that
+comparison creates a model/format or unexpected renderer-build decision;
+otherwise return to Luna/medium for the small render recheck.
 
 If one tiny frame succeeds, render only frames 1, 120 and 240 at a small
 resolution, inspect all three, and only then encode a small H.264/yuv420p movie

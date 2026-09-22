@@ -1,5 +1,24 @@
 # Project status: physical preparation and a realistic movie
 
+## Current Mac rendering checkpoint — 2026-09-21
+
+R131 removed the repeated POV-Ray user-configuration warning without changing
+render settings: the previously absent `/Users/rharris/.povray/3.7/povray.conf`
+was created as an empty file. The externally executed 64x64 minimal
+reproduction exited 0 and emitted a valid PNG with no missing-config warning;
+the only remaining startup notice is the expected MacPorts unofficial-build
+message. The restricted agent sandbox still behaves differently, so this fix
+does not claim that sandboxed POV-Ray execution is supported.
+
+The Mac trajectory generator and saved-data checker passed for 240 frames and
+500 beads. External POV-Ray execution also works: frames 1, 120 and 240
+rendered at 640x360 with status 0 in approximately 0.016–0.019 s each. The
+three PNGs were nevertheless uniform pale backgrounds; frame 1 had constant
+pixel statistics (`YMIN=YMAX=233`). No movie was encoded. The next bounded
+diagnosis is scene visibility (camera, transparent tank geometry, or tracer
+materials), not process supervision or timeout handling. This is not evidence
+of physical validity or movie readiness.
+
 Updated 2026-09-21. The user supports simplifying excessive supervision
 requirements. The [R103 practical supervision policy](docs/realizability/B2_MONITOR_PRACTICAL_SUPERVISION_POLICY.md)
 keeps process safeguards and honest accounting while removing recursive proof

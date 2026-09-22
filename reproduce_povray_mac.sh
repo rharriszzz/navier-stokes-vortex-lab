@@ -29,7 +29,8 @@ LOG="$TEST_DIR/povray.log"
 
 cat > "$SCENE" <<'POV'
 #version 3.7;
-camera { location <0, -3, 1> look_at <0, 0, 0> }
+global_settings { assumed_gamma 1.0 }
+camera { location <0, -3, 1> look_at <0, 0, 0> angle 45 }
 light_source { <2, -3, 4> color rgb 1 }
 sphere { <0, 0, 0>, 0.8 pigment { color rgb <0.2, 0.5, 1> } }
 POV
@@ -37,11 +38,11 @@ POV
 echo "POV-Ray: $(command -v "$POV_RAY")"
 echo "Timeout: ${TIMEOUT_SECONDS}s"
 echo "Scene: $SCENE"
-echo "Command: $TIMEOUT_CMD $TIMEOUT_SECONDS $POV_RAY +I$SCENE +W64 +H64 +FN -D -V +O$OUTPUT"
+echo "Command: $TIMEOUT_CMD $TIMEOUT_SECONDS $POV_RAY +I$SCENE +W64 +H64 +FN -d -V +O$OUTPUT"
 
 set +e
 $TIMEOUT_CMD "$TIMEOUT_SECONDS" "$POV_RAY" \
-  "+I$SCENE" +W64 +H64 +FN -D -V "+O$OUTPUT" >"$LOG" 2>&1
+  "+I$SCENE" +W64 +H64 +FN -d -V "+O$OUTPUT" >"$LOG" 2>&1
 STATUS=$?
 set -e
 

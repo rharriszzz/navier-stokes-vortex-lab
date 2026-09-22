@@ -3914,3 +3914,16 @@ missing POV-Ray user-config directory/file, rerun the minimal external
 reproduction to verify the warning is gone, finish the bounded renderer
 diagnosis/handoff decision, and publish the scoped repository changes. Do not
 encode a movie or run FEM, physical or broad benchmark work. In progress.
+
+**R131 outcome/files/checks/next:** Confirmed the expected path was absent and
+created only the empty `/Users/rharris/.povray/3.7/povray.conf`; no existing
+configuration was overwritten. The externally executed
+`TIMEOUT_SECONDS=300 ./reproduce_povray_mac.sh` exited 0 and emitted a valid
+64x64 PNG without the missing-config warning. The normal MacPorts
+unofficial-build notice remains. Updated `REQUEST_LOG.md`, `WORK_SESSIONS.md`,
+`SESSION_HANDOFF.md`, `STATUS.md`, `reproduce_povray_mac.sh` and the diagnostic
+scripts retained from R110–R130. No movie, ffprobe, FEM, physical or broad
+benchmark work ran. Next: Luna/medium may perform one centered-object or
+renderer-level comparison if the blank project render remains worth pursuing;
+recommend Astra/high only for a model/format or unexpected renderer-build
+decision. R131 completion publication follows the final scoped checks.
