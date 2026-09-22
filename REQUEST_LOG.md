@@ -5346,3 +5346,64 @@ Start commit b294a12 was pushed successfully. Continue authorizes the scoped
 completion commit/push; actual delivery hash and result follow in the final
 response, with no post-push log edit. PC retains ownership, released: no.
 Next prompt: Continue.
+
+
+## R181 — Continue finite annular momentum derivation
+
+**Date:** 2026-09-21 (America/New_York).
+**User wording (supplied excerpt; account email redacted):**
+
+```text
+Worked for 7m 47s · done 11:56 PM ╭────────────────────────────────────────────────╮
+│ >_ OpenAI Codex (v0.155.1)                     │
+│                                                │
+│ model:     gpt-6-astra high   /model to change │
+│ directory: ~/git/navier-stokes-vortex-lab      │
+╰────────────────────────────────────────────────╯
+
+  Tip: NEW: Worktrees can now be enabled from /experimental. Restart Codex after enabling it.
+
+Token usage: total=128,018 input=114,921 (+ 1,565,824 cached) output=13,097 (reasoning 1,586)
+To continue this session, run codex resume, then select Add task steps (01a0c73a-3492-75d1-9e22-77ed8d2df6f3)
+
+/status
+
+╭─────────────────────────────────────────────────────────────────────────────────────────╮
+│  >_ OpenAI Codex (v0.155.1)                                                             │
+│                                                                                         │
+│ Visit https://chatgpt.com/codex/settings/usage for up-to-date                           │
+│ information on rate limits and credits                                                  │
+│                                                                                         │
+│  Model:                       gpt-6-astra (reasoning high, summaries auto)              │
+│  Model provider:              openai                                                    │
+│  Directory:                   ~/git/navier-stokes-vortex-lab                            │
+│  Permissions:                 Workspace (Ask for approval)                              │
+│  Agents.md:                   AGENTS.md                                                 │
+│  Account:                     [REDACTED account email] (Plus)                           │
+│  Collaboration mode:          Default                                                   │
+│  Session:                     01a0c742-7696-7e11-a029-90f170784bf5                      │
+│                                                                                         │
+│  Weekly limit:                [████████████████░░░░] 82% left (resets 17:37 on 28 Sep)  │
+│  Credits:                     283 credits                                               │
+│  Luna Reserve Weekly limit:   [████████████████████] 100% left (resets 23:56 on 28 Sep) │
+╰─────────────────────────────────────────────────────────────────────────────────────────╯ continue
+```
+
+The worked-for/token/resume excerpt refers to the preceding session; /status
+identifies the current session. Values are user-reported snapshots, not live
+account checks. /new and intermediate-step excerpts are missing. No private
+session files inspected.
+
+**Scope/status:** Started. Continue authorizes scoped start/completion commit
+and push. Derive a fixed finite annulus angular-momentum budget, give a
+counterexample to averaged-feature sufficiency, and specify minimal offline
+CFD/PIV flux/closure validation in the existing benchmark. Stop before numerical
+evaluation, paper-witness implementation, FEM/JIT, solver/controller code,
+hardware/sensor selection, rendering or physical work. Preserve Gaussian/B2
+baselines; strict wall sensing remains unchanged.
+Initial checks: rharris, PC/WSL daisy, Linux 6.18.33.2-microsoft-standard-WSL2,
+x86_64, intended checkout, clean main/origin/main, empty stashes, completed
+R180 lifecycle and retained PC ownership. Required fast-forward pull already
+up to date; HEAD = fetched upstream = 382e7f2b10752c42897ad274d648cc5868f6b904.
+No incoming commits or incomplete transfer. Local Git does not reveal another
+checkout's unpublished work/processes. Publish STARTED before substantive work.
