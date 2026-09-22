@@ -1,0 +1,12 @@
+{
+  "request": "R195",
+  "python": "3.12.14",
+  "executable": "/home/rharris/git/navier-stokes-vortex-lab/.venv/bin/python",
+  "tests_run": 15,
+  "failures": 0,
+  "errors": 0,
+  "passed": true,
+  "fem_imports": false,
+  "pde_solves": 0,
+  "claim": "source and algebra only; no FEM validation"
+}

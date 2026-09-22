@@ -645,3 +645,31 @@ account usage; snapshots do not measure this project's consumption.
 Continue authorizes scoped publication. Bounded task: derive fixture/rank/lift,
 implement isolated prototype if consistent, algebra/schema/syntax checks and
 future FEM manifest; stop before FEM imports/JIT/mesh/assembly/solves or tank code.
+
+### R195 completion
+COMPLETED | 2026-09-22T20:24:28Z | PC/WSL daisy | released: no
+Outcome: isolated nonlinear weak-form/iteration kernels, exact manufactured and
+independent oracle checks, gauge/rank/lifting review and non-executable future
+manifest complete. Fifteen standard-library tests pass; no FEM stack imported.
+Pressure-gauge eta requires independent compatibility/zero checks. Rotation's
+quadratic pressure is excluded from a false P1 exactness gate. Kernel source
+has no mesh/assembly driver; no discretization/convergence or tank claim.
+Files: 25 across STARTED/completion, enumerated in R195 REQUEST_LOG outcome;
+verification/nonlinear_port source, docs/realizability/NONLINEAR_VERIFICATION_R195.md,
+evidence/r195, current status/overview/handoff pages and forward research notes.
+Checks: required clean fast-forward pull at 630e880; 15 standard-library groups;
+exact budgets/oracles, rank/lift, iteration/time history and refusals; scope,
+syntax/JSON/fences; 187 links/anchors, 195 request IDs, append-only logs,
+benchmark science/production unchanged and whitespace. Post-append/staged
+checks follow. Evidence: evidence/r195; /tmp/r195_validate.py disposable checker.
+Skips: FEM imports/JIT/mesh/assembly/PDE, dependencies, production backends,
+tank/controller, physical/optical/hardware, trajectory/render/encode or transfer.
+No workload child launched; short checks exited. B2 failed, q64/q96 unused,
+R021 deferred; caps and attempt allowances unchanged. No model switch/delegation.
+Next: Astra/high on this PC implements/reviews tiny cube assembly adapter,
+diagnostics and bounded launch contract with import-free checks; stop before
+FEM imports or execution, then decide later admission. No generic monitor or
+tank implementation. Early Mac portable checks require normal later handoff.
+Cross-project user account snapshot is not project-specific usage evidence.
+Retain PC ownership; STARTED 9fbcc0c pushed. Completion prepared for scoped
+commit/push; delivery hash/result in final response; no post-push edits.

@@ -1,5 +1,10 @@
 # Boundary hardware and optical feasibility — R185
 
+R195 update: [verification source and fixture algebra](NONLINEAR_VERIFICATION_R195.md)
+are complete; FEM remains untested. Earlier next-step recommendations below are
+historical. Follow the single [current task](../../SESSION_HANDOFF.md#next-task)
+for the small cube adapter/review, stopping before FEM imports or execution.
+
 Research date: 2026-09-22. Owner: PC/WSL `daisy`.
 Current execution priority: [the handoff](../../SESSION_HANDOFF.md#next-task).
 

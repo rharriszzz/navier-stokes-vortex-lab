@@ -1,12 +1,12 @@
 # Experimental Concept: Finite-Scale Forced Vortex Analogue
 
-R194 completed the [finite-port base-flow contract](docs/realizability/PORT_BASE_FLOW_CONTRACT_R194.md).
-It specifies nonlinear three-dimensional flow, finite inlet profiles and regulated
-returns, conservation/convergence gates and a separate verification prototype.
-Twelve analytical groups pass; no tank solver or physical route is admitted.
-Next implement only the isolated verification prototype and algebraic checks;
-follow the single [handoff task](SESSION_HANDOFF.md#next-task). No FEM or fluid
-test has run here and no feasible contraction range is established.
+R195 completed the [isolated nonlinear verification source and fixture algebra](docs/realizability/NONLINEAR_VERIFICATION_R195.md).
+Fifteen standard-library checks pass, including exact balances, gauge/rank,
+lifting and BE/BDF2 iteration checks. FEM construction/assembly and convergence
+remain untested. Next implement/review the small cube assembly adapter and
+bounded launch contract; follow the single [handoff task](SESSION_HANDOFF.md#next-task).
+Stop before FEM imports/JIT, meshing, assembly or solves. No tank or hardware
+route is admitted and no feasible contraction range is established.
 
 R188 priority update (2026-09-22): establish measurable essential dynamical
 similarity before further movie work. Numerical profiles and timing may differ;

@@ -1,0 +1,20 @@
+test_affine_time_companion (verification.nonlinear_port.test_algebra.AlgebraChecks.test_affine_time_companion) ... ok
+test_backward_euler_bdf2_and_energy_identity (verification.nonlinear_port.test_algebra.AlgebraChecks.test_backward_euler_bdf2_and_energy_identity) ... ok
+test_closed_angular_budget (verification.nonlinear_port.test_algebra.AlgebraChecks.test_closed_angular_budget) ... ok
+test_closed_energy_budget (verification.nonlinear_port.test_algebra.AlgebraChecks.test_closed_energy_budget) ... ok
+test_constraint_rank_and_joint_null_vector (verification.nonlinear_port.test_algebra.AlgebraChecks.test_constraint_rank_and_joint_null_vector) ... ok
+test_force_independent_advective_expression (verification.nonlinear_port.test_algebra.AlgebraChecks.test_force_independent_advective_expression) ... ok
+test_manifest (verification.nonlinear_port.test_algebra.AlgebraChecks.test_manifest) ... ok
+test_manufactured_flux_pressure_and_lift (verification.nonlinear_port.test_algebra.AlgebraChecks.test_manufactured_flux_pressure_and_lift) ... ok
+test_newton_and_failure_paths (verification.nonlinear_port.test_algebra.AlgebraChecks.test_newton_and_failure_paths) ... ok
+test_poiseuille_oracle (verification.nonlinear_port.test_algebra.AlgebraChecks.test_poiseuille_oracle) ... ok
+test_polynomial_primitives (verification.nonlinear_port.test_algebra.AlgebraChecks.test_polynomial_primitives) ... ok
+test_retained_lifting_rows (verification.nonlinear_port.test_algebra.AlgebraChecks.test_retained_lifting_rows) ... ok
+test_rigid_rotation_oracle (verification.nonlinear_port.test_algebra.AlgebraChecks.test_rigid_rotation_oracle) ... ok
+test_scope_syntax_and_no_fem_imports (verification.nonlinear_port.test_algebra.AlgebraChecks.test_scope_syntax_and_no_fem_imports) ... ok
+test_time_loop_history_and_rejection (verification.nonlinear_port.test_algebra.AlgebraChecks.test_time_loop_history_and_rejection) ... ok
+
+----------------------------------------------------------------------
+Ran 15 tests in 0.205s
+
+OK

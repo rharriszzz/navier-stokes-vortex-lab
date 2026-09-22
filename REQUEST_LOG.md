@@ -6308,3 +6308,69 @@ main/origin/main, clean worktree, empty stashes, same owner, Mac released and
 R194 completed. Required clean fast-forward pull succeeded (already up to date).
 HEAD equals fetched upstream 630e880b5f3a4661fe6adde9343236b304c6da14;
 R194 delivery verified. No incoming changes or conflicting open lifecycle.
+
+**R195 outcome:** Complete at the isolated source/algebra boundary. Added exact
+manufactured velocity/pressure, forcing and both return tractions/fluxes,
+independent Poiseuille/rigid-rotation oracles, exact whole-cube angular/energy
+budgets, joint gauge rank and compatible affine lift. Implemented injected
+P2/P1 physical-stress/conservative-convection forms, bordered mean-zero pressure
+realization, retained lifting rows, checked damped Newton and BE/BDF2 kernels.
+The bordered gauge is equivalent for compatible data, but can absorb incompatible
+flux into eta; preflight compatibility and a separate eta gate are mandatory.
+The rotation oracle's quadratic pressure cannot be exactly P1-represented;
+the future manifest uses a constitutive/balance oracle rather than a false
+single-mesh pressure-exactness gate. No fixture consistency obstruction remains
+at the continuum/algebra level; actual mesh rank/convergence is untested.
+
+The prototype is kernel source with no mesh/assembly driver. UFL construction,
+JIT, sparse block assembly/solve, field diagnostic implementation and process
+supervision remain unvalidated/unimplemented at this boundary. A source/algebra
+pass is not a nonlinear fluid result. Future manifest is explicitly non-executable:
+zero attempts granted; proposed unit-cube spatial/time sequences, error gates,
+existing FEM pins and one-suite 180 s / 1536 MiB caps are review inputs only.
+No tank, gain, feasible contraction range or hardware admission is established.
+
+Changed files (25 across start/completion): REQUEST_LOG.md, WORK_SESSIONS.md,
+SESSION_HANDOFF.md, STATUS.md, BOUNDARY_CONTROL_HANDOFF.md,
+CONTROL_RESEARCH_ROADMAP.md, EXPERIMENT.md, PHYSICAL_REALIZABILITY_PLAN.md,
+PROJECT_TRACKS.md; docs/realizability/{BOUNDARY_HARDWARE_FEASIBILITY_R185.md,
+ESSENTIAL_SIMILARITY_CONTRACT_R191.md,FIXED_CORE_OPERATING_POINT_R192.md,
+INWARD_TRANSPORT_SCREEN_R193.md,PORT_BASE_FLOW_CONTRACT_R194.md,
+NONLINEAR_VERIFICATION_R195.md}; docs/realizability/evidence/r195/{README.md,
+algebra_checks.txt,checks.json}; verification/nonlinear_port/{README.md,
+polynomial.py,fixtures.py,prototype.py,manifest.py,future_fem.json,test_algebra.py}.
+Earlier scientific documents receive only a forward status note; benchmark
+scientific sections and production source/dependency pins remain unchanged.
+
+Checks passed: identity/ownership/clean required fast-forward pull, upstream
+R194 delivery verification and empty stashes; 15 named standard-library tests
+under project Python 3.12.14; no-FEM import/scope check; exact continuum budgets,
+structural rank, lifting, time-loop convergence and numerical refusal cases;
+manifest gates/pins/scope; source/syntax/JSON/fences; 187 local links/anchors;
+195 unique request IDs, append-only logs against 630e880; unchanged benchmark
+science, production scope and whitespace. Disposable documentation checker:
+/tmp/r195_validate.py (initial regex mistook mathematical notation for a link;
+corrected parser and rerun passed). Retained test output/evidence: r195 paths
+above. Final post-append/staged verification follows. Official DOLFINx demo
+rechecked; OpenAI Docs fetched official Astra support for high. Source review
+and our fixture/method proposals are distinguished from library validation.
+
+Skips: no FEM imports/JIT, mesh, assembly, PDE solve, dependency changes,
+production B1/B2 execution/modification, tank/controller, physical/optical,
+procurement/hardware, trajectory/render/encode, transfer or delegation. No task
+workload child launched; all short checks exited. B2 accuracy remains failed,
+q64/q96 unused and R021 deferred; attempt/resource allowances unchanged.
+User supplied medium-effort snapshot; no model switch or account access.
+Usage includes another project, so status changes are not attributable solely
+to this repository. No private session files inspected.
+
+Next: Astra/high on PC/WSL daisy implements/reviews the small cube assembly
+adapter, diagnostic error/budget output and concrete bounded launch contract,
+using import-free checks; stop before FEM imports/JIT/mesh/assembly/solves and
+make a specific later execution-admission decision. Do not build general monitor
+infrastructure or tank code. Reconsider a cheaper model only when remaining
+method choices settle and availability is checked. PC retains ownership;
+released: no. STARTED 9fbcc0c published successfully (initial sandbox index-write
+denial resolved by elevated authorized publication). Completion prepared for
+scoped commit/push; actual delivery hash/result in final response and Git
+history. No post-push documentation edit. Next prompt: Continue.

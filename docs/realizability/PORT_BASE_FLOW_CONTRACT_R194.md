@@ -1,5 +1,10 @@
 # Finite-port base-flow calculation contract — R194
 
+R195 update: [verification source and fixture algebra](NONLINEAR_VERIFICATION_R195.md)
+are complete; FEM remains untested. Earlier next-step recommendations below are
+historical. Follow the single [current task](../../SESSION_HANDOFF.md#next-task)
+for the small cube adapter/review, stopping before FEM imports or execution.
+
 2026-09-22; PC/WSL `daisy`. **Specify a new nonlinear, three-dimensional,
 boundary-driven calculation. Admit only an isolated verification prototype as
 the next implementation step; do not admit a tank run or reuse B2 as a validated

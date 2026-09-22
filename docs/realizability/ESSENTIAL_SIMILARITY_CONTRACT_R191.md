@@ -1,5 +1,10 @@
 # Measurable essential similarity and first test — R191
 
+R195 update: [verification source and fixture algebra](NONLINEAR_VERIFICATION_R195.md)
+are complete; FEM remains untested. Earlier next-step recommendations below are
+historical. Follow the single [current task](../../SESSION_HANDOFF.md#next-task)
+for the small cube adapter/review, stopping before FEM imports or execution.
+
 2026-09-22; PC/WSL `daisy`. Design proposal for review, with checked algebra
 and scale arithmetic. No measured response, CFD result or hardware admission.
 Execution priority remains the [single handoff task](../../SESSION_HANDOFF.md#next-task).

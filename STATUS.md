@@ -1,18 +1,18 @@
 # Project status: a boundary-controlled engineering approximation
 
-Updated 2026-09-22 (America/New_York), through R194. PC/WSL `daisy` owns the
-repository. Latest work: [finite-port base-flow specification](docs/realizability/PORT_BASE_FLOW_CONTRACT_R194.md).
-Twelve analytical groups passed. The contract admits an isolated verification
-prototype next; tank implementation/execution and both hardware routes remain
-unadmitted. No boundary-driven core has been calculated or measured.
+Updated 2026-09-22 (America/New_York), through R195. PC/WSL `daisy` owns the
+repository. Latest work: [nonlinear verification source and algebra](docs/realizability/NONLINEAR_VERIFICATION_R195.md).
+Fifteen checks passed. FEM forms have not been constructed or assembled, and
+numerical convergence is untested. No boundary-driven core has been calculated
+or measured; tank implementation/execution and hardware remain unadmitted.
 
 | Current question | Answer |
 |---|---|
 | What works? | The illustrative animation pipeline, saved-data checks and separate reference/analysis tools. |
 | Is the engineering goal demonstrated? | No validated boundary-driven contraction or boundary-only state estimator exists yet. |
-| What did the latest step establish? | Finite inlet/return conditions and a nonlinear verification path are specified. Profile shape changes angular input; symmetry reductions cannot certify the full base. [Contract and checks](docs/realizability/PORT_BASE_FLOW_CONTRACT_R194.md). |
+| What did the latest step establish? | Isolated nonlinear weak-form/iteration source and exact fixture checks are complete. [Evidence and limits](docs/realizability/NONLINEAR_VERIFICATION_R195.md). |
 | What blocks trusted numerical control results? | B2 still fails its independent response-accuracy comparison; q64/q96 remains unrun. |
-| What is next? | Implement the isolated verification prototype and algebraic checks, stopping before FEM execution; follow the single [next task](SESSION_HANDOFF.md#next-task). |
+| What is next? | Implement/review the small cube assembly adapter and bounded launch contract, stopping before FEM imports or execution; follow the single [next task](SESSION_HANDOFF.md#next-task). |
 
 ## Goal and present conclusion
 

@@ -6,13 +6,14 @@ scientific thresholds below are retained unless explicitly labelled proposals.
 
 ## Start here
 
-**R194 design result:** the [finite-port base-flow contract](docs/realizability/PORT_BASE_FLOW_CONTRACT_R194.md)
-specifies inlet profiles, finite bores, regulated returns, physical traction,
-preparation and nonlinear conservation/convergence gates. Twelve analytical
-groups pass. A separate verification prototype is the [next task](SESSION_HANDOFF.md#next-task),
-stopping before FEM imports/meshing/assembly/solves. No tank run or actuator
-route is admitted. R192's [operating-point gates](docs/realizability/FIXED_CORE_OPERATING_POINT_R192.md)
-remain conditional and unchanged; B2 accuracy remains failed.
+**R195 verification source result:** the [prototype and fixture review](docs/realizability/NONLINEAR_VERIFICATION_R195.md)
+completes exact oracles, mixed gauge/rank/lifting checks and nonlinear/time
+iteration kernels. Fifteen standard-library checks pass; no FEM import or solve
+ran. Implement/review only the tiny cube assembly adapter and bounded launch
+contract next, following the [single task](SESSION_HANDOFF.md#next-task).
+Stop before FEM imports/JIT/meshing/assembly/solves. The [R194 boundary contract](docs/realizability/PORT_BASE_FLOW_CONTRACT_R194.md)
+and [R192 gates](docs/realizability/FIXED_CORE_OPERATING_POINT_R192.md) remain;
+no tank or actuator route is admitted and B2 accuracy remains failed.
 
 **R191 design result:** the [measurable similarity contract](docs/realizability/ESSENTIAL_SIMILARITY_CONTRACT_R191.md)
 defines analogue and mechanism claims separately, with hardware/evidence mapping,

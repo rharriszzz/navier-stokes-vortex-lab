@@ -1,15 +1,14 @@
 # Current session handoff
 
-Last updated 2026-09-22 (America/New_York) for R194.
+Last updated 2026-09-22 (America/New_York) for R195.
 **PC/WSL `daisy` owns the repository.** No transfer; Mac remains released.
-R194 completed the [finite-port base-flow contract](docs/realizability/PORT_BASE_FLOW_CONTRACT_R194.md).
-It specifies finite inlet profiles, regulated return totals with unknown pressure
-tractions, a full three-dimensional nonlinear base and conservation/convergence
-gates. Twelve retained analytical groups pass. At equal flow, the chosen
-parabolic profile carries 4/3 of the uniform-profile angular input; averaged
-inlets and a symmetric sector are not certified representations of the tank.
-**Next: implement only a separate nonlinear verification prototype and its
-algebraic checks; stop before FEM imports/JIT, meshing, assembly or PDE solves.**
+R195 completed [isolated nonlinear verification source and exact fixture checks](docs/realizability/NONLINEAR_VERIFICATION_R195.md).
+Fifteen standard-library checks pass: manufactured closed balances, independent
+Poiseuille/rotation, joint gauge/rank, compatible lift, Newton refusals and
+BE/BDF2 history. Weak-form construction, FEM assembly and convergence remain
+untested; the prototype has no mesh/assembly driver. No FEM stack was imported.
+**Next: implement/review the small cube adapter, diagnostics and bounded launch
+contract; stop before FEM imports/JIT, meshing, assembly or PDE solves.**
 Tank implementation/execution remains unadmitted. No actual base, gain or feasible
 contraction range is established. Retain GPT-6 Astra / high / PC-WSL `daisy`;
 no model or machine switch. R191 similarity and R192 operating/error gates remain.
@@ -20,14 +19,16 @@ unavailable to feedback. R188 permits different profiles/timing; R186 retains
 radius/time/elapsed comparisons. The fixed-core point has radius ratio 1,
 no contraction and no claimed similarity-time decades. R182's whole-Gaussian
 obstruction remains valid; both central faces and the exterior inventory count.
-R193 completion 95f7065 was verified on the fetched upstream. R194 began with a
-clean required fast-forward pull at that commit and published STARTED 4d7a823.
+R194 completion 630e880 was verified on fetched upstream. R195 began with a
+clean required fast-forward pull there and published STARTED 9fbcc0c.
 Completion publication is prepared; actual delivery hash/push result follows in
 the final response and Git history. No post-push documentation edit.
+User supplied medium-effort status and explicitly noted other-project usage;
+account snapshots cannot measure this project's consumption. No model switch.
 B2 accuracy remains failed, q64/q96 unused and R021 launch integration deferred.
-No solver/controller implementation, CFD/FEM, procurement, hardware, physical/
+Only isolated verification kernels/oracles were implemented; no CFD/FEM, procurement, hardware, physical/
 optical, trajectory, render or encode workload ran. No task workload child was
-launched; only source review and short analytical/documentation checks ran.
+launched; only source review and short standard-library analytical/documentation checks ran.
 R168's bounded comparison passed: the same installed default POV-Ray
 3.7.0.10.unofficial rendered the unchanged sphere and project frame 1 at
 160x120 with explicit `-d +WT1 -J`. Both exited 0 and produced visible geometry.
@@ -102,12 +103,12 @@ and physical-work limits remain unchanged.
 | Owner | PC/WSL `daisy`; Mac `fire.lan` released after published R161 handoff and R162 receipt. |
 | Checkout | `/home/rharris/git/navier-stokes-vortex-lab`. |
 | Branch/upstream | `main` / `origin/main` |
-| Starting state | R194 clean required fast-forward pull succeeded at 95f7065, equal to fetched origin/main; empty stashes, same owner, no conflicting open task. STARTED 4d7a823 published. |
+| Starting state | R195 clean required fast-forward pull succeeded at 630e880, equal to fetched origin/main; empty stashes, same owner, no conflicting open task. STARTED 9fbcc0c published. |
 | Interpreter | `/home/rharris/git/navier-stokes-vortex-lab/.venv/bin/python`, CPython 3.12.14 with NumPy 2.5.3 |
 | Other owner/process | Mac `fire.lan` released in the published R161 handoff. Local Git cannot inspect another checkout's unpublished state. |
-| Task processes | R194 source/method review and short analytical/documentation checks completed; no FEM/CFD/render/physical workload child launched. |
+| Task processes | R195 source/algebra checks completed; no FEM/CFD/render/physical workload child launched. All short check commands exited. |
 | Symbolic environment | `/tmp/navier-r183-sympy/bin/python`, Python 3.12.14, SymPy 1.14.0, mpmath 1.3.0; recreate using `requirements-symbolic.txt` if missing. Existing environments unchanged. |
-| Delivery state | R193 completion 95f7065 and R194 STARTED 4d7a823 published successfully. R194 completion prepared for scoped publication; delivery hash/result in final response. PC retains ownership. |
+| Delivery state | R194 completion 630e880 verified upstream; R195 STARTED 9fbcc0c published. Completion prepared for scoped publication; delivery hash/result in final response. PC retains ownership. |
 
 ## Current result and limits
 
@@ -238,45 +239,48 @@ agent-side POV-Ray backtraces are unavailable.
 
 ## Next task
 
-**Implement the isolated nonlinear verification prototype specified by R194,
-with algebraic checks and a reviewable future FEM fixture manifest.** Follow the
-[boundary/method contract](docs/realizability/PORT_BASE_FLOW_CONTRACT_R194.md#numerical-method-and-actual-repository-capability)
-and its [admission boundary](docs/realizability/PORT_BASE_FLOW_CONTRACT_R194.md#admission-missing-evidence-and-next-task).
-Retain GPT-6 Astra / high / PC-WSL `daisy`; mixed boundary conditions, pressure
-gauge and conservation consistency still require scientific judgment. The
-[official Astra page](https://developers.openai.com/api/docs/models/gpt-6-astra)
-was rechecked with OpenAI Docs and lists high support. Account snapshots are
-user-reported; no account-access verification, model switch or transfer occurred.
+**Implement/review the smallest unit-cube FEM adapter and diagnostics for the
+R195 prototype, plus its bounded execution contract; stop before FEM imports
+or execution.** Use the [source and fixture review](docs/realizability/NONLINEAR_VERIFICATION_R195.md),
+[prototype](verification/nonlinear_port/README.md) and
+[non-executable manifest](verification/nonlinear_port/future_fem.json).
+Retain GPT-6 Astra / high / PC-WSL `daisy`: mixed assembly, traction, pressure
+gauge and error isolation require scientific judgment. Official OpenAI Docs
+was rechecked in R195; high is supported. The user reports medium in the
+supplied snapshot; no switch, account-access check or transfer occurred.
 
-1. Derive the exact manufactured transient velocity/pressure, forcing, tractions
-   and two return-group fluxes. Check the mean-zero pressure/two-multiplier
-   constraint rank and compatible lifting. Include independent Poiseuille and
-   rigid-rotation oracles. If the selected weak form/fixtures are inconsistent,
-   stop with that finding before implementation dependent on it.
-2. Implement a separate P2/P1 physical-stress/conservative-convection prototype
-   with backward Euler/BDF2 and nonlinear iteration. Preserve B1/B2 production
-   paths, pins and thresholds. Explicitly exclude the physical tank and campaign;
-   do not import the FEM stack during the permitted checks.
-3. Run standard-library algebra/schema checks, syntax checks and scope checks.
-   Prepare the tiny future FEM verification manifest with versions, mesh/time
-   sequence, exact errors, convergence gates, resource/attempt caps and refusal
-   reports. Review it before any FEM execution is proposed.
+1. Implement a small fixture-only cube/tagging and sparse block assembly adapter
+   around the existing builders, with both global return multipliers, the
+   pressure gauge and eta compatibility diagnostic. Preserve all lift rows.
+   Review actual library interfaces against the existing pins without importing
+   the FEM stack. Do not touch production B1/B2 or physical entry points.
+2. Implement exact error/budget outputs and refusal reporting. Separate spatial
+   discrete forcing from the affine temporal companion; retain body work/torque,
+   all boundaries and BDF2 energy terms. Rigid rotation is a constitutive/balance
+   oracle, not a P1 pressure-exactness test. Verify adapter algebra using small
+   standard-library fixtures and source/syntax checks only.
+3. Review the concrete launch/report path under the practical supervision policy,
+   including observed setup/JIT/cleanup costs, process limits and refusal on
+   unknown cleanup. Keep the proposed 180 s / 1536 MiB one-suite caps and zero
+   granted attempts until an explicit later admission decision. Avoid a general
+   monitor rewrite. Decide whether a tiny FEM fixture can be admitted next;
+   do not launch it during this task.
 
-Completion: reviewable isolated source and independently checked fixture oracles,
-plus a bounded future execution contract. **Stop before FEM imports/JIT, mesh
+Completion: reviewable cube adapter/diagnostic source, import-free checks and a
+specific execution-admission decision. **Stop before FEM imports/JIT, mesh
 creation, assembly, PDE solves, tank code, dependency changes, physical/optical
-execution or rendering.** No automatic response or phase-test launch. A code or
-algebra pass does not validate the nonlinear discretization or the tank.
-B2 accuracy remains failed; q64/q96 unused; R021 deferred. Existing physical
-caps 180 s / 1536 MiB, production operators and once-only allowances are unchanged.
-No preview retry or Mac work. Any later feedback uses noisy delayed observations.
+execution or rendering.** A code/algebra pass cannot validate discretization.
+B2 accuracy failed; q64/q96 unused; R021 deferred. Physical caps, production
+operators/pins/thresholds and once-only allowances are unchanged. No preview
+retry or Mac work. An early future Mac check may run portable algebra only after
+normal explicit ownership handoff; optional platform comparisons do not block PC.
 
-Retain Astra/high while physics/method decisions remain. Recommend a cheaper
-model/effort only once the remaining work is mechanical and after checking its
-availability. A recommendation does not switch models or schedule another session.
-Next prompt: **Continue**. R194 files/checks/evidence and remaining choices are
-recorded in REQUEST_LOG.md and WORK_SESSIONS.md. PC retains ownership; completion
-publication is prepared, with delivery hash/result in final response.
+Keep Astra/high while method/assembly decisions remain. Recommend a cheaper
+model/effort only when work is mechanical and availability is checked. This does
+not switch models or schedule a session. Next prompt: **Continue**.
+R195 files/checks/evidence and remaining choices are in REQUEST_LOG.md and
+WORK_SESSIONS.md. PC retains ownership; completion publication is prepared,
+with delivery hash/result in final response.
 
 ### Note for the next Mac session
 

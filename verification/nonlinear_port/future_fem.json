@@ -1,0 +1,128 @@
+{
+  "schema": 1,
+  "fixture": "manufactured",
+  "execution_admitted": false,
+  "attempts_granted": 0,
+  "proposed_attempts": 1,
+  "scope": "unit-cube verification only; no tank or B2 campaign",
+  "versions": {
+    "python": "3.12.13",
+    "dolfinx": "0.10.0",
+    "basix": "0.10.0",
+    "ufl": "2025.2.1",
+    "ffcx": "0.10.1",
+    "petsc": "3.25.5",
+    "petsc4py": "3.25.5",
+    "mpi4py": "4.1.2",
+    "mpich": "5.0.1"
+  },
+  "method": "P2/P1 physical stress; conservative convection; BE then fixed-step BDF2; exact Newton Jacobian",
+  "gauge": "full pressure plus one continuity scalar eta and volume pressure gauge; eta must vanish",
+  "domain": "affine unit cube; lateral Dirichlet; z=0 and z=1 independent flux returns",
+  "rho": 1.0,
+  "mu": 0.1,
+  "spatial": {
+    "subdivisions": [
+      2,
+      4,
+      8
+    ],
+    "steps_per_mesh": 1,
+    "dt": 0.125,
+    "load": "replace exact u_t by BE exact difference to isolate spatial error"
+  },
+  "temporal": {
+    "subdivisions": 2,
+    "dt": [
+      0.125,
+      0.0625,
+      0.03125
+    ],
+    "end_time": 1.0,
+    "load": "continuous exact forcing for affine-in-space cubic-in-time companion; exact initial data, one BE startup"
+  },
+  "quadrature_degree": 24,
+  "quadrature_check_degree": 26,
+  "nonlinear": {
+    "maximum_iterations": 12,
+    "maximum_backtracks": 8,
+    "scaled_relative_residual": 1e-10,
+    "scaled_absolute_residual": 1e-12
+  },
+  "proposed_caps": {
+    "elapsed_seconds": 180,
+    "whole_task_memory_mib": 1536,
+    "swap_mib": 0,
+    "mpi_ranks": 1,
+    "threads": 1,
+    "pids": 32,
+    "velocity_pressure_dofs": 20000
+  },
+  "outputs": [
+    "u_L2",
+    "u_H1_seminorm",
+    "p_L2_mean_zero",
+    "div_u_L2",
+    "traction_L2_returns",
+    "P_minus_error",
+    "P_plus_error",
+    "both_flux_errors",
+    "pressure_mean",
+    "eta",
+    "signed_angular_budget",
+    "signed_energy_budget",
+    "divergence_energy_defect",
+    "BDF2_energy_identity",
+    "nonlinear_history",
+    "linear_residual",
+    "actual_versions",
+    "mesh_dofs",
+    "elapsed_and_memory",
+    "exit_cleanup"
+  ],
+  "gates": {
+    "spatial_rates": {
+      "u_L2": 2.5,
+      "u_H1_seminorm": 1.7,
+      "p_L2_mean_zero": 1.7,
+      "div_u_L2": 1.5,
+      "traction_L2_returns": 1.2
+    },
+    "temporal_u_L2_rate": 1.7,
+    "flux_gauge_eta_absolute": 1e-10,
+    "finest_u_L2": 0.01,
+    "finest_p_L2": 0.02,
+    "finest_div_u_L2": 0.02,
+    "budget_relative_absolute_sum": 0.01,
+    "budget_absolute_floor": 1e-10,
+    "quadrature_relative_change": 1e-08,
+    "error_floor": 1e-10,
+    "finest_multiplier_error": 0.02
+  },
+  "refusal": [
+    "missing adapter or supervision",
+    "version mismatch",
+    "incompatible lift or constraint rank",
+    "nonfinite result",
+    "Newton or linear failure",
+    "backflow below -1e-8 at return quadrature points",
+    "any exceeded cap",
+    "missing error or budget term",
+    "nondecreasing error above floor",
+    "unresolved spatial or temporal rate",
+    "unconfirmed child cleanup"
+  ],
+  "review": "Source/algebra reviewed in R195; FEM assembly adapter, sparse block solver, diagnostics and supervised execution contract remain to implement/review before any execution. This file grants no attempt.",
+  "oracles": {
+    "poiseuille": {
+      "subdivisions": 2,
+      "u_p_L2_max": 1e-09,
+      "type": "exactly representable steady solve"
+    },
+    "rotation": {
+      "subdivisions": 2,
+      "absolute_tolerance": 1e-10,
+      "type": "exact-field stress and centrifugal balance assembly; no PDE pressure-exactness claim"
+    }
+  }
+}
