@@ -6044,3 +6044,52 @@ operators, production pins and attempt/resource allowances unchanged. PC retains
 ownership, released: no. R192 STARTED b0c3a72 pushed successfully; completion
 publication prepared. Actual delivery commit/push result follows in the final
 response/Git history; no post-push log edit. Next prompt: Continue.
+
+## R193 — 2026-09-22 (America/New_York) — Continue inward-transport screen
+
+**User wording:** “continue”, following these supplied session excerpts:
+
+```text
+Worked for 12m 11s · done 10:55 AM
+OpenAI Codex (v0.155.1)
+model: gpt-6-astra high /model to change
+directory: ~/git/navier-stokes-vortex-lab
+Tip: Use /personality to customize how Codex communicates.
+Token usage: total=125,652 input=105,601 (+ 1,331,712 cached) output=20,051 (reasoning 2,876)
+To continue this session, run codex resume, then select Summarize Codex work (01a0c992-0362-7800-a903-0adc1a965751)
+/status
+OpenAI Codex (v0.155.1)
+Visit https://chatgpt.com/codex/settings/usage for up-to-date information on rate limits and credits
+Model: gpt-6-astra (reasoning high, summaries auto)
+Model provider: openai
+Directory: ~/git/navier-stokes-vortex-lab
+Permissions: Workspace (Ask for approval)
+Agents.md: AGENTS.md
+Account: [REDACTED account address] (Plus)
+Collaboration mode: Default
+Session: 01a0c99d-a141-7223-9475-43ed88eb5d9c
+Weekly limit: 76% left (resets 17:37 on 28 Sep)
+Credits: 283 credits
+Luna Reserve Weekly limit: 100% left (resets 10:55 on 29 Sep)
+continue
+```
+
+Box borders/progress glyphs omitted; supplied wording/values retained. Usage,
+worked-for and resume excerpts describe the preceding session; status identifies
+the new session. `/new` excerpt missing. Account redacted; snapshots are
+user-reported, not independently verified. No private session files inspected.
+
+**Scope/status:** Started. Complete the handoff's bounded analytical tangential
+advection–diffusion screen: inward transport versus quiescent wall diffusion,
+port delivery, m=4 swirl advection, actual band/core distances, validity/error
+requirements and one next response specification. Source/algebra/design only;
+stop before solver/controller implementation, CFD/FEM, procurement, hardware,
+physical/optical execution, trajectories or rendering. Continue authorizes
+scoped STARTED and completion commit/push. PC/WSL daisy retains ownership.
+Identity/ownership checks: rharris; Linux 6.18.33.2-microsoft-standard-WSL2
+x86_64; user-owned checkout; main/origin/main; clean worktree, empty stashes,
+no conflicting open task. Required pull first failed because sandbox denied
+.git/FETCH_HEAD; elevated `git pull --ff-only --no-rebase --no-autostash`
+succeeded, already up to date. HEAD and fetched upstream both
+ d1ed7cb92e26d0a8031edf9bac12a9fc52ae71a9, verifying R192 delivery. No transfer,
+model switch or incoming changes. Publish STARTED before substantive work.

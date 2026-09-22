@@ -535,3 +535,15 @@ scientific decisions settle and work becomes mechanical. PC retains ownership.
 R192 STARTED b0c3a72 published successfully. Completion prepared for scoped
 commit/push; actual delivery hash/result in final response and Git history.
 No post-push documentation edit.
+
+## R193 — Inward transport and tangential response screen
+STARTED | 2026-09-22T14:56:44Z | PC/WSL daisy | released: no
+Identity: rharris; Linux 6.18.33.2-microsoft-standard-WSL2 x86_64;
+/home/rharris/git/navier-stokes-vortex-lab; main / origin/main.
+Starting commit d1ed7cb92e26d0a8031edf9bac12a9fc52ae71a9 equals fetched upstream
+after clean required fast-forward pull. Empty stashes, same owner, no open
+conflicting task. Initial sandbox FETCH_HEAD denial resolved by elevated pull.
+Continue authorizes scoped start/completion publication; excerpts in R193.
+Bounded task: analytical advection–diffusion screen and validity/decision sheet
+for R192, with m=4 swirl, port delivery and band geometry. No new solver,
+CFD/FEM, procurement, hardware, physical/optical or render/encode execution.

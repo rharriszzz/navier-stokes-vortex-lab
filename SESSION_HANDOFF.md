@@ -1,7 +1,10 @@
 # Current session handoff
 
-Last updated 2026-09-22 (America/New_York) for R192.
+Last updated 2026-09-22 (America/New_York) for R193 STARTED.
 **PC/WSL `daisy` owns the repository.** No transfer; Mac remains released.
+R193 is STARTED: complete the bounded inward-transport screen below. R192
+completion d1ed7cb is verified on the fetched upstream; clean required pull
+succeeded with empty stashes and no conflicting open task.
 R192 completed the [operating-point/detectability sheet](docs/realizability/FIXED_CORE_OPERATING_POINT_R192.md)
 for R191's fixed-core phase test. One 6.283 L vessel, two actuator routes and
 an optical geometry are specified conditionally. Central throughput is 0.2356
