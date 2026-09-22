@@ -1,496 +1,393 @@
-# Project status: physical preparation and a realistic movie
+# Project status: a boundary-controlled engineering approximation
 
-## Current PC plan and completed Mac rendering checkpoint — 2026-09-22
+Updated 2026-09-21 (America/New_York), R171–R176. PC/WSL `daisy` owns the
+repository. This assessment uses current source, saved experiment records and
+the motivating paper; it launches no simulation or rendering workload.
+The single [next task](SESSION_HANDOFF.md#next-task) is recorded in the handoff.
 
-R168 passed the bounded PC comparison: the same default renderer produced a
-visible centered sphere and project frame 1 at 160x120 with `-d +WT1 -J`.
-Both exited 0 with nonzero intersections. R167's failed run had graphic display
-On; its root cause remains unisolated because resolution and thread count also
-changed. [Commands and evidence](docs/rendering/POVRAY_PC_R168_COMPARISON.md).
-R169 passed saved-data validation, the three separated-frame visual gates, the
-30-frame sequence, H.264/yuv420p encoding and ffprobe. The initial tool call
-yielded during the sequence's progress window, but the bounded render completed
-and no child remained. No package or scene change is needed.
+## Goal and present conclusion
 
-R167 validated the existing 450-frame/128-bead PC inventory with the
-repository-local Python 3.12.14 checker, including observed motion and finite
-extrema. The first requested POV-Ray 3.7.0.10.unofficial 320x180 render
-segfaulted during parsing before producing a PNG, so separated-frame, sequence,
-visual, encode and ffprobe gates did not run. The disposable failure log is
-`/tmp/r167-preview-LKKwQU/separated/frame001.log`; no child remains and no
-source/input changed. R168 completed the subsequent bounded comparison.
-PC/WSL `daisy` owns the repository; R164
-completion is published as `97d9fcf`. The PC inventory differs
-from the previously validated Mac data; its saved-data check passed before the
-renderer failure.
+The user's goal is **a visual simulation of an engineering approximation of
+the first few orders of magnitude of the recent OpenAI result, with forcing
+and sensors on the boundary only**. R172 confirms the motivating reference is
+OpenAI's [*Finite time blowup for Navier–Stokes*](https://cdn.openai.com/pdf/32d9f210-8b73-45e0-91bc-82a30aef8a9a/navier-stokes.pdf),
+released with its [September 8 announcement](https://openai.com/index/navier-stokes-solution/).
 
-R136–R138 identified the background-only-render cause: the installed MacPorts
-POV-Ray fast-math build breaks camera-default handling. A same-release build
-with conservative math visibly renders the unchanged sphere, user's beads,
-official torus and project frames 1, 120 and 240. Recompiling only the parser
-with fast-math reproduces the fault. [Diagnosis and saved evidence](docs/rendering/POVRAY_MAC_BUILD_DIAGNOSIS.md).
+**We have a working illustrative animation pipeline, a separate finite
+reference flow, and useful numerical verification tools. We have not yet
+demonstrated an accurate boundary-driven contracting flow, boundary-only
+state estimation, or any physically validated number of decades.**
+The completed preview is a visualization milestone, not completion of the
+engineering goal.
 
-The 240 saved trajectory frames/500 beads passed the checker with Python
-3.12.13. The user subsequently installed MacPorts revision 6 using the
-[durable launcher](packaging/macports/README.md). The installed executable
-passed sphere intersections and visual inspection, then passed the bounded
-installed beads render and project frames 1, 120 and 240. The 160x120 beads
-image showed the expected colored ring; all three 320x180 project images had
-nonzero geometry intersections and visibly changing tank/tracer distributions.
-Effective flags are `-Os -fno-fast-math`; exact recompilation scope remains
-unverified and is not a reason alone to rebuild. No movie was encoded. R155
-confirms PC work never started. R161 transferred ownership back to PC/WSL, and
-R162 received that handoff. R163 created the repository-local `.venv` with
-Python 3.12.14 and NumPy 2.5.3; no sudo or system-wide package change was
-needed. Follow the [next repository task](SESSION_HANDOFF.md#next-task) for
-the proposed preview settings. R157 verifies the user's OpenEXR 3.4.15_0 reactivation;
-openexr2 and POV-Ray revision 6 also remain active. R158 authorizes publication
-of the notes before a fresh Mac chat; this is not a PC ownership transfer.
-POV-Ray on Mac still runs outside the agent sandbox, but no Mac workload is
-pending;
-R131's empty user config remains intact. This is illustrative visualization,
-not physical validation.
+R173 explicitly accepts that boundary-only forcing and sensing might make
+the goal impossible, provided the project gives a clear explanation. A
+supported negative result or a quantified finite limit is therefore a useful
+deliverable, not a reason to weaken the boundary-only requirement.
 
-Updated 2026-09-21. R159 completed the installed-renderer validation on Mac;
-the raw PNGs remain in `/tmp/r159-installed-renderer` and were not added to Git.
-The first render wrapper stopped after the successful beads render because its
-zsh function assigned the reserved name `status`; the three project frames
-were run in a corrected wrapper and all completed. No rerender or scene
-workaround was needed. The user supports simplifying excessive supervision
-requirements. The [R103 practical supervision policy](docs/realizability/B2_MONITOR_PRACTICAL_SUPERVISION_POLICY.md)
-keeps process safeguards and honest accounting while removing recursive proof
-requirements for infrastructure. R106 implemented the portable trajectory output
-checker as the first useful increment: check saved frames before rendering. Its
-Python 3.12.13 focused tests passed on PC/WSL and Mac (R108); actual Mac saved
-data passed in R109 and R136. The next task is in the [handoff](SESSION_HANDOFF.md#next-task).
-No live reliability rate is known; OS supervision and physical work remain pending.
-R104 requires Mac usability and small infrastructure increments that unblock
-named useful tasks; Mac support remains unverified and a complete benchmark
-platform is not a prerequisite for unrelated work.
-A [performance and memory test plan for Mac and PC](docs/realizability/MAC_PC_PERFORMANCE_MEMORY_PLAN.md)
-is also ready as documentation; no benchmark has run.
-The [technical handoff](SESSION_HANDOFF.md#next-task) records the next task.
+The paper's Theorem 1.1 concerns smooth forcing in the fluid volume, starting
+from rest, with bounded kinetic energy and finite-time unbounded velocity.
+It does not provide a finite tank with boundary actuators and sensors.
+Replacing that forcing by boundary action is an additional engineering and
+control problem. Our attainable finite range must be measured, not inferred
+from the theorem. We are not attempting to simulate the singular limit.
 
-Our goal is to determine whether exterior actuators and sensors can prepare
-a contracting, stretching, swirling flow that follows the desired process
-over a useful finite range, and to provide trustworthy data for a separate,
-clear, approximately realistic 3D movie of that process.
+## What we have succeeded in doing
 
-**We are currently verifying the numerical tools needed to answer the physical
-question. We have an implemented illustrative movie pipeline, but have not yet
-demonstrated the required initial setup, an attainable range of contraction,
-or a validated flow history for the movie.** The recent progress is in making
-the calculations trustworthy; it is not yet evidence that the apparatus works.
-
-## Recent results and their practical meaning
-
-- **The reviews found ways a failed or unfinished calculation could appear
-  complete.** Examples include accepting a success report despite an abnormal
-  process exit, or declaring completion while supporting processes remain
-  active. The required corrections are now specified, including checks that
-  work has actually stopped and memory readings are current. R076 passed 16
-  fixture/continuity groups; R081's deeper review reproduced eleven additional
-  cases needing repair, including stale memory readings and unconfirmed helper
-  cleanup. R082's new copy passes 17 fixture groups, with all three attempts and
-  one reconciled fixture-only assertion preserved. R083 found omitted tests,
-  false completion, host freshness and provenance gaps. R084 repairs those in
-  a new copy; all 22 registered checks passed in attempt 3 after preserving two
-  non-resource fixture assertion failures and their source-bound reconciliations.
-  R085 verified the saved evidence but found residual ownership, cleanup timing,
-  protocol and accounting gaps. R088 now passes 14 composed fixture groups on
-  its first attempt. R096 reviewed all 14 saved functions; durable type binding,
-  monitor evidence, admitted deadlines and independent outer receipts required repair.
-  R097 added nine passing repair groups; R098 accepts J01–J03 within the fake
-  interface. R099 specifies the outer contract; R101 completes the API
-  capability decision with an unsupported verdict under the former strict requirements.
-  R103 records user support for practical supervision and narrows those requirements.
-  Live operating-system adapter tests remain pending; further flow
-  calculations remain disabled until the required safeguards are validated
-  and launch is reviewed.
-- **There is no new result yet on physical feasibility.** Previous experiment
-  records were preserved, and the latest numerical boundary response still
-  fails its accuracy comparison. This review adds no evidence about achievable
-  contraction, adequate exterior sensing or practical actuator demands. Those
-  questions remain open, and the existing numerical failure does not establish
-  that the physical concept is impossible.
-- **We now have a plan to choose a computer for each workload.** It compares
-  trajectory generation, rendering, encoding and a small assembly/observer
-  reference using fixed inputs, repeated timings and peak resident memory.
-  Live monitor validation comes first. No benchmark has run under the plan,
-  and neither computer has been shown faster or suitable for a larger solve.
-- **The movie can still illustrate the concept.** The latest work supplies no
-  new validated flow history for a physically supported animation. Connecting
-  the movie to reliable fluid calculations remains a later milestone; the
-  installed Mac POV-Ray passed the sphere and installed beads/project checks
-  in R159. The selected PC preview remains pending.
-
-## Overall progress and remaining milestones
-
-The software foundation is in place: we can generate illustrative tracer
-motion, render it, and run reproducible numerical verification cases. We have
-also built independent reference, stability, boundary-load and measurement
-checks that expose errors an apparently plausible flow picture would miss.
-The central research question remains unanswered because the boundary-driven
-fluid calculation has not yet passed its physical accuracy checks.
-
-| Milestone | Position now | Work still needed |
+| Aspect | Accomplishment and evidence | Limit of the result |
 |---|---|---|
-| Explain the apparatus and intended motion | Illustrative movie pipeline implemented | Further visual refinement is possible; label the prescribed flow clearly. |
-| Trust the numerical boundary response | R098 accepts fake J01–J03; outer-adapter contract unresolved, live adapters unvalidated and physical accuracy failed | Keep the checker/Mac increment separate, then review OS implementation and live validation before physical execution. |
-| Determine what exterior actuators can influence | Benchmark commands/features defined; full six-input response campaign has not begun | Validate responses, then assess independent influence, conditioning and required amplitudes/times. |
-| Determine what exterior sensors can distinguish | Basic sensor fixtures exist; B3 sensing study has not begun | Test pressure/PIV information with realistic noise, resolution and delay. |
-| Prepare the desired initial flow | Concept and candidate hardware only | Define acceptable initial-state errors; test a finite actuator layout and its physical limits. |
-| Establish the useful finite evolution | No demonstrated contraction range | Compare preparation alone with any continued driving, quantify attainable scales and duration, and validate against bench measurements. |
-| Supply physically supported movie data | No validated time-dependent preparation/contraction dataset | Export a checked flow history, tracer paths and hardware/sensor records to the separate renderer. |
+| End-to-end visualization | Deterministic Python/RK4 tracer generation, saved-frame checking, POV-Ray rendering and H.264 encoding work together. R169 produced a checked 30-frame, one-second, 320×180 preview. | Motion comes from a prescribed velocity field. No boundary-control calculation generates this movie. |
+| Input integrity | The independent [trajectory checker](check_trajectories.py) passed the actual PC inventory of 450 frames with 128 tracers each; separated frames 1/225/450 were visibly different. | Finite coordinates, bounds and motion do not establish incompressibility, momentum balance or integration convergence. |
+| Cross-platform rendering | Mac renderer failure was diagnosed and repaired; installed revision 6 passed beads and project-frame checks. PC headless, one-thread rendering passed the bounded preview. | Mac and PC used different saved datasets; no equal-input performance comparison is established. The earlier PC crash's exact cause is unresolved. |
+| Physically interpretable reference | [Reference code](realizability/reference.py) defines a smooth divergence-free, windowed Gaussian-vorticity target in SI units, with core radius 10 mm → 3 mm over 100 s. | This is a prescribed verification/reference field, not the paper's witness or an achieved boundary-driven trajectory. It is separate from the movie field. |
+| Boundary commands | [Six implemented modes](realizability/boundary_modes.py) cover balanced normal strain, tangential swirl and both phases of normal/tangential m=4 perturbations. | These are ideal continuous wall velocities, not a validated finite actuator array or a successful six-input response campaign. |
+| Measurement and analysis tools | Signed strain/rotation/mode features, core-peak diagnostics, stress correlations, pressure-difference covariance and phase-aware rank/identifiability tools exist. | Synthetic feature/rank checks do not establish sensor observability or an estimator for the actual flow. |
+| Fluid solver verification | Two optional finite-element Stokes backends exist. B2 provides divergence-conforming discretization and passed scoped mass-balance/arithmetic checks where B1's strong-divergence screen failed. | Neither is a validated nonlinear contraction simulation. B2's physical-response accuracy gate still fails. |
+| Independent error detection | Independent swirl reference, boundary-load checks, disk integration and stability studies expose wrong answers despite small linear residuals. | Detecting the error is a useful success; resolving it is still necessary before using the response for engineering. |
 
-These are research milestones, not a schedule or a percentage-complete estimate.
-The accuracy investigation may reveal that a different numerical approach is
-needed. Later reachability or hardware tests may identify a useful finite limit
-or a negative result. Neither outcome can be inferred from the present failed
-numerical comparison. Explanatory movie work can proceed independently of
-these scientific gates.
+The [track overview](PROJECT_TRACKS.md), [benchmark](BOUNDARY_CONTROL_HANDOFF.md)
+and [control roadmap](CONTROL_RESEARCH_ROADMAP.md) document the foundations.
+Their older future-task language is historical where it conflicts with the
+current handoff or the stricter sensing requirement below.
 
-## The two goals guiding the work
+## What the current movie actually shows
 
-1. **Physical feasibility:** determine whether equipment acting and sensing
-   from outside the fluid can establish a sufficiently good initial flow to
-   carry out some orders of magnitude of the intended process. This includes
-   learning which interior quantities can be influenced and measured, what
-   preparation requires, and how long the prepared state remains useful.
-2. **Visualization data:** supply the geometry, flow evolution, tracer motion,
-   and relevant actuator/sensor information needed for a separate 3D movie
-   that is understandable and approximately realistic. The scientific data
-   and the rendering should remain separate so improvements to either do not
-   require conflating them.
+The preview is `/tmp/r169-preview-EnjJq0/preview.mp4`, disposable local output
+outside Git. R169 recorded H.264, yuv420p, 30 fps, 30 frames and 1.000000 s.
+Three separately rendered snapshots sampled the beginning, middle and end of
+the 450-frame PC dataset. R171 inspected existing headers and source; it did
+not rerun the renderer, checker or ffprobe.
 
-For the first goal, we need to distinguish **preparing the initial state** from
-**sustaining its later evolution**. It is not established that preparation alone
-will suffice. A later experiment should state whether actuators are turned
-off, follow a prescribed command, or use feedback during the process. Any
-continued driving must be reported as part of the requirements. We should
-not assume a full feedback controller is necessary before testing simpler
-possibilities, nor assume the prepared flow will sustain itself.
+| Saved frame | Model time | Declared TauRatio | Declared CoreRadius |
+|---|---:|---:|---:|
+| 1 | 0 | 1 | 0.34 |
+| 30 | 0.9666666667 | 1 | 0.34 |
+| 225 | 7.466666667 | 0.1018442311 | 0.1812615792 |
+| 450 | 14.96666667 | 0.01 | 0.1003803658 |
 
-“Some orders of magnitude” is an ambition whose measured quantity and range
-still need to be specified. A factor of 100 in core radius differs greatly
-from a factor of 100 in a similarity-time variable. Under the proposed
-`r_c ∝ sqrt(tau)` scaling, a tenfold decrease in radius corresponds to a
-hundredfold decrease in tau. Here tau is a finite-range scaling parameter;
-we are not proposing to reach a mathematical singularity. The existing
-10 mm → 3 mm benchmark is a prescribed initial test target, not an achieved
-contraction or a limit on the user's eventual goal.
+These radius values are scene coordinates, without an established conversion
+to the benchmark's metres. The one-second clip covers initial tracer motion
+before the scheduled contraction progresses. It is not a time-compressed
+movie of the entire 15-second illustrative sequence.
 
-## What I am working toward now
+[make_trajectories.py](make_trajectories.py) prescribes contraction, stretching,
+swirl and an oscillatory m=4 perturbation. Its full field is not guaranteed
+divergence-free; it also clips/constrains tracer positions near the numerical
+bounds. No pressure, momentum equation or actuator-to-fluid response is solved.
+The exported core marker follows `0.32 * TauRatio**0.30 + 0.02`, independently
+of a core measurement from the velocity. The full dataset's label spans two
+decades in TauRatio and approximately 3.39-fold marker-radius reduction.
+Those are animation settings, not demonstrated physical scaling.
 
-The immediate objective is a **reliable, affordable calculation of how boundary
-commands change the central flow**. That is a prerequisite for choosing a
-preparation protocol: otherwise an apparent success or failure could be caused
-by numerical error. The corresponding sensing study must then establish
-whether realistic measurements can distinguish the states we need to prepare.
+[fluid.pov](fluid.pov) currently hides the core, actuator, sensor and PIV
+overlays by default. The optional [hardware illustration](actuators.inc)
+contains three rings of 16 actuator markers and three rings of eight sensor
+markers inside a box-shaped [tank](tank.inc). Those rings are not the wall
+of the fluid domain. The research benchmark instead uses a cylinder of radius
+0.10 m and full height 0.30 m. Geometry, units and actual boundary locations
+must be reconciled before the movie can depict a particular engineered system.
 
-The present benchmark starts with small disturbances about resting water in
-a nominal cylindrical vessel. It uses linear Stokes equations, not a full
-nonlinear simulation of an already developed, contracting vortex. Its central
-measurements include rotation, axial strain and signed perturbation components.
-Passing this benchmark would justify the next response studies; it would not
-by itself demonstrate preparation or several orders of the process.
+A further distinction matters for fidelity to the paper: Section 2 describes
+both radial and axial core scales shrinking, with the radial scale shrinking
+faster. Material axial stretching/outflow does not mean the region of intense
+flow grows in height. Our optional core graphic grows in half-height from
+0.55 to 0.715; that is not a quantitative depiction of the paper's axial scale.
+[Paper, Section 2](https://cdn.openai.com/pdf/32d9f210-8b73-45e0-91bc-82a30aef8a9a/navier-stokes.pdf)
 
-The [current numerical handoff](SESSION_HANDOFF.md) specifies the next small
-diagnostic. This status report records the broader purpose without changing
-that experiment's parameters, acceptance criteria or resource limits.
+## Boundary forcing: what is implemented and what remains
 
-## How far we have gotten
+For the proposed engineering calculation, imposed actuation must enter at the
+actual fluid boundary. The baseline interior model is incompressible
+Navier–Stokes with no imposed volumetric actuation:
 
-| Area | What exists | What it establishes, and what is missing |
-|---|---|---|
-| Illustrative movie | Python tracer integration, POV-Ray rendering and ffmpeg encoding, with example scene and motion settings | A usable way to explain the concept. The flow is prescribed; the rendered actuators do not generate it. It is not a validated physical evolution. |
-| Target and measurement definitions | A finite reference target, boundary-command basis, central-flow features, and basic sensor/response diagnostics (B0) | A reproducible vocabulary for testing the idea. Prescribing a target does not show that exterior hardware can create it; sensor fixtures are not an observability study. |
-| Fluid-response calculations | Two optional linear Stokes implementations and verification cases (B1/B2) | B1 failed its strong-divergence check. B2 addresses that issue in recorded cases, but its physical tangential-response accuracy remains unresolved. |
-| Stability and accuracy checks | Independent swirl reference, repaired reporting, positive dissipation certificates on four meshes, and one completed physical response audit | The audited 50 mm case passes PDE checks but fails reference accuracy by a large margin. Stability does not establish response accuracy, and the physical B2 gate still fails. |
-| Physical preparation and sensing | Research plan and candidate mechanisms | No demonstrated preparation protocol, validated actuation/measurement response study, or hardware feasibility result yet. No demonstrated multi-order evolution. |
-| Data for a physically supported movie | Existing illustrative trajectories and numerical reference/diagnostic records | Useful explanatory material, but no validated time-dependent preparation/contraction dataset or completed export from such a calculation to the movie. |
+```text
+∂t u + (u·∇)u = -∇p/ρ + ν∇²u,    ∇·u = 0
+boundary velocity/traction = physically interpretable actuator commands
+```
 
-The [project tracks](PROJECT_TRACKS.md) and [research roadmap](CONTROL_RESEARCH_ROADMAP.md)
-give the implementation and longer-term context. There is no defensible
-percentage-complete estimate for the physical goal: the key feasibility
-questions are still open.
+The current research [configuration](realizability/config.py) uses nominal
+water properties, ν=1e-6 m²/s and ρ=1000 kg/m³. Normal side-wall modes represent
+balanced recirculation through a porous liner; tangential modes represent
+moving wall elements. Endcaps are stationary. Instantaneous zero net volume
+flux is built into the ideal normal basis. A fixed porous-wall model is not
+automatically a finite-stroke diaphragm model.
 
-## What the latest work tells us
+We have run boundary-driven **linear Stokes** pilot calculations about rest,
+without volume forcing. Manufactured body forces used in solver verification
+are separate test fixtures and are not an allowed engineering actuator.
+Linear Stokes omits nonlinear transport, so it cannot demonstrate the vortex
+spin-up and nonlinear perturbation-stress mechanism central to the larger goal.
 
-The [stability study](docs/realizability/B2_RESPONSE_COERCIVITY_RESULT.md)
-established that the unforced discrete model dissipates energy at one tested
-numerical setting (alpha=96) on the recorded 50/40/30/25 mm meshes. Alpha is a
-numerical boundary-enforcement parameter, not an actuator strength. This removes
-a particular stability uncertainty on those meshes. It does not select the final numerical settings
-or establish the accuracy of a driven flow.
+No reliable multi-input influence matrix, optimized command history, finite
+actuator model, stroke/bandwidth/power feasibility result, nonlinear controlled
+contraction or closed-loop controller has been established. Preparing the
+initial state and sustaining its subsequent evolution are distinct tasks:
+future results must say whether actuation stops, follows a prescribed history
+or responds to sensors.
 
-The [accuracy review](docs/realizability/B2_ACCURACY_REVIEW.md) reproduced an
-independent reference for one simple case: periodic, axisymmetric tangential
-wall motion about rest. At the benchmark's very small wall-speed amplitude
-of 1e-7 m/s and frequency 0.01 Hz, the reference central disk-rotation amplitude
-is approximately 6.91e-12 per second. Reference evaluation is reproducible far
-below the comparison scale. The subsequent
-[single physical response audit](docs/realizability/B2_PHYSICAL_RESPONSE_AUDIT.md)
-ran the repaired solver on one coarse, stability-certified mesh. It completed
-within the resource limits and passed its algebraic and divergence checks, but
-its central response amplitude was about **29,000 times the reference**, with
-about **74 degrees of phase error**. It cannot be used as validated physical
-response data.
+A useful engineering approximation should first match selected interior
+observables. Exact reproduction of an arbitrarily volume-forced field is
+generally a different problem: where exact matching to an unforced interior
+solution is proposed, the target momentum residual must be a pressure gradient.
+The [benchmark's residual criterion](BOUNDARY_CONTROL_HANDOFF.md#35-boundary-control-cannot-reproduce-every-forced-target-pointwise)
+explains this necessary condition; it does not rule out approximate matching.
 
-One residual correction changed that result negligibly. Finer measurement
-quadrature also left the large discrepancy, while its own remaining sensitivity
-was still too large relative to the tiny reference. The next numerical question
-is how to distinguish inadequate boundary-layer resolution from effects of
-the faceted vessel and its projected boundary command. This result establishes
-a failed accuracy check on one mesh; it does not establish a universal numerical
-error floor or a limit on physical actuation.
+## Boundary sensors: an explicit requirement gap
 
-That tiny reference response is useful evidence about this particular way of
-driving resting water. It does **not** establish that exterior actuation is
-generally ineffective, that a prepared vortex cannot be influenced, or that
-the response is experimentally detectable. Pumping, an established circulation,
-nonlinear evolution and realistic sensor noise have not been settled by this
-test. The current 5% magnitude/5-degree checks concern numerical comparisons;
-they are not yet a definition of “good enough” for the physical experiment.
+R171's boundary-only requirement is stricter than the older plans that feed
+interior PIV features into a controller. Pending clarification, this report
+uses the strict interpretation: feedback contains only measurements of
+boundary quantities, such as wall pressure and declared actuator measurements.
+Interior fields and tracer images may be used for validation and visualization,
+but may not be passed to the controller as measured state.
 
-## What remains to answer the physical goal
+A camera outside the tank that measures interior velocities has exterior
+hardware but interior measurement support. Whether that is permitted is a
+separate user choice; it is not silently counted as boundary-only sensing.
+No controller exists yet, so this is a specification gap, not a discovered
+violation by a running controller.
 
-After the current numerical accuracy issue is resolved, the work needs to
-connect several distinct questions:
+There are useful early deductions and implemented checks:
 
-1. **Influence:** which combinations of exterior commands can independently
-   change the interior features of interest, and with what amplitudes and
-   preparation times?
-2. **Measurement:** can exterior sensors identify those features with realistic
-   noise, resolution and delay? Outside cameras viewing seeded fluid through
-   the tank are one candidate; wall-pressure measurements alone must be assessed
-   separately. Neither arrangement has been shown sufficient here.
-3. **Preparation:** can a finite, physically plausible actuator arrangement
-   create the required initial flow within speed, stroke, flow-rate, force and
-   bandwidth limits? An ideal prescribed wall velocity is not a hardware design.
-4. **Finite evolution:** starting from that prepared state, what range of
-   contraction and other desired behavior survives viscosity, disturbances and
-   practical limits? Measure the range attained and any continued actuation
-   required, including a useful negative or finite-limit result.
+- In the linear rest-Stokes benchmark, axisymmetric pure swirl has no
+  first-order pressure signature. Wall pressure alone has a blind direction
+  for that state. This does not prove pressure is useless around an established
+  vortex, or that all boundary sensing is impossible.
+- Eight equally spaced samples on one ring cannot distinguish both independent
+  m=4 phases. The movie's marker count therefore is not a validated sensor
+  layout. Multiple measurements, locations and physical operators require
+  their own rank/noise analysis.
+- [sensors.py](realizability/sensors.py) handles relative pressure and correlated
+  reference noise; [response.py](realizability/response.py) handles complex
+  response normalization and finite-family identifiability. These are analysis
+  components, not a completed dynamic observability study.
 
-“Good enough” will need an agreed set of observable targets, tolerances,
-duration and range, rather than exact reproduction of an entire mathematical
-velocity field. These choices remain open; this report does not silently set
-them. A successful small response study must still be followed by an appropriate
-finite-amplitude flow investigation and, eventually, experimental checks.
+B3 sensing, noisy/delayed measurements and state estimation have not begun as
+a validated flow study. Potential additional boundary measurements, such as
+shear/torque, would need explicit hardware and measurement definitions before
+selection. They are not assumed available or sufficient.
 
-## How the research should support the separate movie
+## The main numerical obstacle, and what we learned from it
 
-The movie can already illustrate the intended mechanism. Its next level of
-physical support should come from a documented dataset that the renderer reads,
-with the numerical integration kept outside POV-Ray. The proposed data handoff
-should contain:
+B1's Taylor–Hood implementation failed the required strong-divergence
+tolerance. B2's divergence-conforming formulation addressed that issue in
+recorded cases. A separate [stability study](docs/realizability/B2_RESPONSE_COERCIVITY_RESULT.md)
+certified positive homogeneous dissipation at numerical penalty alpha=96 on
+the recorded 50/40/30/25 mm meshes. This is stability evidence for those
+discretizations, not nonlinear stability or response accuracy.
 
-| Data | Purpose in the movie |
+An [independent accuracy audit](docs/realizability/B2_PHYSICAL_RESPONSE_AUDIT.md)
+then found that the 50 mm, alpha=96 tangential response at 0.01 Hz was about
+28,963 times the reference amplitude, with about 74.12° phase error. The
+reference disk-rotation amplitude is about 6.91e-12 s⁻¹ for a 1e-7 m/s wall
+command. Small algebraic residuals and near-zero divergence did not make the
+central response accurate. A residual correction barely changed it.
+
+The latest recorded physical attempt is
+[R020](docs/realizability/B2_MATCHED_TRACE_COMPATIBILITY_RESULT.md).
+Its cell-integrated original-command result still has amplitude ratio
+28,963.4968 and phase error 74.1175°. A comparison using a known solution's
+boundary trace stopped on pressure/flux compatibility before either
+matched-trace solve. Consequently, the discrepancy has not been reliably
+allocated among mesh resolution, faceted geometry, boundary data and
+measurement integration.
+
+[R033](docs/realizability/B2_COMPATIBLE_TRACE_PREFLIGHT_FOLLOWUP.md) subsequently
+passed the repaired toy/observer prerequisites for a proposed higher-order
+comparison. It did not run that physical comparison. The numerical gate
+remains failed and `campaign_ready=false`; neither the six-input campaign nor
+a boundary-only observability study is validated.
+
+This is an unresolved numerical accuracy problem, not proof that the
+engineering goal is impossible. Conversely, an attractive animation cannot
+resolve it. One mesh's large error does not establish a universal solver error
+floor or the attainable physical contraction.
+
+## What “the first few orders of magnitude” must mean
+
+We still need a measured quantity, finite interval and allowable error. The
+paper motivates a radial scale proportional to the square root of remaining
+similarity time. Using that relation as a finite-range target gives:
+
+| Chosen range | Corresponding radial contraction, if the scaling holds |
 |---|---|
-| Vessel and actuator geometry, coordinates and physical units | Keep dimensions and hardware placement consistent. |
-| Time-stamped velocity fields or reproducible field evaluation, plus derived tracer paths | Show motion supported by the stated model; keep physical time distinct from playback time. |
-| Core radius, rotation/swirl, strain and perturbation histories | Show what changes and quantify the finite range actually represented. |
-| Actuator commands and predicted sensor readings, where available | Connect preparation and any continued driving to the depicted flow. |
-| Model assumptions, parameter values, numerical uncertainty and validity interval | Distinguish a prescribed illustration, a verified benchmark and a physically supported prediction. |
+| 100-fold decrease in similarity time (2 decades) | 10-fold reduction in radius |
+| 1,000-fold decrease in similarity time (3 decades) | About 31.6-fold reduction in radius |
+| 100-fold reduction in radius (2 radius decades) | 10,000-fold decrease in similarity time (4 decades) |
 
-This is an intended handoff, not an implemented or validated export contract.
-A simpler representation fitted to reliable flow data may be adequate for a
-clear movie, provided its approximation and range of validity are documented.
-Useful visual aids can include enlarged tracer markers, cutaway views, arrows,
-colour scales or slowed playback. Such choices should be labelled and should
-not change the underlying physical trajectory or imply that exaggerated
-actuator motion generated it. Preparation and subsequent evolution should be
-shown as distinct stages when data for both become available.
+These are algebraic translations of a proposed scaling, not achieved results.
+The implemented reference's 10 mm → 3 mm trajectory is a modest first target;
+10 mm → 1 mm is a larger candidate. Neither has been generated by validated
+boundary control here. The animation's TauRatio is not a measurement of the
+remaining time of a solved physical evolution.
 
-The two goals can therefore advance at different rates: a clear explanatory
-movie can precede physical feasibility, while later validated data should
-replace or constrain its illustrative motion. Visual clarity alone is not
-evidence of realizability.
+For an engineering claim, report achieved core size, swirl, strain, relevant
+mode amplitudes and stress transport, with mesh/time/measurement uncertainty
+and actuator/sensor limits over that interval. A nonzero perturbation
+correlation alone does not establish the required momentum transfer: its
+spatial transport and the momentum-balance residual must also be assessed.
+Finite failure at a smaller scale would be useful evidence about the attainable
+range.
 
-## Latest scientific checkpoint and monitor review
+## What remains between today's preview and the intended simulation
 
-The [R067 review](docs/realizability/B2_PHYSICAL_RUNNER_REVIEW.md) confirms the
-saved observer/oracle coverage and the patched FFCx package, but finds stale
-launch limits, incomplete evidence binding and failure/count reporting gaps.
-R070 completed the disposable repair and R073 added passing fake monitor checks.
-The [R074 adapter review](docs/realizability/B2_MONITOR_ADAPTER_REVIEW.md)
-reproduces root/descendant completion, cleanup-exception, clock/scheduling/input
-and return-code acceptance gaps. It specifies Linux containment/RSS/cleanup
-and Windows host-pressure semantics. R073's ledger is preserved, with incomplete
-all-attempt timing/RSS evidence explicitly noted. R076 implemented the fixture
-contract and passed 16 check groups. R081's
-[review](docs/realizability/B2_MONITOR_LIVE_VALIDATION_CONTRACT.md) reproduced
-eleven remaining gaps and froze a ten-case future PC suite. It found a candidate
-user-owned cgroup delegation read-only, with operations still untested; this
-Python build lacks the pidfd wrappers. R076's timing covers its validator
-subprocesses, not all recorder overhead. R082's new copy passed 17 fixture
-groups; its explicit attempt-2 fixture reconciliation and outer-source hash
-limitation are documented in
-[R082 evidence](docs/realizability/evidence/r082/README.md). R084 completes the
-G01–G07 fixture repairs in a separate copy: 22/22 registered groups passed on
-attempt 3, while attempts 1 and 2 remain charged and source-bound as understood
-fixture assertion reconciliations. The [R084 evidence](docs/realizability/evidence/r084/README.md)
-records 15.691/120 s, a 30,060,544-byte maximum validator lifetime RSS and the
-excluded timing scope. These are fixture results; no live adapter, native
-helper, workload or physical run occurred. The [R085 review](docs/realizability/B2_MONITOR_R084_REVIEW.md) confirms the saved
-22-function result and identifies residual composition, timing, protocol and
-accounting gaps. Follow the [current handoff](SESSION_HANDOFF.md#next-task) for
-acceptance review of the [R088 composed fixture result](docs/realizability/evidence/r088/README.md)
-before the separate OS harness. R088 records 14 passing groups, 5.633/120 s
-charged and 23,941,120 B validator peak RSS; outer guard startup/final persistence
-remain excluded, so no whole-recorder or live certification is claimed.
-The later observer/assembly reference retains unchanged numerical screens;
-monitors must pass first. No comparative solver performance or physical
-execution is established by these reviews.
-The independent Mac POV-Ray build remains outside this task; its movie check
-is deferred. R080 returns ownership to PC after this plan is published. See the
-[handoff](SESSION_HANDOFF.md#next-task).
+1. Define the finite paper-inspired target, units, observables, tolerances and
+   exact boundary measurement allowance. Distinguish target, truth used only
+   for validation, sensor output and estimated state.
+2. Obtain an accurate small boundary-response benchmark; resolve the current
+   B2 comparison before trusting a campaign built on it. Preserve independent
+   reference checks and practical execution limits.
+3. Establish influence and boundary-only identifiability at an explicitly
+   stated operating point, then test finite-amplitude preparation and nonlinear
+   evolution with physically limited actuators.
+4. Quantify the achieved scale range and the need for continued driving;
+   evaluate estimation/control with the allowed noisy, delayed measurements.
+5. Export the accepted finite history to the separate renderer: geometry and
+   SI units, physical timestamps, fields/tracers, measured core/strain/swirl
+   histories, commands, sensor outputs, estimates and numerical uncertainty.
 
-The [R033 prerequisite result](docs/realizability/B2_COMPATIBLE_TRACE_PREFLIGHT_FOLLOWUP.md)
-completes the disposable q=64/q=96 fixture and the actual pre-solve observer
-checks. The five original phases, wrong-root and parent refusals, 16 high-order
-facet checks, missing-layout/wrong-offset/lifting refusals, and compatible
-P/A/A plus incompatible P/first-A/second-A cases all passed. The observer ran
-once per case, agreed with the full block oracle, and recorded zero factor or
-solve events. Four attempts used 56.25 seconds cumulatively; the largest
-sampled child-tree RSS was 571.42 MiB, below the capacity-sized 1536 MiB cap.
-The final cache-reuse pass peaked at 171.24 MiB. Two understood fixture defects
-were repaired in the disposable copy, and every attempt was preserved.
-**No physical child, PDE solve, factorization or flow response ran.** The B2
-physical accuracy gate remains failed. R067 completed the observer/physical-path
-review without launching that comparison; R070/R073/R074 still launch none.
+This sequence is a research path, not a completion percentage or a prediction
+that all stages will succeed. Bench validation would be needed before claiming
+that a real apparatus performs as simulated; building one is not a prerequisite
+for producing an honestly labeled engineering simulation.
 
-R023's qualified 600-second/2048-MiB allowance was sized down for R033 after
-the live Windows host check: the first launch used a 1536-MiB child-tree cap
-with 2.66 GiB host memory available, and subsequent readings showed more
-headroom. The R022 prerequisite work is now complete. Any later physical
-attempt needs its own capacity estimate and must satisfy the unchanged
-[R021 experiment contract](docs/realizability/B2_COMPATIBLE_TRACE_INTEGRATION_REVIEW.md).
+## Timed boundary forcing: the wave-focusing analogy
 
-The latest physical attempt remains
-[R020](docs/realizability/B2_MATCHED_TRACE_COMPATIBILITY_RESULT.md): P's checked
-response still fails reference accuracy, and A_32 was refused at pressure
-compatibility. The paired physical comparison, continuum geometry-error
-allocation and total FEM error floor remain unknown. The physical-response
-campaign stays blocked (`campaign_ready=false`). Preparation, sensing, hardware
-feasibility and a validated movie trajectory remain the later milestones
-listed above.
+R174 describes a circular pool whose surrounding actuators produce a tall
+central water column by coordinating different frequencies. A strong match
+is Edinburgh's FloWave spike-wave experiment, though the exact demonstration
+the user saw is not identified. Its researchers report central crests up to
+6 m and explain the process as dispersive wave focusing followed by trough
+collapse and jet formation. The facility has 168 perimeter wavemakers.
+[Experimental paper](https://doi.org/10.1017/jfm.2021.1023),
+[facility description](https://flowave.eng.ed.ac.uk/how-it-works).
+
+The [commissioning paper](https://www.pure.ed.ac.uk/ws/files/14949375/Oceans_Flowave_final.pdf)
+explicitly describes waves of decreasing frequency timed to reach the centre
+together. Frequency-dependent travel and phase are coordinated so contributions
+meet at a selected place and time. This provides an example of boundary actuation
+creating a concentrated interior event. It motivates a command-history study
+here; it does not show that the required vortex trajectory is reachable.
+R175 acknowledges that our situation is harder; feasibility remains open.
+
+For our benchmark, the relevant question is whether a sequence of normal and
+tangential commands can prepare the desired state and produce a useful finite
+interval of contraction. Testing one frequency or a static input/output rank
+cannot settle that question. In a linear approximation about a steady base,
+the appropriate object is a causal response to each input over time:
+
+```text
+change in feature i at time t
+  = sum over actuators j of integral_0^t K_ij(t-s) command_j(s) ds
+```
+
+Here K is a measured/computed impulse-response kernel, not an assumed wave
+travel time; the formula assumes zero initial perturbation. A complete,
+validated complex frequency response can represent the same linear dynamics.
+Our single-frequency accuracy pilot is only an early verification step.
+Nonlinear finite-amplitude preparation would need a subsequent model/check.
+
+The analogy has limits: FloWave uses a deforming free surface and gravity-wave
+propagation. Our current closed-cylinder Stokes benchmark has neither that
+surface nor that propagation mechanism; its vorticity transport about rest
+is diffusive. No free-surface solver or new actuation mechanism is selected.
+A transient peak also differs from tracking a contracting, swirling state
+through a specified range of scales. Phase coordination can combine available
+responses, but cannot create a missing control direction or remove physical
+actuator limits. The admissible preparation time and robustness to timing
+errors must be reported.
+
+Finally, concentrating a known input is separate from reconstructing an
+unknown interior state. The FloWave study used wave gauges and optical surface
+measurements; it is not evidence for our strict boundary-only sensing goal.
+The proposed benchmark should distinguish precomputed open-loop preparation
+from any later boundary-measurement feedback and evaluate each on its own terms.
+
+## If the boundary-only goal cannot be achieved, what would explain why?
+
+We do not currently have a general impossibility result. A useful negative
+conclusion must name the target, allowed controls and measurements, initial
+state, time interval, accuracy/noise tolerance and hardware limits. It should
+identify the limiting mechanism and the largest useful range still supported.
+
+| Possible obstacle | Evidence that would justify a clear, scoped conclusion | What that conclusion would not establish |
+|---|---|---|
+| Exact target needs an interior force | A nonzero curl of the target momentum residual in a region where exact unforced matching is required. | It does not exclude an engineering approximation of selected observables. |
+| Chosen boundary actuators cannot produce a required change | A verified response map with an inaccessible target direction, or a lower bound on tracking error under specified amplitude/bandwidth limits. | Failure of six linear modes about rest does not exclude other boundary layouts, operating points or nonlinear preparation. |
+| Allowed sensors cannot distinguish necessary states | Two admissible states give identical boundary signals but different target observables or require different corrective actions; with noise, their signal difference stays below the measurement uncertainty. | It rules out the stated inference/feedback task, not automatically a prescribed open-loop flow or every possible boundary sensor. |
+| Hardware becomes inadequate as the core shrinks | Converged calculations show that required speed, stroke, force, power or bandwidth exceeds declared limits, or sensor resolution/noise prevents the requested accuracy. | This is a limit of the specified apparatus and scale range, not a theorem about every boundary-controlled fluid. |
+| Numerical results cannot resolve the answer | Reference, mesh/time refinement or measurement-error checks fail. This describes the present B2 obstacle. | An inconclusive calculation is neither engineering success nor evidence of physical impossibility. |
+
+For a linear response study, an inaccessible direction can be exhibited as an
+output combination that all allowed inputs leave unchanged. For sensing, the
+corresponding witness is a state change invisible to every allowed measurement.
+These concrete witnesses are more informative than reporting a bad condition
+number alone. Small nonzero responses must be compared with numerical error,
+input limits and sensor noise before interpreting them as practical barriers.
+
+The pressure-blind pure-swirl direction already supplies a model-specific
+example of the sensing issue. The large B2 reference discrepancy supplies an
+example of numerical uncertainty. Neither currently establishes that the
+user's finite-range boundary-only engineering approximation is impossible.
+
+## Next task and execution status
+
+The next useful task is to revise the existing boundary-control benchmark
+specification around the confirmed paper and boundary-only sensing: propose a
+finite target/measurement definition, an interpretable negative-result test,
+and connect both to the unresolved B2 accuracy check. Its concrete scope and
+completion criteria live only in the
+[current handoff](SESSION_HANDOFF.md#next-task). Reviewing or extending the
+illustrative movie can proceed separately; a longer render does not advance
+the boundary-control evidence by itself.
+
+R176 recommends **GPT-6 Astra / high reasoning / PC-WSL `daisy`** for that
+bounded specification task. Remain on the current model and machine: the
+work requires scientific judgment and the PC holds the relevant evidence.
+The deliverable is one revised existing benchmark, including timed command
+histories, strict boundary measurements and interpretable success/failure
+criteria, plus the accuracy prerequisite for its eventual execution.
+See the [handoff](SESSION_HANDOFF.md#next-task) for checks, stopping conditions
+and the later model-selection rule. No new numerical experiment is launched
+by this recommendation.
+
+The rendering repair is complete. R169 completion is committed as `6deb9d0`;
+R176 authorizes publication of the R170–R176 documentation. The delivery
+commit and push outcome are reported after publication. The old PC
+display-enabled crash is not diagnosed, but the accepted headless one-thread
+preview needs no retry. No Mac work is currently required.
+
+The [R103/R104 practical supervision policy](docs/realizability/B2_MONITOR_PRACTICAL_SUPERVISION_POLICY.md)
+retains limits, cleanup and honest incomplete-result reporting while removing
+recursive infrastructure certification. Optional cross-platform benchmarks
+and general monitor features must not displace the named scientific task.
+Physical execution still requires its applicable numerical and practical
+safeguards; this report grants no attempt and changes no acceptance thresholds.
 
 ## What the resource budgets mean
 
-The previous 60-second/512-MiB toy allowance and 180-second/1.5-GiB physical
-allowance were conservative watchdog settings chosen for bounded diagnostic
-tasks. They were not hardware limits, a monetary budget, or numerical accuracy
-criteria. A “toy” is a small verification problem, such as one tetrahedron with
-a known polynomial velocity, used to check the implementation before a larger
-flow calculation.
+The retained 180 s / 1536 MiB physical allowance is an execution limit, not an
+accuracy target or the hardware's total capability. R033's separate completed
+prerequisite allowance was 600 s / 1536 MiB. Neither grants a new run.
+Capacity must be assessed at any future authorized launch; old free-memory
+snapshots are not current measurements. The q64/q96 physical comparison
+remains unrun. Detailed historical environment, monitor and resource records
+remain linked from the [handoff](SESSION_HANDOFF.md) and
+[practical supervision policy](docs/realizability/B2_MONITOR_PRACTICAL_SUPERVISION_POLICY.md).
 
-“Cumulative” applies to wall-clock time across the prerequisite phases and
-failed attempts within that task. Imports, compilation and test reporting
-count; analysis, editing and time between separate attempts do not. R022 used
-5.24 seconds in its first attempt and 11.17 seconds in its second, totaling
-16.41 seconds. This is not a running allowance for the lifetime of the project.
+## Evidence and checks for this update
 
-Memory is checked separately: the watchdog samples the sum of resident RAM
-reported for the active test and its descendant processes, including compilers,
-about every 0.05 seconds. Memory peaks from sequential tests are not added
-together. Summed process RSS can count shared pages more than once; it is a
-conservative process-tree measure, not the whole computer's memory usage.
-R022 was stopped at 513.61 MiB by that watchdog, not by a reported system
-out-of-memory condition.
-
-The [R023 resource snapshot](docs/realizability/evidence/r023/resources.json)
-shows approximately **7.6 GiB RAM visible to WSL**, with **6.3 GiB available**
-at inspection, and 28 logical CPUs visible. A subsequent
-[R024 Windows check](docs/realizability/evidence/r024/resources.json) found
-**15.7 GiB usable host RAM, with 2.1 GiB available**. WSL then reported about
-6.8 GiB available inside the guest. The two availability readings describe
-different views of shared physical RAM; they cannot be added. Available RAM
-varies as other applications run.
-
-The user reports Chrome using 2.7 GB. Closing unused tabs/apps can make room
-before larger calculations. The current approximately 8 GiB WSL ceiling was
-sufficient for the completed prerequisite run, so increasing that ceiling was
-unnecessary. It is consistent with the default of half the host's memory;
-the user confirmed **8 GB memory and 2 GB swap** in WSL Settings in R025.
-Swap is disk-backed overflow and is not counted as RAM for the planned test.
-Microsoft documents inspection/configuration through Start-menu WSL Settings
-or `%UserProfile%\.wslconfig` in its
-[WSL configuration guidance](https://learn.microsoft.com/en-us/windows/wsl/wsl-config).
-
-The user authorizes using the PC within its capabilities. Future local jobs
-should use allowances based on available RAM and expected work, leaving room
-for the operating system and other applications. R033 rechecked both Windows
-and WSL before each attempt, did not count swap as RAM, and preserved its
-600-second/1536-MiB limit. R074 specifies the remaining monitor/integration
-requirements before any physical launch. Retain the provisional physical
-180-second/1536-MiB limits. Preserve watchdogs, finite reports,
-scientific acceptance thresholds and the recorded experiment scope. Historical
-R022 resource results remain unchanged.
-
-The user's Mac is an **Apple M4 iMac with 24 GiB RAM**. Its dated snapshot
-recorded 68% system-wide free memory and 591 GiB free project-volume storage.
-The pinned FEM packages import in its Conda environment, and two-rank MPICH
-startup succeeded; no FEM assembly/solve or same-input reference comparison
-has run. Conda reports FFCx 0.10.1 while the imported module reports 0.10.0.
-R055 traced this to upstream v0.10.1 packaging metadata that still declares
-project version 0.10.0; the release contains a critical quadrature-rule
-code-generation fix, so retain the 0.10.1 pin. R058 checked the live Mac Conda
-metadata: build, artifact URL and SHA-256 match the R056 PC record. See
-[Mac readiness evidence](docs/realizability/evidence/r058/mac_readiness.json).
-R056 confirmed that the PC already has conda-forge `fenics-ffcx 0.10.1`
-(`pyhbc3ee6d_1`). R014/R016/R020 used this environment after installation, so
-their `ffcx: 0.10.0` report values are module self-reports, not evidence of an
-unfixed package; no rerun is required. R067 verified the installed compiler
-files against package metadata and found the inspected repeated integrals merge
-during symbolic analysis. Historical loaded binaries are not fully attributable
-from cache timestamps; use the documented provenance checks for future runs.
-The next FEM reference run should use a fresh isolated cache and record the Conda build/hash
-separately. See [R056 environment evidence](docs/realizability/evidence/r056/ffcx_pc_environment.json).
-The latest PC snapshot showed 15.72 GiB total/5.44 GiB free in Windows and
-7.61 GiB total/6.73 GiB available in WSL; these are overlapping views of
-shared host RAM. The Mac's 4 performance/6 efficiency cores and the PC's 28
-WSL-visible logical CPUs do not establish comparative speed; no matched run
-exists. The PC's R033 Linux observer/runner and resource checks were
-exercised, so retain the PC for the current monitor implementation. The Mac is
-a plausible future memory-sensitive FEM
-candidate, but neither workload fit nor relative runtime is established. See
-the [R053 comparison evidence](docs/realizability/evidence/r053/machine_snapshot.json)
-and [handoff assessment](SESSION_HANDOFF.md#r053-machine-task-allocation-checkpoint).
-Complete the R074 adapter implementation and required live validation before
-refreshing capacity and running the specified observer/assembly reference on
-both hosts. No physical calculation or matched benchmark was run for this comparison.
-
-For the Mac software inventory (R054), the FEM Conda environment and MPI
-startup have passed import checks, and `ffmpeg`/`ffprobe` are present. POV-Ray
-is the remaining confirmed tool missing from the checked shell for the full
-movie pipeline. The FFCx version-string discrepancy is explained by upstream
-release metadata; retain the pinned 0.10.1 code. See the [Mac install handoff](SESSION_HANDOFF.md#next-task)
-and [R055 finding](SESSION_HANDOFF.md#r055-ffcx-version-discrepancy).
-
-The remaining Mac setup is in
-[MAC_INSTALL_AND_BENCHMARK_PLAN.md](docs/realizability/MAC_INSTALL_AND_BENCHMARK_PLAN.md);
-the new [Mac/PC test plan](docs/realizability/MAC_PC_PERFORMANCE_MEMORY_PLAN.md)
-is the comparison protocol for both machines.
-R058 confirmed that MacPorts is already installed, POV-Ray is not registered,
-Xcode/clang is available, and ffmpeg/ffprobe 4.4.2 execute with libx264 listed.
-R065 reports a POV-Ray build already running; check its outcome at a later Mac
-session rather than launching another install. Once verified, use the guide's
-fresh source copy for the one-frame and ten-frame checks. A passing
-movie check establishes visualization readiness; FEM assembly, solving and
-portable resource-monitor validation remain pending. No install or benchmark
-was run as part of R058. R067 has now specified an observer/assembly reference
-and comparison screens, with no solve benchmark or host winner inferred.
-
-R065 retained PC ownership historically; R079 transferred it to Mac
-for this documentation task after receipt of R076's published completion.
-R080 returned ownership to PC; R081 received the delivery and completed the review.
-R067/R070/R073/R074/R076/R081/R082/R083/R084/R085/R088 are complete within their recorded scope; live
-validation remains ahead of a separately scoped reference. Follow the current
-handoff instead of replaying older tasks. Mac movie readiness and visualization
-benchmarks can be scheduled independently. The workload revision stays fixed
-across later evidence commits; ignored benchmark inputs need an
-explicit checksum-verified transfer. R063 adds a local machine/owner check at
-session start. Uncertain ownership requires clarification; local Git cannot
-detect the other machine's unpublished work or running processes.
+R171–R174 reviewed source/configuration, existing frame headers, recorded
+R169 acceptance, B2 stability/accuracy/R020/R033 evidence, and the paper's
+Theorem 1.1 and Section 2. The source review also checked the movie's default
+visibility flags, interior hardware markers and separate radius formula.
+R174 additionally checked primary FloWave facility and experimental sources
+and added the timing/phase analogy with its free-surface and sensing limits.
+No new solver test, trajectory integration, renderer, encode, ffprobe, package
+change or physical experiment ran. Documentation validation passed for 32 local
+targets/anchors, unique request IDs, preserved committed request history and
+diff whitespace; historical numerical test passes are not claimed as new runs.
+R176's final publication review passed 33 local link/anchor checks, both
+append-only log-prefix checks, unique request IDs through R176, four-file
+documentation scope and whitespace. Fresh fetch confirmed equal local/upstream
+tips before the authorized documentation commit; staged checks follow.

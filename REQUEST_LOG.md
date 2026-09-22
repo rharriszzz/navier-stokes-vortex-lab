@@ -4848,3 +4848,201 @@ physical and broad tests. R167's bounded preview is complete; no renderer
 root-cause claim is added. PC retains ownership. Next task: no further preview
 retry; preserve the artifacts and return to Astra/high only for a new renderer,
 build or format decision.
+
+## R170 — 2026-09-21 (America/New_York) — Clarify preview completion and model choice
+
+**User request:** “I didn't understant the final comment, If you think I should
+pass it back to luna let be know, othwise please continue.”
+
+Supplied context quotes: “The next task is only needed for a new renderer,
+build, or format decision; otherwise the preview is complete. Luna supports
+medium reasoning and bounded cost-sensitive workloads.” It links
+https://developers.openai.com/api/docs/models/gpt-5.6-luna and includes
+“Worked for 8m 2s; Token usage: total=133,107 input=113,025 (+ 2,560,640 cached)
+output=20,082 (reasoning 4,402)”, a resume instruction for session
+`01a0c705-8c1c-72c2-ae56-318e5d801dc1`, and “Model changed to gpt-6-astra high”.
+The supplied `/status` shows Codex v0.155.1, Astra/high, Workspace approval,
+Default collaboration, session `01a0c70f-16aa-73c2-83a8-771f3ec8bd36`, 88%
+weekly allowance remaining (reset 17:37 on 28 Sep), 283 credits and 100%
+Luna Reserve (reset 23:00 on 28 Sep). Account email redacted. These are
+user-supplied observations, not current telemetry; no private session files
+were inspected.
+
+**Scope/status:** In progress. Explain the completed preview and recommend
+whether another model/task is needed; reconcile stale completion wording in
+the handoff using recorded evidence. Initial checks: rharris on daisy, clean
+main tracking origin/main, no stashes, published PC ownership. Conditional
+continuation does not select a new full movie, renderer/build investigation
+or physical workload. No workload launched.
+
+**R170 outcome/files/checks/next:** Clarification complete. R169 completion
+commit `6deb9d0` exists and equals the locally recorded origin/main tip;
+`/tmp/r169-preview-EnjJq0/preview.mp4` exists (9762 bytes). Prior R169 results
+record 30 frames, one second, 320x180 H.264/yuv420p; these checks were not
+rerun. Corrected contradictory open-lifecycle/completion-pending handoff text.
+Changed files: REQUEST_LOG.md, SESSION_HANDOFF.md and STATUS.md. Identity,
+ownership, Git status/upstream/stashes, completion history, artifact presence
+and diff/whitespace were checked. OpenAI Docs confirmed Luna's medium support
+and cost-sensitive role; no switch is needed for an already completed task.
+No new render, encode, ffprobe, trajectory, build, FEM or physical work ran.
+No fresh fetch/pull, commit or push was performed for this clarification;
+edits remain local, and no remote-machine state is inferred. No `/new` excerpt
+was supplied. Next: user reviews the existing preview and decides whether to
+request a longer movie; duration/quality for that new task are not selected.
+
+## R171 — 2026-09-21 (America/New_York) — Assess progress toward boundary-only engineering simulation
+
+**User request:** “I will watch it soon.  But please tell me what we have
+succeeded in doing so far.  The goal is "a visual simulation of an engineering
+approximation of the first few orders of magnitude of the famous result, wit
+the forcing function and sensors on the boundary only".  Please explore
+various aspects of the current progress, and update STATUS.md accordingly.”
+
+**Scope/status:** In progress. Review the implemented visualization, physical
+model, boundary actuation/sensing work and numerical evidence against the
+stated scientific goal; update STATUS.md and the task handoff with supported
+achievements, limitations and a concrete next step. Read-only source/evidence
+review and documentation edits; no new simulation, rendering, build or
+publication requested. Starting state: rharris on PC/WSL daisy, Linux/x86_64,
+main at `6deb9d0` equal to locally recorded origin/main, stashes empty. The
+three dirty files are this session's R170 documentation changes and are
+preserved. PC retains recorded ownership; no other checkout is inspected.
+
+## R172 — 2026-09-21 (America/New_York) — Identify the motivating result
+
+**User request:** “yes it is the recent openai paper”
+
+**Scope/status:** Incorporate this clarification into the ongoing R171 review:
+the motivating result is the recent OpenAI Navier–Stokes paper. Verify its
+precise claim and distinguish it from the local engineering approximation.
+
+## R173 — 2026-09-21 (America/New_York) — Require an explanation of any impossibility result
+
+**User request:** “Moving the forcing and sensors to the boundary might make
+it impossible, but if this is the case, I am hoping for a clear explanation.”
+
+**Scope/status:** Incorporate into R171's status assessment and next-task
+criteria. Treat a supported negative result as a useful outcome; distinguish
+mathematical obstruction, model-specific actuation/sensing limits, hardware
+limits and unresolved numerical error. Explain the scope and evidence needed
+for each rather than interpreting the failed solver gate as impossibility.
+
+**R171–R173 outcome/files/checks/next:** Complete. Reorganized STATUS.md around
+the user's engineering goal, replacing the stale renderer/monitor chronology
+with accomplishments, boundaries of evidence and remaining milestones.
+Confirmed the motivating source from OpenAI's paper, Theorem 1.1 and Section 2;
+distinguished its smooth volume forcing from the proposed boundary-only tank.
+Documented the implemented divergence-free SI reference, six boundary modes,
+sensor/response diagnostics, Stokes backends and scoped stability evidence.
+Preserved the failed B2 gate: R020's original-command amplitude ratio is
+28,963.4968 with 74.1175-degree phase error; matched-trace solves did not run.
+R033 is prerequisite evidence only, not new physical accuracy evidence.
+
+Source and saved-header review found that the one-second preview precedes
+scheduled marker contraction, the full dataset's two-decade TauRatio is
+prescribed, and CoreRadius is a separate animation formula (approximately
+3.39-fold change), not a measured fluid core. Recorded hidden overlays,
+internal marker rings versus the cylinder benchmark, and the distinction
+between material axial stretching and the paper's shrinking axial core scale.
+Boundary-only feedback is the stated baseline; older interior-PIV feedback
+plans do not satisfy that strict reading. Exact permitted optical sensing,
+finite-range quantity and engineering tolerances remain unresolved.
+
+R173 is incorporated as an explicit negative-result deliverable. The report
+separates exact-target residual obstruction, actuation limits, sensor-blind
+states, hardware limits and numerical inconclusiveness; none of the existing
+failed computations establishes general impossibility. Updated the handoff
+to prioritize one revision of the existing boundary-control benchmark with
+finite targets, allowed measurements and positive/negative outcome criteria.
+
+Changed files: STATUS.md, SESSION_HANDOFF.md and REQUEST_LOG.md; R170 edits
+preserved and prior request history retained. Checks passed: identity/owner,
+branch/upstream/stashes, source/evidence review, primary-source retrieval,
+32 local documentation targets/anchors, committed log-prefix preservation,
+unique request IDs through R173 and diff whitespace. Skipped all new numerical
+tests, solver/physical workloads, trajectory generation, rendering, encoding,
+ffprobe, packages, fetch/pull and commit/push. No task workload child launched.
+PC retains ownership; documentation is local and uncommitted. Next: revise
+BOUNDARY_CONTROL_HANDOFF.md as scoped in SESSION_HANDOFF.md#next-task;
+the user's preview viewing remains independent and no rerender is pending.
+
+## R174 — 2026-09-21 (America/New_York) — Consider timed boundary-wave focusing
+
+**User request:** “I have seen an experiment where there is a circular pool,
+and actuators around the edge that is able to push the center to a very high
+altitiude.  I think the various frequencies have to be started at different
+times.  Something like that might be required here.  But it it is not at all
+clear that it is possible.  or impossible for that matter.”
+
+**Scope/status:** In progress. Identify the likely wave-focusing example from
+primary sources, explain its relevance and limits for boundary-only vortex
+control, and incorporate the finite-time command-history question into the
+status/handoff. No new solver, actuation mechanism, free-surface model or
+workload is selected. Identity/ownership/Git checks confirm rharris on daisy,
+main at `6deb9d0`, locally recorded origin/main equal, no stashes. The three
+dirty documentation files are this session's R170–R173 work and are preserved.
+
+## R175 — 2026-09-21 (America/New_York) — Acknowledge the harder vortex-control problem
+
+**User request:** “yes I agree that our situation is much more difficult.”
+
+**Scope/status:** Incorporate this agreement into R174's interpretation.
+The wave-focusing analogy motivates timed boundary commands without implying
+feasibility or changing the selected physical model.
+
+**R174–R175 outcome/files/checks/next:** Complete. Primary Edinburgh sources
+identify FloWave as a strong match, not a confirmed identification of the exact
+video. The commissioning paper explicitly describes decreasing-frequency
+waves timed to reach the centre together; the later spike-wave study reports
+free-surface focusing, trough collapse and jets, with gauges/optical measurements.
+Added a sourced section to STATUS.md and incorporated command timing/phase,
+finite-time response and preparation versus tracking into the handoff's existing
+next task. Distinguished surface-wave propagation from the closed-tank Stokes
+model, and boundary actuation from boundary-only observability. No feasibility
+or impossibility conclusion, new solver or free-surface model was adopted.
+Changed files: REQUEST_LOG.md, STATUS.md and SESSION_HANDOFF.md. Checks:
+identity/ownership/Git/stashes, primary-source retrieval, documentation review
+and whitespace; prior local work preserved. No numerical test, simulation,
+render, encode, package change, fetch/pull, commit or push. PC retains ownership;
+no task workload child launched. Next remains the bounded revision of
+BOUNDARY_CONTROL_HANDOFF.md specified in SESSION_HANDOFF.md#next-task,
+now explicitly including finite-time actuation and interpretable negative tests.
+
+## R176 — 2026-09-21 (America/New_York) — Record next task and publish the assessment
+
+**User request:** “OK, please suggest a next step, and record it as well as
+model / level /platform suggestion.  then add commit push.  thanks”
+
+**Scope/status:** In progress. Make the next bounded task and model/reasoning/
+platform recommendation explicit, then stage, commit and push this session's
+documentation. Publication is explicitly authorized, including the pending
+R170–R175 assessment and handoff. This request selects a next step but does
+not launch that scientific task. Initial checks: rharris on PC/WSL daisy,
+Linux/x86_64, main tracking origin/main at `6deb9d0`, no stashes. The three
+dirty documentation files are this session's known changes; preserve them.
+PC retains recorded ownership; no other-machine state is inferred.
+
+**R176 outcome/files/checks/next:** Next-step recommendation complete and
+publication prepared. Recorded GPT-6 Astra / high reasoning / PC-WSL daisy
+for one revision of BOUNDARY_CONTROL_HANDOFF.md into a finite-time boundary-only
+benchmark proposal: command histories, allowed measurements, finite target,
+error checks, interpretable positive/negative/inconclusive results and the
+smallest accuracy prerequisite. Stop before numerical execution or controller/
+hardware implementation. Retain Astra for scientific decisions; recommend
+Luna/medium only for a later fully specified mechanical task. No model or
+machine switch was made. OpenAI Docs confirmed Astra's high reasoning support;
+the recommendation is based on task fit and current PC ownership/evidence.
+
+Publication scope: REQUEST_LOG.md, WORK_SESSIONS.md, SESSION_HANDOFF.md and
+STATUS.md, including all of this session's previously uncommitted R170–R175
+documentation. Fresh fetch succeeded, confirming HEAD = origin/main at
+`6deb9d0`; no incoming commits and no stashes. Checks passed: 33 local document
+targets/anchors, preserved committed prefixes of both append-only logs, unique
+request IDs through R176, four-file documentation scope and diff whitespace.
+Final staged checks follow. No new numerical tests, trajectories, renders,
+encodes, ffprobe, physical/FEM work, package changes or benchmarks ran. No task
+workload child launched. PC retains ownership. Unresolved scientific choices
+remain explicit in the benchmark task; this turn does not choose or execute
+their solution. Commit/push is authorized and follows these prepared records;
+actual delivery result will be reported in the final response, with no post-push
+log edit. Next prompt: Continue, using the model/level/platform above.

@@ -1,14 +1,30 @@
 # Current session handoff
 
-Last updated 2026-09-21 (America/New_York; 2026-09-22 UTC) for R169.
+Last updated 2026-09-21 (America/New_York) for R176.
 **PC/WSL `daisy` owns the repository.** R161's published Mac release and R162's
 receipt completed the transfer; R164 completion is published in `97d9fcf`.
+R171–R173 complete a goal-centered assessment in [STATUS.md](STATUS.md).
+The goal is a finite engineering approximation of the recent OpenAI paper,
+with forcing and sensing on the boundary only. A clearly explained negative
+result is acceptable. The movie pipeline works, but boundary-driven contraction
+and boundary-only estimation remain unvalidated; B2 accuracy still fails.
+Next: revise the existing boundary-control benchmark specification with a
+finite target, allowed measurements and explicit positive/negative criteria.
+R176 records GPT-6 Astra / high reasoning / PC-WSL `daisy` for that next task
+and authorizes publication of this session's assessment and handoff.
+R174 adds timed boundary forcing as a candidate to assess: include finite-time
+response and phase/timing, inspired by the likely FloWave example, without
+assuming that surface-wave focusing demonstrates vortex control or sensing.
+This supersedes R170's suggestion to prioritize a longer movie decision.
 R168's bounded comparison passed: the same installed default POV-Ray
 3.7.0.10.unofficial rendered the unchanged sphere and project frame 1 at
 160x120 with explicit `-d +WT1 -J`. Both exited 0 and produced visible geometry.
 R167's failed run had display enabled; the crash cause remains unisolated
-because thread count and resolution also changed. The comparison is complete;
-the R167 preview lifecycle remains open at the prescribed decision checkpoint.
+because thread count and resolution also changed. The comparison and R167
+preview are complete; R169 completion is recorded in commit `6deb9d0`.
+R170 clarified that no model switch or preview retry is needed. The user will
+review the existing preview separately; R171–R173 restore the scientific goal
+as the next work priority.
 The saved-data, three separated-frame, 30-frame sequence, visual, encode and
 ffprobe gates passed. The initial tool call yielded after its 30-second progress
 window while the bounded 180-second renderer continued; a follow-up confirmed
@@ -74,11 +90,11 @@ and physical-work limits remain unchanged.
 | Owner | PC/WSL `daisy`; Mac `fire.lan` released after published R161 handoff and R162 receipt. |
 | Checkout | `/home/rharris/git/navier-stokes-vortex-lab`. |
 | Branch/upstream | `main` / `origin/main` |
-| Starting state | R169 started clean at `f0c6937`; clean fast-forward pull up to date, HEAD = origin/main; stashes empty. |
+| Starting state | R176 started at `6deb9d0`; fresh fetch confirmed HEAD = origin/main and stashes empty. This session's R170–R175 edits were reviewed and included in the explicit publication authorization. No pull over local edits. |
 | Interpreter | `/home/rharris/git/navier-stokes-vortex-lab/.venv/bin/python`, CPython 3.12.14 with NumPy 2.5.3 |
 | Other owner/process | Mac `fire.lan` released in the published R161 handoff; no PC child process remains. |
-| Task processes | R168 children exited 0; R169 render/encode children exited or were cleaned; no POV-Ray process remains. |
-| Delivery state | R167 interruption published in `b5215b5`; R168 resume/result published in `7cb90e4`/`f0c6937`; R169 start published in `66ed253`; completion publication pending. |
+| Task processes | R169 recorded child cleanup. R170–R176 launched no simulation/render/encode child. |
+| Delivery state | R169 completion is in `6deb9d0`. R176 authorizes publication of the R170–R176 documentation; completion is prepared here, with actual commit/push outcome reported after delivery. |
 
 ## Current result and limits
 
@@ -209,31 +225,84 @@ agent-side POV-Ray backtraces are unavailable.
 
 ## Next task
 
-Current task complete: R169 passed the bounded preview and ffprobe gates, and
-R167 is complete. Preserve the generated artifacts in `/tmp/r169-preview-EnjJq0/`
-if needed for review; no retry is authorized by this handoff. PC retains
-ownership. Return to Astra/high only for a new renderer, build or format
-decision.
+R171–R175 assessment and R176 next-step selection are complete. Next: revise
+`BOUNDARY_CONTROL_HANDOFF.md` to specify one finite, boundary-only engineering
+benchmark tied to the confirmed OpenAI paper and current numerical evidence.
 
-1. Preserve the R169 output and logs in `/tmp/r169-preview-EnjJq0/`; they are
-   disposable local evidence and are not added to Git. No further preview
-   workload is pending.
-2. Recorded acceptance: frames 001/225/450 rendered once at 320x180 with
-   explicit `-d +WT1 -J +A0.2 +FN`, display Off, nonzero intersections and
-   visible changing tank/tracer distributions.
-3. Recorded acceptance: exactly 30 sequence PNGs rendered with `+SF1 +EF30`,
-   then encoded at 30 fps. ffprobe confirmed 30 H.264 frames, one second,
-   320x180 and yuv420p.
-4. No trajectory regeneration, source/package change, physical/FEM work or
-   full movie render ran. The old R167 crash remains unexplained; this preview
-   only establishes the accepted headless/one-thread configuration.
+**Recommended model / level / platform:** GPT-6 Astra / high reasoning /
+PC-WSL `daisy`, in this repository. Stay on the current model and machine.
+This step needs scientific judgment about a finite-time target, sensing and
+the meaning of a negative result. PC already owns the checkout and holds the
+relevant numerical evidence; no platform benchmark or Mac transfer is needed
+for a source-and-document review. This is not a claim that PC solves faster.
+[Official OpenAI documentation](https://developers.openai.com/api/docs/models/gpt-6-astra)
+confirms Astra's research/complex-reasoning role and high effort support;
+the task-fit recommendation is judgment, not an account/quota check.
 
-All task children exited before publication; PC retains ownership.
+**Deliverable:** revise the existing benchmark document into one testable
+finite-time boundary-actuation/sensing proposal. Specify what to command,
+what to measure, what would count as success or a meaningful failure, and the
+one numerical accuracy prerequisite that must be addressed before running it.
+Do not create another general infrastructure plan. The checklist below bounds
+this specification step; it does not authorize the proposed experiment.
 
-Model choice is task-fit judgment: OpenAI Docs was rechecked for
-[Luna's medium reasoning support](https://developers.openai.com/api/docs/models/gpt-5.6-luna).
-The supplied UI shows Luna/medium and Astra/high; no account availability,
-quota or automatic model switch is inferred from API documentation.
+1. Propose explicit observables, physical units, finite interval, scale-range
+   measure and error criteria. Distinguish the paper, the existing Gaussian
+   reference, the kinematic movie and the future boundary-driven solution.
+   Treat 10 mm → 3 mm in 100 s as the existing reference proposal, not an
+   achieved result or a newly approved final target. Explain any proposed change.
+   Include finite-time preparation and command timing/phase in the proposed
+   response definition; a single-frequency/static test does not settle dynamic
+   reachability. Distinguish a transient peak from a useful contraction history.
+   FloWave is an analogy, not a selection of free-surface physics for this model.
+2. Specify strict boundary measurement support as the current baseline. Interior
+   CFD/PIV values may validate or visualize the result, but do not feed the
+   controller. The user's exact allowance for exterior cameras measuring the
+   interior remains unanswered; present it as an alternative requiring a choice.
+3. Include an interpretable negative-result criterion: distinguish an
+   inaccessible target direction, a sensor-blind state, demands beyond stated
+   hardware limits and unresolved numerical error. Use the existing pure-swirl
+   pressure blind direction as a scoped example, not a general impossibility
+   claim. Explain what could still succeed if the selected case fails.
+4. Connect the benchmark to the unresolved B2 accuracy comparison and existing
+   R021/R033 diagnostic, under the R103/R104 practical supervision policy.
+   Identify the smallest necessary next numerical step without changing solver
+   physics, thresholds, resource limits or granting a physical attempt. Do not
+   restart completed toy or infrastructure work from historical recommendations.
+5. Completion: one revised existing benchmark document with explicit
+   assumptions, observables, input/measurement maps, success/failure meaning
+   and a bounded implementation/check proposal. Stop before new numerical
+   workloads, controller implementation, hardware selection or movie rendering.
+
+Acceptance for this next step: the benchmark must give a reproducible proposed
+input history and timing horizon, explicit target and measurement definitions,
+numerical-error checks, finite success/negative/inconclusive criteria, and a
+single subsequent implementation or diagnostic task. Identify any remaining
+user-level choice explicitly. Retain Astra/high for unresolved physical or
+numerical interpretation. Recommend Luna/medium only if the remaining work is
+a fully specified mechanical implementation with tests and a stopping point;
+do not switch automatically. Next prompt after this publication: **Continue**.
+
+The preview remains complete in `6deb9d0`: separated frames 1/225/450 and
+30 sequence frames passed their recorded visual/render/encode checks, at
+320x180 using headless one-thread POV-Ray. The MP4 is one second at 30 fps,
+H.264/yuv420p, in `/tmp/r169-preview-EnjJq0/preview.mp4`. Preserve that local
+evidence; the user plans to watch it. Its first 30 frames precede scheduled
+marker contraction, and no physical contraction is established by the movie.
+
+R171–R175 changed STATUS.md, REQUEST_LOG.md and SESSION_HANDOFF.md, preserving
+R170's local work. Checks: identity/ownership/status/upstream/stashes, source
+and saved-frame review, scientific evidence review, primary-paper verification,
+documentation link/whitespace checks. R174 reviewed the FloWave primary sources
+and finite-time control analogy; R175 acknowledges the harder vortex problem.
+No new solver tests, trajectories, rendering, encoding, ffprobe, package changes
+or physical experiments ran.
+Unresolved decisions: exact finite range and tolerances, detailed allowed
+boundary sensors, and subsequent numerical method/accuracy resolution.
+Those assessment turns did not publish. R176 explicitly authorizes their
+publication together with this next-task recommendation. No workload child was
+launched. R176 also updates WORK_SESSIONS.md; final staged checks and actual
+delivery outcome follow in the publishing turn. PC retains ownership.
 
 ### Note for the next Mac session
 
