@@ -486,3 +486,16 @@ model only after scientific decisions are settled and work becomes mechanical.
 R190 reconciliation b323f60 and R191 STARTED f58a75d published successfully.
 Completion prepared for scoped commit/push; actual delivery hash/result in
 final response/Git history. No post-push edit. PC retains ownership.
+
+## R192 — Fixed-core operating point and detectability
+STARTED | 2026-09-22T14:43:58Z | PC/WSL daisy | released: no
+Identity: rharris; Linux 6.18.33.2-microsoft-standard-WSL2 x86_64;
+/home/rharris/git/navier-stokes-vortex-lab; main / origin/main.
+Starting commit f25c23d31fe7883e9a5689b2e6e36124eede4ab5 equals fetched upstream
+after required clean fast-forward pull; no incoming changes, stashes empty.
+R191 completed/published; no conflicting open task or transfer. Continue carries
+scoped publication authorization. Supplied session snapshots recorded in R192.
+Bounded task: operating-point/detectability sheet for R191 phase test, comparing
+port and wall routes and specifying minimal missing response/calibration.
+Source/algebra/design only; stop before new solver/controller, CFD/FEM,
+procurement, hardware/physical test, trajectory/render/encode or machine switch.

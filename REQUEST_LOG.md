@@ -5932,3 +5932,51 @@ handoff's stop-before-execution boundary. PC retains ownership, released: no.
 R190 reconciliation b323f60 and STARTED f58a75d pushed successfully; scoped
 completion publication is prepared. Actual delivery commit/push result follows
 in the final response/Git history; no post-push log edit. Next prompt: Continue.
+
+## R192 — 2026-09-22 (America/New_York) — Continue operating-point design
+
+**User wording:** “continue”, following these supplied session excerpts:
+
+```text
+Worked for 13m 0s · done 10:41 AM
+OpenAI Codex (v0.155.1)
+model: gpt-6-astra high /model to change
+directory: ~/git/navier-stokes-vortex-lab
+Tip: New Use /fast to enable our fastest inference with increased plan usage.
+Token usage: total=131,137 input=112,985 (+ 1,591,296 cached) output=18,152 (reasoning 1,996)
+To continue this session, run codex resume, then select Use fast mode (01a0c985-0a6d-7802-897e-80926080a829)
+/status
+OpenAI Codex (v0.155.1)
+Visit https://chatgpt.com/codex/settings/usage for up-to-date information on rate limits and credits
+Model: gpt-6-astra (reasoning high, summaries auto)
+Model provider: openai
+Directory: ~/git/navier-stokes-vortex-lab
+Permissions: Workspace (Ask for approval)
+Agents.md: AGENTS.md
+Account: [REDACTED account address] (Plus)
+Collaboration mode: Default
+Session: 01a0c992-0362-7800-a903-0adc1a965751
+Weekly limit: 77% left (resets 17:37 on 28 Sep)
+Credits: 283 credits
+Luna Reserve Weekly limit: 100% left (resets 10:42 on 29 Sep)
+continue
+```
+
+Box borders/progress glyphs omitted; supplied wording/values retained. Usage,
+worked-for and resume excerpts refer to the preceding session; status names the
+new session. `/new` excerpt missing. Account redacted; snapshots user-reported,
+not independently verified. No private session files inspected.
+
+**Scope/status:** Started. Quantify one geometry/prepared core, compare normal
+plus tangential ports with normal ports plus moving wall, calculate flow/impulse/
+loss/bandwidth and measurement uncertainty, and specify minimal discriminating
+calibration. Stop at a supported candidate or quantitative missing-response
+boundary; source/algebra/design only, no solver/controller, CFD/FEM, procurement,
+hardware/physical execution or rendering. Continue authorizes scoped start and
+completion commit/push. PC/WSL daisy remains owner, Mac released; no switch.
+Checks before writes: rharris, user-owned checkout, Linux
+6.18.33.2-microsoft-standard-WSL2 x86_64, main/origin/main, empty stashes, clean
+checkout, no conflicting open lifecycle record. Required clean
+`git pull --ff-only --no-rebase --no-autostash` succeeded, no incoming changes;
+HEAD and fetched upstream both f25c23d31fe7883e9a5689b2e6e36124eede4ab5.
+This verifies R191 completion delivery. Publish STARTED before substantive work.
