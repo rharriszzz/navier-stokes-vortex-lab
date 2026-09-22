@@ -4578,3 +4578,17 @@ no process remains. Next: a later user-requested bounded renderer preview;
 Luna/medium is sufficient, while Astra/high is warranted only for a new build,
 format decision or unexplained visibility failure. The completion publication
 follows; Mac retains ownership.
+
+## R161 — 2026-09-21 — Transfer ownership back to PC
+
+**User request:** “please keep going, but if the current work does not actually
+require the mac, I would like to switch back to the pc. Can you do the
+necessary steps if you agree?”
+
+**Scope/status:** Confirm whether the current checkpoint requires Mac execution,
+finish any interrupted R160 publication, then prepare a clean repository
+handoff from Mac `fire.lan` to PC/WSL `daisy`. No renderer, package, trajectory,
+movie, FEM, physical, benchmark or build work is authorized by this transfer.
+Mac release is contingent on the published handoff; the receiving PC must
+perform its own clean pull, identity/ownership checks and input/tool checks
+before any workload.

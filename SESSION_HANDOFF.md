@@ -1,9 +1,10 @@
 # Current session handoff
 
-Last updated 2026-09-21 for R147–R159 (UTC 2026-09-22).
-**Mac `fire.lan` retains ownership.** R155 explicitly confirms the PC never
-started work; the earlier published PC handoff was not received and is now
-superseded. The user ran the [MacPorts launcher](packaging/macports/README.md):
+Last updated 2026-09-21 for R147–R161 (UTC 2026-09-22).
+**Handoff prepared: PC/WSL `daisy` is the intended next owner; Mac `fire.lan`
+has no remaining workload.** R155 explicitly confirms the PC never started
+work; this new user-authorized transfer supersedes the prior Mac-only
+checkpoint. The user ran the [MacPorts launcher](packaging/macports/README.md):
 `povray @3.7.0.8_6` is active, and its sphere test passed both intersections
 and subsequent visual inspection. Effective flags are `-Os -fno-fast-math`,
 not the intended `-O2`. Exact recompilation scope is unknown; R154 accepts this
@@ -57,14 +58,14 @@ and physical-work limits remain unchanged.
 
 | Field | Current value |
 |---|---|
-| Owner | Mac `fire.lan`, Darwin/arm64, per R155 explicit clarification; PC never started. |
+| Owner | Handoff prepared to PC/WSL `daisy`; Mac `fire.lan` released after successful transfer publication. |
 | Checkout | `/Users/rharris/git/navier-stokes-vortex-lab`. |
 | Branch/upstream | `main` / `origin/main` |
 | Starting state | R159 clean fast-forward pull was up to date at `fca1cde`; the R159 start record was published as `c587d53`. Empty stashes; no pull over dirty work. |
 | Interpreter | `/Users/rharris/miniconda3/envs/navier-stokes-vortex-b1/bin/python`, CPython 3.12.13 |
-| Other owner/process | User confirms no PC work started. This is not inferred from local Git; no remote PC operation was performed. |
+| Other owner/process | No PC work is claimed to have started; this is not inferred from local Git. The PC must confirm receipt and stopped/absent processes. |
 | Task processes | R159 beads/project renders and inspection completed; all child processes exited. No background task is being left to continue. |
-| Delivery state | R159 start record delivered as `c587d53`; completion publication is prepared for the final scoped commit/push. Mac retains ownership. |
+| Delivery state | R159 and R160 are published. R161 transfer publication is pending; PC becomes owner only after clean receipt is confirmed. |
 
 ## Current result and limits
 

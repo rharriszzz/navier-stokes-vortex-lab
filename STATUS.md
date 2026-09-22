@@ -17,12 +17,14 @@ image showed the expected colored ring; all three 320x180 project images had
 nonzero geometry intersections and visibly changing tank/tracer distributions.
 Effective flags are `-Os -fno-fast-math`; exact recompilation scope remains
 unverified and is not a reason alone to rebuild. No movie was encoded. R155 confirms PC work never started: **Mac retains
-ownership**, superseding the unreceived transfer. The
+ownership**; R161 now prepares a new explicit transfer back to PC/WSL because
+the current checkpoint requires no Mac execution. The
 [next repository task](SESSION_HANDOFF.md#next-task) is now a later user-requested
 preview or other bounded renderer task. R157 verifies the user's OpenEXR 3.4.15_0 reactivation;
 openexr2 and POV-Ray revision 6 also remain active. R158 authorizes publication
 of the notes before a fresh Mac chat; this is not a PC ownership transfer.
-POV-Ray on Mac still runs outside the agent sandbox;
+POV-Ray on Mac still runs outside the agent sandbox, but no Mac workload is
+pending;
 R131's empty user config remains intact. This is illustrative visualization,
 not physical validation.
 
