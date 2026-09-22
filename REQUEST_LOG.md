@@ -5046,3 +5046,60 @@ remain explicit in the benchmark task; this turn does not choose or execute
 their solution. Commit/push is authorized and follows these prepared records;
 actual delivery result will be reported in the final response, with no post-push
 log edit. Next prompt: Continue, using the model/level/platform above.
+
+## R177 — 2026-09-21 (America/New_York) — Continue finite boundary benchmark specification
+
+**User request:** “(there were multiple requests)” followed by the supplied
+Codex session excerpts below and “continue”. Earlier requests are already
+recorded through R176; no missing request wording is reconstructed.
+
+```text
+╭────────────────────────────────────────────────╮
+│ >_ OpenAI Codex (v0.155.1)                     │
+│                                                │
+│ model:     gpt-6-astra high   /model to change │
+│ directory: ~/git/navier-stokes-vortex-lab      │
+╰────────────────────────────────────────────────╯
+
+  Tip: New Use /fast to enable our fastest inference with increased plan usage.
+
+Token usage: total=248,578 input=222,675 (+ 6,421,504 cached) output=25,903 (reasoning 3,550)
+To continue this session, run codex resume, then select Decide on renderer format (01a0c70f-16aa-73c2-83a8-771f3ec8bd36)
+
+/status
+
+╭─────────────────────────────────────────────────────────────────────────────────────────╮
+│ >_ OpenAI Codex (v0.155.1)                                                             │
+│                                                                                         │
+│ Visit https://chatgpt.com/codex/settings/usage for up-to-date                           │
+│ information on rate limits and credits                                                  │
+│                                                                                         │
+│  Model:                       gpt-6-astra (reasoning high, summaries auto)              │
+│  Model provider:              openai                                                    │
+│  Directory:                   ~/git/navier-stokes-vortex-lab                            │
+│  Permissions:                 Workspace (Ask for approval)                              │
+│  Agents.md:                   AGENTS.md                                                 │
+│  Account:                     [REDACTED account email] (Plus)                           │
+│  Collaboration mode:          Default                                                   │
+│  Session:                     01a0c729-b7b0-7532-90ee-fdcafb05af9a                      │
+│                                                                                         │
+│  Weekly limit:                [█████████████████░░░] 86% left (resets 17:37 on 28 Sep)  │
+│  Credits:                     283 credits                                               │
+│  Luna Reserve Weekly limit:   [████████████████████] 100% left (resets 23:29 on 28 Sep) │
+╰─────────────────────────────────────────────────────────────────────────────────────────╯ continue
+```
+
+These are user-reported snapshots: the token/resume excerpt names the prior
+session, while /status names the new session. No final “worked for” or /new
+excerpt was supplied; no private session files inspected.
+
+**Scope/status:** Started. Continue invokes the scoped commit/push workflow.
+Revise BOUNDARY_CONTROL_HANDOFF.md into one finite-time, strictly boundary-only
+actuation/sensing benchmark proposal, with reproducible commands, target/error
+criteria, interpretable negative outcomes and one numerical prerequisite.
+Stop before numerical workloads, controller implementation, hardware selection
+or movie work. Initial checks: rharris, PC/WSL daisy, Linux/x86_64, clean main
+tracking origin/main, empty stashes; recorded PC ownership and completed prior
+lifecycle. Required clean fast-forward pull returned already up to date; HEAD
+and fetched upstream both 22cf3d7d8749ea6e4039c525c6fcce8246771a0b. No incoming
+changes or ownership conflict. Publish STARTED before substantive review.
