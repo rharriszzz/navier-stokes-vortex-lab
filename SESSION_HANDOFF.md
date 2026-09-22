@@ -1,6 +1,6 @@
 # Current session handoff
 
-Last updated 2026-09-22 for R162–R163.
+Last updated 2026-09-22 for R162–R164.
 **Handoff prepared: PC/WSL `daisy` is the intended next owner; Mac `fire.lan`
 has no remaining workload.** R155 explicitly confirms the PC never started
 work; this new user-authorized transfer supersedes the prior Mac-only
@@ -71,7 +71,7 @@ and physical-work limits remain unchanged.
 | Interpreter | `/home/rharris/git/navier-stokes-vortex-lab/.venv/bin/python`, CPython 3.12.14 with NumPy 2.5.3 |
 | Other owner/process | Mac `fire.lan` released in the published R161 handoff; no PC child process remains. |
 | Task processes | R162/R163 performed only receipt and environment setup; no workload was launched. |
-| Delivery state | R162 start is published; R163 completion publication is pending. |
+| Delivery state | R164 start is published; R164 completion publication is pending. |
 
 ## Current result and limits
 
@@ -210,6 +210,10 @@ format decision or unexplained failure. Keep any next task bounded and stop on
 missing input, timeout, invisible geometry or unexpected resource failure.
 No movie, trajectory regeneration, FEM, physical or benchmark work is implied
 by R162/R163.
+
+R164 resumed this published PC handoff, confirmed clean synchronization and
+ownership, and verified the repository-local Python 3.12.14/NumPy 2.5.3
+environment plus available POV-Ray and ffprobe. No project workload ran.
 
 ### Note for the next Mac session
 
