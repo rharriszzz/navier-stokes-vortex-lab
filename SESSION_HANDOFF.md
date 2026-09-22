@@ -238,6 +238,15 @@ ordering, OpenEXR preflight/restoration and log retention before running it.
 
 Successful local run directory:
 `/Users/rharris/Library/Logs/navier-stokes-vortex-lab/povray-rebuild/run.DQa0eT/`.
+
+R160 resumed the completed R159 checkpoint and is complete. Clean same-owner
+synchronization was confirmed; the sandbox's blocked `.git/FETCH_HEAD` write
+required the approved host retry. No new workload ran. The R160 start record is
+delivered in `9557450`; the completion publication is the next delivery step.
+Mac retains ownership. The next task is one later user-requested bounded
+renderer preview only; use Luna/medium for routine work and recommend
+Astra/high only for a new build, format decision or unexplained visibility
+failure.
 Its `status.txt` still says visual inspection pending; that automatic status
 was followed by successful agent visual inspection without rewriting the log.
 SHA-256 bindings checked in R155:
