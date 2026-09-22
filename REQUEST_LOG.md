@@ -4756,3 +4756,24 @@ interrupted at the renderer/build failure boundary; inputs and source files
 were unchanged. Next: GPT-6 Astra/high should investigate this unresolved PC
 POV-Ray failure with a fresh bounded comparison and stop before adopting any
 scene or trajectory change.
+
+## R168 — 2026-09-21 (America/New_York) — Resume PC renderer investigation
+
+**User request:** Supplied Codex v0.155.1 banner, prior-session token usage
+`total=114,349 input=99,692 (+ 2,282,496 cached) output=14,657
+(reasoning 2,377)`, resume instruction for session
+`01a0c6f9-6a5c-76b2-b6de-8f56d2c10eb7`, “Model changed to gpt-6-astra high”,
+and `/status` showing GPT-6 Astra/high, Default collaboration, Workspace
+(Ask for approval), session `01a0c6ff-366f-7191-80a1-efafa9a596c3`,
+89% weekly limit left (resets 17:37 on 28 Sep), 283 credits, Luna Reserve
+100% (resets 22:43 on 28 Sep), then “continue”. Account email redacted.
+These are user-reported snapshots; no worked-for or `/new` excerpt supplied,
+and no private session files inspected.
+
+**Scope/status:** Resume the open R167 lifecycle on PC/WSL daisy, with one
+fresh bounded sphere/project-frame comparison under the current handoff.
+Preserve scenes, trajectories and packages; stop at the comparison result
+before retrying the preview. Scoped commit/push authorized by Continue.
+Clean fast-forward pull was already up to date at `b5215b5`, HEAD equals
+origin/main, stashes empty, and published ownership remains PC. Publish this
+RESUMED checkpoint before substantive investigation.
