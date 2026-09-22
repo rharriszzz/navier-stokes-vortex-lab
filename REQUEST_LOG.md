@@ -4731,3 +4731,16 @@ workload remains; no unresolved model/task choice. PC retains ownership.
 Publication is authorized by R165 and prepared here; actual commit/push result
 follows in the final response. Next: switch to Luna/medium on PC and Continue
 the task at SESSION_HANDOFF.md#next-task.
+## R167 — 2026-09-22 — Execute bounded PC visualization preview
+
+**User request (supplied continuation):** “Worked for 4m 10s [supplied
+Codex transcript and `/status` excerpt; account details retained only as
+user-reported context] continue”
+
+**Scope/status:** Follow the current handoff on PC/WSL `daisy`: publish the
+Continue lifecycle start, validate the actual 450-frame/128-bead saved-data
+inventory, render separated frames 1/225/450, render frames 1–30, encode the
+30-frame sequence and verify it with ffprobe. Preserve inputs and source
+semantics; keep generated outputs outside Git. Stop on missing tools, checker
+failure, timeout, invisible geometry, unexplained resource failure or format
+ambiguity.
