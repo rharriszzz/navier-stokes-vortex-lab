@@ -5468,3 +5468,50 @@ Start publication 1fbd681 succeeded after approved host retries for read-only
 Git and restricted-network failures. Continue authorizes the scoped completion
 commit/push; actual delivery hash/result follows in the final response, with
 no post-push log edit. PC retains ownership, released: no. Next prompt: Continue.
+
+## R182 — 2026-09-22 (America/New_York) — Review status and continue symbolic reference analysis
+
+**User wording:** “is STATUS.md clear and current? if necessary fix after this step, it is ok to continue”
+
+Supplied session excerpts (account email redacted; values are user-reported snapshots):
+
+```text
+Worked for 8m 31s · done 12:05 AM
+OpenAI Codex (v0.155.1)
+model: gpt-6-astra high /model to change
+directory: ~/git/navier-stokes-vortex-lab
+Tip: Use /status to see the current model, approvals, and token usage.
+Token usage: total=126,022 input=111,221 (+ 1,241,344 cached) output=14,801 (reasoning 2,022)
+To continue this session, run codex resume, then select Summarize Codex session (01a0c742-7696-7e11-a029-90f170784bf5)
+/status
+OpenAI Codex (v0.155.1)
+Visit https://chatgpt.com/codex/settings/usage for up-to-date information on rate limits and credits
+Model: gpt-6-astra (reasoning high, summaries auto)
+Model provider: openai
+Directory: ~/git/navier-stokes-vortex-lab
+Permissions: Workspace (Ask for approval)
+Agents.md: AGENTS.md
+Account: [REDACTED account email] (Plus)
+Collaboration mode: Default
+Session: 01a0c74e-d869-79a3-b993-9237418d06e0
+Weekly limit: 81% left (resets 17:37 on 28 Sep)
+Credits: 283 credits
+Luna Reserve Weekly limit: 100% left (resets 00:10 on 29 Sep)
+```
+
+Box drawing/progress bars omitted; /new and intermediate excerpts were not
+supplied. Prior completion and current /status have distinct session IDs;
+no private session files inspected or live account state inferred.
+
+**Scope/status:** Started. Review STATUS.md for clarity/currency, continue the
+handoff's bounded symbolic Gaussian angular-momentum deficit/whole-support
+compatibility calculation, then update status and continuity documents.
+The user's permission to continue invokes scoped lifecycle/completion
+publication. Stop before numerical evaluation, solver/controller code, paper
+witness implementation, hardware/sensor selection or physical/render workloads.
+Initial checks: rharris, PC/WSL daisy, Linux/x86_64, intended user-owned checkout,
+clean main/origin/main, empty stashes, R181 completed and PC ownership retained.
+Required fast-forward pull already up to date; equal fetched tips at
+262c3e3b4a110776075219edccebf333536904ef confirm R181 delivery is in upstream.
+No transfer/open lifecycle conflict found; local Git cannot reveal unpublished
+work or processes on another checkout. Publish STARTED before substantive work.
