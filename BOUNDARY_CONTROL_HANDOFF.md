@@ -1,16 +1,18 @@
 # Boundary-control research handoff
 
-Revised 2026-09-21 (America/New_York), R177, from repository `22cf3d7`.
+Revised 2026-09-21 (America/New_York), R180, from repository `8aa9245`.
 The original specification remains in Git history; implemented formulas and
 scientific thresholds below are retained unless explicitly labelled proposals.
 
 ## Start here
 
-**R179 priority note:** next continue the conceptual paper-to-boundary/modal
-analysis, as scoped in [the current handoff](SESSION_HANDOFF.md#next-task).
-The launch integration proposed in Section 10 is deferred while that question
-is developed. This changes task order only; all benchmark assumptions and
-numerical gates below remain as recorded in R177.
+**R180 result:** Fourier analysis specifies spatial patterns and timing;
+boundary inverse design additionally needs the fluid's response to those
+commands. Section 1.1 lists the missing finite-target inputs and Sections
+7.3–7.4 give a symbolic worked mapping and its stress/sensing limits.
+The [next task](SESSION_HANDOFF.md#next-task) is a bounded derivation of an
+annular momentum-transfer diagnostic. Section 10's launch integration remains
+deferred. R177's benchmark assumptions and numerical gates are unchanged.
 
 **Proposed benchmark: prepare a vortex from rest using the cylinder boundary,
 then track the existing 10 mm → 3 mm Gaussian reference for 100 s, while testing
@@ -64,6 +66,49 @@ The movie's internal actuator rings are not the tank boundary; its separate
 CoreRadius formula is not a fluid measurement. This benchmark uses the actual
 cylindrical wall below. The nominal water properties are assumptions, not
 measurements. See [STATUS.md](STATUS.md) for the broader evidence inventory.
+
+### 1.1 What a finite paper-derived target would require
+
+The paper constructs velocity and pressure, then defines force by their
+momentum residual. Oscillatory annular momentum flux cancels a singular
+background imbalance; corrections control the remaining residual. Section
+10.1 localizes through potentials and cutoffs before forming the force,
+including cutoff derivatives. This is more information than an existence
+assertion, but it supplies no wall-command table.
+[Primary paper, Sections 2 and 10.1, equations (10.4)–(10.5)](https://cdn.openai.com/pdf/32d9f210-8b73-45e0-91bc-82a30aef8a9a/navier-stokes.pdf#page=118)
+
+Our proposed extraction contract below is a reproducibility requirement, not
+an extraction performed in R180. Mathematical existence of an admissible
+choice does not select a numerical value or certify its finite truncation.
+
+| Needed input | Available now | What must be fixed or derived before evaluation |
+|---|---|---|
+| Source and fidelity claim | Primary PDF and its construction; separate Gaussian code | Pin source version/hash and choose full finite witness approximation, leading-profile approximation, or mechanism surrogate; name omitted terms |
+| Finite space/time window | A singular time and asymptotic core scales in the paper | Explicit interval ending strictly before that time, comparison region, scale definitions and initial field; a late window starts from a nonzero state that boundary preparation must produce |
+| Profiles and free choices | Profile equations, supported corrections and localization construction | Numerical constants, profile initial data, exact smooth cutoff/bump functions and support margins; verify their required conditions |
+| Oscillations and corrections | Construction of annular pulses and mean/residual corrections | Exact retained terms, envelopes, phases, wave numbers and summation choices; a derivative-aware remainder estimate on the selected window |
+| Units and water mapping | Proposed tank and viscosity in Section 2 | Consistent length/time/velocity/pressure scaling; record the resulting dimensionless groups and tank fit |
+| Evaluator and comparison | Existing feature definitions in Section 5 | Values and derivatives of the chosen field, axis limits, divergence and momentum-residual checks; resolved sampling and separate target-approximation uncertainty |
+
+For units, if a dimensionless field uses viscosity nu_hat, selecting length L
+and time T gives velocity scale L/T, kinematic pressure scale L²/T² and
+acceleration-force scale L/T², with `nu_water = nu_hat*L²/T`. Pressure in Pa
+also requires density. Independently stretching radial and axial coordinates
+or selecting arbitrary speed and duration does not preserve the same isotropic
+Navier–Stokes equation. These are dimensional deductions, not chosen values.
+
+A finite approximation must be checked in the derivatives used by the
+momentum residual, not just in velocity norm. Small unresolved oscillations
+can contribute appreciable stress or derivatives. Form the residual of the
+actual retained/localized approximation; do not assume the residual of a
+truncated sum is the truncated exact force. Report its rotational part or
+curl as in Section 3.5 before asking for pointwise unforced matching.
+
+The Gaussian reference is the only explicit finite target already implemented
+here. Its reference interval and formulas are available, while its preparation,
+engineering tolerances and command budgets remain proposals. No concrete
+paper-derived field, truncation error or boundary response is supplied by this
+review. Copying the paper's force spectrum would not fill those gaps.
 
 ## 2. Proposed decisions and retained assumptions
 
@@ -551,6 +596,172 @@ Do not prolong preparation or alter the basis after a failure without recording
 a new problem. Track errors over the whole 100 s, rather than selecting the
 best instant or shifting the time origin to a favorable peak.
 
+### 7.3 Worked symbolic example: wall patterns, timing and interior response
+
+**Assumptions:** exact circular cylinder, constant viscosity, infinitesimal
+unsteady Stokes perturbations about rest, zero initial velocity and the fixed
+linear features of Section 5.2. Every nonzero gain below is an unknown response
+to be verified, not measured CFD data. The example derives the structure of
+the inverse problem; it does not prepare the finite-amplitude Gaussian vortex.
+
+Take only `b_N = N_02c` and `b_T = T_00c` from the existing normalized basis:
+
+```text
+u_side(theta,z,t) = n(t)*b_N(theta,z) + v(t)*b_T(theta,z)
+u_caps = 0
+d(t) = [a_z(t), Omega(t)]^T.
+```
+
+Both patterns have azimuthal order m=0. Their axial shapes differ: b_N uses
+the balanced Z2 return-flow pattern; b_T uses Z0 for swirl. Coefficients n,v
+are speeds in m/s, not body-force densities. The boundary Fourier order,
+axial shape and temporal history are three independent specifications.
+
+In axisymmetric Stokes, the azimuthal velocity obeys
+
+```text
+partial_t u_theta = nu*(partial_rr + r^-1*partial_r
+                         + partial_zz - r^-2)*u_theta.
+```
+
+There is no meridional velocity or pressure term in that equation. Conversely,
+the meridional Stokes equations contain no swirl term. Thus these two inputs
+give the exact continuum structure
+
+```text
+a_z(t)   = integral_0^t k_a(t-s)*n(s) ds
+Omega(t) = integral_0^t k_O(t-s)*v(s) ds.
+```
+
+The cross-responses vanish under these assumptions; the diagonal responses
+need not be strong or even useful at a selected time. Kernels have units
+1/(m*s), since outputs have units 1/s. A numerical cross-response is a useful
+symmetry check, subject to actual geometry and discretization errors.
+
+For settled harmonic operation only, write n(t) = Re[n_hat exp(i*omega*t)]
+and likewise for v, a_z and Omega. Then
+
+```text
+[a_hat]   [g_a(omega)    0        ] [n_hat]
+[O_hat] = [0             g_O(omega)] [v_hat],    g in 1/m.
+
+n_hat = a_hat_target/g_a;    v_hat = O_hat_target/g_O.
+```
+
+Division requires resolved nonzero gains. For example, if
+`g_O = |g_O|*exp(-i*phi_O)`, the swirl command must have amplitude
+`|O_hat_target|/|g_O|` and phase `arg(O_hat_target)+phi_O`. This is the fluid
+phase correction. It does not follow from the phase of the desired volume
+force. Weak gain demands large wall speed; zero gain prevents that harmonic
+feature within this model. For a sinusoidal coefficient of amplitude B,
+peak slew is omega*B. Compare both speed and slew with Section 7.2, and check
+the combined histories. A harmonic illustration is not itself a member of
+the finite C1 knot family unless represented and validated there.
+
+For the actual finite timing basis, let phi_k be Section 7.1's unit-height
+20 s pulse centred at t_k. Use k=1,5,9, observe all columns at 100 s, and set
+
+```text
+n(t) = n_1*phi_1(t) + n_5*phi_5(t) + n_9*phi_9(t)
+v(t) = v_1*phi_1(t) + v_5*phi_5(t) + v_9*phi_9(t)
+alpha_k = integral_0^100 k_a(100-s)*phi_k(s) ds
+beta_k  = integral_0^100 k_O(100-s)*phi_k(s) ds
+
+c = [n_1, n_5, n_9, v_1, v_5, v_9]^T
+[a_z(100)]   [alpha_1 alpha_5 alpha_9  0      0      0     ]
+[O(100)  ] = [0       0       0        beta_1 beta_5 beta_9] c
+```
+
+Each alpha/beta has units 1/m. If only k=5 is allowed and both gains are
+resolved, the formal terminal solution is `n_5=a_target/alpha_5` and
+`v_5=O_target/beta_5`; reject it if commands violate the budgets. With more
+columns, solve a constrained fit using the input Gram metric and feature
+error scales. A target outside the resolved range has a nonzero unattainable
+component; a small singular value amplifies required effort and model error.
+No alpha/beta value, ordering or successful command is inferred here.
+
+Early and late pulses can have different gains because diffusion and decay
+continue between actuation and observation. A terminal match does not imply
+tracking: stack all common output times for a trajectory test. Include the
+initial-state response if it is unknown or nonzero. A frequency response
+describes this convolution only for a time-invariant linearization; finite
+startup is not eliminated by specifying phases.
+
+For a developed vortex, both convection derivatives enter the linearized
+equation and an evolving base gives K(t,s). Pumping can transport swirl, so
+the diagonal rest structure no longer applies. Use an actual boundary-driven
+base; expansion about a forced reference instead leaves an affine momentum
+defect that must be retained. A homogeneous perturbation map alone would
+silently assume the missing sustaining force is available.
+
+### 7.4 What m=4 and force spectra add, and what they leave unresolved
+
+The other four implemented wall columns prescribe normal and tangential
+`cos(4*theta)` and `sin(4*theta)` patterns with axial shape Z0. At each time,
+`C*cos(4*theta)+S*sin(4*theta)` sets a spatial amplitude and orientation;
+changing C(t),S(t) sets a timed command. Their interior response is a four-input
+map to `[C_r4,S_r4,C_theta4,S_theta4]`, using a verified kernel or harmonic
+matrix. Normal/tangential and spatial-quadrature responses may couple; assigning
+the same coefficients at the wall and in the annulus assumes an unjustified
+identity map. A single axial shape also cannot prescribe arbitrary axial
+structure.
+
+Rotational symmetry separates azimuthal orders in the *linear field equations*
+about an axisymmetric base. It does not make every diagnostic an angular
+projection: the existing a_z uses one vertical sheet, so an m=4 velocity can
+contribute to it. Do not impose block zeros on the full six-feature map merely
+from mode labels. The two-column example above is restricted to m=0 inputs.
+
+To expose the stress issue, consider a local, radial-constant illustrative
+interior pattern, not a globally specified incompressible solution:
+
+```text
+u'_r     = R*cos(4*theta)*cos(omega*t)
+u'_theta = V*cos(4*theta-psi)*cos(omega*t+delta)
+mean_(theta,time)(u'_r*u'_theta) = R*V*cos(psi)*cos(delta)/4.
+```
+
+Angular orthogonality supplies one factor 1/2 and averaging over a temporal
+period supplies the other. Spatial alignment and temporal phase both affect
+the sign or cancellation. With general fields these phases and amplitudes
+must come from the fluid response, and the stress must be formed *locally
+before spatial averaging*. Products of annulus-averaged Fourier coefficients
+do not recover stresses when radial profiles vary.
+
+In rest Stokes the quadratic stress does not feed back on the mean, because
+the nonlinear term was omitted. This correlation identity therefore cannot
+demonstrate the paper's mean-flow mechanism. For nonlinear Navier–Stokes,
+mode products can create a mean and higher harmonics; the divergence of the
+stress tensor, including radial/axial structure and other components, enters
+the mean momentum balance. A nonzero scalar correlation alone is insufficient.
+
+One may separately decompose a specified volume force into angular, radial,
+axial and temporal components to identify where and how fast its residual
+acts. That uses a **volume** response operator. Wall velocities use a different
+domain, units and response operator. Matching selected outputs would require
+solving `G_boundary*c ≈ d_target` (or a nonlinear counterpart), not restricting
+the force to the wall or copying its spectrum. Pressure-gradient force parts
+can also be absorbed in pressure; Section 3.5's curl test isolates the local
+obstruction relevant to exact velocity matching.
+
+Sensing is another map. Even if g_O is usable, a homogeneous-wall unknown
+axisymmetric swirl perturbation has zero pressure-difference signature in
+rest Stokes and can change Omega. With the same commands its ideal velocity
+readbacks are identical. This is a concrete actuation/observation distinction;
+Sections 8.1–8.2 retain strict wall sensing and the unknown-state test. Interior
+CFD/PIV supplies validation truth only. No phase adjustment removes that
+pressure blind direction in this linearization.
+
+**Next scientific calculation:** derive the azimuthally averaged angular-
+momentum balance on a finite annular control volume and identify the radial
+and axial stress fluxes needed to test a proposed perturbation mechanism.
+Show explicitly what the existing four m=4 coefficients and scalar R_rtheta
+cannot determine. Specify a minimal offline validation diagnostic and a
+clear cancellation/residual test, without choosing new actuators, feedback
+sensors or a paper witness. This addresses mechanism fidelity before adding
+oscillations to the Gaussian benchmark; see the single
+[next task](SESSION_HANDOFF.md#next-task) for scope and stops.
+
 ## 8. Strict boundary measurement and independent truth
 
 ### 8.1 Allowed measurement operator
@@ -801,8 +1012,12 @@ feedback; later select credible hardware/noise limits. None prevents preparing
 the unchanged accuracy diagnostic. The present proposal defaults to strict
 support and retains the existing 10 mm → 3 mm reference for review.
 
-R179 places the conceptual/modal review in the current handoff ahead of the
-diagnostic launch integration in Section 10. Retain GPT-6 Astra/high on PC/WSL daisy for its numerical
-interfaces and scope decisions. A later purely mechanical, fully specified
-fix can use Luna/medium; unexplained numerical behavior returns to Astra/high.
-No model change or experiment was launched by this recommendation.
+R180 completes that conceptual/modal review in Sections 1.1 and 7.3–7.4.
+The next annular momentum-budget derivation is scoped in the current handoff;
+Section 10 remains deferred. No finite paper target, response coefficient,
+new tolerance or hardware/sensor decision was selected. Algebraic deductions
+were reviewed against the stated equations and existing mode/feature source;
+no numerical evaluation or solver test ran. Retain GPT-6 Astra/high on PC/WSL
+daisy for this scientific interpretation; use Luna/medium only for a later
+fully specified mechanical change and return to Astra for unresolved physics.
+No model switch occurred.

@@ -1,22 +1,22 @@
 # Current session handoff
 
-Last updated 2026-09-21 (America/New_York) for R179.
+Last updated 2026-09-21 (America/New_York) for R180.
 **PC/WSL `daisy` owns the repository.** R161/R162 completed the Mac release
-and PC receipt. R177's finite benchmark proposal is published in `72065c6`.
-R178 explains Fourier/modal analysis and why a verified boundary-to-interior
-response map is needed in addition to a description of the desired forcing.
-R179 asks to continue that reasoning and authorizes publication of these notes.
-**Next: a bounded conceptual/source review connecting the paper's constructive
-forcing and a finite target to spatial boundary modes and timed commands.**
-This takes priority over implementing the R021 launch integration. Retain
-GPT-6 Astra / high reasoning / PC-WSL `daisy`; no model or platform switch.
-The Gaussian benchmark is a surrogate, not an extracted finite version of the
-paper. Its 300 s preparation, 10 mm → 3 mm / 100 s tracking and tolerances
-remain proposals. Strict wall sensing is the baseline; interior optical
-feedback remains an explicit user choice. B2 accuracy remains failed and
-q64/q96 unused. No numerical workload is authorized by this recording request.
-R178–R179 completion/publication is prepared below; actual delivery commit and
-push result follow in the final response. PC retains ownership.
+and PC receipt. R177's benchmark is published in `72065c6`; R178–R179's
+research priority in `8aa9245`. R180 completes the conceptual/modal review:
+finite paper-target requirements, symbolic wall-to-strain/swirl maps, timing,
+phase, command limits, nonlinear stress and separate sensing limitations.
+**Next: derive a finite annular angular-momentum budget and the stress-flux
+validation diagnostic needed to test the perturbation mechanism.**
+Retain GPT-6 Astra / high reasoning / PC-WSL `daisy`; no model/platform switch.
+The Gaussian benchmark remains a surrogate. Its 300 s preparation, 10 mm →
+3 mm / 100 s tracking and tolerances remain proposals. No paper witness,
+response gain or attained contraction was computed. Strict wall sensing remains
+the baseline; interior PIV is validation truth unless explicitly allowed later.
+B2 accuracy remains failed and q64/q96 unused. R021 launch integration remains
+deferred. R180 start publication `b294a12` succeeded; completion publication is
+prepared, with actual delivery hash/result in the final response. PC retains
+ownership; this task launched no numerical/render/FEM workload.
 R168's bounded comparison passed: the same installed default POV-Ray
 3.7.0.10.unofficial rendered the unchanged sphere and project frame 1 at
 160x120 with explicit `-d +WT1 -J`. Both exited 0 and produced visible geometry.
@@ -91,11 +91,11 @@ and physical-work limits remain unchanged.
 | Owner | PC/WSL `daisy`; Mac `fire.lan` released after published R161 handoff and R162 receipt. |
 | Checkout | `/home/rharris/git/navier-stokes-vortex-lab`. |
 | Branch/upstream | `main` / `origin/main` |
-| Starting state | R179 began at `72065c6` with two known R178 metadata edits; preserved. Fresh fetch confirmed HEAD = origin/main, empty stashes. No pull over edits. |
+| Starting state | R180 began clean at `8aa9245`; required fast-forward pull already up to date, HEAD = fetched origin/main, empty stashes, no incoming commits. |
 | Interpreter | `/home/rharris/git/navier-stokes-vortex-lab/.venv/bin/python`, CPython 3.12.14 with NumPy 2.5.3 |
-| Other owner/process | Mac `fire.lan` released in the published R161 handoff; no PC child process remains. |
-| Task processes | R178–R179 launched no numerical/render/encode/FEM child; metadata commands exited. |
-| Delivery state | R177 delivered in `72065c6`; R179 authorizes publication of R178–R179 notes and task recommendation. Completion publication prepared, actual delivery follows in final response. |
+| Other owner/process | Mac `fire.lan` released in the published R161 handoff; R180 launched no task workload child. Local Git cannot inspect another checkout's unpublished state. |
+| Task processes | R180 launched only source/documentation inspection and validation commands; no numerical/render/encode/FEM workload child. |
+| Delivery state | R180 STARTED published in `b294a12`; five-file documentation completion prepared, actual final commit/push follows in the final response. |
 
 ## Current result and limits
 
@@ -226,65 +226,65 @@ agent-side POV-Ray backtraces are unavailable.
 
 ## Next task
 
-**Continue the paper-to-boundary/Fourier line of thought before implementing
-another launch path.** R179 selects a bounded conceptual/source review, not a
-numerical experiment or controller. Explain the scientific mapping in one
-worked, clearly labelled modal example and record it in the existing benchmark.
+**Derive the annular angular-momentum budget that a finite perturbation
+mechanism would have to satisfy.** R180 completed the preceding Fourier/modal
+mapping in [benchmark Sections 1.1 and 7.3–7.4](BOUNDARY_CONTROL_HANDOFF.md#73-worked-symbolic-example-wall-patterns-timing-and-interior-response).
+The new task is one symbolic scientific calculation and diagnostic specification,
+not another general infrastructure plan or a numerical experiment.
 
 **Model / reasoning level / platform: GPT-6 Astra / high / PC-WSL `daisy`.**
-Keep the current model and machine. This task requires judgment about the
-paper's construction, finite approximations, fluid response and inverse design.
-The session catalog and the already-checked official
-[Astra documentation](https://developers.openai.com/api/docs/models/gpt-6-astra)
-support this model/effort; task fit is our judgment, not a quota or speed claim.
-Use [Luna/medium](https://developers.openai.com/api/docs/models/gpt-5.6-luna)
-only for a later fully specified mechanical implementation; return to Astra
-for unresolved mathematical/numerical interpretation. No switch has occurred.
+Retain the current model and machine. The session catalog and freshly checked
+[official Astra documentation](https://developers.openai.com/api/docs/models/gpt-6-astra)
+support this model and reasoning option; task fit is judgment, not a speed,
+quota or account-access claim. Use
+[Luna/medium](https://developers.openai.com/api/docs/models/gpt-5.6-luna)
+only when a later implementation is fully specified and mechanical; recommend
+Astra/high again for unresolved physical or numerical interpretation. No model
+switch or future session launch has occurred.
 
-1. Read the primary paper's construction/residual discussion and identify what
-   would have to be specified to obtain a finite, reproducible target from it.
-   Distinguish a mathematical construction from a practical numerical recipe;
-   do not assume the Gaussian reference reproduces the paper's oscillatory
-   stress mechanism. State which target details are available and which remain
-   choices or derivations, without claiming to extract the full solution.
-2. Explain the roles of spatial Fourier modes around the cylinder, axial
-   shapes and temporal command histories. Work through a small symbolic
-   example of boundary inputs mapping to selected interior strain/swirl or
-   perturbation features. Keep illustrative gains symbolic or explicitly
-   hypothetical; do not fabricate CFD response coefficients.
-3. Compare Fourier analysis of a volumetric force with the actual inverse
-   problem: choosing boundary commands through a fluid-response operator.
-   Show how amplitude, phase, finite preparation, weak/missing directions and
-   actuator limits enter. Explain when a frequency-domain G(omega) is valid
-   and when an evolving base/nonlinearity requires time-domain treatment.
-4. Keep sensing separate: wall signals must distinguish required interior
-   features, even if actuation can generate them. Interior truth/PIV remains
-   validation only unless the user explicitly changes the allowance.
-5. Deliver a concise explanation plus one worked mapping in
-   BOUNDARY_CONTROL_HANDOFF.md, with primary citations, assumptions, a precise
-   boundary of what is known and one next scientific decision/calculation.
-   Update status/log/handoff and publish under the normal Continue protocol.
-   Stop before FEM/JIT, numerical evaluation of the paper, new solver or
-   controller code, hardware selection, rendering or physical execution.
+1. Starting from incompressible Navier–Stokes in cylindrical coordinates,
+   derive the azimuthally averaged balance for angular momentum per mass
+   r*u_theta on a fixed finite annulus with finite axial extent. Include
+   storage, mean advection, viscous transport, radial and axial perturbation
+   stress fluxes, any imposed volume torque and all boundary terms, with units
+   and sign conventions. Distinguish an internal control surface from a tank
+   actuator boundary. Cite the primary paper's relevant mean-flux discussion;
+   do not assert its full construction has been extracted or verified.
+2. Show why identical annulus-averaged m=4 coefficients, or the same scalar
+   R_rtheta, need not imply the same torque/mean-flow change. Use a symbolic
+   counterexample or a stated integral identity; respect incompressibility
+   when claiming a complete velocity field. Identify what radial/axial data
+   the existing observables discard.
+3. Specify the smallest offline CFD/PIV validation diagnostic that could test
+   the required flux divergence and closure of that balance against a finite
+   target. Include a meaning for improvement, failure and inconclusiveness,
+   with target/discretization uncertainty explicit. This is validation truth,
+   not new feedback permission; strict wall sensing remains unchanged.
+4. Record the derivation and one concrete next decision/calculation in the
+   existing benchmark, then update status/log/handoff and publish through the
+   Continue protocol. Preserve the Gaussian baseline and all B2 thresholds.
 
-Completion means a clear answer to what we would decompose, what response must
-be computed, and what would make a finite paper-derived target reproducible.
-If a choice cannot be justified, state it and stop at that research boundary.
-Do not turn this into another general infrastructure plan. Next prompt:
-**Continue**.
+Completion means a checkable balance and diagnostic that distinguishes a
+nonzero oscillatory correlation from the needed mean momentum transfer.
+Stop before numerical evaluation, paper-witness implementation, FEM/JIT,
+new solver/controller code, hardware/sensor selection, rendering or physical
+execution. If target information is insufficient, identify exactly what is
+missing and stop at that research boundary. No new numerical allowance.
+Next prompt: **Continue**.
 
-The previous R021 launch-integration recommendation is deferred, not cancelled
-or executed. Its scientific prerequisite and unchanged R021/R033/R070 evidence
-remain in the benchmark's
+R021 launch integration stays deferred. Its unchanged R021/R033/R070 evidence
+and accuracy prerequisite remain in the benchmark's
 [accuracy section](BOUNDARY_CONTROL_HANDOFF.md#10-one-accuracy-prerequisite-and-one-subsequent-task).
-No B2 acceptance threshold, production method, resource limit or once-only
-allowance changes. Before later physical work, resolve numerical accuracy and
-apply the R103/R104 practical safeguards; completed toys are not new tasks.
+B2 remains failed; q64/q96 remains unused. No production method, resource limit,
+scientific tolerance or once-only allowance changes; completed toys are not
+new tasks. Later physical work must first resolve numerical accuracy and apply
+R103/R104 practical safeguards.
 
-R179 records/publishes the R178 clarification and this new priority only. Changed
-files: REQUEST_LOG.md, WORK_SESSIONS.md, SESSION_HANDOFF.md, STATUS.md and a
-priority note in BOUNDARY_CONTROL_HANDOFF.md. No research calculation or task
-child launched. Final metadata/staged checks and actual delivery follow.
+R180 changed only BOUNDARY_CONTROL_HANDOFF.md, STATUS.md, SESSION_HANDOFF.md,
+REQUEST_LOG.md and WORK_SESSIONS.md. Source and algebraic review completed;
+documentation validation/delivery details are in the logs and final response.
+Remaining choices: finite paper target and approximation error, engineering
+budgets, optical feedback allowance and eventual hardware/noise limits.
 The preview remains complete in `6deb9d0`; preserve its local MP4 for the user's
 independent viewing. No rerender or Mac transfer is needed.
 

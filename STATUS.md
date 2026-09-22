@@ -1,6 +1,6 @@
 # Project status: a boundary-controlled engineering approximation
 
-Updated 2026-09-21 (America/New_York), R171–R179. PC/WSL `daisy` owns the
+Updated 2026-09-21 (America/New_York), R171–R180. PC/WSL `daisy` owns the
 repository. This assessment uses current source, saved experiment records and
 the motivating paper; it launches no simulation or rendering workload.
 The single [next task](SESSION_HANDOFF.md#next-task) is recorded in the handoff.
@@ -347,22 +347,28 @@ be chosen through the fluid's boundary-to-interior response. Fourier modes
 help represent spatial patterns and temporal signals; a force spectrum alone
 does not prescribe wall actuation. The Gaussian target is still a surrogate.
 
-R179 selects the single [next task](SESSION_HANDOFF.md#next-task): continue this
-conceptual/source review and develop one worked modal mapping from a finite
-target to boundary commands, including timing, inverse-design limitations and
-separate sensing requirements. Use **GPT-6 Astra / high / PC-WSL daisy**.
-Stop before numerical workloads or new solver/controller implementation.
-The earlier R021 launch integration is deferred. Its accuracy diagnostic,
-completed R033 prerequisites and R070 repairs remain relevant; B2 is still
-failed and q64/q96 unused. No completed toy work should be restarted.
+R180 completes the [worked modal review](BOUNDARY_CONTROL_HANDOFF.md#73-worked-symbolic-example-wall-patterns-timing-and-interior-response):
+unknown strain/swirl response kernels, harmonic gain/phase compensation, common-
+time pulse columns, command limits and separate pressure blindness. It also
+specifies the missing finite paper-target inputs and explains why the four
+averaged m=4 features do not determine stress transport. No response gain or
+paper witness was evaluated; all benchmark assumptions remain proposals.
+
+The single [next task](SESSION_HANDOFF.md#next-task) is to derive the finite
+annular angular-momentum budget and minimum offline stress-flux validation
+diagnostic. Use **GPT-6 Astra / high / PC-WSL daisy**. Stop before numerical
+workloads, solver/controller code or hardware/sensor selection. The R021
+launch integration stays deferred; its accuracy diagnostic, completed R033
+prerequisites and R070 repairs remain relevant. B2 is still failed and q64/q96
+unused. No completed toy work should be restarted.
 
 Unresolved user choices remain the proposed engineering tolerances/preparation
 and command budgets, whether interior optical feedback is allowed, and later
 credible hardware/noise limits. Strict boundary measurement support remains
 the baseline. None of these changes the unchanged B2 accuracy diagnostic.
 The rendering repair/preview is complete in `6deb9d0`; R170–R176's assessment
-was delivered in `22cf3d7`. R177's start was published in `ace8311`, with completion
-publication prepared in the logs. No preview retry or Mac work is required.
+was delivered in `22cf3d7`. R177 was delivered in `72065c6`; R178–R179 in
+`8aa9245`. No preview retry or Mac work is required.
 
 The [R103/R104 practical supervision policy](docs/realizability/B2_MONITOR_PRACTICAL_SUPERVISION_POLICY.md)
 retains limits, cleanup and honest incomplete-result reporting while removing
@@ -410,3 +416,10 @@ R179 records the continued research direction and authorizes publication of the
 pending R178 clarification and this recommendation. Only documentation changed;
 metadata checks and delivery are recorded in the logs/final response. PC retains
 ownership. No new paper extraction, numerical result or implementation is claimed.
+
+R180 records the supplied session snapshots with account email redacted and
+missing excerpts identified. Start publication b294a12 succeeded. The bounded
+review changed only the benchmark and four continuity documents. Source,
+algebraic and documentation checks are recorded in the logs; no numerical,
+FEM/JIT, controller, render/encode or package work ran. Completion publication
+is prepared; actual delivery follows in the final response. PC retains ownership.
