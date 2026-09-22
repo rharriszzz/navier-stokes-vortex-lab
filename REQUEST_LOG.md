@@ -5407,3 +5407,64 @@ R180 lifecycle and retained PC ownership. Required fast-forward pull already
 up to date; HEAD = fetched upstream = 382e7f2b10752c42897ad274d648cc5868f6b904.
 No incoming commits or incomplete transfer. Local Git does not reveal another
 checkout's unpublished work/processes. Publish STARTED before substantive work.
+
+
+**R181 outcome (2026-09-22 America/New_York):** Symbolic derivation and offline
+diagnostic complete; completion publication prepared. Benchmark Sections
+7.5–7.7 now derive the cylindrical specific-angular-momentum equation, exact
+azimuthal mean, conservative fluxes and fixed finite annulus balance with
+storage, mean advection, viscous torque, radial/axial perturbation transfer,
+volume torque, units and all face signs. Internal fluid faces are distinguished
+from actual actuator boundaries, with pressure/moving-wall qualifications.
+A vector-potential m=4 counterexample preserves all five midplane annulus
+observables while changing finite-volume transfer; its divergence and face/
+volume integrals agree analytically. Nonzero constant radial angular-momentum
+flux also illustrates zero divergence, without claiming another velocity field.
+
+The offline diagnostic requires storage and independently formed local
+three-component correlations, all four faces, viscous gradients, short-time
+integrals and a radial/axial partition. It distinguishes closure improvement
+from finite-target matching and causal command comparisons, and explicitly
+propagates target/discretization/measurement uncertainty. It does not authorize
+interior feedback, select sensors, evaluate a paper witness or establish a
+mechanism/feasibility verdict. Missing paper mean/correction fields and derivative
+error, axial comparison interval and angular-impulse tolerances remain explicit.
+Gaussian and B2 criteria/allowances are unchanged; q64/q96 remains unused.
+
+Changed files: BOUNDARY_CONTROL_HANDOFF.md, SESSION_HANDOFF.md, STATUS.md,
+REQUEST_LOG.md and WORK_SESSIONS.md. Checks passed: identity/ownership/clean
+required fast-forward synchronization and equal tips, empty stashes; required
+track documents, observable source and primary paper Sections 2.1–2.2;
+manual local/conservative algebra, units, face signs, divergence/curl and
+counterexample integrals, solid-rotation and inverse-radius special cases;
+55 local links/anchors, Markdown fences, 181 unique request IDs, both append-only
+log prefixes, all 19 R033 production/configuration hash pins, preserved benchmark
+Sections 3–6 and 8–10, preserved STATUS goal/evidence sections, five-file scope
+and whitespace. A too-broad local STATUS replacement was caught in diff review
+and corrected from the clean base before validation; prior content is preserved.
+Validation used Python 3.12.14; disposable evidence: /tmp/r181_validate.py and
+/tmp/r181_validation.json. Final post-append/staged checks follow.
+
+Skips: numerical evaluations/tests, Gaussian/paper evaluation, FEM/JIT,
+solver/controller or hardware implementation, new sensors, packages,
+trajectories/render/encode and physical work. No workload child launched;
+inspection/validation commands exited. OpenAI Docs rechecked Astra/high and
+Luna/medium availability in official documentation alongside the session catalog;
+this does not establish account quota/access or performance. No model switch.
+
+Next: retain GPT-6 Astra/high on PC/WSL daisy and derive the existing Gaussian
+reference's angular-momentum deficit, including fixed cutoffs and whole-support
+compatibility for compact perturbation stress with zero volume torque. Deliver
+one symbolic necessary-condition result separating internal redistribution from
+required external torque/transport and exact matching from approximate central
+features. Stop before numerical evaluation, paper extraction/implementation,
+FEM/JIT, new solver/controller code, hardware/sensors, render or physical work.
+Luna/medium only for a later fully specified mechanical task; return to Astra
+for unresolved science. R021 launch integration stays deferred. Other unresolved
+choices: finite paper target/error, engineering budgets, optical feedback
+allowance and hardware/noise limits. Strict wall sensing remains unchanged.
+
+Start publication 1fbd681 succeeded after approved host retries for read-only
+Git and restricted-network failures. Continue authorizes the scoped completion
+commit/push; actual delivery hash/result follows in the final response, with
+no post-push log edit. PC retains ownership, released: no. Next prompt: Continue.

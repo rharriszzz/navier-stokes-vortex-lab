@@ -1,6 +1,6 @@
 # Project status: a boundary-controlled engineering approximation
 
-Updated 2026-09-21 (America/New_York), R171–R180. PC/WSL `daisy` owns the
+Updated 2026-09-22 (America/New_York), R171–R181. PC/WSL `daisy` owns the
 repository. This assessment uses current source, saved experiment records and
 the motivating paper; it launches no simulation or rendering workload.
 The single [next task](SESSION_HANDOFF.md#next-task) is recorded in the handoff.
@@ -354,13 +354,24 @@ specifies the missing finite paper-target inputs and explains why the four
 averaged m=4 features do not determine stress transport. No response gain or
 paper witness was evaluated; all benchmark assumptions remain proposals.
 
-The single [next task](SESSION_HANDOFF.md#next-task) is to derive the finite
-annular angular-momentum budget and minimum offline stress-flux validation
-diagnostic. Use **GPT-6 Astra / high / PC-WSL daisy**. Stop before numerical
-workloads, solver/controller code or hardware/sensor selection. The R021
-launch integration stays deferred; its accuracy diagnostic, completed R033
-prerequisites and R070 repairs remain relevant. B2 is still failed and q64/q96
-unused. No completed toy work should be restarted.
+R181 adds the [finite annular balance and offline diagnostic](BOUNDARY_CONTROL_HANDOFF.md#75-finite-annular-angular-momentum-balance).
+Storage, mean advection, radial/axial perturbation flux, viscous transport and
+volume torque are explicit with all four faces and signs. An incompressible
+counterexample keeps all five midplane annulus observables unchanged while
+changing mean momentum transfer. The diagnostic compares closure with and
+without independently measured stresses, then separately compares against a
+finite target with uncertainty. Interior CFD/PIV remains validation truth.
+No paper-specific mechanism verdict is possible yet: target mean/corrections,
+derivative error, axial comparison interval and angular-impulse budgets are
+missing. No new numerical result or sensing permission is claimed.
+
+The single [next task](SESSION_HANDOFF.md#next-task) is to derive the Gaussian
+reference's required angular-momentum transfer and whole-support compatibility
+condition, including its fixed cutoffs. Use **GPT-6 Astra / high / PC-WSL daisy**.
+Stop before numerical evaluation, solver/controller code or hardware/sensor
+selection. R021 launch integration stays deferred; its accuracy diagnostic,
+completed R033 prerequisites and R070 repairs remain relevant. B2 is still
+failed and q64/q96 unused. No completed toy work should be restarted.
 
 Unresolved user choices remain the proposed engineering tolerances/preparation
 and command budgets, whether interior optical feedback is allowed, and later
@@ -368,7 +379,7 @@ credible hardware/noise limits. Strict boundary measurement support remains
 the baseline. None of these changes the unchanged B2 accuracy diagnostic.
 The rendering repair/preview is complete in `6deb9d0`; R170–R176's assessment
 was delivered in `22cf3d7`. R177 was delivered in `72065c6`; R178–R179 in
-`8aa9245`. No preview retry or Mac work is required.
+`8aa9245`; R180 in `382e7f2`. No preview retry or Mac work is required.
 
 The [R103/R104 practical supervision policy](docs/realizability/B2_MONITOR_PRACTICAL_SUPERVISION_POLICY.md)
 retains limits, cleanup and honest incomplete-result reporting while removing
@@ -421,5 +432,13 @@ R180 records the supplied session snapshots with account email redacted and
 missing excerpts identified. Start publication b294a12 succeeded. The bounded
 review changed only the benchmark and four continuity documents. Source,
 algebraic and documentation checks are recorded in the logs; no numerical,
-FEM/JIT, controller, render/encode or package work ran. Completion publication
-is prepared; actual delivery follows in the final response. PC retains ownership.
+FEM/JIT, controller, render/encode or package work ran. Completion was delivered in `382e7f2`. PC retains ownership.
+
+R181 recorded the supplied worked-for/token/status excerpts with account email
+redacted and missing /new/intermediate excerpts noted. Start publication
+`1fbd681` succeeded after approved host retry for sandbox Git/network restrictions.
+The bounded symbolic task changed only the benchmark and four continuity
+documents. Algebraic/documentation checks and skips are recorded in the logs;
+no numerical evaluation, FEM/JIT, solver/controller, render/encode, hardware
+or package work ran. Completion publication is prepared; actual delivery hash
+and outcome follow in the final response. PC retains ownership.

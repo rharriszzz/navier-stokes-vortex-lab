@@ -1,17 +1,18 @@
 # Boundary-control research handoff
 
-Revised 2026-09-21 (America/New_York), R180, from repository `8aa9245`.
+Revised 2026-09-22 (America/New_York), R181, from repository `382e7f2`.
 The original specification remains in Git history; implemented formulas and
 scientific thresholds below are retained unless explicitly labelled proposals.
 
 ## Start here
 
-**R180 result:** Fourier analysis specifies spatial patterns and timing;
-boundary inverse design additionally needs the fluid's response to those
-commands. Section 1.1 lists the missing finite-target inputs and Sections
-7.3–7.4 give a symbolic worked mapping and its stress/sensing limits.
-The [next task](SESSION_HANDOFF.md#next-task) is a bounded derivation of an
-annular momentum-transfer diagnostic. Section 10's launch integration remains
+**R181 result:** [Sections 7.5–7.7](#75-finite-annular-angular-momentum-balance)
+derive the finite annular angular-momentum budget, give an incompressible
+counterexample to midplane-feature sufficiency, and specify offline stress-flux
+closure and target tests. A nonzero correlation alone cannot establish the
+needed transfer. The [next task](SESSION_HANDOFF.md#next-task) applies the
+balance symbolically to the Gaussian reference, including its cutoffs and
+whole-support torque compatibility. Section 10's launch integration remains
 deferred. R177's benchmark assumptions and numerical gates are unchanged.
 
 **Proposed benchmark: prepare a vortex from rest using the cylinder boundary,
@@ -752,15 +753,335 @@ Sections 8.1–8.2 retain strict wall sensing and the unknown-state test. Interi
 CFD/PIV supplies validation truth only. No phase adjustment removes that
 pressure blind direction in this linearization.
 
-**Next scientific calculation:** derive the azimuthally averaged angular-
-momentum balance on a finite annular control volume and identify the radial
-and axial stress fluxes needed to test a proposed perturbation mechanism.
-Show explicitly what the existing four m=4 coefficients and scalar R_rtheta
-cannot determine. Specify a minimal offline validation diagnostic and a
-clear cancellation/residual test, without choosing new actuators, feedback
-sensors or a paper witness. This addresses mechanism fidelity before adding
-oscillations to the Gaussian benchmark; see the single
-[next task](SESSION_HANDOFF.md#next-task) for scope and stops.
+R181 completes that calculation in Sections 7.5–7.7 below; these extend the
+diagnostic specification without changing the existing feature definitions.
+
+### 7.5 Finite annular angular-momentum balance
+
+R181 derives the following identity for smooth incompressible Newtonian flow
+with constant density rho and kinematic viscosity nu, about a fixed laboratory
+z axis. It applies to nonlinear Navier–Stokes, not the rest-Stokes response
+model with its quadratic term omitted. The primary paper describes radial
+inflow, axial transport and viscous loss in Section 2.1, and oscillatory flux
+redistribution supplying a background deficit in Section 2.2. Our finite
+control-volume identity tests one component of that mechanism; it neither
+extracts nor verifies the paper's full construction or its axial-momentum
+cancellation. [Primary paper, Sections 2.1–2.2, pp. 3–6](https://cdn.openai.com/pdf/32d9f210-8b73-45e0-91bc-82a30aef8a9a/navier-stokes.pdf#page=3).
+
+**Local derivation.** Positive theta is right-handed about +z. Write pi = p/rho
+and let f be imposed acceleration (m/s²), not force per volume. For cylindrical
+components, the azimuthal equation and incompressibility are
+
+```text
+D = partial_t + u_r*partial_r + (u_theta/r)*partial_theta + u_z*partial_z
+Delta_s = partial_rr + (1/r)*partial_r + (1/r²)*partial_thetatheta + partial_zz
+D u_theta + u_r*u_theta/r
+  = -(1/r)*partial_theta pi
+    + nu*(Delta_s u_theta - u_theta/r² + 2*partial_theta u_r/r²) + f_theta
+(1/r)*partial_r(r*u_r) + (1/r)*partial_theta u_theta + partial_z u_z = 0.
+```
+
+For specific angular momentum ell = r*u_theta, multiplying the first equation
+by r absorbs the curvature term into D ell, since D r = u_r:
+
+```text
+D ell = -partial_theta pi
+        + nu*(Delta_s ell - 2*partial_r ell/r + 2*partial_theta u_r/r)
+        + r*f_theta.
+```
+
+Define a bar as a full 0...2*pi angular average **at fixed r,z,t**, with no
+time average. Set U_j = bar(u_j), u'_j = u_j-U_j, L = bar(ell) = r*U_theta,
+Q_r = bar(u'_r*u'_theta), Q_z = bar(u'_z*u'_theta). These are covariances of
+the actual field; they need not be turbulent or single-mode. Periodicity
+removes pressure torque and theta derivatives; incompressibility permits
+conservative advection. Thus
+
+```text
+partial_t L + (1/r)*partial_r(r*U_r*L) + partial_z(U_z*L)
+  = V + C + r*bar(f_theta)
+V = nu*(partial_rr L - partial_r L/r + partial_zz L)
+C = -(1/r)*partial_r(r²*Q_r) - partial_z(r*Q_z).
+```
+
+Equivalently, mean advection is U_r*partial_r L + U_z*partial_z L.
+The curvature factor is essential: C is not just -partial_r Q_r. Introduce
+viscous flux factors and total outward-transport components
+
+```text
+K_r = nu*(partial_r L - 2*L/r) = nu*r*(partial_r U_theta - U_theta/r)
+K_z = nu*partial_z L             = nu*r*partial_z U_theta
+V   = (1/r)*partial_r(r*K_r) + partial_z K_z
+F_r = U_r*L + r*Q_r - K_r
+F_z = U_z*L + r*Q_z - K_z
+partial_t L + (1/r)*partial_r(r*F_r) + partial_z F_z = r*bar(f_theta).
+```
+
+The averaged shear stresses are tau_rtheta = rho*K_r/r and
+tau_ztheta = rho*K_z/r. Before averaging they also include
+rho*nu*partial_theta u_r/r and rho*nu*partial_theta u_z/r respectively;
+these integrate to zero around a complete circle. Pressure has zero torque
+about z on cylindrical and horizontal faces, even if pressure varies with
+theta. No axisymmetry of the instantaneous field is assumed.
+
+**All finite boundary terms.** Take the fixed volume
+`V_A = {r1 <= r <= r2, 0 <= theta < 2*pi, z1 <= z <= z2}`, with r1 > 0.
+Its outward normals are -e_r,+e_r,-e_z,+e_z at r1,r2,z1,z2 respectively.
+This is an extension in z of a diagnostic annulus, not a change to the existing
+midplane observable A. Define
+
+```text
+H = 2*pi*rho * integral_z1^z2 integral_r1^r2 L*r dr dz
+Phi_mean = 2*pi*rho * { integral_z1^z2 [r*U_r*L]_r1^r2 dz
+                       + integral_r1^r2 r*[U_z*L]_z1^z2 dr }
+Phi_pert = 2*pi*rho * { integral_z1^z2 [r²*Q_r]_r1^r2 dz
+                       + integral_r1^r2 r²*[Q_z]_z1^z2 dr }
+T_visc   = 2*pi*rho * { integral_z1^z2 [r*K_r]_r1^r2 dz
+                       + integral_r1^r2 r*[K_z]_z1^z2 dr }
+T_vol    = 2*pi*rho * integral_z1^z2 integral_r1^r2 r²*bar(f_theta) dr dz
+
+dH/dt = -Phi_mean - Phi_pert + T_visc + T_vol.
+T_pert = -Phi_pert = integral_V_A rho*C dV.
+```
+
+Brackets mean upper value minus lower. Positive Phi removes positive angular
+momentum; positive T adds it. T_pert is an effective mean momentum transfer,
+not an externally imposed torque. For example Q_r > 0 at the outer face
+exports positive angular momentum, while the same positive Q_r at the inner
+face imports it into this annulus. Both endcaps must be retained; reflection
+symmetry, a midplane measurement or zero net volume flux does not generally
+cancel their angular-momentum fluxes. The theta seam is periodic, so its two
+contributions cancel. There is no extra edge torque for a smooth Cauchy stress.
+
+| Quantity | SI units |
+|---|---|
+| L, ell | m²/s |
+| Q_r, Q_z, K_r/r, K_z/r | m²/s² |
+| F_r, F_z, K_r, K_z | m³/s² |
+| partial_t L, V, C, r*f_theta | m²/s² |
+| H | kg m²/s |
+| Phi_mean, Phi_pert, T_visc, T_vol, dH/dt | kg m²/s² (N m) |
+
+Dividing H by the fixed fluid mass rho*pi*(r2²-r1²)*(z2-z1) gives mean
+specific angular momentum. Its change need not track peak swirl or core
+radius: inward transport can spin up a core while another region loses
+angular momentum. A moving core-following volume requires Reynolds transport
+with velocity relative to the moving surface; it is not this identity.
+
+An **internal control face** is fluid, so its advective and stress fluxes
+must be measured, not set to wall commands or zero. Adjacent volumes cancel
+shared-face fluxes. At a fixed impermeable tank wall u_n = 0 pointwise, both
+mean and perturbation advective fluxes through that wall vanish; tangential
+traction can still supply viscous torque. A velocity command determines
+traction only through the solved flow. For a port/porous boundary with u_n
+nonzero, retain the full advective angular-momentum flux even when total
+volume flux is zero. A physically moving wall requires a moving-domain balance.
+Noncylindrical walls may also exert pressure torque; the general traction term
+is integral_boundary r*(sigma*n)_theta dS, sigma = -p*I + viscous stress.
+These qualifications do not select new actuator hardware or boundary conditions.
+
+Checks on the identity: solid rotation U_theta = Omega*r has K_r = 0;
+U_theta = B/r has nonzero radial shear but constant r*K_r, hence zero radial
+viscous divergence. The r1 -> 0 limit has no inner flux for smooth axis-regular
+fields. On a whole fixed impermeable cylinder, perturbation transport cannot
+change total angular momentum by itself; it redistributes it internally.
+A later time average must retain endpoint storage and averages of products:
+replacing bar_time(U_r*L) by bar_time(U_r)*bar_time(L) drops another covariance.
+
+### 7.6 Why the existing averages cannot determine the transfer
+
+For each nonzero angular order m, let c_jm(r,z,t), s_jm(r,z,t) be *local*
+Fourier coefficients. Angular orthogonality gives, for a resolved complete
+expansion,
+
+```text
+Q_r(r,z,t) = (1/2)*sum_m>=1 [c_rm*c_thetam + s_rm*s_thetam].
+```
+
+The four existing m=4 observables retain only radial area averages at z=0.
+Products of those averages lose radial covariance, other angular orders,
+face values and radial derivatives. Even the separately computed scalar
+R_rtheta retains only `2/(r2²-r1²)*integral_r1^r2 r*Q_r(r,0,t) dr`.
+It contains neither the radial boundary values of r²*Q_r at general z nor
+Q_z, axial variation, mean advection, storage or shear. A weighted integral
+of Q_r does not fix a weighted boundary difference of Q_r.
+
+Here is a complete **instantaneous divergence-free counterexample** that also
+shows why finite axial data matter. On a neighbourhood of V_A with z1=-h,
+z2=h, take m=4, constants k (m²/s), beta (1/(m s)) and the vector potential
+
+```text
+A_r = -beta*z³*cos(m*theta)/3,   A_theta = 0,
+A_z = k*sin(m*theta)/m,         u' = curl A
+u'_r     = k*cos(m*theta)/r
+u'_theta = -beta*z²*cos(m*theta)
+u'_z     = -m*beta*z³*sin(m*theta)/(3*r).
+```
+
+All components have zero angular mean. The radial divergence vanishes;
+the theta and z divergence terms are +m*beta*z²*sin(m*theta)/r and its
+negative. Thus this is incompressible for every beta. To embed it in a smooth
+closed tank, multiply the **potential** by a smooth axisymmetric cutoff equal
+to one on a neighbourhood of V_A and supported away from the axis and tank
+walls, then take its curl. That preserves these formulas on V_A, gives a
+smooth solenoidal extension and zero wall velocity; multiplying the velocity
+itself by a cutoff would not suffice. The tank is assumed to leave room for
+this internal annulus and its cutoff neighbourhood.
+
+At z=0 every beta has exactly the same field and observables:
+
+```text
+C_r4 = 2*k/(r1+r2),  S_r4 = C_theta4 = S_theta4 = 0,  R_rtheta = 0.
+Q_r = -k*beta*z²/(2*r),    Q_z = 0  throughout V_A
+C   = k*beta*z²/(2*r)
+T_pert = 2*pi*rho*k*beta*(r2-r1)*h³/3.
+```
+
+The last result follows both from the two radial-face fluxes and from the
+volume integral of C; axial perturbation flux is zero in this example.
+Changing beta changes the transfer while preserving all five existing
+annulus observables. The fields specify admissible initial data, not a claimed
+steady or time-dependent Navier–Stokes solution. With f_theta = 0 and zero
+initial angular means, their instantaneous mean tendencies are partial_t L=C;
+viscous and mean-advection terms vanish at that instant. The smooth exterior
+extension supplies compensating redistribution, so no whole-tank torque is
+created. Adding the same smooth axisymmetric base to both fields leaves the
+covariances and their difference in mean tendency unchanged.
+
+Even a nonzero local correlation need not drive a local mean change. As a
+stress-level identity, Q_r=q0/r² independent of z and Q_z=0 gives C=0 and
+Phi_pert=0 on every such annulus, although Q_r is nonzero: equal radial flux
+enters and leaves. Here q0 has units m⁴/s²; this statement is an identity about
+stress transport, not an additional claimed velocity solution. Conversely,
+compactly supported stresses may redistribute momentum among subregions
+while their net transfer across an enclosing volume is zero. A single total
+budget therefore cannot certify a spatially resolved mechanism.
+
+### 7.7 Minimal offline validation and the finite-target boundary
+
+This is a **data and diagnostic specification**, not an implementation or run.
+Use actual CFD or independently measured PIV truth offline. It grants no new
+feedback measurements: Section 8's strict wall support remains the baseline.
+A linear Stokes run cannot validate the nonlinear stress mechanism.
+
+The smallest budget for one volume needs angular-momentum storage plus the
+mean, perturbation and viscous fluxes on **both cylindrical faces and both
+annular endcaps**, together with known volume torque. To test spatial transfer
+rather than only net torque, evaluate that same conservative budget on a fixed
+partition in r and z with shared faces. A 2-by-2 radial/axial partition is a
+minimal initial localization check, not sufficient resolution for an arbitrary
+pulse; refine where opposing contributions or gradients remain unresolved.
+Keep the old midplane A observable unchanged. Do not choose a numerical axial
+extent or new resolution allowance in this derivation.
+
+| Retained data | What it resolves |
+|---|---|
+| Fixed origin, face coordinates, rho, nu, physical quadrature weights and synchronized times | Geometry, units, face orientation and storage interval |
+| Three velocity components around full circles at each face sample and in each cell | U_r,U_theta,U_z, L, Q_r,Q_z; integrate products locally before averaging |
+| Neighbouring velocity samples or resolved derivatives at faces | partial_r U_theta-U_theta/r and partial_z U_theta for viscous torque |
+| Cell-integrated L at interval endpoints; face flux histories | Storage and time-integrated transport without differentiating noisy storage |
+| Declared actual volume acceleration and boundary history | T_vol and provenance; never insert a target's manufactured force into an unforced run |
+| Target mean fields and derivatives on the same geometry/time window, with error estimates | Required angular-momentum transfer and finite-target comparison |
+
+For storage only the interior mean U_theta is needed; the three-component
+interior field also permits a local divergence comparison. CFD can export
+these restricted samples and integrals rather than a full-domain archive.
+PIV must resolve the required components, full angular support, axial variation
+and gradient neighbourhoods, simultaneously or through demonstrated repeatability
+with phase synchronization. One two-component midplane image cannot close this
+balance. This states the information requirement, not a camera or sensor choice.
+Do not assume single-mode purity, reflection symmetry or vanishing axial flux.
+No universal angular sample count suffices without a bandwidth/error bound;
+check angular quadrature on quadratic products and unresolved harmonics.
+
+For each fixed cell c and interval [t_a,t_b], in angular-impulse units kg m²/s,
+form independently
+
+```text
+B_c = H_c(t_b)-H_c(t_a)
+      + integral_ta^tb (Phi_mean,c - T_visc,c - T_vol,c) dt
+I_pert,c = -integral_ta^tb Phi_pert,c dt
+E_c = B_c - I_pert,c.
+```
+
+B_c is the unexplained mean budget when perturbation transport is omitted;
+E_c is the full closure residual. Retain radial and axial face contributions
+separately and their time histories. Use short resolved intervals as well as
+the full finite window so positive/negative transfers cannot hide by temporal
+cancellation. Shared-face contributions must cancel in the sum over cells;
+check mass-flux balance and angular quadrature separately. Where derivatives
+are resolved, compare cell-average C with the conservative face expression.
+Do not obtain I_pert by solving the balance for it: that would make closure
+circular. In CFD report both the scheme's discrete conservation defect and an
+independently reconstructed physical budget; algebraic conservation alone
+cannot validate an inaccurate velocity/stress field.
+
+For a specified finite mean target U*, define its required local perturbation
+contribution under the **admissible actual** volume torque f_adm (zero in the
+boundary-only study):
+
+```text
+L* = r*U_theta*
+D* = partial_t L* + U_r* * partial_r L* + U_z* * partial_z L*
+     - nu*(partial_rr L* - partial_r L*/r + partial_zz L*)
+     - r*bar(f_adm,theta).
+J*_c = integral_ta^tb integral_cell rho*D* dV dt.
+```
+
+The face/storage form using U* gives the same J*_c. If the mean target were
+matched, its perturbation stress would need to supply J*_c; the target's own
+manufactured volume force is not a permissible cancellation. For a paper
+approximation specify which angular mean is U*, including retained mean
+corrections. The leading background alone need not equal the exact angular
+mean. This requirement constrains a divergence, not a unique stress tensor;
+stress realizability by solenoidal velocities and boundary reachability remain
+separate unsolved problems.
+
+Report both `I_pert,c-J*_c` and actual mean-profile/feature errors. Small closure
+E alone shows accounting of the observed flow, not tracking of U*. Conversely,
+a matching net torque does not establish its spatial distribution or the
+radial/axial momentum equations. Comparing B and E holds the measured mean
+fixed; it is not a prediction of a second flow with perturbations removed.
+A causal command-on/off claim would need separately validated comparison data.
+
+Use a fixed norm across the retained cells/time intervals, for example the
+maximum absolute component in angular-impulse units. Predeclare positive
+absolute budgets epsilon_close, epsilon_target and uncertainty estimates for
+B, E, I_pert-J*, including correlated errors from shared velocity samples.
+Do not divide by J* when it is near zero or reuse Section 9's velocity
+percentages as a torque tolerance. For F0=norm(B), F1=norm(E), uncertainties
+delta0,delta1 on those norms give a conservative improvement test
+`F1+delta1 < F0-delta0`. Bounds may conservatively sum component estimates
+unless justified joint propagation is available. Include angular/radial/axial
+quadrature, mesh/time resolution, velocity-gradient extraction, viscosity,
+geometry/centering, PIV noise/bias and synchronization, plus target truncation
+and derivative error in the target comparison. Refinement differences estimate
+uncertainty; they are not automatically rigorous bounds. Missing dominant
+uncertainty prevents a verdict.
+
+| Outcome | Required interpretation |
+|---|---|
+| Resolved mechanism improvement | The uncertainty-separated inequality holds on the declared norm, closure satisfies F1+delta1 <= epsilon_close, and individual cell/time residuals show where transport acted. A nonzero Q alone does not qualify. |
+| Finite-target support | Additionally norm(I_pert-J*) plus its uncertainty is <= epsilon_target, target mean/feature tracking passes its declared limits, and spatial/temporal resolution gates pass. This supports only the angular-momentum component for this finite target and tested commands. |
+| Resolved failure for the tested case | With adequate closure and uncertainty, target transfer or mean tracking exceeds its budget even at the favourable uncertainty bound; report cells, times and sign/direction responsible. Resolved absence of improvement is a failure of that proposed explanation, not a universal boundary-control impossibility. |
+| Inconclusive | Closure, target definition, gradients, missing faces, sampling or uncertainty cannot resolve the criteria. Closure failure flags unresolved data/model/numerics, not proof of physical impossibility. If B is already indistinguishable from zero, this case cannot demonstrate a needed perturbation correction. |
+
+No finite paper mean/correction fields, derivative-aware target error,
+comparison axial interval or angular-impulse tolerances have yet been fixed.
+The existing Gaussian target is axisymmetric and initially requests zero m=4;
+its finite formulas are available, but that does not assign a paper-mechanism
+stress target. Therefore this session reaches a research boundary without a
+numerical mechanism verdict or a new numerical allowance. B2 remains failed,
+q64/q96 unused, and all existing Section 9/B2 criteria remain unchanged.
+
+**Next scientific calculation:** apply this balance symbolically to the
+existing Gaussian reference and its fixed cutoffs. Derive D* in the core and
+transition regions, and the whole-support angular-momentum compatibility
+condition for a compactly supported perturbation stress with no volume torque.
+Determine what can be redistributed internally and what requires external
+boundary transport/torque. This is a surrogate-specific necessary-condition
+check, not paper-witness extraction or a numerical feasibility test. See the
+single [next task](SESSION_HANDOFF.md#next-task) for completion criteria/stops.
 
 ## 8. Strict boundary measurement and independent truth
 
@@ -1012,12 +1333,14 @@ feedback; later select credible hardware/noise limits. None prevents preparing
 the unchanged accuracy diagnostic. The present proposal defaults to strict
 support and retains the existing 10 mm → 3 mm reference for review.
 
-R180 completes that conceptual/modal review in Sections 1.1 and 7.3–7.4.
-The next annular momentum-budget derivation is scoped in the current handoff;
-Section 10 remains deferred. No finite paper target, response coefficient,
-new tolerance or hardware/sensor decision was selected. Algebraic deductions
-were reviewed against the stated equations and existing mode/feature source;
-no numerical evaluation or solver test ran. Retain GPT-6 Astra/high on PC/WSL
-daisy for this scientific interpretation; use Luna/medium only for a later
-fully specified mechanical change and return to Astra for unresolved physics.
-No model switch occurred.
+R180 completed the conceptual/modal review in Sections 1.1 and 7.3–7.4.
+R181 adds the symbolic balance, incompressible counterexample and offline
+validation contract in Sections 7.5–7.7. The [next task](SESSION_HANDOFF.md#next-task)
+is the Gaussian target's angular-momentum deficit and global compatibility
+calculation; Section 10 remains deferred. No finite paper target, new tolerance,
+response coefficient or hardware/sensor decision was selected. Manual algebra,
+units, face signs, counterexample divergence/flux integrals and documentation
+checks are recorded in the logs. No numerical evaluation or solver test ran.
+Retain GPT-6 Astra/high on PC/WSL daisy for scientific interpretation; use
+Luna/medium only for a later fully specified mechanical change and return to
+Astra for unresolved physics. No model/platform switch occurred.
