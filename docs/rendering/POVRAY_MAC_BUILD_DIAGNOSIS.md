@@ -5,9 +5,11 @@ because its fast-math build mishandles the camera parser's infinity sentinels.
 An isolated build of the same release with `-O2 -fno-fast-math` renders the
 unchanged sphere, user's beads example, official torus example and project
 frames correctly. No project geometry, camera, materials or trajectory was
-changed. The installed `/opt/local/bin/povray` is still the original executable;
-the working build is local and temporary. Follow the single
-[next task](../../SESSION_HANDOFF.md#next-task) for durable installation.
+changed in the R136 diagnosis. Since then, the user installed local MacPorts
+revision 6; its canonical sphere passed intersections and visual inspection.
+Its effective flags are `-Os -fno-fast-math`; exact recompilation scope is
+unverified. Follow the single [next task](../../SESSION_HANDOFF.md#next-task)
+for remaining installed-renderer checks on the Mac.
 
 ## What “blank” means
 
@@ -21,9 +23,9 @@ background colors. A successful exit and valid PNG were insufficient.
 
 Flag provenance (R139): upstream 3.7.0.8 `unix/configure.ac`, lines 795–812,
 automatically tests/adds `-ffast-math` when its default optimization path
-identifies a GNU-compatible compiler. The installed MacPorts recipe passes
+identifies a GNU-compatible compiler. The original revision-5 MacPorts recipe passes
 `--disable-optimiz-arch`, which disables architecture-specific tuning rather
-than this separate math flag; it supplies no fast-math override. The installed
+than this separate math flag; it supplies no fast-math override. That original
 executable embeds `-ffast-math` in its compiler flags. The flag therefore came
 from the renderer's build defaults, not the project scenes or user's POV-Ray
 configuration. It aims to permit faster arithmetic by relaxing normal
@@ -115,19 +117,38 @@ was modified by the recommendation request.
 R141–R144 implementation: [the reviewed local MacPorts bundle and launcher](../../packaging/macports/README.md)
 preserve the upstream compatibility patches, increase the local revision to 6,
 and apply those conservative flags. Shell syntax, configuration preflight and
-MacPorts lint passed. No installation/build has started: sudo requires the
-user's administrator password, which must be entered only in Mac Terminal.
+MacPorts lint passed. At handoff publication the build had not started; sudo
+required the user's administrator password, entered only in Mac Terminal.
 The launcher snapshots its inputs outside the repository and uses two compiler
 jobs, saves logs/configuration backup, checks the active revision/flags, then
-runs a bounded ordinary-user sphere smoke test. Actual installation and visual
-checks remain pending. PC repository ownership may proceed independently after
-successful handoff publication and its own receipt checks.
+runs a bounded ordinary-user sphere smoke test.
 
-Working executable:
+R150–R155 update: the user completed installation; `povray @3.7.0.8_6` is active
+and revision 5 retained inactive. The installed sphere passed intersections
+and subsequent visual inspection. Its effective flags are `-Os -fno-fast-math`,
+not the intended `-O2`. The first attempt stopped at the inherited OpenEXR build
+conflict; the user deactivated `openexr` while leaving `openexr2` active. At the
+R155 check, OpenEXR reactivation was still outstanding. R157 subsequently
+verifies the user's reactivation of `openexr @3.4.15_0`; `openexr2` and POV-Ray
+revision 6 remain active. The launcher does not automate conflict
+resolution/restoration.
+
+The phase-level log spans about 81 seconds but does not identify compiled
+translation units. MacPorts cleaned its detailed log, so neither full
+recompilation nor relink-only operation is established. The user accepts the
+working result without another build to settle timing. The remembered slow
+large C++ source file is unidentified; the earlier `parse.cpp` experiment
+explains the tested bug, not every possible fast-math code path. Installed
+beads/project checks remain pending. [Current Mac note, evidence bindings and
+next task](../../SESSION_HANDOFF.md#next-task) supersede the unreceived PC
+transfer: R155 confirms PC work never started.
+
+Earlier R136 temporary executable (not the installed revision 6):
 `/tmp/povray-build-diagnosis.JO4kJZ/povray-safe-math`.
 SHA-256: `905b84d24b0705f80cf4e359f7caf64428eb22ceef69e57c8451ed0441a1c26e`.
 It uses the existing MacPorts libraries, include files and user configuration.
-No `make install`, package replacement or user-config modification ran.
+No `make install`, package replacement or user-config modification ran in that
+earlier diagnostic experiment; the later user-managed package update is above.
 Temporary artifacts may disappear; do not transfer this Mac binary to the PC.
 
 From the repository root, in an external host execution context:

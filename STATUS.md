@@ -11,13 +11,17 @@ with fast-math reproduces the fault. [Diagnosis and saved evidence](docs/renderi
 The 240 saved trajectory frames/500 beads passed the checker again. All three
 320x180 project frames were visually inspected with the working temporary
 executable; tank/tracers and changing tracer distribution are visible. The
-installed MacPorts binary remains unchanged, and no movie was encoded. R141–R144
-prepare a [durable Mac rebuild launcher](packaging/macports/README.md), with
-preflight/lint passed but installation NOT STARTED; the user will authenticate
-in Mac Terminal after handoff publication. The [next repository task](SESSION_HANDOFF.md#next-task)
-is PC/WSL Luna/medium receipt and a small ffprobe-verified contiguous preview,
-after checking the PC's own renderer. Mac repository ownership is released
-upon successful handoff push; the independent build may run while PC owns it.
+user subsequently installed MacPorts revision 6 using the
+[durable launcher](packaging/macports/README.md). The installed executable
+passed sphere intersections and visual inspection; beads and project frames
+have not yet been rechecked with it. Effective flags are `-Os -fno-fast-math`;
+exact recompilation scope remains unverified and is not a reason alone to rebuild.
+No movie was encoded. R155 confirms PC work never started: **Mac retains
+ownership**, superseding the unreceived transfer. The
+[next repository task](SESSION_HANDOFF.md#next-task) is the bounded installed
+renderer check on Mac. R157 verifies the user's OpenEXR 3.4.15_0 reactivation;
+openexr2 and POV-Ray revision 6 also remain active. R158 authorizes publication
+of the notes before a fresh Mac chat; this is not a PC ownership transfer.
 POV-Ray on Mac still runs outside the agent sandbox;
 R131's empty user config remains intact. This is illustrative visualization,
 not physical validation.
@@ -87,7 +91,8 @@ the calculations trustworthy; it is not yet evidence that the apparatus works.
 - **The movie can still illustrate the concept.** The latest work supplies no
   new validated flow history for a physically supported animation. Connecting
   the movie to reliable fluid calculations remains a later milestone; the
-  independent Mac POV-Ray build's completion is still unverified.
+  installed Mac POV-Ray now passes the sphere check, with installed beads/project
+  checks still pending.
 
 ## Overall progress and remaining milestones
 

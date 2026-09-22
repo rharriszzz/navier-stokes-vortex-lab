@@ -1,12 +1,16 @@
 # Current session handoff
 
-Last updated 2026-09-21 for R139–R146 (prepared for publication UTC 2026-09-22).
-R141 authorizes the conservative-math MacPorts rebuild and asks for a PC
-handoff and commit/push first. R142–R145 establish that the user will launch
-the prepared command and authenticate directly in Mac Terminal. The
-[rebuild bundle](packaging/macports/README.md) passed syntax/preflight and
-MacPorts lint; **the installation/build has not started**. R139–R140's earlier
-explanation/recommendation-only scope is superseded by that authorization.
+Last updated 2026-09-21 for R147–R158 (UTC 2026-09-22).
+**Mac `fire.lan` retains ownership.** R155 explicitly confirms the PC never
+started work; the earlier published PC handoff was not received and is now
+superseded. The user ran the [MacPorts launcher](packaging/macports/README.md):
+`povray @3.7.0.8_6` is active, and its sphere test passed both intersections
+and subsequent visual inspection. Effective flags are `-Os -fno-fast-math`,
+not the intended `-O2`. Exact recompilation scope is unknown; R154 accepts this
+repair without another build merely to resolve timing. R158 explicitly
+authorizes publishing these notes before a fresh chat on this Mac. Publication
+is prepared here; actual delivery commit/result follows in the final response
+and Git history. Mac ownership is retained, not transferred to PC.
 The blank-render cause is established: MacPorts POV-Ray 3.7.0.8's fast-math
 build mishandles infinity sentinels in camera defaults. A conservative build
 of the same source renders the unchanged sphere, beads example, official torus
@@ -15,19 +19,24 @@ scene parser reproduces the fault; restoring conservative math restores the
 byte-identical working binary. [Diagnosis, evidence and build recipe](docs/rendering/POVRAY_MAC_BUILD_DIAGNOSIS.md).
 
 The user's `beads1.jpg` correctly shows beads on an intentional white background.
-The faulty new beads render was entirely black, with no geometry. The installed
-`/opt/local/bin/povray` remains unchanged. The working temporary executable is
-`/tmp/povray-build-diagnosis.JO4kJZ/povray-safe-math`; its SHA-256 is recorded
-in the diagnosis. No system installation, movie, FEM or physical work ran.
+The faulty revision-5 beads render was entirely black, with no geometry. The
+installed `/opt/local/bin/povray` is now revision 6; revision 5 is retained
+inactive. The earlier temporary executable remains diagnostic history, not the
+default renderer. No movie, FEM or physical work ran. The first package attempt
+stopped at an inherited `openexr` build conflict; the user deactivated it and
+retried successfully. R157 records the user's subsequent reactivation;
+read-only verification confirms `openexr @3.4.15_0` and `openexr2 @2.5.10_0`
+are both active alongside POV-Ray revision 6. OpenEXR restoration is complete;
+the launcher did not do it automatically.
 Continue to run POV-Ray outside the restricted agent sandbox. Keep the existing
 empty user configuration file; no further configuration edits were needed.
 
-Next repository owner: **PC/WSL `daisy`, Luna/medium**, for bounded movie-pipeline
-validation, following the [single next task](#next-task). Mac ownership is
-released only upon successful publication of this handoff; PC receipt remains
-pending. The independent user-launched Mac package build may then run outside
-the shared checkout. R145 requires explicit PC release and Mac receiving checks
-before any subsequent Mac repository edits/publication; no concurrent writers.
+Next: finish the installed-renderer checks **on this Mac**, following the
+[single next task](#next-task). R158 recommends a fresh chat at this completed
+checkpoint; Luna/medium is sufficient. `/new` is not a guaranteed speedup.
+The necessary state is recorded here rather than relying on the old chat. No platform
+switch is needed for Mac-local installation checks. Do not start PC repository
+work until a new explicit handoff is prepared and delivered; no concurrent writers.
 Project camera/material/trajectory changes are unnecessary for this fix.
 The portable trajectory checker remains a saved-data validity check, not a
 runtime or scientific certificate; [practical supervision policy](docs/realizability/B2_MONITOR_PRACTICAL_SUPERVISION_POLICY.md)
@@ -37,14 +46,14 @@ and physical-work limits remain unchanged.
 
 | Field | Current value |
 |---|---|
-| Owner | Outgoing Mac `fire.lan`, Darwin/arm64; released on successful handoff push. Intended receiver PC/WSL `daisy`, pending receipt. |
-| Checkout | Outgoing `/Users/rharris/git/navier-stokes-vortex-lab`; intended PC `/home/rharris/git/navier-stokes-vortex-lab`. |
+| Owner | Mac `fire.lan`, Darwin/arm64, per R155 explicit clarification; PC never started. |
+| Checkout | `/Users/rharris/git/navier-stokes-vortex-lab`. |
 | Branch/upstream | `main` / `origin/main` |
-| Starting state | R141 fresh fetch: HEAD/origin/main `79a05ef`; stashes empty. Only known R139–R140 documentation was dirty, preserved for this explicitly authorized publication. No pull over dirty work. |
+| Starting state | R155 clean fast-forward pull was up to date at `4101af9`. R158 fresh fetch confirms HEAD/origin/main unchanged; empty stashes. Six known metadata edits deliberately reconciled under explicit publication authorization; no pull over dirty work. |
 | Interpreter | `/Users/rharris/miniconda3/envs/navier-stokes-vortex-b1/bin/python`, CPython 3.12.13 |
-| Other owner/process | PC last released in R107 and has not yet received this handoff. Local Git cannot establish its unpublished work/process state; receiver must check. No remote PC action was taken. |
-| Task processes | No task child remains; durable Mac rebuild NOT STARTED. User will run the launcher after publication. Its snapshot/build/logs are outside the repo and may continue during PC ownership. R136 temporary binaries/source and ignored trajectory remain Mac-local. |
-| Delivery state | Base/source commit `79a05ef`. R139–R146 publication authorized and prepared; actual delivery hash/result is in final response/Git history, not this pre-push record. Failure leaves release pending and Mac responsible. |
+| Other owner/process | User confirms no PC work started. This is not inferred from local Git; no remote PC operation was performed. |
+| Task processes | User-managed package operation and sphere smoke test completed. R155–R158 perform metadata/checks/publication only; no new compiler/render task. Agent stops after delivery; no background task is being left to continue. |
+| Delivery state | Prior bundle/handoff delivered as `4101af9`. R158 explicitly authorizes publication of R147–R158 notes; prepared for scoped commit/push. Actual delivery hash/result follows in final response/Git history. Failure retains Mac responsibility and pending publication. |
 
 ## Current result and limits
 
@@ -175,63 +184,67 @@ agent-side POV-Ray backtraces are unavailable.
 
 ## Next task
 
-On **PC/WSL `daisy`, GPT-5.6 Luna/medium**, receive this handoff and validate one
-small contiguous preview of the existing illustrative movie pipeline. This is
-independent of the Mac installation and does not assume the PC renderer works.
+On **Mac `fire.lan`**, finish the installed POV-Ray validation: beads and project
+frames 1/120/240. OpenEXR restoration is verified in R157. This session can perform the
+bounded step; **GPT-5.6 Luna/medium** is sufficient for a fresh session or model
+switch. Stay on Mac because that is where the replacement executable, libraries
+and build evidence reside. No second session or model switch was launched.
 
-1. Follow the full [session protocol](docs/workflow/SESSION_PROTOCOL.md): check
-   identity, local work/stashes, ownership/open sessions and configured upstream;
-   on a clean `main`, pull with `--ff-only --no-rebase --no-autostash`. Confirm
-   the delivered handoff is present; record receipt and publish the Continue
-   start before substantive work. Stop for unresolved ownership/local work.
-2. Read [track rules](docs/workflow/TRACK_RULES.md). Verify PC-local Python 3.12,
-   NumPy, POV-Ray, GNU `timeout`, ffmpeg and ffprobe paths/versions. Mac `gtimeout`
-   scripts are not directly portable; use Linux `timeout` for bounded calls.
-   Do not transfer Mac binaries, environments, `/tmp` files or caches.
-3. Check existing saved positions read-only with `check_trajectories.py`.
-   If absent, generate the defaults (240 frames, 500 beads, 30 fps, eight
-   substeps, seed 20260919) into an empty output directory and check them.
-   `make_trajectories.py` deletes matching output files: never run it over
-   pre-existing unreviewed data. Preserve any partial/corrupt data and stop for
-   reconciliation rather than overwriting it. The Mac's ignored includes are
-   deterministically regenerable, not a required transfer or once-only input.
-4. Render and inspect `tests/scenes/centered_sphere.pov` first. If visible,
-   render project frame 1, then inspect separated frames 1/120/240 at 320x180,
-   two threads, at most 30 seconds per frame. Keep the full 1–240 animation
-   range and select frames with `+SF`/`+EF`; do not retime the source trajectory.
-5. Only after those pass, render contiguous frames 1–30 at 320x180/two threads
-   with a 180-second total render limit. Encode H.264/yuv420p at 30 fps with a
-   30-second encode limit. Confirm with ffprobe: 30 frames, 1-second duration,
-   30 fps, 320x180, H.264 and yuv420p. Inspect separated preview frames for
-   visible motion; three widely spaced stills alone are not this movie.
+R158 reconciles and publishes the preceding metadata notes, then stops. In the
+fresh Mac chat, verify delivery and a clean worktree, and follow the clean
+synchronization/start-publication requirements in the
+[session protocol](docs/workflow/SESSION_PROTOCOL.md) and
+[track rules](docs/workflow/TRACK_RULES.md) when the user says **Continue**.
+If any unpublished work remains, preserve/reconcile it instead of pulling over
+it. R158 itself does not launch the next renderer task. Keep the prior final
+completion/“worked for” message, then `/new`, `/status` and the supplied excerpts
+under the existing reporting procedure; do not invent a new-session excerpt.
 
-Keep large generated includes/PNGs/MP4s ignored and local; publish only small
-evidence and scoped workflow corrections if needed. Complete with honest checks,
-stop/process state, one next task and authorized completion publication. This
-is kinematic visualization, not CFD, physical feasibility or a speed benchmark.
-No FEM, physical, monitor or broad package work is included. Stop at the first
-missing tool, timeout, malformed input or background-only renderer result;
-preserve evidence rather than starting repeated sweeps or changing the model.
+1. Check `port installed openexr openexr2 povray` for unchanged package state:
+   OpenEXR 3.4.15_0, openexr2 2.5.10_0 and POV-Ray 3.7.0.8_6 are now active.
+   No further activation, forced deactivation or broad package upgrade is needed.
+2. Verify installed `/opt/local/bin/povray` against the recorded hash below.
+   The canonical sphere already passed intersections and visual inspection
+   with that binary; repeat only if executable/configuration changed.
+3. Check existing saved positions read-only with Python 3.12 and
+   `check_trajectories.py`. Do not regenerate or overwrite them. Read the beads
+   scene/reference without editing that separate checkout; use fresh output
+   paths outside it. Render beads at 160x120/two threads, then project frame 1,
+   then inspect frames 1/120/240 at 320x180/two threads. Bound each render to
+   30 seconds and run outside the restricted agent sandbox. Preserve the
+   full 1–240 animation range with `+SF`/`+EF` selection, without retiming.
+4. Stop after those checks and record results honestly. No movie, trajectory
+   changes, FEM, physical, benchmark or new compilation is part of this step.
+   Stop on missing input, timeout, invisible geometry or unexplained failure;
+   no repeated sweep or scene workaround. A contiguous preview can follow in
+   a later task, with a new PC handoff only if the user chooses that machine.
 
-Recommend **GPT-6 Astra/high** only for a new compiler/build ambiguity or a
-model/format decision. The OpenAI Docs skill informed the recommendation:
-[Luna documentation](https://developers.openai.com/api/docs/models/gpt-5.6-luna)
-lists medium reasoning and its cost-sensitive role;
-[Astra documentation](https://developers.openai.com/api/docs/models/gpt-6-astra)
-describes complex end-to-end work. Account-specific access was not checked;
-these choices also match the user's supplied session snapshot. No switch,
-delegation, remote session or automation has been performed.
+### Note for the next Mac session
 
-Independent Mac action after successful publication:
-`bash /Users/rharris/git/navier-stokes-vortex-lab/packaging/macports/rebuild_povray.sh`.
-Enter the password only in Terminal and keep it open. Its private run directory
-under `~/Library/Logs/navier-stokes-vortex-lab/povray-rebuild/` holds inputs,
-configuration backup, build log, active-revision/flags checks and sphere smoke
-test. Visual sphere and later beads/project rechecks remain unverified; the PC
-must not infer installation success or edit Mac state. R145 says the user will
-ask PC to release after one or more steps; wait for that explicit release,
-then synchronize on Mac before recording build results or doing another Mac
-add/commit/push. **Next PC prompt: Continue.**
+Installed revision 6 passed the red-sphere smoke test and visual inspection.
+Effective flags are `-Os -fno-fast-math`; the intended recipe's `-O2` was not
+effective. Do not claim all files were recompiled: the retained phase log spans
+about 81 seconds, the detailed compiler log was cleaned, and the user remembers
+a particularly slow large C++ file that has not been identified. R154 accepts
+the working result; do not rebuild just to answer that historical question.
+If another build becomes necessary, retain verbose commands and review flag
+ordering, OpenEXR preflight/restoration and log retention before running it.
+
+Successful local run directory:
+`/Users/rharris/Library/Logs/navier-stokes-vortex-lab/povray-rebuild/run.DQa0eT/`.
+Its `status.txt` still says visual inspection pending; that automatic status
+was followed by successful agent visual inspection without rewriting the log.
+SHA-256 bindings checked in R155:
+
+- Installed executable: `679bf4a83ba552bfc7c55e0e0b44f2b0580312c837785551fef8e2d1974ed795`.
+- `sphere.png`: `d56943930c28e762cb438431bf3605c49f162d291c7da0a939db620c489f94be`.
+- `build.log`: `f4e7009098456ec6ac17d4705bbb8043188c5b8a162f13950894e495fe9bcfc2`.
+
+The OpenAI Docs check in R156 confirms
+[Luna's medium reasoning option and cost-sensitive role](https://developers.openai.com/api/docs/models/gpt-5.6-luna).
+The task-fit recommendation is judgment, not an account-access check. Existing
+Astra/high escalation guidance remains for a new build/model/format decision,
+not for routine render checks or the accepted historical timing uncertainty.
 
 ## Historical handoff anchors
 

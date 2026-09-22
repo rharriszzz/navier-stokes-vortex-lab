@@ -2,7 +2,11 @@
 
 R141–R144 authorize this rebuild **after** publishing the PC handoff. The user
 runs it in an ordinary Mac Terminal and supplies the administrator password
-there. Preparation and preflight are complete; installation has not run.
+there. The original handoff was delivered as `4101af9`; the user subsequently
+installed revision 6 and the sphere test passed intersections and visual
+inspection (R150–R155). Effective flags are `-Os -fno-fast-math`, not the intended
+`-O2`; exact recompilation scope is unverified. Do not rerun just to settle
+that question. R155 confirms the PC never started and Mac retains ownership.
 
 ```bash
 bash /Users/rharris/git/navier-stokes-vortex-lab/packaging/macports/rebuild_povray.sh
@@ -49,6 +53,14 @@ an official build passes the conservative-math checks.
 
 ## Logs, checks and recovery
 
+Observed first-run caveat: the inherited recipe refuses to build while
+`openexr` is active, despite using the separate `openexr2` dependency. The
+user temporarily deactivated `openexr` and retried. ImageMagick/OpenCV depend
+on it, so it must be reactivated after the build; this launcher does not
+automatically perform or undo deactivation. R157 verifies the user's subsequent
+reactivation of `openexr @3.4.15_0`, with openexr2 and POV-Ray revision 6 still
+active. Review this preflight/restoration gap before another installation.
+
 Before authentication, the launcher snapshots its inputs to a private run
 directory under:
 
@@ -85,7 +97,9 @@ bash packaging/macports/rebuild_povray.sh --check
 /opt/local/bin/port -D packaging/macports/ports/graphics/povray lint
 ```
 
-After the Mac installation succeeds, sphere visual inspection and the beads
-and project 1/120/240 checks remain a later Mac validation task. Do not run a
-second repository-writing Mac session while the PC owns it. The independent
-[next repository task](../../SESSION_HANDOFF.md#next-task) is on PC/WSL.
+The installed sphere has now passed visual inspection. Beads and project
+1/120/240 checks remain the [next Mac task](../../SESSION_HANDOFF.md#next-task),
+with OpenEXR restoration already verified in R157. The user clarified that the PC did not start;
+no PC ownership should be inferred from the earlier prepared handoff. The
+current notes are included in R158's explicitly authorized publication before
+a fresh Mac chat; actual delivery is reported separately from this document.

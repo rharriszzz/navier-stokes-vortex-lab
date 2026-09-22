@@ -4284,3 +4284,235 @@ the copied upstream patch files' context-line spaces and tab indentation.
 These are byte-identical patch inputs, not new shell/documentation whitespace
 errors. Preserved their bytes; the scoped check excluding only the three
 vendored patch files passed. No installation/build was attempted by this check.
+
+## R147 — 2026-09-21 — Choose when to capture session status
+
+**User request:** “I will start the build, and let you know once the pc has
+transferred back to you.  Do you want me to do a /status now, or later?”
+
+**Scope/outcome:** Recommended a fresh Mac status snapshot when resuming after
+the expected return, together with PC release/commit and build result. Official
+Codex documentation was checked; no repository edit was made while release was
+presumed effective. This and R148–R154 are recorded now after R155 clarified
+that the PC never started. No private session files were inspected.
+
+## R148 — 2026-09-21 — Report OpenEXR build conflict
+
+**User-supplied output:**
+
+```text
+Error: povray cannot be built while openexr is active.
+Error: Please forcibly deactivate openexr, e.g. by running:
+Error:
+Error:     sudo port -f deactivate openexr
+```
+
+**Scope/outcome:** Read-only diagnosis of the stopped user-managed build.
+The inherited MacPorts recipe explicitly declares a build conflict with
+`openexr` and depends on `openexr2`. Existing installed dependents include
+ImageMagick, opencv4 and py310-opencv4. Explained temporary deactivation versus
+uninstallation and the need to reactivate afterward; no agent package change
+or repository edit ran. The launcher preflight had not caught this conflict.
+
+## R149 — 2026-09-21 — Explain the already-performed deactivation
+
+**User request:** “I did it, I just was wondering if you can explain it to me.”
+
+**Scope/outcome:** User reports performing deactivation, requests explanation
+only. Confirmed `openexr` inactive and `openexr2` active; the new retry log had
+reached Building povray. Explained the build-only conflict and potential impact
+on dependent applications. The launcher does not restore OpenEXR automatically;
+recommended `sudo port activate openexr` after the build finishes. No automatic
+activation, rebuild or repository edits were performed.
+
+## R150 — 2026-09-21 — Report successful installation and sphere smoke test
+
+**User request/report:** “that was quick.  it said: The following ports are currently installed:
+  povray @3.7.0.8_5
+  povray @3.7.0.8_6 (active)
+-pipe -Wno-multichar -Wno-write-strings -pipe -I/opt/local/libexec/boost/1.76/include -Os -std=c++11 -fno-fast-math -stdlib=libc++ -isysroot/Library/Developer/CommandLineTools/SDKs/MacOSX26.sdk -arch arm64 -D_THREAD_SAFE
+INSTALLATION COMPLETE: POV-Ray 3.7.0.8_6, conservative math.
+Rebuild succeeded; sphere intersections passed. Inspect: /Users/rharris/Library/Logs/navier-stokes-vortex-lab/povray-rebuild/run.DQa0eT/sphere.png”
+
+**Scope/outcome:** Verified active revision 6 and inspected the named PNG: a
+visible red sphere appears on its light background. The launcher's saved status
+confirms sphere intersections passed; its `visual-inspection-pending` text was
+not rewritten, but visual inspection subsequently passed in this conversation.
+Effective flags show `-Os -fno-fast-math`, not the intended `-O2`; no script or
+recipe adjustment was made. This verifies the installed sphere case, not all
+renderer features, project frames or the exact compilation history.
+
+## R151 — 2026-09-21 — Question whether the build was only a relink
+
+**User statement:** “it was just a relink”
+
+**Scope/outcome:** Inspected saved phase-level build logs. The first attempt
+fetched/extracted/patched source, then stopped at the OpenEXR configure gate;
+the retry reported configure/build/staging/installation. Those phase labels do
+not establish which source files compiled. MacPorts cleaned its detailed
+`main.log`; no retained compiler-command record was found. Initial assistant
+inference of full recompilation was too strong and was subsequently corrected.
+
+## R152 — 2026-09-21 — Explain the remembered slow compilation
+
+**User statement:** “at least one of the files is very slow.  it could not
+have recompiled that file in the time available.”
+
+**Scope/outcome:** Read-only check of retained log timestamps: successful
+`build.log` creation 21:27:15 EDT and modification 21:28:36 EDT span 81 seconds;
+this is not per-source compiler timing. Confirmed the detailed MacPorts log is
+absent. No full-recompile or relink-only conclusion is supported by that timing.
+
+## R153 — 2026-09-21 — Clarify that the slow operation was compilation
+
+**User statement:** “to compile.”
+
+**Scope/outcome:** Clarification of R152, not a new execution task. Acknowledged
+that the user remembers a slow source compilation and that the exact amount
+recompiled is unverified. The working installed sphere result is a separate,
+observed fact. No new build or repository edit ran.
+
+## R154 — 2026-09-21 — Accept the result and leave a future-session note
+
+**User request:** “that's good enough for me.  You can write a note to a later
+reincarnation of yourself, if you think that more things should be checked.
+But the slow one was a particularly large cpp compile, maybe that one was not
+recompiled, or does not matter?”
+
+**Scope/outcome:** Accept the current repair provisionally; do not rebuild
+merely to settle timing. Earlier causal testing isolates the camera-default
+failure to `parse.cpp`; it does not identify the remembered slow file or prove
+that every other object is unaffected. Existing records do not identify that
+file. Prepared a note in conversation: record revision 6/sphere pass, effective
+flags and compilation uncertainty; later check beads/project 1/120/240 and
+OpenEXR restoration; retain verbose logs only if another build is needed.
+Repository recording was deferred because PC ownership was presumed, and is
+now permitted by R155. No extra renderer or compiler workload ran.
+
+## R155 — 2026-09-21 — Clarify that Mac still leads; PC never started
+
+**User request:** “I have not started work on the PC, you still have the lead.”
+
+**Scope/status:** Explicit current ownership clarification supersedes the
+unreceived PC transfer. Mac fire.lan retains ownership and may record R154's
+future-session note and the deferred conversation/results. Read-only identity,
+branch/upstream and stash checks passed; clean fast-forward pull was already
+up to date at `4101af9be5cc1987195668f88d4cc20320ddfa9e`, equal to origin/main.
+No incoming PC changes were found; absence of PC work is user-confirmed, not
+inferred from Git. Metadata-only task: no new build/render, package change or
+movie. No new commit/push requested by this clarification. In progress.
+
+## R156 — 2026-09-21 — Recommend next session, model and platform
+
+**User request:** “Is another session within your scope, or do you recommend
+I switch to a different model or platform?”
+
+**Scope/status:** Recommendation during R155 metadata work, not authorization
+to launch another session, render, change models or transfer ownership. Use
+OpenAI Docs to check current guidance, then recommend a concrete next bounded
+step. Finish the ownership/build note already requested. In progress.
+
+**R155/R156 outcome/files/checks/next — 2026-09-21 (UTC 2026-09-22):**
+Complete metadata/recommendation step. Recorded deferred supplied messages
+R147–R154 after the explicit user clarification, restored Mac ownership in
+the handoff and saved the future-session note. Prior handoff commit `4101af9`
+remains published history, but its unreceived PC transfer is superseded; no
+remote work or transfer back was fabricated. Changed only REQUEST_LOG.md,
+WORK_SESSIONS.md, SESSION_HANDOFF.md, STATUS.md,
+docs/rendering/POVRAY_MAC_BUILD_DIAGNOSIS.md and packaging/macports/README.md.
+No script, recipe, source, captured evidence or installed package was changed.
+
+Read-only checks confirm active POV-Ray revision 6, inactive revision 5,
+active `openexr2`, and still-inactive `openexr`; binary/sphere/build-log SHA-256
+bindings are in the handoff. Earlier visible-sphere inspection is reused,
+not a new render. Metadata checks passed: whitespace, append-only prior log
+bytes, 156 unique request IDs and 57 local documentation targets. Final check
+after this append follows. No compiler/render/trajectory/encode, physical/FEM,
+package activation, broad test suite, model switch or new session ran.
+
+Recommendation: stay on Mac for the remaining installation-specific checks;
+this session can perform the next bounded step, and a new session is optional.
+Luna/medium is sufficient if changing models to conserve usage; current official
+model/CLI docs were searched/opened using OpenAI Docs, without account-specific
+availability claims. The skill informed the model recommendation, not any code
+change. Next task: confirm OpenEXR restoration status, validate saved trajectory
+read-only, render beads and project 1/120/240 with the installed binary under
+the recorded bounds, then stop before a movie/new build. Use Astra/high only
+for a new failure requiring build/model/format decisions; do not escalate or
+rebuild merely to settle accepted historical compilation uncertainty.
+
+These notes are local/uncommitted: R155/R156 did not request another commit/push.
+Reconcile them under explicit publication authorization before a future clean
+Continue start or handoff. Mac retains ownership; do not start overlapping PC
+work. The earlier R141 publication authority was already used for its delivery.
+
+## R157 — 2026-09-21 — Report OpenEXR reactivation
+
+**User-supplied command/output:**
+
+```text
+sudo port -f activate openexr
+The following versions of openexr are currently installed:
+ 1)   openexr @2.3.0_2
+ 2)   openexr @3.4.15_0
+Enter a number to select an option: 2
+--->  Computing dependencies for openexr
+--->  Activating openexr @3.4.15_0
+--->  Cleaning openexr
+```
+
+**Scope/status:** Record the user's completed package action and verify its
+state read-only. Mac fire.lan retains ownership; main tracks origin/main,
+stashes empty, and the six dirty Markdown files are the known R147–R156 notes.
+No new installation, rendering or publication authorization inferred. In progress.
+
+**R157 outcome/files/checks/next:** Complete: read-only `port installed` confirms
+openexr 3.4.15_0, openexr2 2.5.10_0 and povray 3.7.0.8_6 all active. Recorded
+the restoration in REQUEST_LOG.md, WORK_SESSIONS.md, SESSION_HANDOFF.md,
+STATUS.md, docs/rendering/POVRAY_MAC_BUILD_DIAGNOSIS.md and
+packaging/macports/README.md. Whitespace, published log-prefix preservation and
+157 unique request-ID checks passed. No agent package mutation, build/render,
+movie, broad test, commit or push ran. Mac retains ownership; metadata remains
+local/uncommitted. Next: bounded installed beads/project 1/120/240 validation;
+OpenEXR restoration is no longer outstanding.
+
+## R158 — 2026-09-21 — Publish notes before a fresh chat
+
+**User request:** “Should I do a /new for better performance?  Also, I want
+you to add commit and push now, before I do the /new”
+
+**Scope/status:** Explicitly authorizes staging, committing and pushing the
+six known pending metadata documents plus this request/result, before the user
+starts a fresh chat. Explain `/new` using current official documentation;
+recommend a clean task boundary, not a guaranteed speedup. Mac fire.lan retains
+ownership, main tracks origin/main, stashes empty. Fresh fetch confirms HEAD
+and origin/main still equal `4101af9`; no pull over known dirty notes. No new
+renderer, build, package action, model switch or session launch requested.
+The earlier pending-publication restriction is now resolved. In progress.
+
+**R158 outcome/files/checks/next — 2026-09-21 (UTC 2026-09-22):**
+Prepared the authorized publication of the six known metadata documents:
+REQUEST_LOG.md, WORK_SESSIONS.md, SESSION_HANDOFF.md, STATUS.md,
+docs/rendering/POVRAY_MAC_BUILD_DIAGNOSIS.md and packaging/macports/README.md.
+This preserves the installed revision-6/sphere result, compilation uncertainty,
+effective `-Os -fno-fast-math` flags, confirmed OpenEXR restoration and explicit
+Mac ownership. Updated current pages so the next chat is not told that notes
+still lack publication authorization or that PC owns the repository.
+
+Checks passed: reviewed scoped diff, whitespace, append-only published log
+prefixes, 158 unique request IDs and 57 local documentation targets. Fresh
+fetch established no upstream changes before publication. No compiler/render,
+trajectory/movie, package change, broad test suite, model switch or session
+launch ran. All commands exited; no workload remains. Staged/publication checks
+follow; actual delivery hash/result is reported after push, not invented here.
+
+OpenAI Docs was used to search/open official `/new` and project-continuity
+guidance. It confirms a fresh chat, not a guaranteed performance improvement.
+Recommend `/new` at this completed checkpoint because the relevant state is now
+in repository notes; no speed or cost reduction was measured or promised.
+Preserve the final completion/“worked for” output, then use `/new` and `/status`
+per the existing reporting procedure. Stay on Mac; Luna/medium remains suitable
+for the bounded installed beads/project 1/120/240 check when the user next says
+Continue. Stop on missing input, timeout or invisible geometry and before a new
+build/movie. Mac retains ownership; successful publication ends this agent turn
+without a post-push edit. A publication failure leaves delivery pending here.
