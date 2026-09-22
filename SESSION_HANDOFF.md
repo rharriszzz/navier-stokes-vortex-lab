@@ -1,14 +1,14 @@
 # Current session handoff
 
-Last updated 2026-09-21 (America/New_York) for R165–R166.
+Last updated 2026-09-22 (America/New_York) for R167.
 **PC/WSL `daisy` owns the repository.** R161's published Mac release and R162's
 receipt completed the transfer; R164 completion is published in `97d9fcf`.
-R165 reviewed the plan and recommends switching to **GPT-5.6 Luna / medium**
-for the [single next task](#next-task): one bounded PC visualization preview.
-No model switch or preview has run. R165 authorizes publication of these
-instructions before the user changes models. R166 confirms no return to the
-Mac is needed and fresh fetch found no incoming commits. Delivery is reported in Git
-history and the final response, with no post-push edit.
+R167 passed the saved-data gate for the bounded PC visualization preview, then
+stopped when POV-Ray 3.7.0.10.unofficial segfaulted while parsing the first
+frame before producing a PNG. No sequence render, encode or ffprobe check ran.
+The task is interrupted at an unresolved renderer/build boundary; GPT-6
+Astra/high is recommended for the next bounded investigation. R166 confirms
+no return to the Mac is needed and fresh fetch found no incoming commits.
 
 The Mac renderer repair is complete historical evidence, not a pending task.
 The user ran the [MacPorts launcher](packaging/macports/README.md): revision 6
@@ -72,8 +72,8 @@ and physical-work limits remain unchanged.
 | Starting state | R165 started clean at `97d9fcf`; fresh fetch confirmed HEAD = origin/main; stashes empty. |
 | Interpreter | `/home/rharris/git/navier-stokes-vortex-lab/.venv/bin/python`, CPython 3.12.14 with NumPy 2.5.3 |
 | Other owner/process | Mac `fire.lan` released in the published R161 handoff; no PC child process remains. |
-| Task processes | R165 is a plan/instruction review; no project workload or child process was launched. |
-| Delivery state | R164 completion published as `97d9fcf`; R165 instructions prepared for authorized commit/push. |
+| Task processes | R167 POV-Ray child exited after a segmentation fault; no task child remains. |
+| Delivery state | R167 start publication is `e21725b`; interruption records await scoped publication. |
 
 ## Current result and limits
 
@@ -204,41 +204,34 @@ agent-side POV-Ray backtraces are unavailable.
 
 ## Next task
 
-After switching to **GPT-5.6 Luna / medium**, say **Continue** on PC/WSL `daisy`.
-Follow the session protocol, publish the start record, then complete one
-bounded illustrative preview using the existing PC data. This task is selected
-by R165; it has not yet run. No further task-selection question is needed.
+After switching to **GPT-6 Astra / high**, say **Continue** on PC/WSL `daisy`.
+Investigate the R167 PC POV-Ray segmentation fault with one fresh, bounded
+renderer/build comparison. This is an unresolved renderer/build decision, so
+do not retry the full preview, change scene semantics, regenerate trajectories,
+encode a movie or alter packages until the comparison establishes a safe
+direction.
 
-1. Activate `.venv` (Python 3.12.14) and confirm POV-Ray, GNU `timeout`, ffmpeg
-   and ffprobe. Run `python check_trajectories.py positions --frames 450
-   --beads 128` with a 30-second bound. Require a pass and observed motion;
-   preserve all inputs. If the inventory differs, report it and stop rather
-   than silently regenerating or adopting the Mac's 240/500 counts.
-2. Create a fresh local output directory with `mktemp -d`. Render unchanged
-   `fluid.pov` frames 1, 225 and 450 at 320x180, two threads, headless, with
-   antialiasing/no jitter and a 30-second bound per frame. Use the animation
-   range `+KFI1 +KFF450 +KI0 +KF1` and select each frame with `+SF`/`+EF`.
-   Require successful exit, PNG output, nonzero geometry intersections and
-   visual inspection of all three separated frames before proceeding.
-3. Into a separate empty subdirectory render contiguous frames 1–30 with the
-   same settings (`+SF1 +EF30`), bounded to 120 seconds for the sequence.
-   Require exactly 30 numbered PNGs; inspect frames 1, 15 and 30. Encode only
-   this sequence as H.264/yuv420p, 320x180, 30 fps, using ffmpeg with two
-   threads, no overwrite, and a 30-second bound. Verify with ffprobe (10-second
-   bound): 30 decoded frames, 30 fps, 1-second duration, H.264, yuv420p, 320x180.
-4. Record commands, checker result, visual observations, ffprobe metadata and
-   output path; keep generated data out of Git. Label the preview as prescribed
-   kinematic motion. Publish the scoped completion and stop for user viewing.
+1. Activate `.venv`, confirm the existing POV-Ray binary and Linux tools, and
+   preserve the R167 input checker result. Inspect the saved R167 log and exact
+   command. Keep all outputs in a fresh `/tmp` directory.
+2. Run one minimal comparison that distinguishes parser/scene failure from
+   renderer/build failure, such as an unchanged centered sphere and then one
+   unchanged project frame, each at a small resolution with `-d`, one thread,
+   no jitter and a 30-second bound. Require successful exit, PNG output and
+   nonzero geometry intersections before drawing conclusions.
+3. If the minimal comparison fails or remains unexplained, stop and record the
+   evidence; do not retry the 30-frame preview. If it passes, inspect the
+   output and stop for a user/model decision before changing the bounded
+   preview plan.
+4. Record commands, exact exit status, intersection statistics, visual result,
+   changed files, skipped work and one next task. Keep trajectory/scene/package
+   files unchanged. Recommend Luna/medium only after the renderer decision is
+   settled; otherwise keep Astra/high for the unresolved comparison.
 
-Use Linux `timeout`; the existing Mac three-frame wrapper requires `gtimeout`
-and hard-codes a different inventory. Avoid the broad default render/encode
-scripts for this task: they can regenerate missing data or mix existing PNGs.
-Do not modify trajectories, scene semantics, packages, or physical/FEM work.
-Stop on missing inputs/tools, validation failure, timeout, invisible geometry
-or unexplained resource failure; ensure this task's children have exited.
-Recommend **GPT-6 Astra / high** for an unresolved build, format, numerical or
-visibility decision. Understood command-wrapper errors can be repaired within
-the existing bounds; do not enlarge a failed workload.
+Use Linux `timeout`; do not use the broad render/encode scripts. Stop on
+missing tools, timeout, invisible geometry, segmentation fault or unexplained
+resource failure; ensure this task's children have exited. Do not enlarge a
+failed workload.
 
 Model choice is task-fit judgment informed by official
 [Luna](https://developers.openai.com/api/docs/models/gpt-5.6-luna) and

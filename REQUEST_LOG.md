@@ -4744,3 +4744,15 @@ inventory, render separated frames 1/225/450, render frames 1–30, encode the
 semantics; keep generated outputs outside Git. Stop on missing tools, checker
 failure, timeout, invisible geometry, unexplained resource failure or format
 ambiguity.
+**R167 interruption/outcome:** The repository-local Python 3.12.14 checker
+passed all 450 frames with 128 beads/frame, observed motion, radius extrema
+0.0167678938797..0.735026978265 and z extrema -0.98..0.98. POV-Ray
+`3.7.0.10.unofficial` then segfaulted while parsing the first requested
+320x180 frame (`+KFI1 +KFF450 +KI0 +KF1 +SF1 +EF1 +A0.2 -J +WT2`) before
+writing a PNG; the log and `.pov-state` remain in disposable
+`/tmp/r167-preview-LKKwQU/`. No sequence render, visual inspection, encode or
+ffprobe check ran. The child exited and no POV-Ray process remains. The task is
+interrupted at the renderer/build failure boundary; inputs and source files
+were unchanged. Next: GPT-6 Astra/high should investigate this unresolved PC
+POV-Ray failure with a fresh bounded comparison and stop before adopting any
+scene or trajectory change.

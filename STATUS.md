@@ -1,13 +1,18 @@
 # Project status: physical preparation and a realistic movie
 
-## Current PC plan and completed Mac rendering checkpoint — 2026-09-21
+## Current PC plan and completed Mac rendering checkpoint — 2026-09-22
 
-R165 selected a [bounded PC preview](SESSION_HANDOFF.md#next-task) for
-GPT-5.6 Luna/medium: validate the existing 450-frame/128-bead PC inventory,
-inspect separated renders, then render and verify a 30-frame, one-second
-320x180 H.264 preview. This is planned, not executed. PC/WSL `daisy` owns the
-repository; R164 completion is published as `97d9fcf`. The PC inventory differs
-from the previously validated Mac data and must pass its own saved-data check.
+R167 validated the existing 450-frame/128-bead PC inventory with the
+repository-local Python 3.12.14 checker, including observed motion and finite
+extrema. The first requested POV-Ray 3.7.0.10.unofficial 320x180 render
+segfaulted during parsing before producing a PNG, so separated-frame, sequence,
+visual, encode and ffprobe gates did not run. The disposable failure log is
+`/tmp/r167-preview-LKKwQU/separated/frame001.log`; no child remains and no
+source/input changed. GPT-6 Astra/high is recommended for a bounded
+renderer/build investigation. PC/WSL `daisy` owns the repository; R164
+completion is published as `97d9fcf`. The PC inventory differs
+from the previously validated Mac data; its saved-data check passed before the
+renderer failure.
 
 R136–R138 identified the background-only-render cause: the installed MacPorts
 POV-Ray fast-math build breaks camera-default handling. A same-release build
