@@ -1,0 +1,375 @@
+Rendering frames 1, 120 and 240 at 320x180.
+Each frame has a 30s bound.
+--- frame 0001 ---
+Persistence of Vision(tm) Ray Tracer Version 3.7.0.8.unofficial (g++ 21.0.0 @
+ aarch64-apple-darwin25.6.0)
+This is an unofficial version compiled by:
+ R136 isolated math comparison
+ The POV-Ray Team is not responsible for supporting this version.
+
+POV-Ray is based on DKBTrace 2.12 by David K. Buck & Aaron A. Collins
+Copyright 1991-2013 Persistence of Vision Raytracer Pty. Ltd.
+
+Primary POV-Ray 3.7 Architects/Developers: (Alphabetically)
+  Chris Cason         Thorsten Froehlich  Christoph Lipka   
+
+With Assistance From: (Alphabetically)
+  Nicolas Calimet     Jerome Grimbert     James Holsenback    Christoph Hormann 
+  Nathan Kopp         Juha Nieminen     
+
+Past Contributors: (Alphabetically)
+  Steve Anger         Eric Barish         Dieter Bayer        David K. Buck     
+  Nicolas Calimet     Chris Cason         Aaron A. Collins    Chris Dailey      
+  Steve Demlow        Andreas Dilger      Alexander Enzmann   Dan Farmer        
+  Thorsten Froehlich  Mark Gordon         James Holsenback    Christoph Hormann 
+  Mike Hough          Chris Huff          Kari Kivisalo       Nathan Kopp       
+  Lutz Kretzschmar    Christoph Lipka     Jochen Lippert      Pascal Massimino  
+  Jim McElhiney       Douglas Muir        Juha Nieminen       Ron Parker        
+  Bill Pulver         Eduard Schwan       Wlodzimierz Skiba   Robert Skinner    
+  Yvo Smellenbergh    Zsolt Szalavari     Scott Taylor        Massimo Valentini 
+  Timothy Wegner      Drew Wells          Chris Young       
+
+Other contributors are listed in the documentation.
+
+Support libraries used by POV-Ray:
+  ZLib 1.3.2, Copyright 1995-2012 Jean-loup Gailly and Mark Adler
+  LibPNG 1.6.58, Copyright 1998-2012 Glenn Randers-Pehrson
+  LibJPEG 80, Copyright 1991-2013 Thomas G. Lane, Guido Vollbeding
+  LibTIFF 4.7.2, Copyright 1988-1997 Sam Leffler, 1991-1997 SGI
+  Boost 1.76, http://www.boost.org/
+  OpenEXR 2.5.10 and IlmBase 2.5.10, Copyright (c) 2002-2011 Industrial Light &
+ Magic.
+
+
+Rendering frame 1 of 1
+
+Rendering frame 1 of 1
+
+
+Parser Options
+  Input file: fluid.pov
+  Remove bounds........On 
+  Split unions.........Off
+  Library paths:
+    /opt/local/share/povray-3.7
+    /opt/local/share/povray-3.7/ini
+    /opt/local/share/povray-3.7/include
+Animation Options
+  Initial Frame:        1  Final Frame:      240
+  Frame Step:           1
+  Initial Clock:    0.000  Final Clock:    1.000
+  Cyclic Animation.....Off  Field render.........Off  Odd lines/frames.....Off
+Image Output Options
+  Image resolution.....320 by 180 (rows 1 to 180, columns 1 to 320).
+  Output file........../tmp/povray-renderer-comparison.1qNoIy/project-frames/fra
+me001.png, 24 bpp PNG
+  Dithering............Off
+  Graphic display......Off
+  Mosaic preview.......Off
+  Continued trace......Off
+Information Output Options
+  All Streams to console..........On 
+  Debug Stream to console.........On 
+  Fatal Stream to console.........On 
+  Render Stream to console........On 
+  Statistics Stream to console....On 
+  Warning Stream to console.......On 
+==== [Parsing...] ==========================================================
+----------------------------------------------------------------------------
+Parser Statistics
+----------------------------------------------------------------------------
+Finite Objects:          501
+Infinite Objects:          1
+Light Sources:             4
+Total:                   506
+----------------------------------------------------------------------------
+Parser Time
+  Parse Time:       0 hours  0 minutes  0 seconds (0.005 seconds)
+              using 1 thread(s) with 0.004 CPU-seconds total
+  Bounding Time:    0 hours  0 minutes  0 seconds (0.000 seconds)
+              using 1 thread(s) with 0.000 CPU-seconds total
+----------------------------------------------------------------------------
+Render Options
+  Quality:  9
+  Bounding boxes.......On   Bounding threshold: 3
+  Antialiasing.........On  (Method 1, Threshold 0.200, Depth 3, Jitter Off,
+ Gamma 2.50)
+==== [Rendering...] ========================================================
+----------------------------------------------------------------------------
+Render Statistics
+Image Resolution 320 x 180
+----------------------------------------------------------------------------
+Pixels:            61320   Samples:           72504   Smpls/Pxl: 1.18
+Rays:            1874399   Saved:            421285   Max Level: 12/12
+----------------------------------------------------------------------------
+Ray->Shape Intersection          Tests       Succeeded  Percentage
+----------------------------------------------------------------------------
+Box                           42010326        33236553     79.12
+CSG Intersection              21005163        21005163    100.00
+Plane                         34058529         1234221      3.62
+Sphere                           41731           19991     47.90
+Bounding Box                 439536664       121030646     27.54
+----------------------------------------------------------------------------
+Shadow Ray Tests:          32627359   Succeeded:              19995792
+Reflected Rays:              987464   Total Internal:           234353
+Refracted Rays:              753111
+----------------------------------------------------------------------------
+----------------------------------------------------------------------------
+Render Time:
+  Photon Time:      No photons
+  Radiosity Time:   No radiosity
+  Trace Time:       0 hours  0 minutes  2 seconds (2.635 seconds)
+              using 2 thread(s) with 5.263 CPU-seconds total
+POV-Ray finished
+
+status: 0
+/tmp/povray-renderer-comparison.1qNoIy/project-frames/frame001.png: PNG image data, 320 x 180, 8-bit/color RGB, non-interlaced
+--- frame 0120 ---
+Persistence of Vision(tm) Ray Tracer Version 3.7.0.8.unofficial (g++ 21.0.0 @
+ aarch64-apple-darwin25.6.0)
+This is an unofficial version compiled by:
+ R136 isolated math comparison
+ The POV-Ray Team is not responsible for supporting this version.
+
+POV-Ray is based on DKBTrace 2.12 by David K. Buck & Aaron A. Collins
+Copyright 1991-2013 Persistence of Vision Raytracer Pty. Ltd.
+
+Primary POV-Ray 3.7 Architects/Developers: (Alphabetically)
+  Chris Cason         Thorsten Froehlich  Christoph Lipka   
+
+With Assistance From: (Alphabetically)
+  Nicolas Calimet     Jerome Grimbert     James Holsenback    Christoph Hormann 
+  Nathan Kopp         Juha Nieminen     
+
+Past Contributors: (Alphabetically)
+  Steve Anger         Eric Barish         Dieter Bayer        David K. Buck     
+  Nicolas Calimet     Chris Cason         Aaron A. Collins    Chris Dailey      
+  Steve Demlow        Andreas Dilger      Alexander Enzmann   Dan Farmer        
+  Thorsten Froehlich  Mark Gordon         James Holsenback    Christoph Hormann 
+  Mike Hough          Chris Huff          Kari Kivisalo       Nathan Kopp       
+  Lutz Kretzschmar    Christoph Lipka     Jochen Lippert      Pascal Massimino  
+  Jim McElhiney       Douglas Muir        Juha Nieminen       Ron Parker        
+  Bill Pulver         Eduard Schwan       Wlodzimierz Skiba   Robert Skinner    
+  Yvo Smellenbergh    Zsolt Szalavari     Scott Taylor        Massimo Valentini 
+  Timothy Wegner      Drew Wells          Chris Young       
+
+Other contributors are listed in the documentation.
+
+Support libraries used by POV-Ray:
+  ZLib 1.3.2, Copyright 1995-2012 Jean-loup Gailly and Mark Adler
+  LibPNG 1.6.58, Copyright 1998-2012 Glenn Randers-Pehrson
+  LibJPEG 80, Copyright 1991-2013 Thomas G. Lane, Guido Vollbeding
+  LibTIFF 4.7.2, Copyright 1988-1997 Sam Leffler, 1991-1997 SGI
+  Boost 1.76, http://www.boost.org/
+  OpenEXR 2.5.10 and IlmBase 2.5.10, Copyright (c) 2002-2011 Industrial Light &
+ Magic.
+
+
+Rendering frame 1 of 1
+
+Rendering frame 1 of 1
+
+
+Parser Options
+  Input file: fluid.pov
+  Remove bounds........On 
+  Split unions.........Off
+  Library paths:
+    /opt/local/share/povray-3.7
+    /opt/local/share/povray-3.7/ini
+    /opt/local/share/povray-3.7/include
+Animation Options
+  Initial Frame:        1  Final Frame:      240
+  Frame Step:           1
+  Initial Clock:    0.000  Final Clock:    1.000
+  Cyclic Animation.....Off  Field render.........Off  Odd lines/frames.....Off
+Image Output Options
+  Image resolution.....320 by 180 (rows 1 to 180, columns 1 to 320).
+  Output file........../tmp/povray-renderer-comparison.1qNoIy/project-frames/fra
+me120.png, 24 bpp PNG
+  Dithering............Off
+  Graphic display......Off
+  Mosaic preview.......Off
+  Continued trace......Off
+Information Output Options
+  All Streams to console..........On 
+  Debug Stream to console.........On 
+  Fatal Stream to console.........On 
+  Render Stream to console........On 
+  Statistics Stream to console....On 
+  Warning Stream to console.......On 
+==== [Parsing...] ==========================================================
+----------------------------------------------------------------------------
+Parser Statistics
+----------------------------------------------------------------------------
+Finite Objects:          501
+Infinite Objects:          1
+Light Sources:             4
+Total:                   506
+----------------------------------------------------------------------------
+Parser Time
+  Parse Time:       0 hours  0 minutes  0 seconds (0.005 seconds)
+              using 1 thread(s) with 0.003 CPU-seconds total
+  Bounding Time:    0 hours  0 minutes  0 seconds (0.000 seconds)
+              using 1 thread(s) with 0.000 CPU-seconds total
+----------------------------------------------------------------------------
+Render Options
+  Quality:  9
+  Bounding boxes.......On   Bounding threshold: 3
+  Antialiasing.........On  (Method 1, Threshold 0.200, Depth 3, Jitter Off,
+ Gamma 2.50)
+==== [Rendering...] ========================================================
+----------------------------------------------------------------------------
+Render Statistics
+Image Resolution 320 x 180
+----------------------------------------------------------------------------
+Pixels:            61320   Samples:           69093   Smpls/Pxl: 1.13
+Rays:            1812481   Saved:            405717   Max Level: 12/12
+----------------------------------------------------------------------------
+Ray->Shape Intersection          Tests       Succeeded  Percentage
+----------------------------------------------------------------------------
+Box                           38699372        30476750     78.75
+CSG Intersection              19349686        19349686    100.00
+Plane                         31592973         1139744      3.61
+Sphere                           40154           19121     47.62
+Bounding Box                 306101130       118076693     38.57
+----------------------------------------------------------------------------
+Shadow Ray Tests:          30207836   Succeeded:              18372008
+Reflected Rays:              956956   Total Internal:           231844
+Refracted Rays:              725112
+----------------------------------------------------------------------------
+----------------------------------------------------------------------------
+Render Time:
+  Photon Time:      No photons
+  Radiosity Time:   No radiosity
+  Trace Time:       0 hours  0 minutes  2 seconds (2.291 seconds)
+              using 2 thread(s) with 4.574 CPU-seconds total
+POV-Ray finished
+
+status: 0
+/tmp/povray-renderer-comparison.1qNoIy/project-frames/frame120.png: PNG image data, 320 x 180, 8-bit/color RGB, non-interlaced
+--- frame 0240 ---
+Persistence of Vision(tm) Ray Tracer Version 3.7.0.8.unofficial (g++ 21.0.0 @
+ aarch64-apple-darwin25.6.0)
+This is an unofficial version compiled by:
+ R136 isolated math comparison
+ The POV-Ray Team is not responsible for supporting this version.
+
+POV-Ray is based on DKBTrace 2.12 by David K. Buck & Aaron A. Collins
+Copyright 1991-2013 Persistence of Vision Raytracer Pty. Ltd.
+
+Primary POV-Ray 3.7 Architects/Developers: (Alphabetically)
+  Chris Cason         Thorsten Froehlich  Christoph Lipka   
+
+With Assistance From: (Alphabetically)
+  Nicolas Calimet     Jerome Grimbert     James Holsenback    Christoph Hormann 
+  Nathan Kopp         Juha Nieminen     
+
+Past Contributors: (Alphabetically)
+  Steve Anger         Eric Barish         Dieter Bayer        David K. Buck     
+  Nicolas Calimet     Chris Cason         Aaron A. Collins    Chris Dailey      
+  Steve Demlow        Andreas Dilger      Alexander Enzmann   Dan Farmer        
+  Thorsten Froehlich  Mark Gordon         James Holsenback    Christoph Hormann 
+  Mike Hough          Chris Huff          Kari Kivisalo       Nathan Kopp       
+  Lutz Kretzschmar    Christoph Lipka     Jochen Lippert      Pascal Massimino  
+  Jim McElhiney       Douglas Muir        Juha Nieminen       Ron Parker        
+  Bill Pulver         Eduard Schwan       Wlodzimierz Skiba   Robert Skinner    
+  Yvo Smellenbergh    Zsolt Szalavari     Scott Taylor        Massimo Valentini 
+  Timothy Wegner      Drew Wells          Chris Young       
+
+Other contributors are listed in the documentation.
+
+Support libraries used by POV-Ray:
+  ZLib 1.3.2, Copyright 1995-2012 Jean-loup Gailly and Mark Adler
+  LibPNG 1.6.58, Copyright 1998-2012 Glenn Randers-Pehrson
+  LibJPEG 80, Copyright 1991-2013 Thomas G. Lane, Guido Vollbeding
+  LibTIFF 4.7.2, Copyright 1988-1997 Sam Leffler, 1991-1997 SGI
+  Boost 1.76, http://www.boost.org/
+  OpenEXR 2.5.10 and IlmBase 2.5.10, Copyright (c) 2002-2011 Industrial Light &
+ Magic.
+
+
+Rendering frame 1 of 1
+
+Rendering frame 1 of 1
+
+
+Parser Options
+  Input file: fluid.pov
+  Remove bounds........On 
+  Split unions.........Off
+  Library paths:
+    /opt/local/share/povray-3.7
+    /opt/local/share/povray-3.7/ini
+    /opt/local/share/povray-3.7/include
+Animation Options
+  Initial Frame:        1  Final Frame:      240
+  Frame Step:           1
+  Initial Clock:    0.000  Final Clock:    1.000
+  Cyclic Animation.....Off  Field render.........Off  Odd lines/frames.....Off
+Image Output Options
+  Image resolution.....320 by 180 (rows 1 to 180, columns 1 to 320).
+  Output file........../tmp/povray-renderer-comparison.1qNoIy/project-frames/fra
+me240.png, 24 bpp PNG
+  Dithering............Off
+  Graphic display......Off
+  Mosaic preview.......Off
+  Continued trace......Off
+Information Output Options
+  All Streams to console..........On 
+  Debug Stream to console.........On 
+  Fatal Stream to console.........On 
+  Render Stream to console........On 
+  Statistics Stream to console....On 
+  Warning Stream to console.......On 
+==== [Parsing...] ==========================================================
+----------------------------------------------------------------------------
+Parser Statistics
+----------------------------------------------------------------------------
+Finite Objects:          501
+Infinite Objects:          1
+Light Sources:             4
+Total:                   506
+----------------------------------------------------------------------------
+Parser Time
+  Parse Time:       0 hours  0 minutes  0 seconds (0.006 seconds)
+              using 1 thread(s) with 0.004 CPU-seconds total
+  Bounding Time:    0 hours  0 minutes  0 seconds (0.000 seconds)
+              using 1 thread(s) with 0.000 CPU-seconds total
+----------------------------------------------------------------------------
+Render Options
+  Quality:  9
+  Bounding boxes.......On   Bounding threshold: 3
+  Antialiasing.........On  (Method 1, Threshold 0.200, Depth 3, Jitter Off,
+ Gamma 2.50)
+==== [Rendering...] ========================================================
+----------------------------------------------------------------------------
+Render Statistics
+Image Resolution 320 x 180
+----------------------------------------------------------------------------
+Pixels:            61320   Samples:           61452   Smpls/Pxl: 1.00
+Rays:            1677099   Saved:            370677   Max Level: 12/12
+----------------------------------------------------------------------------
+Ray->Shape Intersection          Tests       Succeeded  Percentage
+----------------------------------------------------------------------------
+Box                           35392080        27831510     78.64
+CSG Intersection              17696040        17696040    100.00
+Plane                         28947750         1049999      3.63
+Sphere                           37289           17763     47.64
+Bounding Box                 277048380        96658282     34.89
+----------------------------------------------------------------------------
+Shadow Ray Tests:          27662452   Succeeded:              16786158
+Reflected Rays:              891060   Total Internal:           227793
+Refracted Rays:              663267
+----------------------------------------------------------------------------
+----------------------------------------------------------------------------
+Render Time:
+  Photon Time:      No photons
+  Radiosity Time:   No radiosity
+  Trace Time:       0 hours  0 minutes  2 seconds (2.054 seconds)
+              using 2 thread(s) with 4.101 CPU-seconds total
+POV-Ray finished
+
+status: 0
+/tmp/povray-renderer-comparison.1qNoIy/project-frames/frame240.png: PNG image data, 320 x 180, 8-bit/color RGB, non-interlaced
+All three separated frames were rendered: /tmp/povray-renderer-comparison.1qNoIy/project-frames/frame{001,120,240}.png

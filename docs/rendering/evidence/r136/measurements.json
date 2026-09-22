@@ -1,0 +1,472 @@
+{
+  "request_ids": [
+    "R136",
+    "R137",
+    "R138"
+  ],
+  "files": {
+    "macports_binary": {
+      "path": "/opt/local/bin/povray",
+      "sha256": "f27d06ef755508aedf16511667dedd803c94457938783e58dacae8efcda510de"
+    },
+    "source_archive": {
+      "path": "/tmp/povray-build-diagnosis.JO4kJZ/povray-3.7.0.8.tar.gz",
+      "sha256": "e86427f83b9bc356e6694bd053eb23b310aa0f942ac9215860c86f0035865ce2"
+    },
+    "safe_binary": {
+      "path": "/tmp/povray-build-diagnosis.JO4kJZ/povray-safe-math",
+      "sha256": "905b84d24b0705f80cf4e359f7caf64428eb22ceef69e57c8451ed0441a1c26e"
+    },
+    "parser_fast_math_binary": {
+      "path": "/tmp/povray-build-diagnosis.JO4kJZ/povray-parser-fast-math",
+      "sha256": "fdd37a0e0dde89990f5d755bbd712c31d3edefef27a94e5b985c6f0c125e0266"
+    },
+    "beads_source": {
+      "path": "/Users/rharris/git/beads/beads.pov",
+      "sha256": "b131ec6744904aeefb8b946f426fcdfa33870a6eabb9b9692d636a8b828ad7c0"
+    },
+    "beads_reference": {
+      "path": "/Users/rharris/git/beads/beads1.jpg",
+      "sha256": "3d4f784f0906276aa312cdb6d80d414c6611fb785c8528af08de54ef36bfbc18"
+    }
+  },
+  "images": {
+    "installed/beads.png": {
+      "path": "/tmp/povray-renderer-comparison.coqt8f/beads.png",
+      "size": [
+        160,
+        120
+      ],
+      "rgb_extrema": [
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          0
+        ]
+      ],
+      "uniform": true,
+      "sha256": "f90a0dd385f1e09dcc66f83899d917e4f3ff16226f09cfd4e97e17ded3d10998"
+    },
+    "installed/official_torus.png": {
+      "path": "/tmp/povray-renderer-comparison.coqt8f/official_torus.png",
+      "size": [
+        160,
+        120
+      ],
+      "rgb_extrema": [
+        [
+          62,
+          62
+        ],
+        [
+          62,
+          62
+        ],
+        [
+          98,
+          98
+        ]
+      ],
+      "uniform": true,
+      "sha256": "965709a7d88cc25b06ce31eff8509d09ce5500955bf2665a0865ea289ba777d5"
+    },
+    "installed/sphere.png": {
+      "path": "/tmp/povray-renderer-comparison.coqt8f/sphere.png",
+      "size": [
+        160,
+        120
+      ],
+      "rgb_extrema": [
+        [
+          252,
+          252
+        ],
+        [
+          253,
+          253
+        ],
+        [
+          255,
+          255
+        ]
+      ],
+      "uniform": true,
+      "sha256": "b82f8d44f81bcf24bd4b39d2031a4abd151686a9c6ad02d6f3ec3a1f9afd02af"
+    },
+    "installed/sphere_no_bounds.png": {
+      "path": "/tmp/povray-renderer-comparison.coqt8f/sphere_no_bounds.png",
+      "size": [
+        160,
+        120
+      ],
+      "rgb_extrema": [
+        [
+          252,
+          252
+        ],
+        [
+          253,
+          253
+        ],
+        [
+          255,
+          255
+        ]
+      ],
+      "uniform": true,
+      "sha256": "a2c384b4dcca8c690f770fe972483ee56010be82758c3159d0f2f7a774a550e1"
+    },
+    "explicit_installed/explicit_camera.png": {
+      "path": "/tmp/povray-renderer-comparison.7FnBZg/explicit_camera.png",
+      "size": [
+        160,
+        120
+      ],
+      "rgb_extrema": [
+        [
+          89,
+          252
+        ],
+        [
+          0,
+          253
+        ],
+        [
+          0,
+          255
+        ]
+      ],
+      "uniform": false,
+      "sha256": "168ecf22b098fe618b00f37fc87cb15c3d6aaf690adfa48fa3d36522afebaa12"
+    },
+    "safe/beads.png": {
+      "path": "/tmp/povray-renderer-comparison.1qNoIy/beads.png",
+      "size": [
+        160,
+        120
+      ],
+      "rgb_extrema": [
+        [
+          0,
+          255
+        ],
+        [
+          0,
+          255
+        ],
+        [
+          0,
+          255
+        ]
+      ],
+      "uniform": false,
+      "sha256": "c89f0f4842ced17d6a73c1be4b0bc58048a59fe9bdaf2b53435cb85de1c4df72"
+    },
+    "safe/explicit_camera.png": {
+      "path": "/tmp/povray-renderer-comparison.1qNoIy/explicit_camera.png",
+      "size": [
+        160,
+        120
+      ],
+      "rgb_extrema": [
+        [
+          89,
+          252
+        ],
+        [
+          0,
+          253
+        ],
+        [
+          0,
+          255
+        ]
+      ],
+      "uniform": false,
+      "sha256": "aca3be7ba9ae1e8cf454f055c1ec9692cf83f0c5a6e4e69023af42fbf392de96"
+    },
+    "safe/official_torus.png": {
+      "path": "/tmp/povray-renderer-comparison.1qNoIy/official_torus.png",
+      "size": [
+        160,
+        120
+      ],
+      "rgb_extrema": [
+        [
+          0,
+          255
+        ],
+        [
+          0,
+          255
+        ],
+        [
+          0,
+          255
+        ]
+      ],
+      "uniform": false,
+      "sha256": "13404b8543a29bc35a5f1b316a0903e6c85b384498c639240033865b89e62797"
+    },
+    "safe/project-frames/frame001.png": {
+      "path": "/tmp/povray-renderer-comparison.1qNoIy/project-frames/frame001.png",
+      "size": [
+        320,
+        180
+      ],
+      "rgb_extrema": [
+        [
+          94,
+          255
+        ],
+        [
+          115,
+          255
+        ],
+        [
+          125,
+          255
+        ]
+      ],
+      "uniform": false,
+      "sha256": "f925be762fcc62bd18f8d73a8a5a30a2912eb3e88860c676efae67c7e26e03e3"
+    },
+    "safe/project-frames/frame120.png": {
+      "path": "/tmp/povray-renderer-comparison.1qNoIy/project-frames/frame120.png",
+      "size": [
+        320,
+        180
+      ],
+      "rgb_extrema": [
+        [
+          96,
+          255
+        ],
+        [
+          115,
+          255
+        ],
+        [
+          125,
+          255
+        ]
+      ],
+      "uniform": false,
+      "sha256": "3556a246c1f95ed6ba550eb352466778aded7b882ed9cc19605f88e53cd27dc7"
+    },
+    "safe/project-frames/frame240.png": {
+      "path": "/tmp/povray-renderer-comparison.1qNoIy/project-frames/frame240.png",
+      "size": [
+        320,
+        180
+      ],
+      "rgb_extrema": [
+        [
+          97,
+          255
+        ],
+        [
+          115,
+          255
+        ],
+        [
+          125,
+          255
+        ]
+      ],
+      "uniform": false,
+      "sha256": "acbde3d3a8cf7928bcda8e07e5dfe5632d5fca209db34954a0d8e3f4d558d276"
+    },
+    "safe/project001.png": {
+      "path": "/tmp/povray-renderer-comparison.1qNoIy/project001.png",
+      "size": [
+        320,
+        180
+      ],
+      "rgb_extrema": [
+        [
+          94,
+          255
+        ],
+        [
+          115,
+          255
+        ],
+        [
+          125,
+          255
+        ]
+      ],
+      "uniform": false,
+      "sha256": "c71fa9778093d562bd62b8096bbebf5b7deeeca98feaa15509c8e0a41055381e"
+    },
+    "safe/sphere.png": {
+      "path": "/tmp/povray-renderer-comparison.1qNoIy/sphere.png",
+      "size": [
+        160,
+        120
+      ],
+      "rgb_extrema": [
+        [
+          89,
+          252
+        ],
+        [
+          0,
+          253
+        ],
+        [
+          0,
+          255
+        ]
+      ],
+      "uniform": false,
+      "sha256": "1cbacd2693e806ff491bca87f538716ada774a101490238864d26d78a4923b96"
+    },
+    "safe/sphere_no_bounds.png": {
+      "path": "/tmp/povray-renderer-comparison.1qNoIy/sphere_no_bounds.png",
+      "size": [
+        160,
+        120
+      ],
+      "rgb_extrema": [
+        [
+          89,
+          252
+        ],
+        [
+          0,
+          253
+        ],
+        [
+          0,
+          255
+        ]
+      ],
+      "uniform": false,
+      "sha256": "acc2582432f3869d95ae7f7ae7b27cb64e1eb92543e388356f6bcacdea5307cf"
+    },
+    "parser_fast_math/beads.png": {
+      "path": "/tmp/povray-renderer-comparison.88j2uc/beads.png",
+      "size": [
+        160,
+        120
+      ],
+      "rgb_extrema": [
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          0
+        ]
+      ],
+      "uniform": true,
+      "sha256": "7e77f6803159c80b33e632912c28c8c57d12cfee8e2e48f065c97a2bd82615f7"
+    },
+    "parser_fast_math/explicit_camera.png": {
+      "path": "/tmp/povray-renderer-comparison.88j2uc/explicit_camera.png",
+      "size": [
+        160,
+        120
+      ],
+      "rgb_extrema": [
+        [
+          89,
+          252
+        ],
+        [
+          0,
+          253
+        ],
+        [
+          0,
+          255
+        ]
+      ],
+      "uniform": false,
+      "sha256": "d50c81a39edc34fafcfbe2bb31f020ccb202fb6578d0ecb4dfd63968cf46337d"
+    },
+    "parser_fast_math/official_torus.png": {
+      "path": "/tmp/povray-renderer-comparison.88j2uc/official_torus.png",
+      "size": [
+        160,
+        120
+      ],
+      "rgb_extrema": [
+        [
+          62,
+          62
+        ],
+        [
+          62,
+          62
+        ],
+        [
+          98,
+          98
+        ]
+      ],
+      "uniform": true,
+      "sha256": "99edddd390952f94041c384445c76e71d24d55fb8c5a9528feb8345100bb3eac"
+    },
+    "parser_fast_math/sphere.png": {
+      "path": "/tmp/povray-renderer-comparison.88j2uc/sphere.png",
+      "size": [
+        160,
+        120
+      ],
+      "rgb_extrema": [
+        [
+          252,
+          252
+        ],
+        [
+          253,
+          253
+        ],
+        [
+          255,
+          255
+        ]
+      ],
+      "uniform": true,
+      "sha256": "a68b6517a1f556fd0f509b334d85a84182a4d831d104697c7fee49f5aa4c8380"
+    },
+    "parser_fast_math/sphere_no_bounds.png": {
+      "path": "/tmp/povray-renderer-comparison.88j2uc/sphere_no_bounds.png",
+      "size": [
+        160,
+        120
+      ],
+      "rgb_extrema": [
+        [
+          252,
+          252
+        ],
+        [
+          253,
+          253
+        ],
+        [
+          255,
+          255
+        ]
+      ],
+      "uniform": true,
+      "sha256": "62ad0468eaf737aec4173423b04acec66dad7b3aa09b99a60c49688659f3131a"
+    }
+  }
+}

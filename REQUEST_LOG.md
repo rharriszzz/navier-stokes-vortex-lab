@@ -4021,3 +4021,87 @@ with bounded external host invocations and establish a visible centered sphere
 before project-frame checks. Preserve trajectory/scene semantics. Stop before
 unsupported installation changes, elevated tracing, unbounded processes, FEM,
 physical or broad benchmarks; no movie until visual gates pass. In progress.
+
+## R137 — 2026-09-21 — Use existing POV-Ray examples and beads
+
+**User request:** “there are many examples on the web, and there is one in my
+repo named "beads"”
+
+**Scope/status:** Steering for active R136: locate and inspect the user's
+`beads` example read-only and use relevant official web examples/source reports
+to distinguish renderer faults from project-scene faults. No edits or workload
+launches in another checkout implied. In progress.
+
+## R138 — 2026-09-21 — Clarify blank output and inspect beads1.jpg
+
+**User request:** “by blank background, do you mean white background?  that
+was intentional.  please look at beads1.jpg as an example of the output of the
+povray program.”
+
+**Scope/status:** Clarify that the failure means no visible geometry, not an
+intentional white background; inspect the supplied local reference
+`../beads/beads1.jpg` and compare it with the fresh R136/R137 render. Continue
+the active renderer diagnosis. The interrupted configure command completed
+successfully, with no renderer/build process left from that command; current
+repository changes belong to active R136–R138. In progress.
+
+**R137/R138 outcome — 2026-09-21:** Read `../beads/beads.pov` and inspected
+`beads.png` and the specifically requested `beads1.jpg`. The reference correctly
+shows a colored bead ring against intentional white. The fresh installed-build
+render was entirely black (all RGB extrema 0), so “blank” meant missing geometry,
+not a complaint about white background. The beads checkout remained clean and
+unchanged. The same scene renders visible geometry using the conservative build.
+
+**R136 outcome/files/checks/next — 2026-09-21 (UTC 2026-09-22):** Complete:
+isolated the blank-render fault to fast-math compilation of POV-Ray's scene
+parser. Installed MacPorts 3.7.0.8_5 (Clang 17, `-ffast-math`) produced no geometry
+for the sphere, beads or official torus; disabling bounding did not help.
+Explicitly specifying camera fields restored the sphere. Built the same
+SHA-verified source release in a fresh temporary directory, with existing
+MacPorts compatibility patches and Apple Clang 21 using `-O2 -fno-fast-math`.
+The unchanged examples then rendered visibly. Recompiled **only parse.cpp** with
+fast-math using that same compiler/build: default-camera scenes failed again,
+while the fully specified camera worked. Restoring conservative flags produced
+a byte-identical working binary. Source inspection explains the affected
+`HUGE_VAL` infinity sentinels used to restore omitted camera defaults; R111's
+missing-angle failure was not proof of invalid scene syntax.
+
+All POV-Ray calls were external host runs with 30-second per-render limits and
+two threads. Prebuild/configure/build limits were 60/120/300 seconds, with
+90-second parser recompiles and 30-second relinks; all exited normally. The
+working temporary binary is `/tmp/povray-build-diagnosis.JO4kJZ/povray-safe-math`,
+SHA-256 `905b84d24b0705f80cf4e359f7caf64428eb22ceef69e57c8451ed0441a1c26e`.
+The installed `/opt/local/bin/povray` and all user configuration remain unchanged.
+No installation, global compiler change or project scene workaround was made.
+
+The existing Python 3.12.13 checker passed 240 saved frames/500 beads, observed
+motion and the recorded bounds. A single project frame passed visual inspection,
+then frames 1, 120 and 240 rendered at 320x180 and were individually inspected:
+tank/tracers are visible and their distribution changes. Trace times were
+2.635/2.291/2.054 seconds, respectively. No trajectory regeneration, movie,
+ffprobe, FEM, physical, elevated tracing, unbounded process or benchmark ran.
+All task processes exited; source and temporary binaries remain local.
+
+Changed files: `diagnose_renderer_external.sh`, two `tests/scenes/*.pov`
+fixtures, `render_three_frames_external.sh` (two-thread default and corrected
+printed three-digit filenames), `docs/rendering/POVRAY_MAC_BUILD_DIAGNOSIS.md`,
+small `docs/rendering/evidence/r136/` logs/images/JSON, `REQUEST_LOG.md`,
+`WORK_SESSIONS.md`, `SESSION_HANDOFF.md`, `STATUS.md`. Checks passed: shell
+syntax, whitespace, append-only log prefixes, unique IDs, evidence JSON,
+three distinct nonuniform frame images and local documentation link targets.
+No unrelated test suite was run for this renderer-only diagnosis.
+
+Unresolved: a durable installation method must be applied; the default MacPorts
+binary still has the fault. Next task: Luna/medium on this Mac uses supported
+MacPorts source-build options and the saved recipe to make conservative math
+durable, preserving configuration and rechecking sphere/beads/three project
+frames. Stop at unsupported package/dependency changes; recommend Astra/high
+only for a new build/compiler ambiguity. Movie work follows as a separate
+bounded task. Scoped completion is prepared for commit/push; actual delivery
+is reported in the final response/Git history, with no post-push log edit.
+
+**R136 final staged-check note:** The first check including newly staged raw
+POV-Ray/compiler logs reported their original trailing spaces/blank EOF lines.
+Those captured bytes are deliberately preserved. The scoped source/documentation
+whitespace check excludes only `docs/rendering/evidence/r136/*.txt`; no renderer
+or test failed, and the logs were not rewritten to hide the formatting warnings.

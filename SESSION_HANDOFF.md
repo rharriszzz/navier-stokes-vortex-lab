@@ -1,29 +1,27 @@
 # Current session handoff
 
-Last updated 2026-09-21 for R134. The missing optional POV-Ray user
-configuration warning is resolved by an empty
-`/Users/rharris/.povray/3.7/povray.conf`; the file was created only after
-confirming that the path did not exist. The externally executed minimal
-reproduction now exits 0 and emits a valid 64x64 PNG without that warning.
-The restricted agent environment still times out before producing a PNG across
-minimal and project variants, while elevated host execution succeeds; this is
-an execution-context difference, not a project-scene or trajectory conclusion.
-Practical supervision and Mac usability requirements are recorded in the
-[policy](docs/realizability/B2_MONITOR_PRACTICAL_SUPERVISION_POLICY.md).
-The small planning step and the first useful implementation increment are
-complete. R106 delivered a **portable trajectory output checker** that catches
-bad saved frames before rendering, with no new supervision framework. The
-checker is a saved-data validity check, not a runtime or scientific certificate.
+Last updated 2026-09-21 for R136–R138 (completion UTC 2026-09-22).
+The blank-render cause is established: MacPorts POV-Ray 3.7.0.8's fast-math
+build mishandles infinity sentinels in camera defaults. A conservative build
+of the same source renders the unchanged sphere, beads example, official torus
+and project frames 1, 120 and 240 correctly. Re-enabling fast-math in only the
+scene parser reproduces the fault; restoring conservative math restores the
+byte-identical working binary. [Diagnosis, evidence and build recipe](docs/rendering/POVRAY_MAC_BUILD_DIAGNOSIS.md).
 
-Next: keep the user config file in place and, if visual project output is still
-desired, use **GPT-5.6 Luna/medium** for one known-good centered-object or
-renderer-level comparison before changing project camera/material semantics.
-Do not encode a movie until a centered test object and then frames 1, 120 and
-240 are visibly rendered and inspected. Recommend Astra/high only if the next
-comparison requires a model/format or unexpected renderer-build decision;
-otherwise return to Luna/medium for the small render recheck. Do not pursue
-elevated tracing, an unbounded agent process, FEM, physical or broad benchmark
-work.
+The user's `beads1.jpg` correctly shows beads on an intentional white background.
+The faulty new beads render was entirely black, with no geometry. The installed
+`/opt/local/bin/povray` remains unchanged. The working temporary executable is
+`/tmp/povray-build-diagnosis.JO4kJZ/povray-safe-math`; its SHA-256 is recorded
+in the diagnosis. No system installation, movie, FEM or physical work ran.
+Continue to run POV-Ray outside the restricted agent sandbox. Keep the existing
+empty user configuration file; no further configuration edits were needed.
+
+Next: **Luna/medium on the Mac** makes the conservative renderer durable and
+rechecks the small scenes, following the [single next task](#next-task).
+Project camera/material/trajectory changes are unnecessary for this fix.
+The portable trajectory checker remains a saved-data validity check, not a
+runtime or scientific certificate; [practical supervision policy](docs/realizability/B2_MONITOR_PRACTICAL_SUPERVISION_POLICY.md)
+and physical-work limits remain unchanged.
 
 ## Owner and checkout
 
@@ -32,11 +30,11 @@ work.
 | Owner | Mac `fire.lan`, Darwin/arm64 |
 | Checkout | `/Users/rharris/git/navier-stokes-vortex-lab` |
 | Branch/upstream | `main` / `origin/main` |
-| Starting state | R131 refreshed `origin/main`; HEAD matched `origin/main` at `b5b067b` before the R131 start record. |
+| Starting state | R136 clean fast-forward pull was up to date; HEAD equaled origin/main at `1373c46`; no stashes or user changes. |
 | Interpreter | `/Users/rharris/miniconda3/envs/navier-stokes-vortex-b1/bin/python`, CPython 3.12.13 |
-| Other owner/process | PC/WSL `daisy` released ownership in R107. Independent Mac POV-Ray build remains user-managed and unverified. |
-| Task processes | R109 generator and bounded POV-Ray attempts exited; no trajectory/workload or background process remains; generated `positions/frame*.inc` is ignored local data. |
-| Delivery state | R131 completion published as `00f8e53`; R132 cleanup documentation is pending publication in the current commit. |
+| Other owner/process | PC/WSL `daisy` released ownership in R107; Mac retains ownership. Historical independent user-managed build was not touched. |
+| Task processes | All R136 render, configure and build commands exited; no task process remains. Existing ignored `positions/frame*.inc` passed the checker; temporary binaries/source remain local. |
+| Delivery state | R135 delivery reconciled at `1373c46`; R136 STARTED published as `eff0f15`. R136–R138 completion is prepared for scoped publication; actual delivery hash follows in final response/Git history. |
 
 ## Current result and limits
 
@@ -167,29 +165,34 @@ agent-side POV-Ray backtraces are unavailable.
 
 ## Next task
 
-On the Mac host, use **GPT-6 Astra/high** for renderer-build/runtime diagnosis
-of the canonical centered-sphere failure: compare the MacPorts executable and
-its documented build/runtime behavior with a known-good POV-Ray build or
-minimal invocation, without changing project scene semantics. Stop if the
-diagnosis requires an unsupported installation change or remains ambiguous;
-then return to Luna/medium for a small render recheck after a visible sphere is
-established. Do not encode a movie, run FEM, physical or broad benchmark work.
+On Mac `fire.lan`, use **GPT-5.6 Luna/medium** to make the verified conservative
+POV-Ray build durable using the documented same-release recipe and supported
+MacPorts source-build options. Preserve the working installation/configuration
+until the replacement has been reviewed and tested; use the ordinary host
+approval mechanism for installation writes. Do not silently replace the
+MacPorts executable with the temporary binary. If package support or required
+dependencies are unclear, stop with a concrete local-install alternative.
 
-If one tiny frame succeeds, render only frames 1, 120 and 240 at a small
-resolution, inspect all three, and only then encode a small H.264/yuv420p movie
-and verify duration, frame rate, frame count, resolution, codec and pixel
-format with `ffprobe`. Do not rerun FEM, physical, broad benchmark or
-supervision work.
+Completion checks: confirm effective compiler flags exclude fast-math,
+externally render the canonical sphere and beads example, then inspect project
+frames 1, 120 and 240 using the durable executable. `POV_RAY` is already
+supported by the diagnostic/render scripts. The working temporary binary's
+hash and rebuild instructions are in the [diagnosis](docs/rendering/POVRAY_MAC_BUILD_DIAGNOSIS.md);
+verify it if reusing it. Do not transfer Mac binaries or assume `/tmp` survives
+a machine switch. No source trajectory regeneration is needed.
 
-Retain Luna/medium for this routine renderer diagnosis and recheck. Recommend
-Astra/high only for a model/format decision or an unexpected resource failure;
-the next model should return to Luna/medium once that boundary is resolved.
-Process/memory supervision, full platform parity, benchmark matrices and B2
-numerical work remain deferred. No physical-run admission follows from this
-checker.
+Stop before movie encoding in that installation task. After durable rendering
+is verified, the following bounded task may render a contiguous short sequence,
+encode H.264/yuv420p and verify duration, frame rate/count, resolution, codec and
+pixel format with `ffprobe`. Do not treat three separated inspection frames as
+a 30 fps contiguous animation. No FEM, physical, broad benchmark or supervision
+work is authorized by this renderer task.
 
-The supplied session used Luna/medium. No model switch, delegation or
-automation occurred here. **Next prompt: Continue.**
+Recommend Astra/high only for a new compiler/build ambiguity or unexpected
+failure; Luna/medium remains suitable for the settled build/recheck. These model
+names/levels are available in the user's supplied session snapshot; no model
+switch, delegation or automation was performed by this agent.
+**Next prompt: Continue.**
 
 ## Historical handoff anchors
 

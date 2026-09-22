@@ -2,30 +2,28 @@
 
 ## Current Mac rendering checkpoint — 2026-09-21
 
-R131 removed the repeated POV-Ray user-configuration warning without changing
-render settings: the previously absent `/Users/rharris/.povray/3.7/povray.conf`
-was created as an empty file. The externally executed 64x64 minimal
-reproduction exited 0 and emitted a valid PNG with no missing-config warning;
-the only remaining startup notice is the expected MacPorts unofficial-build
-message. The restricted agent sandbox still behaves differently, so this fix
-does not claim that sandboxed POV-Ray execution is supported.
+R136–R138 identified the background-only-render cause: the installed MacPorts
+POV-Ray fast-math build breaks camera-default handling. A same-release build
+with conservative math visibly renders the unchanged sphere, user's beads,
+official torus and project frames 1, 120 and 240. Recompiling only the parser
+with fast-math reproduces the fault. [Diagnosis and saved evidence](docs/rendering/POVRAY_MAC_BUILD_DIAGNOSIS.md).
 
-The Mac trajectory generator and saved-data checker passed for 240 frames and
-500 beads. External POV-Ray execution also works: frames 1, 120 and 240
-rendered at 640x360 with status 0 in approximately 0.016–0.019 s each. The
-three PNGs were nevertheless uniform pale backgrounds; frame 1 had constant
-pixel statistics (`YMIN=YMAX=233`). No movie was encoded. The next bounded
-diagnosis is scene visibility (camera, transparent tank geometry, or tracer
-materials), not process supervision or timeout handling. This is not evidence
-of physical validity or movie readiness.
+The 240 saved trajectory frames/500 beads passed the checker again. All three
+320x180 project frames were visually inspected with the working temporary
+executable; tank/tracers and changing tracer distribution are visible. The
+installed MacPorts binary remains unchanged, and no movie was encoded. The
+[next task](SESSION_HANDOFF.md#next-task) is durable conservative-math renderer
+installation and a small recheck. POV-Ray still runs outside the agent sandbox;
+R131's empty user config remains intact. This is illustrative visualization,
+not physical validation.
 
 Updated 2026-09-21. The user supports simplifying excessive supervision
 requirements. The [R103 practical supervision policy](docs/realizability/B2_MONITOR_PRACTICAL_SUPERVISION_POLICY.md)
 keeps process safeguards and honest accounting while removing recursive proof
 requirements for infrastructure. R106 implemented the portable trajectory output
 checker as the first useful increment: check saved frames before rendering. Its
-Python 3.12.13 focused tests pass on PC/WSL; a Mac check remains pending after
-explicit ownership handoff. The next task is in the [handoff](SESSION_HANDOFF.md#next-task).
+Python 3.12.13 focused tests passed on PC/WSL and Mac (R108); actual Mac saved
+data passed in R109 and R136. The next task is in the [handoff](SESSION_HANDOFF.md#next-task).
 No live reliability rate is known; OS supervision and physical work remain pending.
 R104 requires Mac usability and small infrastructure increments that unblock
 named useful tasks; Mac support remains unverified and a complete benchmark

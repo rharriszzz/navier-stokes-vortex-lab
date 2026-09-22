@@ -1,0 +1,299 @@
+depbase=`echo backend/parser/parse.o | sed 's|[^/]*$|.deps/&|;s|\.o$||'`;\
+	g++ -DHAVE_CONFIG_H -I. -I..  -I.. -I../source/backend -I../source/base -I../source/frontend -I../unix -I../vfe -I../vfe/unix -I/opt/local/include/SDL -D_THREAD_SAFE -I/opt/local/libexec/openexr2/include/OpenEXR -I/opt/local/libexec/openexr2/include -I/opt/local/libexec/openexr2/include/OpenEXR -I/opt/local/lib/../include -I/opt/local/lib/../include -I/opt/local/lib/../include -I/opt/local/lib/../include -I/opt/local/include -pthread -I/opt/local/libexec/boost/1.76/include  -I/usr/include  -pipe -Wno-multichar -Wno-write-strings -O2 -ffast-math -std=c++11 -I/opt/local/include -I/opt/local/libexec/boost/1.76/include -D_THREAD_SAFE -MT backend/parser/parse.o -MD -MP -MF $depbase.Tpo -c -o backend/parser/parse.o backend/parser/parse.cpp &&\
+	mv -f $depbase.Tpo $depbase.Po
+In file included from backend/parser/parse.cpp:39:
+/opt/local/libexec/boost/1.76/include/boost/bind.hpp:36:1: warning: The practice of declaring the Bind placeholders (_1, _2, ...) in the global namespace is deprecated. Please use <boost/bind/bind.hpp> + using namespace boost::placeholders, or define BOOST_BIND_GLOBAL_PLACEHOLDERS to retain the current behavior. [-W#pragma-messages]
+   36 | BOOST_PRAGMA_MESSAGE(
+      | ^
+/opt/local/libexec/boost/1.76/include/boost/config/pragma_message.hpp:24:34: note: expanded from macro 'BOOST_PRAGMA_MESSAGE'
+   24 | # define BOOST_PRAGMA_MESSAGE(x) _Pragma(BOOST_STRINGIZE(message(x)))
+      |                                  ^
+<scratch space>:159:2: note: expanded from here
+  159 |  message("The practice of declaring the Bind placeholders (_1, _2, ...) " "in the global namespace is deprecated. Please use " "<boost/bind/bind.hpp> + using namespace boost::placeholders, " "or define BOOST_BIND_GLOBAL_PLACEHOLDERS to retain the current behavior.")
+      |  ^
+In file included from backend/parser/parse.cpp:37:
+In file included from /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/c++/v1/algorithm:1915:
+In file included from /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/c++/v1/__algorithm/shuffle.h:16:
+In file included from /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/c++/v1/__random/uniform_int_distribution.h:20:
+In file included from /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/c++/v1/iosfwd:112:
+In file included from /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/c++/v1/__fwd/fstream.h:13:
+/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/c++/v1/__fwd/string.h:45:41: warning: 'char_traits<unsigned short>' is deprecated: char_traits<T> for T not equal to char, wchar_t, char8_t, char16_t or char32_t is non-standard and is provided for a temporary period. It will be removed in a future release, so please migrate off of it. [-Wdeprecated-declarations]
+   45 | template <class _CharT, class _Traits = char_traits<_CharT>, class _Allocator = allocator<_CharT> >
+      |                                         ^
+../vfe/unix/../vfeconf.h:68:30: note: in instantiation of default argument for 'basic_string<unsigned short>' required here
+   68 |   FILE *vfeFOpen (const std::basic_string<unsigned short>& name, const char *mode);
+      |                              ^~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/c++/v1/__fwd/string.h:24:8: note: 'char_traits<unsigned short>' has been explicitly marked deprecated here
+   24 | struct _LIBCPP_DEPRECATED_(
+      |        ^
+/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/c++/v1/__config:505:53: note: expanded from macro '_LIBCPP_DEPRECATED_'
+  505 | #      define _LIBCPP_DEPRECATED_(m) __attribute__((__deprecated__(m)))
+      |                                                     ^
+In file included from backend/parser/parse.cpp:37:
+In file included from /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/c++/v1/algorithm:1915:
+In file included from /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/c++/v1/__algorithm/shuffle.h:16:
+In file included from /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/c++/v1/__random/uniform_int_distribution.h:20:
+In file included from /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/c++/v1/iosfwd:112:
+In file included from /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/c++/v1/__fwd/fstream.h:13:
+/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/c++/v1/__fwd/string.h:45:41: warning: 'char_traits<unsigned short>' is deprecated: char_traits<T> for T not equal to char, wchar_t, char8_t, char16_t or char32_t is non-standard and is provided for a temporary period. It will be removed in a future release, so please migrate off of it. [-Wdeprecated-declarations]
+   45 | template <class _CharT, class _Traits = char_traits<_CharT>, class _Allocator = allocator<_CharT> >
+      |                                         ^
+../vfe/unix/../vfeconf.h:69:30: note: in instantiation of default argument for 'basic_string<unsigned short>' required here
+   69 |   bool vfeRemove (const std::basic_string<unsigned short>& name);
+      |                              ^~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/c++/v1/__fwd/string.h:24:8: note: 'char_traits<unsigned short>' has been explicitly marked deprecated here
+   24 | struct _LIBCPP_DEPRECATED_(
+      |        ^
+/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/c++/v1/__config:505:53: note: expanded from macro '_LIBCPP_DEPRECATED_'
+  505 | #      define _LIBCPP_DEPRECATED_(m) __attribute__((__deprecated__(m)))
+      |                                                     ^
+In file included from backend/parser/parse.cpp:37:
+In file included from /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/c++/v1/algorithm:1915:
+In file included from /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/c++/v1/__algorithm/shuffle.h:16:
+In file included from /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/c++/v1/__random/uniform_int_distribution.h:20:
+In file included from /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/c++/v1/iosfwd:112:
+In file included from /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/c++/v1/__fwd/fstream.h:13:
+/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/c++/v1/__fwd/string.h:45:41: warning: 'char_traits<unsigned short>' is deprecated: char_traits<T> for T not equal to char, wchar_t, char8_t, char16_t or char32_t is non-standard and is provided for a temporary period. It will be removed in a future release, so please migrate off of it. [-Wdeprecated-declarations]
+   45 | template <class _CharT, class _Traits = char_traits<_CharT>, class _Allocator = allocator<_CharT> >
+      |                                         ^
+./base/povmscpp.h:51:14: note: in instantiation of default argument for 'basic_string<unsigned short>' required here
+   51 | typedef std::basic_string<POVMSUCS2> POVMSUCS2String;
+      |              ^~~~~~~~~~~~~~~~~~~~~~~
+/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/c++/v1/__fwd/string.h:24:8: note: 'char_traits<unsigned short>' has been explicitly marked deprecated here
+   24 | struct _LIBCPP_DEPRECATED_(
+      |        ^
+/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/c++/v1/__config:505:53: note: expanded from macro '_LIBCPP_DEPRECATED_'
+  505 | #      define _LIBCPP_DEPRECATED_(m) __attribute__((__deprecated__(m)))
+      |                                                     ^
+In file included from backend/parser/parse.cpp:42:
+In file included from ./backend/frame.h:58:
+In file included from ./backend/control/messagefactory.h:39:
+In file included from ./backend/control/renderbackend.h:40:
+In file included from ./backend/povray.h:46:
+In file included from /opt/local/libexec/boost/1.76/include/boost/thread.hpp:24:
+In file included from /opt/local/libexec/boost/1.76/include/boost/thread/future.hpp:51:
+In file included from /opt/local/libexec/boost/1.76/include/boost/optional.hpp:15:
+In file included from /opt/local/libexec/boost/1.76/include/boost/optional/optional.hpp:38:
+/opt/local/libexec/boost/1.76/include/boost/type_traits/has_nothrow_constructor.hpp:27:84: warning: builtin __has_nothrow_constructor is deprecated; use __is_nothrow_constructible instead [-Wdeprecated-builtins]
+   27 | template <class T> struct has_nothrow_constructor : public integral_constant<bool, BOOST_HAS_NOTHROW_CONSTRUCTOR(T)>{};
+      |                                                                                    ^
+/opt/local/libexec/boost/1.76/include/boost/type_traits/intrinsics.hpp:199:48: note: expanded from macro 'BOOST_HAS_NOTHROW_CONSTRUCTOR'
+  199 | #     define BOOST_HAS_NOTHROW_CONSTRUCTOR(T) (__has_nothrow_constructor(T) && is_default_constructible<T>::value)
+      |                                                ^
+In file included from backend/parser/parse.cpp:42:
+In file included from ./backend/frame.h:58:
+In file included from ./backend/control/messagefactory.h:39:
+In file included from ./backend/control/renderbackend.h:40:
+In file included from ./backend/povray.h:46:
+In file included from /opt/local/libexec/boost/1.76/include/boost/thread.hpp:24:
+In file included from /opt/local/libexec/boost/1.76/include/boost/thread/future.hpp:51:
+In file included from /opt/local/libexec/boost/1.76/include/boost/optional.hpp:15:
+In file included from /opt/local/libexec/boost/1.76/include/boost/optional/optional.hpp:47:
+In file included from /opt/local/libexec/boost/1.76/include/boost/type_traits/is_nothrow_move_assignable.hpp:16:
+/opt/local/libexec/boost/1.76/include/boost/type_traits/has_nothrow_assign.hpp:65:7: warning: builtin __has_nothrow_assign is deprecated; use __is_nothrow_assignable instead [-Wdeprecated-builtins]
+   65 |       BOOST_HAS_NOTHROW_ASSIGN(T)
+      |       ^
+/opt/local/libexec/boost/1.76/include/boost/type_traits/intrinsics.hpp:205:43: note: expanded from macro 'BOOST_HAS_NOTHROW_ASSIGN'
+  205 | #     define BOOST_HAS_NOTHROW_ASSIGN(T) (__has_nothrow_assign(T) && !is_volatile<T>::value && is_assignable<T&, const T&>::value)
+      |                                           ^
+In file included from backend/parser/parse.cpp:42:
+In file included from ./backend/frame.h:58:
+In file included from ./backend/control/messagefactory.h:39:
+In file included from ./backend/control/renderbackend.h:40:
+In file included from ./backend/povray.h:46:
+In file included from /opt/local/libexec/boost/1.76/include/boost/thread.hpp:24:
+In file included from /opt/local/libexec/boost/1.76/include/boost/thread/future.hpp:65:
+In file included from /opt/local/libexec/boost/1.76/include/boost/function.hpp:30:
+In file included from /opt/local/libexec/boost/1.76/include/boost/function/detail/prologue.hpp:17:
+In file included from /opt/local/libexec/boost/1.76/include/boost/function/function_base.hpp:22:
+/opt/local/libexec/boost/1.76/include/boost/type_traits/has_trivial_copy.hpp:34:4: warning: builtin __has_trivial_copy is deprecated; use __is_trivially_copyable instead [-Wdeprecated-builtins]
+   34 |    BOOST_HAS_TRIVIAL_COPY(T) BOOST_TT_TRIVIAL_CONSTRUCT_FIX
+      |    ^
+/opt/local/libexec/boost/1.76/include/boost/type_traits/intrinsics.hpp:190:41: note: expanded from macro 'BOOST_HAS_TRIVIAL_COPY'
+  190 | #     define BOOST_HAS_TRIVIAL_COPY(T) (__has_trivial_copy(T) && !is_reference<T>::value)
+      |                                         ^
+In file included from backend/parser/parse.cpp:42:
+In file included from ./backend/frame.h:58:
+In file included from ./backend/control/messagefactory.h:39:
+In file included from ./backend/control/renderbackend.h:40:
+In file included from ./backend/povray.h:46:
+In file included from /opt/local/libexec/boost/1.76/include/boost/thread.hpp:24:
+In file included from /opt/local/libexec/boost/1.76/include/boost/thread/future.hpp:65:
+In file included from /opt/local/libexec/boost/1.76/include/boost/function.hpp:30:
+In file included from /opt/local/libexec/boost/1.76/include/boost/function/detail/prologue.hpp:17:
+In file included from /opt/local/libexec/boost/1.76/include/boost/function/function_base.hpp:23:
+/opt/local/libexec/boost/1.76/include/boost/type_traits/has_trivial_destructor.hpp:30:86: warning: builtin __has_trivial_destructor is deprecated; use __is_trivially_destructible instead [-Wdeprecated-builtins]
+   30 | template <typename T> struct has_trivial_destructor : public integral_constant<bool, BOOST_HAS_TRIVIAL_DESTRUCTOR(T)>{};
+      |                                                                                      ^
+/opt/local/libexec/boost/1.76/include/boost/type_traits/intrinsics.hpp:196:47: note: expanded from macro 'BOOST_HAS_TRIVIAL_DESTRUCTOR'
+  196 | #     define BOOST_HAS_TRIVIAL_DESTRUCTOR(T) (__has_trivial_destructor(T)  && is_destructible<T>::value)
+      |                                               ^
+In file included from backend/parser/parse.cpp:88:
+In file included from ./backend/lighting/subsurface.h:47:
+In file included from /opt/local/libexec/boost/1.76/include/boost/flyweight.hpp:17:
+In file included from /opt/local/libexec/boost/1.76/include/boost/flyweight/hashed_factory.hpp:19:
+In file included from /opt/local/libexec/boost/1.76/include/boost/multi_index_container.hpp:36:
+In file included from /opt/local/libexec/boost/1.76/include/boost/multi_index/detail/base_type.hpp:21:
+In file included from /opt/local/libexec/boost/1.76/include/boost/multi_index/detail/index_base.hpp:33:
+In file included from /opt/local/libexec/boost/1.76/include/boost/multi_index/detail/index_loader.hpp:22:
+In file included from /opt/local/libexec/boost/1.76/include/boost/serialization/nvp.hpp:35:
+In file included from /opt/local/libexec/boost/1.76/include/boost/serialization/split_free.hpp:22:
+In file included from /opt/local/libexec/boost/1.76/include/boost/serialization/serialization.hpp:14:
+In file included from /opt/local/libexec/boost/1.76/include/boost/serialization/strong_typedef.hpp:30:
+/opt/local/libexec/boost/1.76/include/boost/type_traits/has_nothrow_copy.hpp:36:89: warning: builtin __has_nothrow_copy is deprecated; use __is_nothrow_constructible instead [-Wdeprecated-builtins]
+   36 | template <class T> struct has_nothrow_copy_constructor : public integral_constant<bool, BOOST_HAS_NOTHROW_COPY(T)>{};
+      |                                                                                         ^
+/opt/local/libexec/boost/1.76/include/boost/type_traits/intrinsics.hpp:202:41: note: expanded from macro 'BOOST_HAS_NOTHROW_COPY'
+  202 | #     define BOOST_HAS_NOTHROW_COPY(T) (__has_nothrow_copy(T) && !is_volatile<T>::value && !is_reference<T>::value && is_copy_constructible<T>::value)
+      |                                         ^
+In file included from backend/parser/parse.cpp:88:
+In file included from ./backend/lighting/subsurface.h:47:
+In file included from /opt/local/libexec/boost/1.76/include/boost/flyweight.hpp:17:
+In file included from /opt/local/libexec/boost/1.76/include/boost/flyweight/hashed_factory.hpp:19:
+In file included from /opt/local/libexec/boost/1.76/include/boost/multi_index_container.hpp:36:
+In file included from /opt/local/libexec/boost/1.76/include/boost/multi_index/detail/base_type.hpp:21:
+In file included from /opt/local/libexec/boost/1.76/include/boost/multi_index/detail/index_base.hpp:33:
+In file included from /opt/local/libexec/boost/1.76/include/boost/multi_index/detail/index_loader.hpp:22:
+In file included from /opt/local/libexec/boost/1.76/include/boost/serialization/nvp.hpp:35:
+In file included from /opt/local/libexec/boost/1.76/include/boost/serialization/split_free.hpp:22:
+In file included from /opt/local/libexec/boost/1.76/include/boost/serialization/serialization.hpp:14:
+In file included from /opt/local/libexec/boost/1.76/include/boost/serialization/strong_typedef.hpp:30:
+/opt/local/libexec/boost/1.76/include/boost/type_traits/has_nothrow_copy.hpp:36:89: warning: builtin __has_nothrow_copy is deprecated; use __is_nothrow_constructible instead [-Wdeprecated-builtins]
+/opt/local/libexec/boost/1.76/include/boost/type_traits/intrinsics.hpp:202:41: note: expanded from macro 'BOOST_HAS_NOTHROW_COPY'
+  202 | #     define BOOST_HAS_NOTHROW_COPY(T) (__has_nothrow_copy(T) && !is_volatile<T>::value && !is_reference<T>::value && is_copy_constructible<T>::value)
+      |                                         ^
+/opt/local/libexec/boost/1.76/include/boost/serialization/serialization.hpp:52:1: note: in instantiation of template class 'boost::has_nothrow_copy_constructor<unsigned int>' requested here
+   52 | BOOST_STRONG_TYPEDEF(unsigned int, version_type)
+      | ^
+/opt/local/libexec/boost/1.76/include/boost/serialization/strong_typedef.hpp:39:54: note: expanded from macro 'BOOST_STRONG_TYPEDEF'
+   39 |     explicit D(const T& t_) BOOST_NOEXCEPT_IF(boost::has_nothrow_copy_constructor<T>::value) : t(t_) {}          \
+      |                                                      ^
+/opt/local/libexec/boost/1.76/include/boost/config/detail/suffix.hpp:976:50: note: expanded from macro 'BOOST_NOEXCEPT_IF'
+  976 | #  define BOOST_NOEXCEPT_IF(Predicate) noexcept((Predicate))
+      |                                                  ^
+In file included from backend/parser/parse.cpp:42:
+In file included from ./backend/frame.h:58:
+In file included from ./backend/control/messagefactory.h:39:
+In file included from ./backend/control/renderbackend.h:40:
+In file included from ./backend/povray.h:46:
+In file included from /opt/local/libexec/boost/1.76/include/boost/thread.hpp:24:
+In file included from /opt/local/libexec/boost/1.76/include/boost/thread/future.hpp:51:
+In file included from /opt/local/libexec/boost/1.76/include/boost/optional.hpp:15:
+In file included from /opt/local/libexec/boost/1.76/include/boost/optional/optional.hpp:38:
+/opt/local/libexec/boost/1.76/include/boost/type_traits/has_nothrow_constructor.hpp:27:84: warning: builtin __has_nothrow_constructor is deprecated; use __is_nothrow_constructible instead [-Wdeprecated-builtins]
+   27 | template <class T> struct has_nothrow_constructor : public integral_constant<bool, BOOST_HAS_NOTHROW_CONSTRUCTOR(T)>{};
+      |                                                                                    ^
+/opt/local/libexec/boost/1.76/include/boost/type_traits/intrinsics.hpp:199:48: note: expanded from macro 'BOOST_HAS_NOTHROW_CONSTRUCTOR'
+  199 | #     define BOOST_HAS_NOTHROW_CONSTRUCTOR(T) (__has_nothrow_constructor(T) && is_default_constructible<T>::value)
+      |                                                ^
+/opt/local/libexec/boost/1.76/include/boost/type_traits/has_nothrow_constructor.hpp:69:68: note: in instantiation of template class 'boost::has_nothrow_constructor<unsigned int>' requested here
+   69 | template <class T> struct has_nothrow_default_constructor : public has_nothrow_constructor<T>{};
+      |                                                                    ^
+/opt/local/libexec/boost/1.76/include/boost/serialization/serialization.hpp:52:1: note: in instantiation of template class 'boost::has_nothrow_default_constructor<unsigned int>' requested here
+   52 | BOOST_STRONG_TYPEDEF(unsigned int, version_type)
+      | ^
+/opt/local/libexec/boost/1.76/include/boost/serialization/strong_typedef.hpp:40:34: note: expanded from macro 'BOOST_STRONG_TYPEDEF'
+   40 |     D() BOOST_NOEXCEPT_IF(boost::has_nothrow_default_constructor<T>::value) : t() {}                             \
+      |                                  ^
+/opt/local/libexec/boost/1.76/include/boost/config/detail/suffix.hpp:976:50: note: expanded from macro 'BOOST_NOEXCEPT_IF'
+  976 | #  define BOOST_NOEXCEPT_IF(Predicate) noexcept((Predicate))
+      |                                                  ^
+In file included from backend/parser/parse.cpp:42:
+In file included from ./backend/frame.h:58:
+In file included from ./backend/control/messagefactory.h:39:
+In file included from ./backend/control/renderbackend.h:40:
+In file included from ./backend/povray.h:46:
+In file included from /opt/local/libexec/boost/1.76/include/boost/thread.hpp:24:
+In file included from /opt/local/libexec/boost/1.76/include/boost/thread/future.hpp:51:
+In file included from /opt/local/libexec/boost/1.76/include/boost/optional.hpp:15:
+In file included from /opt/local/libexec/boost/1.76/include/boost/optional/optional.hpp:47:
+In file included from /opt/local/libexec/boost/1.76/include/boost/type_traits/is_nothrow_move_assignable.hpp:16:
+/opt/local/libexec/boost/1.76/include/boost/type_traits/has_nothrow_assign.hpp:65:7: warning: builtin __has_nothrow_assign is deprecated; use __is_nothrow_assignable instead [-Wdeprecated-builtins]
+   65 |       BOOST_HAS_NOTHROW_ASSIGN(T)
+      |       ^
+/opt/local/libexec/boost/1.76/include/boost/type_traits/intrinsics.hpp:205:43: note: expanded from macro 'BOOST_HAS_NOTHROW_ASSIGN'
+  205 | #     define BOOST_HAS_NOTHROW_ASSIGN(T) (__has_nothrow_assign(T) && !is_volatile<T>::value && is_assignable<T&, const T&>::value)
+      |                                           ^
+/opt/local/libexec/boost/1.76/include/boost/serialization/serialization.hpp:52:1: note: in instantiation of template class 'boost::has_nothrow_assign<unsigned int>' requested here
+   52 | BOOST_STRONG_TYPEDEF(unsigned int, version_type)
+      | ^
+/opt/local/libexec/boost/1.76/include/boost/serialization/strong_typedef.hpp:42:57: note: expanded from macro 'BOOST_STRONG_TYPEDEF'
+   42 |     D& operator=(const D& rhs) BOOST_NOEXCEPT_IF(boost::has_nothrow_assign<T>::value) {t = rhs.t; return *this;} \
+      |                                                         ^
+/opt/local/libexec/boost/1.76/include/boost/config/detail/suffix.hpp:976:50: note: expanded from macro 'BOOST_NOEXCEPT_IF'
+  976 | #  define BOOST_NOEXCEPT_IF(Predicate) noexcept((Predicate))
+      |                                                  ^
+backend/parser/parse.cpp:8334:6: warning: 'sprintf' is deprecated: This function is provided for compatibility reasons only.  Due to security concerns inherent in the design of sprintf(3), it is highly recommended that you use snprintf(3) instead. [-Wdeprecated-declarations]
+ 8334 |                                         sprintf(str, "Identifier '%.128s' was declared deprecated.", Token.Token_String);
+      |                                         ^
+/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/_stdio.h:278:1: note: 'sprintf' has been explicitly marked deprecated here
+  278 | __deprecated_msg("This function is provided for compatibility reasons only.  Due to security concerns inherent in the design of sprintf(3), it is highly recommended that you use snprintf(3) instead.")
+      | ^
+/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/sys/cdefs.h:227:48: note: expanded from macro '__deprecated_msg'
+  227 |         #define __deprecated_msg(_msg) __attribute__((__deprecated__(_msg)))
+      |                                                       ^
+In file included from backend/parser/parse.cpp:42:
+In file included from ./backend/frame.h:58:
+In file included from ./backend/control/messagefactory.h:39:
+In file included from ./backend/control/renderbackend.h:40:
+In file included from ./backend/povray.h:46:
+In file included from /opt/local/libexec/boost/1.76/include/boost/thread.hpp:24:
+In file included from /opt/local/libexec/boost/1.76/include/boost/thread/future.hpp:65:
+In file included from /opt/local/libexec/boost/1.76/include/boost/function.hpp:30:
+In file included from /opt/local/libexec/boost/1.76/include/boost/function/detail/prologue.hpp:17:
+In file included from /opt/local/libexec/boost/1.76/include/boost/function/function_base.hpp:22:
+/opt/local/libexec/boost/1.76/include/boost/type_traits/has_trivial_copy.hpp:34:4: warning: builtin __has_trivial_copy is deprecated; use __is_trivially_copyable instead [-Wdeprecated-builtins]
+   34 |    BOOST_HAS_TRIVIAL_COPY(T) BOOST_TT_TRIVIAL_CONSTRUCT_FIX
+      |    ^
+/opt/local/libexec/boost/1.76/include/boost/type_traits/intrinsics.hpp:190:41: note: expanded from macro 'BOOST_HAS_TRIVIAL_COPY'
+  190 | #     define BOOST_HAS_TRIVIAL_COPY(T) (__has_trivial_copy(T) && !is_reference<T>::value)
+      |                                         ^
+/opt/local/libexec/boost/1.76/include/boost/type_traits/has_trivial_copy.hpp:57:65: note: in instantiation of template class 'boost::has_trivial_copy<boost::_bi::bind_t<void, boost::_mfi::mf1<void, pov::Parser, pov_base::Exception &>, boost::_bi::list2<boost::_bi::value<pov::Parser *>, boost::arg<1>>>>' requested here
+   57 | template <class T> struct has_trivial_copy_constructor : public has_trivial_copy<T>{};
+      |                                                                 ^
+/opt/local/libexec/boost/1.76/include/boost/function/function_template.hpp:945:20: note: in instantiation of template class 'boost::has_trivial_copy_constructor<boost::_bi::bind_t<void, boost::_mfi::mf1<void, pov::Parser, pov_base::Exception &>, boost::_bi::list2<boost::_bi::value<pov::Parser *>, boost::arg<1>>>>' requested here
+  945 |         if (boost::has_trivial_copy_constructor<Functor>::value &&
+      |                    ^
+/opt/local/libexec/boost/1.76/include/boost/function/function_template.hpp:720:13: note: in instantiation of function template specialization 'boost::function1<void, pov_base::Exception &>::assign_to<boost::_bi::bind_t<void, boost::_mfi::mf1<void, pov::Parser, pov_base::Exception &>, boost::_bi::list2<boost::_bi::value<pov::Parser *>, boost::arg<1>>>>' requested here
+  720 |       this->assign_to(f);
+      |             ^
+backend/parser/parse.cpp:126:32: note: in instantiation of function template specialization 'boost::function1<void, pov_base::Exception &>::function1<boost::_bi::bind_t<void, boost::_mfi::mf1<void, pov::Parser, pov_base::Exception &>, boost::_bi::list2<boost::_bi::value<pov::Parser *>, boost::arg<1>>>>' requested here
+  126 |         Task(new SceneThreadData(sd), boost::bind(&Parser::SendFatalError, this, _1)),
+      |                                       ^
+In file included from backend/parser/parse.cpp:42:
+In file included from ./backend/frame.h:58:
+In file included from ./backend/control/messagefactory.h:39:
+In file included from ./backend/control/renderbackend.h:40:
+In file included from ./backend/povray.h:46:
+In file included from /opt/local/libexec/boost/1.76/include/boost/thread.hpp:24:
+In file included from /opt/local/libexec/boost/1.76/include/boost/thread/future.hpp:65:
+In file included from /opt/local/libexec/boost/1.76/include/boost/function.hpp:30:
+In file included from /opt/local/libexec/boost/1.76/include/boost/function/detail/prologue.hpp:17:
+In file included from /opt/local/libexec/boost/1.76/include/boost/function/function_base.hpp:23:
+/opt/local/libexec/boost/1.76/include/boost/type_traits/has_trivial_destructor.hpp:30:86: warning: builtin __has_trivial_destructor is deprecated; use __is_trivially_destructible instead [-Wdeprecated-builtins]
+   30 | template <typename T> struct has_trivial_destructor : public integral_constant<bool, BOOST_HAS_TRIVIAL_DESTRUCTOR(T)>{};
+      |                                                                                      ^
+/opt/local/libexec/boost/1.76/include/boost/type_traits/intrinsics.hpp:196:47: note: expanded from macro 'BOOST_HAS_TRIVIAL_DESTRUCTOR'
+  196 | #     define BOOST_HAS_TRIVIAL_DESTRUCTOR(T) (__has_trivial_destructor(T)  && is_destructible<T>::value)
+      |                                               ^
+/opt/local/libexec/boost/1.76/include/boost/function/function_template.hpp:946:20: note: in instantiation of template class 'boost::has_trivial_destructor<boost::_bi::bind_t<void, boost::_mfi::mf1<void, pov::Parser, pov_base::Exception &>, boost::_bi::list2<boost::_bi::value<pov::Parser *>, boost::arg<1>>>>' requested here
+  946 |             boost::has_trivial_destructor<Functor>::value &&
+      |                    ^
+/opt/local/libexec/boost/1.76/include/boost/function/function_template.hpp:720:13: note: in instantiation of function template specialization 'boost::function1<void, pov_base::Exception &>::assign_to<boost::_bi::bind_t<void, boost::_mfi::mf1<void, pov::Parser, pov_base::Exception &>, boost::_bi::list2<boost::_bi::value<pov::Parser *>, boost::arg<1>>>>' requested here
+  720 |       this->assign_to(f);
+      |             ^
+backend/parser/parse.cpp:126:32: note: in instantiation of function template specialization 'boost::function1<void, pov_base::Exception &>::function1<boost::_bi::bind_t<void, boost::_mfi::mf1<void, pov::Parser, pov_base::Exception &>, boost::_bi::list2<boost::_bi::value<pov::Parser *>, boost::arg<1>>>>' requested here
+  126 |         Task(new SceneThreadData(sd), boost::bind(&Parser::SendFatalError, this, _1)),
+      |                                       ^
+15 warnings generated.
+/Applications/Xcode.app/Contents/Developer/usr/bin/make  all-recursive
+Making all in source
+rm -f libpovray.a
+ar cr libpovray.a lightgrp.o frontend/shelloutprocessing.o frontend/rendermessagehandler.o frontend/defaultplatformbase.o frontend/console.o frontend/filemessagehandler.o frontend/renderfrontend.o frontend/imageprocessing.o frontend/animationprocessing.o frontend/display.o frontend/parsermessagehandler.o frontend/precomp.o frontend/processrenderoptions.o frontend/imagemessagehandler.o backend/bounding/bbox.o backend/bounding/boundingtask.o backend/bounding/bcyl.o backend/bounding/bsphere.o backend/povray.o backend/shape/truetype.o backend/shape/csg.o backend/shape/mesh.o backend/shape/fractal.o backend/shape/cones.o backend/shape/prism.o backend/shape/sor.o backend/shape/blob.o backend/shape/ovus.o backend/shape/poly.o backend/shape/bezier.o backend/shape/super.o backend/shape/torus.o backend/shape/discs.o backend/shape/hfield.o backend/shape/spheres.o backend/shape/triangle.o backend/shape/polygon.o backend/shape/boxes.o backend/shape/isosurf.o backend/shape/quadrics.o backend/shape/lathe.o backend/shape/fpmetric.o backend/shape/planes.o backend/shape/sphsweep.o backend/render/tracepixel.o backend/render/tracetask.o backend/render/trace.o backend/render/ray.o backend/render/radiositytask.o backend/render/rendertask.o backend/parser/parsestr.o backend/parser/parse.o backend/parser/tokenize.o backend/parser/parstxtr.o backend/parser/function.o backend/parser/express.o backend/parser/fnsyntax.o backend/parser/reswords.o backend/math/splines.o backend/math/hcmplx.o backend/math/mathutil.o backend/math/matrices.o backend/math/chi2.o backend/math/quatern.o backend/math/polysolv.o backend/vm/fncode.o backend/vm/fnintern.o backend/vm/fnpovfpu.o backend/support/jitter.o backend/support/randomsequences.o backend/support/imageutil.o backend/support/msgutil.o backend/support/statistics.o backend/support/task.o backend/support/bsptree.o backend/support/octree.o backend/support/fileutil.o backend/support/taskqueue.o backend/texture/texture.o backend/texture/normal.o backend/texture/pigment.o backend/lighting/photonshootingtask.o backend/lighting/photons.o backend/lighting/subsurface.o backend/lighting/point.o backend/lighting/radiosity.o backend/lighting/rad_data.o backend/lighting/photonstrategytask.o backend/lighting/photonestimationtask.o backend/lighting/photonsortingtask.o backend/lighting/photonshootingstrategy.o backend/pattern/warps.o backend/pattern/pattern.o backend/scene/threaddata.o backend/scene/atmosph.o backend/scene/scene.o backend/scene/camera.o backend/scene/objects.o backend/scene/view.o backend/interior/media.o backend/interior/interior.o backend/precomp.o backend/control/renderbackend.o backend/control/benchmark.o backend/control/messagefactory.o backend/colour/spectral.o backend/colour/colour.o backend/colour/colutils.o pov_mem.o optout.o base/textstream.o base/processoptions.o base/povms.o base/timer.o base/animation/animation.o base/animation/moov.o base/pov_err.o base/textstreambuffer.o base/povmscpp.o base/image/jpeg.o base/image/image.o base/image/pgm.o base/image/bmp.o base/image/colourspace.o base/image/hdr.o base/image/openexr.o base/image/gifdecod.o base/image/png.o base/image/tiff.o base/image/encoding.o base/image/gif.o base/image/iff.o base/image/ppm.o base/image/targa.o base/stringutilities.o base/path.o base/fileinputoutput.o base/font/timrom.o base/font/cyrvetic.o base/font/crystal.o base/font/povlogo.o base/precomp.o 
+ranlib libpovray.a
+Making all in vfe
+make[2]: Nothing to be done for `all'.
+Making all in unix
+g++  -pipe -Wno-multichar -Wno-write-strings -O2 -fno-fast-math -std=c++11 -I/opt/local/include -I/opt/local/libexec/boost/1.76/include -D_THREAD_SAFE  -L/opt/local/lib -L/opt/local/lib -L/opt/local/lib -L/opt/local/lib -L/opt/local/lib -L/opt/local/libexec/boost/1.76/lib -L/opt/local/libexec/boost/1.76/lib  -L/usr/lib -o povray disp_sdl.o disp_text.o ../vfe/libvfe.a ../source/libpovray.a -lSDL -L/opt/local/lib -lSDLmain -lSDL -Wl,-framework,Cocoa -lXpm  -lSM -lICE -lX11  -lIlmImf -L/opt/local/libexec/openexr2/lib -lIlmImf-2_5 -lImath-2_5 -lHalf-2_5 -lIex-2_5 -lIexMath-2_5 -lIlmThread-2_5 -lIlmThread -ltiff -ljpeg -lpng -lz -lm -lboost_thread-mt -lboost_system-mt -lboost_thread-mt -D_THREAD_SAFE   
+ld: warning: ignoring duplicate libraries: '-lSDL', '-lboost_thread-mt'
+make[2]: Nothing to be done for `all-am'.

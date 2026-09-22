@@ -6,6 +6,7 @@ POV_RAY="${POV_RAY:-povray}"
 TIMEOUT_SECONDS="${TIMEOUT_SECONDS:-300}"
 WIDTH="${WIDTH:-640}"
 HEIGHT="${HEIGHT:-360}"
+THREADS="${THREADS:-2}"
 OUTPUT_DIR="${OUTPUT_DIR:-/tmp/povray-three-frames}"
 
 if ! command -v "$POV_RAY" >/dev/null 2>&1; then
@@ -39,7 +40,7 @@ for frame in 0001 0120 0240; do
   expected="$OUTPUT_DIR/frame${output_frame}.png"
   echo "--- frame ${frame} ---"
   gtimeout --signal=KILL "$TIMEOUT_SECONDS" "$POV_RAY" fluid.pov \
-    "+W$WIDTH" "+H$HEIGHT" \
+    "+W$WIDTH" "+H$HEIGHT" "+WT$THREADS" \
     +KFI1 +KFF240 "+SF$frame_number" "+EF$frame_number" +KI0 +KF1 \
     +FN -d -V +A0.2 -J "+O$output"
   status=$?
@@ -55,4 +56,4 @@ for frame in 0001 0120 0240; do
   file "$expected"
 done
 
-echo "All three separated frames were rendered: $OUTPUT_DIR/frame{0001,0120,0240}.png"
+echo "All three separated frames were rendered: $OUTPUT_DIR/frame{001,120,240}.png"
