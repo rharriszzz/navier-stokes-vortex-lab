@@ -5605,3 +5605,202 @@ optical feedback and hardware/noise limits. Strict wall sensing remains the
 baseline. Start publication `0dde461` succeeded; scoped completion publication
 is prepared. Actual delivery hash/push outcome follows in the final response.
 PC retains ownership, released: no. No post-push log edit. Next prompt: Continue.
+
+## R185 — 2026-09-22 (America/New_York) — Boundary hardware and optical experimental feasibility
+
+**User wording:** “so, on the boundary, we want to allow sensors,presure actuators, and potential other ways to get fluid in or out of the test area.  What is commercially available, or what could conceiviably be built.  we only need to demonstrate 1 to 4 orders of magnitude of the overall scenario.  In addition to sensors on the boundary, we can have as many small beads as you want in the fluid detected by cameras on the boundary, possibly illumiated by whate works best. The end result of a movie is not worth doing until we can understand how close the physical experiment can get to the paper's solution.”
+
+Supplied terminal excerpt (box drawing/progress bars omitted; account email redacted):
+```text
+Worked for 11m 24s · done 12:24 AM
+OpenAI Codex (v0.155.1)
+model: gpt-6-astra high /model to change
+directory: ~/git/navier-stokes-vortex-lab
+Tip: New Use /fast to enable our fastest inference with increased plan usage.
+Token usage: total=136,166 input=117,290 (+ 2,043,008 cached) output=18,876 (reasoning 3,013)
+To continue this session, run codex resume, then select Review Codex run status (01a0c74e-d869-79a3-b993-9237418d06e0)
+/status
+Visit https://chatgpt.com/codex/settings/usage for up-to-date information on rate limits and credits
+Model: gpt-6-astra (reasoning high, summaries auto)
+Model provider: openai
+Directory: ~/git/navier-stokes-vortex-lab
+Permissions: Workspace (Ask for approval)
+Agents.md: AGENTS.md
+Account: [REDACTED account email] (Plus)
+Collaboration mode: Default
+Session: 01a0c75d-1c87-7f32-b97b-2fc383e9c72f
+Weekly limit: 80% left (resets 17:37 on 28 Sep)
+Credits: 283 credits
+Luna Reserve Weekly limit: 100% left (resets 00:25 on 29 Sep)
+```
+These are supplied snapshots, not independently checked usage/account state.
+No private session files inspected; no omitted session history inferred.
+
+**Scope/status:** Started. Research commercially offered and buildable boundary
+actuation, balanced inflow/outflow, wall sensors and exterior-camera particle
+measurements; relate limits to a finite paper analogue and explain the ambiguous
+1–4-decade metric. The user now permits interior optical measurements using
+boundary/exterior cameras, superseding the strict pressure-only sensing
+restriction for this experimental-design study. Historical numerical benchmarks
+retain their declared measurement operators. Prioritize quantified physical
+fidelity before a movie. No procurement, hardware build, solver/controller
+implementation, numerical/FEM or rendering workload, commit or push requested.
+Initial checks: rharris on owner PC/WSL daisy; user-owned checkout/.git; clean
+main tracking origin/main with equal locally recorded tips ad11d02 and no
+stashes. Existing handoff records Mac release; local Git cannot establish remote
+unpublished work/process state. No transfer or conflicting local work observed.
+
+## R186 — 2026-09-22 (America/New_York) — Evaluate radius and time together
+
+**User wording:** “I don't know whether I want better radius contraction or time, you might need to evalate both, until it becomes clear which balance of the two is most feasable.”
+
+**Scope/status:** Started during R185. Evaluate both radius contraction and
+similarity-time range, together with physical duration and engineering limits;
+do not require the user to choose the metric now. For a specified scale law
+these ratios are linked, not independent optimization variables. Carry this
+comparison into the hardware survey, current status and next-task contract.
+No new numerical/PDE workload, procurement, movie or publication authorized.
+
+**R185 outcome:** Complete. Added a sourced commercial-component/custom-assembly
+survey and a candidate balanced-recirculation/swirl/volumetric-imaging design.
+Manufacturer offerings cover KNF pumping, Fluigent/Elveflow pressure regulation,
+H2W motion stages, Validyne wet differential pressure sensing and LaVision/
+Dantec particle tracking and tracers. Advertised limits are distinguished from
+installed flow/bandwidth/noise; no stock, quotation or working-system claim.
+Pressure needs a port or moving wall; swirl needs torque/angular-momentum flux.
+Particle concentration, resolution, optical latency and actual core measurement
+are explicit. Hardware location no longer prohibits optical interior feedback.
+
+The survey computes illustrative water scales: 1–4 similarity-time decades
+from 10 mm imply 3.16 mm, 1 mm, 0.316 mm and 0.1 mm radii. Gaussian diffusion-
+balancing strain floors are 0.2, 2, 20 and 200 per second; additional contraction
+requires more. Fixed 25 mm radius/half-height ideal-strain control-volume fluxes
+are illustrative, not pump requirements or a paper-specific bound. Pixel checks
+explain why magnification must increase. The finite paper field/error and
+accurate response remain missing, so no attained range or closeness is claimed.
+
+**R186 outcome:** Complete within this survey. Both radius and similarity-time
+range remain comparison axes, along with elapsed duration and hardware demands.
+Their ratios are linked for the specified scale law; longer duration reduces
+the contraction-rate demand but cannot eliminate diffusion at fixed radius.
+No metric selection is required from the user. This is a conditional feasibility
+screen, not a completed optimization of the full experiment.
+
+Changed files (ten): docs/realizability/BOUNDARY_HARDWARE_FEASIBILITY_R185.md,
+STATUS.md, SESSION_HANDOFF.md, BOUNDARY_CONTROL_HANDOFF.md, PROJECT_TRACKS.md,
+EXPERIMENT.md, PHYSICAL_REALIZABILITY_PLAN.md, CONTROL_RESEARCH_ROADMAP.md,
+REQUEST_LOG.md and WORK_SESSIONS.md. Current task/ownership/sensing priorities
+are aligned; old plans explicitly defer to the new task. Prior logs preserved.
+Checks: identity/owner/Git/stashes; required track documents, primary paper and
+manufacturer sources; Python 3.12.14 dimensional arithmetic and optical pixel
+counts; manual flux balance, torque, pressure/velocity boundary interpretation,
+source/specification and diff review. Final documentation validation follows.
+Skips: reference/PDE evaluation, CFD/FEM/JIT, new solver/controller/hardware,
+physical experiment, trajectory/render/encode, procurement and dependency changes.
+No physical/numerical workload child launched. B2 accuracy remains failed,
+q64/q96 unused and R021 launch integration deferred; no threshold/allowance change.
+
+Next: prepare one finite paper-to-hardware requirements table with missing
+profile/correction parameters and derivative errors, radius/time/duration
+tradeoffs, momentum and measurement demands, and one falsifiable next test.
+The former Gaussian central/surrounding-fluid budget is supporting work, not
+claimed complete. Remaining choices are quantitative target/error/budgets and
+actual hardware operating points. PC retains ownership. No commit/push was
+requested or performed; changes remain uncommitted for review.
+
+Final R185–R186 checks passed: ten documentation files only; 111 local links/
+anchors; Markdown fences; 186 unique request IDs; both prior log prefixes
+byte-for-byte preserved; arithmetic assertions; git diff --check. Disposable
+checker: /tmp/r185_validate.py. Its initial link matcher mistook inline formula
+notation for a link; excluding code spans/fences fixed the checker, and the
+complete check passed. No production code or scientific test was run.
+
+## R187 — 2026-09-22 (America/New_York) — Leave status and continuity current for morning
+
+**User wording:** “I will be be back in the morning, When you are done thinking, please update STATUS.md as well as all the other things you do.”
+
+**Scope/status:** Complete. STATUS.md, the owner/next-task handoff, benchmark
+scope, track/concept/roadmap priority notes, hardware survey and both logs are
+updated for R185–R187. Status leads with the sourced hardware findings, permitted
+optical interior sensing, radius/time/duration comparison and the missing
+paper-target/response evidence. The next task is one finite paper-to-hardware
+requirements table. No movie, new physical/PDE run or procurement; no claim
+that hardware availability proves a feasible paper analogue. No commit/push
+requested. PC retains ownership; ten documentation files remain uncommitted.
+Checks: final documentation/arithmetic checker, append-only logs and whitespace;
+updated request count is 187. Remaining target/error/engineering choices and
+B2 failure are explicit. No unattended or overnight workload launched.
+
+## R188 — 2026-09-22 (America/New_York) — Essential dynamical similarity rather than percentage matching
+
+**User wording:** “I am not sure we can achieve percentage agreements, we might have to try to make something that is "essentially similar" whild being different in a lot of numerical ways.  Controlling everything from the boundary is quite different from this "not very physical" forcing function.”
+
+**Scope/status:** Started. Clarify the experimental objective and continuity
+records: an essentially similar, boundary-realizable finite flow may differ in
+numerical profiles, timing, geometry and driving. Percentage agreement with a
+specific paper field is not a prerequisite. Propose measurable criteria for
+essential dynamics and separate resemblance, mechanism evidence and quantitative
+replication. This is a goal/specification clarification using the existing
+review, not a new paper derivation or hardware/controller choice. Preserve the
+R185–R187 uncommitted documentation changes; they are known work from this
+session. Identity/ownership rechecked: rharris on daisy, user-owned checkout,
+main/origin/main at locally recorded ad11d02, empty stashes, no transfer. No
+commit/push requested and no new workload authorized.
+
+**R188 outcome:** Complete. STATUS.md and the handoff now prioritize measurable
+essential dynamical similarity, allowing different profiles, speeds, schedules,
+geometry and boundary inputs. Percentage agreement with a finite paper field is
+optional; complete paper-field extraction is not a gate for all analogue work.
+Added a candidate essential-property/evidence/allowed-difference table to the
+hardware survey. Core contraction, radial/axial coupling, viscous competition
+and any claimed perturbation-mediated transfer are separated. Momentum-budget
+and phase/on-off evidence distinguish mechanisms; quantitative measurements,
+uncertainty and reproducibility remain necessary. Square-root time conversions
+and Gaussian strain estimates remain conditional, not universal success laws.
+
+Changed files: STATUS.md, SESSION_HANDOFF.md, BOUNDARY_CONTROL_HANDOFF.md,
+docs/realizability/BOUNDARY_HARDWARE_FEASIBILITY_R185.md, PROJECT_TRACKS.md,
+EXPERIMENT.md, PHYSICAL_REALIZABILITY_PLAN.md, CONTROL_RESEARCH_ROADMAP.md,
+REQUEST_LOG.md and WORK_SESSIONS.md. R185–R187 work preserved. No new source
+review, physical calculation, code, PDE/FEM, hardware, rendering or package work.
+Initial identity/ownership/Git/stash checks passed; dirty files are this session's
+known documentation changes, not conflicting work. Final documentation checks
+follow; no numerical or scientific test newly claimed. PC retains ownership;
+no commit/push requested or performed.
+Next: define one measurable essential-similarity contract with acceptable
+differences and falsifiers, map it to boundary hardware/measurements, and specify
+one discriminating first test. Remaining decisions: essential properties,
+evidence thresholds, radius/time balance and actual engineering operating points.
+Final R188 validation passed: ten Markdown files, 113 local links/anchors,
+188 unique request IDs, balanced fences, preserved prior log prefixes and
+whitespace. Existing illustrative arithmetic assertions also passed; no new
+scientific computation. Checker: /tmp/r188_validate.py.
+
+## R189 — 2026-09-22 (America/New_York) — Publish documentation before morning
+
+**User wording:** “did you do a add, commit, push?  if so, I will return in the morning”
+
+**Scope/status:** Started. The preceding updates were uncommitted; report that
+accurately and complete the requested add/commit/push of this session's ten
+documentation files. Treat this as scoped publication authorization, without
+new scientific work. Rechecked rharris/owner daisy, checkout ownership,
+main/origin/main at locally recorded ad11d02, empty stashes and the known
+R185–R188 dirty documentation set. Preserve that work; fetch and compare
+upstream before publishing. No transfer, force-push or history rewrite.
+
+**R189 outcome:** Documentation publication prepared. Fresh git fetch origin
+succeeded and confirmed equal starting HEAD/origin/main at ad11d02. Updated
+handoff/status delivery wording and retained the single essential-similarity
+next task. Validation passed: ten Markdown files, 113 local links/anchors,
+189 unique request IDs, fences, both append-only log prefixes, existing
+illustrative arithmetic and git diff --check. No new scientific or workload
+checks. Files: BOUNDARY_CONTROL_HANDOFF.md, CONTROL_RESEARCH_ROADMAP.md,
+EXPERIMENT.md, PHYSICAL_REALIZABILITY_PLAN.md, PROJECT_TRACKS.md, REQUEST_LOG.md,
+SESSION_HANDOFF.md, STATUS.md, WORK_SESSIONS.md and
+ docs/realizability/BOUNDARY_HARDWARE_FEASIBILITY_R185.md.
+Stage/commit/push these exact files, verify remote tip and clean checkout;
+actual commit hash and push result follow in the final response/Git history.
+No post-push documentation edit. PC retains ownership. Remaining decisions:
+essential-property evidence criteria, radius/time balance and engineering
+operating points. Next: define the measurable similarity contract and one
+discriminating first test. No movie or overnight workload.

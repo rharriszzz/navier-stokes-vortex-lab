@@ -1,5 +1,15 @@
 # Physical Realizability Plan for `navier-stokes-vortex-lab`
 
+R188 priority update (2026-09-22): establish measurable essential dynamical
+similarity before further movie work. Numerical profiles and timing may differ;
+percentage agreement with a paper field is not required. Interior particle measurements from
+boundary/exterior cameras are explicitly allowed alongside boundary sensors
+and actuation, including balanced fluid ports. See the
+[hardware/optical survey](docs/realizability/BOUNDARY_HARDWARE_FEASIBILITY_R185.md)
+and follow the single [current task](SESSION_HANDOFF.md#next-task).
+Older stage recommendations below do not override that task or establish
+hardware capabilities; diffusion times are not actuator-bandwidth specifications.
+
 ## Purpose
 
 This document defines the guiding principle for the project:

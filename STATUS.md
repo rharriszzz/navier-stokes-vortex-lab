@@ -1,22 +1,27 @@
 # Project status: a boundary-controlled engineering approximation
 
-Updated 2026-09-22 (America/New_York), through R184. PC/WSL `daisy` owns the
-repository. Latest work: a symbolic reference calculation and status review;
-no new fluid simulation or rendering run.
+Updated 2026-09-22 (America/New_York), through R189. PC/WSL `daisy` owns the
+repository. Latest work: clarify essential dynamical similarity as the goal,
+with the sourced hardware survey as input. Physical evidence precedes a movie;
+no fluid simulation ran.
 
 | Current question | Answer |
 |---|---|
 | What works? | The illustrative animation pipeline, saved-data checks and separate reference/analysis tools. |
 | Is the engineering goal demonstrated? | No validated boundary-driven contraction or boundary-only state estimator exists yet. |
-| What did the latest step establish? | The exact windowed Gaussian mean needs net angular-momentum input that compact internal stresses cannot supply. This leaves approximate central-feature tracking open. [Derivation](BOUNDARY_CONTROL_HANDOFF.md#78-gaussian-reference-deficit-and-whole-support-compatibility). |
+| What did the latest step establish? | Commercial pumping, pressure control, motion stages and volumetric particle tracking provide credible component options. R185 permits interior tracer measurements from boundary/exterior cameras. Their ability to reproduce the paper remains unproved. [Survey and scale estimates](docs/realizability/BOUNDARY_HARDWARE_FEASIBILITY_R185.md). |
 | What blocks trusted numerical control results? | B2 still fails its independent response-accuracy comparison; q64/q96 remains unrun. |
-| What is next? | Derive the central-cylinder exchange and surrounding-fluid budget. Follow the single [next task](SESSION_HANDOFF.md#next-task); no solver run or movie retry is next. |
+| What is next? | Define measurable essential similarity and map it to boundary hardware, measurements and one discriminating test. Follow the single [next task](SESSION_HANDOFF.md#next-task). |
 
 ## Goal and present conclusion
 
-The user's goal is **a visual simulation of an engineering approximation of
-the first few orders of magnitude of the recent OpenAI result, with forcing
-and sensors on the boundary only**. R172 confirms the motivating reference is
+The user's goal is **a boundary-driven finite experiment that is essentially
+similar in its important dynamics, even with substantially different numerical
+profiles, timing and driving**. R188 removes percentage agreement with a paper
+field as a prerequisite. Quantify what the analogue achieves before a movie. R185 permits fluid ports, boundary actuation and
+sensors, and interior tracer measurements through boundary/exterior cameras.
+R186 asks to evaluate radius contraction, similarity-time range and actual
+duration together before selecting a feasible target. R172 confirms the reference is
 OpenAI's [*Finite time blowup for Navier–Stokes*](https://cdn.openai.com/pdf/32d9f210-8b73-45e0-91bc-82a30aef8a9a/navier-stokes.pdf),
 released with its [September 8 announcement](https://openai.com/index/navier-stokes-solution/).
 
@@ -30,7 +35,8 @@ engineering goal.
 R173 explicitly accepts that boundary-only forcing and sensing might make
 the goal impossible, provided the project gives a clear explanation. A
 supported negative result or a quantified finite limit is therefore a useful
-deliverable, not a reason to weaken the boundary-only requirement.
+deliverable. R185 explicitly broadens sensing to include optical interior
+measurements while retaining boundary actuation.
 
 The paper's Theorem 1.1 concerns smooth forcing in the fluid volume, starting
 from rest, with bounded kinetic energy and finite-time unbounded velocity.
@@ -38,6 +44,16 @@ It does not provide a finite tank with boundary actuators and sensors.
 Replacing that forcing by boundary action is an additional engineering and
 control problem. Our attainable finite range must be measured, not inferred
 from the theorem. We are not attempting to simulate the singular limit.
+
+R188 makes essential similarity the primary objective. The proposed
+[similarity contract](docs/realizability/BOUNDARY_HARDWARE_FEASIBILITY_R185.md#essential-dynamical-similarity--r188-clarification)
+separates coherent core contraction, coupled radial/axial motion, viscous
+competition and any claimed perturbation-mediated momentum transport.
+Different dimensions, speeds, profiles and schedules may be acceptable;
+quantitative measurements, conservation and uncertainty remain necessary.
+A contracting-vortex analogue and evidence for the paper-inspired mechanism
+are distinct achievements. A full finite paper witness is needed only for a
+specific replication claim, not as a gate for every useful analogue study.
 
 ## What we have succeeded in doing
 
@@ -55,7 +71,7 @@ from the theorem. We are not attempting to simulate the singular limit.
 The [track overview](PROJECT_TRACKS.md), [benchmark](BOUNDARY_CONTROL_HANDOFF.md)
 and [control roadmap](CONTROL_RESEARCH_ROADMAP.md) document the foundations.
 Their older future-task language is historical where it conflicts with the
-current handoff or the stricter sensing requirement below.
+current handoff or the R185 sensing clarification below.
 
 ## What the current movie actually shows
 
@@ -139,20 +155,19 @@ solution is proposed, the target momentum residual must be a pressure gradient.
 The [benchmark's residual criterion](BOUNDARY_CONTROL_HANDOFF.md#35-boundary-control-cannot-reproduce-every-forced-target-pointwise)
 explains this necessary condition; it does not rule out approximate matching.
 
-## Boundary sensors: an explicit requirement gap
+## Boundary hardware and optical interior measurements
 
-R171's boundary-only requirement is stricter than the older plans that feed
-interior PIV features into a controller. Pending clarification, this report
-uses the strict interpretation: feedback contains only measurements of
-boundary quantities, such as wall pressure and declared actuator measurements.
-Interior fields and tracer images may be used for validation and visualization,
-but may not be passed to the controller as measured state.
+R185 resolves the earlier ambiguity: cameras at/outside the boundary may
+measure tracers throughout the fluid. These are interior-supported optical
+measurements from exterior hardware and may inform a future estimator. Wall
+pressure and actuator readbacks remain useful. Historical pressure-only tests
+retain their operators; their blind direction does not settle optical sensing.
+No controller exists yet, and hidden exact CFD state remains unavailable.
 
-A camera outside the tank that measures interior velocities has exterior
-hardware but interior measurement support. Whether that is permitted is a
-separate user choice; it is not silently counted as boundary-only sensing.
-No controller exists yet, so this is a specification gap, not a discovered
-violation by a running controller.
+The [hardware survey](docs/realizability/BOUNDARY_HARDWARE_FEASIBILITY_R185.md)
+compares commercial components with custom recirculating ports, swirl input,
+moving walls and volumetric PIV/PTV. It includes optical and viscous scale
+estimates, not attained performance. No hardware has been purchased or selected.
 
 There are useful early deductions and implemented checks:
 
@@ -241,12 +256,13 @@ range.
 ## What remains between today's preview and the intended simulation
 
 1. Review the R177 finite-target proposal and its remaining user-level choices;
-   its units, observables, tolerances and strict boundary sensing baseline are
-   now explicit. Keep target, validation truth, sensors and estimates distinct.
+   its units, observables and tolerances are explicit. Add an R185 optical
+   measurement case while retaining the original pressure-only comparison.
+   Keep target, validation truth, sensors and estimates distinct.
 2. Obtain an accurate small boundary-response benchmark; resolve the current
    B2 comparison before trusting a campaign built on it. Preserve independent
    reference checks and practical execution limits.
-3. Establish influence and boundary-only identifiability at an explicitly
+3. Establish boundary influence and identifiability using permitted sensors at an explicitly
    stated operating point, then test finite-amplitude preparation and nonlinear
    evolution with physically limited actuators.
 4. Quantify the achieved scale range and the need for continued driving;
@@ -308,7 +324,7 @@ errors must be reported.
 
 Finally, concentrating a known input is separate from reconstructing an
 unknown interior state. The FloWave study used wave gauges and optical surface
-measurements; it is not evidence for our strict boundary-only sensing goal.
+measurements; it does not establish an estimator for our target and geometry.
 The proposed benchmark should distinguish precomputed open-loop preparation
 from any later boundary-measurement feedback and evaluate each on its own terms.
 
@@ -384,19 +400,23 @@ R183 supplied SymPy; R184 permits useful dependency changes. All 21 exact
 [symbolic checks](docs/realizability/evidence/r182/README.md) pass, with optional
 pinned dependencies and a retained reproduction script.
 
-The single [next task](SESSION_HANDOFF.md#next-task) is to derive the central
-cylinder's side/endcap exchange and compensating surrounding-fluid budget.
+R185 supersedes the former next task with a sourced hardware/optical survey and
+places physical fidelity before further movies. The single
+[next task](SESSION_HANDOFF.md#next-task) is a measurable essential-similarity
+contract mapped to hardware, measurements and a discriminating first test. The central/surrounding-fluid budget remains supporting
+work, not a completed derivation.
 Retain **GPT-6 Astra / high / PC-WSL daisy**; the linked handoff records the
 model guidance and scope.
-Stop before numerical evaluation, solver/controller code or hardware/sensor
-selection. R021 launch integration stays deferred; its accuracy diagnostic,
+Stop before solver/controller code, procurement or physical execution.
+R021 launch integration stays deferred; its accuracy diagnostic,
 completed R033 prerequisites and R070 repairs remain relevant. B2 is still
 failed and q64/q96 unused. No completed toy work should be restarted.
 
-Unresolved user choices remain the proposed engineering tolerances/preparation
-and command budgets, whether interior optical feedback is allowed, and later
-credible hardware/noise limits. Strict boundary measurement support remains
-the baseline. None of these changes the unchanged B2 accuracy diagnostic.
+Unresolved choices remain the essential properties and their evidence criteria,
+feasible radius/time balance,
+engineering tolerances/preparation, command budgets and measured hardware/noise
+limits. Optical measurements are now allowed. None of this changes the B2
+accuracy diagnostic or establishes a validated optical estimator.
 The rendering repair/preview is complete in `6deb9d0`; R170–R176's assessment
 was delivered in `22cf3d7`. R177 was delivered in `72065c6`; R178–R179 in
 `8aa9245`; R180 in `382e7f2`; R181 in `262c3e3`, verified in fetched upstream
@@ -422,7 +442,13 @@ remain linked from the [handoff](SESSION_HANDOFF.md) and
 
 ## Evidence and checks for this update
 
-The latest result is symbolic. The retained [R182 evidence](docs/realizability/evidence/r182/README.md)
+The latest result is the [R185 survey](docs/realizability/BOUNDARY_HARDWARE_FEASIBILITY_R185.md),
+with manufacturer sources and explicit illustrative arithmetic. No new CFD,
+rendering or physical test ran. R182–R184 delivery is present at local HEAD and
+the locally recorded upstream tip `ad11d02`; no fresh network synchronization
+was performed during R185. R189 subsequently fetched and confirmed equal
+starting tips at ad11d02, and authorizes publication of these documentation
+updates; actual delivery is recorded in Git history and the final response. The earlier [R182 evidence](docs/realizability/evidence/r182/README.md)
 contains the exact checker, 21 passing identities and reproduction instructions.
 It checks cutoff terms and whole-support cancellations; it does not calculate
 an achieved contraction, actuator command, response gain or paper witness.
@@ -438,7 +464,7 @@ published in `262c3e3`; the old pending-delivery wording has been corrected.
 R182–R184 completion and actual delivery are recorded in the logs and final
 response/Git history. PC retains ownership.
 
-No numerical reference evaluation, FEM/JIT, solver/controller, hardware/sensor,
-trajectory, renderer, encoding or physical experiment ran. The only package
-addition was the user-authorized temporary SymPy environment and optional
-research dependency declaration; visualization and FEM environments are unchanged.
+R185 ran source review, dimensional arithmetic and documentation checks only.
+No reference/PDE evaluation, FEM/JIT, hardware implementation, trajectory,
+renderer, encoding or physical experiment ran. R183's temporary SymPy setup
+and R184's optional dependency declaration are unchanged; no new package added.

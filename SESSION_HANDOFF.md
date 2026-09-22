@@ -1,23 +1,30 @@
 # Current session handoff
 
-Last updated 2026-09-22 (America/New_York) for R182–R184.
-**PC/WSL `daisy` owns the repository.** R161/R162 completed the Mac release
-and PC receipt. R181's annular balance/diagnostic was delivered in `262c3e3`.
-R182 derives the Gaussian cutoff deficit and proves that compact internal
-stress cannot supply its increasing total angular momentum while the entire
-prescribed mean and zero exterior flux are retained. Approximate central
-tracking remains open. R183/R184 add optional SymPy reproduction: 21 checks pass.
-STATUS.md now leads with current results, limitations and the immediate task.
-**Next: derive the central-cylinder exchange and surrounding-fluid budget.**
-Retain GPT-6 Astra / high reasoning / PC-WSL `daisy`; no model/platform switch.
-The Gaussian benchmark remains a surrogate. Its 300 s preparation, 10 mm →
-3 mm / 100 s tracking and tolerances remain proposals. No paper witness,
-response gain, mechanism verdict or attained contraction was computed.
-Strict wall sensing remains the baseline; interior CFD/PIV is validation truth.
-B2 accuracy remains failed and q64/q96 unused. R021 launch integration remains
-deferred. R182 start publication is `0dde461`. R182–R184 completion is recorded
-in the logs; consult Git history/final response for its delivery commit and
-push result. PC retains ownership; no numerical/render/FEM workload launched.
+Last updated 2026-09-22 (America/New_York) for R185–R189.
+**PC/WSL `daisy` owns the repository.** R161/R162 completed Mac release and
+PC receipt; there is no new transfer. R185 prioritizes understanding physical
+fidelity before a movie and explicitly allows interior tracer measurements
+through cameras at/outside the boundary. Boundary actuation may use pressure,
+moving elements and balanced fluid ports. Hidden exact CFD state is unavailable.
+The [hardware/optical survey](docs/realizability/BOUNDARY_HARDWARE_FEASIBILITY_R185.md)
+records commercial components, candidate assemblies and conditional scale
+estimates. R188 prioritizes essential dynamical similarity, allowing substantial
+numerical differences; percentage agreement with a paper field is not required.
+No achievable range or mechanism success has been established. R186 asks to
+evaluate radius and time together, including actual duration.
+**Next: define measurable essential similarity and its first discriminating test.**
+Retain the current GPT-6 Astra / high / PC-WSL environment; no switch needed.
+R182's exact whole-Gaussian angular-momentum obstruction remains valid; central
+tracking with different surrounding flow remains open. Its central/exterior
+budget derivation is supporting work, not the sole next task. R182–R184 were
+delivered in `ad11d02`, present at HEAD and locally recorded origin/main.
+R189 authorizes scoped add/commit/push. Fresh fetch confirms HEAD = origin/main
+at ad11d02 before publication. Completion commit/push is prepared; the final
+response and Git history record actual delivery. No post-push log edit planned.
+B2 accuracy remains failed and q64/q96 unused. Historical pressure-only tests
+retain their declared operators; optical permission does not rewrite evidence.
+R021 launch integration remains deferred. No solver/render/physical workload
+ran; no procurement or hardware implementation occurred.
 R168's bounded comparison passed: the same installed default POV-Ray
 3.7.0.10.unofficial rendered the unchanged sphere and project frame 1 at
 160x120 with explicit `-d +WT1 -J`. Both exited 0 and produced visible geometry.
@@ -92,12 +99,12 @@ and physical-work limits remain unchanged.
 | Owner | PC/WSL `daisy`; Mac `fire.lan` released after published R161 handoff and R162 receipt. |
 | Checkout | `/home/rharris/git/navier-stokes-vortex-lab`. |
 | Branch/upstream | `main` / `origin/main` |
-| Starting state | R182 began clean at `262c3e3`; required fast-forward pull already up to date, HEAD = fetched origin/main, empty stashes, no incoming commits. |
+| Starting state | R185 began clean at `ad11d02`, main/origin/main with equal locally recorded tips and empty stashes; no fresh network synchronization claimed. |
 | Interpreter | `/home/rharris/git/navier-stokes-vortex-lab/.venv/bin/python`, CPython 3.12.14 with NumPy 2.5.3 |
 | Other owner/process | Mac `fire.lan` released in the published R161 handoff. Local Git cannot inspect another checkout's unpublished state. |
-| Task processes | R182–R184 ran source/documentation checks, temporary package installation and exact symbolic verification; commands exited, no numerical/render/encode/FEM workload child. |
+| Task processes | R185 source review, arithmetic and documentation checks only; no numerical/FEM/render/physical workload child. |
 | Symbolic environment | `/tmp/navier-r183-sympy/bin/python`, Python 3.12.14, SymPy 1.14.0, mpmath 1.3.0; recreate using `requirements-symbolic.txt` if missing. Existing environments unchanged. |
-| Delivery state | R181 delivery verified in fetched upstream; R182 STARTED published in `0dde461`. R182–R184 completion is in the logs; final response/Git history records actual delivery. PC retains ownership. |
+| Delivery state | R182–R184 delivery `ad11d02` is present locally and at the recorded upstream tip. R189 authorizes publication of R185–R189; fetched origin/main equals the starting HEAD. Actual delivery follows in Git history/final response. PC retains ownership. |
 
 ## Current result and limits
 
@@ -228,62 +235,43 @@ agent-side POV-Ray backtraces are unavailable.
 
 ## Next task
 
-**Derive the central-cylinder angular-momentum exchange and the compensating
-surrounding-fluid budget.** R182 completed the whole-support necessary-condition
-calculation in [benchmark Section 7.8](BOUNDARY_CONTROL_HANDOFF.md#78-gaussian-reference-deficit-and-whole-support-compatibility).
-Its exact-field obstruction leaves central matching with a different exterior
-open. The next step makes that distinction quantitative without changing the
-reference or selecting a controller.
+**Define a measurable essential-similarity contract and map it to boundary
+hardware, observations and one discriminating first test.** R188 supersedes
+the requirement to start with numerical agreement to a finite paper field.
+Use the [candidate criteria](docs/realizability/BOUNDARY_HARDWARE_FEASIBILITY_R185.md#essential-dynamical-similarity--r188-clarification)
+and the hardware survey. Retain the current GPT-6 Astra / high / PC-WSL `daisy`.
 
-**Model / reasoning level / platform: GPT-6 Astra / high / PC-WSL `daisy`.**
-Retain the current model and machine. The session catalog and official
-[Astra documentation](https://developers.openai.com/api/docs/models/gpt-6-astra)
-confirm high reasoning support; research-task fit is judgment, not a speed,
-quota or account-access claim. Use [Luna/medium](https://developers.openai.com/api/docs/models/gpt-5.6-luna)
-only for a later fully specified mechanical task; unresolved mathematical or
-numerical interpretation returns to Astra/high. No switch or future session
-launch occurred.
+1. Identify the minimum essential dynamics for a useful finite analogue and
+   distinguish later mechanism claims. State which profile, geometry, timing,
+   exponent and forcing differences are acceptable. A complete finite paper
+   witness is optional unless making a quantitative replication claim.
+2. Define observable evidence and falsifiers for the selected dynamics: core
+   contraction/swirl, radial/axial transport, viscous competition and any
+   perturbation-stress contribution. Require conservation, uncertainty and
+   reproducibility; allow numerical differences without making resemblance
+   unfalsifiable. Use momentum budgets where they distinguish mechanisms.
+3. Map these requirements to candidate ports/swirl input and optical/wall
+   measurements. Compare radius ratio, duration and engineering demand; infer
+   similarity-time range only under an explicit supported scale relation.
+   Specify one phase/amplitude or perturbation-on/off test, with mean-driving
+   and changed-base-flow effects accounted for, or explain a simpler necessary
+   prerequisite. Do not infer feasibility from component availability.
 
-1. Use a fixed diagnostic cylinder 0 <= r <= 0.025 m, |z| <= 0.025 m,
-   entirely inside the Gaussian plateau. This is an offline control volume,
-   not a new sensor, wall, or change to the existing midplane features.
-   Derive H_c*, side/endcap mean fluxes and viscous torque symbolically;
-   verify dH_c*/dt = -Phi_mean,c* + T_visc,c* and zero net required
-   perturbation contribution. Retain individual faces and their signs.
-2. Partition a larger fixed enclosing cylinder into that core and surrounding
-   fluid. Let only the central mean be prescribed; derive the required change
-   in surrounding angular momentum in terms of net external angular impulse.
-   State the zero-external-input case and the preparation dependence. If a
-   bound on exterior velocity error is useful, derive it symbolically from
-   Cauchy–Schwarz with its volume/radius weight; introduce no numerical budget
-   or approved tolerance. Do not assume an arbitrary reservoir is reachable.
-3. Relate the result to the existing selected-feature objective. Separate exact
-   central-profile matching from approximate features, necessary integral
-   compatibility from stress realizability, and both from boundary reachability.
-   Record one concrete next scientific task in benchmark/status/logs/handoff.
+Completion means one reviewable criteria-to-hardware/evidence table with
+allowed differences, uncertainties and a concrete first test. This is a design
+and source/symbolic reasoning task; stop before new solver/controller code,
+CFD/FEM launch, procurement, hardware building, rendering or physical execution.
+Any optical estimator receives noisy delayed measurements, not hidden CFD truth.
+Physical understanding precedes movies. Historical benchmarks retain their
+operators and accuracy thresholds; R021 remains deferred, B2 failed, q64/q96
+unused and resource/once-only allowances unchanged.
 
-Completion means checkable symbolic face/storage and surrounding-fluid balances
-with precise assumptions and scoped interpretation. Reuse or extend the optional
-[SymPy check](docs/realizability/evidence/r182/README.md) where useful; dependency
-changes are allowed when justified (R184). Stop before reference numerical
-sampling, finite paper extraction/implementation, FEM/JIT, new solver/controller
-code, hardware/sensor choices, rendering or physical execution. No new numerical
-allowance; do not restart completed toys. Next prompt: **Continue**.
-
-R021 launch integration stays deferred. B2 accuracy remains failed; q64/q96 is
-unused. No production method, resource limit, scientific tolerance or once-only
-allowance changes. Later physical work must first resolve numerical accuracy
-and apply R103/R104 practical safeguards.
-
-R182–R184 changed the benchmark, status, handoff and both logs, plus optional
-symbolic dependencies and three small reproducibility files under
-`docs/realizability/evidence/r182/`. Checks: 21 exact SymPy identities, manual
-units/signs/axis/face review and documentation validation. No numerical or
-physical workload child launched; installation/check commands exited.
-Remaining choices: finite paper target/error, axial comparison interval and
-angular-impulse tolerances, engineering budgets, optical feedback allowance and
-hardware/noise limits. Strict wall sensing is unchanged. The preview remains
-complete in `6deb9d0`; no rerender or Mac transfer is needed.
+R189 authorizes publication of this documentation; PC retains ownership. R188
+clarifies the goal and preserves all preceding survey/log work. No workload
+child or overnight task launched. Remaining choices: essential properties,
+evidence thresholds, radius/time balance and engineering operating points.
+Checks and changed-file details are recorded in REQUEST_LOG.md and
+WORK_SESSIONS.md. No Mac transfer or preview retry needed.
 
 ### Note for the next Mac session
 

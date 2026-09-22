@@ -6,6 +6,23 @@ scientific thresholds below are retained unless explicitly labelled proposals.
 
 ## Start here
 
+**R188 objective update:** essential dynamical similarity is the primary goal;
+substantial numerical differences are allowed. Percentage field agreement and
+a complete finite paper witness are not prerequisites for the analogue study.
+The [candidate similarity criteria](docs/realizability/BOUNDARY_HARDWARE_FEASIBILITY_R185.md#essential-dynamical-similarity--r188-clarification)
+and [next task](SESSION_HANDOFF.md#next-task) supersede the previous task wording.
+The Gaussian benchmark and finite-field extraction contract below remain useful
+optional comparison tools; their evidence and accuracy requirements are intact.
+
+**R185 scope update:** the user now allows interior tracer measurements from
+boundary/exterior cameras and prioritizes physical fidelity before a movie.
+The [hardware/optical survey](docs/realizability/BOUNDARY_HARDWARE_FEASIBILITY_R185.md)
+compares commercially offered components and buildable assemblies. Historical
+pressure-only operators and numerical thresholds below are retained as a
+comparison case, not a current prohibition on optical feedback. No optical
+estimator or new numerical result is claimed. The single
+[next task](SESSION_HANDOFF.md#next-task) defines measurable essential similarity; the former central-budget task becomes supporting work.
+
 **R182 result:** [Section 7.8](#78-gaussian-reference-deficit-and-whole-support-compatibility)
 derives the Gaussian reference's angular-momentum deficit with every fixed
 cutoff term. Its central plateau needs no perturbation contribution to the
@@ -13,7 +30,8 @@ swirl balance, but its total angular momentum increases. Compact internal
 stress cannot supply that net increase while the entire prescribed mean and
 its zero exterior flux are retained. This exact-field obstruction does not
 exclude approximate central-feature tracking. The [next task](SESSION_HANDOFF.md#next-task)
-derives the central-volume exchange and surrounding-fluid budget. Section 10's
+now maps essential dynamics to hardware and evidence, with central-volume
+exchange and surrounding-fluid budgets as supporting work. Section 10's
 launch integration remains deferred; benchmark assumptions/gates are unchanged.
 
 **Proposed benchmark: prepare a vortex from rest using the cylinder boundary,
@@ -1242,7 +1260,7 @@ records 21 passing exact SymPy checks, the optional dependency versions and
 reproduction commands. Manual checks additionally cover units, face signs,
 axis limits and the scope of the necessary-condition claim.
 
-**Next scientific calculation:** derive the exchange budget of a fixed central
+**Supporting calculation (R185):** derive the exchange budget of a fixed central
 cylinder entirely inside the plateau, separating side and endcap transport,
 and the compensating surrounding-fluid/angular-impulse budget when only the
 central target is retained. See the single [next task](SESSION_HANDOFF.md#next-task)
@@ -1491,18 +1509,18 @@ Section 5 scalar values and Section 6 verification thresholds are inherited
 records, not newly measured results. Documentation checks and delivery are
 recorded in [REQUEST_LOG.md](REQUEST_LOG.md) and [WORK_SESSIONS.md](WORK_SESSIONS.md).
 
-Remaining user-level choices before a full engineering experiment: accept or
-revise the proposed finite range/tolerances, 300 s preparation budget and command
-limits; retain strict wall sensing or explicitly allow interior optical
-feedback; later select credible hardware/noise limits. None prevents preparing
-the unchanged accuracy diagnostic. The present proposal defaults to strict
-support and retains the existing 10 mm → 3 mm reference for review.
+R185 permits interior optical feedback from boundary/exterior cameras; the
+pressure-only proposal remains a comparison case. R186 requests evaluating
+radius and time together before selecting a feasible target. Remaining choices
+include finite range/tolerances, preparation/command budgets and credible
+hardware/noise limits. The existing 10 mm → 3 mm reference remains a surrogate.
 
 R180 completed the conceptual/modal review in Sections 1.1 and 7.3–7.4.
 R181 adds the symbolic balance, incompressible counterexample and offline
-validation contract in Sections 7.5–7.7. The [next task](SESSION_HANDOFF.md#next-task)
-is the Gaussian target's angular-momentum deficit and global compatibility
-calculation; Section 10 remains deferred. No finite paper target, new tolerance,
+validation contract in Sections 7.5–7.7. R182 completed the Gaussian deficit
+and compatibility calculation in Section 7.8. The [next task](SESSION_HANDOFF.md#next-task)
+now specifies an essential-similarity contract and discriminating first test; Section 10 remains
+deferred. No finite paper target, new tolerance,
 response coefficient or hardware/sensor decision was selected. Manual algebra,
 units, face signs, counterexample divergence/flux integrals and documentation
 checks are recorded in the logs. No numerical evaluation or solver test ran.

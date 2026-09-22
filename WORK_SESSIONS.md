@@ -359,3 +359,74 @@ Files: BOUNDARY_CONTROL_HANDOFF.md, STATUS.md, SESSION_HANDOFF.md, REQUEST_LOG.m
 Checks: clean required fast-forward synchronization/equal tips and ownership/stashes, required track/source review, 21 exact SymPy checks on Python 3.12.14/SymPy 1.14.0, pip dependency check, manual units/signs/axis/face interpretation, 68 local links/anchors, fences, 184 unique IDs, append-only logs, all 19 R033 production pins, unchanged reference/configuration/visualization requirements, preserved benchmark/status science, nine-file scope and whitespace. Final post-append/staged checks follow. Evidence: benchmark Section 7.8 and retained R182 checker/result; disposable /tmp/r182_validate.py and /tmp/r182_validation.json.
 Skips: numerical reference evaluation, finite paper witness, FEM/JIT, solver/controller, hardware/sensors, trajectory/render/encode and physical experiments. No numerical/physical workload child launched; installation/check commands exited. No model/platform switch. B2 remains failed; q64/q96 unused and R021 integration deferred. Paper target/error/impulse and engineering/optical/hardware choices remain open.
 Next: Astra/high on PC/WSL daisy derives the central-cylinder side/endcap exchange and compensating surrounding-fluid budget; symbolic checks only, with the handoff's explicit stopping conditions. Luna/medium only for a fully specified mechanical follow-up; unresolved science retains Astra/high. Start publication 0dde461 succeeded; actual final delivery hash/push outcome follows in final response. No post-push edit.
+
+## R185–R186 — Boundary hardware, optical sensing and radius/time feasibility
+COMPLETED | 2026-09-22 (America/New_York) | PC/WSL daisy | released: no
+Base: ad11d02; clean main/origin/main with equal locally recorded tips and empty
+stashes. No fresh fetch/pull, publication authorization, commit or push.
+R185 researched commercial pumps, pressure controllers, voice coils, wet pressure
+sensors, water tracers and volumetric PIV/PTV using manufacturer sources. The
+custom concept combines balanced recirculation and independent swirl input.
+Interior particle measurements from boundary/exterior cameras are now allowed;
+historical pressure-only numerical operators remain comparison cases. R186
+requests assessing radius contraction, similarity time and actual duration
+together before choosing the feasible target. Physical fidelity precedes movies.
+Files: docs/realizability/BOUNDARY_HARDWARE_FEASIBILITY_R185.md, STATUS.md,
+SESSION_HANDOFF.md, BOUNDARY_CONTROL_HANDOFF.md, PROJECT_TRACKS.md, EXPERIMENT.md,
+PHYSICAL_REALIZABILITY_PLAN.md, CONTROL_RESEARCH_ROADMAP.md, REQUEST_LOG.md,
+WORK_SESSIONS.md (ten documentation files).
+Checks: initial identity/ownership/status/upstream/stashes, required track and
+primary-source review, manufacturer specifications, Python 3.12.14 arithmetic
+for decade/radius/diffusion/strain/conditional throughput and pixel calculations,
+manual dimensional/physical interpretation. Documentation checks recorded in
+the request outcome; no code, reference, solver or benchmark threshold changed.
+Skips: numerical reference/PDE evaluation, FEM/JIT, solver/controller or hardware
+implementation, physical tests, render/encode, packages and procurement. No
+workload child launched. No demonstrated range, paper closeness or price quoted.
+Next: one finite paper-to-hardware requirements table, with explicit missing
+paper parameters/error, radius/time tradeoffs, momentum and optical demands,
+and one falsifiable follow-up test. B2 failed/q64-q96 unused; R021 deferred.
+Final documentation validation passed: ten-file Markdown scope, 111 local links/
+anchors, fences, 186 unique request IDs, append-only log prefixes, arithmetic
+assertions and whitespace. Disposable checker: /tmp/r185_validate.py; an initial
+code-notation link false positive was corrected before the passing run.
+
+## R187 — Morning status and continuity
+COMPLETED | 2026-09-22 (America/New_York) | PC/WSL daisy | released: no
+User asks to update STATUS.md and normal continuity records after the review.
+Status/handoff and survey reflect R185–R186 findings and unresolved feasibility;
+R187 recorded append-only. Same ten documentation files, no code/physical/movie
+workload, no publication authorization. Next: finite paper-to-hardware
+requirements table comparing radius, similarity time and elapsed duration.
+Final checker uses 187 unique request IDs; other checks unchanged.
+
+## R188 — Essential dynamical similarity
+COMPLETED | 2026-09-22 (America/New_York) | PC/WSL daisy | released: no
+The user permits an essentially similar boundary-driven flow with substantial
+numerical differences. Updated status, handoff, survey, benchmark and four
+track/plan priority notes; preserved prior uncommitted work and appended logs.
+Proposed observable criteria distinguish core contraction and coupled transport,
+viscous competition, and perturbation-mediated momentum transfer. Exact field
+replication/percentage matching is optional; measurement, conservation and
+uncertainty remain required. Numerical benchmarks and thresholds unchanged.
+Same ten documentation files as R185–R187. No new literature search or physical
+calculation; this is a scope clarification using the previous review. Checks:
+identity/ownership/branch/upstream/stashes, known dirty-work provenance, local
+links/anchors/fences, request IDs, append-only logs, whitespace and diff review.
+No code/PDE/physical/render tests or workload, procurement, commit or push.
+Next: measurable essential-similarity contract mapped to hardware/observations
+and one discriminating test; retain radius/time comparison and optical sensing.
+Final R188 validation: ten Markdown files, 113 local links/anchors, 188 unique
+request IDs, fences, append-only prefixes, existing arithmetic assertions and
+whitespace passed (/tmp/r188_validate.py).
+
+## R189 — Publish documentation for morning
+PUBLICATION PREPARED | 2026-09-22 (America/New_York) | PC/WSL daisy | released: no
+User requests add/commit/push; prior R185–R188 changes were uncommitted. Fresh
+fetch succeeded, equal starting tips ad11d02, empty stashes and known ten-file
+documentation scope. Updated status/handoff delivery records; checks passed for
+113 links/anchors, 189 unique request IDs, fences, append-only histories,
+existing arithmetic and whitespace. No science/code/workload change. Scoped
+stage/commit/push and final clean/remote-tip verification follow; actual hash
+and result in final response/Git history, with no post-push edit. Next task
+remains measurable essential similarity and a discriminating first test.
