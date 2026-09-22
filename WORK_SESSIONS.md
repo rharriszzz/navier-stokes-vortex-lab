@@ -265,3 +265,8 @@ Task: Receive the published Mac handoff, verify identity/ownership/status/upstre
 RESUMED | 2026-09-22 02:16:23 UTC | R163: user requested fixing the PC Python version problem; bounded environment selection/setup only, with no workload launch.
 COMPLETED | 2026-09-22 02:22:00 UTC | outcome: repository-local Python 3.12.14 environment created with NumPy 2.5.3; receipt and environment repair complete | released: no (PC retains ownership)
 Changed files: REQUEST_LOG.md, WORK_SESSIONS.md, SESSION_HANDOFF.md, STATUS.md | Checks/skips: `.venv/bin/python` and `.venv/bin/python3` both report 3.12.14; NumPy 2.5.3 imports; `git diff --check` passed; trajectory, render, encode, FEM, physical and benchmark work skipped | Evidence: local `.venv` is ignored; no generated workload outputs | Next task: user-selected bounded project task using activated `.venv`; Luna/medium routine, Astra/high only for a new build/format decision or unexpected failure.
+
+## R164 — Continue the published PC handoff
+STARTED | 2026-09-22 02:24:53 UTC | PC/WSL | daisy | Linux 6.18.33.2-microsoft-standard-WSL2/x86_64
+Checkout: /home/rharris/git/navier-stokes-vortex-lab | Branch/upstream: main/origin/main | Starting commit: d5415148ae2e6595f3b77eb13c8be143050689a4
+Task: Resume the published handoff, verify clean synchronization/ownership and the repository-local Python 3.12 environment, then stop without launching a project workload. No trajectory, rendering, encoding, FEM, physical, benchmark or build work.
