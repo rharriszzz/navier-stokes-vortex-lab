@@ -594,3 +594,43 @@ Bounded task: finite inlet/return and preparation contract, averaged versus
 sector geometry validity, existing solver/B2 review, numerical verification and
 implementation-admission decision. No solver code/dependencies/CFD/FEM or
 physical/optical/render execution. Publish start before substantive work.
+
+### R194 completion
+COMPLETED | 2026-09-22T15:20:36Z | PC/WSL daisy | released: no
+Outcome: finite-port base-flow boundary and verification contract complete.
+Specified finite inlet profiles, regulated return traction/flux closure, full
+3D nonlinear preparation and conservation/convergence gates. Profile momentum
+and C16/m=4 restrictions preclude treating simple averages/sectors as validated
+vessel bases. Only a separate verification prototype is admitted next; no tank
+implementation/execution, physical route or contraction range established.
+Files (17): BOUNDARY_CONTROL_HANDOFF.md, CONTROL_RESEARCH_ROADMAP.md,
+EXPERIMENT.md, PHYSICAL_REALIZABILITY_PLAN.md, PROJECT_TRACKS.md, REQUEST_LOG.md,
+SESSION_HANDOFF.md, STATUS.md, WORK_SESSIONS.md,
+docs/realizability/BOUNDARY_HARDWARE_FEASIBILITY_R185.md,
+docs/realizability/ESSENTIAL_SIMILARITY_CONTRACT_R191.md,
+docs/realizability/FIXED_CORE_OPERATING_POINT_R192.md,
+docs/realizability/INWARD_TRANSPORT_SCREEN_R193.md,
+docs/realizability/PORT_BASE_FLOW_CONTRACT_R194.md, and
+ docs/realizability/evidence/r194/{README.md,check_contract.py,contract_checks.json}.
+Checks: ownership/clean required pull/stashes; track/research/source review;
+12 retained analytical groups, independent nonzero closed-budget oracles,
+manual boundary/gauge/units/symmetry review; 170 local links/anchors, syntax,
+fences, 194 unique requests, append-only logs at two bases, unchanged benchmark
+science, retained output/table agreement and whitespace. Post-append/staged
+checks follow. Evidence: R194 contract and evidence/r194; disposable
+/tmp/r194_validate.py. Official Astra/high support rechecked with OpenAI Docs.
+Skips: solver/controller code, FEM imports/JIT/meshing/assembly/solves, field
+sampling, CFD/FEM, physical/optical, procurement/hardware, trajectory/render/
+encode, dependencies and transfer. No workload child launched; short checks
+exited. B2 failed, q64/q96 unused, R021 deferred; production science/pins/operators
+and attempt/resource allowances unchanged. No model switch or delegation.
+Next: Astra/high on PC/WSL daisy implements isolated P2/P1 nonlinear verification
+source with exact fixture oracles, mixed flux/gauge checks and a future bounded
+FEM manifest. Stop before FEM imports/JIT/meshing/assembly/solves, tank code or
+physical execution. Method inconsistency stops dependent implementation.
+Missing evidence remains method verification, affordable resolution, boundary
+model sensitivity, full-domain preparation/stability and calibrated response.
+Reconsider a cheaper model only when work is fully mechanical and availability
+is checked. PC retains ownership. STARTED 4d7a823 pushed successfully;
+completion prepared for scoped commit/push. Actual delivery hash/result in
+final response and Git history; no post-push documentation edit.

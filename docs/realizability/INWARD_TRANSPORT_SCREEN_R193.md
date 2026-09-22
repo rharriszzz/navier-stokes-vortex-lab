@@ -235,6 +235,13 @@ No torque, optical or cap gate is satisfied by a large transport gain alone.
 
 ## Decision and minimal next calculation
 
+R194 completed the [base-flow boundary and verification contract](PORT_BASE_FLOW_CONTRACT_R194.md).
+Only a separate verification prototype is admitted next; no tank implementation,
+CFD execution or hardware route is admitted. Follow the single
+[current task](../../SESSION_HANDOFF.md#next-task). The original decision below
+is preserved as historical context.
+
+
 **This screen establishes mechanism sensitivity, not feasibility or exclusion.**
 The quiescent wall result is not a finite-tank gain bound. Advection could help,
 but the geometry, solid-wall injection condition, two traveling modes and

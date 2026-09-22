@@ -1,18 +1,18 @@
 # Current session handoff
 
-Last updated 2026-09-22 (America/New_York) for R193.
+Last updated 2026-09-22 (America/New_York) for R194.
 **PC/WSL `daisy` owns the repository.** No transfer; Mac remains released.
-R193 completed the [inward-transport screen](docs/realizability/INWARD_TRANSPORT_SCREEN_R193.md).
-Advection can defeat quiescent attenuation in a scalar comparison equation;
-actual port/wall gains remain unbounded by the evidence. The nearest band-to-
-diagnostic distance is 77.621 mm, with a necessary axial turn. Solid belts need
-wall-to-stream entrainment, and the standing m=4 input has two differently
-advected traveling components. Fifteen retained analytical check groups pass.
-Neither route is admitted; no feasible contraction range is established.
-**Next: specify and review the smallest credible port-driven base-flow
-calculation and its verification path.** No solver implementation or run.
-Retain GPT-6 Astra / high / PC-WSL `daisy`; no model or machine switch.
-R191's similarity contract and R192's operating-point/error gates remain in force.
+R194 completed the [finite-port base-flow contract](docs/realizability/PORT_BASE_FLOW_CONTRACT_R194.md).
+It specifies finite inlet profiles, regulated return totals with unknown pressure
+tractions, a full three-dimensional nonlinear base and conservation/convergence
+gates. Twelve retained analytical groups pass. At equal flow, the chosen
+parabolic profile carries 4/3 of the uniform-profile angular input; averaged
+inlets and a symmetric sector are not certified representations of the tank.
+**Next: implement only a separate nonlinear verification prototype and its
+algebraic checks; stop before FEM imports/JIT, meshing, assembly or PDE solves.**
+Tank implementation/execution remains unadmitted. No actual base, gain or feasible
+contraction range is established. Retain GPT-6 Astra / high / PC-WSL `daisy`;
+no model or machine switch. R191 similarity and R192 operating/error gates remain.
 The ideal 0.3927 micro-N m contrast, separate 0.1309 micro-N m residual/confound
 limits and 1.528e-7 m²/s² covariance allocation remain unverified requirements.
 R185 permits interior tracers seen by exterior cameras; hidden CFD truth remains
@@ -20,13 +20,14 @@ unavailable to feedback. R188 permits different profiles/timing; R186 retains
 radius/time/elapsed comparisons. The fixed-core point has radius ratio 1,
 no contraction and no claimed similarity-time decades. R182's whole-Gaussian
 obstruction remains valid; both central faces and the exterior inventory count.
-R192 completion d1ed7cb was verified on the fetched upstream. R193 began with a
-clean required fast-forward pull at that commit and published STARTED cb407ec.
+R193 completion 95f7065 was verified on the fetched upstream. R194 began with a
+clean required fast-forward pull at that commit and published STARTED 4d7a823.
 Completion publication is prepared; actual delivery hash/push result follows in
 the final response and Git history. No post-push documentation edit.
 B2 accuracy remains failed, q64/q96 unused and R021 launch integration deferred.
-No solver/controller, CFD/FEM, procurement, hardware, physical/optical,
-trajectory, render or encode workload ran. No task workload child was launched.
+No solver/controller implementation, CFD/FEM, procurement, hardware, physical/
+optical, trajectory, render or encode workload ran. No task workload child was
+launched; only source review and short analytical/documentation checks ran.
 R168's bounded comparison passed: the same installed default POV-Ray
 3.7.0.10.unofficial rendered the unchanged sphere and project frame 1 at
 160x120 with explicit `-d +WT1 -J`. Both exited 0 and produced visible geometry.
@@ -101,12 +102,12 @@ and physical-work limits remain unchanged.
 | Owner | PC/WSL `daisy`; Mac `fire.lan` released after published R161 handoff and R162 receipt. |
 | Checkout | `/home/rharris/git/navier-stokes-vortex-lab`. |
 | Branch/upstream | `main` / `origin/main` |
-| Starting state | R193 clean required fast-forward pull succeeded at d1ed7cb, equal to fetched origin/main; empty stashes, same owner, no conflicting open task. STARTED cb407ec published. |
+| Starting state | R194 clean required fast-forward pull succeeded at 95f7065, equal to fetched origin/main; empty stashes, same owner, no conflicting open task. STARTED 4d7a823 published. |
 | Interpreter | `/home/rharris/git/navier-stokes-vortex-lab/.venv/bin/python`, CPython 3.12.14 with NumPy 2.5.3 |
 | Other owner/process | Mac `fire.lan` released in the published R161 handoff. Local Git cannot inspect another checkout's unpublished state. |
-| Task processes | R193 source/algebra and short arithmetic/documentation checks completed; no numerical/FEM/render/physical workload child launched. |
+| Task processes | R194 source/method review and short analytical/documentation checks completed; no FEM/CFD/render/physical workload child launched. |
 | Symbolic environment | `/tmp/navier-r183-sympy/bin/python`, Python 3.12.14, SymPy 1.14.0, mpmath 1.3.0; recreate using `requirements-symbolic.txt` if missing. Existing environments unchanged. |
-| Delivery state | R192 completion d1ed7cb and R193 STARTED cb407ec published successfully. R193 completion prepared for scoped publication; delivery hash/result in final response. PC retains ownership. |
+| Delivery state | R193 completion 95f7065 and R194 STARTED 4d7a823 published successfully. R194 completion prepared for scoped publication; delivery hash/result in final response. PC retains ownership. |
 
 ## Current result and limits
 
@@ -237,43 +238,45 @@ agent-side POV-Ray backtraces are unavailable.
 
 ## Next task
 
-**Specify and review the smallest credible port-driven base-flow calculation
-at the R192 operating point.** Follow the
-[R193 decision and minimal calculation](docs/realizability/INWARD_TRANSPORT_SCREEN_R193.md#decision-and-minimal-next-calculation),
-[R192 sheet](docs/realizability/FIXED_CORE_OPERATING_POINT_R192.md), and
-[R191 phase contract](docs/realizability/ESSENTIAL_SIMILARITY_CONTRACT_R191.md).
-Retain GPT-6 Astra / high / PC-WSL `daisy`; this is a scientific model/method
-choice. [Official Astra documentation](https://developers.openai.com/api/docs/models/gpt-6-astra)
-was rechecked through OpenAI Docs and lists high support. User-supplied account
-snapshots remain unverified; no model switch or machine transfer occurred.
+**Implement the isolated nonlinear verification prototype specified by R194,
+with algebraic checks and a reviewable future FEM fixture manifest.** Follow the
+[boundary/method contract](docs/realizability/PORT_BASE_FLOW_CONTRACT_R194.md#numerical-method-and-actual-repository-capability)
+and its [admission boundary](docs/realizability/PORT_BASE_FLOW_CONTRACT_R194.md#admission-missing-evidence-and-next-task).
+Retain GPT-6 Astra / high / PC-WSL `daisy`; mixed boundary conditions, pressure
+gauge and conservation consistency still require scientific judgment. The
+[official Astra page](https://developers.openai.com/api/docs/models/gpt-6-astra)
+was rechecked with OpenAI Docs and lists high support. Account snapshots are
+user-reported; no account-access verification, model switch or transfer occurred.
 
-1. Specify flux-compatible finite normal/angled inlet and return geometry,
-   profiles, return closure, fixed-wall conditions, pressure gauge and preparation.
-   Do not prescribe the desired Gaussian throughout the vessel.
-2. Decide whether an axisymmetric averaged boundary is only a screening stage
-   or has a quantified relation to the sixteen-sector geometry. State assumptions
-   and alternatives explicitly; inspect existing solver capability and failed
-   B2 evidence before proposing any reuse.
-3. Specify a numerical-method/verification path for a steady or statistically
-   settled base, covering mass, angular-momentum and energy closure, central
-   strain/swirl, exterior transport and convergence needed for later m=4 response.
-   Finish with missing inputs and an implementation-admission decision.
+1. Derive the exact manufactured transient velocity/pressure, forcing, tractions
+   and two return-group fluxes. Check the mean-zero pressure/two-multiplier
+   constraint rank and compatible lifting. Include independent Poiseuille and
+   rigid-rotation oracles. If the selected weak form/fixtures are inconsistent,
+   stop with that finding before implementation dependent on it.
+2. Implement a separate P2/P1 physical-stress/conservative-convection prototype
+   with backward Euler/BDF2 and nonlinear iteration. Preserve B1/B2 production
+   paths, pins and thresholds. Explicitly exclude the physical tank and campaign;
+   do not import the FEM stack during the permitted checks.
+3. Run standard-library algebra/schema checks, syntax checks and scope checks.
+   Prepare the tiny future FEM verification manifest with versions, mesh/time
+   sequence, exact errors, convergence gates, resource/attempt caps and refusal
+   reports. Review it before any FEM execution is proposed.
 
-Completion: a reviewable base-flow boundary/verification contract. Source,
-algebra and read-only code review only; stop before solver/controller code,
-dependency changes, CFD/FEM, procurement, hardware, physical/optical execution
-or rendering. No automatic phase-test launch. The scalar R193 screen is not a
-tank gain bound. A quiescent Stokes calculation cannot supply this advective
-base. B2 accuracy remains failed, q64/q96 unused and R021 deferred; production
-pins, operators, thresholds and once-only allowances remain unchanged.
+Completion: reviewable isolated source and independently checked fixture oracles,
+plus a bounded future execution contract. **Stop before FEM imports/JIT, mesh
+creation, assembly, PDE solves, tank code, dependency changes, physical/optical
+execution or rendering.** No automatic response or phase-test launch. A code or
+algebra pass does not validate the nonlinear discretization or the tank.
+B2 accuracy remains failed; q64/q96 unused; R021 deferred. Existing physical
+caps 180 s / 1536 MiB, production operators and once-only allowances are unchanged.
 No preview retry or Mac work. Any later feedback uses noisy delayed observations.
 
-Retain Astra/high while physics/method choices remain unresolved. Once work is
-fully specified and mechanical, recommend a cheaper model/effort after checking
-current availability. A recommendation does not switch models or schedule work.
-Next prompt: **Continue**. R193 changed files, checks/skips, evidence and remaining
-choices are recorded in REQUEST_LOG.md and WORK_SESSIONS.md. PC retains ownership;
-completion publication is prepared, with delivery hash/result in final response.
+Retain Astra/high while physics/method decisions remain. Recommend a cheaper
+model/effort only once the remaining work is mechanical and after checking its
+availability. A recommendation does not switch models or schedule another session.
+Next prompt: **Continue**. R194 files/checks/evidence and remaining choices are
+recorded in REQUEST_LOG.md and WORK_SESSIONS.md. PC retains ownership; completion
+publication is prepared, with delivery hash/result in final response.
 
 ### Note for the next Mac session
 

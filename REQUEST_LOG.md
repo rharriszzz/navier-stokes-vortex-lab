@@ -6201,3 +6201,65 @@ empty stashes, no conflicting open task, Mac released. Required clean
 `git pull --ff-only --no-rebase --no-autostash` succeeded, already up to date.
 HEAD equals fetched upstream 95f7065defcacd20799c6ddbf9a89dc1f7b2a427,
 verifying R193 delivery. No incoming changes or owner/model switch.
+
+**R194 outcome:** Complete at the boundary/method specification decision.
+The finite-port contract specifies staggered normal/angled circular bores,
+parabolic section profiles, ideal independently regulated cap totals with unknown
+pressure tractions, a pressure gauge, smooth preparation from rest and full
+three-dimensional nonlinear dynamics. Return swirl is an output; nozzle-wall
+traction, both central caps and exterior inventories count. A parabolic profile
+carries 4/3 of uniform-profile angular input at equal flow (260.508 versus
+195.381 micro-N m); smoothing inlets loses momentum/energy moments. An ordinary
+22.5-degree repeated sector excludes m=4 and symmetry-breaking disturbances.
+Neither averaged nor sector flow is certified as the full vessel's base.
+
+Read-only solver review confirms B1/B2 are Stokes paths; failed divergence/
+physical-accuracy evidence cannot validate nonlinear reuse. Proposed a separate
+P2/P1 physical-stress/conservative-convection verification prototype, with
+backward Euler/BDF2, nonlinear iteration and mixed flow constraints. Only that
+isolated verification implementation is admitted next, with algebra/schema
+checks and a future bounded fixture manifest. Stop before FEM imports/JIT,
+mesh creation, assembly or PDE solves. Tank implementation/execution and both
+hardware routes remain unadmitted; no achievable contraction range established.
+
+Changed files (17): BOUNDARY_CONTROL_HANDOFF.md, CONTROL_RESEARCH_ROADMAP.md,
+EXPERIMENT.md, PHYSICAL_REALIZABILITY_PLAN.md, PROJECT_TRACKS.md, REQUEST_LOG.md,
+SESSION_HANDOFF.md, STATUS.md, WORK_SESSIONS.md,
+docs/realizability/BOUNDARY_HARDWARE_FEASIBILITY_R185.md,
+docs/realizability/ESSENTIAL_SIMILARITY_CONTRACT_R191.md,
+docs/realizability/FIXED_CORE_OPERATING_POINT_R192.md,
+docs/realizability/INWARD_TRANSPORT_SCREEN_R193.md,
+docs/realizability/PORT_BASE_FLOW_CONTRACT_R194.md, and
+ docs/realizability/evidence/r194/{README.md,check_contract.py,contract_checks.json}.
+Handoff opening/owner/Next task and current status/overview links agree.
+
+Checks passed: required identity/ownership/clean fast-forward synchronization;
+track/research inputs and read-only backend/failed-evidence review; 12 retained
+analytical groups under Python 3.12.14 (profile moments, flow/ramp normalization,
+nominal geometry clearance, moment arm, torque/power, averaging counterexample,
+C16/m=4 restrictions, Poiseuille and nonzero affine closed-budget oracles,
+pressure-gauge invariance); manual units/signs/boundary/gauge/symmetry review;
+170 local links/anchors, fences and Python syntax, 194 unique request IDs,
+append-only logs at 95f7065/4d7a823, unchanged benchmark scientific sections,
+retained output/table agreement, scope and whitespace. Disposable documentation
+checker: /tmp/r194_validate.py. Final post-append and staged checks follow.
+Primary DOLFINx Navier–Stokes demo and MIT viscous equations were rechecked;
+new boundary/method choices and tolerances are explicitly our design proposals.
+OpenAI Docs rechecked Astra/high support; no account access or quota claim.
+
+Skips: no solver/controller implementation, FEM imports/JIT, mesh, assembly,
+PDE solve, reference-field sampling, CFD/FEM, dependency changes, physical/optical
+execution, procurement, hardware, trajectory, rendering, encoding or transfer.
+No task workload child launched; short checks exited. B2 accuracy failed,
+q64/q96 unused, R021 deferred; production operators/pins, scientific thresholds
+and attempt/resource allowances unchanged. Remaining evidence: nonlinear mixed
+form verification, feasible resolution/cost, profile/return/stub sensitivity,
+preparation/stability, actual gain and calibrated optical/torque uncertainty.
+Next: Astra/high on PC/WSL daisy implements the isolated verification prototype
+and independent fixture algebra, with a reviewed future FEM manifest; stop
+before FEM execution or tank code. Reconsider a cheaper model only when work
+is mechanical and availability rechecked. PC retains ownership, released: no.
+STARTED 4d7a823 published successfully; its initial sandbox Git-index denial
+was resolved by elevated authorized publication. Completion prepared for scoped
+commit/push; actual delivery hash/result in final response and Git history.
+No post-push documentation edit. Next prompt: Continue.

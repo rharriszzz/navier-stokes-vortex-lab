@@ -6,14 +6,13 @@ scientific thresholds below are retained unless explicitly labelled proposals.
 
 ## Start here
 
-**R193 analytical result:** the [inward-transport screen](docs/realizability/INWARD_TRANSPORT_SCREEN_R193.md)
-finds that advection can improve scalar transmission, but cannot bound actual
-port/wall gains without a realized base and coupled response. Fifteen check
-groups pass; neither route is admitted. The [next task](SESSION_HANDOFF.md#next-task)
-specifies the port-driven base-flow calculation and verification path, stopping
-before solver implementation or any physical/numerical launch. R192's
-[operating-point gates](docs/realizability/FIXED_CORE_OPERATING_POINT_R192.md)
-remain conditional and unchanged.
+**R194 design result:** the [finite-port base-flow contract](docs/realizability/PORT_BASE_FLOW_CONTRACT_R194.md)
+specifies inlet profiles, finite bores, regulated returns, physical traction,
+preparation and nonlinear conservation/convergence gates. Twelve analytical
+groups pass. A separate verification prototype is the [next task](SESSION_HANDOFF.md#next-task),
+stopping before FEM imports/meshing/assembly/solves. No tank run or actuator
+route is admitted. R192's [operating-point gates](docs/realizability/FIXED_CORE_OPERATING_POINT_R192.md)
+remain conditional and unchanged; B2 accuracy remains failed.
 
 **R191 design result:** the [measurable similarity contract](docs/realizability/ESSENTIAL_SIMILARITY_CONTRACT_R191.md)
 defines analogue and mechanism claims separately, with hardware/evidence mapping,

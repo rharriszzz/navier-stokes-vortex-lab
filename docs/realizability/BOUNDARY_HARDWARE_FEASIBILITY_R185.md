@@ -226,8 +226,8 @@ including the criteria/hardware/evidence table, allowed differences, uncertainty
 radius-duration comparison and a proposed fixed-core phase test. Its Gaussian
 central budget is a checked null explanation for contraction without perturbation
 stress, not a tank solution. R192 supplies the [conditional operating-point/detectability sheet](FIXED_CORE_OPERATING_POINT_R192.md).
-R193 completed the [inward-transport screen](INWARD_TRANSPORT_SCREEN_R193.md).
-Neither route is admitted. Next specify the port-driven base-flow calculation
+R194 completed the [base-flow contract](PORT_BASE_FLOW_CONTRACT_R194.md).
+Neither route is admitted. Next implement only its isolated verification prototype
 and verification path, following the [handoff](../../SESSION_HANDOFF.md#next-task).
 B2's failed accuracy gate still prevents trusting that solver's response results;
 relaxing the target does not relax numerical or experimental evidence quality.

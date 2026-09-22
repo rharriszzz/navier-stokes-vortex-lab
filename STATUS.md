@@ -1,17 +1,18 @@
 # Project status: a boundary-controlled engineering approximation
 
-Updated 2026-09-22 (America/New_York), through R193. PC/WSL `daisy` owns the
-repository. Latest work: [inward-transport screen](docs/realizability/INWARD_TRANSPORT_SCREEN_R193.md).
-Fifteen analytical check groups passed. Transport can improve scalar transmission,
-but neither actuator route has a justified tank gain or execution admission.
+Updated 2026-09-22 (America/New_York), through R194. PC/WSL `daisy` owns the
+repository. Latest work: [finite-port base-flow specification](docs/realizability/PORT_BASE_FLOW_CONTRACT_R194.md).
+Twelve analytical groups passed. The contract admits an isolated verification
+prototype next; tank implementation/execution and both hardware routes remain
+unadmitted. No boundary-driven core has been calculated or measured.
 
 | Current question | Answer |
 |---|---|
 | What works? | The illustrative animation pipeline, saved-data checks and separate reference/analysis tools. |
 | Is the engineering goal demonstrated? | No validated boundary-driven contraction or boundary-only state estimator exists yet. |
-| What did the latest step establish? | Conditional advection can defeat quiescent wall attenuation, but actual delivery needs connected paths, wall entrainment, both m=4 traveling responses and coupled velocity/pressure. [Screen and checks](docs/realizability/INWARD_TRANSPORT_SCREEN_R193.md). |
+| What did the latest step establish? | Finite inlet/return conditions and a nonlinear verification path are specified. Profile shape changes angular input; symmetry reductions cannot certify the full base. [Contract and checks](docs/realizability/PORT_BASE_FLOW_CONTRACT_R194.md). |
 | What blocks trusted numerical control results? | B2 still fails its independent response-accuracy comparison; q64/q96 remains unrun. |
-| What is next? | Specify the smallest credible port-driven base-flow calculation and verification plan; follow the single [next task](SESSION_HANDOFF.md#next-task). |
+| What is next? | Implement the isolated verification prototype and algebraic checks, stopping before FEM execution; follow the single [next task](SESSION_HANDOFF.md#next-task). |
 
 ## Goal and present conclusion
 

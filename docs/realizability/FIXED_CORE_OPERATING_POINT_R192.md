@@ -292,6 +292,13 @@ here proves all boundary-driven vortex analogues impossible.
 
 ## Decision and next task
 
+R194 completed the [base-flow boundary and verification contract](PORT_BASE_FLOW_CONTRACT_R194.md).
+Only a separate verification prototype is admitted next; no tank implementation,
+CFD execution or hardware route is admitted. Follow the single
+[current task](../../SESSION_HANDOFF.md#next-task). The original decision below
+is preserved as historical context.
+
+
 R193 completed the [requested transport screen](INWARD_TRANSPORT_SCREEN_R193.md).
 It cannot bound tank gains without a realized base and coupled response; neither
 route is admitted. The single [current task](../../SESSION_HANDOFF.md#next-task)

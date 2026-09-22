@@ -1,0 +1,41 @@
+{
+  "checks_passed": 12,
+  "groups": [
+    "exact circular profile moments",
+    "inlet and balanced return normalizations",
+    "instantaneous flux-compatible smooth preparation",
+    "nominal row band and return separation",
+    "straight oblique bore angular lever arm",
+    "angular flux and independent profile quadrature",
+    "kinetic flux distinct from pressure work",
+    "finite footprint averaging covariance counterexample",
+    "C16 base restriction and m4 phase compatibility",
+    "independent Poiseuille power and pressure oracle",
+    "nonzero independent affine momentum and energy surface budgets",
+    "pressure gauge leaves closed budgets invariant"
+  ],
+  "interpretation": "Analytical proposal checks only; no tank or discretization validation.",
+  "values": {
+    "inlet_mean_m_s": 0.08289319952702882,
+    "inlet_peak_m_s": 0.16578639905405765,
+    "inlet_reynolds": 331.57279810811536,
+    "equal_split_return_mean_m_s": 0.07368284402402563,
+    "return_neighbour_spacing_m": 0.013656322541128979,
+    "torque_uniform_micro_N_m": 195.381144999372,
+    "torque_parabolic_micro_N_m": 260.508193332496,
+    "profile_torque_difference_micro_N_m": 65.12704833312397,
+    "profile_difference_over_confound": 497.5328367694726,
+    "inlet_kinetic_uniform_mW": 0.22904275092759374,
+    "inlet_kinetic_parabolic_mW": 0.4580855018551875,
+    "tank_turnover_s": 94.24777960769381,
+    "one_percent_inlet_torque_micro_N_m": 2.6050819333249597
+  },
+  "affine_oracle": {
+    "mass_out": 2.220446049250313e-16,
+    "angular_out": 8999.999999999996,
+    "torque": 9000.00000000003,
+    "kinetic_out": -420000.0000000001,
+    "traction_work": -419999.83200000005,
+    "dissipation": 0.168
+  }
+}

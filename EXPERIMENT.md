@@ -1,11 +1,12 @@
 # Experimental Concept: Finite-Scale Forced Vortex Analogue
 
-R193 completed the [inward-transport analytical screen](docs/realizability/INWARD_TRANSPORT_SCREEN_R193.md).
-Advection can improve scalar transmission, but geometry, wall entrainment,
-swirl-phase dispersion and coupled response prevent a tank gain bound. Neither
-actuator route is admitted. Next specify the port-driven base-flow calculation
-and verification requirements; follow the single [handoff task](SESSION_HANDOFF.md#next-task).
-No fluid test has run and no feasible contraction range is established.
+R194 completed the [finite-port base-flow contract](docs/realizability/PORT_BASE_FLOW_CONTRACT_R194.md).
+It specifies nonlinear three-dimensional flow, finite inlet profiles and regulated
+returns, conservation/convergence gates and a separate verification prototype.
+Twelve analytical groups pass; no tank solver or physical route is admitted.
+Next implement only the isolated verification prototype and algebraic checks;
+follow the single [handoff task](SESSION_HANDOFF.md#next-task). No FEM or fluid
+test has run here and no feasible contraction range is established.
 
 R188 priority update (2026-09-22): establish measurable essential dynamical
 similarity before further movie work. Numerical profiles and timing may differ;
