@@ -4516,3 +4516,16 @@ for the bounded installed beads/project 1/120/240 check when the user next says
 Continue. Stop on missing input, timeout or invisible geometry and before a new
 build/movie. Mac retains ownership; successful publication ends this agent turn
 without a post-push edit. A publication failure leaves delivery pending here.
+
+## R159 — 2026-09-21 — Continue installed-renderer validation
+
+**User request:** “(there were many requests, I didn't add them up) [supplied
+prior-session transcript and status excerpt] continue”
+
+**Scope/status:** Apply the repository's `Continue` protocol and the current
+handoff's single next task on Mac `fire.lan`: verify active MacPorts package
+state, validate existing saved trajectories read-only, render beads and
+project frames 1/120/240 with the installed POV-Ray under the recorded bounds,
+inspect the required outputs, record the result, and stop before movie,
+trajectory regeneration, FEM, physical, benchmark or new-build work. The
+`Continue` shorthand authorizes scoped commit/push publication. In progress.
