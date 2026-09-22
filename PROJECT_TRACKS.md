@@ -1,8 +1,10 @@
 # Project Tracks
 
-R191 completed the [measurable similarity contract and first-test design](docs/realizability/ESSENTIAL_SIMILARITY_CONTRACT_R191.md).
-The next step quantifies an operating point and detectability for the fixed-core
-phase test; follow the single [handoff task](SESSION_HANDOFF.md#next-task).
+R192 completed the [fixed-core operating-point and detectability sheet](docs/realizability/FIXED_CORE_OPERATING_POINT_R192.md).
+Neither the port nor moving-wall route is admitted: response gains, complete
+torque accounting and measurement bias remain unverified. Next assess whether
+inward transport can rescue the wall response using a bounded analytical screen;
+follow the single [handoff task](SESSION_HANDOFF.md#next-task).
 No test has run and no feasible contraction range is established.
 
 R188 priority update (2026-09-22): establish measurable essential dynamical

@@ -1,0 +1,75 @@
+{
+  "classification": "conditional arithmetic only; no response or measurement admitted",
+  "python": "3.12.14",
+  "checks_passed": 16,
+  "checks": [
+    "peak equation",
+    "steady central signed momentum balance",
+    "side and cap volume flow agree",
+    "balanced sixteen-sector phase 0.000000",
+    "balanced sixteen-sector phase 1.570796",
+    "balanced sixteen-sector phase 3.141593",
+    "balanced sixteen-sector phase 4.712389",
+    "positive inlet velocities at modulation limit",
+    "laminar branch screening Reynolds number",
+    "opposite-phase covariance difference",
+    "quadrature phase null",
+    "both cap weights",
+    "residual allocations respect one-third gate",
+    "wall harmonic diffusion solution",
+    "wall diffusion sensitivity threshold",
+    "independent sample bound brackets target"
+  ],
+  "core": {
+    "vessel_L": 6.283185307179587,
+    "peak_radius_mm": 11.209064227785342,
+    "circulation_m2_s": 0.004922793972290449,
+    "strain_per_s": 0.019999999999999997,
+    "central_flow_L_min": 0.2356194490192345,
+    "angular_momentum_kg_m2_s": 6.463542895627617e-05,
+    "mean_side_N_m": -3.070806715190527e-06,
+    "mean_caps_N_m": 2.585417158251046e-06,
+    "viscous_N_m": -4.853895569394813e-07
+  },
+  "detection": {
+    "phase_contrast_N_m": 3.9269908169872427e-07,
+    "phase_contrast_N_m_s": 3.926990816987243e-05,
+    "expanded_residual_limit_N_m_s": 1.3089969389957476e-05,
+    "external_torque_contrast_limit_N_m": 1.3089969389957476e-07,
+    "covariance_contrast_expanded_limit_m2_s2": 1.527887453682195e-07,
+    "random_only_N_effective_min": 633,
+    "coherent_normal_mean_contrast_error_m_s": 3.05577490736439e-06,
+    "shear_contrast_expanded_error_Pa": 7.639437268410976e-05
+  },
+  "ports": {
+    "mean_speed_m_s": 0.08289319952702884,
+    "peak_speed_m_s": 0.10289319952702884,
+    "branch_Re": 411.57279810811536,
+    "inlet_torque_N_m": 0.00019538114499937203,
+    "oscillation_mean_torque_N_m": 2.8434450804213542e-06,
+    "inlet_relative_matching": 0.0006699709631653325,
+    "branch_pressure_Pa": [
+      119.7633953431174,
+      162.11143737875327
+    ],
+    "common_tube_pressure_Pa": [
+      2605.997521665067,
+      3185.108082035082
+    ]
+  },
+  "wall": {
+    "diffusion_depth_mm": 1.784124116152771,
+    "planar_attenuation_75mm": 5.538272582380903e-19,
+    "amplitude_travel_mm": 31.830988618379067,
+    "acceleration_m_s2": 0.012566370614359173,
+    "stress_amplitude_Pa": 0.015853309190424048,
+    "absolute_torque_envelope_N_m": 4.7812454100214797e-05,
+    "diffusion_frequency_for_gain_point1_Hz": 0.0003000260593963438
+  },
+  "optical": {
+    "pixel_um": 29.296875,
+    "velocity_noise_m_s": 0.0008286407592029855,
+    "max_exposure_s": 0.0001220703125,
+    "gradient_noise_per_s": 1.1718750000000002
+  }
+}

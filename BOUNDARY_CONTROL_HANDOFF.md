@@ -6,13 +6,20 @@ scientific thresholds below are retained unless explicitly labelled proposals.
 
 ## Start here
 
+**R192 design result:** the [operating-point/detectability sheet](docs/realizability/FIXED_CORE_OPERATING_POINT_R192.md)
+compares port and wall routes at an explicit candidate geometry. Sixteen
+arithmetic/balance checks pass; neither route is admitted. Unknown response,
+return/wall torque and optical bias block a feasibility verdict. The
+[next task](SESSION_HANDOFF.md#next-task) assesses inward transport versus wall
+diffusion using an analytical screen, with no solver or physical launch.
+
 **R191 design result:** the [measurable similarity contract](docs/realizability/ESSENTIAL_SIMILARITY_CONTRACT_R191.md)
 defines analogue and mechanism claims separately, with hardware/evidence mapping,
 uncertainty and a fixed-core phase comparison. Its conditional Gaussian central
 side/endcap budget closes without perturbation stress; 15 algebra/arithmetic
 check groups pass. No tank response or physical test is established. The
-[next task](SESSION_HANDOFF.md#next-task) quantifies an operating point and
-detectability; all existing benchmark science and thresholds below are retained.
+[R192 sheet](docs/realizability/FIXED_CORE_OPERATING_POINT_R192.md) supplies the
+conditional operating point; all benchmark science and thresholds are retained.
 
 **R188 objective update:** essential dynamical similarity is the primary goal;
 substantial numerical differences are allowed. Percentage field agreement and
@@ -29,7 +36,7 @@ compares commercially offered components and buildable assemblies. Historical
 pressure-only operators and numerical thresholds below are retained as a
 comparison case, not a current prohibition on optical feedback. No optical
 estimator or new numerical result is claimed. The single
-[next task](SESSION_HANDOFF.md#next-task) now quantifies the R191 fixed-core test operating point and detectability.
+[next task](SESSION_HANDOFF.md#next-task) now follows the R192 analytical response-screen decision.
 
 **R182 result:** [Section 7.8](#78-gaussian-reference-deficit-and-whole-support-compatibility)
 derives the Gaussian reference's angular-momentum deficit with every fixed
@@ -38,7 +45,7 @@ swirl balance, but its total angular momentum increases. Compact internal
 stress cannot supply that net increase while the entire prescribed mean and
 its zero exterior flux are retained. This exact-field obstruction does not
 exclude approximate central-feature tracking. The [next task](SESSION_HANDOFF.md#next-task)
-now quantifies the R191 test operating point; the central-volume budget is
+now follows the R192 response-screen decision; the central-volume budget is
 checked supporting evidence, not a demonstrated boundary realization. Section 10's
 launch integration remains deferred; benchmark assumptions/gates are unchanged.
 
@@ -1527,10 +1534,11 @@ R180 completed the conceptual/modal review in Sections 1.1 and 7.3–7.4.
 R181 adds the symbolic balance, incompressible counterexample and offline
 validation contract in Sections 7.5–7.7. R182 completed the Gaussian deficit
 and compatibility calculation in Section 7.8. The [next task](SESSION_HANDOFF.md#next-task)
-now quantifies an operating point and detectability for the completed R191
-contract/test design; Section 10 remains deferred. R191 adds proposed
+now assesses inward transport versus wall diffusion after the R192 operating
+point sheet; Section 10 remains deferred. R191 adds proposed
 experimental detection criteria without changing benchmark tolerances. No finite
-paper target, response coefficient or hardware/sensor operating point was selected. Manual algebra,
+paper target or response coefficient was established; R192 now supplies a
+conditional hardware/sensor operating point, without admission. Manual algebra,
 units, face signs, counterexample divergence/flux integrals and documentation
 checks are recorded in the logs. No numerical flow evaluation or solver test ran.
 Retain GPT-6 Astra/high on PC/WSL daisy for scientific interpretation; use

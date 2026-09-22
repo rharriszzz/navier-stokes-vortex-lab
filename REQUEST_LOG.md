@@ -5980,3 +5980,67 @@ checkout, no conflicting open lifecycle record. Required clean
 `git pull --ff-only --no-rebase --no-autostash` succeeded, no incoming changes;
 HEAD and fetched upstream both f25c23d31fe7883e9a5689b2e6e36124eede4ab5.
 This verifies R191 completion delivery. Publish STARTED before substantive work.
+
+**R192 outcome:** Complete at the design/admission boundary. Added the fixed-core
+operating-point/detectability sheet and minimal response/calibration specification.
+Candidate: 6.283 L cylinder, two sixteen-sector side bands, balanced normal ports,
+angled ports versus independently moving tangential belt patches, central and
+surrounding optical accounting. Nominal prepared b=10 mm, peak radius 11.209 mm,
+U_p=0.05 m/s; central flow 0.2356 L/min is distinct from trial pump flows 4/2
+L/min. Branch/common-line loss estimates are conditional; 10 kPa is an allowance,
+not demonstrated pump capacity. No vendor maxima were treated as a pump curve.
+
+Ideal opposite-phase contrast: 0.392699 micro-N m over 100 s (39.270 micro-N m s).
+The separate residual and external-confound limits are 13.090 micro-N m s.
+Gross angled inlet torque 195.38 micro-N m would require total external torque
+matching/bounding at 0.0670% of that scale. Return extraction, wall torque and
+surrounding inventory are unknown. An explicit covariance allocation requires
+1.528e-7 m²/s² expanded contrast error; the illustrative random-only floor needs
+633 independent sampling units, not merely 633 frames. Mean-flow bias and
+velocity-gradient uncertainty are also demanding. Quiescent planar wall
+diffusion gives 1.784 mm penetration at 0.1 Hz; this is not a bound on a
+circulating finite tank. Core perturbations exceed the radial base speed, so
+small-signal response cannot be assumed from their small fraction of swirl.
+
+Neither route admitted: boundary-to-core gains, net cap/side transfer, complete
+torque accounting and optical error remain unmeasured. Ports are a response-study
+priority, not a hardware selection; no achievable contraction range established.
+Next: assess whether inward transport can rescue the wall response using a
+bounded analytical advection–diffusion screen, including m=4 swirl advection,
+port delivery times, actual band/core distance and explicit validity/error limits.
+Stop before solver implementation, CFD/FEM, procurement or physical execution.
+Retain GPT-6 Astra/high on PC/WSL daisy while these physics decisions remain open.
+
+Changed files (15): BOUNDARY_CONTROL_HANDOFF.md, CONTROL_RESEARCH_ROADMAP.md,
+EXPERIMENT.md, PHYSICAL_REALIZABILITY_PLAN.md, PROJECT_TRACKS.md, REQUEST_LOG.md,
+SESSION_HANDOFF.md, STATUS.md, WORK_SESSIONS.md,
+docs/realizability/BOUNDARY_HARDWARE_FEASIBILITY_R185.md,
+docs/realizability/ESSENTIAL_SIMILARITY_CONTRACT_R191.md,
+docs/realizability/FIXED_CORE_OPERATING_POINT_R192.md, and
+ docs/realizability/evidence/r192/{README.md,check_operating_point.py,operating_point.json}.
+Current handoff opening/owner/Next task and status/overview links agree.
+
+Checks passed: required identity/ownership/clean fast-forward synchronization,
+track/research inputs; 16 retained standard-library arithmetic/balance groups
+under Python 3.12.14; independent phase/cap quadratures, steady signed central
+budget, instantaneous sector flow balance and diffusion-equation identity;
+manual units, geometry, torque/return, small-signal and uncertainty review;
+145 local links/anchors, Markdown fences, 192 unique request IDs, append-only
+logs at f25c23d/b0c3a72, unchanged benchmark scientific Sections 3–7.8 and 8–10,
+retained table/output agreement, scoped files and whitespace. Disposable checker:
+/tmp/r192_validate.py. Final post-append/staged checks follow.
+Sources: rechecked primary KNF FP 400 and Dantec volumetric PTV descriptions;
+all operating-point, loss, diffusion and noise figures are our conditional
+calculations/assumptions. General search did not provide a useful additional
+wall-diffusion source; the displayed comparison PDE/solution is derived and
+checked directly. OpenAI Docs skill rechecked official Astra/high support;
+no account availability, quota or model-switch claim.
+
+Skips: no solver/controller or production code, CFD/FEM, reference-field
+sampling, physical/optical execution, procurement, hardware build, trajectory,
+render/encode, dependencies or machine transfer. Short checks exited; no workload
+child launched. B2 failed, q64/q96 unused, R021 deferred, existing thresholds,
+operators, production pins and attempt/resource allowances unchanged. PC retains
+ownership, released: no. R192 STARTED b0c3a72 pushed successfully; completion
+publication prepared. Actual delivery commit/push result follows in the final
+response/Git history; no post-push log edit. Next prompt: Continue.

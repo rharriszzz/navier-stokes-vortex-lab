@@ -225,8 +225,9 @@ R191 completed the [measurable essential-similarity contract](ESSENTIAL_SIMILARI
 including the criteria/hardware/evidence table, allowed differences, uncertainty,
 radius-duration comparison and a proposed fixed-core phase test. Its Gaussian
 central budget is a checked null explanation for contraction without perturbation
-stress, not a tank solution. Next: quantify one operating point and detectability
-for that test, following the [handoff](../../SESSION_HANDOFF.md#next-task).
+stress, not a tank solution. R192 supplies the [conditional operating-point/detectability sheet](FIXED_CORE_OPERATING_POINT_R192.md).
+Neither route is admitted. Next assess inward transport versus wall diffusion,
+following the [handoff](../../SESSION_HANDOFF.md#next-task).
 B2's failed accuracy gate still prevents trusting that solver's response results;
 relaxing the target does not relax numerical or experimental evidence quality.
 No attainable range or mechanism success has been established.

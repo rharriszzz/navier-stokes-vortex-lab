@@ -499,3 +499,39 @@ Bounded task: operating-point/detectability sheet for R191 phase test, comparing
 port and wall routes and specifying minimal missing response/calibration.
 Source/algebra/design only; stop before new solver/controller, CFD/FEM,
 procurement, hardware/physical test, trajectory/render/encode or machine switch.
+
+### R192 completion
+COMPLETED | 2026-09-22T14:53:39Z | PC/WSL daisy | released: no
+Outcome: explicit candidate geometry/core and port/wall operating-point sheet,
+flow/impulse/loss/bandwidth/detectability scales and minimal response/calibration
+specification. Neither route admitted: response gains, return/wall torque,
+complete inventory and optical bias remain unknown. The 0.392699 micro-N m
+ideal contrast demands 0.130900 micro-N m external-confound control; quiescent
+wall diffusion is a comparison model, not a finite-tank response bound.
+Files (15): BOUNDARY_CONTROL_HANDOFF.md, CONTROL_RESEARCH_ROADMAP.md,
+EXPERIMENT.md, PHYSICAL_REALIZABILITY_PLAN.md, PROJECT_TRACKS.md, REQUEST_LOG.md,
+SESSION_HANDOFF.md, STATUS.md, WORK_SESSIONS.md,
+docs/realizability/BOUNDARY_HARDWARE_FEASIBILITY_R185.md,
+docs/realizability/ESSENTIAL_SIMILARITY_CONTRACT_R191.md,
+docs/realizability/FIXED_CORE_OPERATING_POINT_R192.md, and
+ docs/realizability/evidence/r192/{README.md,check_operating_point.py,operating_point.json}.
+Checks: required synchronization/ownership/stashes and track review; 16 retained
+arithmetic/balance groups under Python 3.12.14; manual signs/units, geometry,
+uncertainty and response validity; 145 links/anchors, fences, 192 request IDs,
+append-only logs at f25c23d/b0c3a72, unchanged benchmark science, table/output
+agreement, scope and whitespace. Evidence: R192 sheet and retained checker/JSON;
+disposable documentation checker /tmp/r192_validate.py. Post-append/stage checks
+follow. Primary KNF/Dantec sources and official Astra/high guidance rechecked.
+Skips: no solver/controller, CFD/FEM, physical/optical execution, procurement,
+hardware, trajectory/render/encode or dependency change. No workload child
+launched; all short check commands exited. B2 failed, q64/q96 unused, R021
+deferred; no thresholds/operators/pins or attempt/resource allowances changed.
+Next: Astra/high on PC/WSL daisy assesses inward transport versus wall diffusion
+with a bounded analytical advection–diffusion screen and validity/error criteria.
+Include m=4 swirl advection and geometry; do not extend Gaussian interior as a
+known vessel base. Stop before implementation/CFD/physical execution, with one
+minimal next calculation/measurement. Reconsider a cheaper model only after
+scientific decisions settle and work becomes mechanical. PC retains ownership.
+R192 STARTED b0c3a72 published successfully. Completion prepared for scoped
+commit/push; actual delivery hash/result in final response and Git history.
+No post-push documentation edit.

@@ -1,17 +1,17 @@
 # Project status: a boundary-controlled engineering approximation
 
-Updated 2026-09-22 (America/New_York), through R191. PC/WSL `daisy` owns the
-repository. Latest work: a [measurable similarity contract and first test](docs/realizability/ESSENTIAL_SIMILARITY_CONTRACT_R191.md).
-Fifteen conditional algebra/arithmetic groups passed; no fluid simulation or
-physical test ran. No attainable contraction range is established.
+Updated 2026-09-22 (America/New_York), through R192. PC/WSL `daisy` owns the
+repository. Latest work: [fixed-core operating point and detectability](docs/realizability/FIXED_CORE_OPERATING_POINT_R192.md).
+Sixteen conditional arithmetic/balance checks passed. Neither actuator route
+is admitted; no fluid simulation, physical test or achievable range is established.
 
 | Current question | Answer |
 |---|---|
 | What works? | The illustrative animation pipeline, saved-data checks and separate reference/analysis tools. |
 | Is the engineering goal demonstrated? | No validated boundary-driven contraction or boundary-only state estimator exists yet. |
-| What did the latest step establish? | Observable contracting-vortex criteria, distinct perturbation claims, uncertainty/falsifiers and hardware mapping. The proposed first mechanism test reverses perturbation phase at fixed core and accounts for mean-flow/torque changes. Gaussian contraction alone remains a null explanation. [Design and checks](docs/realizability/ESSENTIAL_SIMILARITY_CONTRACT_R191.md). |
+| What did the latest step establish? | One candidate vessel/core/optical geometry, port versus wall demand, and quantitative response/torque/noise gates. The 0.3927 micro-N m phase target needs unknown gains and torque matching below 0.1309 micro-N m. [Sheet and checks](docs/realizability/FIXED_CORE_OPERATING_POINT_R192.md). |
 | What blocks trusted numerical control results? | B2 still fails its independent response-accuracy comparison; q64/q96 remains unrun. |
-| What is next? | Quantify an operating point and detectability for the fixed-core phase test; compare port and moving-wall swirl routes. Follow the single [next task](SESSION_HANDOFF.md#next-task). |
+| What is next? | Assess inward transport versus distant-wall diffusion in a bounded analytical screen; follow the single [next task](SESSION_HANDOFF.md#next-task). |
 
 ## Goal and present conclusion
 
@@ -403,8 +403,8 @@ pinned dependencies and a retained reproduction script.
 R185 supplied the hardware/optical survey and placed physical fidelity before
 further movies. R191 completed the [similarity contract and first-test design](docs/realizability/ESSENTIAL_SIMILARITY_CONTRACT_R191.md),
 including checked central side/endcap and surrounding-fluid accounting. The
-single [next task](SESSION_HANDOFF.md#next-task) quantifies an operating point
-and detectability for its fixed-core phase test. No test has run.
+single [next task](SESSION_HANDOFF.md#next-task) assesses inward transport versus
+wall diffusion after R192 quantified the operating point. No test has run.
 Retain **GPT-6 Astra / high / PC-WSL daisy**; the linked handoff records the
 model guidance and scope.
 Stop before solver/controller code, procurement or physical execution.

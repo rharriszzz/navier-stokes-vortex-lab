@@ -298,6 +298,11 @@ amplification, axial momentum mechanism or useful contraction range.
 
 ## Completion and next decision
 
+R192 completed the [conditional operating point and detectability](FIXED_CORE_OPERATING_POINT_R192.md)
+specified below. Neither route is admitted; its missing-response decision now
+leads to the single [handoff task](../../SESSION_HANDOFF.md#next-task). The
+following paragraph records R191's original next-step specification.
+
 This document supplies the requested criteria/hardware/evidence table, allowed
 differences, uncertainty rules, conditional radius-duration comparison and one
 concrete test protocol. Its unspecified operating point is a declared design
