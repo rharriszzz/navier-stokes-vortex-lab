@@ -11,9 +11,14 @@ with fast-math reproduces the fault. [Diagnosis and saved evidence](docs/renderi
 The 240 saved trajectory frames/500 beads passed the checker again. All three
 320x180 project frames were visually inspected with the working temporary
 executable; tank/tracers and changing tracer distribution are visible. The
-installed MacPorts binary remains unchanged, and no movie was encoded. The
-[next task](SESSION_HANDOFF.md#next-task) is durable conservative-math renderer
-installation and a small recheck. POV-Ray still runs outside the agent sandbox;
+installed MacPorts binary remains unchanged, and no movie was encoded. R141–R144
+prepare a [durable Mac rebuild launcher](packaging/macports/README.md), with
+preflight/lint passed but installation NOT STARTED; the user will authenticate
+in Mac Terminal after handoff publication. The [next repository task](SESSION_HANDOFF.md#next-task)
+is PC/WSL Luna/medium receipt and a small ffprobe-verified contiguous preview,
+after checking the PC's own renderer. Mac repository ownership is released
+upon successful handoff push; the independent build may run while PC owns it.
+POV-Ray on Mac still runs outside the agent sandbox;
 R131's empty user config remains intact. This is illustrative visualization,
 not physical validation.
 

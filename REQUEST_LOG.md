@@ -4105,3 +4105,182 @@ POV-Ray/compiler logs reported their original trailing spaces/blank EOF lines.
 Those captured bytes are deliberately preserved. The scoped source/documentation
 whitespace check excludes only `docs/rendering/evidence/r136/*.txt`; no renderer
 or test failed, and the logs were not rewritten to hide the formatting warnings.
+
+## R139 — 2026-09-21 — Explain fast-math purpose and provenance
+
+**User request:** “why do I want -ffast-math, where did it come from?”
+
+**Scope/status:** Explanation only: trace the installed compiler flag to the
+same-release upstream build script and MacPorts recipe, explain its arithmetic
+assumptions and the observed failure. No build, render, installation or
+publication requested. Identity/ownership match Mac fire.lan; clean main tracks
+origin/main at `79a05ef`, stashes empty before this record. In progress.
+
+**R139 outcome/files/checks/next:** Complete: traced the flag to upstream
+`unix/configure.ac` default optimization logic (line 812), checked that the
+installed MacPorts recipe does not override it, and confirmed the installed
+binary embeds the flag. Clang's official manual confirms its assumptions
+include no infinities/NaNs. Explained that the user does not need it for this
+renderer, ordinary optimizations remain available, and configuration changes
+cannot remove a compile-time setting. No performance gain was measured.
+Updated only REQUEST_LOG.md, SESSION_HANDOFF.md and the renderer diagnosis;
+source/manual review performed, no new workload or test suite launched.
+Next remains Luna/medium durable conservative-math installation and bounded
+render checks per the handoff. No installation decision was made and no
+commit/push is authorized by this explanation request.
+
+## R140 — 2026-09-21 — Recommend a durable POV-Ray fix
+
+**User request:** “which durable fix do you recommend?”
+
+**Scope/status:** Compare supported MacPorts rebuild/persistent port changes
+with an isolated user-local installation, including update behavior, then
+recommend a concrete durable fix. Recommendation only; no installation,
+external issue/message or publication authorized. Mac fire.lan retains
+ownership; main tracks origin/main at `79a05ef`, stashes empty, and the three
+local documentation changes are the known R139 work. In progress.
+
+**R140 outcome/files/checks/next:** Complete: recommend a MacPorts-managed
+source rebuild using a persistent local Portfile override, disabling upstream
+automatic optimization flags and explicitly selecting `-O2 -fno-fast-math`.
+This retains the usual executable/configuration and dependency management;
+the local recipe survives upstream tree refreshes. Official MacPorts docs and
+installed sources.conf confirm first-matching-recipe precedence. Disclosed
+tradeoff: the override also shadows future official recipe updates, so it must
+be maintained or removed after a verified official fix. A separate local
+binary requires independent dependency/rebuild maintenance. No system changes,
+builds/renders, external issue/message or commit/push ran. Changed only
+REQUEST_LOG.md, SESSION_HANDOFF.md and the renderer diagnosis. Read-only recipe
+and official documentation checks performed; source/docs whitespace check
+follows. Next: upon an implementation request, create the local recipe,
+source-build through MacPorts with configuration preserved, inspect sphere/
+beads/three project frames, and stop before movie work or unsupported changes.
+
+## R141 — 2026-09-21 — Publish PC handoff, then rebuild Mac POV-Ray
+
+**User request:** “I am happy to rebuild it, please do it or tell me what to
+do.  But I remember that it takes a long time to rebuild, so please hand off
+to the pc, and recommend a model/level, etc.  then add commit push, then
+rebuild povray.”
+
+**Scope/status:** Explicitly authorizes the recommended durable MacPorts
+rebuild, PC handoff/model recommendation, and scoped add/commit/push, in that
+order: prepare and publish the repository release first, then run the Mac
+package rebuild separately from the shared repository. Mac fire.lan currently
+owns the checkout; known dirty files are only R139–R140 documentation. Fresh
+fetch confirms HEAD/origin/main `79a05ef`; stashes empty. Preserve and publish
+those pending explanations with the handoff. PC receipt is not assumed before
+its own clean pull/ownership checks. No remote PC execution or model switch is
+requested. Build/package logs must stay outside the repository after release;
+if administrator authentication is unavailable, provide the prepared exact
+command rather than claiming the installation ran. In progress.
+
+## R142 — 2026-09-21 — Clarify who must launch the rebuild
+
+**User request:** “do you need me to run it?”
+
+**Scope/status:** Clarification during R141: the external read-only
+`sudo -n true` check exited 1 with “sudo: a password is required”. Explain that
+the user must authenticate directly in Mac Terminal; finish the authorized PC
+handoff/publication and supply one prepared rebuild command. No rebuild has
+started. No new ownership transfer or task replacement is inferred.
+
+## R143 — 2026-09-21 — Explain the sudo password prompt
+
+**User request:** “sudo wants a password”
+
+**Scope/status:** Explain that sudo needs the Mac administrator account's
+password, entered directly in Terminal with no visible typing feedback. Do not
+request or record the password. Continue R141 handoff/publication and prepared
+rebuild instructions; user authentication or build completion is not inferred
+from this message.
+
+## R144 — 2026-09-21 — Provide the rebuild command when ready
+
+**User request:** “ok you will give me the command to run when you are ready”
+
+**Scope/status:** R141 steering confirmed: finish and publish the PC handoff,
+then provide the prepared Mac Terminal rebuild command for the user to launch
+and authenticate. Do not launch the installer automatically. No password is
+requested or stored in this conversation. In progress.
+
+## R145 — 2026-09-21 — Coordinate Mac build and later return from PC
+
+**User request:** “ok  once the handoff is done, I will start the build.
+after the other side completes one or more steps, I will tell it to allow you
+to update files, and do your add commit push.”
+
+**Scope/status:** Confirms the current authorized handoff/publication first,
+then user-launched independent Mac build. After PC receipt, no Mac repository
+edits/publication until the user arranges explicit PC release and Mac performs
+the receiving/synchronization checks. Future permission does not mean release
+has happened now. No automatic installer launch or overlapping writers. In
+progress with R141/R144 handoff delivery.
+
+## R146 — 2026-09-21 — Explain the single-writer rationale
+
+**User statement:** “this is all because no one likes resolving conflicts
+in merges.”
+
+**Scope/status:** Coordination rationale, not a replacement task: acknowledge
+that serial repository ownership avoids conflicting edits to shared logs and
+handoff files while the independent Mac package build can run concurrently.
+No extra action or permission inferred. Explanation complete; R141–R145
+publication remains in progress.
+
+**R141–R146 outcome/files/checks/next — 2026-09-21 (UTC 2026-09-22):**
+Handoff and runnable build preparation complete; delivery is prepared below,
+and actual commit/push success is reported in the final response/Git history.
+The user will launch the build after publication. The durable installation,
+its smoke test and visual validation have NOT run. `sudo -n true` returned
+“sudo: a password is required”; no password was requested in chat or stored.
+R142/R143 explanations and R144/R145 launch/ownership choices are resolved.
+
+Created `packaging/macports/` with a local 3.7.0.8 revision 6 Portfile, the
+three byte-identical current MacPorts compatibility patches, guarded before/
+after source configuration, normal-user launcher, administrator phase and
+README. The only recipe changes are revision 6, `--disable-optimiz`, `-O2`
+and `-fno-fast-math`. Source checksum is unchanged. MacPorts manages source
+build/activation, retains the old image and existing user config, uses two
+compiler jobs and avoids blanket dependency/rev upgrades. Installation is
+bounded to 30 minutes plus termination grace; the sphere smoke test to 30 s.
+The launcher snapshots inputs and saves all logs/outputs outside the repo
+under the user's Library/Logs. A configuration backup is included, but failure
+does not imply rollback. The local recipe shadows future official recipes;
+review/retirement after an upstream fix remains necessary.
+
+Updated REQUEST_LOG.md, WORK_SESSIONS.md, SESSION_HANDOFF.md, STATUS.md and
+docs/rendering/POVRAY_MAC_BUILD_DIAGNOSIS.md, preserving the pending R139/R140
+explanations. Checks passed: each script's bash syntax, read-only launcher
+preflight, MacPorts lint (0 errors/0 warnings), byte comparisons of the three
+upstream patches, reviewed recipe diff, append-only log prefixes, 146 unique
+request IDs and 56 local documentation targets. Tracked-source whitespace
+passed; final staged checks follow. ShellCheck is unavailable and was not run.
+No installation, new compile/render, trajectory generation, movie, FEM,
+physical, benchmark, model switch, subagent or remote PC operation ran.
+Installed `povray @3.7.0.8_5` is still active. All task commands exited.
+
+Mac `fire.lan` releases repository ownership to intended PC/WSL `daisy` upon
+successful handoff push; publication failure leaves transfer pending. PC must
+perform its own clean receipt/fast-forward/ownership checks. Next repository
+task: GPT-5.6 Luna/medium verifies its own tools/trajectory/renderer, inspects
+sphere and frames 1/120/240, then makes a bounded contiguous 30-frame 320x180
+30-fps H.264/yuv420p preview with ffprobe verification. Stop on missing tools,
+malformed input, timeout or blank output; Astra/high only for new build/model/
+format decisions. The OpenAI Docs skill and official current model pages informed
+that recommendation; account access was not verified. No Mac binary/cache
+transfer is required; default ignored positions are deterministically
+regenerable without overwriting existing PC data.
+
+The independent user-managed Mac build may run while PC owns the repo. Per
+R145, wait for explicit PC release after its step(s), synchronize on Mac, and
+only then record build results or perform another Mac add/commit/push. This
+avoids overlapping writers to the shared logs; it does not claim Git can see
+another checkout's unpublished work. Remaining Mac checks: actual installation,
+sphere visual inspection, beads and project frames using the durable binary.
+
+**R141 final staged-check note:** Full staged whitespace checking flagged
+the copied upstream patch files' context-line spaces and tab indentation.
+These are byte-identical patch inputs, not new shell/documentation whitespace
+errors. Preserved their bytes; the scoped check excluding only the three
+vendored patch files passed. No installation/build was attempted by this check.

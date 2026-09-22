@@ -1,6 +1,12 @@
 # Current session handoff
 
-Last updated 2026-09-21 for R136–R138 (completion UTC 2026-09-22).
+Last updated 2026-09-21 for R139–R146 (prepared for publication UTC 2026-09-22).
+R141 authorizes the conservative-math MacPorts rebuild and asks for a PC
+handoff and commit/push first. R142–R145 establish that the user will launch
+the prepared command and authenticate directly in Mac Terminal. The
+[rebuild bundle](packaging/macports/README.md) passed syntax/preflight and
+MacPorts lint; **the installation/build has not started**. R139–R140's earlier
+explanation/recommendation-only scope is superseded by that authorization.
 The blank-render cause is established: MacPorts POV-Ray 3.7.0.8's fast-math
 build mishandles infinity sentinels in camera defaults. A conservative build
 of the same source renders the unchanged sphere, beads example, official torus
@@ -16,8 +22,12 @@ in the diagnosis. No system installation, movie, FEM or physical work ran.
 Continue to run POV-Ray outside the restricted agent sandbox. Keep the existing
 empty user configuration file; no further configuration edits were needed.
 
-Next: **Luna/medium on the Mac** makes the conservative renderer durable and
-rechecks the small scenes, following the [single next task](#next-task).
+Next repository owner: **PC/WSL `daisy`, Luna/medium**, for bounded movie-pipeline
+validation, following the [single next task](#next-task). Mac ownership is
+released only upon successful publication of this handoff; PC receipt remains
+pending. The independent user-launched Mac package build may then run outside
+the shared checkout. R145 requires explicit PC release and Mac receiving checks
+before any subsequent Mac repository edits/publication; no concurrent writers.
 Project camera/material/trajectory changes are unnecessary for this fix.
 The portable trajectory checker remains a saved-data validity check, not a
 runtime or scientific certificate; [practical supervision policy](docs/realizability/B2_MONITOR_PRACTICAL_SUPERVISION_POLICY.md)
@@ -27,14 +37,14 @@ and physical-work limits remain unchanged.
 
 | Field | Current value |
 |---|---|
-| Owner | Mac `fire.lan`, Darwin/arm64 |
-| Checkout | `/Users/rharris/git/navier-stokes-vortex-lab` |
+| Owner | Outgoing Mac `fire.lan`, Darwin/arm64; released on successful handoff push. Intended receiver PC/WSL `daisy`, pending receipt. |
+| Checkout | Outgoing `/Users/rharris/git/navier-stokes-vortex-lab`; intended PC `/home/rharris/git/navier-stokes-vortex-lab`. |
 | Branch/upstream | `main` / `origin/main` |
-| Starting state | R136 clean fast-forward pull was up to date; HEAD equaled origin/main at `1373c46`; no stashes or user changes. |
+| Starting state | R141 fresh fetch: HEAD/origin/main `79a05ef`; stashes empty. Only known R139–R140 documentation was dirty, preserved for this explicitly authorized publication. No pull over dirty work. |
 | Interpreter | `/Users/rharris/miniconda3/envs/navier-stokes-vortex-b1/bin/python`, CPython 3.12.13 |
-| Other owner/process | PC/WSL `daisy` released ownership in R107; Mac retains ownership. Historical independent user-managed build was not touched. |
-| Task processes | All R136 render, configure and build commands exited; no task process remains. Existing ignored `positions/frame*.inc` passed the checker; temporary binaries/source remain local. |
-| Delivery state | R135 delivery reconciled at `1373c46`; R136 STARTED published as `eff0f15`. R136–R138 completion is prepared for scoped publication; actual delivery hash follows in final response/Git history. |
+| Other owner/process | PC last released in R107 and has not yet received this handoff. Local Git cannot establish its unpublished work/process state; receiver must check. No remote PC action was taken. |
+| Task processes | No task child remains; durable Mac rebuild NOT STARTED. User will run the launcher after publication. Its snapshot/build/logs are outside the repo and may continue during PC ownership. R136 temporary binaries/source and ignored trajectory remain Mac-local. |
+| Delivery state | Base/source commit `79a05ef`. R139–R146 publication authorized and prepared; actual delivery hash/result is in final response/Git history, not this pre-push record. Failure leaves release pending and Mac responsible. |
 
 ## Current result and limits
 
@@ -165,34 +175,63 @@ agent-side POV-Ray backtraces are unavailable.
 
 ## Next task
 
-On Mac `fire.lan`, use **GPT-5.6 Luna/medium** to make the verified conservative
-POV-Ray build durable using the documented same-release recipe and supported
-MacPorts source-build options. Preserve the working installation/configuration
-until the replacement has been reviewed and tested; use the ordinary host
-approval mechanism for installation writes. Do not silently replace the
-MacPorts executable with the temporary binary. If package support or required
-dependencies are unclear, stop with a concrete local-install alternative.
+On **PC/WSL `daisy`, GPT-5.6 Luna/medium**, receive this handoff and validate one
+small contiguous preview of the existing illustrative movie pipeline. This is
+independent of the Mac installation and does not assume the PC renderer works.
 
-Completion checks: confirm effective compiler flags exclude fast-math,
-externally render the canonical sphere and beads example, then inspect project
-frames 1, 120 and 240 using the durable executable. `POV_RAY` is already
-supported by the diagnostic/render scripts. The working temporary binary's
-hash and rebuild instructions are in the [diagnosis](docs/rendering/POVRAY_MAC_BUILD_DIAGNOSIS.md);
-verify it if reusing it. Do not transfer Mac binaries or assume `/tmp` survives
-a machine switch. No source trajectory regeneration is needed.
+1. Follow the full [session protocol](docs/workflow/SESSION_PROTOCOL.md): check
+   identity, local work/stashes, ownership/open sessions and configured upstream;
+   on a clean `main`, pull with `--ff-only --no-rebase --no-autostash`. Confirm
+   the delivered handoff is present; record receipt and publish the Continue
+   start before substantive work. Stop for unresolved ownership/local work.
+2. Read [track rules](docs/workflow/TRACK_RULES.md). Verify PC-local Python 3.12,
+   NumPy, POV-Ray, GNU `timeout`, ffmpeg and ffprobe paths/versions. Mac `gtimeout`
+   scripts are not directly portable; use Linux `timeout` for bounded calls.
+   Do not transfer Mac binaries, environments, `/tmp` files or caches.
+3. Check existing saved positions read-only with `check_trajectories.py`.
+   If absent, generate the defaults (240 frames, 500 beads, 30 fps, eight
+   substeps, seed 20260919) into an empty output directory and check them.
+   `make_trajectories.py` deletes matching output files: never run it over
+   pre-existing unreviewed data. Preserve any partial/corrupt data and stop for
+   reconciliation rather than overwriting it. The Mac's ignored includes are
+   deterministically regenerable, not a required transfer or once-only input.
+4. Render and inspect `tests/scenes/centered_sphere.pov` first. If visible,
+   render project frame 1, then inspect separated frames 1/120/240 at 320x180,
+   two threads, at most 30 seconds per frame. Keep the full 1–240 animation
+   range and select frames with `+SF`/`+EF`; do not retime the source trajectory.
+5. Only after those pass, render contiguous frames 1–30 at 320x180/two threads
+   with a 180-second total render limit. Encode H.264/yuv420p at 30 fps with a
+   30-second encode limit. Confirm with ffprobe: 30 frames, 1-second duration,
+   30 fps, 320x180, H.264 and yuv420p. Inspect separated preview frames for
+   visible motion; three widely spaced stills alone are not this movie.
 
-Stop before movie encoding in that installation task. After durable rendering
-is verified, the following bounded task may render a contiguous short sequence,
-encode H.264/yuv420p and verify duration, frame rate/count, resolution, codec and
-pixel format with `ffprobe`. Do not treat three separated inspection frames as
-a 30 fps contiguous animation. No FEM, physical, broad benchmark or supervision
-work is authorized by this renderer task.
+Keep large generated includes/PNGs/MP4s ignored and local; publish only small
+evidence and scoped workflow corrections if needed. Complete with honest checks,
+stop/process state, one next task and authorized completion publication. This
+is kinematic visualization, not CFD, physical feasibility or a speed benchmark.
+No FEM, physical, monitor or broad package work is included. Stop at the first
+missing tool, timeout, malformed input or background-only renderer result;
+preserve evidence rather than starting repeated sweeps or changing the model.
 
-Recommend Astra/high only for a new compiler/build ambiguity or unexpected
-failure; Luna/medium remains suitable for the settled build/recheck. These model
-names/levels are available in the user's supplied session snapshot; no model
-switch, delegation or automation was performed by this agent.
-**Next prompt: Continue.**
+Recommend **GPT-6 Astra/high** only for a new compiler/build ambiguity or a
+model/format decision. The OpenAI Docs skill informed the recommendation:
+[Luna documentation](https://developers.openai.com/api/docs/models/gpt-5.6-luna)
+lists medium reasoning and its cost-sensitive role;
+[Astra documentation](https://developers.openai.com/api/docs/models/gpt-6-astra)
+describes complex end-to-end work. Account-specific access was not checked;
+these choices also match the user's supplied session snapshot. No switch,
+delegation, remote session or automation has been performed.
+
+Independent Mac action after successful publication:
+`bash /Users/rharris/git/navier-stokes-vortex-lab/packaging/macports/rebuild_povray.sh`.
+Enter the password only in Terminal and keep it open. Its private run directory
+under `~/Library/Logs/navier-stokes-vortex-lab/povray-rebuild/` holds inputs,
+configuration backup, build log, active-revision/flags checks and sphere smoke
+test. Visual sphere and later beads/project rechecks remain unverified; the PC
+must not infer installation success or edit Mac state. R145 says the user will
+ask PC to release after one or more steps; wait for that explicit release,
+then synchronize on Mac before recording build results or doing another Mac
+add/commit/push. **Next PC prompt: Continue.**
 
 ## Historical handoff anchors
 

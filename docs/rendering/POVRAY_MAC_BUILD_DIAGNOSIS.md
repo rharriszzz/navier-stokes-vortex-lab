@@ -19,6 +19,19 @@ background colors. A successful exit and valid PNG were insufficient.
 
 ## Controlled evidence
 
+Flag provenance (R139): upstream 3.7.0.8 `unix/configure.ac`, lines 795–812,
+automatically tests/adds `-ffast-math` when its default optimization path
+identifies a GNU-compatible compiler. The installed MacPorts recipe passes
+`--disable-optimiz-arch`, which disables architecture-specific tuning rather
+than this separate math flag; it supplies no fast-math override. The installed
+executable embeds `-ffast-math` in its compiler flags. The flag therefore came
+from the renderer's build defaults, not the project scenes or user's POV-Ray
+configuration. It aims to permit faster arithmetic by relaxing normal
+floating-point guarantees, including assuming no infinity/NaN operands or
+results. No speed benefit was measured in this task. Standard optimization
+such as `-O2` still works with `-fno-fast-math`; rebuilding is needed to change
+this compile-time setting.
+
 All renderer invocations ran outside the agent sandbox, with a 30-second
 per-render limit, two threads and fresh output directories. Diagnostic examples
 were 160x120 without antialiasing; project checks were 320x180 with antialiasing
@@ -76,6 +89,39 @@ record binary/source hashes and image extrema. The beads source/reference
 checkout was read-only; its working tree stayed clean.
 
 ## Working local executable and reproduction
+
+R140 durable-fix recommendation: keep POV-Ray managed by MacPorts and use a
+small local Portfile repository containing the current `povray` recipe and its
+patches. Disable upstream's automatic optimization additions with
+`configure.args-append --disable-optimiz`, select `configure.optflags -O2`, and
+append `-fno-fast-math` to `configure.cxxflags`. Give the local recipe a distinct
+revision and build from source so the existing faulty binary archive is not
+reused. Preserve existing configuration and verify the installed executable
+against the sphere, beads and three project frames. This is a recommendation,
+not an installed change at R140. R141 subsequently approved implementation;
+R144 asks for the prepared command after PC handoff/publication.
+
+[MacPorts documents local Portfile repositories](https://guide.macports.org/#development.local-repositories)
+and selects the first matching recipe in `sources.conf`. Keeping the override
+outside the synchronized upstream tree preserves it across tree refreshes and
+retains normal package/dependency management and the existing `povray` command.
+The tradeoff is that the local recipe shadows subsequent upstream recipes;
+future POV-Ray updates must be reviewed and the override refreshed or removed
+after an official fix passes the same checks. A separate user-local binary
+would avoid this override but require independent binary/library maintenance.
+No upstream report or message has been sent. No package/source configuration
+was modified by the recommendation request.
+
+R141–R144 implementation: [the reviewed local MacPorts bundle and launcher](../../packaging/macports/README.md)
+preserve the upstream compatibility patches, increase the local revision to 6,
+and apply those conservative flags. Shell syntax, configuration preflight and
+MacPorts lint passed. No installation/build has started: sudo requires the
+user's administrator password, which must be entered only in Mac Terminal.
+The launcher snapshots its inputs outside the repository and uses two compiler
+jobs, saves logs/configuration backup, checks the active revision/flags, then
+runs a bounded ordinary-user sphere smoke test. Actual installation and visual
+checks remain pending. PC repository ownership may proceed independently after
+successful handoff publication and its own receipt checks.
 
 Working executable:
 `/tmp/povray-build-diagnosis.JO4kJZ/povray-safe-math`.
