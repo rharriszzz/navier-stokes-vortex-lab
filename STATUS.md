@@ -1,6 +1,13 @@
 # Project status: physical preparation and a realistic movie
 
-## Current Mac rendering checkpoint — 2026-09-21
+## Current PC plan and completed Mac rendering checkpoint — 2026-09-21
+
+R165 selected a [bounded PC preview](SESSION_HANDOFF.md#next-task) for
+GPT-5.6 Luna/medium: validate the existing 450-frame/128-bead PC inventory,
+inspect separated renders, then render and verify a 30-frame, one-second
+320x180 H.264 preview. This is planned, not executed. PC/WSL `daisy` owns the
+repository; R164 completion is published as `97d9fcf`. The PC inventory differs
+from the previously validated Mac data and must pass its own saved-data check.
 
 R136–R138 identified the background-only-render cause: the installed MacPorts
 POV-Ray fast-math build breaks camera-default handling. A same-release build
@@ -20,8 +27,8 @@ unverified and is not a reason alone to rebuild. No movie was encoded. R155
 confirms PC work never started. R161 transferred ownership back to PC/WSL, and
 R162 received that handoff. R163 created the repository-local `.venv` with
 Python 3.12.14 and NumPy 2.5.3; no sudo or system-wide package change was
-needed. The [next repository task](SESSION_HANDOFF.md#next-task) is now a later
-user-selected bounded task. R157 verifies the user's OpenEXR 3.4.15_0 reactivation;
+needed. The [next repository task](SESSION_HANDOFF.md#next-task) is the R165
+bounded PC preview. R157 verifies the user's OpenEXR 3.4.15_0 reactivation;
 openexr2 and POV-Ray revision 6 also remain active. R158 authorizes publication
 of the notes before a fresh Mac chat; this is not a PC ownership transfer.
 POV-Ray on Mac still runs outside the agent sandbox, but no Mac workload is
@@ -99,8 +106,8 @@ the calculations trustworthy; it is not yet evidence that the apparatus works.
 - **The movie can still illustrate the concept.** The latest work supplies no
   new validated flow history for a physically supported animation. Connecting
   the movie to reliable fluid calculations remains a later milestone; the
-  installed Mac POV-Ray now passes the sphere check, with installed beads/project
-  checks still pending.
+  installed Mac POV-Ray passed the sphere and installed beads/project checks
+  in R159. The selected PC preview remains pending.
 
 ## Overall progress and remaining milestones
 

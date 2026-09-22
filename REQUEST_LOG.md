@@ -4670,3 +4670,64 @@ commit. Next: await a user-selected bounded project task using `.venv`;
 Luna/medium remains suitable for routine validation, while Astra/high is for a
 new build/format decision or unexplained failure. Stop on missing input,
 timeout, invisible geometry or unexpected resource failure.
+
+## R165 — 2026-09-21 — Review plan and select the next-task model
+
+**User request (supplied wording; status UI excerpt summarized, account email
+redacted):** “You are gpt-6-astra high.  Check the current plan, revise it if
+you want, and tell me if you want to continue or switch models.”
+
+The supplied Codex v0.155.1 transcript shows `gpt-5.6-luna medium`, the project
+directory, total/input/cached/output/reasoning token figures of
+37,498/32,912/376,576/4,586/1,272, a resume-session identifier, and a `/status`
+excerpt with Workspace permissions, Default collaboration mode, 89% weekly
+limit remaining, 283 credits, and 100% Luna Reserve remaining. These are
+user-supplied historical observations, not current telemetry. No private
+session files were inspected.
+
+**User request (continued):** “do not continue usless you agree that you are
+the right model for whatever next task you choose.  of course if you want to
+switch models, fix the instructions first, then add commit push.  otherwise
+let me know.”
+
+**Scope/status:** Review current plan and task inputs, select a concrete next
+task and appropriate model, and revise instructions if warranted. Publication
+is explicitly authorized if recommending a model switch. Do not interpret
+the conditional use of “continue” as an unqualified Continue workload request.
+Initial checks: user rharris on PC/WSL daisy; clean main tracking origin/main
+at 97d9fcf with no stashes. Published ownership belongs to daisy; local Git
+does not establish another computer's live state. In progress; no workload
+launched.
+
+## R166 — 2026-09-21 — Clarify Mac completion and PC synchronization
+
+**User request:** “do I have to go back to the mac and ask it to do stuff?  I
+was hoping all that would b e done.  Did I forget to ask you to do a pull first?”
+
+**Scope/status:** Clarify current ownership, completed Mac work and fetched
+upstream state while finishing R165's authorized instruction publication.
+No additional workload or machine transfer requested.
+
+**R166 outcome:** No Mac action is needed. R159 completed installed-renderer
+checks; published R161/R162 records released Mac and received PC ownership.
+During R165, `git fetch origin` succeeded and `git rev-parse HEAD origin/main`
+returned `97d9fcfd7c1bdf7abbc478b66e7e920e8c1be14b` twice. There were no incoming
+commits to pull. Stale handoff prose caused ambiguity and is corrected in R165;
+this is not a claim to have inspected the remote Mac's processes or files.
+Next remains the PC-only preview in SESSION_HANDOFF.md#next-task.
+
+**R165 outcome/files/checks/next:** Review complete. Corrected stale Mac
+ownership and pending R164 delivery text; selected Luna/medium for a bounded
+PC preview with explicit input validation, three separated renders, a
+30-frame encode, ffprobe checks and stopping conditions. Read-only inventory
+found 450 contiguous PC files, all declaring 128 beads, distinct from the Mac's
+240/500 dataset. No saved-data validation pass is claimed. OpenAI Docs informed
+model selection; no switch was performed. Changed files: REQUEST_LOG.md,
+WORK_SESSIONS.md, SESSION_HANDOFF.md and STATUS.md. Identity, ownership,
+branch/upstream/stashes, fresh fetch/equal tips, inventory/source inspection,
+reviewed diff and whitespace checks passed; final staged checks follow.
+Skipped all project workloads, scientific tests and package changes. No child
+workload remains; no unresolved model/task choice. PC retains ownership.
+Publication is authorized by R165 and prepared here; actual commit/push result
+follows in the final response. Next: switch to Luna/medium on PC and Continue
+the task at SESSION_HANDOFF.md#next-task.

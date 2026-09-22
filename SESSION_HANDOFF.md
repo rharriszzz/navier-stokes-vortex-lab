@@ -1,17 +1,20 @@
 # Current session handoff
 
-Last updated 2026-09-22 for R162–R164.
-**Handoff prepared: PC/WSL `daisy` is the intended next owner; Mac `fire.lan`
-has no remaining workload.** R155 explicitly confirms the PC never started
-work; this new user-authorized transfer supersedes the prior Mac-only
-checkpoint. The user ran the [MacPorts launcher](packaging/macports/README.md):
-`povray @3.7.0.8_6` is active, and its sphere test passed both intersections
-and subsequent visual inspection. Effective flags are `-Os -fno-fast-math`,
-not the intended `-O2`. Exact recompilation scope is unknown; R154 accepts this
-repair without another build merely to resolve timing. R158 explicitly
-authorizes publishing these notes before a fresh chat on this Mac. Publication
-is prepared here; actual delivery commit/result follows in the final response
-and Git history. Mac ownership is retained, not transferred to PC.
+Last updated 2026-09-21 (America/New_York) for R165–R166.
+**PC/WSL `daisy` owns the repository.** R161's published Mac release and R162's
+receipt completed the transfer; R164 completion is published in `97d9fcf`.
+R165 reviewed the plan and recommends switching to **GPT-5.6 Luna / medium**
+for the [single next task](#next-task): one bounded PC visualization preview.
+No model switch or preview has run. R165 authorizes publication of these
+instructions before the user changes models. R166 confirms no return to the
+Mac is needed and fresh fetch found no incoming commits. Delivery is reported in Git
+history and the final response, with no post-push edit.
+
+The Mac renderer repair is complete historical evidence, not a pending task.
+The user ran the [MacPorts launcher](packaging/macports/README.md): revision 6
+passed the sphere and R159 installed-renderer checks. Effective flags are
+`-Os -fno-fast-math`, not the intended `-O2`; R154 accepts the repair without
+rebuilding to resolve unknown historical recompilation scope.
 The blank-render cause is established: MacPorts POV-Ray 3.7.0.8's fast-math
 build mishandles infinity sentinels in camera defaults. A conservative build
 of the same source renders the unchanged sphere, beads example, official torus
@@ -29,8 +32,8 @@ retried successfully. R157 records the user's subsequent reactivation;
 read-only verification confirms `openexr @3.4.15_0` and `openexr2 @2.5.10_0`
 are both active alongside POV-Ray revision 6. OpenEXR restoration is complete;
 the launcher did not do it automatically.
-Continue to run POV-Ray outside the restricted agent sandbox. Keep the existing
-empty user configuration file; no further configuration edits were needed.
+For future Mac rendering, run POV-Ray outside the restricted agent sandbox.
+Keep the existing empty Mac user configuration file.
 
 R159 completed the installed-renderer checks. `port installed` confirmed active
 `openexr @3.4.15_0`, `openexr2 @2.5.10_0` and `povray @3.7.0.8_6`; the installed
@@ -50,12 +53,11 @@ at `/home/rharris/.local/bin/python3.12`. The repository-local `.venv` now uses
 Python 3.12.14 with NumPy 2.5.3 from `requirements.txt`. No sudo or system-wide
 change was needed; no workload was launched.
 
-Next: R159 completed the installed-renderer checks **on this Mac**, following the
-[single next task](#next-task). The necessary state is recorded here rather than
-relying on the old chat. No platform switch is needed for Mac-local installation
-checks. Do not start PC repository
-work until a new explicit handoff is prepared and delivered; no concurrent writers.
-Project camera/material/trajectory changes are unnecessary for this fix.
+R165 found that ignored PC inputs differ from the Mac validation dataset:
+`positions/frame0001.inc` through `frame0450.inc` form a contiguous inventory
+of 450 files, all declaring 128 beads. This is an inventory observation, not
+a saved-data validation pass or a cross-machine equivalence claim. Preserve
+these files and validate this actual inventory before rendering.
 The portable trajectory checker remains a saved-data validity check, not a
 runtime or scientific certificate; [practical supervision policy](docs/realizability/B2_MONITOR_PRACTICAL_SUPERVISION_POLICY.md)
 and physical-work limits remain unchanged.
@@ -67,11 +69,11 @@ and physical-work limits remain unchanged.
 | Owner | PC/WSL `daisy`; Mac `fire.lan` released after published R161 handoff and R162 receipt. |
 | Checkout | `/home/rharris/git/navier-stokes-vortex-lab`. |
 | Branch/upstream | `main` / `origin/main` |
-| Starting state | R162 pulled published `fadeb9d` fast-forward and published lifecycle start `13f8804`; stashes empty. |
+| Starting state | R165 started clean at `97d9fcf`; fresh fetch confirmed HEAD = origin/main; stashes empty. |
 | Interpreter | `/home/rharris/git/navier-stokes-vortex-lab/.venv/bin/python`, CPython 3.12.14 with NumPy 2.5.3 |
 | Other owner/process | Mac `fire.lan` released in the published R161 handoff; no PC child process remains. |
-| Task processes | R162/R163 performed only receipt and environment setup; no workload was launched. |
-| Delivery state | R164 start is published; R164 completion publication is pending. |
+| Task processes | R165 is a plan/instruction review; no project workload or child process was launched. |
+| Delivery state | R164 completion published as `97d9fcf`; R165 instructions prepared for authorized commit/push. |
 
 ## Current result and limits
 
@@ -202,18 +204,48 @@ agent-side POV-Ray backtraces are unavailable.
 
 ## Next task
 
-The current PC receipt and Python environment repair are complete. The next
-task is user-selected: use `/home/rharris/git/navier-stokes-vortex-lab/.venv/bin/python`
-or activate `.venv` before any project utility. Luna/medium remains suitable
-for routine bounded validation; recommend Astra/high only for a new build,
-format decision or unexplained failure. Keep any next task bounded and stop on
-missing input, timeout, invisible geometry or unexpected resource failure.
-No movie, trajectory regeneration, FEM, physical or benchmark work is implied
-by R162/R163.
+After switching to **GPT-5.6 Luna / medium**, say **Continue** on PC/WSL `daisy`.
+Follow the session protocol, publish the start record, then complete one
+bounded illustrative preview using the existing PC data. This task is selected
+by R165; it has not yet run. No further task-selection question is needed.
 
-R164 resumed this published PC handoff, confirmed clean synchronization and
-ownership, and verified the repository-local Python 3.12.14/NumPy 2.5.3
-environment plus available POV-Ray and ffprobe. No project workload ran.
+1. Activate `.venv` (Python 3.12.14) and confirm POV-Ray, GNU `timeout`, ffmpeg
+   and ffprobe. Run `python check_trajectories.py positions --frames 450
+   --beads 128` with a 30-second bound. Require a pass and observed motion;
+   preserve all inputs. If the inventory differs, report it and stop rather
+   than silently regenerating or adopting the Mac's 240/500 counts.
+2. Create a fresh local output directory with `mktemp -d`. Render unchanged
+   `fluid.pov` frames 1, 225 and 450 at 320x180, two threads, headless, with
+   antialiasing/no jitter and a 30-second bound per frame. Use the animation
+   range `+KFI1 +KFF450 +KI0 +KF1` and select each frame with `+SF`/`+EF`.
+   Require successful exit, PNG output, nonzero geometry intersections and
+   visual inspection of all three separated frames before proceeding.
+3. Into a separate empty subdirectory render contiguous frames 1–30 with the
+   same settings (`+SF1 +EF30`), bounded to 120 seconds for the sequence.
+   Require exactly 30 numbered PNGs; inspect frames 1, 15 and 30. Encode only
+   this sequence as H.264/yuv420p, 320x180, 30 fps, using ffmpeg with two
+   threads, no overwrite, and a 30-second bound. Verify with ffprobe (10-second
+   bound): 30 decoded frames, 30 fps, 1-second duration, H.264, yuv420p, 320x180.
+4. Record commands, checker result, visual observations, ffprobe metadata and
+   output path; keep generated data out of Git. Label the preview as prescribed
+   kinematic motion. Publish the scoped completion and stop for user viewing.
+
+Use Linux `timeout`; the existing Mac three-frame wrapper requires `gtimeout`
+and hard-codes a different inventory. Avoid the broad default render/encode
+scripts for this task: they can regenerate missing data or mix existing PNGs.
+Do not modify trajectories, scene semantics, packages, or physical/FEM work.
+Stop on missing inputs/tools, validation failure, timeout, invisible geometry
+or unexplained resource failure; ensure this task's children have exited.
+Recommend **GPT-6 Astra / high** for an unresolved build, format, numerical or
+visibility decision. Understood command-wrapper errors can be repaired within
+the existing bounds; do not enlarge a failed workload.
+
+Model choice is task-fit judgment informed by official
+[Luna](https://developers.openai.com/api/docs/models/gpt-5.6-luna) and
+[Astra](https://developers.openai.com/api/docs/models/gpt-6-astra) documentation.
+The supplied UI shows Luna/medium available; no current account quota or
+automatic model switch is claimed. This preview exercises routine existing
+tools, so another Astra review is unnecessary unless a stated stop occurs.
 
 ### Note for the next Mac session
 
@@ -229,15 +261,9 @@ ordering, OpenEXR preflight/restoration and log retention before running it.
 Successful local run directory:
 `/Users/rharris/Library/Logs/navier-stokes-vortex-lab/povray-rebuild/run.DQa0eT/`.
 
-R160 resumed the completed R159 checkpoint and is complete. Clean same-owner
-synchronization was confirmed; the sandbox's blocked `.git/FETCH_HEAD` write
-required the approved host retry. No new workload ran. The R160 start record is
-delivered in `9557450`; the completion publication is the next delivery step.
-Mac retains ownership. The next task is one later user-requested bounded
-renderer preview only; use Luna/medium for routine work and recommend
-Astra/high only for a new build, format decision or unexplained visibility
-failure.
-Its `status.txt` still says visual inspection pending; that automatic status
+R160's completed Mac checkpoint and R161's subsequent published release are
+historical. They do not override current PC ownership or the task above.
+The saved Mac build run's `status.txt` still says visual inspection pending; that automatic status
 was followed by successful agent visual inspection without rewriting the log.
 SHA-256 bindings checked in R155:
 
