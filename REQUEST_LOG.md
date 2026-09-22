@@ -4619,3 +4619,29 @@ approved Git metadata access to `fadeb9d`. The current handoff releases Mac
 command name and this is recorded as an environment exception, not a test
 result. POV-Ray and ffprobe are present; shared checker/trajectory sources and
 saved position inputs are present. No workload has run.
+
+## R163 — 2026-09-21 — Fix PC Python version selection
+
+**User request:** “lets fix the python version problem because it is easy”
+
+**Scope/status:** Extend the open R162 PC receipt task to resolve the missing
+Python 3.12 environment using the repository's existing setup and preferred
+interpreter guidance. Keep the repair bounded to environment selection or
+setup; do not change application code, downgrade the project requirement, or
+launch trajectory, rendering, encoding, FEM, physical or benchmark work.
+Continue authorization remains active for the scoped lifecycle publication.
+Append a RESUMED note under R162 rather than creating a duplicate STARTED
+record. Stop if installation requires an unapproved broad package mutation,
+network/dependency failure, or a model/format decision.
+
+**R163 outcome/files/checks/next:** Complete. The user-installed
+`/home/rharris/.local/bin/python3.12` (3.12.14) was found; no sudo was needed.
+Created the ignored repository-local `.venv` with that interpreter and installed
+the declared `numpy>=1.23` dependency as NumPy 2.5.3. After activation,
+`python` and `python3` both resolve to `.venv/bin` and report Python 3.12.14;
+NumPy import passed and `git diff --check` passed. Changed tracked files are
+REQUEST_LOG.md, WORK_SESSIONS.md, SESSION_HANDOFF.md and STATUS.md; `.venv`
+is ignored. No trajectory, render, encode, FEM, physical or benchmark check
+ran. The next task is user-selected bounded work using the activated `.venv`;
+Luna/medium remains appropriate for routine validation, with Astra/high only
+for a new build/format decision or unexpected failure.

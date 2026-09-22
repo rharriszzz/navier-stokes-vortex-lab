@@ -1,6 +1,6 @@
 # Current session handoff
 
-Last updated 2026-09-21 for R147–R161 (UTC 2026-09-22).
+Last updated 2026-09-22 for R162–R163.
 **Handoff prepared: PC/WSL `daisy` is the intended next owner; Mac `fire.lan`
 has no remaining workload.** R155 explicitly confirms the PC never started
 work; this new user-authorized transfer supersedes the prior Mac-only
@@ -44,6 +44,12 @@ The first wrapper's reserved zsh variable error occurred after beads succeeded;
 the project frames ran once in a corrected wrapper. No trajectory, scene,
 package, movie, FEM or physical change was made.
 
+R162 completed receipt on PC/WSL `daisy`. R163 corrected the Python selection:
+the generic system `python3` is 3.10.12, while user Python 3.12.14 is installed
+at `/home/rharris/.local/bin/python3.12`. The repository-local `.venv` now uses
+Python 3.12.14 with NumPy 2.5.3 from `requirements.txt`. No sudo or system-wide
+change was needed; no workload was launched.
+
 Next: R159 completed the installed-renderer checks **on this Mac**, following the
 [single next task](#next-task). The necessary state is recorded here rather than
 relying on the old chat. No platform switch is needed for Mac-local installation
@@ -58,14 +64,14 @@ and physical-work limits remain unchanged.
 
 | Field | Current value |
 |---|---|
-| Owner | Handoff prepared to PC/WSL `daisy`; Mac `fire.lan` released after successful transfer publication. |
-| Checkout | `/Users/rharris/git/navier-stokes-vortex-lab`. |
+| Owner | PC/WSL `daisy`; Mac `fire.lan` released after published R161 handoff and R162 receipt. |
+| Checkout | `/home/rharris/git/navier-stokes-vortex-lab`. |
 | Branch/upstream | `main` / `origin/main` |
-| Starting state | R159 clean fast-forward pull was up to date at `fca1cde`; the R159 start record was published as `c587d53`. Empty stashes; no pull over dirty work. |
-| Interpreter | `/Users/rharris/miniconda3/envs/navier-stokes-vortex-b1/bin/python`, CPython 3.12.13 |
-| Other owner/process | No PC work is claimed to have started; this is not inferred from local Git. The PC must confirm receipt and stopped/absent processes. |
-| Task processes | R159 beads/project renders and inspection completed; all child processes exited. No background task is being left to continue. |
-| Delivery state | R159 and R160 are published. R161 transfer publication is pending; PC becomes owner only after clean receipt is confirmed. |
+| Starting state | R162 pulled published `fadeb9d` fast-forward and published lifecycle start `13f8804`; stashes empty. |
+| Interpreter | `/home/rharris/git/navier-stokes-vortex-lab/.venv/bin/python`, CPython 3.12.14 with NumPy 2.5.3 |
+| Other owner/process | Mac `fire.lan` released in the published R161 handoff; no PC child process remains. |
+| Task processes | R162/R163 performed only receipt and environment setup; no workload was launched. |
+| Delivery state | R162 start is published; R163 completion publication is pending. |
 
 ## Current result and limits
 
@@ -196,35 +202,14 @@ agent-side POV-Ray backtraces are unavailable.
 
 ## Next task
 
-The installed POV-Ray validation is complete on Mac `fire.lan`. If the user
-requests another renderer task, use GPT-5.6 Luna/medium for a routine bounded
-preview and reuse `/tmp/r159-installed-renderer` only as disposable local
-reference. Recommend Astra/high only if a new renderer build, format decision,
-or unexplained visibility failure arises.
-
-For a future `Continue`, verify clean synchronization and publish its own
-`STARTED` record before work. Keep the next task bounded and stop on missing
-input, timeout or invisible geometry. No movie, trajectory regeneration, new
-build, FEM or physical work is authorized by R159.
-
-1. Check `port installed openexr openexr2 povray` for unchanged package state:
-   OpenEXR 3.4.15_0, openexr2 2.5.10_0 and POV-Ray 3.7.0.8_6 are now active.
-   No further activation, forced deactivation or broad package upgrade is needed.
-2. Verify installed `/opt/local/bin/povray` against the recorded hash below.
-   The canonical sphere already passed intersections and visual inspection
-   with that binary; repeat only if executable/configuration changed.
-3. Check existing saved positions read-only with Python 3.12 and
-   `check_trajectories.py`. Do not regenerate or overwrite them. Read the beads
-   scene/reference without editing that separate checkout; use fresh output
-   paths outside it. Render beads at 160x120/two threads, then project frame 1,
-   then inspect frames 1/120/240 at 320x180/two threads. Bound each render to
-   30 seconds and run outside the restricted agent sandbox. Preserve the
-   full 1–240 animation range with `+SF`/`+EF` selection, without retiming.
-4. Stop after those checks and record results honestly. No movie, trajectory
-   changes, FEM, physical, benchmark or new compilation is part of this step.
-   Stop on missing input, timeout, invisible geometry or unexplained failure;
-   no repeated sweep or scene workaround. A contiguous preview can follow in
-   a later task, with a new PC handoff only if the user chooses that machine.
+The current PC receipt and Python environment repair are complete. The next
+task is user-selected: use `/home/rharris/git/navier-stokes-vortex-lab/.venv/bin/python`
+or activate `.venv` before any project utility. Luna/medium remains suitable
+for routine bounded validation; recommend Astra/high only for a new build,
+format decision or unexplained failure. Keep any next task bounded and stop on
+missing input, timeout, invisible geometry or unexpected resource failure.
+No movie, trajectory regeneration, FEM, physical or benchmark work is implied
+by R162/R163.
 
 ### Note for the next Mac session
 
