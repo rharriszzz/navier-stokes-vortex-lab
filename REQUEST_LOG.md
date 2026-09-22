@@ -5233,3 +5233,63 @@ PC retains ownership. Commit/push follows; actual delivery is reported in the
 final response, with no post-push log edit. Next prompt: Continue for the
 conceptual/modal review in SESSION_HANDOFF.md#next-task. Target fidelity,
 optical sensing allowance and eventual numerical accuracy remain unresolved.
+
+## R180 — 2026-09-21 (America/New_York) — Continue paper-to-boundary modal review
+
+**User request:** Supplied session excerpts and continuation, preserved below
+with account email redacted. No omitted steps or requests reconstructed.
+
+```text
+(no time, too lazy to add the steps) ╭────────────────────────────────────────────────╮
+│ >_ OpenAI Codex (v0.155.1)                     │
+│                                                │
+│ model:     gpt-6-astra high   /model to change │
+│ directory: ~/git/navier-stokes-vortex-lab      │
+╰────────────────────────────────────────────────╯
+
+  Tip: Use the OpenAI docs MCP for API questions; enable it with codex mcp add openaiDeveloperDocs --url
+  https://developers.openai.com/mcp.
+
+Token usage: total=188,491 input=162,399 (+ 4,441,344 cached) output=26,092 (reasoning 4,142)
+To continue this session, run codex resume, then select Review project context (01a0c729-b7b0-7532-90ee-fdcafb05af9a)
+
+/status
+
+╭─────────────────────────────────────────────────────────────────────────────────────────╮
+│  >_ OpenAI Codex (v0.155.1)                                                             │
+│                                                                                         │
+│ Visit https://chatgpt.com/codex/settings/usage for up-to-date                           │
+│ information on rate limits and credits                                                  │
+│                                                                                         │
+│  Model:                       gpt-6-astra (reasoning high, summaries auto)              │
+│  Model provider:              openai                                                    │
+│  Directory:                   ~/git/navier-stokes-vortex-lab                            │
+│  Permissions:                 Workspace (Ask for approval)                              │
+│  Agents.md:                   AGENTS.md                                                 │
+│  Account:                     [REDACTED account email] (Plus)                           │
+│  Collaboration mode:          Default                                                   │
+│  Session:                     01a0c73a-3492-75d1-9e22-77ed8d2df6f3                      │
+│                                                                                         │
+│  Weekly limit:                [█████████████████░░░] 83% left (resets 17:37 on 28 Sep)  │
+│  Credits:                     283 credits                                               │
+│  Luna Reserve Weekly limit:   [████████████████████] 100% left (resets 23:47 on 28 Sep) │
+╰─────────────────────────────────────────────────────────────────────────────────────────╯ continue
+```
+
+Token/resume and status excerpts identify the prior and current sessions,
+respectively; values are user-reported snapshots, not live account checks.
+Final “worked for”, /new and intermediate-step excerpts are missing. No private
+session files inspected.
+
+**Scope/status:** Started. Continue authorizes scoped start/completion commit
+and push. Complete R179's conceptual/source review and one symbolic modal
+mapping in BOUNDARY_CONTROL_HANDOFF.md; clarify finite paper target inputs,
+boundary response/inverse design and separate sensing. Stop before numerical
+evaluation, FEM/JIT, solver/controller code, hardware selection or rendering.
+Initial checks: rharris, PC/WSL daisy, Linux 6.18.33.2-microsoft-standard-WSL2,
+x86_64, intended checkout, clean main/origin/main and empty stashes. Recorded
+PC ownership and completed prior lifecycle; no incomplete transfer. Required
+clean fast-forward pull returned already up to date; HEAD and fetched upstream
+equal 8aa9245f68353defa1a7abc04c5c2164ee4092dc. No incoming commits. Local Git
+does not establish another checkout's unpublished state. Publish STARTED before
+substantive task work; retain current model/platform.
