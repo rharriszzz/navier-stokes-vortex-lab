@@ -5157,3 +5157,79 @@ credible hardware/noise limits; none blocks the unchanged accuracy diagnostic's
 preparation. OpenAI Docs verified Astra/high and Luna/medium support; the model
 recommendation is task judgment, no switch or quota/account verification.
 Next prompt: Continue.
+
+## R178 — 2026-09-21 (America/New_York) — Explain Fourier analysis and boundary forcing
+
+**User request:** “I guess the paper just showed that a forcing function exists.  In order to approximate it with forces on the boundary, do we need to do some sort of fourier analysis of our guess about what the real forcing function is?”
+
+**Scope/status:** In progress. Explain the constructive forcing argument and
+whether Fourier/modal analysis can connect interior targets to boundary
+commands. Clarification only; no solver, benchmark change or execution selected.
+Initial checks: rharris on PC/WSL daisy, Linux/x86_64, clean main tracking
+origin/main at 72065c6, empty stashes, recorded PC ownership and R177 completion.
+No fresh fetch/pull or other-machine inspection; local Git does not establish
+remote unpublished state. This question does not invoke Continue or authorize
+publication. Read the current handoff and latest log; verify the primary paper.
+
+**R178 outcome/files/checks/next:** Clarification complete. The primary paper
+provides a construction of velocity/pressure and defines the corresponding
+force through the momentum residual; it is more than an unexplained existence
+claim, but not a ready-to-use wall command. Explained spatial/temporal Fourier
+modes, boundary-to-interior transfer maps, constrained inverse design, timing,
+weak/missing response directions and the limits of linear frequency analysis.
+Boundary controls should target attainable interior behavior, not simply copy
+the Fourier coefficients or boundary restriction of a volumetric force.
+The Gaussian reference is a surrogate; quantitative paper fidelity would need
+a separately extracted/checked finite target. No such extraction was performed.
+
+Changed files: REQUEST_LOG.md and SESSION_HANDOFF.md only; R177's actual
+delivery 72065c6 recorded and current next task preserved. Checks: initial
+identity/ownership/status/branch/stashes, primary PDF Sections 2 and 10,
+append-only request history and whitespace; final metadata checks follow.
+No fresh fetch/pull, simulation, numerical test, reference evaluation, solver
+change, benchmark change, rendering, commit or push. No workload child launched.
+R178 metadata remains local; reconcile before the next Continue or transfer.
+Remaining choices and failed B2 gate unchanged. Next: the existing Astra/high
+PC/WSL bounded R021 launch integration, stopping before physical execution.
+
+## R179 — 2026-09-21 (America/New_York) — Preserve Fourier/boundary research direction and publish
+
+**User request:** “we will need to continue this line of thought.  can you please record it, and remind me of your model plevel platform recommendation (record it means either add commit, or add commit push)”
+
+**Scope/status:** In progress. Record continued paper-to-boundary/modal-response
+reasoning as the next bounded task, ahead of launch integration, with model,
+reasoning level and platform recommendation. Preserve and publish the pending
+R178 clarification together with these continuity updates; the user explicitly
+authorizes add/commit or add/commit/push, and this turn selects commit/push.
+Do not execute the new research task or a numerical workload. Initial checks:
+rharris on PC/WSL daisy, Linux/x86_64, main tracking origin/main, empty stashes;
+the two dirty files are this session's known R178 notes, preserved. Fresh fetch
+succeeded; verify equal tips at 72065c6 before publication. No pull over edits,
+no inferred other-machine state, no ownership change.
+
+**R179 outcome/files/checks/next:** Recording complete; publication prepared.
+Made continued paper-to-boundary/Fourier reasoning the next bounded task,
+ahead of the deferred R021 launch integration. The deliverable is one worked
+symbolic modal mapping in the existing benchmark: clarify how to define a
+finite paper-derived target, represent boundary space/time commands, compute
+the response operator and understand inverse-design and sensing limits. Do
+not invent transfer gains or equate the Gaussian surrogate with the paper's
+construction. Stop before numerical work or new solver/controller code.
+Recorded GPT-6 Astra / high reasoning / PC-WSL daisy; current catalog and
+already-checked official model documentation support the recommendation.
+No model switch; use Luna/medium only after a later task is fully mechanical.
+
+Changed files: REQUEST_LOG.md and SESSION_HANDOFF.md (including preserved R178
+notes), WORK_SESSIONS.md, STATUS.md and a task-priority note in
+BOUNDARY_CONTROL_HANDOFF.md. All scientific formulas, gates, resource limits,
+production/configuration sources and archived evidence remain unchanged.
+Checks: identity/ownership/Git/stashes; fresh fetch confirmed equal tips at
+72065c6; known R178 work deliberately included under this publication authority.
+Final checks cover document links/anchors/fences, append-only log prefixes,
+179 unique IDs, five-file documentation scope and whitespace. No numerical
+tests, source implementation, research calculation, rendering, packages or
+physical/FEM work ran; no task workload child launched. No pull over edits.
+PC retains ownership. Commit/push follows; actual delivery is reported in the
+final response, with no post-push log edit. Next prompt: Continue for the
+conceptual/modal review in SESSION_HANDOFF.md#next-task. Target fidelity,
+optical sensing allowance and eventual numerical accuracy remain unresolved.

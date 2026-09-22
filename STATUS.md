@@ -1,6 +1,6 @@
 # Project status: a boundary-controlled engineering approximation
 
-Updated 2026-09-21 (America/New_York), R171–R177. PC/WSL `daisy` owns the
+Updated 2026-09-21 (America/New_York), R171–R179. PC/WSL `daisy` owns the
 repository. This assessment uses current source, saved experiment records and
 the motivating paper; it launches no simulation or rendering workload.
 The single [next task](SESSION_HANDOFF.md#next-task) is recorded in the handoff.
@@ -342,13 +342,19 @@ actuation limits, sensor-blind states, command-budget failures and numerical
 inconclusiveness. The proposed range is 0.523 radius decades / 1.046
 radius-squared decades, not the longer-term “few orders” goal achieved.
 
-The single [next task](SESSION_HANDOFF.md#next-task) is concrete, bounded launch
-integration for the existing R021 matched-trace diagnostic using the completed
-R033 prerequisites and R070 repairs. Prepare and benign-test a default-disabled
-physical path under practical supervision; stop before physical/FEM execution.
-Do not restart completed toy work or create another general monitoring plan.
-Retain GPT-6 Astra/high on PC/WSL daisy for numerical interfaces and scope
-judgment. B2 accuracy remains failed and the q64/q96 physical comparison unused.
+R178 clarified that the paper constructs a force, while boundary commands must
+be chosen through the fluid's boundary-to-interior response. Fourier modes
+help represent spatial patterns and temporal signals; a force spectrum alone
+does not prescribe wall actuation. The Gaussian target is still a surrogate.
+
+R179 selects the single [next task](SESSION_HANDOFF.md#next-task): continue this
+conceptual/source review and develop one worked modal mapping from a finite
+target to boundary commands, including timing, inverse-design limitations and
+separate sensing requirements. Use **GPT-6 Astra / high / PC-WSL daisy**.
+Stop before numerical workloads or new solver/controller implementation.
+The earlier R021 launch integration is deferred. Its accuracy diagnostic,
+completed R033 prerequisites and R070 repairs remain relevant; B2 is still
+failed and q64/q96 unused. No completed toy work should be restarted.
 
 Unresolved user choices remain the proposed engineering tolerances/preparation
 and command budgets, whether interior optical feedback is allowed, and later
@@ -399,3 +405,8 @@ paper and official model guidance. Only the benchmark and four continuity
 documents changed. No numerical workloads, FEM tests, trajectory, render,
 encode, controller, hardware or package work ran. Documentation checks and
 actual delivery are recorded in the request/work logs and final response.
+
+R179 records the continued research direction and authorizes publication of the
+pending R178 clarification and this recommendation. Only documentation changed;
+metadata checks and delivery are recorded in the logs/final response. PC retains
+ownership. No new paper extraction, numerical result or implementation is claimed.

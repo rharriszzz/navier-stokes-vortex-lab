@@ -1,22 +1,22 @@
 # Current session handoff
 
-Last updated 2026-09-21 (America/New_York) for R177.
+Last updated 2026-09-21 (America/New_York) for R179.
 **PC/WSL `daisy` owns the repository.** R161/R162 completed the Mac release
-and PC receipt. R170–R176's assessment is published in `22cf3d7`.
-R177 completes the [finite boundary-only benchmark proposal](BOUNDARY_CONTROL_HANDOFF.md):
-300 s boundary preparation from rest, then the existing 10 mm → 3 mm reference
-for 100 s, explicit command histories, strict wall measurements and separate
-actuation/sensing/numerical verdicts. These are proposed engineering limits,
-not an approved final target or achieved result. Interior PIV remains validation
-only; the user's allowance for interior optical feedback is still undecided.
-B2 accuracy remains failed; q64/q96 physical comparison remains unused.
-Next: implement the smallest practical launch integration for that existing
-R021 diagnostic, building on completed R033 prerequisites and R070 repairs,
-with a default-disabled physical entry and bounded benign checks. Stop before
-FEM/physical execution. Retain GPT-6 Astra/high on this PC; see the single task below.
-R177's STARTED record was published in `ace8311`; completion publication is
-prepared in this handoff and its actual delivery hash follows in the final report.
-No numerical, rendering, controller or hardware work ran in R177.
+and PC receipt. R177's finite benchmark proposal is published in `72065c6`.
+R178 explains Fourier/modal analysis and why a verified boundary-to-interior
+response map is needed in addition to a description of the desired forcing.
+R179 asks to continue that reasoning and authorizes publication of these notes.
+**Next: a bounded conceptual/source review connecting the paper's constructive
+forcing and a finite target to spatial boundary modes and timed commands.**
+This takes priority over implementing the R021 launch integration. Retain
+GPT-6 Astra / high reasoning / PC-WSL `daisy`; no model or platform switch.
+The Gaussian benchmark is a surrogate, not an extracted finite version of the
+paper. Its 300 s preparation, 10 mm → 3 mm / 100 s tracking and tolerances
+remain proposals. Strict wall sensing is the baseline; interior optical
+feedback remains an explicit user choice. B2 accuracy remains failed and
+q64/q96 unused. No numerical workload is authorized by this recording request.
+R178–R179 completion/publication is prepared below; actual delivery commit and
+push result follow in the final response. PC retains ownership.
 R168's bounded comparison passed: the same installed default POV-Ray
 3.7.0.10.unofficial rendered the unchanged sphere and project frame 1 at
 160x120 with explicit `-d +WT1 -J`. Both exited 0 and produced visible geometry.
@@ -91,11 +91,11 @@ and physical-work limits remain unchanged.
 | Owner | PC/WSL `daisy`; Mac `fire.lan` released after published R161 handoff and R162 receipt. |
 | Checkout | `/home/rharris/git/navier-stokes-vortex-lab`. |
 | Branch/upstream | `main` / `origin/main` |
-| Starting state | R177 began clean at `22cf3d7`; required fast-forward pull was already up to date, HEAD = fetched origin/main, stashes empty. Start publication `ace8311` succeeded. |
+| Starting state | R179 began at `72065c6` with two known R178 metadata edits; preserved. Fresh fetch confirmed HEAD = origin/main, empty stashes. No pull over edits. |
 | Interpreter | `/home/rharris/git/navier-stokes-vortex-lab/.venv/bin/python`, CPython 3.12.14 with NumPy 2.5.3 |
 | Other owner/process | Mac `fire.lan` released in the published R161 handoff; no PC child process remains. |
-| Task processes | R177 launched no simulation/render/encode/FEM child; documentation commands exited. |
-| Delivery state | R170–R176 assessment delivered in `22cf3d7`; R177 STARTED delivered in `ace8311`. R177 completion is prepared for scoped commit/push; actual delivery follows in final response, with no post-push edit. |
+| Task processes | R178–R179 launched no numerical/render/encode/FEM child; metadata commands exited. |
+| Delivery state | R177 delivered in `72065c6`; R179 authorizes publication of R178–R179 notes and task recommendation. Completion publication prepared, actual delivery follows in final response. |
 
 ## Current result and limits
 
@@ -226,83 +226,67 @@ agent-side POV-Ray backtraces are unavailable.
 
 ## Next task
 
-R177's specification is complete. **Implement a task-specific practical launch
-integration for the existing R021 matched-trace accuracy diagnostic, then stop
-before any physical/FEM execution.** Deliver a usable default-disabled runner
-and bounded dry-run/refusal evidence, not another general monitoring plan.
-The scientific question is unchanged: compare original P with matched A_64/A_96
-to locate the unresolved central-response discrepancy on the fixed mesh.
+**Continue the paper-to-boundary/Fourier line of thought before implementing
+another launch path.** R179 selects a bounded conceptual/source review, not a
+numerical experiment or controller. Explain the scientific mapping in one
+worked, clearly labelled modal example and record it in the existing benchmark.
 
-**Model / reasoning / platform:** GPT-6 Astra / high / PC-WSL `daisy`.
-The current session catalog includes Astra and Luna; official
+**Model / reasoning level / platform: GPT-6 Astra / high / PC-WSL `daisy`.**
+Keep the current model and machine. This task requires judgment about the
+paper's construction, finite approximations, fluid response and inverse design.
+The session catalog and the already-checked official
 [Astra documentation](https://developers.openai.com/api/docs/models/gpt-6-astra)
-confirms high reasoning support. Retain Astra for numerical-interface and
-supervision-scope decisions. Recommend
-[Luna/medium](https://developers.openai.com/api/docs/models/gpt-5.6-luna) only
-when a later remaining fix is fully specified and mechanical; return to Astra
-on unexplained scientific behavior. No switch or remote-account check occurred.
+support this model/effort; task fit is our judgment, not a quota or speed claim.
+Use [Luna/medium](https://developers.openai.com/api/docs/models/gpt-5.6-luna)
+only for a later fully specified mechanical implementation; return to Astra
+for unresolved mathematical/numerical interpretation. No switch has occurred.
 
-1. Read the benchmark's [accuracy prerequisite](BOUNDARY_CONTROL_HANDOFF.md#10-one-accuracy-prerequisite-and-one-subsequent-task),
-   [R021](docs/realizability/B2_COMPATIBLE_TRACE_INTEGRATION_REVIEW.md),
-   [R033 completion](docs/realizability/B2_COMPATIBLE_TRACE_PREFLIGHT_FOLLOWUP.md),
-   [R070 repair result](docs/realizability/evidence/r070/result.json) and
-   [R103/R104 policy](docs/realizability/B2_MONITOR_PRACTICAL_SUPERVISION_POLICY.md).
-   Reuse their committed sources/evidence; do not repeat historical toy suites
-   or repair assignments. Inspect later fixture-only monitor work only for a
-   needed reusable component, not as permission to restart its full programme.
-2. Put new code in a new task-scoped directory under `tools/realizability/`
-   and its focused checks under `tests/realizability/`; preserve all archived
-   sources/evidence and production/configuration pins. Wire the repaired R070
-   evidence binding, reservation, child/checkpoint and count/refusal paths to
-   practical supervision for this one diagnostic. Keep the physical API/CLI
-   disabled. Prepare the exact later physical command and report format for
-   review; do not invoke it or silently change numerical semantics.
-3. Support a benign dry-run using saved evidence and an inert child. Check
-   success, invalid binding, prior reservation, nonzero exit, missing/partial
-   report, timeout and owned-child cleanup; exercise independent stop behavior
-   only within the applicable preserved benign suite and resource bounds.
-   Report unsupported capabilities and untested paths explicitly. No DOLFINx/
-   MPI import, JIT, physical mesh, Bessel reference, quadrature, solve or R033
-   rerun. Inventory remaining real-FEM stage-check validation from R070.
-4. Use the retained PC benign-suite ceilings: 180 s cumulative (30 setup + ten
-   12 s cases + 30 final); each case 5 active + 5 cleanup + 2 evidence seconds;
-   768 MiB whole Linux unit/no swap/32 PIDs, 512 MiB sampled workload RSS and
-   <=128 MiB native working set where used. Establish necessary containment
-   and independent process stops before any live child; refresh capacity and
-   record actual enforced/observed scopes. No extra trials, allowance reset or
-   extrapolated reliability claim. If a required safeguard is unavailable,
-   preserve the implemented path and a finite refusal; do not launch dependent
-   work. Optional native/platform features must not block unrelated code work.
-5. Share the dry-run/report interface where practical. The first later Mac
-   increment is an inert-child/report check under a separately recorded owner
-   transfer and supported local limits, not the physical diagnostic. Defer
-   platform performance comparison, broad monitor framework and recursive
-   certification. PC owns this task; no transfer is requested now.
+1. Read the primary paper's construction/residual discussion and identify what
+   would have to be specified to obtain a finite, reproducible target from it.
+   Distinguish a mathematical construction from a practical numerical recipe;
+   do not assume the Gaussian reference reproduces the paper's oscillatory
+   stress mechanism. State which target details are available and which remain
+   choices or derivations, without claiming to extract the full solution.
+2. Explain the roles of spatial Fourier modes around the cylinder, axial
+   shapes and temporal command histories. Work through a small symbolic
+   example of boundary inputs mapping to selected interior strain/swirl or
+   perturbation features. Keep illustrative gains symbolic or explicitly
+   hypothetical; do not fabricate CFD response coefficients.
+3. Compare Fourier analysis of a volumetric force with the actual inverse
+   problem: choosing boundary commands through a fluid-response operator.
+   Show how amplitude, phase, finite preparation, weak/missing directions and
+   actuator limits enter. Explain when a frequency-domain G(omega) is valid
+   and when an evolving base/nonlinearity requires time-domain treatment.
+4. Keep sensing separate: wall signals must distinguish required interior
+   features, even if actuation can generate them. Interior truth/PIV remains
+   validation only unless the user explicitly changes the allowance.
+5. Deliver a concise explanation plus one worked mapping in
+   BOUNDARY_CONTROL_HANDOFF.md, with primary citations, assumptions, a precise
+   boundary of what is known and one next scientific decision/calculation.
+   Update status/log/handoff and publish under the normal Continue protocol.
+   Stop before FEM/JIT, numerical evaluation of the paper, new solver or
+   controller code, hardware selection, rendering or physical execution.
 
-Completion: concrete integration code, bounded relevant checks or explicit
-capability refusal, source/evidence bindings, consumed-attempt/process cleanup
-record, and exact remaining conditions for a separately authorized physical
-attempt. Update logs/status/handoff, scoped commit/push, stop. Do not unlock or
-launch the physical path, reset the unused q64/q96 allowance, or proceed to a
-six-input campaign. Physical limits remain 180 s / 1536 MiB; all R013/R021
-accuracy, mesh, form, trace and count requirements remain unchanged. The
-engineering benchmark's new proposed tolerances do not relax them.
+Completion means a clear answer to what we would decompose, what response must
+be computed, and what would make a finite paper-derived target reproducible.
+If a choice cannot be justified, state it and stop at that research boundary.
+Do not turn this into another general infrastructure plan. Next prompt:
+**Continue**.
 
-Remaining user-level choices for the later engineering benchmark: finite target
-and error budgets, 300 s preparation/command limits, strict wall sensing versus
-interior optical feedback, eventual hardware/noise limits. These do not block
-preparing the unchanged B2 diagnostic. Next prompt: **Continue**.
+The previous R021 launch-integration recommendation is deferred, not cancelled
+or executed. Its scientific prerequisite and unchanged R021/R033/R070 evidence
+remain in the benchmark's
+[accuracy section](BOUNDARY_CONTROL_HANDOFF.md#10-one-accuracy-prerequisite-and-one-subsequent-task).
+No B2 acceptance threshold, production method, resource limit or once-only
+allowance changes. Before later physical work, resolve numerical accuracy and
+apply the R103/R104 practical safeguards; completed toys are not new tasks.
 
-R177 changed BOUNDARY_CONTROL_HANDOFF.md, STATUS.md, SESSION_HANDOFF.md,
-REQUEST_LOG.md and WORK_SESSIONS.md. Evidence is the specification, existing
-scientific records and primary-source review; no new physical result is claimed.
-Documentation checks cover link targets/anchors, fence balance, append-only log
-history, unique request IDs, file scope and whitespace. Final staged checks and
-actual delivery result follow publication preparation. PC retains ownership.
-
-The preview remains complete in `6deb9d0`. Preserve its local
-`/tmp/r169-preview-EnjJq0/preview.mp4`; the user will review it independently.
-Its first 30 frames precede scheduled marker contraction; no rerender is due.
+R179 records/publishes the R178 clarification and this new priority only. Changed
+files: REQUEST_LOG.md, WORK_SESSIONS.md, SESSION_HANDOFF.md, STATUS.md and a
+priority note in BOUNDARY_CONTROL_HANDOFF.md. No research calculation or task
+child launched. Final metadata/staged checks and actual delivery follow.
+The preview remains complete in `6deb9d0`; preserve its local MP4 for the user's
+independent viewing. No rerender or Mac transfer is needed.
 
 ### Note for the next Mac session
 
@@ -350,3 +334,19 @@ Archived: [original R053 section](docs/history/SESSION_HANDOFF_BEFORE_R092_IMPLE
 ### R055 FFCx version discrepancy
 
 Archived: [original R055 section](docs/history/SESSION_HANDOFF_BEFORE_R092_IMPLEMENTATION.md#r055-ffcx-version-discrepancy).
+
+### R178 conceptual clarification
+
+Fourier/modal decomposition is useful for spatial boundary patterns and temporal
+commands, but an interior force spectrum is not a wall-actuation prescription.
+Compute the boundary-input-to-interior-feature response, then solve a constrained
+inverse problem for desired finite flow behavior. Frequency-by-frequency gain
+and phase apply to a time-invariant linearization; finite preparation and
+nonlinear mode coupling require time-domain/trajectory analysis. Sensing remains
+a separate information test. Paper fidelity also requires an explicit checked
+finite target derived from its construction; the Gaussian benchmark alone does
+not supply it. R178 reread the primary paper's construction/residual discussion.
+No numerical work or changed benchmark assumptions. Checks: clean starting
+identity/owner/Git/stashes, source retrieval, metadata/log preservation and
+whitespace. R179 subsequently prioritizes the conceptual/modal review in the current Next task;
+the R021 launch integration is deferred.

@@ -6,6 +6,12 @@ scientific thresholds below are retained unless explicitly labelled proposals.
 
 ## Start here
 
+**R179 priority note:** next continue the conceptual paper-to-boundary/modal
+analysis, as scoped in [the current handoff](SESSION_HANDOFF.md#next-task).
+The launch integration proposed in Section 10 is deferred while that question
+is developed. This changes task order only; all benchmark assumptions and
+numerical gates below remain as recorded in R177.
+
 **Proposed benchmark: prepare a vortex from rest using the cylinder boundary,
 then track the existing 10 mm → 3 mm Gaussian reference for 100 s, while testing
 whether strictly boundary-supported measurements distinguish the required
@@ -795,8 +801,8 @@ feedback; later select credible hardware/noise limits. None prevents preparing
 the unchanged accuracy diagnostic. The present proposal defaults to strict
 support and retains the existing 10 mm → 3 mm reference for review.
 
-The single next task is the diagnostic launch integration in Section 10 and
-the current handoff. Retain GPT-6 Astra/high on PC/WSL daisy for its numerical
+R179 places the conceptual/modal review in the current handoff ahead of the
+diagnostic launch integration in Section 10. Retain GPT-6 Astra/high on PC/WSL daisy for its numerical
 interfaces and scope decisions. A later purely mechanical, fully specified
 fix can use Luna/medium; unexplained numerical behavior returns to Astra/high.
 No model change or experiment was launched by this recommendation.
