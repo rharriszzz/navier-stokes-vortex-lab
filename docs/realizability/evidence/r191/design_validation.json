@@ -1,0 +1,57 @@
+{
+  "python": "3.12.14",
+  "sympy": "1.14.0",
+  "checks_passed": 15,
+  "checks": [
+    "inventory from volume integral",
+    "side mean flux",
+    "two endcaps mean flux",
+    "side viscous torque",
+    "Gaussian central balance",
+    "regular axis radial advective flux",
+    "regular axis radial viscous flux",
+    "annular nonzero correlation zero divergence",
+    "spatial average factor",
+    "temporal lag factor",
+    "joint average factor",
+    "opposite phase changes sign",
+    "quadrature phase null in diagnostic ansatz",
+    "nonzero Gaussian peak root",
+    "four schedule rows: duration ratio and width equation"
+  ],
+  "gaussian_peak_over_width": 1.1209064227785341,
+  "rows": [
+    {
+      "final_b_mm": 3.0,
+      "duration_s": 10,
+      "radius_ratio": 3.3333333333333335,
+      "tau_decades": 1.0457574905606752,
+      "peak_strain_per_s": 0.7277777777777777,
+      "central_flow_L_min": 8.573929950422144
+    },
+    {
+      "final_b_mm": 3.0,
+      "duration_s": 100,
+      "radius_ratio": 3.3333333333333335,
+      "tau_decades": 1.0457574905606752,
+      "peak_strain_per_s": 0.27277777777777773,
+      "central_flow_L_min": 3.2135874852345596
+    },
+    {
+      "final_b_mm": 1.0,
+      "duration_s": 10,
+      "radius_ratio": 10.0,
+      "tau_decades": 2.0,
+      "peak_strain_per_s": 6.95,
+      "central_flow_L_min": 81.877758534184
+    },
+    {
+      "final_b_mm": 1.0,
+      "duration_s": 100,
+      "radius_ratio": 10.0,
+      "tau_decades": 2.0,
+      "peak_strain_per_s": 2.495,
+      "central_flow_L_min": 29.393526265149507
+    }
+  ]
+}

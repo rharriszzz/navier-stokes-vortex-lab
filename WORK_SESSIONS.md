@@ -454,3 +454,35 @@ Bounded task: define observable essential-similarity criteria, allowed
 variations, hardware/uncertainty mapping, radius-duration tradeoffs and one
 first discriminating test. Source/design/symbolic work only; no solver, CFD,
 physical test, procurement, hardware, render/encode or model/machine switch.
+
+### R191 completion
+COMPLETED | 2026-09-22T14:41:21Z | PC/WSL daisy | released: no
+Outcome: essential-similarity criteria/hardware/evidence contract and one
+fixed-core phase-test design completed. Analogue, angular-transfer and later
+perturbation-assisted-contraction claims are separate. Conditional Gaussian
+central side/endcap and exterior accounting supplies a null explanation;
+radius-duration and phase-average calculations are retained, not CFD results.
+Files: BOUNDARY_CONTROL_HANDOFF.md, CONTROL_RESEARCH_ROADMAP.md, EXPERIMENT.md,
+PHYSICAL_REALIZABILITY_PLAN.md, PROJECT_TRACKS.md, REQUEST_LOG.md,
+SESSION_HANDOFF.md, STATUS.md, WORK_SESSIONS.md,
+docs/realizability/BOUNDARY_HARDWARE_FEASIBILITY_R185.md,
+docs/realizability/ESSENTIAL_SIMILARITY_CONTRACT_R191.md, and
+ docs/realizability/evidence/r191/{README.md,check_design.py,design_validation.json}.
+Checks: required synchronization/ownership/stashes; track and primary-source
+review; 15 symbolic/arithmetic groups (Python 3.12.14/SymPy 1.14.0), manual
+sign/unit/measurement/confound review; 138 links/anchors, fences, 191 request
+IDs, append-only logs at three bases, unchanged benchmark science, table/output
+agreement, scoped files and whitespace. Post-append/staged verification follows.
+Evidence: R191 design and retained checker/JSON; /tmp/r191_validate.py.
+Skips: no solver/controller, CFD/FEM, reference-field sampling, physical/optical
+execution, procurement, hardware, trajectory/render/encode or dependencies.
+Commands exited; no workload child launched. B2 failed, q64/q96 unused and R021
+deferred. No existing thresholds/operators/production pins or budgets changed.
+Next: Astra/high on PC/WSL daisy quantifies one fixed-core phase-test operating
+point/detectability sheet, comparing port versus moving-wall swirl, and defines
+minimal calibration. Stop at supported candidate or quantified missing evidence,
+before code/CFD/procurement/hardware/physical execution. Reconsider a cheaper
+model only after scientific decisions are settled and work becomes mechanical.
+R190 reconciliation b323f60 and R191 STARTED f58a75d published successfully.
+Completion prepared for scoped commit/push; actual delivery hash/result in
+final response/Git history. No post-push edit. PC retains ownership.

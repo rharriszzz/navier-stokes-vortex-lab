@@ -1,5 +1,10 @@
 # Project Tracks
 
+R191 completed the [measurable similarity contract and first-test design](docs/realizability/ESSENTIAL_SIMILARITY_CONTRACT_R191.md).
+The next step quantifies an operating point and detectability for the fixed-core
+phase test; follow the single [handoff task](SESSION_HANDOFF.md#next-task).
+No test has run and no feasible contraction range is established.
+
 R188 priority update (2026-09-22): establish measurable essential dynamical
 similarity before further movie work. Numerical profiles and timing may differ;
 percentage agreement with a paper field is not required. Interior particle measurements from

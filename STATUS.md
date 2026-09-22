@@ -1,17 +1,17 @@
 # Project status: a boundary-controlled engineering approximation
 
-Updated 2026-09-22 (America/New_York), through R189. PC/WSL `daisy` owns the
-repository. Latest work: clarify essential dynamical similarity as the goal,
-with the sourced hardware survey as input. Physical evidence precedes a movie;
-no fluid simulation ran.
+Updated 2026-09-22 (America/New_York), through R191. PC/WSL `daisy` owns the
+repository. Latest work: a [measurable similarity contract and first test](docs/realizability/ESSENTIAL_SIMILARITY_CONTRACT_R191.md).
+Fifteen conditional algebra/arithmetic groups passed; no fluid simulation or
+physical test ran. No attainable contraction range is established.
 
 | Current question | Answer |
 |---|---|
 | What works? | The illustrative animation pipeline, saved-data checks and separate reference/analysis tools. |
 | Is the engineering goal demonstrated? | No validated boundary-driven contraction or boundary-only state estimator exists yet. |
-| What did the latest step establish? | Commercial pumping, pressure control, motion stages and volumetric particle tracking provide credible component options. R185 permits interior tracer measurements from boundary/exterior cameras. Their ability to reproduce the paper remains unproved. [Survey and scale estimates](docs/realizability/BOUNDARY_HARDWARE_FEASIBILITY_R185.md). |
+| What did the latest step establish? | Observable contracting-vortex criteria, distinct perturbation claims, uncertainty/falsifiers and hardware mapping. The proposed first mechanism test reverses perturbation phase at fixed core and accounts for mean-flow/torque changes. Gaussian contraction alone remains a null explanation. [Design and checks](docs/realizability/ESSENTIAL_SIMILARITY_CONTRACT_R191.md). |
 | What blocks trusted numerical control results? | B2 still fails its independent response-accuracy comparison; q64/q96 remains unrun. |
-| What is next? | Define measurable essential similarity and map it to boundary hardware, measurements and one discriminating test. Follow the single [next task](SESSION_HANDOFF.md#next-task). |
+| What is next? | Quantify an operating point and detectability for the fixed-core phase test; compare port and moving-wall swirl routes. Follow the single [next task](SESSION_HANDOFF.md#next-task). |
 
 ## Goal and present conclusion
 
@@ -46,7 +46,7 @@ control problem. Our attainable finite range must be measured, not inferred
 from the theorem. We are not attempting to simulate the singular limit.
 
 R188 makes essential similarity the primary objective. The proposed
-[similarity contract](docs/realizability/BOUNDARY_HARDWARE_FEASIBILITY_R185.md#essential-dynamical-similarity--r188-clarification)
+[similarity contract](docs/realizability/ESSENTIAL_SIMILARITY_CONTRACT_R191.md)
 separates coherent core contraction, coupled radial/axial motion, viscous
 competition and any claimed perturbation-mediated momentum transport.
 Different dimensions, speeds, profiles and schedules may be acceptable;
@@ -400,11 +400,11 @@ R183 supplied SymPy; R184 permits useful dependency changes. All 21 exact
 [symbolic checks](docs/realizability/evidence/r182/README.md) pass, with optional
 pinned dependencies and a retained reproduction script.
 
-R185 supersedes the former next task with a sourced hardware/optical survey and
-places physical fidelity before further movies. The single
-[next task](SESSION_HANDOFF.md#next-task) is a measurable essential-similarity
-contract mapped to hardware, measurements and a discriminating first test. The central/surrounding-fluid budget remains supporting
-work, not a completed derivation.
+R185 supplied the hardware/optical survey and placed physical fidelity before
+further movies. R191 completed the [similarity contract and first-test design](docs/realizability/ESSENTIAL_SIMILARITY_CONTRACT_R191.md),
+including checked central side/endcap and surrounding-fluid accounting. The
+single [next task](SESSION_HANDOFF.md#next-task) quantifies an operating point
+and detectability for its fixed-core phase test. No test has run.
 Retain **GPT-6 Astra / high / PC-WSL daisy**; the linked handoff records the
 model guidance and scope.
 Stop before solver/controller code, procurement or physical execution.
@@ -412,9 +412,9 @@ R021 launch integration stays deferred; its accuracy diagnostic,
 completed R033 prerequisites and R070 repairs remain relevant. B2 is still
 failed and q64/q96 unused. No completed toy work should be restarted.
 
-Unresolved choices remain the essential properties and their evidence criteria,
-feasible radius/time balance,
-engineering tolerances/preparation, command budgets and measured hardware/noise
+The proposed evidence thresholds need calibration at an operating point.
+Unresolved choices remain achievable radius/time balance, engineering
+preparation/command budgets, boundary-to-core gains and measured hardware/noise
 limits. Optical measurements are now allowed. None of this changes the B2
 accuracy diagnostic or establishes a validated optical estimator.
 The rendering repair/preview is complete in `6deb9d0`; R170–R176's assessment

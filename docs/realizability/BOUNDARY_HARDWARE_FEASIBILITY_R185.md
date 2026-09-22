@@ -221,10 +221,12 @@ remains available for a later quantitative replication claim; it is not a gate
 for the broader analogue study. A complete finite paper witness need not be
 implemented before defining or testing a specific analogous mechanism.
 
-Next: define one measurable essential-similarity contract and map its selected
-properties to boundary inputs, optical/wall measurements and one discriminating
-first test. Include radius/time/duration tradeoffs and unresolved engineering
-limits. Use central/surrounding-fluid budgets where they constrain the mechanism.
+R191 completed the [measurable essential-similarity contract](ESSENTIAL_SIMILARITY_CONTRACT_R191.md),
+including the criteria/hardware/evidence table, allowed differences, uncertainty,
+radius-duration comparison and a proposed fixed-core phase test. Its Gaussian
+central budget is a checked null explanation for contraction without perturbation
+stress, not a tank solution. Next: quantify one operating point and detectability
+for that test, following the [handoff](../../SESSION_HANDOFF.md#next-task).
 B2's failed accuracy gate still prevents trusting that solver's response results;
 relaxing the target does not relax numerical or experimental evidence quality.
 No attainable range or mechanism success has been established.

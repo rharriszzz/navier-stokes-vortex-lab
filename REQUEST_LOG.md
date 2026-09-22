@@ -5875,3 +5875,60 @@ b323f60 under this Continue authorization, then clean required
 Initial sandbox Git index write was denied; approved elevated Git completed
 reconciliation. No request ID allocated before synchronization. R190 metadata
 is now published. Publish STARTED before substantive work.
+
+**R191 outcome:** Complete at the design boundary. Added
+`docs/realizability/ESSENTIAL_SIMILARITY_CONTRACT_R191.md` with contracting-vortex
+criteria A1–A4, distinct perturbation claims M1/M2, allowed profile/geometry/
+schedule differences, hardware/measurement mapping, uncertainty and falsifiers.
+Threefold contraction and measurement/repeatability thresholds are proposed
+experimental design choices, not new user requirements or benchmark changes.
+Specified one fixed-core phase comparison, with off/single-input controls,
+realized interior phase, complete side/endcap stress transport, mean-flow changes
+and externally delivered angular impulse accounted for. The operating point and
+calibration remain the next design decision; no test is admitted or launched.
+
+Derived/checks: central Gaussian side/endcap momentum balance closes without
+perturbation stress; surrounding inventory accounts for central gain. A local
+nonzero covariance need not imply net transfer. Joint spatial/temporal sinusoid
+averaging gives AB*cos(phi)*cos(delta)/4, not the spatial-only factor 1/2.
+Conditional 10/100 s schedules compare widths 10 -> 3 or 1 mm; longer duration
+reduces contraction demand without removing the viscous strain floor. Width b
+is distinguished from measured peak radius 1.1209*b; central throughput is not
+pump demand. These are model identities/arithmetic, not a bounded-tank solution.
+
+Changed files (14): BOUNDARY_CONTROL_HANDOFF.md, CONTROL_RESEARCH_ROADMAP.md,
+EXPERIMENT.md, PHYSICAL_REALIZABILITY_PLAN.md, PROJECT_TRACKS.md, REQUEST_LOG.md,
+SESSION_HANDOFF.md, STATUS.md, WORK_SESSIONS.md,
+docs/realizability/BOUNDARY_HARDWARE_FEASIBILITY_R185.md,
+docs/realizability/ESSENTIAL_SIMILARITY_CONTRACT_R191.md, and
+ docs/realizability/evidence/r191/{README.md,check_design.py,design_validation.json}.
+Current status, handoff opening/owner/Next task and overview links agree.
+
+Checks passed: identity/owner/upstream/stashes and required clean synchronization;
+required track/source review; 15 retained symbolic/arithmetic groups under
+Python 3.12.14/SymPy 1.14.0; manual units/signs, fixed-volume pressure torque,
+cap and exterior accounting, observational/causal limitations; 138 local links
+and anchors, Markdown fences, 191 unique request IDs, both append-only logs
+against 241f2b5/b323f60/f58a75d, unchanged benchmark scientific Sections 3–7.8
+and 8–10 (apart from the separate supporting-task note), table/output agreement,
+14-file scope and whitespace. Disposable documentation checker:
+`/tmp/r191_validate.py`. Final post-append/staged checks follow.
+Sources: primary paper Section 2, Gallay–Maekawa Burgers baseline and Dantec
+volumetric PTV; equations/test thresholds are explicitly our derivations/design.
+OpenAI Docs skill rechecked official Astra/high support; retain the existing
+model/machine. Account/usage snapshots remain user-reported only.
+
+Skips: no CFD/reference-field sampling, nonlinear solver/controller, FEM/JIT,
+physical/optical execution, procurement, hardware implementation, trajectory,
+render/encode or dependency change. Short check commands exited; no workload
+child launched. B2 failed, q64/q96 unused, R021 deferred; production code/pins,
+legacy sensor operators, accuracy thresholds and attempt allowances unchanged.
+Remaining decisions: actual geometry/operating point, transfer gains, torque/
+flow limits and calibrated measurement errors; no achievable range established.
+Next: Astra/high on PC/WSL daisy prepares one quantitative operating-point and
+detectability sheet for the fixed-core phase test, comparing tangential ports
+with moving tangential wall, with minimal discriminating calibration and the
+handoff's stop-before-execution boundary. PC retains ownership, released: no.
+R190 reconciliation b323f60 and STARTED f58a75d pushed successfully; scoped
+completion publication is prepared. Actual delivery commit/push result follows
+in the final response/Git history; no post-push log edit. Next prompt: Continue.

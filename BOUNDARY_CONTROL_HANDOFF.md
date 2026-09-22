@@ -6,6 +6,14 @@ scientific thresholds below are retained unless explicitly labelled proposals.
 
 ## Start here
 
+**R191 design result:** the [measurable similarity contract](docs/realizability/ESSENTIAL_SIMILARITY_CONTRACT_R191.md)
+defines analogue and mechanism claims separately, with hardware/evidence mapping,
+uncertainty and a fixed-core phase comparison. Its conditional Gaussian central
+side/endcap budget closes without perturbation stress; 15 algebra/arithmetic
+check groups pass. No tank response or physical test is established. The
+[next task](SESSION_HANDOFF.md#next-task) quantifies an operating point and
+detectability; all existing benchmark science and thresholds below are retained.
+
 **R188 objective update:** essential dynamical similarity is the primary goal;
 substantial numerical differences are allowed. Percentage field agreement and
 a complete finite paper witness are not prerequisites for the analogue study.
@@ -21,7 +29,7 @@ compares commercially offered components and buildable assemblies. Historical
 pressure-only operators and numerical thresholds below are retained as a
 comparison case, not a current prohibition on optical feedback. No optical
 estimator or new numerical result is claimed. The single
-[next task](SESSION_HANDOFF.md#next-task) defines measurable essential similarity; the former central-budget task becomes supporting work.
+[next task](SESSION_HANDOFF.md#next-task) now quantifies the R191 fixed-core test operating point and detectability.
 
 **R182 result:** [Section 7.8](#78-gaussian-reference-deficit-and-whole-support-compatibility)
 derives the Gaussian reference's angular-momentum deficit with every fixed
@@ -30,8 +38,8 @@ swirl balance, but its total angular momentum increases. Compact internal
 stress cannot supply that net increase while the entire prescribed mean and
 its zero exterior flux are retained. This exact-field obstruction does not
 exclude approximate central-feature tracking. The [next task](SESSION_HANDOFF.md#next-task)
-now maps essential dynamics to hardware and evidence, with central-volume
-exchange and surrounding-fluid budgets as supporting work. Section 10's
+now quantifies the R191 test operating point; the central-volume budget is
+checked supporting evidence, not a demonstrated boundary realization. Section 10's
 launch integration remains deferred; benchmark assumptions/gates are unchanged.
 
 **Proposed benchmark: prepare a vortex from rest using the cylinder boundary,
@@ -1260,11 +1268,11 @@ records 21 passing exact SymPy checks, the optional dependency versions and
 reproduction commands. Manual checks additionally cover units, face signs,
 axis limits and the scope of the necessary-condition claim.
 
-**Supporting calculation (R185):** derive the exchange budget of a fixed central
-cylinder entirely inside the plateau, separating side and endcap transport,
-and the compensating surrounding-fluid/angular-impulse budget when only the
-central target is retained. See the single [next task](SESSION_HANDOFF.md#next-task)
-for the precise geometry, checks and stopping point.
+**Supporting calculation completed in R191:** the [conditional central-cylinder
+budget](docs/realizability/ESSENTIAL_SIMILARITY_CONTRACT_R191.md#radius-duration-and-engineering-demand)
+separates side/endcap transport and surrounding-fluid impulse. It closes without
+perturbation stress for the Gaussian plateau and does not establish boundary
+delivery. Follow the single [next task](SESSION_HANDOFF.md#next-task).
 
 ## 8. Strict boundary measurement and independent truth
 
@@ -1519,11 +1527,12 @@ R180 completed the conceptual/modal review in Sections 1.1 and 7.3–7.4.
 R181 adds the symbolic balance, incompressible counterexample and offline
 validation contract in Sections 7.5–7.7. R182 completed the Gaussian deficit
 and compatibility calculation in Section 7.8. The [next task](SESSION_HANDOFF.md#next-task)
-now specifies an essential-similarity contract and discriminating first test; Section 10 remains
-deferred. No finite paper target, new tolerance,
-response coefficient or hardware/sensor decision was selected. Manual algebra,
+now quantifies an operating point and detectability for the completed R191
+contract/test design; Section 10 remains deferred. R191 adds proposed
+experimental detection criteria without changing benchmark tolerances. No finite
+paper target, response coefficient or hardware/sensor operating point was selected. Manual algebra,
 units, face signs, counterexample divergence/flux integrals and documentation
-checks are recorded in the logs. No numerical evaluation or solver test ran.
+checks are recorded in the logs. No numerical flow evaluation or solver test ran.
 Retain GPT-6 Astra/high on PC/WSL daisy for scientific interpretation; use
 Luna/medium only for a later fully specified mechanical change and return to
 Astra for unresolved physics. No model/platform switch occurred.
