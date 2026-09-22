@@ -139,9 +139,14 @@ recompilation nor relink-only operation is established. The user accepts the
 working result without another build to settle timing. The remembered slow
 large C++ source file is unidentified; the earlier `parse.cpp` experiment
 explains the tested bug, not every possible fast-math code path. Installed
-beads/project checks remain pending. [Current Mac note, evidence bindings and
-next task](../../SESSION_HANDOFF.md#next-task) supersede the unreceived PC
-transfer: R155 confirms PC work never started.
+R159 completed the installed beads/project checks. The beads scene rendered at
+160x120 with two threads; project frames 1, 120 and 240 rendered at 320x180
+with two threads, each under the 30-second bound. The installed binary reported
+nonzero geometry intersections, and visual inspection showed the colored beads
+ring plus visible tank/tracer distributions that change across the three
+project frames. The read-only Python 3.12.13 checker passed all 240 saved frames
+and 500 beads/frame. [Current Mac note and evidence bindings](../../SESSION_HANDOFF.md#current-result-and-limits)
+supersede the unreceived PC transfer: R155 confirms PC work never started.
 
 Earlier R136 temporary executable (not the installed revision 6):
 `/tmp/povray-build-diagnosis.JO4kJZ/povray-safe-math`.

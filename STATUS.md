@@ -8,25 +8,30 @@ with conservative math visibly renders the unchanged sphere, user's beads,
 official torus and project frames 1, 120 and 240. Recompiling only the parser
 with fast-math reproduces the fault. [Diagnosis and saved evidence](docs/rendering/POVRAY_MAC_BUILD_DIAGNOSIS.md).
 
-The 240 saved trajectory frames/500 beads passed the checker again. All three
-320x180 project frames were visually inspected with the working temporary
-executable; tank/tracers and changing tracer distribution are visible. The
-user subsequently installed MacPorts revision 6 using the
+The 240 saved trajectory frames/500 beads passed the checker with Python
+3.12.13. The user subsequently installed MacPorts revision 6 using the
 [durable launcher](packaging/macports/README.md). The installed executable
-passed sphere intersections and visual inspection; beads and project frames
-have not yet been rechecked with it. Effective flags are `-Os -fno-fast-math`;
-exact recompilation scope remains unverified and is not a reason alone to rebuild.
-No movie was encoded. R155 confirms PC work never started: **Mac retains
+passed sphere intersections and visual inspection, then passed the bounded
+installed beads render and project frames 1, 120 and 240. The 160x120 beads
+image showed the expected colored ring; all three 320x180 project images had
+nonzero geometry intersections and visibly changing tank/tracer distributions.
+Effective flags are `-Os -fno-fast-math`; exact recompilation scope remains
+unverified and is not a reason alone to rebuild. No movie was encoded. R155 confirms PC work never started: **Mac retains
 ownership**, superseding the unreceived transfer. The
-[next repository task](SESSION_HANDOFF.md#next-task) is the bounded installed
-renderer check on Mac. R157 verifies the user's OpenEXR 3.4.15_0 reactivation;
+[next repository task](SESSION_HANDOFF.md#next-task) is now a later user-requested
+preview or other bounded renderer task. R157 verifies the user's OpenEXR 3.4.15_0 reactivation;
 openexr2 and POV-Ray revision 6 also remain active. R158 authorizes publication
 of the notes before a fresh Mac chat; this is not a PC ownership transfer.
 POV-Ray on Mac still runs outside the agent sandbox;
 R131's empty user config remains intact. This is illustrative visualization,
 not physical validation.
 
-Updated 2026-09-21. The user supports simplifying excessive supervision
+Updated 2026-09-21. R159 completed the installed-renderer validation on Mac;
+the raw PNGs remain in `/tmp/r159-installed-renderer` and were not added to Git.
+The first render wrapper stopped after the successful beads render because its
+zsh function assigned the reserved name `status`; the three project frames
+were run in a corrected wrapper and all completed. No rerender or scene
+workaround was needed. The user supports simplifying excessive supervision
 requirements. The [R103 practical supervision policy](docs/realizability/B2_MONITOR_PRACTICAL_SUPERVISION_POLICY.md)
 keeps process safeguards and honest accounting while removing recursive proof
 requirements for infrastructure. R106 implemented the portable trajectory output

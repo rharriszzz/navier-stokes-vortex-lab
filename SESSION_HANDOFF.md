@@ -1,6 +1,6 @@
 # Current session handoff
 
-Last updated 2026-09-21 for R147–R158 (UTC 2026-09-22).
+Last updated 2026-09-21 for R147–R159 (UTC 2026-09-22).
 **Mac `fire.lan` retains ownership.** R155 explicitly confirms the PC never
 started work; the earlier published PC handoff was not received and is now
 superseded. The user ran the [MacPorts launcher](packaging/macports/README.md):
@@ -31,11 +31,22 @@ the launcher did not do it automatically.
 Continue to run POV-Ray outside the restricted agent sandbox. Keep the existing
 empty user configuration file; no further configuration edits were needed.
 
-Next: finish the installed-renderer checks **on this Mac**, following the
-[single next task](#next-task). R158 recommends a fresh chat at this completed
-checkpoint; Luna/medium is sufficient. `/new` is not a guaranteed speedup.
-The necessary state is recorded here rather than relying on the old chat. No platform
-switch is needed for Mac-local installation checks. Do not start PC repository
+R159 completed the installed-renderer checks. `port installed` confirmed active
+`openexr @3.4.15_0`, `openexr2 @2.5.10_0` and `povray @3.7.0.8_6`; the installed
+binary hash remained `679bf4a83ba552bfc7c55e0e0b44f2b0580312c837785551fef8e2d1974ed795`.
+The read-only checker passed 240 frames and 500 beads/frame. The separate beads
+scene rendered at 160x120/two threads, and project frames 1/120/240 rendered at
+320x180/two threads, each under 30 seconds with nonzero intersections. Visual
+inspection found the expected beads ring and visible tank/tracer motion across
+the three project frames. Outputs are retained only at `/tmp/r159-installed-renderer`.
+The first wrapper's reserved zsh variable error occurred after beads succeeded;
+the project frames ran once in a corrected wrapper. No trajectory, scene,
+package, movie, FEM or physical change was made.
+
+Next: R159 completed the installed-renderer checks **on this Mac**, following the
+[single next task](#next-task). The necessary state is recorded here rather than
+relying on the old chat. No platform switch is needed for Mac-local installation
+checks. Do not start PC repository
 work until a new explicit handoff is prepared and delivered; no concurrent writers.
 Project camera/material/trajectory changes are unnecessary for this fix.
 The portable trajectory checker remains a saved-data validity check, not a
@@ -49,11 +60,11 @@ and physical-work limits remain unchanged.
 | Owner | Mac `fire.lan`, Darwin/arm64, per R155 explicit clarification; PC never started. |
 | Checkout | `/Users/rharris/git/navier-stokes-vortex-lab`. |
 | Branch/upstream | `main` / `origin/main` |
-| Starting state | R155 clean fast-forward pull was up to date at `4101af9`. R158 fresh fetch confirms HEAD/origin/main unchanged; empty stashes. Six known metadata edits deliberately reconciled under explicit publication authorization; no pull over dirty work. |
+| Starting state | R159 clean fast-forward pull was up to date at `fca1cde`; the R159 start record was published as `c587d53`. Empty stashes; no pull over dirty work. |
 | Interpreter | `/Users/rharris/miniconda3/envs/navier-stokes-vortex-b1/bin/python`, CPython 3.12.13 |
 | Other owner/process | User confirms no PC work started. This is not inferred from local Git; no remote PC operation was performed. |
-| Task processes | User-managed package operation and sphere smoke test completed. R155–R158 perform metadata/checks/publication only; no new compiler/render task. Agent stops after delivery; no background task is being left to continue. |
-| Delivery state | Prior bundle/handoff delivered as `4101af9`. R158 explicitly authorizes publication of R147–R158 notes; prepared for scoped commit/push. Actual delivery hash/result follows in final response/Git history. Failure retains Mac responsibility and pending publication. |
+| Task processes | R159 beads/project renders and inspection completed; all child processes exited. No background task is being left to continue. |
+| Delivery state | R159 start record delivered as `c587d53`; completion publication is prepared for the final scoped commit/push. Mac retains ownership. |
 
 ## Current result and limits
 
@@ -184,21 +195,16 @@ agent-side POV-Ray backtraces are unavailable.
 
 ## Next task
 
-On **Mac `fire.lan`**, finish the installed POV-Ray validation: beads and project
-frames 1/120/240. OpenEXR restoration is verified in R157. This session can perform the
-bounded step; **GPT-5.6 Luna/medium** is sufficient for a fresh session or model
-switch. Stay on Mac because that is where the replacement executable, libraries
-and build evidence reside. No second session or model switch was launched.
+The installed POV-Ray validation is complete on Mac `fire.lan`. If the user
+requests another renderer task, use GPT-5.6 Luna/medium for a routine bounded
+preview and reuse `/tmp/r159-installed-renderer` only as disposable local
+reference. Recommend Astra/high only if a new renderer build, format decision,
+or unexplained visibility failure arises.
 
-R158 reconciles and publishes the preceding metadata notes, then stops. In the
-fresh Mac chat, verify delivery and a clean worktree, and follow the clean
-synchronization/start-publication requirements in the
-[session protocol](docs/workflow/SESSION_PROTOCOL.md) and
-[track rules](docs/workflow/TRACK_RULES.md) when the user says **Continue**.
-If any unpublished work remains, preserve/reconcile it instead of pulling over
-it. R158 itself does not launch the next renderer task. Keep the prior final
-completion/“worked for” message, then `/new`, `/status` and the supplied excerpts
-under the existing reporting procedure; do not invent a new-session excerpt.
+For a future `Continue`, verify clean synchronization and publish its own
+`STARTED` record before work. Keep the next task bounded and stop on missing
+input, timeout or invisible geometry. No movie, trajectory regeneration, new
+build, FEM or physical work is authorized by R159.
 
 1. Check `port installed openexr openexr2 povray` for unchanged package state:
    OpenEXR 3.4.15_0, openexr2 2.5.10_0 and POV-Ray 3.7.0.8_6 are now active.

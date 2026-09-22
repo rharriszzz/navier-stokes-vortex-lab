@@ -4529,3 +4529,26 @@ project frames 1/120/240 with the installed POV-Ray under the recorded bounds,
 inspect the required outputs, record the result, and stop before movie,
 trajectory regeneration, FEM, physical, benchmark or new-build work. The
 `Continue` shorthand authorizes scoped commit/push publication. In progress.
+
+**R159 outcome/files/checks/next — 2026-09-21 (UTC 2026-09-22):**
+Complete. `port installed openexr openexr2 povray` confirmed active
+`openexr @3.4.15_0`, `openexr2 @2.5.10_0` and `povray @3.7.0.8_6`; the installed
+binary SHA-256 matched the recorded value
+`679bf4a83ba552bfc7c55e0e0b44f2b0580312c837785551fef8e2d1974ed795`.
+Python 3.12.13 read-only validation passed all 240 frames and 500 beads/frame.
+The separate beads scene rendered at 160x120/two threads. Project frames 1,
+120 and 240 rendered at 320x180/two threads, each under the 30-second bound,
+with nonzero geometry intersections; visual inspection found the expected
+colored beads ring and visible tank/tracer distributions that change across
+the three frames. Outputs: `/tmp/r159-installed-renderer/` (disposable local
+PNG files; no repository evidence artifact).
+
+Changed files: REQUEST_LOG.md, WORK_SESSIONS.md, SESSION_HANDOFF.md, STATUS.md,
+docs/rendering/POVRAY_MAC_BUILD_DIAGNOSIS.md. The first render wrapper stopped
+after the successful beads render because zsh reserves the function variable
+`status`; this understood wrapper error was corrected and the three project
+frames ran once. No trajectory, scene, package, movie, FEM, physical,
+benchmark or build work ran; no child process remains. Next: a later user-
+requested bounded renderer preview if desired. Recommend Luna/medium for that
+routine task; recommend Astra/high only for a new build, format decision or
+unexplained visibility failure. Stop before movie or scientific/physical work.
