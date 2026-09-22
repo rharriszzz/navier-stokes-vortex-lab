@@ -4552,3 +4552,21 @@ benchmark or build work ran; no child process remains. Next: a later user-
 requested bounded renderer preview if desired. Recommend Luna/medium for that
 routine task; recommend Astra/high only for a new build, format decision or
 unexplained visibility failure. Stop before movie or scientific/physical work.
+
+## R160 — 2026-09-21 — Resume completed checkpoint
+
+**User request:** “(I forget to get the final message) [supplied prior-session
+transcript and status excerpt] continue”
+
+**Scope/status:** Apply the `Continue` protocol on Mac `fire.lan`, verify clean
+same-owner synchronization and the published R159 checkpoint, then stop at the
+handoff's recorded boundary. No new renderer workload is implied without a
+specific bounded preview request; the `Continue` shorthand authorizes scoped
+commit/push publication.
+
+**R160 outcome/files/checks/next — 2026-09-21 (UTC 2026-09-22):** In progress.
+Clean fast-forward synchronization completed after the restricted sandbox
+blocked its `.git/FETCH_HEAD` write and the required host retry succeeded;
+`HEAD` and `origin/main` are both `eb294d9`. R159's installed-renderer result
+and delivery are present in history. No workload, package action, scene or
+trajectory change has run. Start-publication follows before any further work.
