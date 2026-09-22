@@ -7,9 +7,10 @@ visible centered sphere and project frame 1 at 160x120 with `-d +WT1 -J`.
 Both exited 0 with nonzero intersections. R167's failed run had graphic display
 On; its root cause remains unisolated because resolution and thread count also
 changed. [Commands and evidence](docs/rendering/POVRAY_PC_R168_COMPARISON.md).
-The comparison is complete and R169 selects GPT-5.6 Luna/medium to resume the
-bounded preview with explicit headless/one-thread settings; no package or scene
-change is needed on present evidence.
+R169 passed saved-data validation, the three separated-frame visual gates, the
+30-frame sequence, H.264/yuv420p encoding and ffprobe. The initial tool call
+yielded during the sequence's progress window, but the bounded render completed
+and no child remained. No package or scene change is needed.
 
 R167 validated the existing 450-frame/128-bead PC inventory with the
 repository-local Python 3.12.14 checker, including observed motion and finite

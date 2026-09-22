@@ -4824,3 +4824,27 @@ outputs outside Git. Continue authorizes the scoped commit and push. Stop on
 the recorded missing-tool, checker, timeout, crash, invisible-geometry or
 format-failure conditions and recommend Astra/high for any unresolved retry or
 build/format decision.
+
+**R169 outcome:** The saved-data check passed all 450 frames with 128
+beads/frame and observed motion. Separated frames 001, 225 and 450 each
+rendered once at 320x180 with exit 0, display Off, nonzero CSG intersections,
+and visible, changing tank/tracer images. The initial tool call yielded after
+its 30-second progress window while the bounded 180-second POV-Ray command
+continued; a follow-up found all 30 sequence PNGs complete, the final render
+log complete and no child remaining. Representative sequence images 001, 015
+and 030 were visible with changing tracer distributions. Encode exited 0 and
+ffprobe confirmed 30 H.264 frames, 1.000000 seconds, 30/1 fps, 320x180 and
+yuv420p. The apparent partial-output condition was a tool observation-window
+artifact, not a workload timeout or renderer failure. Inputs and source files
+are unchanged; generated outputs remain in `/tmp/r169-preview-EnjJq0/`.
+
+**R169 files/checks/next:** The four lifecycle/instruction files were published
+at the start checkpoint and are updated for completion here; generated outputs
+remain outside Git. Checks passed: clean synchronization/publication, Python
+3.12.14 saved-data validation, binary hash/tool preflight, three separated
+renders, 30-frame render, visual inspection, H.264/yuv420p encode, ffprobe and
+child cleanup. Skipped: trajectory generation, source/package/build, FEM,
+physical and broad tests. R167's bounded preview is complete; no renderer
+root-cause claim is added. PC retains ownership. Next task: no further preview
+retry; preserve the artifacts and return to Astra/high only for a new renderer,
+build or format decision.

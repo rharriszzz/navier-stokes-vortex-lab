@@ -9,8 +9,10 @@ R168's bounded comparison passed: the same installed default POV-Ray
 R167's failed run had display enabled; the crash cause remains unisolated
 because thread count and resolution also changed. The comparison is complete;
 the R167 preview lifecycle remains open at the prescribed decision checkpoint.
-No sequence, encode or ffprobe check ran. GPT-5.6 Luna/medium is selected for
-the bounded headless preview below; no Mac work or rebuild is needed.
+The saved-data, three separated-frame, 30-frame sequence, visual, encode and
+ffprobe gates passed. The initial tool call yielded after its 30-second progress
+window while the bounded 180-second renderer continued; a follow-up confirmed
+all 30 PNGs and no child remaining. No Mac work or rebuild is needed.
 [Commands, hashes and observed results](docs/rendering/POVRAY_PC_R168_COMPARISON.md).
 
 The Mac renderer repair is complete historical evidence, not a pending task.
@@ -75,8 +77,8 @@ and physical-work limits remain unchanged.
 | Starting state | R169 started clean at `f0c6937`; clean fast-forward pull up to date, HEAD = origin/main; stashes empty. |
 | Interpreter | `/home/rharris/git/navier-stokes-vortex-lab/.venv/bin/python`, CPython 3.12.14 with NumPy 2.5.3 |
 | Other owner/process | Mac `fire.lan` released in the published R161 handoff; no PC child process remains. |
-| Task processes | R168 sphere and project children exited 0; no POV-Ray process visible before R169 launch. |
-| Delivery state | R167 interruption published in `b5215b5`; R168 resume/result published in `7cb90e4`/`f0c6937`; R169 start publication is pending. |
+| Task processes | R168 children exited 0; R169 render/encode children exited or were cleaned; no POV-Ray process remains. |
+| Delivery state | R167 interruption published in `b5215b5`; R168 resume/result published in `7cb90e4`/`f0c6937`; R169 start published in `66ed253`; completion publication pending. |
 
 ## Current result and limits
 
@@ -207,37 +209,26 @@ agent-side POV-Ray backtraces are unavailable.
 
 ## Next task
 
-Current task: execute the proposed explicit-headless preview settings under
-**GPT-5.6 Luna / medium**. R169 has resumed the open R167 lifecycle with a
-RESUMED event, not a duplicate STARTED record.
+Current task complete: R169 passed the bounded preview and ffprobe gates, and
+R167 is complete. Preserve the generated artifacts in `/tmp/r169-preview-EnjJq0/`
+if needed for review; no retry is authorized by this handoff. PC retains
+ownership. Return to Astra/high only for a new renderer, build or format
+decision.
 
-1. Follow the clean synchronization/ownership/publication protocol. Activate
-   `.venv`, confirm `/usr/local/bin/povray` against the R168 hash and check
-   `timeout`, ffmpeg/libx264 and ffprobe. Preserve prior evidence. Validate
-   the actual existing 450-frame/128-bead inputs with the read-only checker;
-   do not regenerate trajectories or change scene/package/configuration files.
-2. In a fresh `/tmp` directory render unchanged `fluid.pov` frames 1, 225 and
-   450 at 320x180, using explicit `-d +WT1 -J +A0.2 +FN` and animation
-   `+KFI1 +KFF450 +KI0 +KF1`, selecting one frame per invocation with
-   `+SF<n> +EF<n>`. Use 30-second Linux timeout per render, two-second KILL
-   grace, and disable core dumps in the child-launch shell. Inspect each PNG;
-   require exit 0, display Off, nonzero geometry intersections and visible
-   tank/tracers with changing distributions. Preserve three-digit filenames.
-3. Only after all separated frames pass, render frames 1–30 once with the
-   same settings under a 180-second timeout, then encode 30 fps H.264/yuv420p
-   under a 30-second timeout. Verify exactly 30 PNGs, and use ffprobe to
-   confirm 30 frames, 1 second, 30 fps, 320x180, H.264 and yuv420p. The sequence
-   selects `+SF1 +EF30` while retaining `+KFF450`; do not remap simulation time.
-4. Record commands, results, artifact paths and checks; complete R167 only
-   if the preview/ffprobe gates pass. Stop on missing input/tool, changed
-   binary, checker failure, timeout, segfault, invisible geometry or an
-   unexplained output/format failure. Keep failure evidence and return to
-   Astra/high before any retry, larger workload or renderer/build change.
+1. Preserve the R169 output and logs in `/tmp/r169-preview-EnjJq0/`; they are
+   disposable local evidence and are not added to Git. No further preview
+   workload is pending.
+2. Recorded acceptance: frames 001/225/450 rendered once at 320x180 with
+   explicit `-d +WT1 -J +A0.2 +FN`, display Off, nonzero intersections and
+   visible changing tank/tracer distributions.
+3. Recorded acceptance: exactly 30 sequence PNGs rendered with `+SF1 +EF30`,
+   then encoded at 30 fps. ffprobe confirmed 30 H.264 frames, one second,
+   320x180 and yuv420p.
+4. No trajectory regeneration, source/package change, physical/FEM work or
+   full movie render ran. The old R167 crash remains unexplained; this preview
+   only establishes the accepted headless/one-thread configuration.
 
-This selects the working headless/one-thread configuration for useful work;
-it does not claim the R167 crash is diagnosed. Do not use broad pipeline
-scripts or test display-enabled mode. No physical/FEM or full movie work.
-All task children must exit before publication; PC retains ownership.
+All task children exited before publication; PC retains ownership.
 
 Model choice is task-fit judgment: OpenAI Docs was rechecked for
 [Luna's medium reasoning support](https://developers.openai.com/api/docs/models/gpt-5.6-luna).
