@@ -1,6 +1,6 @@
 # Current session handoff
 
-Last updated 2026-09-22 (America/New_York) for R198.
+Last updated 2026-09-22 (America/New_York) for R199.
 **PC/WSL `daisy` owns the repository.** No transfer; Mac remains released.
 **Paused at the user's request: record the supplied snapshot, then wait while
 the user works on another project. Resume only on a new user instruction.**
@@ -30,8 +30,10 @@ obstruction remains valid; both central faces and the exterior inventory count.
 R195 completion 9c7e849 was verified on fetched upstream. R196 began with a
 clean required fast-forward pull there and published STARTED 61aa5f9.
 R197 observes R196 completion ea1346d at HEAD and locally stored origin/main;
-no fresh remote check was performed. R198 authorizes a local commit of the
-snapshot and pause records; no push requested. Commit result is in Git history.
+R198 committed the snapshot and pause records as a0e350c. R199 authorizes
+pushing that commit and the request/handoff record. Remote main was checked
+at ea1346d before publication; final delivery result is in Git history and the
+final response. Project work remains paused.
 User reports R195 used Astra medium, followed by a switch to high for the new
 session. Account snapshots include other-project usage and cannot measure this
 project's consumption. No agent-initiated model switch or account access.
@@ -118,7 +120,7 @@ and physical-work limits remain unchanged.
 | Other owner/process | Mac `fire.lan` released in the published R161 handoff. Local Git cannot inspect another checkout's unpublished state. |
 | Task processes | R197 launches no task workload; project paused pending user instruction. R196 source/algebra checks completed. |
 | Symbolic environment | `/tmp/navier-r183-sympy/bin/python`, Python 3.12.14, SymPy 1.14.0, mpmath 1.3.0; recreate using `requirements-symbolic.txt` if missing. Existing environments unchanged. |
-| Delivery state | R196 completion ea1346d is the base and locally stored origin/main. R198 authorizes committing the R197 snapshot/pause and R198 request record locally; no push requested. PC retains ownership during pause. |
+| Delivery state | R198 snapshot/pause commit a0e350c complete. R199 requests push with its metadata record; remote main checked at ea1346d before publication. Final delivery result in Git history/final response. PC retains ownership during pause. |
 
 ## Current result and limits
 
@@ -300,7 +302,11 @@ are the metadata checks; scientific/runtime tests are skipped. Evidence is the
 supplied transcript and observed local Git state. No new scientific decision;
 fixture admission remains unresolved. R198 authorizes staging and committing
 these three metadata files, with whitespace and request-log preservation checks;
-commit result is in Git history. No push or workload requested. Next: wait for
+commit a0e350c succeeded. R199 requests push plus its request/handoff metadata
+record; changed files are REQUEST_LOG.md, SESSION_HANDOFF.md and STATUS.md.
+Checks: identity/ownership/Git/stashes, remote main observation, append-only
+request log and whitespace; scientific/runtime tests skipped. No new unresolved
+decision; fixture admission remains pending. No workload requested. Next: wait for
 the user to resume; the deferred implementation task above remains unchanged.
 
 ### Note for the next Mac session
