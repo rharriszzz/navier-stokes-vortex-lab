@@ -1,14 +1,27 @@
 # Current session handoff
 
-Last updated 2026-09-22 (America/New_York) for R212.
+Last updated 2026-09-22 (America/New_York) for R220.
 **PC/WSL `daisy` owns the repository.** No transfer; Mac remains released.
+R215/R216 update the [cost estimate](docs/PROJECT_RESOURCE_AND_COST_ESTIMATE.md)
+with confirmed $40 packages and complete a [process/model review](docs/PROCESS_REVIEW_AND_MODEL_ROUTING.md).
+The proposal retains clear endpoints, assigns Luna to specified work, Sol to
+implementation/synthesis and Astra to difficult science/critical reviews.
+R219 makes useful progress at each step the priority: do not reduce word count
+if that might impair agent progress; retain context when uncertain.
+R218 clarifies that shorter documents were a proposed optimization, not a
+demonstrated performance improvement; no comparison benchmark is scheduled.
+R217 supersedes the size-target recommendation: provide enough context for
+correct work, including rationale, constraints, known failures and evidence. Prices were checked directly against
+official OpenAI sources. Model routing and step sizes remain proposals; AGENTS.md now records the
+user's context-first preference. Next: review those proposals; no separate
+size-reduction task is needed. Implementation remains paused. R220 authorizes publishing the cost/process
+documents, agent priority and session records; Git history and the final response
+record the delivery result.
 **Implementation and workloads remain paused. The session's physical and cost
 assessment is consolidated into one cohesive essay and reviewed for clarity:**
 [WATER_EXPERIMENT_FEASIBILITY_AND_COST.md](docs/realizability/WATER_EXPERIMENT_FEASIBILITY_AND_COST.md).
 R210 published the README essay link and associated records as b4db4ff.
-R211 removes the preview image and caption from README.md. R212 authorizes
-publication of this removal and its records; Git history and the final response
-record the delivery result.
+R212 published the README image/caption removal and records as 18a372c.
 R206 published the essay and supporting notes in commit a2f151b on origin/main.
 R207/R208 clarify that the essay is the primary review document and R200 is
 the earlier, more detailed physics note. Wait for the user's review and next instruction. The earlier water and cost notes remain supporting
@@ -142,12 +155,12 @@ and physical-work limits remain unchanged.
 | Owner | PC/WSL `daisy`; Mac `fire.lan` released after published R161 handoff and R162 receipt. |
 | Checkout | `/home/rharris/git/navier-stokes-vortex-lab`. |
 | Branch/upstream | `main` / `origin/main` |
-| Starting state | R204 began at c5dd6e3 with five known session files modified/untracked; reviewed and preserved. Empty stashes, rharris-owned checkout/.git, same owner. R206 publication fetch succeeded; upstream comparison checked before commit/push. |
+| Starting state | R213 began clean on main/origin/main at 18a372c, with empty stashes and rharris-owned checkout/.git on daisy. Earlier delivery history remains below. |
 | Interpreter | `/home/rharris/git/navier-stokes-vortex-lab/.venv/bin/python`, CPython 3.12.14 with NumPy 2.5.3 |
 | Other owner/process | Mac `fire.lan` released in the published R161 handoff. Local Git cannot inspect another checkout's unpublished state. |
 | Task processes | R200–R206 ran only short arithmetic/documentation checks and source reads; no simulation, physical or implementation workload. Implementation remains paused. |
 | Symbolic environment | `/tmp/navier-r183-sympy/bin/python`, Python 3.12.14, SymPy 1.14.0, mpmath 1.3.0; recreate using `requirements-symbolic.txt` if missing. Existing environments unchanged. |
-| Delivery state | R206 published six session documents/records as a2f151b; R210 published the README link and records as b4db4ff; R212 authorizes publishing the R211 image/caption removal and records. Essay and clarity review complete; staged checks, commit/push and final Git verification supply delivery evidence. No ownership release or implementation resumption. |
+| Delivery state | R206 published six session documents/records as a2f151b; R210 published the README link and records as b4db4ff; R212 published image removal and records as 18a372c; R220 authorizes publication of R213–R219 cost/process documents, agent priority and records; model routing remains proposed; R217 context sufficiency takes priority over size targets. Essay and clarity review complete; staged checks, commit/push and final Git verification supply delivery evidence. No ownership release or implementation resumption. |
 
 ## Current result and limits
 
@@ -278,7 +291,46 @@ agent-side POV-Ray backtraces are unavailable.
 
 ## Next task
 
-**Wait for the user's review of the consolidated essay and next instruction.**
+**Wait for review of the proposed model roles and step boundaries.**
+R220 publishes AGENTS.md, REQUEST_LOG.md, STATUS.md, this handoff and the two
+cost/process documents. Documentation/Git checks are recorded in the request
+log; runtime tests are unnecessary. No new scientific decision or owner change.
+
+R219 makes good progress at each step the priority; context must not be shortened
+if progress might suffer. Updated AGENTS.md, the process review, REQUEST_LOG.md,
+STATUS.md and this handoff. Checks: wording consistency, preserved requests and
+whitespace; runtime tests unnecessary. No new uncertainty, model switch or
+publication. Implementation remains paused.
+
+R218 distinguishes measured document reduction from untested performance benefit
+in both review documents. Changed those documents, REQUEST_LOG.md, STATUS.md
+and this handoff. Checked wording consistency, request preservation and whitespace;
+no runtime or comparison benchmark. The benefit remains unknown.
+
+R217 prioritizes agent understanding over document-size targets; AGENTS.md and
+the process review now reflect this. No mandatory handoff-shortening task.
+Changed AGENTS.md, the process review, REQUEST_LOG.md, STATUS.md and this handoff;
+prior cost work is preserved. Checks: correction consistency, request preservation,
+local links and whitespace. No runtime tests, model switch or publication.
+Next implementation remains deferred until requested; its preparation must
+include enough scientific rationale, constraints and evidence for correct work.
+R215/R216 update docs/PROJECT_RESOURCE_AND_COST_ESTIMATE.md and add
+[PROCESS_REVIEW_AND_MODEL_ROUTING.md](docs/PROCESS_REVIEW_AND_MODEL_ROUTING.md),
+plus REQUEST_LOG.md, STATUS.md and this handoff. Checks: public model/credit
+rates, historical decision references, word/time/cost arithmetic, local links,
+request preservation and whitespace. No runtime tests or model/workflow-rule
+changes; package count, upgrade invoice and savings remain uncertain.
+
+R213/R214 changed docs/PROJECT_RESOURCE_AND_COST_ESTIMATE.md, REQUEST_LOG.md,
+STATUS.md and this handoff. Evidence: supplied repository token/status records,
+UTC work intervals, Git history and current official OpenAI pricing sources.
+Checks: extracted totals, distinct retained prior-session IDs, no timestamp
+interval overlap, cost arithmetic, local links, request preservation and whitespace.
+Scientific/runtime tests and private account/session access were skipped.
+Unknowns: missing sessions, historical model mix/speed, credit-package count and
+project share of account use. No new commit/push or workload requested.
+The water essay remains available for the user's review; implementation stays paused.
+
 R212 publishes README.md, REQUEST_LOG.md, STATUS.md and this handoff.
 Documentation and Git checks are recorded in the request log; runtime/scientific
 tests are skipped. No new unresolved decision or ownership change.

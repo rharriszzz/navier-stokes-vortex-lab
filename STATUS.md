@@ -1,15 +1,22 @@
 # Project status: a boundary-controlled engineering approximation
 
-Updated 2026-09-22 (America/New_York), through R212. PC/WSL `daisy` owns the
-repository. **Implementation and workloads remain paused.** The complete
+Updated 2026-09-22 (America/New_York), through R220. PC/WSL `daisy` owns the
+repository. **Implementation and workloads remain paused.** The
+[cost estimate](docs/PROJECT_RESOURCE_AND_COST_ESTIMATE.md) now includes confirmed
+$40 packages and the $100 Pro upgrade. The [process/model review](docs/PROCESS_REVIEW_AND_MODEL_ROUTING.md)
+proposes clearer switching criteria and more complete steps using GPT-6 Luna,
+Sol and Astra. R219 prioritizes good progress at each step and retaining context
+whenever shortening it might impair that progress;
+AGENTS.md records that preference. R218 clarifies that document-length reduction
+was measured, but its performance benefit was not established. Model settings remain unchanged. R220 authorizes publishing both documents and their associated records. Next:
+[review the model and step-size proposals](SESSION_HANDOFF.md#next-task). The complete
 [essay on feasibility, physical limits and cost](docs/realizability/WATER_EXPERIMENT_FEASIBILITY_AND_COST.md)
 was assembled and reviewed for clarity in R204–R206. It includes both ownership
 cost routes without reproducing the conversation, published in a2f151b.
 R207/R208 clarify that this is the primary review document; the R200 outlook
 retains detailed supporting physics. R209 adds a short description and link
 in [README.md](README.md), published with its records in b4db4ff. R211 removes
-the README preview image and caption; R212 authorizes publishing the removal
-and its records. Wait for the user's review and
+the README preview image and caption, published with its records as 18a372c. Wait for the user's review and
 [next instruction](SESSION_HANDOFF.md#next-task). Supporting findings follow.
 R200's requested
 [broader water-experiment assessment](docs/realizability/WATER_EXPERIMENT_OUTLOOK_R200.md)

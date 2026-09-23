@@ -2,6 +2,7 @@
 
 ## Every session
 
+- Prioritize good progress at each step (R217–R219). Do not reduce word count if doing so might impair an agent's progress. Preserve enough rationale, constraints, known failures, evidence and completion criteria for informed work; when unsure whether context is needed, retain it. Judge steps by useful results and clear completion points, not document length. Historical size-reduction targets are superseded by this preference.
 - Check identity, ownership, Git status/branch/upstream and stashes before writes or workload launches. Read [SESSION_HANDOFF.md](SESSION_HANDOFF.md), the latest request entries, and the applicable task inputs. A new user request overrides a stale recommendation.
 - Append each actual user request to `REQUEST_LOG.md` before substantive work, with the next sequential ID, date, wording, scope and status. Preserve prior entries; append outcomes. Record only supplied text, redact secrets and label missing excerpts. Never inspect private session files or infer command output.
 - Keep one active repository owner across machines. Treat local Git as unable to reveal another checkout's unpublished work or live processes. Resolve dirty work, ownership conflicts and incomplete transfers before dependent work.

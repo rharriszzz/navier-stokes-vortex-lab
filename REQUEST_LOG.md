@@ -7058,3 +7058,207 @@ hash/result are recorded in Git history and the final response. No runtime or
 scientific tests needed for documentation only. No new unresolved decision;
 PC retains ownership and implementation remains paused. Next: wait for the
 user's essay review and next instruction.
+
+## R213 — 2026-09-22 (America/New_York) — Estimate project resources and AI cost
+
+**User wording:**
+
+```text
+Can you review your records and try to come with a resource estimation and cost estimate for this project.  I was on plus for a while and yesterday I switched to plus.  I bought 2 or three extra packages of credits, and used one usage limit reset.  I know the /status records are incomplete, you probably will need to do some guessing.  sorry.
+```
+
+**Scope/status:** Started. Review repository-supplied usage/work records and
+estimate historical AI resources, cash spending and project attribution with
+explicit uncertainty. Clarification requested for the repeated Plus plan name
+and credit-package prices. Use public official pricing sources; no private
+session/account files. Preflight: rharris on owner PC/WSL daisy, owned checkout
+and .git, clean main matching locally stored origin/main at 18a372c, empty
+stashes. Other-checkout unpublished work is not observable. No implementation,
+account changes, purchases or commit/push requested.
+
+## R214 — 2026-09-22 (America/New_York) — Clarify subscription upgrade
+
+**User wording:**
+
+```text
+sorry.  I switched to Pro 100 dollar
+```
+
+**Scope/status:** Incorporated into R213: previous Plus subscription, upgraded
+yesterday to the $100 Pro plan. Credit-pack number/price and exact upgrade
+invoice remain uncertain; continue estimation without requiring receipts.
+
+**R213/R214 outcome:** Complete. Created
+[PROJECT_RESOURCE_AND_COST_ESTIMATE.md](docs/PROJECT_RESOURCE_AND_COST_ESTIMATE.md)
+with evidence, a 25-row token audit, cash-purchase scenarios, project allocation,
+metered-token comparison, time/resource estimates and uncertainty. Confirmed user
+upgrade is Plus to $100 Pro; historical Plus/Pro Lite labels are retained as
+conflicting snapshot evidence. Package prices/count and upgrade adjustment remain
+unknown. Working $40/package scenario gives $200–240 gross purchases for one
+Plus and one Pro month, or $180–240 allowing an illustrative upgrade credit.
+A discretionary 50–80% allocation after historical unused-credit value gives
+about $85–185, centered on $150; explicitly includes future subscription capacity,
+not an accrued usage bill. Reset is assigned no extra cash absent a charge;
+90-credit historical decline is not a reset fee or whole-project total.
+
+Observed partial token totals: 3,673,699 input; 95,840,896 cached input; 652,898
+output, including 144,837 reasoning; reported input+output 4,326,597. Twenty-five
+distinct numerical summaries, 24 distinct retained prior-session identifiers
+(R165 identifier omitted). Thirty-four nonoverlapping explicit UTC lifecycle
+intervals total 20,714 seconds. Extrapolation of 1.5–3.5 times token coverage,
+12–25 hours of agent-assisted work intervals and roughly $150–600 standard-rate
+metered-token equivalent are labeled low-confidence scenarios, not telemetry,
+provider costs or invoices. Account-wide percentages cannot isolate this project.
+
+Changed files: docs/PROJECT_RESOURCE_AND_COST_ESTIMATE.md, REQUEST_LOG.md,
+SESSION_HANDOFF.md and STATUS.md. Checks passed: extracted sum identities and
+reasoning inclusion, distinct records/retained IDs, timestamp-pair arithmetic
+and nonoverlap, cash/credit/model-rate arithmetic, local document link targets,
+pre-request log preservation, 214 unique sequential IDs and whitespace.
+Disposable extraction/calculation helper: /tmp/r213_analyze.py; temporary parsed
+rows: /tmp/r213-tokens.json. OpenAI Docs skill used; official pricing, model-rate
+and credit-value pages opened and linked in the estimate. No private session or
+account access, provider telemetry, invoices, research/runtime tests, workloads,
+procurement, plan change, commit or push. Evidence is repository records and
+public sources; receipts and missing usage cannot be reconstructed. PC retains
+ownership; implementation remains paused. Next: user review, then refine with
+credit-package prices/count and net upgrade charge when supplied.
+
+## R215 — 2026-09-22 (America/New_York) — Confirm credit prices and review process
+
+**User wording:**
+
+```text
+The credit packages came in different levels, I only bought the $40 one.  Maybe write a markdown about cost so far, and then review the whole process, to reexamine where the boundary switches whent to the right model. (note that today there are more models, 2 lower levels of gpt-6, consider them for later)  also consider whether the amount of work per step was right.  I know that you try to set up the steps fith a clear ending point.  I like that.  But now is a good time to reexamine the process.
+```
+
+**Scope/status:** Started. Update the cost Markdown with confirmed $40 packages
+(count still two or three); then review historical model transitions and step
+sizes, and propose future routing including GPT-6 Sol/Luna while preserving
+clear completion boundaries. Review/proposal only; no model switch, workflow
+implementation, workload or publication requested. Preflight: rharris on owner
+PC/WSL daisy, main/origin/main at 18a372c, empty stashes, owned checkout/.git;
+known R213/R214 estimate and three metadata edits reviewed and preserved.
+Other-checkout unpublished state is not observable.
+
+## R216 — 2026-09-22 (America/New_York) — Check current model prices
+
+**User wording:**
+
+```text
+do you want me to check the model prices as of today, or can you do it
+```
+
+**Scope/status:** Incorporated into R215. Check official OpenAI prices directly;
+user need not research them. Distinguish API rates, Codex credits and subscription
+spending; no account access or purchase. Official source review is underway.
+
+**R215/R216 outcome:** Complete. Updated the cost note for confirmed $40 packages
+and wrote docs/PROCESS_REVIEW_AND_MODEL_ROUTING.md: historical switching review,
+current API/Codex prices, proposed Luna/Sol/Astra roles, useful step boundaries
+and documentation-overhead correction. $200–240 gross purchases still assumes
+one Plus/Pro month and two/three packages; no measured savings claimed.
+Changed both documents, REQUEST_LOG.md, SESSION_HANDOFF.md and STATUS.md.
+Checks passed: official HTML model/credit sources, historical decision evidence,
+cost/time/word arithmetic, local links, prior log preservation, 216 unique IDs,
+five-file scope and whitespace. Markdown source endpoints failed; HTML succeeded.
+OpenAI Docs used. No runtime/scientific tests, private-account access, model
+switch, operative workflow change, implementation, commit or push. Remaining:
+package count, invoice adjustments and prospective model performance. PC retains
+ownership. Next: user review; proposed follow-up is Luna/medium compact workflow
+cleanup preserving active requirements and history, if adopted.
+
+## R217 — 2026-09-22 (America/New_York) — Prioritize agent understanding
+
+**User wording:**
+
+```text
+I don't care about that target.  I would rather the agents know what they are doing.
+```
+
+**Scope/status:** Revise the process review and current guidance: adequate agent
+context takes priority over document-size targets. Preserve historical records
+and known R213–R216 local work. Preflight confirms rharris-owned daisy checkout,
+main/origin/main at 18a372c, empty stashes and five known documentation files;
+no ownership transfer. No model change, workload or publication requested.
+
+**Outcome:** Complete. Revised the process review to judge handoffs by agent
+understanding, preserving rationale, constraints, failures and evidence; removed
+the proposed size-restoration/mandatory cleanup step. Added the durable R217
+preference to AGENTS.md and aligned handoff/status. Changed AGENTS.md,
+docs/PROCESS_REVIEW_AND_MODEL_ROUTING.md, REQUEST_LOG.md, SESSION_HANDOFF.md and
+STATUS.md; prior cost work preserved. Checks: scoped diff/correction consistency,
+local links, request preservation/IDs and whitespace. No runtime tests needed,
+model switch, workload, commit or push. No new unresolved decision. Next: user
+review of model roles and step boundaries; implementation remains paused.
+
+## R218 — 2026-09-22 (America/New_York) — Distinguish proposed and tested improvements
+
+**User wording:**
+
+```text
+thanks.  word couynd reduction was a proposed performance improvement.  How it was untested, perhaps because it was impossible to test.
+```
+
+**Scope/status:** Clarify that document reduction was measured but its performance
+benefit was not established; explain a possible controlled comparison without
+running one. Preflight confirms owner rharris/daisy, owned checkout/.git,
+main/origin/main at 18a372c, empty stashes and six known local documentation files,
+all preserved. No model change, benchmark or publication requested.
+
+**Outcome:** Complete. Both cost/process documents now distinguish observed
+length reduction from untested causal performance benefit. Described a possible
+repeated matched-task comparison including correctness, rework, tokens, time
+and cache conditions; none was run or scheduled. Changed the two documents,
+REQUEST_LOG.md, SESSION_HANDOFF.md and STATUS.md; prior work preserved.
+Checks: wording consistency, request-prefix preservation, unique IDs and
+whitespace. Runtime/benchmark tests skipped; efficacy remains unknown. No
+commit/push. Next: review proposed model roles and step boundaries, keeping
+context sufficiency primary and implementation paused.
+
+## R219 — 2026-09-22 (America/New_York) — Prioritize progress at each step
+
+**User wording:**
+
+```text
+for now, my goal is to make good progress at each step.  do not reduce word count if it might adversly affect agent's progress towards that goal.
+```
+
+**Scope/status:** Record a durable priority for useful progress at each step;
+do not shorten context when that could impair it. Preflight: rharris/daisy,
+owned checkout/.git, main/origin/main at 18a372c, empty stashes; six known local
+documentation files preserved. No implementation, model switch or publication.
+
+**Outcome:** Complete. AGENTS.md and the process review explicitly prioritize
+good progress at each step, retain uncertain-but-potentially-useful context,
+and supersede word-count targets. Handoff/status aligned. Changed AGENTS.md,
+docs/PROCESS_REVIEW_AND_MODEL_ROUTING.md, REQUEST_LOG.md, SESSION_HANDOFF.md and
+STATUS.md; other local work preserved. Checks: consistent priority, preserved
+log prefix, 219 unique request IDs and whitespace. Runtime tests unnecessary;
+no commit/push, new unresolved decision or workload. Next: user review of model
+roles and step boundaries; implementation remains paused.
+
+## R220 — 2026-09-22 (America/New_York) — Publish cost and process review
+
+**User wording:**
+
+```text
+add commit push
+```
+
+**Scope/status:** Stage, commit and push the six pending R213–R219 documentation
+files plus this publication record. Preflight: rharris on owner PC/WSL daisy,
+owned checkout/.git, main and locally stored origin/main at 18a372c, empty
+stashes; six known files reviewed and preserved. No ownership transfer,
+implementation, model switch or scientific workload.
+
+**Publication preparation:** Six files ready: AGENTS.md, REQUEST_LOG.md,
+SESSION_HANDOFF.md, STATUS.md, docs/PROJECT_RESOURCE_AND_COST_ESTIMATE.md and
+docs/PROCESS_REVIEW_AND_MODEL_ROUTING.md. Checks passed: preserved request prefix,
+220 unique IDs, document link targets, fetched upstream equality at 18a372c,
+six-file scope and whitespace. Earlier arithmetic/source checks remain recorded.
+Staged checks, commit/push and final local/remote verification follow; delivery
+hash/result appear in Git and final response. Runtime/scientific tests skipped
+for documentation only. No new unresolved decision; estimate uncertainties and
+proposed routing remain. PC retains ownership, implementation stays paused.
+Next: user review of model roles and step boundaries with progress/context primary.
