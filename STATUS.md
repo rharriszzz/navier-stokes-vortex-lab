@@ -1,7 +1,11 @@
 # Project status: a boundary-controlled engineering approximation
 
-Updated 2026-09-22 (America/New_York), through R220. PC/WSL `daisy` owns the
-repository. **Implementation and workloads remain paused.** The
+Updated 2026-09-22 (America/New_York), through R221. PC/WSL `daisy` owns the
+repository. **Implementation and workloads remain paused.** R221 recommends
+**GPT-6 Sol / high / PC-WSL daisy** for the bounded fixture-driver/supervision
+source task when resumed, stopping before FEM execution; Astra/high reviews
+formulation/admission afterward. R220 was published as f252f31; Git history
+records subsequent reminder delivery. The
 [cost estimate](docs/PROJECT_RESOURCE_AND_COST_ESTIMATE.md) now includes confirmed
 $40 packages and the $100 Pro upgrade. The [process/model review](docs/PROCESS_REVIEW_AND_MODEL_ROUTING.md)
 proposes clearer switching criteria and more complete steps using GPT-6 Luna,
@@ -9,7 +13,7 @@ Sol and Astra. R219 prioritizes good progress at each step and retaining context
 whenever shortening it might impair that progress;
 AGENTS.md records that preference. R218 clarifies that document-length reduction
 was measured, but its performance benefit was not established. Model settings remain unchanged. R220 authorizes publishing both documents and their associated records. Next:
-[review the model and step-size proposals](SESSION_HANDOFF.md#next-task). The complete
+[resume the bounded source step when requested](SESSION_HANDOFF.md#next-task). The complete
 [essay on feasibility, physical limits and cost](docs/realizability/WATER_EXPERIMENT_FEASIBILITY_AND_COST.md)
 was assembled and reviewed for clarity in R204–R206. It includes both ownership
 cost routes without reproducing the conversation, published in a2f151b.
@@ -439,11 +443,12 @@ pinned dependencies and a retained reproduction script.
 R185 supplied the hardware/optical survey and placed physical fidelity before
 further movies. R191 completed the [similarity contract and first-test design](docs/realizability/ESSENTIAL_SIMILARITY_CONTRACT_R191.md),
 including checked central side/endcap and surrounding-fluid accounting. The
-single [next task](SESSION_HANDOFF.md#next-task) assesses inward transport versus
-wall diffusion after R192 quantified the operating point. No test has run.
-Retain **GPT-6 Astra / high / PC-WSL daisy**; the linked handoff records the
-model guidance and scope.
-Stop before solver/controller code, procurement or physical execution.
+historical next analysis assessed inward transport versus wall diffusion after
+R192 quantified the operating point; R193 subsequently completed that screen.
+For the current [next task](SESSION_HANDOFF.md#next-task), R221 recommends
+**GPT-6 Sol / high / PC-WSL daisy** for bounded fixture-driver source work,
+with Astra/high for critical review. Stop before FEM execution, tank/controller
+implementation, procurement or physical work.
 R021 launch integration stays deferred; its accuracy diagnostic,
 completed R033 prerequisites and R070 repairs remain relevant. B2 is still
 failed and q64/q96 unused. No completed toy work should be restarted.

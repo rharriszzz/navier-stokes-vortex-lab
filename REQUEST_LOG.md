@@ -7262,3 +7262,28 @@ hash/result appear in Git and final response. Runtime/scientific tests skipped
 for documentation only. No new unresolved decision; estimate uncertainties and
 proposed routing remain. PC retains ownership, implementation stays paused.
 Next: user review of model roles and step boundaries with progress/context primary.
+
+## R221 — 2026-09-22 (America/New_York) — Recommend the next model and platform
+
+**User wording:**
+
+```text
+also remind me which model/level/platform you want next.
+```
+
+**Scope/outcome:** Recommend GPT-6 Sol/high on owner PC/WSL daisy for the next
+bounded n=2 Poiseuille driver and supervision source step, when implementation
+is resumed. End with tests and a reviewable admission package, before FEM
+execution. Escalate unresolved formulation/assurance questions to Astra/high;
+use Astra/high for the subsequent critical review. No switch or launch occurred.
+Current official Sol documentation read in R215/R216 and session catalog support
+the recommendation; fit remains a judgment. R220 commit f252f31 was pushed and
+verified against live origin/main; checkout was clean with empty stashes before
+this reminder. This new request is not additional publication authorization.
+
+**Files/checks/next:** Updated REQUEST_LOG.md, SESSION_HANDOFF.md and STATUS.md
+with consistent current model/task pointers. Checks: remote publication equality,
+prior request preservation, unique IDs and whitespace. Runtime tests unnecessary.
+Existing scientific uncertainties remain; no new decision or ownership change.
+This reminder was local at R221 completion; later delivery is recorded in Git.
+Next: user resumes with Sol/high on daisy for the bounded source task.

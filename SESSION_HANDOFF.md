@@ -1,7 +1,14 @@
 # Current session handoff
 
-Last updated 2026-09-22 (America/New_York) for R220.
+Last updated 2026-09-22 (America/New_York) for R221.
 **PC/WSL `daisy` owns the repository.** No transfer; Mac remains released.
+R221 recommendation: **GPT-6 Sol / high / PC-WSL daisy** for the next complete
+n=2 Poiseuille fixture-driver and supervision source step, once the user resumes
+implementation. Stop before FEM execution; Astra/high follows for critical
+formulation/admission review or an unresolved scientific/assurance question.
+R220 published as f252f31 and was verified on remote main. R221 reminder
+records were prepared locally; Git history records their later delivery.
+No model switch or implementation resumption occurred.
 R215/R216 update the [cost estimate](docs/PROJECT_RESOURCE_AND_COST_ESTIMATE.md)
 with confirmed $40 packages and complete a [process/model review](docs/PROCESS_REVIEW_AND_MODEL_ROUTING.md).
 The proposal retains clear endpoints, assigns Luna to specified work, Sol to
@@ -58,7 +65,7 @@ path; review admission after import-free checks. Stop before FEM execution.**
 Execution remains unadmitted, with zero attempts; the adapter has no supervised
 entry point. Full convergence-suite and tank launches remain unadmitted.
 Tank implementation/execution remains unadmitted. No actual base, gain or feasible
-contraction range is established. Retain GPT-6 Astra / high / PC-WSL `daisy`;
+contraction range is established. R221 recommends GPT-6 Sol / high / PC-WSL `daisy` for source implementation;
 no agent-initiated model switch or machine transfer. R191 similarity and R192 operating/error gates remain.
 The ideal 0.3927 micro-N m contrast, separate 0.1309 micro-N m residual/confound
 limits and 1.528e-7 m²/s² covariance allocation remain unverified requirements.
@@ -291,7 +298,16 @@ agent-side POV-Ray backtraces are unavailable.
 
 ## Next task
 
-**Wait for review of the proposed model roles and step boundaries.**
+**Wait for the user to resume implementation. Recommended next session:
+GPT-6 Sol / high reasoning / PC-WSL daisy.**
+Implement the bounded driver/supervision source task below, then stop before
+FEM execution and recommend Astra/high for its critical admission review.
+This replaces the earlier Astra-only source-implementation recommendation;
+scientific gates, resource limits and required context are unchanged.
+R221 changes only REQUEST_LOG.md, STATUS.md and this handoff. Checks: delivery
+verification, recommendation consistency, request preservation and whitespace;
+no runtime tests or new publication. PC retains ownership.
+
 R220 publishes AGENTS.md, REQUEST_LOG.md, STATUS.md, this handoff and the two
 cost/process documents. Documentation/Git checks are recorded in the request
 log; runtime tests are unnecessary. No new scientific decision or owner change.
@@ -415,8 +431,9 @@ FEM imports/JIT/mesh/assembly/solves in this source increment.** Use the
 [R196 adapter/launch review](docs/realizability/CUBE_ADAPTER_R196.md),
 [prototype source](verification/nonlinear_port/README.md) and
 [non-executable manifest](verification/nonlinear_port/future_fem.json).
-Retain GPT-6 Astra / high / PC-WSL `daisy`; model support was rechecked through
-OpenAI Docs in R196. User reports the preceding medium-to-high change; no
+R221 recommends GPT-6 Sol / high / PC-WSL `daisy` for this source step;
+Astra/high remains the reviewer for formulation and execution admission.
+Sol support was checked through OpenAI Docs in R215/R216. User reports the preceding medium-to-high change; no
 agent-initiated switch or account-specific capability claim.
 
 1. Join the existing cube, exact data, sparse assembly/Newton and diagnostic
@@ -445,9 +462,10 @@ retry. B2 accuracy failed, q64/q96 unused, R021 deferred; production science and
 pins unchanged. Early Mac validation is portable algebra only after normal
 ownership handoff; optional platform comparisons do not block PC source work.
 
-Keep Astra/high while mixed assembly and admission choices remain. Recommend a
-cheaper model only once work is mechanical and availability is rechecked. This
-does not schedule work or change models. The earlier **Continue** prompt applies
+Use Sol/high for the fixed-contract implementation. Bring unresolved mixed
+assembly or admission choices to Astra/high before dependent work; Astra/high
+reviews the completed source/admission package. This does not schedule work or
+change models. The earlier **Continue** prompt applies
 only if the user chooses to resume this deferred implementation.
 R196 files/checks/evidence and remaining choices are in REQUEST_LOG.md and
 WORK_SESSIONS.md. PC retains ownership. R197 changed only REQUEST_LOG.md,
