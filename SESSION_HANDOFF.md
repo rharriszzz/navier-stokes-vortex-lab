@@ -1,13 +1,16 @@
 # Current session handoff
 
-Last updated 2026-09-22 (America/New_York) for R206.
+Last updated 2026-09-22 (America/New_York) for R210.
 **PC/WSL `daisy` owns the repository.** No transfer; Mac remains released.
 **Implementation and workloads remain paused. The session's physical and cost
 assessment is consolidated into one cohesive essay and reviewed for clarity:**
 [WATER_EXPERIMENT_FEASIBILITY_AND_COST.md](docs/realizability/WATER_EXPERIMENT_FEASIBILITY_AND_COST.md).
-R206 authorizes add/commit/push of this session's documents and records; final
-publication result is in Git history and the final response. Wait for the user's
-review and next instruction. The earlier water and cost notes remain supporting
+R209 adds a short description and link to the essay in README.md. R210
+authorizes publishing it with the R207–R210 records; the commit and final
+response record the delivery result.
+R206 published the essay and supporting notes in commit a2f151b on origin/main.
+R207/R208 clarify that the essay is the primary review document and R200 is
+the earlier, more detailed physics note. Wait for the user's review and next instruction. The earlier water and cost notes remain supporting
 detail and link to the essay. The essay contains no conversation transcript.
 The forecast is cautiously optimistic for roughly 10→3 mm contraction, less
 confident for 10→1 mm and doubtful for 10→0.1 mm in this apparatus concept.
@@ -143,7 +146,7 @@ and physical-work limits remain unchanged.
 | Other owner/process | Mac `fire.lan` released in the published R161 handoff. Local Git cannot inspect another checkout's unpublished state. |
 | Task processes | R200–R206 ran only short arithmetic/documentation checks and source reads; no simulation, physical or implementation workload. Implementation remains paused. |
 | Symbolic environment | `/tmp/navier-r183-sympy/bin/python`, Python 3.12.14, SymPy 1.14.0, mpmath 1.3.0; recreate using `requirements-symbolic.txt` if missing. Existing environments unchanged. |
-| Delivery state | R206 authorizes publishing the six session documents/records. Essay and clarity review complete; staged checks, commit/push and final Git verification supply delivery evidence. No ownership release or implementation resumption. |
+| Delivery state | R206 published six session documents/records as a2f151b; R210 authorizes publication of the R209 README link and R207–R210 records. Essay and clarity review complete; staged checks, commit/push and final Git verification supply delivery evidence. No ownership release or implementation resumption. |
 
 ## Current result and limits
 
@@ -275,6 +278,21 @@ agent-side POV-Ray backtraces are unavailable.
 ## Next task
 
 **Wait for the user's review of the consolidated essay and next instruction.**
+R210 publishes the README link and associated records: README.md,
+REQUEST_LOG.md, STATUS.md and this handoff. Documentation and Git checks
+are recorded in the request log; no runtime/scientific tests are needed.
+No new scientific decision or ownership change.
+
+R209 adds its README description/link. Changed README.md, REQUEST_LOG.md,
+STATUS.md and this handoff, preserving the existing R207/R208 records.
+Checks: link target, appended request preservation/IDs and whitespace; runtime
+tests skipped for documentation only. No new unresolved decision or publication.
+
+R207/R208 explain the essay versus the R200 supporting outlook; neither
+document was changed. Only REQUEST_LOG.md, STATUS.md and this handoff changed.
+Checks: request preservation, sequential IDs and whitespace. No runtime or
+scientific tests were needed; no new scientific decision or publication.
+
 [WATER_EXPERIMENT_FEASIBILITY_AND_COST.md](docs/realizability/WATER_EXPERIMENT_FEASIBILITY_AND_COST.md)
 now covers all substantive session topics as a cohesive essay, without a
 question/answer transcript. R205's complete material was assembled before the

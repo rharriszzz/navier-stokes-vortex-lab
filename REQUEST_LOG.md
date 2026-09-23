@@ -6925,3 +6925,89 @@ Publication environment note: the first ordinary git add was blocked because
 .git is read-only in the restricted sandbox. The same exact six-file staging
 command succeeded with the approved elevated Git permission. No file content
 or scope was changed to bypass the restriction.
+
+## R207 — 2026-09-22 (America/New_York) — Explain document purposes
+
+**User wording:**
+
+```text
+I see two documents, please telme their purposes and differences.
+```
+
+**Scope/status:** Started. Explain the published essay and supporting notes;
+no scientific changes or new publication requested. Preflight: rharris on daisy,
+rharris-owned checkout and .git, clean main tracking origin/main at a2f151bc,
+empty stashes. PC retains ownership; other-checkout state is not observable.
+
+## R208 — 2026-09-22 (America/New_York) — Identify the two documents
+
+**User wording:**
+
+```text
+WATER_EXPERIMENT_FEASIBILITY_AND_COST.md
+Document water experiment feasibility, physical limits, and costs
+3 minutes ago
+WATER_EXPERIMENT_OUTLOOK_R200.md]
+```
+
+**Scope/status:** Started; narrows R207 to the consolidated essay and the original
+water outlook. Explain their purposes and overlap; retain both documents.
+
+**R207/R208 outcome:** Complete. Identified FEASIBILITY_AND_COST as the final,
+self-contained essay for review, incorporating physics and both cost routes;
+OUTLOOK_R200 is the earlier, more detailed physics supporting note, with links
+to the cost analysis. Their physical conclusions overlap; they are not separate
+proposals. Both published documents remain unchanged. Changed only REQUEST_LOG.md,
+SESSION_HANDOFF.md and STATUS.md. Checks: published request-prefix preservation,
+208 sequential unique IDs and whitespace. No scientific/runtime tests needed;
+no new commit/push requested or performed. No new scientific decision. Next:
+wait for the user's review of the consolidated essay and next instruction.
+
+## R209 — 2026-09-22 (America/New_York) — Link the essay from README
+
+**User wording:**
+
+```text
+I would like the README to include a short mdescription of this file, as well as a link.
+```
+
+**Scope/status:** Started. Add a short description and relative link to
+WATER_EXPERIMENT_FEASIBILITY_AND_COST.md in README.md. Preflight confirms rharris
+on PC/WSL daisy, owned checkout/.git, main tracking origin/main at a2f151b,
+empty stashes and the three known R207/R208 metadata edits, which are preserved.
+No ownership transfer; other-checkout unpublished state remains unknowable.
+No scientific work or new commit/push requested.
+
+**Outcome:** Complete. README.md now links to the consolidated essay and briefly
+describes its physical feasibility, boundary hardware, water-property and cost
+coverage, including atmospheric/pressurized and new/equipped-lab comparisons.
+Changed README.md, REQUEST_LOG.md, SESSION_HANDOFF.md and STATUS.md; preserved
+prior R207/R208 edits. Checks passed: link target exists, pre-request log bytes
+preserved, 209 unique sequential IDs and git diff --check. Runtime/scientific
+tests skipped for this documentation-only change. No commit/push performed;
+no new unresolved decisions. Next: wait for the user's essay review and instruction.
+
+## R210 — 2026-09-22 (America/New_York) — Publish the README link
+
+**User wording:**
+
+```text
+add commit push
+```
+
+**Scope/status:** Started. Explicit authorization to stage, commit and push the
+README essay link and associated R207–R210 request/handoff/status records.
+Preflight: rharris on owner PC/WSL daisy; owned checkout/.git; main and locally
+stored origin/main both a2f151b; empty stashes; four known documentation files
+modified and preserved. No ownership transfer; other-checkout unpublished state
+is not observable. No scientific or implementation work requested.
+
+**Publication preparation:** Complete for README.md, REQUEST_LOG.md,
+SESSION_HANDOFF.md and STATUS.md. Checks passed: request-prefix preservation,
+210 unique sequential IDs, README link target, fetched HEAD/origin/main equality
+at a2f151b, exactly four expected changed files and whitespace. Staged checks,
+commit/push and final local/remote verification follow; actual hash and delivery
+result are recorded in Git and the final response. Runtime/scientific tests
+skipped for documentation only. No new unresolved decision; implementation
+remains paused and PC retains ownership. Next: wait for the user's review of
+the consolidated essay and next instruction.

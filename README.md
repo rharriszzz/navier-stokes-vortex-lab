@@ -28,6 +28,13 @@ experimental mechanism. See [PROJECT_TRACKS.md](PROJECT_TRACKS.md),
 For the current goals, progress, open physical questions, and intended data
 for a separate movie, read [STATUS.md](STATUS.md).
 
+For an overview of the proposed water experiment, read
+[Water experiment: feasibility, physical limits and cost](docs/realizability/WATER_EXPERIMENT_FEASIBILITY_AND_COST.md).
+This essay assesses achievable flow behavior, boundary actuation and sensing,
+and the effects of compressibility, sound, viscosity and heat. It compares
+atmospheric and pressurized experiments, with budget estimates for both a new
+setup and an equipped laboratory.
+
 For fixed workloads, timing, memory measurements and checks on both computers,
 use the [Mac/PC performance and memory test plan](docs/realizability/MAC_PC_PERFORMANCE_MEMORY_PLAN.md).
 The tests are planned, not yet run. For the M4 Mac's remaining software
