@@ -1,34 +1,36 @@
 # Project status: a boundary-controlled engineering approximation
 
-Updated 2026-09-22 (America/New_York), through R221. PC/WSL `daisy` owns the
-repository. **Implementation and workloads remain paused.** R221 recommends
-**GPT-6 Sol / high / PC-WSL daisy** for the bounded fixture-driver/supervision
-source task when resumed, stopping before FEM execution; Astra/high reviews
-formulation/admission afterward. R220 was published as f252f31; Git history
-records subsequent reminder delivery. The
+Updated 2026-09-22 (America/New_York), through R222. PC/WSL `daisy` owns the
+repository. **R222 completed single-fixture source; FEM and physical workloads
+remain paused, with zero execution attempts.** The
+[R222 source and admission review](docs/realizability/POISEUILLE_DRIVER_R222.md)
+records 33 import-free checks and the absent verified host backend. Next:
+**GPT-6 Astra / high / PC-WSL daisy** critically reviews formulation and
+execution admission, stopping before FEM execution. R220 was published as
+f252f31; R221 reminder as cecb4dd. The
 [cost estimate](docs/PROJECT_RESOURCE_AND_COST_ESTIMATE.md) now includes confirmed
 $40 packages and the $100 Pro upgrade. The [process/model review](docs/PROCESS_REVIEW_AND_MODEL_ROUTING.md)
 proposes clearer switching criteria and more complete steps using GPT-6 Luna,
 Sol and Astra. R219 prioritizes good progress at each step and retaining context
 whenever shortening it might impair that progress;
 AGENTS.md records that preference. R218 clarifies that document-length reduction
-was measured, but its performance benefit was not established. Model settings remain unchanged. R220 authorizes publishing both documents and their associated records. Next:
-[resume the bounded source step when requested](SESSION_HANDOFF.md#next-task). The complete
+was measured, but its performance benefit was not established. No model switch
+occurred. Follow the single [next task](SESSION_HANDOFF.md#next-task). The complete
 [essay on feasibility, physical limits and cost](docs/realizability/WATER_EXPERIMENT_FEASIBILITY_AND_COST.md)
 was assembled and reviewed for clarity in R204–R206. It includes both ownership
 cost routes without reproducing the conversation, published in a2f151b.
 R207/R208 clarify that this is the primary review document; the R200 outlook
 retains detailed supporting physics. R209 adds a short description and link
 in [README.md](README.md), published with its records in b4db4ff. R211 removes
-the README preview image and caption, published with its records as 18a372c. Wait for the user's review and
-[next instruction](SESSION_HANDOFF.md#next-task). Supporting findings follow.
+the README preview image and caption, published with its records as 18a372c.
+The essay remains available for user review. Supporting findings follow.
 R200's requested
 [broader water-experiment assessment](docs/realizability/WATER_EXPERIMENT_OUTLOOK_R200.md)
 is complete: cautious optimism for roughly 10→3 mm contraction, less confidence
 for 10→1 mm, and doubt about 10→0.1 mm in the current concept. Boundary delivery
 and measurement bias appear more immediate than bulk compressibility; thermal
 gradients can matter early to precise momentum accounting. These are conditional
-judgments, not demonstrated performance. Wait for the user's next instruction.
+judgments, not demonstrated performance.
 R201 adds an [ideal-hardware thought experiment](docs/realizability/WATER_EXPERIMENT_OUTLOOK_R200.md#r201-if-sensing-and-actuation-were-perfect):
 removing delivery/sensing limits improves the forecast, but thermodynamics,
 cavitation, heat and acoustics still change the solution. A conditional Gaussian
@@ -40,18 +42,19 @@ estimated at $12k–35k from scratch or $5k–18k additional in an equipped lab,
 excluding research labor. Extra pressure earns no range if delivery/optics
 limit first. These are budgetary judgments, not quotations or performance claims.
 Usage snapshot remains recorded in REQUEST_LOG.md (R197).
-Latest technical work: [cube adapter and diagnostics](docs/realizability/CUBE_ADAPTER_R196.md).
-Twenty-four import-free checks passed. FEM forms have not been constructed or
-assembled, and convergence is untested. Execution remains unadmitted with zero
-attempts. No boundary-driven core or feasible contraction range is established.
+Latest technical work: [R222 single Poiseuille fixture source](docs/realizability/POISEUILLE_DRIVER_R222.md)
+on the [R196 cube adapter](docs/realizability/CUBE_ADAPTER_R196.md). Thirty-three
+import-free checks passed. FEM forms have not been constructed or assembled,
+and convergence is untested. Execution remains unadmitted with zero attempts.
+No boundary-driven core or feasible contraction range is established.
 
 | Current question | Answer |
 |---|---|
 | What works? | Illustrative animation, saved-data checks and separate reference/analysis tools. |
 | Is the engineering goal demonstrated? | No validated boundary-driven contraction or boundary-only state estimator exists yet. |
-| What did the latest step establish? | Cube/sparse assembly source, retained lifting and signed budget/error diagnostics. [Evidence and limits](docs/realizability/CUBE_ADAPTER_R196.md). |
+| What did the latest step establish? | One-fixture driver, held worker and finite reservation/result source with mocked refusal checks. [Evidence and limits](docs/realizability/POISEUILLE_DRIVER_R222.md). |
 | What blocks trusted numerical control results? | The nonlinear fixture has not run; B2 still fails its independent response-accuracy comparison and q64/q96 remain unused. |
-| What is next? | Wait for the user to review the consolidated essay. Suggested next conceptual review: a requirements-linked bill of materials for the small atmospheric feasibility bench, including owned/borrowed/purchased resources and expansion criteria. Implementation remains deferred; follow the single [next task](SESSION_HANDOFF.md#next-task). |
+| What is next? | Critical review of R222 formulation, source and host containment/admission on PC/WSL daisy; stop before FEM execution. Follow the single [next task](SESSION_HANDOFF.md#next-task). |
 
 ## Goal and present conclusion
 
@@ -445,9 +448,9 @@ further movies. R191 completed the [similarity contract and first-test design](d
 including checked central side/endcap and surrounding-fluid accounting. The
 historical next analysis assessed inward transport versus wall diffusion after
 R192 quantified the operating point; R193 subsequently completed that screen.
-For the current [next task](SESSION_HANDOFF.md#next-task), R221 recommends
-**GPT-6 Sol / high / PC-WSL daisy** for bounded fixture-driver source work,
-with Astra/high for critical review. Stop before FEM execution, tank/controller
+For the current [next task](SESSION_HANDOFF.md#next-task), R222 recommends
+**GPT-6 Astra / high / PC-WSL daisy** for critical source/admission review.
+Stop before FEM execution, tank/controller
 implementation, procurement or physical work.
 R021 launch integration stays deferred; its accuracy diagnostic,
 completed R033 prerequisites and R070 repairs remain relevant. B2 is still

@@ -1,14 +1,15 @@
 # Current session handoff
 
-Last updated 2026-09-22 (America/New_York) for R221.
+Last updated 2026-09-22 (America/New_York) for R222.
 **PC/WSL `daisy` owns the repository.** No transfer; Mac remains released.
-R221 recommendation: **GPT-6 Sol / high / PC-WSL daisy** for the next complete
-n=2 Poiseuille fixture-driver and supervision source step, once the user resumes
-implementation. Stop before FEM execution; Astra/high follows for critical
-formulation/admission review or an unresolved scientific/assurance question.
+R222 completed the bounded n=2 Poiseuille driver, held worker and finite
+supervision **source** step with 33 import-free tests. No FEM or scope ran;
+execution remains unadmitted with zero attempts. The [R222 review](docs/realizability/POISEUILLE_DRIVER_R222.md)
+records source and host limits. **Next: GPT-6 Astra / high / PC-WSL daisy** for
+critical formulation, source and admission review; stop before FEM execution.
 R220 published as f252f31 and was verified on remote main. R221 reminder
 records were prepared locally; Git history records their later delivery.
-No model switch or implementation resumption occurred.
+R221 did not switch models or resume implementation; R222 resumed only source work.
 R215/R216 update the [cost estimate](docs/PROJECT_RESOURCE_AND_COST_ESTIMATE.md)
 with confirmed $40 packages and complete a [process/model review](docs/PROCESS_REVIEW_AND_MODEL_ROUTING.md).
 The proposal retains clear endpoints, assigns Luna to specified work, Sol to
@@ -20,18 +21,19 @@ demonstrated performance improvement; no comparison benchmark is scheduled.
 R217 supersedes the size-target recommendation: provide enough context for
 correct work, including rationale, constraints, known failures and evidence. Prices were checked directly against
 official OpenAI sources. Model routing and step sizes remain proposals; AGENTS.md now records the
-user's context-first preference. Next: review those proposals; no separate
-size-reduction task is needed. Implementation remains paused. R220 authorizes publishing the cost/process
+user's context-first preference. The proposals remain reviewable; no separate
+size-reduction task is needed. FEM workloads remain paused. R220 authorized publishing the cost/process
 documents, agent priority and session records; Git history and the final response
 record the delivery result.
-**Implementation and workloads remain paused. The session's physical and cost
+**FEM, rendering and physical workloads remain paused. The session's physical and cost
 assessment is consolidated into one cohesive essay and reviewed for clarity:**
 [WATER_EXPERIMENT_FEASIBILITY_AND_COST.md](docs/realizability/WATER_EXPERIMENT_FEASIBILITY_AND_COST.md).
 R210 published the README essay link and associated records as b4db4ff.
 R212 published the README image/caption removal and records as 18a372c.
 R206 published the essay and supporting notes in commit a2f151b on origin/main.
 R207/R208 clarify that the essay is the primary review document and R200 is
-the earlier, more detailed physics note. Wait for the user's review and next instruction. The earlier water and cost notes remain supporting
+the earlier, more detailed physics note. The essay remains available for user
+review. The earlier water and cost notes remain supporting
 detail and link to the essay. The essay contains no conversation transcript.
 The forecast is cautiously optimistic for roughly 10→3 mm contraction, less
 confident for 10→1 mm and doubtful for 10→0.1 mm in this apparatus concept.
@@ -57,15 +59,15 @@ and account snapshot: 63% weekly remaining (17:37 on 28 Sep reset), 283 credits,
 100% Luna Reserve (17:06 on 29 Sep reset). These are user-reported values;
 the separate resume/status session IDs are retained in REQUEST_LOG.md.
 R196 completed [cube adapter and diagnostic source](docs/realizability/CUBE_ADAPTER_R196.md).
-Twenty-four standard-library checks pass, including sparse bordering/lifting,
-constraint rank, signed energy terms, refinement and refusal cases. FEM imports,
-UFL construction, mesh/assembly/solves and convergence remain untested.
-**After the user explicitly resumes implementation: implement the single-fixture n=2 Poiseuille driver and finite supervision
-path; review admission after import-free checks. Stop before FEM execution.**
-Execution remains unadmitted, with zero attempts; the adapter has no supervised
-entry point. Full convergence-suite and tank launches remain unadmitted.
+R222 joined it to a single-fixture driver and finite supervised worker/controller
+source; 33 standard-library checks pass. FEM imports, UFL construction,
+mesh/assembly/solves, actual scope and convergence remain untested.
+**Review the R222 source and host backend/admission boundary. Stop before FEM
+execution.** Execution remains unadmitted, with zero attempts; there is a held
+worker entry point but no concrete verified host backend. Full convergence-suite
+and tank launches remain unadmitted.
 Tank implementation/execution remains unadmitted. No actual base, gain or feasible
-contraction range is established. R221 recommends GPT-6 Sol / high / PC-WSL `daisy` for source implementation;
+contraction range is established. R222 recommends GPT-6 Astra / high / PC-WSL `daisy` for critical review;
 no agent-initiated model switch or machine transfer. R191 similarity and R192 operating/error gates remain.
 The ideal 0.3927 micro-N m contrast, separate 0.1309 micro-N m residual/confound
 limits and 1.528e-7 m²/s² covariance allocation remain unverified requirements.
@@ -162,12 +164,12 @@ and physical-work limits remain unchanged.
 | Owner | PC/WSL `daisy`; Mac `fire.lan` released after published R161 handoff and R162 receipt. |
 | Checkout | `/home/rharris/git/navier-stokes-vortex-lab`. |
 | Branch/upstream | `main` / `origin/main` |
-| Starting state | R213 began clean on main/origin/main at 18a372c, with empty stashes and rharris-owned checkout/.git on daisy. Earlier delivery history remains below. |
+| Starting state | R222 began from cecb4dd after deliberate R221 publication and a clean required fast-forward pull; rharris-owned main/origin/main, empty stashes. STARTED was pushed as 0d02b6f. |
 | Interpreter | `/home/rharris/git/navier-stokes-vortex-lab/.venv/bin/python`, CPython 3.12.14 with NumPy 2.5.3 |
 | Other owner/process | Mac `fire.lan` released in the published R161 handoff. Local Git cannot inspect another checkout's unpublished state. |
-| Task processes | R200–R206 ran only short arithmetic/documentation checks and source reads; no simulation, physical or implementation workload. Implementation remains paused. |
+| Task processes | R222 ran short standard-library tests and read-only host checks; no FEM, scope, simulation, physical, render or encode workload. No task child remains. |
 | Symbolic environment | `/tmp/navier-r183-sympy/bin/python`, Python 3.12.14, SymPy 1.14.0, mpmath 1.3.0; recreate using `requirements-symbolic.txt` if missing. Existing environments unchanged. |
-| Delivery state | R206 published six session documents/records as a2f151b; R210 published the README link and records as b4db4ff; R212 published image removal and records as 18a372c; R220 authorizes publication of R213–R219 cost/process documents, agent priority and records; model routing remains proposed; R217 context sufficiency takes priority over size targets. Essay and clarity review complete; staged checks, commit/push and final Git verification supply delivery evidence. No ownership release or implementation resumption. |
+| Delivery state | R221 reminder delivered as cecb4dd. R222 STARTED delivered as 0d02b6f; source/review completion is prepared for scoped publication. Final delivery hash and push outcome belong in Git/final response. No owner release; FEM attempts zero. |
 
 ## Current result and limits
 
@@ -298,15 +300,31 @@ agent-side POV-Ray backtraces are unavailable.
 
 ## Next task
 
-**Wait for the user to resume implementation. Recommended next session:
-GPT-6 Sol / high reasoning / PC-WSL daisy.**
-Implement the bounded driver/supervision source task below, then stop before
-FEM execution and recommend Astra/high for its critical admission review.
-This replaces the earlier Astra-only source-implementation recommendation;
-scientific gates, resource limits and required context are unchanged.
-R221 changes only REQUEST_LOG.md, STATUS.md and this handoff. Checks: delivery
-verification, recommendation consistency, request preservation and whitespace;
-no runtime tests or new publication. PC retains ownership.
+**GPT-6 Astra / high reasoning / PC-WSL daisy: critically review the R222
+single-fixture source, formulation and execution-admission boundary.** Read the
+[R222 review](docs/realizability/POISEUILLE_DRIVER_R222.md), R195/R196 reviews,
+prototype source and frozen manifest. Audit the exact boundary/load and gauge
+assembly, return facet sampling, complete diagnostic gates, held-worker release,
+reservation and persistence. Check whether an actual host backend can enforce
+the effective 1536 MiB/no-swap/32-PID, one-rank/thread and independent 150 s
+worker expiry within the 180 s end-to-end ceiling. Implement/verify only the
+smallest concrete backend if possible without a FEM launch. End with a specific
+single tiny fixture admission or refusal; **do not execute FEM, install
+dependencies, or launch the full suite** in this review. Missing source,
+containment, pins or cleanup evidence requires refusal, with zero attempts
+preserved. Stop at the decision and recommend Sol/high only if the remaining
+fixes are mechanical; recheck availability for that recommendation. The
+[official Astra model page](https://developers.openai.com/api/docs/models/gpt-6-astra)
+supports high reasoning; this is task fit, not an entitlement claim. PC retains
+ownership and Mac remains released.
+
+R222 changed verification/nonlinear_port fixture driver, worker, supervisor,
+two tests, prototype README, its review, REQUEST_LOG.md, WORK_SESSIONS.md,
+STATUS.md and this handoff. Checks: 33 import-free standard-library tests,
+source/links/whitespace and read-only host assessment; no FEM or scope launch.
+Unresolved: actual FEM API and assembly, host backend and effective task scope,
+pinned environment, true runtime/convergence. R221's earlier Sol/high source
+recommendation is complete historical context.
 
 R220 publishes AGENTS.md, REQUEST_LOG.md, STATUS.md, this handoff and the two
 cost/process documents. Documentation/Git checks are recorded in the request
@@ -421,9 +439,10 @@ coherence, tracer/optical bias, pressure margins and heat input remain unknown.
 The phrase “one or two magnitudes” is addressed under both similarity-time and
 radius interpretations; no user choice is inferred. PC retains ownership.
 
-The following earlier implementation task remains deferred until the user
-explicitly resumes implementation. It is not the next action for a further
-conceptual discussion:
+The following R196/R221 source-task contract is retained for the R222 critical
+review. R222 implemented the single-fixture source, but its actual FEM and
+host-scope behavior remains unvalidated. It is historical task context, not a
+second next task:
 
 **Implement the smallest end-to-end n=2 Poiseuille fixture driver and finite
 supervision path, then make a concrete execution-admission decision. Stop before
@@ -462,11 +481,10 @@ retry. B2 accuracy failed, q64/q96 unused, R021 deferred; production science and
 pins unchanged. Early Mac validation is portable algebra only after normal
 ownership handoff; optional platform comparisons do not block PC source work.
 
-Use Sol/high for the fixed-contract implementation. Bring unresolved mixed
-assembly or admission choices to Astra/high before dependent work; Astra/high
-reviews the completed source/admission package. This does not schedule work or
-change models. The earlier **Continue** prompt applies
-only if the user chooses to resume this deferred implementation.
+R222 used Sol/high for the fixed-contract source implementation. Astra/high
+reviews the completed source and unresolved mixed assembly/admission choices.
+The next **Continue** applies the single critical-review task above; no model
+switch or FEM launch has occurred.
 R196 files/checks/evidence and remaining choices are in REQUEST_LOG.md and
 WORK_SESSIONS.md. PC retains ownership. R197 changed only REQUEST_LOG.md,
 SESSION_HANDOFF.md and STATUS.md to record the snapshot and pause. Identity,

@@ -1,4 +1,4 @@
-# Isolated nonlinear port verification source — R195/R196
+# Isolated nonlinear port verification source — R195/R196/R222
 
 **Source and algebra evidence, not a validated FEM solver.** The
 [R195 fixture review](../../docs/realizability/NONLINEAR_VERIFICATION_R195.md)
@@ -20,18 +20,28 @@ module imports this directory; no dependency pins changed.
   versus discrete time-integrated balances. It cannot accept a whole run.
 - `future_fem.json`, `manifest.py`: frozen **non-executable** proposal; zero
   granted attempts. The 180 s / 1536 MiB one-suite caps remain proposals.
-- `test_algebra.py`, `test_adapter.py`: 24 standard-library tests; no FEM imports.
+- `fixture_driver.py`: one n=2 Poiseuille BE step, measured compatibility and
+  constraint rows, a non-exact free velocity guess, frozen scales, checked
+  correction, degree-24/26 diagnostics and return quadrature samples. All FEM
+  modules are injected after a supervised release.
+- `worker.py`: held worker entry point; checks reservation, admission, own
+  cgroup and one-thread settings before importing pinned FEM packages.
+- `supervision.py`: exclusive reservation, held-scope fact checks, finite
+  timing/cleanup/result records and refusal of missing evidence. No live host
+  backend is installed; the current manifest admits zero attempts.
+- `test_algebra.py`, `test_adapter.py`, `test_driver_supervision.py`: 33
+  standard-library tests, including mocked supervisor outcomes; no FEM import.
 
 ```sh
-.venv/bin/python -m unittest verification.nonlinear_port.test_algebra verification.nonlinear_port.test_adapter -v
+.venv/bin/python -m unittest verification.nonlinear_port.test_algebra verification.nonlinear_port.test_adapter verification.nonlinear_port.test_driver_supervision -v
 ```
 
-A future driver must inject the pinned modules under admitted supervision,
-verify actual geometry/pins, install the current trace before all residual
-rows, screen assembled compatibility/rank, freeze scales, and retain historical
-velocities. It must sample both returns at the actual quadrature points,
-collect/validate every diagnostic, reject failures before advancing history,
-and record process exit/cleanup. None of that orchestration has run.
+A future admitted host backend must create and verify the held whole-task
+scope, release `worker.py`, observe its exit and confirm cleanup. The source
+joins the existing adapter and diagnostics for a single oracle, but no FEM
+package was imported and no mesh, form, solver, scope or worker was run.
+The [R222 review](../../docs/realizability/POISEUILLE_DRIVER_R222.md) records
+the exact source boundary and the remaining execution-admission decision.
 The sparse and analytical checks do not establish UFL validity, actual mesh
 rank, inf-sup stability, sparse factorization success or convergence. No tank
 entry exists. Follow the single [handoff task](../../SESSION_HANDOFF.md#next-task).

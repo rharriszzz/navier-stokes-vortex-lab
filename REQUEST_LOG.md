@@ -7325,3 +7325,41 @@ n=2 Poiseuille fixture-driver and finite supervision source task. Complete
 import-free checks and a reviewable later execution-admission decision. Stop
 before FEM imports, JIT, meshing, assembly or solves, dependencies, full suite,
 tank/controller, rendering or physical work. Initial FEM execution attempts: 0.
+
+**R222 outcome:** Completed the bounded source step. Added an injected n=2
+Poiseuille driver with measured compatibility/constraint rows, exact old state,
+non-exact free velocity guess, frozen scaling, sparse checked correction,
+degree-24/26 full diagnostics and both return quadrature samples. Added a held
+worker entry point that checks its own cgroup/release and pins before FEM imports,
+plus exclusive reservation, finite scope verification, result/cleanup ledger
+and complete numerical/exit/persistence decisions. No concrete host backend was
+installed. The separate [review](docs/realizability/POISEUILLE_DRIVER_R222.md)
+records source limits and host observations. **Execution refused; zero attempts
+granted/spent.** Manifest, science thresholds, caps and dependency pins unchanged.
+
+Changed files: verification/nonlinear_port/fixture_driver.py, worker.py,
+supervision.py, test_driver_supervision.py, test_algebra.py and README.md;
+docs/realizability/POISEUILLE_DRIVER_R222.md; REQUEST_LOG.md,
+WORK_SESSIONS.md, SESSION_HANDOFF.md and STATUS.md. Checks passed: 33
+standard-library tests under project Python 3.12.14 (existing exact/sparse
+checks and new mocked release/refusal/missing/late/unknown-cleanup paths),
+four-source-file AST/whitespace, 81 local links in changed current documents,
+Git whitespace and scoped status. Final request/lifecycle/staged checks follow.
+Read-only host assessment: restricted namespace user systemd query denied;
+outside-sandbox query reported a running user manager, but no effective held
+scope was created or verified. The prior temporary pinned FEM path was absent.
+Official DOLFINx/Basix interface pages were read, not executed. Official OpenAI
+Docs confirms Astra supports high reasoning; next-model fit is a judgment.
+
+Skips: no FEM import/JIT/mesh/assembly/solve, pinned environment install,
+systemd scope/cgroup creation, workload, full suite, tank/controller,
+physical/optical/hardware, trajectory/render/encode or machine transfer.
+No task child remains. Actual FEM API/rank/accuracy, resource cost, whole-task
+enforcement and cleanup remain unresolved. PC retains ownership; Mac released.
+Next: Astra/high on PC/WSL daisy critically audits source/formulation and
+implements/verifies the smallest actual held-scope backend only if possible
+without FEM execution, ending with explicit single-fixture admission or refusal.
+Stop before FEM execution and do not grant a full-suite attempt. Recommend
+Sol/high only after difficult science/assurance choices settle; recheck model
+availability then. R222 STARTED was pushed as 0d02b6f; completion prepared for
+scoped commit/push. Delivery hash/result belong in Git and final response.

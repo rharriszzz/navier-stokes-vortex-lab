@@ -228,11 +228,21 @@ class AlgebraChecks(unittest.TestCase):
         self.assertFalse(forbidden.intersection(sys.modules))
         for path in Path(__file__).parent.glob('*.py'):
             tree = ast.parse(path.read_text())
-            for node in ast.walk(tree):
+            # The held worker may import pinned FEM modules only inside the
+            # post-release loader; importing this package must remain clean.
+            nodes = tree.body if path.name == 'worker.py' else ast.walk(tree)
+            for node in nodes:
                 if isinstance(node, ast.Import):
                     self.assertFalse({a.name.split('.')[0] for a in node.names} & forbidden)
                 if isinstance(node, ast.ImportFrom) and node.module:
                     self.assertNotIn(node.module.split('.')[0], forbidden)
+            if path.name == 'worker.py':
+                loaders = [node for node in tree.body if isinstance(node, ast.FunctionDef)
+                           and node.name == 'load_pinned_modules']
+                self.assertEqual(len(loaders), 1)
+                self.assertIn('dolfinx', {alias.name.split('.')[0]
+                    for node in ast.walk(loaders[0]) if isinstance(node, ast.Import)
+                    for alias in node.names})
 
     def test_manifest(self):
         from .manifest import validate

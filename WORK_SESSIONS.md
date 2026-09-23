@@ -730,3 +730,32 @@ finite task-specific supervision/recording path; run import-free checks and
 prepare an explicit later execution-admission decision. Stop before FEM imports,
 JIT, meshing, assembly, solves, dependencies, full suite, tank/controller,
 rendering or physical work. FEM attempts remain zero; no automatic retry.
+
+### R222 completion
+COMPLETED | 2026-09-23T01:31:23Z | PC/WSL daisy | released: no
+Outcome: one n=2 Poiseuille driver, held worker and finite supervisor source
+complete, with mocked refusal checks and a reviewable execution refusal.
+Thirty-three standard-library tests pass; no FEM or scope ran. No live backend
+was installed and actual whole-task enforcement remains unverified. FEM
+execution unadmitted, zero attempts granted/spent; frozen manifest unchanged.
+Files: verification/nonlinear_port/fixture_driver.py, worker.py,
+supervision.py, test_driver_supervision.py, test_algebra.py, README.md;
+docs/realizability/POISEUILLE_DRIVER_R222.md; REQUEST_LOG.md,
+WORK_SESSIONS.md, SESSION_HANDOFF.md, STATUS.md.
+Checks: 33 import-free tests under project Python 3.12.14, source syntax and
+trailing whitespace, 81 local links, read-only owner/Git/stash/host checks;
+final staged checks follow. Evidence: R222 review and standard-library tests.
+Skips: FEM import/JIT/mesh/assembly/solve, dependencies, actual scope/workload,
+full suite, tank/controller, physical/optical/hardware, trajectory/render/
+encode and transfer. No task child remains. Host user systemd manager reported
+running outside restricted sandbox, but no held scope/effective limits/cleanup
+was verified. The earlier temporary pinned FEM path is absent. B2 accuracy
+failed, q64/q96 unused, R021 deferred; caps and thresholds unchanged.
+Next: Astra/high on this PC performs critical source/formulation and
+execution-admission review, optionally implementing a minimal real held-scope
+backend without FEM execution. Stop with explicit one-fixture admission or
+refusal and no full-suite launch. Sol/high is suitable for later mechanical
+fixes after unresolved science/assurance choices settle and availability is
+rechecked. PC retains ownership; Mac remains released. STARTED 0d02b6f was
+pushed; completion prepared for scoped commit/push. Delivery hash/result in
+Git/final response; no post-push edit.
