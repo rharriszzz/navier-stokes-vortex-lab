@@ -1,10 +1,17 @@
 # Project status: a boundary-controlled engineering approximation
 
-Updated 2026-09-22 (America/New_York), through R222. PC/WSL `daisy` owns the
-repository. **R222 completed single-fixture source; FEM and physical workloads
+Updated 2026-09-22 (America/New_York), through R223. PC/WSL `daisy` owns the
+repository. **R223 records the supplied status; after publication, wait for the
+user's next instruction.** Snapshot: 21m 22s / 9:33 PM completion; 355,910 total
+tokens (300,015 input, 8,700,288 cached, 55,895 output, 20,311 reasoning);
+current Astra/high; 53% weekly left (17:37 on 28 Sep reset), 283 credits,
+100% Luna Reserve (21:34 on 29 Sep reset). Full supplied fields and distinct
+session IDs are in REQUEST_LOG.md R223. These are user-reported values,
+not project-specific usage. R222 completion bdc51f9 is verified on live remote main.
+**R222 completed single-fixture source; FEM and physical workloads
 remain paused, with zero execution attempts.** The
 [R222 source and admission review](docs/realizability/POISEUILLE_DRIVER_R222.md)
-records 33 import-free checks and the absent verified host backend. Next:
+records 33 import-free checks and the absent verified host backend. When resumed:
 **GPT-6 Astra / high / PC-WSL daisy** critically reviews formulation and
 execution admission, stopping before FEM execution. R220 was published as
 f252f31; R221 reminder as cecb4dd. The
@@ -41,7 +48,7 @@ with both ownership routes. A modest atmospheric contraction apparatus is
 estimated at $12k–35k from scratch or $5k–18k additional in an equipped lab,
 excluding research labor. Extra pressure earns no range if delivery/optics
 limit first. These are budgetary judgments, not quotations or performance claims.
-Usage snapshot remains recorded in REQUEST_LOG.md (R197).
+Latest usage snapshot is recorded in REQUEST_LOG.md (R223); R197 remains historical.
 Latest technical work: [R222 single Poiseuille fixture source](docs/realizability/POISEUILLE_DRIVER_R222.md)
 on the [R196 cube adapter](docs/realizability/CUBE_ADAPTER_R196.md). Thirty-three
 import-free checks passed. FEM forms have not been constructed or assembled,
@@ -54,7 +61,7 @@ No boundary-driven core or feasible contraction range is established.
 | Is the engineering goal demonstrated? | No validated boundary-driven contraction or boundary-only state estimator exists yet. |
 | What did the latest step establish? | One-fixture driver, held worker and finite reservation/result source with mocked refusal checks. [Evidence and limits](docs/realizability/POISEUILLE_DRIVER_R222.md). |
 | What blocks trusted numerical control results? | The nonlinear fixture has not run; B2 still fails its independent response-accuracy comparison and q64/q96 remain unused. |
-| What is next? | Critical review of R222 formulation, source and host containment/admission on PC/WSL daisy; stop before FEM execution. Follow the single [next task](SESSION_HANDOFF.md#next-task). |
+| What is next? | Wait for user instruction. The R222 critical review is deferred; follow the single [next task](SESSION_HANDOFF.md#next-task). |
 
 ## Goal and present conclusion
 

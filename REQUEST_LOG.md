@@ -7363,3 +7363,57 @@ Stop before FEM execution and do not grant a full-suite attempt. Recommend
 Sol/high only after difficult science/assurance choices settle; recheck model
 availability then. R222 STARTED was pushed as 0d02b6f; completion prepared for
 scoped commit/push. Delivery hash/result belong in Git and final response.
+
+
+## R223 — 2026-09-22 (America/New_York) — Record status, publish and wait
+
+**User wording:** Supplied the following completion/banner/status text (box
+borders and progress-bar glyphs omitted; account email redacted), followed by
+the instruction below:
+
+```text
+Worked for 21m 22s · done 9:33 PM
+>_ OpenAI Codex (v0.155.1)
+model: gpt-6-astra high   /model to change
+directory: ~/git/navier-stokes-vortex-lab
+Tip: New Use /fast to enable our fastest inference with increased plan usage.
+Token usage: total=355,910 input=300,015 (+ 8,700,288 cached) output=55,895 (reasoning 20,311)
+To continue this session, run codex resume, then select Rename thread (01a0cbd1-925a-7e60-bc66-806f49042381)
+/status
+>_ OpenAI Codex (v0.155.1)
+Visit https://chatgpt.com/codex/settings/usage for up-to-date information on rate limits and credits
+Model: gpt-6-astra (reasoning high, summaries auto)
+Model provider: openai
+Directory: ~/git/navier-stokes-vortex-lab
+Permissions: Workspace (Ask for approval)
+Agents.md: AGENTS.md
+Account: [email redacted] (Pro Lite)
+Collaboration mode: Default
+Session: 01a0cbe6-635a-7761-a6b1-454b78e9b316
+Weekly limit: 53% left (resets 17:37 on 28 Sep)
+Credits: 283 credits
+Luna Reserve Weekly limit: 100% left (resets 21:34 on 29 Sep)
+record this status info, add, commit, push, then wait.
+```
+
+**Scope/status:** Record the supplied snapshot, stage/commit/push its metadata,
+then wait. The completion/token excerpt and current banner/status are preserved
+as supplied; the two session IDs are distinct. Values are user-reported, not
+independently queried account data or project-specific consumption. No private
+session files inspected; no missing transcript reconstructed. Preflight:
+rharris on owner PC/WSL daisy, rharris-owned checkout/.git, clean main tracking
+origin/main at bdc51f9, empty stashes. Live remote main also equals bdc51f9,
+confirming R222 completion publication. Mac remains released; no transfer.
+This request supersedes immediate continuation of the R222 critical review.
+
+**Outcome/publication preparation:** Recorded all supplied status fields and
+completion/token figures, redacted the account email and aligned the opening,
+owner table and next-task pointers to waiting. Changed REQUEST_LOG.md,
+SESSION_HANDOFF.md and STATUS.md. Checks passed: identity/ownership/Git/stashes,
+live remote equality at bdc51f9, original request-log prefix preservation,
+223 unique sequential IDs, handoff/status local link targets and whitespace.
+Staged scope/checks, commit/push and final remote equality follow; the resulting
+commit and delivery outcome are recorded in Git and the final response.
+Runtime/scientific tests skipped for metadata only; no workload or model switch.
+No new unresolved decision; R222 formulation/host-backend/admission questions
+remain deferred. PC retains ownership. Next: wait for the user's instruction.
