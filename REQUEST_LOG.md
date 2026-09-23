@@ -7287,3 +7287,41 @@ prior request preservation, unique IDs and whitespace. Runtime tests unnecessary
 Existing scientific uncertainties remain; no new decision or ownership change.
 This reminder was local at R221 completion; later delivery is recorded in Git.
 Next: user resumes with Sol/high on daisy for the bounded source task.
+
+## R222 — 2026-09-22 (America/New_York) — Continue the bounded fixture driver
+
+**User wording:** Supplied a Codex v0.155.1 session banner and the following
+session excerpts, then instructed `continue`:
+
+```text
+model: gpt-6-sol high
+directory: ~/git/navier-stokes-vortex-lab
+Token usage: total=847,360 input=751,750 (+ 15,011,200 cached) output=95,610 (reasoning 13,850)
+To continue this session, run codex resume, then select Assess water model feasibility (01a0cb71-8359-76c2-93c8-854cc64e5119)
+/status
+Model: gpt-6-sol (reasoning high, summaries auto)
+Directory: ~/git/navier-stokes-vortex-lab
+Permissions: Workspace (Ask for approval)
+Agents.md: AGENTS.md
+Account: [email redacted] (Pro Lite)
+Collaboration mode: Default
+Session: 01a0cbd1-925a-7e60-bc66-806f49042381
+Weekly limit: 54% left (resets 17:37 on 28 Sep)
+Credits: 283 credits
+Luna Reserve Weekly limit: 100% left (resets 21:11 on 29 Sep)
+continue
+```
+
+The prior final “worked for” excerpt and `/new` excerpt were not supplied. The
+usage and account limits above are user-reported account/session snapshots, not
+project-specific cost or token telemetry; no private session files were read.
+
+**Scope/status:** Continue authorizes scoped commits and pushes. Same owner
+PC/WSL `daisy`, rharris, Linux x86_64, main/origin/main, empty stashes. The
+three local R221 reminder edits were deliberately reviewed, committed as
+cecb4dd and pushed before the required clean fast-forward pull; HEAD then
+equaled fetched origin/main at cecb4dd. Resume the deferred R196/R221 bounded
+n=2 Poiseuille fixture-driver and finite supervision source task. Complete
+import-free checks and a reviewable later execution-admission decision. Stop
+before FEM imports, JIT, meshing, assembly or solves, dependencies, full suite,
+tank/controller, rendering or physical work. Initial FEM execution attempts: 0.

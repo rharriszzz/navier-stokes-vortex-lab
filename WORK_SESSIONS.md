@@ -717,3 +717,16 @@ User-reported prior medium/new high and cross-project usage recorded; no
 agent-initiated model switch, account access or project-consumption inference.
 PC retains ownership. STARTED 61aa5f9 pushed; completion prepared for scoped
 commit/push. Delivery hash/result in final response; no post-push edits.
+
+## R222 — Single-fixture driver and supervision source
+STARTED | 2026-09-23T01:13:55Z | PC/WSL daisy | released: no
+Identity: rharris; Linux x86_64; /home/rharris/git/navier-stokes-vortex-lab;
+main/origin/main at cecb4dda8a259e1d99c96a8608154c4e7f95d888 after clean
+required fast-forward pull, equal to fetched upstream; empty stashes. Mac
+remains released, no conflicting open task. R221 local reminder was reviewed,
+committed and pushed before synchronization. Continue authorizes scoped
+publication. Bounded task: implement one n=2 Poiseuille fixture driver and
+finite task-specific supervision/recording path; run import-free checks and
+prepare an explicit later execution-admission decision. Stop before FEM imports,
+JIT, meshing, assembly, solves, dependencies, full suite, tank/controller,
+rendering or physical work. FEM attempts remain zero; no automatic retry.
