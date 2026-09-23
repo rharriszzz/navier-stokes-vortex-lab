@@ -6590,3 +6590,338 @@ delivery hash/result is in the final response and Git history. No scientific
 or runtime tests for metadata; no workload. No new unresolved decisions;
 fixture admission remains pending. Next: wait for the user to resume, then
 the deferred single-fixture driver/supervision source task. PC retains ownership.
+
+## R200 — 2026-09-22 (America/New_York) — Broad assessment of a water experiment
+
+**User wording:**
+
+```text
+right now we are not going to work on the problem, but rather look at it from a larger scope.  I think that the math problem used an incompressible liquid.  but we are designing an experment using water.  It is compressible (not very, but some)  it does have sound; viscosity does cause heat which changes water's properties.  Please choose an existing or new markdown file to write your thoughts.  Guess whether we will succeed ad doint the initial one or two magnitudes of the solution, or if you are already doubtful, say why.  (since a distributed forcing function is not physically possible, and I am hoping for all forcing to be on the boundaries.  Let me know, with water, when you think things will start breaking down: is it the pressure sensors, the lasor sensors looking at the beads, the actuators, sound dissapation, or heat causes changes in the properties of the water.
+```
+
+**Scope/status:** Started. Write a sourced, qualitative and order-of-magnitude
+assessment in Markdown, grounded in the current experimental assumptions.
+Distinguish similarity-time decades from radius/speed decades; give a candid
+forecast and ranked physical, actuation and sensing limits. This is conceptual
+review only; implementation and numerical/physical workloads remain paused.
+No commit, push, procurement, model change or transfer requested.
+Pre-write checks: rharris on daisy; repository and .git owned by rharris;
+clean main/origin/main at c5dd6e36afece1f2c5e95abd79373ff01410a084;
+empty stashes. PC owns the repository, Mac remains released per handoff.
+No fresh fetch; live remote and other checkouts' unpublished state unknown.
+
+**R200 outcome:** Complete. Wrote
+`docs/realizability/WATER_EXPERIMENT_OUTLOOK_R200.md` with a candid forecast,
+conditional similarity-time/radius conversions, boundary-delivery limits,
+water/acoustic/cavitation and thermal estimates, and pressure/optical/tracer
+limits. Cautiously optimistic about roughly 10→3 mm contraction; less confident
+about 10→1 mm and doubtful about 10→0.1 mm in the current concept. The stronger
+perturbation-assisted mechanism claim is less certain, including at the initial
+core size, because delivery and systematic-error requirements remain unverified.
+This is judgment, not a measured attainable range or an implementation admission.
+
+Changed files: the new outlook, REQUEST_LOG.md, SESSION_HANDOFF.md, STATUS.md.
+Handoff opening, owner table and Next task preserve PC ownership, completed
+conceptual review and paused implementation; status links to the single task.
+Evidence: current R185/R191–R193 design/uncertainty documents; primary paper
+model statement; IAPWS liquid-water correlations; NPL acoustics; Caltech
+cavitation/water-hammer sources; sensor and optical manufacturers' technical
+descriptions, linked beside the relevant claims. No product selected.
+
+Checks passed: observed identity/ownership, clean starting branch/upstream and
+stashes, local HEAD/tracking equality; Python 3.12.14 hand-calculation checks
+for viscosity, similarity conversion, strain/flow, heat, acoustics and optical
+scales; append-only preservation of all prior request-log bytes; 200 unique
+request IDs; Markdown fences; 59 local links/anchors before this outcome append;
+exact four-file scope and whitespace. Disposable checker: /tmp/r200_check.py.
+One preliminary arithmetic assertion used a mistyped reference (8.5743 rather
+than calculated 8.57392995 L/min); corrected to check the document's rounded
+8.57 L/min, then the checker passed. No scientific value needed correction.
+Final post-append check follows.
+
+Skipped: implementation, FEM/CFD, hardware/optical or other physical work,
+trajectory/render/encode, dependencies, procurement, remote synchronization,
+private/account access, model/machine changes, delegation, commit and push.
+Only source reads and short arithmetic/documentation checks ran. Remaining
+unknowns: actual coupled boundary response, coherent contraction range, pressure
+margin/gas content, optical/tracer bias and heat/temperature distribution.
+The user's “magnitudes” ambiguity is covered under both interpretations rather
+than silently selecting one. Next: wait for the user; suggested next conceptual
+task is a single radius/speed/duration operating envelope for 10→3 mm and a
+possible 1 mm extension, with actuator, optical and thermal/error limits.
+The earlier fixture driver remains deferred until explicit implementation
+resumption. All R200 edits remain local and uncommitted; no ownership release.
+
+## R201 — 2026-09-22 (America/New_York) — Ideal hardware and intrinsic water limits
+
+**User wording:**
+
+```text
+also speculate what would go wrong if the sensors and actuators were somehow totally effective at recreating this solution, in the presence of compressibility, sound,viscosity and heat.
+```
+
+**Scope/status:** Started. Extend the existing water outlook with an explicit
+ideal-sensing/actuation thought experiment. Grant finite-range flow delivery;
+isolate thermodynamic, acoustic, viscous and phase-change departures from the
+constant-property incompressible solution. Preserve the earlier practical
+forecast and distinguish it from this stronger hypothetical. Conceptual writing
+only; no implementation, simulation, hardware, commit or push authorized.
+Pre-write checks: rharris on daisy; repository/.git owned by rharris; main tracks
+origin/main, both c5dd6e3; empty stashes. Exactly the four known R200 files are
+modified/untracked; their prior changes are reviewed and retained. PC remains
+owner, Mac released; no transfer or unrelated work found. No fresh fetch;
+other checkouts' unpublished work and live processes remain unknowable.
+
+**R201 outcome:** Complete. Added “R201: if sensing and actuation were perfect”
+to the existing outlook, with a prominent link near its opening. The hypothesis
+grants finite-scale flow delivery while retaining water's equation of state,
+conservation laws and phase behavior. Explains why exact constant-property
+agreement generally departs before visible failure; viscosity is already in
+the mathematical target, while its thermal feedback and compressible/acoustic
+modes are additional physics. Separates atmospheric cavitation, pressurized
+liquid, thermal boundary choices and the impossibility of predicting a universal
+cutoff from a core radius alone. No claim that compressibility proves regularity.
+
+The ideal-hardware forecast is more optimistic than R200's practical forecast,
+including no clear intrinsic-water exclusion at 0.1 mm in its speed example.
+A conditional Gaussian centrifugal-pressure calculation reaches vapor pressure
+at peak speed 7.63 m/s, width b=65.5 µm (rounded 66), peak radius about 73 µm;
+it is not a tank prediction. Temperature-history estimates are explicitly
+hypothetical parcel/shear exposures, not the full paper target. Acoustic,
+thermal-diffusion and rigid-sealed thermal-pressure estimates are conditional.
+
+Changed files: docs/realizability/WATER_EXPERIMENT_OUTLOOK_R200.md,
+REQUEST_LOG.md, SESSION_HANDOFF.md, STATUS.md. Prior R200 work retained;
+opening/owner/Next task remain consistent on paused implementation, completed
+conceptual review and retained PC ownership. Sources linked in the new section:
+MIT mass/energy/thermodynamic notes, Caltech sound and cavitation references,
+and IAPWS water-property derivatives. One legacy IAPWS95 URL returned an internal
+web error; the previously retrieved liquid-water release is used instead.
+
+Checks passed: observed identity/ownership/Git/stashes and expected dirty scope;
+201 unique request IDs and byte-preservation against the pre-R201 request log;
+61 local links/anchors, balanced Markdown fences, exact four-file scope and
+whitespace; independent dimensionless Gaussian pressure quadrature and peak
+root, cavitation/peak-radius arithmetic, integrated shear-heating estimates,
+thermal diffusion, Mach scale and rigid-sealed pressure rise. Disposable checker:
+/tmp/r201_check.py. Final post-append rerun follows. No production scientific
+code changed and no CFD/FEM or physical verification is claimed.
+
+Skipped: implementation, numerical/physical workloads, hardware/optical work,
+trajectory/render/encode, dependencies, procurement, fresh Git synchronization,
+account/private-session access, model/machine changes, delegation, commit/push.
+Only primary-source reads and short arithmetic/documentation checks ran.
+Remaining unknowns: full finite target pressure/gradient/parcel histories,
+absolute pressure and gas content, thermal boundary conditions and actual
+compressible evolution. Next: wait for the user; suggested next conceptual
+task remains one operating envelope for 10→3 mm and a possible 1 mm extension,
+now distinguishing hardware limits from intrinsic water limits. Implementation
+resumes only when explicitly requested. R200/R201 edits remain local and
+uncommitted; no ownership release.
+
+## R202 — 2026-09-22 (America/New_York) — Cost versus attainable experimental range
+
+**User wording:**
+
+```text
+ok, that sounds good.  but there are sensors and actuators.  we know we can't reproduce the original solution, since it is water.  running at atmospheric pressure is much cheaper, additional pressure helps but can cost much more, please add some estimates of cost vs the portion of the result that we can capture.
+```
+
+**Scope/status:** Started. Add budgetary cost-versus-scientific-range estimates
+with real sensors and actuators restored, comparing atmospheric and pressurized
+water experiments. Research public price anchors, distinguish component prices
+from system/engineering estimates and give conditional range/claim milestones.
+Assume USD and show self-equipped versus shared-lab routes unless clarified.
+No equipment purchase, supplier contact, implementation, simulation, commit or
+push authorized. Pre-write checks: rharris on daisy, user-owned checkout/.git;
+main/origin/main both c5dd6e3, empty stashes; exactly four known R200/R201 files
+modified/untracked, reviewed and retained. PC owns the repository; Mac remains
+released. No fresh fetch or machine transfer; external unpublished state unknown.
+
+## R203 — 2026-09-22 (America/New_York) — Include both ownership-cost routes
+
+**User wording:**
+
+```text
+mention both costs if you can, that way the result might be more useful to others.
+```
+
+**Scope/status:** Started; clarification of active R202. Include both buying
+from scratch and incremental cost with an equipped research lab, with labor
+and existing-equipment assumptions explicit. Continue the same conceptual
+cost/range document; no new execution, contact, purchase or publication scope.
+PC ownership and the reviewed R200–R202 local changes remain unchanged.
+
+**R202 outcome:** Complete. Created
+[Cost versus captured dynamics](docs/realizability/COST_VERSUS_CAPTURED_RANGE_R202.md)
+and linked it from the existing water outlook, status and handoff. Includes
+five atmospheric equipment-budget levels tied to distinct scientific claims,
+a six-category modest-apparatus budget, public component-price anchors,
+conditional pressure/cavitation range gains and incremental optical-pressure
+package allowances, labor/facility/recurring-cost assumptions and a staged
+spending recommendation. These are unquoted planning estimates, not procurement
+approval or demonstrated cost/performance. Approximate from-scratch/equipped-lab
+modest-contraction equipment budgets are $12k–35k / $5k–18k; a quantitative
+1 mm extension is $80k–250k / $40k–150k and remains an uncertain research target.
+
+Extra gauge pressures 1/4/9 bar yield conditional cavitation-only radius gains
+1.42/2.25/3.18 and extra square-root-similarity time decades 0.30/0.70/1.00.
+Estimated pressure-package additions are $15k–40k / $30k–90k / $60k–180k,
+applied to either ownership route unless suitable pressure infrastructure is
+already available. No added captured range follows when another limit arrives
+first. Actual multi-window pressure-vessel quotes remain missing.
+
+Evidence: retrieved manufacturer Bürkert, LabJack and Kron price listings;
+US distributor wet/wet sensor listing; primary low-cost planar-PIV paper;
+manufacturer camera/window technical descriptions; University of Cincinnati
+published micro-PIV facility rates (explicitly not tank suitability). Price
+and technical capability are distinguished. Regional legacy Omega price pages,
+old LabJack brochure prices, unstable camera configuration/snippet prices and
+unrelated microfluidic hardware were not used as current applicable quotes.
+Pressure arithmetic extends R201's clearly conditional Gaussian screen.
+
+**R203 outcome:** Complete within R202. Both ownership routes are included for
+every atmospheric budget level. The equipped-lab column requires instruments
+suitable for that row, not merely any lab. Research labor, access fees, taxes,
+shipping and institutional overhead are distinguished from equipment cash;
+existing equipment does not become economically free. Pressure-package costs
+remain comparable in both routes absent an existing compatible pressure system.
+No user budget or laboratory access is inferred.
+
+Changed files for R202/R203: docs/realizability/COST_VERSUS_CAPTURED_RANGE_R202.md,
+docs/realizability/WATER_EXPERIMENT_OUTLOOK_R200.md, REQUEST_LOG.md,
+SESSION_HANDOFF.md, STATUS.md. Existing R200/R201 work preserved. Handoff
+opening, owner table and Next task agree on complete conceptual work, continued
+pause and retained PC ownership; status links to that task.
+Checks passed: observed identity/ownership/Git/stashes and expected initial
+four-file dirty scope; preservation of all pre-R202 request bytes; 203 unique
+request IDs; Markdown fences and 69 local links/anchors before this outcome;
+exact five-file final scope; pressure/gain/decade, component quantities,
+BOM/contingency, pressure additions, labor and access arithmetic; whitespace.
+Disposable checker: /tmp/r203_check.py; final post-append check follows.
+
+Skipped: implementation, CFD/FEM, hardware/optical or other physical work,
+trajectory/render/encode, dependencies, procurement, supplier/facility contact,
+fresh Git synchronization, account/private-session access, model/machine
+changes, delegation, commits and pushes. Only source reads and short arithmetic
+and documentation checks ran. Remaining decisions: actual equipment access,
+selected scientific claim, validated actuation/optical/thermal performance,
+custom vessel and complete system quotations, development effort and attained
+range. Next: wait for the user; suggested next conceptual task is a requirements-
+linked bill of materials for the small atmospheric feasibility bench, showing
+owned, borrowed and purchased resources and the measurements needed before
+expanding it. No implementation resumption or spending is authorized. All
+R200–R203 changes remain local and uncommitted; no ownership release.
+
+## R204 — 2026-09-22 (America/New_York) — Review cost document for clarity
+
+**User wording:**
+
+```text
+thanks, now can you review this document for clarity, and possibly improve it if you find a need.
+```
+
+**Scope/status:** Started. Review and edit the immediately preceding cost-versus-
+range document for clarity, preserving the two ownership routes, scientific
+limits and sourced estimates. Clarify total versus incremental costs,
+experimental claims, pressure benefit and radius conventions; reduce repetition.
+Editorial/documentation work only; no implementation, procurement, commit or
+push requested. Pre-write checks: rharris on daisy, repository/.git user-owned;
+main/origin/main both c5dd6e3, empty stashes; exactly the five known R200–R203
+files modified/untracked, reviewed and retained. Same PC owner, Mac released;
+no fresh fetch, transfer or unrelated work observed. Remote unpublished state
+and other-machine processes remain unknowable.
+
+## R205 — 2026-09-22 (America/New_York) — Consolidate the session before clarity review
+
+**User wording:**
+
+```text
+I want a document that includes all the question in this session, into a markdown file.  only after that do I want it reviewed for clarity
+```
+
+**Scope/status:** Started; steers R204. First assemble one self-contained Markdown
+document covering all session questions and answers, including both cost routes;
+only then review that complete document for clarity. The initial narrow R204
+cost-document edits are draft work, not completion of the corrected request.
+Preserve existing research notes and request records. No implementation, supplier
+contact, purchase, commit or push authorized. Owner and reviewed local work remain
+unchanged on PC daisy.
+
+## R206 — 2026-09-22 (America/New_York) — Cohesive essay and publication
+
+**User wording:**
+
+```text
+I don't need the questions and answers preserved, but more a cohhesive essay, for this document. then add commit push and tell me the name of the document.  I will review it.
+```
+
+**Scope/status:** Started; refines active R204/R205. Complete one cohesive essay
+covering the session's substantive topics without reproducing questions/answers,
+then review for clarity. Explicitly authorizes add, commit and push of the
+session documents and associated request/handoff/status records. Report the
+resulting document name. No simulation, implementation, procurement or supplier
+contact requested. Preserve prior records and research notes; PC retains ownership.
+
+**R204 outcome:** Complete under the subsequent R205/R206 scope corrections.
+Initial narrow cost-note clarity edits clarified alternative budgets, equipment
+inclusions, separate mechanism/contraction goals, and pressure benefit. The final
+review was applied to the complete consolidated essay after assembly, not treated
+as completion of a cost-only request. Supporting cost notes retain the useful
+clarifications. The pressure table now reports measured swirl-peak radii rather
+than Gaussian widths; both conventions and their 1.1209 factor are explicit.
+The underlying pressure model, gains and cost ranges are unchanged.
+
+**R205 outcome:** Complete. First assembled all session analysis and supplied
+requests into one Markdown draft, retained at
+/tmp/r205_assembled_before_review.md, before the combined clarity review.
+R206 then explicitly replaced the question/answer presentation with a cohesive
+essay. The final document covers the water approximation, real boundary/sensor
+limits, viscosity/heat/sound, perfect-instrument hypothetical, phase/acoustic
+limits, atmospheric and pressurized costs, both ownership routes, labor/access
+and a recommended scientific spending sequence. The document contains no
+conversation transcript or question/answer appendix. Required verbatim request
+records remain here in REQUEST_LOG.md.
+
+**R206 outcome:** Essay and clarity review complete; publication prepared under
+the explicit add/commit/push authorization. Primary document:
+[WATER_EXPERIMENT_FEASIBILITY_AND_COST.md](docs/realizability/WATER_EXPERIMENT_FEASIBILITY_AND_COST.md).
+It is a self-contained, approximately 4,500-word essay with comparative tables,
+conditional calculations and source links. The water outlook and detailed cost
+note are retained as supporting analysis and each links to the essay. Session
+handoff/status identify the essay and waiting for the user's review; PC retains
+ownership and implementation remains paused.
+
+Changed files for this completed session scope: REQUEST_LOG.md,
+SESSION_HANDOFF.md, STATUS.md,
+docs/realizability/WATER_EXPERIMENT_OUTLOOK_R200.md,
+docs/realizability/COST_VERSUS_CAPTURED_RANGE_R202.md,
+docs/realizability/WATER_EXPERIMENT_FEASIBILITY_AND_COST.md.
+Checks passed before publication: identity/ownership and known initial dirty
+scope; empty stashes; origin fetch and HEAD/upstream equality at c5dd6e3;
+preservation of all pre-R204 request bytes; 206 unique request IDs; retained
+assembled-before-review draft; final topic coverage and absence of transcript;
+fences; 75 local links/anchors before this outcome append; retained cost ranges;
+pressure/peak-radius, contraction gain/decades, strain/flow, heat and cost
+arithmetic; exactly six expected files and whitespace. Disposable checker:
+/tmp/r206_check.py. Source/price claims retain their earlier verified reference
+dates; clarity review is not a fresh pricing or physical-validation campaign.
+Final post-append/staged checks, commit/push and Git verification follow; actual
+publication hash/result is reported in Git history and the final response.
+
+Skipped: implementation, CFD/FEM, hardware/optical or other physical work,
+trajectory/render/encode, dependencies, procurement, supplier/facility contact,
+account/private-session access, model/machine changes and delegation. Only short
+arithmetic/documentation checks and the authorized Git publication ran or remain
+to run. No runtime/scientific tests are claimed. Remaining unknowns: actual
+flow/measurement limits, thermal/pressure histories, equipment access and complete
+system quotations. Next: wait for the user to review the essay; a possible later
+conceptual task is a requirements-linked bill of materials for the small
+atmospheric feasibility bench, with owned/borrowed/purchased resources and
+measurements needed before expansion. No implementation resumption or ownership
+release. No post-push documentation edit is planned.
+
+Publication environment note: the first ordinary git add was blocked because
+.git is read-only in the restricted sandbox. The same exact six-file staging
+command succeeded with the approved elevated Git permission. No file content
+or scope was changed to bypass the restriction.

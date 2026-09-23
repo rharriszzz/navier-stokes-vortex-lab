@@ -1,8 +1,29 @@
 # Project status: a boundary-controlled engineering approximation
 
-Updated 2026-09-22 (America/New_York), through R199. PC/WSL `daisy` owns the
-repository. **Paused at the user's request while they work on another project;
-wait for a new instruction.** Usage snapshot recorded in REQUEST_LOG.md (R197).
+Updated 2026-09-22 (America/New_York), through R206. PC/WSL `daisy` owns the
+repository. **Implementation and workloads remain paused.** The complete
+[essay on feasibility, physical limits and cost](docs/realizability/WATER_EXPERIMENT_FEASIBILITY_AND_COST.md)
+was assembled and reviewed for clarity in R204–R206. It includes both ownership
+cost routes without reproducing the conversation. R206 authorizes publication;
+wait for the user's review and next instruction. Supporting findings follow.
+ R200's requested
+[broader water-experiment assessment](docs/realizability/WATER_EXPERIMENT_OUTLOOK_R200.md)
+is complete: cautious optimism for roughly 10→3 mm contraction, less confidence
+for 10→1 mm, and doubt about 10→0.1 mm in the current concept. Boundary delivery
+and measurement bias appear more immediate than bulk compressibility; thermal
+gradients can matter early to precise momentum accounting. These are conditional
+judgments, not demonstrated performance. Wait for the user's next instruction.
+R201 adds an [ideal-hardware thought experiment](docs/realizability/WATER_EXPERIMENT_OUTLOOK_R200.md#r201-if-sensing-and-actuation-were-perfect):
+removing delivery/sensing limits improves the forecast, but thermodynamics,
+cavitation, heat and acoustics still change the solution. A conditional Gaussian
+screen reaches vapor pressure near b=66 µm at atmospheric background pressure;
+it is not a universal cutoff or an achieved result.
+R202/R203 adds [cost versus captured dynamics](docs/realizability/COST_VERSUS_CAPTURED_RANGE_R202.md),
+with both ownership routes. A modest atmospheric contraction apparatus is
+estimated at $12k–35k from scratch or $5k–18k additional in an equipped lab,
+excluding research labor. Extra pressure earns no range if delivery/optics
+limit first. These are budgetary judgments, not quotations or performance claims.
+Usage snapshot remains recorded in REQUEST_LOG.md (R197).
 Latest technical work: [cube adapter and diagnostics](docs/realizability/CUBE_ADAPTER_R196.md).
 Twenty-four import-free checks passed. FEM forms have not been constructed or
 assembled, and convergence is untested. Execution remains unadmitted with zero
@@ -14,7 +35,7 @@ attempts. No boundary-driven core or feasible contraction range is established.
 | Is the engineering goal demonstrated? | No validated boundary-driven contraction or boundary-only state estimator exists yet. |
 | What did the latest step establish? | Cube/sparse assembly source, retained lifting and signed budget/error diagnostics. [Evidence and limits](docs/realizability/CUBE_ADAPTER_R196.md). |
 | What blocks trusted numerical control results? | The nonlinear fixture has not run; B2 still fails its independent response-accuracy comparison and q64/q96 remain unused. |
-| What is next? | Wait for the user to resume, then implement the one-fixture driver and finite supervision path with import-free checks and later admission decision; follow the single [next task](SESSION_HANDOFF.md#next-task). |
+| What is next? | Wait for the user to review the consolidated essay. Suggested next conceptual review: a requirements-linked bill of materials for the small atmospheric feasibility bench, including owned/borrowed/purchased resources and expansion criteria. Implementation remains deferred; follow the single [next task](SESSION_HANDOFF.md#next-task). |
 
 ## Goal and present conclusion
 

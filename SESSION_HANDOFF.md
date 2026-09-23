@@ -1,9 +1,32 @@
 # Current session handoff
 
-Last updated 2026-09-22 (America/New_York) for R199.
+Last updated 2026-09-22 (America/New_York) for R206.
 **PC/WSL `daisy` owns the repository.** No transfer; Mac remains released.
-**Paused at the user's request: record the supplied snapshot, then wait while
-the user works on another project. Resume only on a new user instruction.**
+**Implementation and workloads remain paused. The session's physical and cost
+assessment is consolidated into one cohesive essay and reviewed for clarity:**
+[WATER_EXPERIMENT_FEASIBILITY_AND_COST.md](docs/realizability/WATER_EXPERIMENT_FEASIBILITY_AND_COST.md).
+R206 authorizes add/commit/push of this session's documents and records; final
+publication result is in Git history and the final response. Wait for the user's
+review and next instruction. The earlier water and cost notes remain supporting
+detail and link to the essay. The essay contains no conversation transcript.
+The forecast is cautiously optimistic for roughly 10→3 mm contraction, less
+confident for 10→1 mm and doubtful for 10→0.1 mm in this apparatus concept.
+Boundary delivery and measurement bias look more immediate than compressibility;
+thermal gradients may matter early to the small mechanism signal. These are
+conditional judgments, not an achieved range or an admitted experiment.
+R201 separately grants ideal flow delivery: first similarity-time decades look
+more plausible, with cavitation a candidate major departure near atmospheric
+pressure; thermal/property and acoustic changes depend on the target history.
+Its conditional Gaussian cavitation screen is b≈66 µm, not a measured tank limit.
+Perfect hardware does not bypass the water equation of state or energy balance.
+Read the [cost/range comparison](docs/realizability/COST_VERSUS_CAPTURED_RANGE_R202.md):
+modest atmospheric contraction equipment is estimated at $12k–35k from scratch
+or $5k–18k additional in a suitable lab, excluding research labor. Pressure adds
+cost without captured range if delivery/optics limit first. These are unquoted
+planning estimates; no hardware or achieved range is admitted.
+**Suggested next conceptual task, only when requested: a requirements-linked
+bill of materials for the small atmospheric feasibility bench, showing owned,
+borrowed and purchased resources and the evidence needed before expanding it.**
 R197 records the supplied 17m 52s / 5:06 PM completion, 222,143 total tokens
 (191,120 input, 2,134,016 cached, 31,023 output, 5,308 reasoning), Astra/high,
 and account snapshot: 63% weekly remaining (17:37 on 28 Sep reset), 283 credits,
@@ -13,7 +36,7 @@ R196 completed [cube adapter and diagnostic source](docs/realizability/CUBE_ADAP
 Twenty-four standard-library checks pass, including sparse bordering/lifting,
 constraint rank, signed energy terms, refinement and refusal cases. FEM imports,
 UFL construction, mesh/assembly/solves and convergence remain untested.
-**After the user resumes: implement the single-fixture n=2 Poiseuille driver and finite supervision
+**After the user explicitly resumes implementation: implement the single-fixture n=2 Poiseuille driver and finite supervision
 path; review admission after import-free checks. Stop before FEM execution.**
 Execution remains unadmitted, with zero attempts; the adapter has no supervised
 entry point. Full convergence-suite and tank launches remain unadmitted.
@@ -115,12 +138,12 @@ and physical-work limits remain unchanged.
 | Owner | PC/WSL `daisy`; Mac `fire.lan` released after published R161 handoff and R162 receipt. |
 | Checkout | `/home/rharris/git/navier-stokes-vortex-lab`. |
 | Branch/upstream | `main` / `origin/main` |
-| Starting state | R197 began clean at ea1346d, equal to locally stored origin/main; empty stashes, same owner, R196 lifecycle completed. No fresh fetch/pull for this metadata request. |
+| Starting state | R204 began at c5dd6e3 with five known session files modified/untracked; reviewed and preserved. Empty stashes, rharris-owned checkout/.git, same owner. R206 publication fetch succeeded; upstream comparison checked before commit/push. |
 | Interpreter | `/home/rharris/git/navier-stokes-vortex-lab/.venv/bin/python`, CPython 3.12.14 with NumPy 2.5.3 |
 | Other owner/process | Mac `fire.lan` released in the published R161 handoff. Local Git cannot inspect another checkout's unpublished state. |
-| Task processes | R197 launches no task workload; project paused pending user instruction. R196 source/algebra checks completed. |
+| Task processes | R200–R206 ran only short arithmetic/documentation checks and source reads; no simulation, physical or implementation workload. Implementation remains paused. |
 | Symbolic environment | `/tmp/navier-r183-sympy/bin/python`, Python 3.12.14, SymPy 1.14.0, mpmath 1.3.0; recreate using `requirements-symbolic.txt` if missing. Existing environments unchanged. |
-| Delivery state | R198 snapshot/pause commit a0e350c complete. R199 requests push with its metadata record; remote main checked at ea1346d before publication. Final delivery result in Git history/final response. PC retains ownership during pause. |
+| Delivery state | R206 authorizes publishing the six session documents/records. Essay and clarity review complete; staged checks, commit/push and final Git verification supply delivery evidence. No ownership release or implementation resumption. |
 
 ## Current result and limits
 
@@ -251,9 +274,59 @@ agent-side POV-Ray backtraces are unavailable.
 
 ## Next task
 
-**Wait for the user to resume.** R197 explicitly pauses project work while the
-user works on another project. The following concrete implementation task is
-deferred until a new user instruction; no automatic continuation is scheduled.
+**Wait for the user's review of the consolidated essay and next instruction.**
+[WATER_EXPERIMENT_FEASIBILITY_AND_COST.md](docs/realizability/WATER_EXPERIMENT_FEASIBILITY_AND_COST.md)
+now covers all substantive session topics as a cohesive essay, without a
+question/answer transcript. R205's complete material was assembled before the
+whole-document clarity review; R206 confirms the essay form and authorizes
+add/commit/push. The earlier cost-only R204 edit became supporting-note cleanup.
+
+The suggested next conceptual task remains a requirements-linked bill of
+materials for the small atmospheric feasibility bench, showing owned, borrowed
+and purchased resources and the measurements needed before expansion. It is
+not started or scheduled. Implementation remains deferred.
+
+R204–R206 changed the consolidated essay, both supporting notes, REQUEST_LOG.md,
+STATUS.md and this handoff: six session files. Checks: preserved prior request
+bytes, unique IDs, local links/anchors and fences, unchanged cost ranges and
+explicit radius conversion, pressure/heating/cost arithmetic, whitespace and
+publication Git checks. Sources and price dates carry forward the session's
+verified references; no new price refresh is claimed by the clarity review.
+No simulation, hardware, supplier contact or procurement. Actual range, apparatus
+quotes, equipment access and thermal/response/error histories remain unknown.
+PC retains ownership. R206 publication result is recorded in Git/final response.
+
+R202/R203 added the cost comparison and linked it from the water outlook,
+REQUEST_LOG.md, STATUS.md and this handoff. Five files comprise this local review
+scope. Checks: preserved prior log bytes, unique IDs, local links/fences,
+pressure/gain/decade and cost arithmetic, public price-source review and
+whitespace. No supplier contact, procurement, simulation, hardware work,
+commit or push. Dollar ranges are unquoted estimates, with research labor and
+facility charges separate. Existing lab resources, true response/optical floors,
+custom vessel quotes and attained range remain unknown. PC retains ownership.
+
+R201 extended the existing outlook with mass/energy/equation-of-state constraints,
+conditional local heating and Gaussian cavitation estimates, acoustic criteria
+and a separate ideal-hardware forecast. Changed files remain the outlook,
+REQUEST_LOG.md, SESSION_HANDOFF.md and STATUS.md. Checks: retained R200 log
+bytes, unique IDs, local links/fences, scale/pressure/heating arithmetic and
+whitespace. No numerical/physical workload or commit/push. Pressure datum,
+thermal boundary conditions and the full target's parcel/gradient histories
+remain unresolved. No achieved range or compressible regularity claim.
+
+R200 changed REQUEST_LOG.md, SESSION_HANDOFF.md, STATUS.md and the new outlook.
+Checks: observed identity/ownership/Git/stashes; primary-source review; short
+Python 3.12 scale calculations; request-log preservation, local links, Markdown
+fences and whitespace. No CFD/FEM, hardware, optical, trajectory/render/encode,
+procurement, dependencies, commit or push. Evidence is linked in the outlook;
+all new physical numbers are conditional calculations. Actual delivery gains,
+coherence, tracer/optical bias, pressure margins and heat input remain unknown.
+The phrase “one or two magnitudes” is addressed under both similarity-time and
+radius interpretations; no user choice is inferred. PC retains ownership.
+
+The following earlier implementation task remains deferred until the user
+explicitly resumes implementation. It is not the next action for a further
+conceptual discussion:
 
 **Implement the smallest end-to-end n=2 Poiseuille fixture driver and finite
 supervision path, then make a concrete execution-admission decision. Stop before
@@ -293,7 +366,8 @@ ownership handoff; optional platform comparisons do not block PC source work.
 
 Keep Astra/high while mixed assembly and admission choices remain. Recommend a
 cheaper model only once work is mechanical and availability is rechecked. This
-does not schedule work or change models. Next prompt: **Continue**.
+does not schedule work or change models. The earlier **Continue** prompt applies
+only if the user chooses to resume this deferred implementation.
 R196 files/checks/evidence and remaining choices are in REQUEST_LOG.md and
 WORK_SESSIONS.md. PC retains ownership. R197 changed only REQUEST_LOG.md,
 SESSION_HANDOFF.md and STATUS.md to record the snapshot and pause. Identity,
