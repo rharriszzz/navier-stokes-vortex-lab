@@ -7011,3 +7011,50 @@ result are recorded in Git and the final response. Runtime/scientific tests
 skipped for documentation only. No new unresolved decision; implementation
 remains paused and PC retains ownership. Next: wait for the user's review of
 the consolidated essay and next instruction.
+
+## R211 — 2026-09-22 (America/New_York) — Remove the README image
+
+**User wording:**
+
+```text
+I really do not like the image.  I know I asked you to put it there, but is not good.  Please remove it from the readme
+```
+
+**Scope/status:** Started. Remove the preview image embed and its accompanying
+caption from README.md. Preflight: rharris on owner PC/WSL daisy; owned
+checkout/.git; clean main matching locally stored origin/main at b4db4ff;
+empty stashes. No ownership transfer; other-checkout unpublished state remains
+unobservable. No new commit/push or scientific work requested.
+
+**Outcome:** Complete. Removed the preview embed and its caption from README.md;
+the image file is unchanged. Changed README.md, REQUEST_LOG.md,
+SESSION_HANDOFF.md and STATUS.md. Checks passed: README differs only by the
+requested removal; preview.png byte-identical to HEAD; earlier request history
+preserved; 211 unique sequential IDs; whitespace. Runtime/scientific tests
+skipped for documentation only. No commit/push performed or new unresolved
+decision. Next: wait for the user's essay review and next instruction.
+
+## R212 — 2026-09-22 (America/New_York) — Publish README image removal
+
+**User wording:**
+
+```text
+add commit push
+```
+
+**Scope/status:** Started. Explicit authorization to stage, commit and push
+R211's README image/caption removal with associated request/handoff/status
+records. Preflight: rharris on owner PC/WSL daisy; owned checkout/.git; main
+matches locally stored origin/main at b4db4ff; empty stashes; four known
+modified documentation files reviewed and preserved. Other-checkout unpublished
+state is not observable. No ownership transfer or scientific work requested.
+
+**Publication preparation:** Complete for README.md, REQUEST_LOG.md,
+SESSION_HANDOFF.md and STATUS.md. Checks passed: preserved prior request bytes,
+212 unique sequential IDs, absent README preview reference, unchanged image file,
+fetched HEAD/origin/main equality at b4db4ff, four-file scope and whitespace.
+Staged checks, commit/push and final Git verification follow; actual delivery
+hash/result are recorded in Git history and the final response. No runtime or
+scientific tests needed for documentation only. No new unresolved decision;
+PC retains ownership and implementation remains paused. Next: wait for the
+user's essay review and next instruction.

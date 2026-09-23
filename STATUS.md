@@ -1,13 +1,15 @@
 # Project status: a boundary-controlled engineering approximation
 
-Updated 2026-09-22 (America/New_York), through R210. PC/WSL `daisy` owns the
+Updated 2026-09-22 (America/New_York), through R212. PC/WSL `daisy` owns the
 repository. **Implementation and workloads remain paused.** The complete
 [essay on feasibility, physical limits and cost](docs/realizability/WATER_EXPERIMENT_FEASIBILITY_AND_COST.md)
 was assembled and reviewed for clarity in R204–R206. It includes both ownership
 cost routes without reproducing the conversation, published in a2f151b.
 R207/R208 clarify that this is the primary review document; the R200 outlook
 retains detailed supporting physics. R209 adds a short description and link
-in [README.md](README.md); R210 authorizes publishing that update and its records. Wait for the user's review and
+in [README.md](README.md), published with its records in b4db4ff. R211 removes
+the README preview image and caption; R212 authorizes publishing the removal
+and its records. Wait for the user's review and
 [next instruction](SESSION_HANDOFF.md#next-task). Supporting findings follow.
 R200's requested
 [broader water-experiment assessment](docs/realizability/WATER_EXPERIMENT_OUTLOOK_R200.md)

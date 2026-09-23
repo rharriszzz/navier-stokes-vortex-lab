@@ -1,13 +1,14 @@
 # Current session handoff
 
-Last updated 2026-09-22 (America/New_York) for R210.
+Last updated 2026-09-22 (America/New_York) for R212.
 **PC/WSL `daisy` owns the repository.** No transfer; Mac remains released.
 **Implementation and workloads remain paused. The session's physical and cost
 assessment is consolidated into one cohesive essay and reviewed for clarity:**
 [WATER_EXPERIMENT_FEASIBILITY_AND_COST.md](docs/realizability/WATER_EXPERIMENT_FEASIBILITY_AND_COST.md).
-R209 adds a short description and link to the essay in README.md. R210
-authorizes publishing it with the R207–R210 records; the commit and final
-response record the delivery result.
+R210 published the README essay link and associated records as b4db4ff.
+R211 removes the preview image and caption from README.md. R212 authorizes
+publication of this removal and its records; Git history and the final response
+record the delivery result.
 R206 published the essay and supporting notes in commit a2f151b on origin/main.
 R207/R208 clarify that the essay is the primary review document and R200 is
 the earlier, more detailed physics note. Wait for the user's review and next instruction. The earlier water and cost notes remain supporting
@@ -146,7 +147,7 @@ and physical-work limits remain unchanged.
 | Other owner/process | Mac `fire.lan` released in the published R161 handoff. Local Git cannot inspect another checkout's unpublished state. |
 | Task processes | R200–R206 ran only short arithmetic/documentation checks and source reads; no simulation, physical or implementation workload. Implementation remains paused. |
 | Symbolic environment | `/tmp/navier-r183-sympy/bin/python`, Python 3.12.14, SymPy 1.14.0, mpmath 1.3.0; recreate using `requirements-symbolic.txt` if missing. Existing environments unchanged. |
-| Delivery state | R206 published six session documents/records as a2f151b; R210 authorizes publication of the R209 README link and R207–R210 records. Essay and clarity review complete; staged checks, commit/push and final Git verification supply delivery evidence. No ownership release or implementation resumption. |
+| Delivery state | R206 published six session documents/records as a2f151b; R210 published the README link and records as b4db4ff; R212 authorizes publishing the R211 image/caption removal and records. Essay and clarity review complete; staged checks, commit/push and final Git verification supply delivery evidence. No ownership release or implementation resumption. |
 
 ## Current result and limits
 
@@ -278,6 +279,16 @@ agent-side POV-Ray backtraces are unavailable.
 ## Next task
 
 **Wait for the user's review of the consolidated essay and next instruction.**
+R212 publishes README.md, REQUEST_LOG.md, STATUS.md and this handoff.
+Documentation and Git checks are recorded in the request log; runtime/scientific
+tests are skipped. No new unresolved decision or ownership change.
+
+R211 removes only the README preview embed and caption. Changed README.md,
+REQUEST_LOG.md, STATUS.md and this handoff; the image file remains available.
+Checks: exact README removal, request preservation/IDs and whitespace.
+Runtime/scientific tests skipped for documentation only. No new unresolved
+decision or publication; PC retains ownership.
+
 R210 publishes the README link and associated records: README.md,
 REQUEST_LOG.md, STATUS.md and this handoff. Documentation and Git checks
 are recorded in the request log; no runtime/scientific tests are needed.

@@ -50,12 +50,6 @@ in [REQUEST_LOG.md](REQUEST_LOG.md), following the persistent instructions in
 [AGENTS.md](AGENTS.md). The scientific benchmark defaults and original work
 packages are in [BOUNDARY_CONTROL_HANDOFF.md](BOUNDARY_CONTROL_HANDOFF.md).
 
-![Representative tracer-render preview](preview.png)
-
-This representative frame uses the current tracer-only view: pressure sensors
-and actuator hardware are hidden, and tracer markers are enlarged relative to
-the physical particles for visibility.
-
 ## Repository layout
 
 ```text
