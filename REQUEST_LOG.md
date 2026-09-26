@@ -8502,3 +8502,62 @@ interpretation task, recommend /new, select Astra/high, then Continue. PC/WSL
 daisy retains ownership, Mac released. R234 completion 49a56cb verified by clean
 pull; R235 STARTED f7ac565 published. Completion prepared for scoped commit/push;
 final delivery hash/result belongs in Git/final response, no post-push edit.
+
+## R236 — 2026-09-26 — Continue saved KSP refusal review
+
+**User wording (supplied terminal excerpt; account email redacted):**
+
+```text
+Worked for 8m 15s · done 1:11 PM ╭──────────────────────────────────────────────╮
+│ >_ OpenAI Codex (v0.155.1)                   │
+│                                              │
+│ model:     gpt-6-sol high   /model to change │
+│ directory: ~/git/navier-stokes-vortex-lab    │
+╰──────────────────────────────────────────────╯
+
+  Tip: Use /init to create an AGENTS.md with project-specific guidance.
+
+Token usage: total=459,457 input=409,921 (+ 9,454,976 cached) output=49,536 (reasoning 8,407)
+To continue this session, run codex resume, then select Review Codex task output (01a0de98-b2e9-74c1-8c8f-97150fb60d8c)
+
+/status
+
+╭────────────────────────────────────────────────────────────────────────────────────────╮
+│  >_ OpenAI Codex (v0.155.1)                                                            │
+│                                                                                        │
+│ Visit https://chatgpt.com/codex/settings/usage for up-to-date                          │
+│ information on rate limits and credits                                                 │
+│                                                                                        │
+│  Model:                       gpt-6-sol (reasoning high, summaries auto)               │
+│  Model provider:              openai                                                   │
+│  Directory:                   ~/git/navier-stokes-vortex-lab                           │
+│  Permissions:                 Workspace (Ask for approval)                             │
+│  Agents.md:                   AGENTS.md                                                │
+│  Account:                     [account email redacted] (Pro Lite)                      │
+│  Collaboration mode:          Default                                                  │
+│  Session:                     01a0deb4-08c7-78e2-ab83-65111b56ad3d                     │
+│                                                                                        │
+│  Weekly limit:                [████████████████████] 100% left (resets 13:10 on 3 Oct) │
+│  Luna Reserve Weekly limit:   [████████████████████] 99% left (resets 10:18 on 3 Oct)  │
+╰────────────────────────────────────────────────────────────────────────────────────────╯
+
+• Model changed to gpt-6-astra high continue
+```
+
+**Scope/status:** STARTED. Continue authorizes the saved R235 sparse-solve
+refusal review, a minimal safe diagnostic source change with import-free tests
+if justified (otherwise a precise blocker), and scoped commit/push. No FEM,
+numerical imports, live scope, new allocation or reuse of either spent directory.
+Both R232 and R235 remain INCOMPLETE and spent 1/1. All scientific/resource gates
+remain unchanged. PC/WSL daisy retains ownership; Mac remains released.
+
+Preflight: rharris/daisy, Linux 6.18.33.2-microsoft-standard-WSL2 x86_64,
+/home/rharris/git/navier-stokes-vortex-lab; clean main/origin/main equal at
+fe5295b68f5a75cf106d1f7a17e3a13dd0f1d892, empty stashes and completed R235
+lifecycle. Required pull initially could not write .git/FETCH_HEAD in sandbox;
+approved exact escalation succeeded, already up to date. R235 delivery verified.
+Supplied completion/token totals belong to the preceding resume excerpt;
+status has a different session ID and reports Sol/high followed by a user model
+change to Astra/high. No /new excerpt, context percentage or credit count was
+supplied. Account/session values are user-reported, not independently checked
+or project-specific accounting. No agent-initiated switch.

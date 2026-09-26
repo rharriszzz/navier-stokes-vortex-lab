@@ -1142,3 +1142,13 @@ for distinct review at reported 32% context, select Astra/high and Continue.
 PC retains ownership, Mac released. R234 completion 49a56cb verified; STARTED
 f7ac565 published. Completion prepared for scoped publication; final delivery
 hash/result belongs in Git/final response, no post-push edit.
+
+## R236 — Saved KSP refusal and minimal diagnostic review
+STARTED | 2026-09-26T17:13:21Z | PC/WSL daisy | released: no
+Identity: rharris; Linux 6.18.33.2-microsoft-standard-WSL2 x86_64; daisy;
+/home/rharris/git/navier-stokes-vortex-lab; clean main/origin/main equal at
+fe5295b68f5a75cf106d1f7a17e3a13dd0f1d892 after required fast-forward pull;
+empty stashes, same owner, Mac released, no conflicting open record. Continue
+with reported Astra/high authorizes source/evidence review, minimal tested
+diagnostic or precise blocker, and scoped publication. No numerical imports,
+FEM, live scope or new allocation; both prior one-use fixtures remain spent.
