@@ -7454,3 +7454,26 @@ passed, preserving that historical order. Runtime tests
 skipped for recommendation/metadata only. No implementation, workload, commit
 or push; this question gives no new publication authorization. PC retains
 ownership. Next: user resumes the bounded critical review when ready.
+
+
+## R225 — 2026-09-25 (America/New_York) — Continue the critical fixture review
+
+**User wording:**
+
+```text
+I didn't see you recommend /new on this step, so please continue
+```
+
+**Scope/status:** Continue in this session; scoped commit/push authorized by
+SESSION_PROTOCOL.md. No /new, model switch or delegation requested. Same owner
+rharris on PC/WSL daisy, Linux x86_64, owned checkout/.git, main/origin/main,
+empty stashes, no conflicting open lifecycle record. Deliberately reconciled
+the three pending R224 metadata files as f8f734f and pushed them, then completed
+the required clean fast-forward pull; HEAD equals fetched upstream at f8f734f.
+Initial sandbox DNS failure was resolved by the permitted external Git check.
+Mac remains released. Bounded task: critically review R222 fixture formulation,
+acceptance and worker/supervision source; fix understood scoped defects and
+implement/verify the smallest real host backend if possible without FEM.
+End with explicit single-fixture admission or refusal. Stop before FEM imports,
+JIT/mesh/assembly/solves, dependencies, full suite, tank/physical/render work.
+FEM attempts remain zero. Publish STARTED before substantive review.

@@ -759,3 +759,16 @@ fixes after unresolved science/assurance choices settle and availability is
 rechecked. PC retains ownership; Mac remains released. STARTED 0d02b6f was
 pushed; completion prepared for scoped commit/push. Delivery hash/result in
 Git/final response; no post-push edit.
+
+
+## R225 — Critical fixture source and execution-readiness review
+STARTED | 2026-09-26T03:50:14Z | PC/WSL daisy | released: no
+Identity: rharris; Linux x86_64; /home/rharris/git/navier-stokes-vortex-lab;
+main/origin/main at f8f734f55777678f6d5dadaba6228fb1c1cc1b23 after required
+clean fast-forward pull, equal to fetched upstream; empty stashes. Pending R224
+records reviewed, committed and pushed first. No conflicting open task; Mac
+released. Continue authorizes scoped publication in this same session.
+Bounded task: critical formulation/source/acceptance review, understood fixes,
+and minimal actual host backend verification if possible without FEM. End with
+explicit single-fixture admission/refusal. Stop before FEM imports/JIT/mesh/
+assembly/solves, dependencies, full suite, tank/physical/render work. Attempts 0.
