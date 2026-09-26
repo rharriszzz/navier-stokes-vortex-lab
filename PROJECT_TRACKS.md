@@ -1,11 +1,12 @@
 # Project Tracks
 
-[R247 review](docs/realizability/VERIFICATION_MILESTONE_R247.md)
-selects the rigid-rotation exact-field assembly oracle next. Exact rational
-checks define 38 scalar targets, both-degree gates and negative controls.
-R246 remains a fixed Poiseuille PASS; R242 remains INCOMPLETE and all five
-allocations stay spent. Follow the [current task](SESSION_HANDOFF.md#next-task)
-for Sol/high source-only implementation/tests; no new allocation or workload.
+[R248 implementation](docs/realizability/ROTATION_ORACLE_IMPLEMENTATION_R248.md)
+adds injected exact-field rotation forms and a strict pure report validator.
+All 85 standard-library tests pass with no numerical modules loaded. No FEM
+assembly, new admission or execution occurred. All five allocations remain
+spent; R246 Poiseuille stays PASS and R242 stays INCOMPLETE. Follow the
+[current task](SESSION_HANDOFF.md#next-task) for Astra/high integration
+review.
 
 R232's [single-fixture result](docs/realizability/POISEUILLE_RESULT_R232.md)
 is INCOMPLETE: the worker reached PETSc symbolic LU and exited 1 after a
@@ -27,7 +28,7 @@ diagnostic; 62 standard-library tests pass without numerical imports.
 bounded diagnostic fixture; [R238](docs/realizability/POISEUILLE_RESULT_R238.md)
 spent it 1/1 on a reported numeric LU zero pivot, with empty cleanup but no
 numerical/resource report. All three allowances are spent. Follow the
-[handoff task](SESSION_HANDOFF.md#next-task) for the R247 rotation source implementation.
+[handoff task](SESSION_HANDOFF.md#next-task) for the R248 rotation integration review.
 No tank/hardware route or feasible contraction range is established.
 
 R188 priority update (2026-09-22): establish measurable essential dynamical

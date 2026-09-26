@@ -1,11 +1,12 @@
 # B1 solver environment
 
-[R247 review](../../docs/realizability/VERIFICATION_MILESTONE_R247.md)
-selects the rigid-rotation exact-field assembly oracle next. Exact rational
-checks define 38 scalar targets, both-degree gates and negative controls.
-R246 remains a fixed Poiseuille PASS; R242 remains INCOMPLETE and all five
-allocations stay spent. Follow the [current task](../../SESSION_HANDOFF.md#next-task)
-for Sol/high source-only implementation/tests; no new allocation or workload.
+[R248 implementation](../../docs/realizability/ROTATION_ORACLE_IMPLEMENTATION_R248.md)
+adds injected exact-field rotation forms and a strict pure report validator.
+All 85 standard-library tests pass with no numerical modules loaded. No FEM
+assembly, new admission or execution occurred. All five allocations remain
+spent; R246 Poiseuille stays PASS and R242 stays INCOMPLETE. Follow the
+[current task](../../SESSION_HANDOFF.md#next-task) for Astra/high integration
+review.
 
 Historical PC status: [R232's one-use Poiseuille result](POISEUILLE_RESULT_R232.md)
 is INCOMPLETE at PETSc symbolic LU, and the single numerical allocation is

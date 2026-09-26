@@ -1,0 +1,21 @@
+{
+  "count": 85,
+  "errors": 0,
+  "executable": "/home/rharris/git/navier-stokes-vortex-lab/.venv/bin/python",
+  "failures": 0,
+  "modules": [
+    "verification.nonlinear_port.test_adapter",
+    "verification.nonlinear_port.test_algebra",
+    "verification.nonlinear_port.test_driver_supervision",
+    "verification.nonlinear_port.test_driver_wiring",
+    "verification.nonlinear_port.test_host_protocol",
+    "verification.nonlinear_port.test_linear_evidence",
+    "verification.nonlinear_port.test_package_identity",
+    "verification.nonlinear_port.test_poiseuille_policy",
+    "verification.nonlinear_port.test_rotation_oracle",
+    "verification.nonlinear_port.test_source_bus"
+  ],
+  "numerical_modules_loaded": [],
+  "python": "3.12.14 (main, Sep  1 2026, 14:16:52) [Clang 22.1.3 ]",
+  "runner_seconds": 0.6667415889969561
+}

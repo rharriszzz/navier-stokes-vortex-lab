@@ -1,11 +1,12 @@
 # Isolated nonlinear port verification source — R195/R196/R222/R225/R226
 
-[R247 review](../../docs/realizability/VERIFICATION_MILESTONE_R247.md)
-selects the rigid-rotation exact-field assembly oracle next. Exact rational
-checks define 38 scalar targets, both-degree gates and negative controls.
-R246 remains a fixed Poiseuille PASS; R242 remains INCOMPLETE and all five
-allocations stay spent. Follow the [current task](../../SESSION_HANDOFF.md#next-task)
-for Sol/high source-only implementation/tests; no new allocation or workload.
+[R248 implementation](../../docs/realizability/ROTATION_ORACLE_IMPLEMENTATION_R248.md)
+adds injected exact-field rotation forms and a strict pure report validator.
+All 85 standard-library tests pass with no numerical modules loaded. No FEM
+assembly, new admission or execution occurred. All five allocations remain
+spent; R246 Poiseuille stays PASS and R242 stays INCOMPLETE. Follow the
+[current task](../../SESSION_HANDOFF.md#next-task) for Astra/high integration
+review.
 
 **Source and algebra evidence, not a validated FEM solver.** The
 [R195 fixture review](../../docs/realizability/NONLINEAR_VERIFICATION_R195.md)
@@ -75,12 +76,12 @@ follow the [handoff task](../../SESSION_HANDOFF.md#next-task).
   R225 failure evidence is retained; do not rerun without a new bounded scope.
 - `package_identity.py`: exact FFCx Conda artifact and retained recovery evidence
   binding, with a shared worker/result runtime gate; package 0.10.1, runtime 0.10.0.
-- Seven `test_*.py` modules: 59 standard-library tests, including complete driver
-  wiring with fake FEM boundaries, raw-evidence corruption, source binding and
-  manager-failure refusals; no FEM import.
+- Ten `test_*.py` modules: 85 standard-library tests, including complete driver
+  wiring with fake FEM boundaries, raw-evidence corruption, source binding,
+  rotation form/decision checks and manager-failure refusals; no FEM import.
 
 ```sh
-.venv/bin/python -m unittest verification.nonlinear_port.test_algebra verification.nonlinear_port.test_adapter verification.nonlinear_port.test_driver_supervision verification.nonlinear_port.test_driver_wiring verification.nonlinear_port.test_host_protocol verification.nonlinear_port.test_source_bus verification.nonlinear_port.test_package_identity -v
+.venv/bin/python docs/realizability/evidence/r248/test_runner.py
 ```
 
 The host backend creates and verifies a held task scope, observes actual exit

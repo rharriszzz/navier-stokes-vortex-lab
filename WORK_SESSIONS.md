@@ -1703,3 +1703,51 @@ Identity rharris/daisy, PC/WSL Linux 6.18.33.2-microsoft-standard-WSL2 x86_64;
 Implement the R247 source-only rotation contract with injected forms and
 strict pure reducer/tests; publish and stop before runtime integration/FEM.
 All five earlier numerical allocations remain spent.
+
+COMPLETED | 2026-09-26T22:07:55Z | R248 | PC/WSL daisy | released: no
+Implemented R247 rotation source contract: injected UFL form builder for
+38 exact-field scalars at degree 24/26 on six tagged faces, source-native
+JSON contract and strict pure raw-scalar report reducer/validator. Form source
+computes exact coordinate velocity/quadratic pressure, conservative convection,
+pressure gradient, symmetric stress, squared local momentum residual, full
+six-face traction and geometry normals. No FEM import/JIT/mesh/assembly, manager,
+worker/controller/caller integration, new admission or numerical workload.
+All five prior allocations remain spent; R246 Poiseuille PASS and R242 INCOMPLETE
+unchanged. No Poiseuille/manifest/pin/gate change.
+
+The pure report refuses missing/extra/nonfinite/bool/negative raw values,
+contract/schema/context drift, missing degree records, altered cached decisions
+and common-mode wrong values. Each degree independently meets exact 38 targets:
+geometry 1e-12, five zero squared norms 1e-20, other scalars 1e-10; pair
+absolute 1e-10. Its numerical_accepted flag does not assert workload PASS.
+Synthetic exact report 14,567 bytes, below 2,000,000-byte prospective cap.
+Eight focused tests and full 85-test standard-library suite pass with no
+numerical modules loaded. Fake symbolic recorder checks positive pressure
+gradient, symmetric stress and all six faces, but actual UFL/zero-form JIT and
+assembly remain unmeasured. R247 exact rational audit reproduces unchanged:
+60 historical raw files match originals, five reservations retained and
+recorded PIDs/cgroups absent; 29 prior source/test/pin hashes unchanged.
+Rotation's D=0 cannot validate viscosity coefficient by itself.
+
+Changed: rotation_oracle.py, test_rotation_oracle.py, implementation review and
+four evidence files (runner, transcript, tests JSON, checks/source inventory),
+prototype README, B1_SETUP, four track overviews, STATUS and request/lifecycle/
+handoff. Evidence: docs/realizability/ROTATION_ORACLE_IMPLEMENTATION_R248.md
+and evidence/r248/. Checks: 8 focused/85 full tests, proposal exact 38-key
+binding, previous audit/originals, 31-file source inventory, 3 AST/2 JSON files,
+247 local link targets, 248 unique request IDs, append-only records and whitespace.
+Skipped: real FEM/UFL import/JIT/assembly/solve/rank, manager/worker, new
+admission/artifact rescan, full numerical suite/tank/B2, physical/render and
+Mac transfer. Unknown: real API/zero-form behavior, integration/containment,
+general convergence, R242 discrepancy cause, actual matrix rank and artifact-
+label origin.
+
+Next: Astra/high reviews fixture-specific rotation worker/controller integration,
+report/schema binding, held release and saved raw revalidation; defines later
+admission prerequisites and stop rules, publishes an implementation-ready plan
+or precise blocker, then stops before implementation/FEM/new allocation.
+Recommend Sol/high only once integration contract is fixed. Official OpenAI
+Astra high support searched/opened; no model/session switch by agent or /new.
+PC retains ownership, Mac released. R247 1facbf5 verified by clean pull;
+R248 STARTED c0f86b2 published. Completion prepared for scoped publication;
+delivery hash/result in Git/final response, no post-push edit.
