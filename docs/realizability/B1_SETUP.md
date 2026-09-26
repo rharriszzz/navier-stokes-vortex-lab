@@ -1,11 +1,12 @@
 # B1 solver environment
 
-Current PC status: [R227 restoration](ENVIRONMENT_RESTORE_R227.md) timed out.
-`/tmp/navier-fenicsx` contains matching package records but an incomplete
-transaction; **do not treat it as ready or run the commands below there**.
-The [current recovery task](../../SESSION_HANDOFF.md#next-task) permits one
-newly bounded offline installation and metadata/interpreter checks, then stops
-before numerical imports. R226's launcher checks remain valid.
+Current PC status: [R229 offline recovery](ENVIRONMENT_RECOVERY_R229.md) completed
+the transaction and isolated Python 3.12.13 check in `/tmp/navier-fenicsx-r229`.
+Its setup resource predicate still refused success (memory.max events); **FEM
+execution remains unadmitted**. Old `/tmp/navier-fenicsx` stays partial. The
+[current task](../../SESSION_HANDOFF.md#next-task) reviews the completed artifacts,
+resource result and known FFCx version discrepancy, without reinstall or FEM.
+R226's launcher checks remain valid; reference commands below grant no attempts.
 For historical Mac setup/comparison, see
 [MAC_INSTALL_AND_BENCHMARK_PLAN.md](MAC_INSTALL_AND_BENCHMARK_PLAN.md); no machine
 transfer or new remote check is implied. General solver commands below are

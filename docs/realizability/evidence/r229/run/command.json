@@ -1,0 +1,1 @@
+{"argv": ["/tmp/navier-r227-restore/bin/micromamba", "--no-rc", "create", "--offline", "--no-pyc", "--prefix", "/tmp/navier-fenicsx-r229", "--yes", "--json", "--file", "/home/rharris/git/navier-stokes-vortex-lab/docs/realizability/evidence/r227/run/install/explicit.txt"], "timeout_seconds": 125}

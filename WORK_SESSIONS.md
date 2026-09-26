@@ -897,3 +897,26 @@ R229 with account email redacted; no model switch inferred. Continue authorizes
 scoped commit/push. Task: one new bounded offline transaction into a new prefix
 from the saved exact list, --no-pyc, metadata/interpreter and cleanup checks.
 Preserve prior failed prefix/evidence/charges; stop before numerical imports/FEM.
+
+### R229 completion
+COMPLETED | 2026-09-26T15:43:37Z | PC/WSL daisy | released: no
+One bounded offline recovery and reconciliation complete; setup acceptance
+REFUSED_MEMORY_MAX_EVENTS. Exact transaction and metadata/interpreter checks
+completed: 338 records, committed history, required files, Python 3.12.13;
+973 optional bytecode omissions disclosed. Installer/worker exit 0, elapsed
+11.434067521 s through result save. Peak 1536 MiB, memory.max events 303,
+no OOM/kill; cleanup empty/removed and later PID absent. Counter/final caller
+tails remain as disclosed under R103; no inference of a numerical footprint.
+Old partial prefix and failed charges preserved; new prefix retained for review.
+Zero FEM attempts granted/spent; no numerical import request or FEM workload.
+Files: status/handoff/request/lifecycle, four track overviews, B1 setup/prototype
+README, recovery source, R229 review and raw evidence/hash ledger; full inventory
+in REQUEST_LOG.md R229. Evidence: docs/realizability/ENVIRONMENT_RECOVERY_R229.md
+and evidence/r229. Task-specific live checks as above; JSON/AST/hash/docs/log/Git
+checks before publication. Numerical/full suite skipped; numerical source,
+frozen pins/manifest and R225–R227 evidence unchanged. No retry, model/session
+switch, delegation, physical/render work or transfer. PC retains ownership.
+Next: Astra/high environment/resource/FFCx admission review; no reinstall/FEM.
+Recommend /new now, retain Astra/high, then Continue. STARTED e4cb868 and source
+c38a668 published; final scoped commit/push follows. Delivery result in Git/final
+response, no post-push edit. Mac remains released.

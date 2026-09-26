@@ -1,13 +1,12 @@
 # Control Research Roadmap
 
-R227's [bounded environment restoration](docs/realizability/ENVIRONMENT_RESTORE_R227.md)
-resolved the exact package plan but timed out during installation; cleanup is
-confirmed, the partial prefix retained and readiness refused. R228 continued
-reconciliation/publication without a retry. R226 launcher validation remains;
-no numerical source/pin change or FEM attempt. Next: Sol/high performs one
-newly bounded offline recovery using the saved transaction, verifies metadata/
-interpreter and stops before FEM imports; follow the single
-[handoff task](SESSION_HANDOFF.md#next-task).
+R229's [offline environment recovery](docs/realizability/ENVIRONMENT_RECOVERY_R229.md)
+completed the exact package transaction and Python 3.12.13 checks. The setup
+resource predicate refused success: 303 memory.max events at 1536 MiB, no OOM/kill.
+Exit/cleanup confirmed; prior evidence and partial prefix preserved. Zero FEM
+attempts. Next: Astra/high reviews existing artifacts/resource refusal and the
+FFCx version gate for single-fixture admission, without reinstall or FEM; follow
+the single [handoff task](SESSION_HANDOFF.md#next-task).
 No tank/hardware route or feasible contraction range is established.
 
 R188 priority update (2026-09-22): establish measurable essential dynamical

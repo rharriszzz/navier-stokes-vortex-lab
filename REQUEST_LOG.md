@@ -7835,3 +7835,59 @@ First failure/expiry/unknown cleanup stops this allocation and retains evidence.
 Source: docs/realizability/evidence/r229/recover.py, bound to the clean checkpoint
 created from this record. stdout/stderr/handshakes/results stay in the run folder;
 small evidence is committed afterward. Stop before numerical imports or FEM.
+
+### R229 outcome — bounded step complete, setup acceptance refused
+
+The one offline transaction completed into /tmp/navier-fenicsx-r229. All 338
+cached archives matched SHA-256/MD5, all installed records matched the saved
+exact transaction, history is committed (38,537 bytes), and 76,252 file entries
+have no required omissions. The 973 missing optional bytecode entries reflect
+--no-pyc. Isolated Python -I -S reports 3.12.13 at the expected prefix/executable;
+its hash is retained. Installer and worker exited 0; observed elapsed through
+result save was 11.434067521 s. Final caller tail is unmeasured; counters exclude
+the final worker handshake/exit tail with enforcement still active.
+
+Top-level success remains false: memory peak reached 1,610,612,736 bytes with
+303 memory.max events, no OOM or OOM kill. The snapshot does not distinguish
+anonymous memory from file cache and cannot predict a FEM footprint. Cleanup
+confirmed an empty removed cgroup and no unknown children; later PID/group
+absence was observed. Preserve this resource refusal without waiver, the old
+partial prefix, all prior charges and zero granted/spent FEM attempts. No more
+installation or numerical work is authorized by this completed allocation.
+
+Changed files across R229: REQUEST_LOG.md, WORK_SESSIONS.md, SESSION_HANDOFF.md,
+STATUS.md, PROJECT_TRACKS.md, EXPERIMENT.md, PHYSICAL_REALIZABILITY_PLAN.md,
+CONTROL_RESEARCH_ROADMAP.md, docs/realizability/B1_SETUP.md,
+docs/realizability/ENVIRONMENT_RECOVERY_R229.md, docs/realizability/evidence/r229/
+(recover.py, checks.json and run evidence), verification/nonlinear_port/README.md.
+Live transaction/metadata/interpreter/exit/cleanup checks completed as stated;
+artifact hashes, JSON/AST, links, append-only logs, request IDs and Git checks
+are checked before publication. Numerical/full-suite tests skipped: numerical
+source, pins, manifest and prior evidence unchanged. No numerical imports were
+requested; installer helper imports were not instrumented. No FEM/JIT/mesh/
+assembly/solve, physical/render work, retry, model/session switch, delegation
+or machine transfer. PC/WSL daisy retains ownership; Mac remains released.
+
+Next: Astra/high reviews existing environment admission and implements/tests
+artifact-bound FFCx provenance/runtime handling (exact package 0.10.1 versus
+known embedded 0.10.0). No reinstall or FEM in that review. If needed, declare
+one small metadata/interpreter-only validation scope; never relabel this setup
+PASS. Finish with explicit one-fixture admission or a specific refusal, leaving
+execution for a separate authorized step. Recommend /new now, retain Astra/high,
+then Continue, at this completed installation-to-review boundary. Official
+OpenAI model/CLI documentation was searched/opened; the recommendation is task
+judgment, not a model switch. STARTED e4cb868 and procedure/allocation c38a668
+published; scoped completion commit/push follows. Delivery result belongs in
+Git/final response with no post-push edit.
+
+R229 final checks passed: 17 artifact hashes, 13 JSON records, recovery AST and
+byte-identical executed source, 157 local links across 11 Markdown documents,
+balanced fences, 229 unique request IDs and append-only prior logs. Scientific
+source, frozen inputs and R225–R227 evidence unchanged. Git whitespace passed
+for tracked source/doc edits; staged checks and remote delivery follow. No
+additional workload or numerical test was launched for publication.
+
+Staged whitespace flagged one final blank line in raw R229 install.stderr.
+Preserve its byte-exact captured contents and ledger hash. The scoped staged
+whitespace check excludes only that raw evidence file; source/document checks
+remain required. No evidence normalization or success-predicate waiver.
