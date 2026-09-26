@@ -1,11 +1,12 @@
 # B1 solver environment
 
-[R250 rotation integration](../../docs/realizability/ROTATION_INTEGRATION_R250.md) adds a strict non-executable
-rotation proposal, held worker, 76-call assembly driver and fixture-locked
-controller checks. All 93 standard-library tests pass without numerical
-imports. No real assembly or new allocation occurred; all five old allowances
-remain spent. R246 stays PASS, R242 INCOMPLETE. Follow the
-[current task](../../SESSION_HANDOFF.md#next-task) for Astra/high admission review.
+[R251 rotation admission](../../docs/realizability/ROTATION_ADMISSION_R251.md) approves one
+later n=2 exact-field rotation assembly with a fixed finite caller and source,
+contract, interpreter and artifact bindings. Six caller checks pass without
+numerical imports or manager access; R250's 93 tests are reused with all 36
+source hashes unchanged. No rotation attempt was spent. Five old allowances
+remain spent; R246 stays PASS and R242 INCOMPLETE. Follow the
+[current task](../../SESSION_HANDOFF.md#next-task) for Sol/high's one-use launch and evidence capture.
 
 Historical PC status: [R232's one-use Poiseuille result](POISEUILLE_RESULT_R232.md)
 is INCOMPLETE at PETSc symbolic LU, and the single numerical allocation is
