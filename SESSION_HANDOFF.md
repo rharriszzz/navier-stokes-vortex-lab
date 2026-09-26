@@ -1,5 +1,55 @@
 # Current session handoff
 
+Last updated 2026-09-26 (America/New_York) for R255.
+**PC/WSL daisy owns the repository.** No transfer; Mac remains released.
+**R255 reproduces the saved R253 rotation PASS and fixes the next manufactured
+spatial-pilot source contract. Zero new numerical attempts are admitted.**
+See [review/contract](docs/realizability/VERIFICATION_MILESTONE_R255.md),
+[fixed proposal](docs/realizability/evidence/r255/proposal.json) and
+[audit](docs/realizability/evidence/r255/audit.json).
+
+All 76 saved rotation scalar receipts and 38 pair checks pass; 38 exact targets
+were independently rederived. All 74 original raw files/six spent reservations,
+36 source/test/pin hashes, eleven runtime artifact hashes, four library
+resolutions, archive/interpreter and absent recorded PIDs/cgroups verify.
+R246 remains PASS, R242 INCOMPLETE and R229 setup predicate false. No numerical
+imports, manager connection, runtime source change, reservation or new run.
+
+The chosen pilot is n=2, one spatial-isolation BE step at t=dt=1/8, 402 mixed /
+405 bordered DOFs, exact polynomial history and corrected discrete load.
+Rational checks prove nonzero strain/dissipation, nonzero unequal return totals,
+traction offsets and exact energy/angular balances with five negative controls.
+The fixed contract specifies driver/manifest/worker/controller integration,
+30 raw scalars at each degree24/26, separate signed accuracy policy, independent
+BE endpoint inventories and source-only failure tests. A future pilot PASS
+will establish discrete solve/diagnostic consistency, never convergence.
+n=4/8 exceed the existing 512-DOF saved-system limit; its review remains later.
+
+**Next: GPT-6 Sol / high implements the fixed R255 pilot source and tests,
+publishes and stops for Astra/high source/admission review.** See [Next task](#next-task).
+No actual caller, allocation, FEM import, assembly or solve in that source task.
+Preserve all six spent allowances and old scientific/resource policies.
+
+R255 supplied Codex v0.155.1, same session, thread Inspect Codex status,
+Sol/high before reported switch to Astra/high, context 23% (202K/258K), weekly
+82%, Luna Reserve 99%. No worked-for, literal /new or /status, token totals or
+credits supplied; account email redacted, values user reported. No agent
+model/session switch. Clean pull verified R253 delivery 5912648; R255 STARTED
+7bffbc9 published. Completion prepared for scoped publication; delivery belongs
+in Git/final response. PC retains ownership.
+
+Changed: R255 review/proposal/rational audit/checks, seven current index/status
+pages, request/lifecycle/handoff. Checks: saved-result reproduction, independent
+algebra, original/source/artifact hashes, JSON/AST/links, append-only sequential
+records and whitespace. Initial system-python audit failed on unavailable
+hashlib.file_digest; pinned Python 3.12 audit passed without numerical imports.
+Skipped: unchanged 93 source tests, real FEM/JIT/solve, manager/worker/admission,
+full convergence/tank/B2, install, physical/render and Mac transfer. Unknown:
+pilot runtime/cost/accuracy, convergence/stability, R242 cause and artifact-label
+origin. R253 timing label clarified in the review; raw evidence unchanged.
+
+### Previous R253/R254 result (reviewed by R255)
+
 Last updated 2026-09-26 (America/New_York) for R253/R254.
 **PC/WSL daisy owns the repository.** No transfer; Mac remains released.
 **R253 ran the R251 exact-field rotation assembly once: PASS, allowance spent 1/1.**
@@ -1011,18 +1061,20 @@ and physical-work limits remain unchanged.
 | Owner | PC/WSL `daisy`; Mac `fire.lan` released after published R161 handoff and R162 receipt. |
 | Checkout | `/home/rharris/git/navier-stokes-vortex-lab`. |
 | Branch/upstream | `main` / `origin/main` |
-| Starting state | R253 same-owner clean main/origin/main at b803250 after required fast-forward pull; rharris/daisy, empty stashes, R252 completed. STARTED/launch 2e60a7b published. |
+| Starting state | R255 same-owner clean main/origin/main at 5912648 after required fast-forward pull; rharris/daisy, empty stashes, R253/R254 completed. STARTED 7bffbc9 published. |
 | Interpreter | /tmp/navier-fenicsx-r229/bin/python verified as 3.12.13 with -I -S; exact environment artifacts verified, setup memory-event predicate refused. Project Python remains 3.12.14. Old /tmp/navier-fenicsx is still partial. |
 | Other owner/process | Mac `fire.lan` released in the published R161 handoff. Local Git cannot inspect another checkout's unpublished state. |
-| Task processes | R253 rotation allowance spent 1/1, PASS; original directory and 14 raw files retained. Worker/caller exit 0, manager cleanup empty, PID 162076 and saved cgroup absent. Five old allocations remain spent. |
+| Task processes | R255 is saved-data/rational review only; no task worker or manager connection. Six retained allowances spent; all recorded PIDs/cgroups absent. R253 rotation and R246 Poiseuille remain PASS. |
 | Symbolic environment | `/tmp/navier-r183-sympy/bin/python`, Python 3.12.14, SymPy 1.14.0, mpmath 1.3.0; recreate using `requirements-symbolic.txt` if missing. Existing environments unchanged. |
-| Delivery state | R252 b803250 verified by clean pull; R253 STARTED/launch 2e60a7b published. Result/evidence/completion prepared for publication; delivery in Git/final response. PC retains ownership. |
+| Delivery state | R253 delivery 5912648 verified by clean pull; R255 STARTED 7bffbc9 published. Review/source contract/completion prepared for publication; delivery in Git/final response. PC retains ownership. |
 
 ## Current result and limits
 
-R253 passed the R251 exact-field rotation assembly oracle once; allocation
-spent. See [result](docs/realizability/ROTATION_RESULT_R253.md) and follow the
-[single next task](#next-task). Earlier results below retain their scope.
+R255 reproduces R253's saved rotation PASS and fixes one n=2 manufactured
+spatial-pilot source contract, with exact history/load and independent budgets.
+See [review](docs/realizability/VERIFICATION_MILESTONE_R255.md) and follow the
+[single next task](#next-task). No numerical execution is admitted; all six prior
+allocations remain spent. Earlier results below retain their scope.
 
 R103 removes recursive infrastructure certification while preserving process
 safeguards, observed accounting, cleanup and incomplete-result refusal. R104
@@ -1151,34 +1203,44 @@ agent-side POV-Ray backtraces are unavailable.
 
 ## Next task
 
-**GPT-6 Astra / high / PC-WSL daisy: review R253's saved exact-field rotation
-PASS, define the smallest justified next verification milestone or a precise
-blocker, publish and stop.** On **Continue**, first follow clean synchronization,
-ownership and STARTED publication. Read [R253 result](docs/realizability/ROTATION_RESULT_R253.md),
-[retained audit/raw files](docs/realizability/evidence/r253/audit.json),
-[R251 admission](docs/realizability/ROTATION_ADMISSION_R251.md),
-[R247 independent targets](docs/realizability/VERIFICATION_MILESTONE_R247.md)
-and [R246 Poiseuille result](docs/realizability/POISEUILLE_RESULT_R246.md).
+**GPT-6 Sol / high / PC-WSL daisy: implement R255's fixed n=2 manufactured
+spatial BE pilot source and tests, publish and stop for Astra/high source and
+admission review.** On **Continue**, first follow clean synchronization,
+ownership and STARTED publication. Read the entire
+[R255 contract](docs/realizability/VERIFICATION_MILESTONE_R255.md),
+[fixed proposal](docs/realizability/evidence/r255/proposal.json),
+[rational reference/audit](docs/realizability/evidence/r255/audit.json),
+[R195 fixture/time semantics](docs/realizability/NONLINEAR_VERIFICATION_R195.md)
+and existing Poiseuille/rotation implementations named in the contract.
 
-1. Recheck original saved rotation envelope, all 76 raw scalar/receipt keys,
-   exact and pair decisions, geometry, source/artifact identity, manager exit,
-   resource events and cleanup against independent R247 algebra and fixed R251
-   gates. Preserve R253 PASS in its exact scope and all six spent allocations.
-2. Explain which new property is still unverified: rotation's D=0 cannot test
-   viscosity coefficients or production weak forms, and one n=2 exact-field
-   assembly cannot establish manufactured spatial/time convergence or general
-   solver stability. Compare a minimal nonzero-strain manufactured oracle with
-   the roadmap's convergence prerequisites using saved source/algebra only.
-3. Publish one implementation-ready milestone contract or precise blocker,
-   including required source/report/admission changes, checks and stop rules.
-   Do not implement, import FEM, connect to manager, grant a new allocation,
-   rerun/reassemble/solve, install, or start tank/B2/physical/render work in
-   this review. Leave R242 INCOMPLETE, R246 PASS and R229 setup predicate false.
+1. Add the strict non-executable manufactured proposal/policy, injected n=2
+   driver, pure saved-report validator, held worker and fixture-locked finite
+   supervisor/backend dispatch. Preserve existing fixture public schemas,
+   policies, solver/options and all old evidence. No actual caller/admission yet.
+2. Fix t=dt=1/8, one BE step, exact polynomial history and corrected discrete
+   load in residual AND both-degree diagnostics. Use nonzero rational cap
+   totals/multipliers, measured geometry and 405 bordered DOFs. Assemble all
+   60 raw diagnostic scalars/receipts, record independent BE endpoint balances,
+   compatibility/condition, all corrections and latest sparse system.
+3. Enforce the R255 separate pair/step/budget/identity policy; report finite
+   coarse approximation errors without imposing Poiseuille exactness or
+   claiming convergence. Preserve the 512-DOF recorder and resource limits.
+4. Complete meaningful stdlib/injected-fake tests specified in the contract,
+   including wrong load/history, nonzero target routing, both-degree defects,
+   missing/cached/source/geometry/receipt mutations and containment failures.
+   Replay saved R246/R253 validators and preserve the old tests. No real FEM,
+   JIT, assembly, solve, manager connection, reservation, install or allocation.
+5. Publish source/test/evidence and stop. If implementation exposes a needed
+   scientific/gate change, report a precise blocker for Astra/high; never tune
+   or expand the contract. Otherwise recommend Astra/high to review source and
+   decide a separately bound fresh one-use admission/caller. Do not grant it.
 
-Completion: evidence-backed review and one concrete next source task or blocker,
-with no execution. Recommend Sol/high only if the next implementation contract
-is fixed and coding/tests remain routine; Astra/high interprets scientific
-results or revises gates. Next prompt: **Continue**.
+Completion: reviewable implemented source, tests and unchanged old-result
+regressions, no numerical execution. All six old allocations stay spent;
+R246/R253 PASS, R242 INCOMPLETE, R229 setup predicate false. Full spatial/time
+convergence, tank/B2, physical/render and Mac transfer remain outside this task.
+Official Sol/high support checked in R255; no model/session switch claimed.
+Next prompt: **Continue**.
 
 ### Historical R230 single-fixture execution task (R232 spent)
 

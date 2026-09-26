@@ -1,11 +1,13 @@
 # Control Research Roadmap
 
-[R253 rotation result](docs/realizability/ROTATION_RESULT_R253.md) passes the fixed
-one-use exact-field assembly oracle: 76 actual scalars, both-degree targets and
-all 38 pair checks, bounded exit/resources and empty cleanup. Its allocation is
-spent 1/1; the five earlier allowances stay spent. R246 Poiseuille remains PASS,
-R242 INCOMPLETE. Follow the [single current task](SESSION_HANDOFF.md#next-task) for Astra/high's
-saved-result review and next verification decision.
+[R255 review and fixed contract](docs/realizability/VERIFICATION_MILESTONE_R255.md)
+reproduces the R253 rotation PASS and defines one n=2 manufactured spatial BE
+pilot through the production residual, solve and diagnostics. Exact rational
+checks cover nonzero strain, return totals, corrected load/history and signed
+budgets. No runtime source or numerical allocation changed; all six allowances
+remain spent. R246 remains PASS, R242 INCOMPLETE. Follow the
+[single current task](SESSION_HANDOFF.md#next-task): Sol/high implements
+the fixed pilot source/tests, then stops for Astra/high source/admission review.
 
 R232's [single-fixture result](docs/realizability/POISEUILLE_RESULT_R232.md)
 is INCOMPLETE: the worker reached PETSc symbolic LU and exited 1 after a
@@ -27,7 +29,7 @@ diagnostic; 62 standard-library tests pass without numerical imports.
 bounded diagnostic fixture; [R238](docs/realizability/POISEUILLE_RESULT_R238.md)
 spent it 1/1 on a reported numeric LU zero pivot, with empty cleanup but no
 numerical/resource report. All three allowances are spent. Follow the
-[handoff task](SESSION_HANDOFF.md#next-task) for the R253 saved-result review.
+[handoff task](SESSION_HANDOFF.md#next-task) for the R255 manufactured-pilot source task.
 No tank/hardware route or feasible contraction range is established.
 
 R188 priority update (2026-09-22): establish measurable essential dynamical
