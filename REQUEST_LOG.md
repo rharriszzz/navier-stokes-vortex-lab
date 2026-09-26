@@ -9284,3 +9284,47 @@ Supplied snapshot: completion 13m 8s / 5:30 PM, context 22% (204K/258K),
 weekly 89%, Luna Reserve 99%. No session/model/version/account fields, /new,
 literal /status, token totals or credit count supplied. User-reported values;
 no account verification or agent model/session switch.
+
+**Outcome — 2026-09-26T21:41:31Z: COMPLETED (admission only).**
+
+R245 GO: one NEW later n=2 Poiseuille fixture under the explicit R244 policy,
+at /tmp/navier-poiseuille-r245-once, absent and 0/1 spent. New finite caller binds
+29 source/test/pin hashes, manifest, policy, interpreter and exact runtime
+artifacts. No runtime code changes, manager connection, reservation, worker or
+numerical import. All four old allocations remain spent; R242 remains INCOMPLETE.
+The prospective 1e-14 signed target is an accuracy budget, not a rounding bound.
+
+Caller refusal checks and nine focused policy/driver tests pass; no numerical
+modules loaded. R244's full 77 tests reused, not rerun, with all 29 source hashes
+unchanged. Verified seven runtime files, four library resolutions, interpreter
+and cached SuperLU archive. Exact package 7.0.1 versus embedded 7.0.0 discrepancy
+retained and explicitly accepted for this bounded attempt, without tag-equivalence
+or loaded-file proof. R229 setup resource predicate remains false.
+Intentional invalid-commit CLI test from /tmp with pinned interpreter exits 1
+before manager/reservation, caller 0.042153463 s / parent 0.089880544 s, no new
+directory; this test is not a numerical attempt. Forty-five old raw files match
+originals, four reservations persist and recorded PIDs/cgroups are absent.
+AST for two new callers/checks, five JSON files, 245 local link targets, 245 unique
+request IDs, append-only logs, unchanged old evidence and whitespace checked.
+
+Changed: R245 admission and eight evidence files; prototype README, B1_SETUP,
+four track overviews, STATUS, handoff and request/lifecycle logs. Evidence:
+docs/realizability/POISEUILLE_ADMISSION_R245.md and evidence/r245/.
+Skipped: full 77-test rerun, numerical imports/FEM/JIT/assembly/solve/rank,
+manager/scope, install/full rescan, full suite/rotation/tank/B2, physical/render
+and Mac transfer. Unresolved: future accuracy/resource events and target
+attainability, cause of R242 discrepancies, actual rank/permutation and
+artifact-label origin. No historical result was reaccepted.
+
+Next: Sol/high executes this exact caller once after Continue and clean STARTED
+publication, using the actual full clean launch HEAD; preserves all raw evidence
+and cleanup/spent state, publishes and stops. Reservation/directory creation or
+partial worker start spends 1/1, even INCOMPLETE; no retry or alternate directory.
+Only demonstrated pre-reservation/pre-worker/pre-numerical caller errors permit
+repair after preserving failure, verifying absent directory/no new manager task,
+testing and republishing clean binding. Uncertain state stops for review.
+Astra/high then interprets results or method/admission changes. Official model
+high support rechecked; no model/session switch or /new needed. PC retains
+ownership; Mac released. R244 4449b1a verified by clean pull; R245 STARTED
+4c6b9ae published. Completion prepared for scoped publication; delivery hash/
+result in Git/final response, no post-push edit.

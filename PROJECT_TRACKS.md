@@ -1,12 +1,12 @@
 # Project Tracks
 
-[R244 implementation](docs/realizability/POISEUILLE_POLICY_IMPLEMENTATION_R244.md)
-adds the explicit Poiseuille-only signed accuracy policy and physical checks
-at both degrees. All 77 standard-library tests pass without numerical imports.
-The legacy comparator and historical R242 INCOMPLETE result are preserved.
-All four allocations remain spent 1/1; no new numerical admission or run.
-Follow the [current task](SESSION_HANDOFF.md#next-task) for Astra/high
-review of one separate later admission and caller, then stop before execution.
+[R245 admission](docs/realizability/POISEUILLE_ADMISSION_R245.md) grants one
+NEW later n=2 Poiseuille fixture under the explicit R244 policy and both-degree
+checks. The exact source, manifest, policy, interpreter and artifacts are bound.
+`/tmp/navier-poiseuille-r245-once` is unreserved, 0/1 spent. All four older
+allocations remain spent; R242 remains INCOMPLETE. Follow the
+[current task](SESSION_HANDOFF.md#next-task) for Sol/high execution after
+Continue, then preserve evidence, publish and stop.
 
 R232's [single-fixture result](docs/realizability/POISEUILLE_RESULT_R232.md)
 is INCOMPLETE: the worker reached PETSc symbolic LU and exited 1 after a
@@ -28,7 +28,7 @@ diagnostic; 62 standard-library tests pass without numerical imports.
 bounded diagnostic fixture; [R238](docs/realizability/POISEUILLE_RESULT_R238.md)
 spent it 1/1 on a reported numeric LU zero pivot, with empty cleanup but no
 numerical/resource report. All three allowances are spent. Follow the
-[handoff task](SESSION_HANDOFF.md#next-task) for the R244 admission-review recommendation.
+[handoff task](SESSION_HANDOFF.md#next-task) for the admitted R245 execution.
 No tank/hardware route or feasible contraction range is established.
 
 R188 priority update (2026-09-22): establish measurable essential dynamical

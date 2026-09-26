@@ -1,12 +1,12 @@
 # B1 solver environment
 
-[R244 implementation](../../docs/realizability/POISEUILLE_POLICY_IMPLEMENTATION_R244.md)
-adds the explicit Poiseuille-only signed accuracy policy and physical checks
-at both degrees. All 77 standard-library tests pass without numerical imports.
-The legacy comparator and historical R242 INCOMPLETE result are preserved.
-All four allocations remain spent 1/1; no new numerical admission or run.
-Follow the [current task](../../SESSION_HANDOFF.md#next-task) for Astra/high
-review of one separate later admission and caller, then stop before execution.
+[R245 admission](../../docs/realizability/POISEUILLE_ADMISSION_R245.md) grants one
+NEW later n=2 Poiseuille fixture under the explicit R244 policy and both-degree
+checks. The exact source, manifest, policy, interpreter and artifacts are bound.
+`/tmp/navier-poiseuille-r245-once` is unreserved, 0/1 spent. All four older
+allocations remain spent; R242 remains INCOMPLETE. Follow the
+[current task](../../SESSION_HANDOFF.md#next-task) for Sol/high execution after
+Continue, then preserve evidence, publish and stop.
 
 Historical PC status: [R232's one-use Poiseuille result](POISEUILLE_RESULT_R232.md)
 is INCOMPLETE at PETSc symbolic LU, and the single numerical allocation is

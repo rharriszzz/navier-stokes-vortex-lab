@@ -1,5 +1,49 @@
 # Current session handoff
 
+Last updated 2026-09-26 (America/New_York) for R245.
+**PC/WSL daisy owns the repository.** No transfer; Mac remains released.
+**R245 admits one NEW later n=2 Poiseuille fixture under the R244 policy.**
+The [admission](docs/realizability/POISEUILLE_ADMISSION_R245.md) and
+[allocation/caller/evidence](docs/realizability/evidence/r245/) bind all 29
+source/test/pin hashes, manifest, explicit policy, interpreter and exact
+runtime artifacts. `/tmp/navier-poiseuille-r245-once` is absent, **0/1 spent**.
+No reservation, numerical import, worker or manager connection in this review.
+All four older allocations remain spent 1/1; **R242 remains INCOMPLETE**.
+
+Caller refusal checks and nine focused policy/driver tests pass with no
+numerical modules loaded. R244's full 77-test result is reused, not rerun:
+all source hashes are unchanged. Seven runtime files, four library resolutions,
+the interpreter and cached SuperLU archive match their exact bindings. Forty-five
+old raw files match their originals; reservations persist and recorded PIDs/
+cgroups are absent. The packaged 7.0.1 versus embedded 7.0.0 discrepancy is
+explicitly retained and the exact artifact accepted only for this bounded task.
+R229's setup resource predicate remains false. Accuracy/resource success and
+future target attainability remain unmeasured; no retrospective acceptance.
+
+**Next: Sol/high executes the exact caller once after Continue, preserves raw
+evidence and cleanup/spent state, publishes and stops.** See [Next task](#next-task).
+Astra/high then interprets the result or any changed method/admission decision.
+No /new needed and no model/session switch performed.
+
+R245 supplied excerpt: completion 13m 8s / 5:30 PM, context 22% (204K/258K),
+weekly 89%, Luna Reserve 99%. No session/model/version/account fields, /new,
+literal /status, token totals or credit count supplied; values user reported.
+R244 delivery 4449b1a verified by clean pull; R245 STARTED 4c6b9ae published.
+Completion prepared for scoped publication; delivery belongs in Git/final response.
+
+Changed: admission, eight evidence files, prototype README, B1_SETUP, four
+track overviews, STATUS and request/lifecycle/handoff. No runtime source changes.
+Checks: caller refusal paths, nine focused tests/import audit, exact source/
+policy/manifest/interpreter/artifact bindings, old evidence and process state,
+AST/JSON/local links, append-only records and whitespace. Intentional invalid-
+commit CLI test refuses before manager/reservation and leaves new directory absent.
+Skips: full 77-test rerun, numerical imports/FEM/JIT/assembly/solve/rank,
+manager/scope, install/full rescan, full suite/rotation/tank/B2, physical/render
+and Mac transfer. Unknown: future resource events/accuracy, cause of R242
+quadrature discrepancies, actual rank/permutation and artifact-label origin.
+
+### Previous R244 implementation (completed; admission now R245)
+
 Last updated 2026-09-26 (America/New_York) for R244.
 **PC/WSL daisy owns the repository.** No transfer; Mac remains released.
 **R244 implemented the prospective Poiseuille policy and both-degree checks.**
@@ -633,12 +677,12 @@ and physical-work limits remain unchanged.
 | Owner | PC/WSL `daisy`; Mac `fire.lan` released after published R161 handoff and R162 receipt. |
 | Checkout | `/home/rharris/git/navier-stokes-vortex-lab`. |
 | Branch/upstream | `main` / `origin/main` |
-| Starting state | R244 same-owner clean main/origin/main at b8327da after required fast-forward pull; rharris/daisy, empty stashes, R243 completed. STARTED 32b444a published. |
+| Starting state | R245 same-owner clean main/origin/main at 4449b1a after required fast-forward pull; rharris/daisy, empty stashes, R244 completed. STARTED 4c6b9ae published. |
 | Interpreter | /tmp/navier-fenicsx-r229/bin/python verified as 3.12.13 with -I -S; exact environment artifacts verified, setup memory-event predicate refused. Project Python remains 3.12.14. Old /tmp/navier-fenicsx is still partial. |
 | Other owner/process | Mac `fire.lan` released in the published R161 handoff. Local Git cannot inspect another checkout's unpublished state. |
-| Task processes | All four allocations spent 1/1; 45 raw originals match, reservations persist and all recorded PIDs/cgroups absent. R244 made no manager connection or numerical workload launch. Only stdlib/mocked tests ran. |
+| Task processes | All four old allocations spent 1/1; 45 raw originals match, reservations persist and recorded PIDs/cgroups absent. New R245 directory absent, 0/1 spent. No manager connection, reservation or numerical launch; only stdlib/mocked tests. |
 | Symbolic environment | `/tmp/navier-r183-sympy/bin/python`, Python 3.12.14, SymPy 1.14.0, mpmath 1.3.0; recreate using `requirements-symbolic.txt` if missing. Existing environments unchanged. |
-| Delivery state | R243 b8327da verified by clean pull; R244 STARTED 32b444a published. R244 source/tests/evidence/completion prepared for publication; delivery in Git/final response. PC retains ownership. |
+| Delivery state | R244 4449b1a verified by clean pull; R245 STARTED 4c6b9ae published. Admission/caller/evidence/completion prepared for publication; delivery in Git/final response. PC retains ownership. |
 
 ## Current result and limits
 
@@ -769,41 +813,47 @@ agent-side POV-Ray backtraces are unavailable.
 
 ## Next task
 
-**GPT-6 Astra / high / PC-WSL daisy: review one NEW later n=2 Poiseuille
-admission for the R244 policy, prepare a bound finite caller if justified,
-publish admission or precise blocker, then stop before execution.**
+**GPT-6 Sol / high / PC-WSL daisy: execute the exact R245 caller once,
+preserve all raw evidence and cleanup/spent state, publish and stop.**
 After **Continue**, follow clean synchronization/ownership/STARTED publication.
-Read [R244 implementation](docs/realizability/POISEUILLE_POLICY_IMPLEMENTATION_R244.md),
-[checks/source hashes](docs/realizability/evidence/r244/checks.json),
-[saved replay](docs/realizability/evidence/r244/saved_replay.json), R243 method
-review and R241 artifact/admission records. All four allocations remain spent.
+Read [R245 admission](docs/realizability/POISEUILLE_ADMISSION_R245.md),
+[allocation](docs/realizability/evidence/r245/allocation.json),
+[caller](docs/realizability/evidence/r245/run_once.py),
+[checks/source hashes](docs/realizability/evidence/r245/checks.json),
+[artifacts](docs/realizability/evidence/r245/artifacts.json) and
+[R244 implementation](docs/realizability/POISEUILLE_POLICY_IMPLEMENTATION_R244.md).
+All four older allocations remain spent; new R245 allocation is 0/1 spent.
 
-1. Review explicit policy/schema and both-degree physical validation, 77 tests
-   and strict failure controls. Confirm the 29-file source inventory and new
-   manifest digest. The original general comparator stays unchanged, R242
-   stays INCOMPLETE, prospective replay is not a run or rounding-error proof.
-2. Verify the exact R229 interpreter and R241 PETSc/SuperLU artifact hashes and
-   library resolutions without numerical imports. Retain the explicit accepted
-   package/embedded-version discrepancy and R229 false setup resource predicate.
-   No reinstall, alternate backend or broad rescan absent a demonstrated change.
-3. If justified, grant one separate later fixture at a NEW exclusive fixed
-   directory, with exact current source/manifest/policy/artifact/interpreter
-   binding and a finite caller. Do not modify old admissions/callers or reuse
-   spent directories. Freeze n=2/dt=.125/one BE step and all current checks;
+1. Verify the fixed `/tmp/navier-poiseuille-r245-once` directory is absent
+   (including dangling links), all 29 source hashes, caller/manifest/policy
+   digests, interpreter and exact artifact/library bindings. No prewarming or
+   standalone numerical import. Preserve accepted package/embedded labels and
+   R229's false setup resource predicate. Missing/drifted inputs stop for review.
+2. After clean STARTED publication, use that turn's actual full clean HEAD:
+   `/tmp/navier-fenicsx-r229/bin/python docs/realizability/evidence/r245/run_once.py FULL_CLEAN_LAUNCH_HEAD`.
+   The caller refreshes capacity/manager facts under its timer. Keep checkout
+   and environment unchanged during execution. Do not substitute historical HEAD.
+3. Freeze n=2/dt=.125/one BE step, R244 policy and both-degree physical gates,
+   serial SuperLU controls, all other numerical/resource checks. Limits:
    180 s total, 15/150/15 phases, 149 s independent expiry plus 1 s grace,
-   1536 MiB/no swap/32 tasks/one rank/thread. Retain latest CSR evidence caps:
-   512 global DOFs, 65,536 entries, 4 MiB, 12 corrections. No extra solve.
-4. Test caller preflight/refusal paths with stdlib/fakes and source bindings;
-   no reservation, worker, live scope, FEM import or prewarming. Preserve the
-   demonstrated pre-reservation repair rule versus spent-on-reservation/partial
-   worker rule; uncertain state stops for review. Publish admission or blocker.
-5. Stop before execution. If admitted, hand exact once-only execution to
-   Sol/high after a later Continue and clean STARTED publication; verify model
-   availability then. Keep Astra/high for remaining method/admission decisions.
+   1536 MiB/no swap/32 tasks/one rank/thread. Latest CSR caps: 512 global DOFs,
+   65,536 entries, 4 MiB, 12 corrections. No fallback or additional solve.
+4. Preserve raw schema-2 report and both-degree decisions, caller/worker logs,
+   complete/partial matrix files and receipts, reservation, resource/cleanup
+   evidence and actual exit/elapsed. Record measurement/save tails honestly.
+   Directory/reservation creation or partial worker start spends 1/1, including
+   INCOMPLETE. No retry, alternate directory, extra rank/factor analysis or
+   threshold adjustment. Publish the outcome and stop at this boundary.
+5. Only a demonstrated caller/preflight error before reservation, worker and
+   numerical import permits recovery: preserve failure/command/timing gaps,
+   verify absent fixed directory and no new manager task, fix/test the cause,
+   publish a clean binding, continue within the same unspent contract. Uncertain
+   state stops for review; never reset a charge by inference.
 
-Completion: concrete source-bound admission/caller and checks, or precise
-blocker, with one next task. No full suite/rotation/tank/B2, physical/render or
-Mac transfer. [Official OpenAI documentation](https://developers.openai.com/api/docs/models/gpt-6-astra)
+Completion: one retained outcome with spent/cleanup state or precise preflight
+blocker, scoped publication, then stop. Recommend Astra/high next to interpret
+results or reconsider method/admission. No full suite/rotation/tank/B2,
+physical/render or Mac transfer. [Official OpenAI documentation](https://developers.openai.com/api/docs/models/gpt-6-sol)
 was searched/opened for high support; task fit is judgment. No model/session
 switch or new chat required. Next prompt: **Continue**.
 

@@ -1,0 +1,16 @@
+PASS: outside-directory imports, timer before imports/preflight; dirty/wrong commit, source, policy, interpreter, artifact, library-resolution and existing/symlink-directory refusals; no numerical modules/manager/reservation
+test_common_mode_wrong_answers_fail_physical_gates (verification.nonlinear_port.test_poiseuille_policy.PoiseuillePolicy.test_common_mode_wrong_answers_fail_physical_gates) ... ok
+test_degree26_physical_failure_even_when_pair_agrees (verification.nonlinear_port.test_poiseuille_policy.PoiseuillePolicy.test_degree26_physical_failure_even_when_pair_agrees) ... ok
+test_inventory_nonfinite_negative_and_bool_refuse (verification.nonlinear_port.test_poiseuille_policy.PoiseuillePolicy.test_inventory_nonfinite_negative_and_bool_refuse) ... ok
+test_legacy_and_quantity_specific_thresholds (verification.nonlinear_port.test_poiseuille_policy.PoiseuillePolicy.test_legacy_and_quantity_specific_thresholds) ... ok
+test_policy_and_fixture_cannot_default_or_drift (verification.nonlinear_port.test_poiseuille_policy.PoiseuillePolicy.test_policy_and_fixture_cannot_default_or_drift) ... ok
+test_report_schema_missing_or_corrupted_caches_refuse (verification.nonlinear_port.test_poiseuille_policy.PoiseuillePolicy.test_report_schema_missing_or_corrupted_caches_refuse) ... ok
+test_saved_r242_legacy_refusal_and_explicit_prospective_replay (verification.nonlinear_port.test_poiseuille_policy.PoiseuillePolicy.test_saved_r242_legacy_refusal_and_explicit_prospective_replay) ... ok
+test_complete_driver_keeps_mixed_and_scalar_dimensions_separate (verification.nonlinear_port.test_driver_wiring.DriverWiring.test_complete_driver_keeps_mixed_and_scalar_dimensions_separate)
+R222 failed at the first assembly: its state omitted all three scalars. ... ok
+test_degree26_physical_failure_reaches_driver_decision (verification.nonlinear_port.test_driver_wiring.DriverWiring.test_degree26_physical_failure_reaches_driver_decision) ... ok
+
+----------------------------------------------------------------------
+Ran 9 tests in 0.020s
+
+OK

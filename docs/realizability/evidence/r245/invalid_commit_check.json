@@ -1,0 +1,20 @@
+{
+  "command": [
+    "/tmp/navier-fenicsx-r229/bin/python",
+    "/home/rharris/git/navier-stokes-vortex-lab/docs/realizability/evidence/r245/run_once.py",
+    "0000000000000000000000000000000000000000"
+  ],
+  "cwd": "/tmp",
+  "exit_code": 1,
+  "stdout": {
+    "status": "INCOMPLETE",
+    "reason": "RuntimeError: launch checkout is not the expected clean commit",
+    "elapsed_after_caller_save": 0.04215346300043166,
+    "run_directory": "/tmp/navier-poiseuille-r245-once",
+    "inner_status": null
+  },
+  "stderr": "",
+  "parent_elapsed_seconds": 0.08988054399378598,
+  "run_directory_absent": true,
+  "scope": "intentional invalid-commit test before manager/reservation; no numerical attempt"
+}
