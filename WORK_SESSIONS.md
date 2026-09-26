@@ -845,3 +845,14 @@ choices. Official Sol/high docs rechecked; no account/model switch claim.
 STARTED dd27c10 and clean tested source b07dbdc published. Final completion
 prepared for authorized scoped commit/push; delivery hash/result in Git/final
 response, no post-push edit. PC retains ownership; Mac released.
+
+## R227 — Exact pinned environment restoration
+STARTED | 2026-09-26T04:29:55Z | PC/WSL daisy | released: no
+Identity: rharris; Linux x86_64; /home/rharris/git/navier-stokes-vortex-lab;
+clean main/origin/main at 669d2a023fd998f112b6ae5b87a81c1c0bbc26ad after required
+fast-forward pull, equal to fetched upstream; empty stashes. Same owner; Mac
+released; no conflicting open task. Continue authorizes scoped publication.
+Bounded task: inventory exact artifacts, restore pinned environment with a
+recorded finite setup allocation, verify interpreter and package metadata.
+Stop before numerical imports/FEM/JIT/mesh/assembly/solve; zero FEM attempts.
+No pin changes, automatic retries, model switch or machine transfer.

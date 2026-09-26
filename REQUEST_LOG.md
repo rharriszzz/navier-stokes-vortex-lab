@@ -7636,3 +7636,21 @@ Python source remains byte-identical to live checkpoint b07dbdc; recorded source
 and raw-artifact hashes match. All retained JSON parses; Git whitespace passes.
 Publication staged checks and remote delivery verification are the remaining
 Git operations, not additional scientific work.
+
+## R227 — 2026-09-26 (America/New_York) — Restore the pinned environment
+
+**User wording:**
+
+```text
+continue
+```
+
+**Scope/status:** Continue authorizes scoped commit/push. Same rharris-owned
+PC/WSL daisy checkout; clean main/origin/main at
+669d2a023fd998f112b6ae5b87a81c1c0bbc26ad after required clean fast-forward pull,
+empty stashes, no conflicting open task; Mac remains released. Restore the exact
+pinned environment under a finite recorded setup allocation, preferring cached
+artifacts; verify interpreter/package metadata without numerical imports.
+Preserve pins and existing environments. Stop before FEM imports/JIT/mesh/
+assembly/solve, full suite, physical/render work. Zero FEM attempts. No model
+switch is inferred from this request.
