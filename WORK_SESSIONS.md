@@ -1751,3 +1751,7 @@ Astra high support searched/opened; no model/session switch by agent or /new.
 PC retains ownership, Mac released. R247 1facbf5 verified by clean pull;
 R248 STARTED c0f86b2 published. Completion prepared for scoped publication;
 delivery hash/result in Git/final response, no post-push edit.
+
+STARTED | 2026-09-26T22:13:32Z | R249 | PC/WSL daisy | released: no
+rharris; Linux 6.18.33.2-microsoft-standard-WSL2 x86_64; /home/rharris/git/navier-stokes-vortex-lab; main/origin/main; base 3bd7d4a15ad605cbc9e3ad20e26eab7ce0dc2c39. Clean synchronized checkout, empty stashes, same owner, Mac released.
+Review rotation oracle forms/report and fixture-specific worker/controller integration; publish an implementation-ready plan and separate admission prerequisites. Stop before runtime implementation, FEM imports/JIT/assembly, manager launch or new allocation. Continue authorizes scoped start/completion commits and pushes.
