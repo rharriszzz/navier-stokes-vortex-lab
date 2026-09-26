@@ -1,12 +1,11 @@
 # Isolated nonlinear port verification source — R195/R196/R222/R225/R226
 
-[R251 rotation admission](../../docs/realizability/ROTATION_ADMISSION_R251.md) approves one
-later n=2 exact-field rotation assembly with a fixed finite caller and source,
-contract, interpreter and artifact bindings. Six caller checks pass without
-numerical imports or manager access; R250's 93 tests are reused with all 36
-source hashes unchanged. No rotation attempt was spent. Five old allowances
-remain spent; R246 stays PASS and R242 INCOMPLETE. Follow the
-[current task](../../SESSION_HANDOFF.md#next-task) for Sol/high's one-use launch and evidence capture.
+[R253 rotation result](../../docs/realizability/ROTATION_RESULT_R253.md) passes the fixed
+one-use exact-field assembly oracle: 76 actual scalars, both-degree targets and
+all 38 pair checks, bounded exit/resources and empty cleanup. Its allocation is
+spent 1/1; the five earlier allowances stay spent. R246 Poiseuille remains PASS,
+R242 INCOMPLETE. Follow the [single current task](../../SESSION_HANDOFF.md#next-task) for Astra/high's
+saved-result review and next verification decision.
 
 **Source and algebra evidence, not a validated FEM solver.** The
 [R195 fixture review](../../docs/realizability/NONLINEAR_VERIFICATION_R195.md)

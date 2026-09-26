@@ -1,0 +1,62 @@
+{
+  "count": 14,
+  "files": {
+    "admission.json": {
+      "bytes": 759,
+      "sha256": "a9c743c0e07c9a7db9b519a4bb459f2f52cd8e89b3a4417d0675b8babe7b7209"
+    },
+    "caller.json": {
+      "bytes": 1829,
+      "sha256": "31f3c2646a65f1e8f3865cfc683ff71c8a75908ab5c07846f1b8fb9ae559a0f6"
+    },
+    "caller_completion.json": {
+      "bytes": 121,
+      "sha256": "880dc6ffa6c51cdc2d38966bcbe6f953791827dd2cf93ce779dbce0eeba9cde2"
+    },
+    "completion.json": {
+      "bytes": 282,
+      "sha256": "d378e4a6689a1829cfc4abf032dce0d0de2986d43fa3956056e67f016cb55bff"
+    },
+    "exit.json": {
+      "bytes": 46,
+      "sha256": "60f08a1640f12eadc6849aad08c78e8227f785b49292908f36ab9e8b8cc5fc3d"
+    },
+    "finished.json": {
+      "bytes": 46,
+      "sha256": "60f08a1640f12eadc6849aad08c78e8227f785b49292908f36ab9e8b8cc5fc3d"
+    },
+    "held.json": {
+      "bytes": 655,
+      "sha256": "7dbed17e6bc7ccd31b735cb08f83ac4a2da375e24f204d9c76dfeae19f9b03ee"
+    },
+    "numerical.json": {
+      "bytes": 40167,
+      "sha256": "ae35a36927f64484681d3c056ea4922ebc2d6b57a5a1f17103a6d77c45ffc55d"
+    },
+    "release.json": {
+      "bytes": 172,
+      "sha256": "82dd25f30a4d66663a0f9b191eb83fa9950486ed920ff0e50564b1e6a959edee"
+    },
+    "reservation.json": {
+      "bytes": 1062,
+      "sha256": "14eba43f22ca6e55e9038c16893b9b9d186460631d1aad4c5a8d9dc22b6f8469"
+    },
+    "resource_snapshot.json": {
+      "bytes": 282,
+      "sha256": "bf051131122ac1b0df627cb64380b66981297047891fb798ddefe8e0bbaa1bbe"
+    },
+    "result.json": {
+      "bytes": 45987,
+      "sha256": "f5eff1f51c8a38878936e932e2fe4d7bdf57f5f5ae69d87f473109cecffae39b"
+    },
+    "run.log": {
+      "bytes": 102,
+      "sha256": "4588a33928b32b726061e820269932526f9847dee16c34820a344a4654734bed"
+    },
+    "worker.log": {
+      "bytes": 7708,
+      "sha256": "7b9f5791a6f51249e4144f84f9589597c66354e4e2113b7b9107b1979add669f"
+    }
+  },
+  "source_directory": "/tmp/navier-rotation-r251-once"
+}

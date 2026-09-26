@@ -1,14 +1,13 @@
 # Project status: a boundary-controlled engineering approximation
 
-[R251 rotation admission](docs/realizability/ROTATION_ADMISSION_R251.md) approves one
-later n=2 exact-field rotation assembly with a fixed finite caller and source,
-contract, interpreter and artifact bindings. Six caller checks pass without
-numerical imports or manager access; R250's 93 tests are reused with all 36
-source hashes unchanged. No rotation attempt was spent. Five old allowances
-remain spent; R246 stays PASS and R242 INCOMPLETE. Follow the
-[current task](SESSION_HANDOFF.md#next-task) for Sol/high's one-use launch and evidence capture.
+[R253 rotation result](docs/realizability/ROTATION_RESULT_R253.md) passes the fixed
+one-use exact-field assembly oracle: 76 actual scalars, both-degree targets and
+all 38 pair checks, bounded exit/resources and empty cleanup. Its allocation is
+spent 1/1; the five earlier allowances stay spent. R246 Poiseuille remains PASS,
+R242 INCOMPLETE. Follow the [single current task](SESSION_HANDOFF.md#next-task) for Astra/high's
+saved-result review and next verification decision.
 
-Updated 2026-09-26 (America/New_York), through R251. PC/WSL daisy owns the
+Updated 2026-09-26 (America/New_York), through R253. PC/WSL daisy owns the
 repository. **R232 corrects the recoverable R231 caller failure and resumes the
 same authorized, unspent one-use fixture, then spends it on a PETSc LU failure.**
 The [R232 result](docs/realizability/POISEUILLE_RESULT_R232.md) records an
@@ -32,8 +31,8 @@ or live scope occurred in R236. [R237 admission](docs/realizability/POISEUILLE_A
 granted one instrumented fixture. [R238 result](docs/realizability/POISEUILLE_RESULT_R238.md)
 spent it 1/1: KSP -11, 405 nonfinite answer entries and PC reason 2 (reported
 numeric zero pivot). Worker/caller exited 1 with empty cleanup but no numerical
-or resource report. Those three allocations were spent 1/1 at R238. Next: Sol/high
-executes the separately admitted rotation fixture once; follow the
+or resource report. Those three allocations were spent 1/1 at R238. Next: Astra/high
+reviews the saved rotation PASS and chooses the next milestone; follow the
 [single task](SESSION_HANDOFF.md#next-task).
 
 Historical R231 context: the
@@ -126,9 +125,9 @@ No boundary-driven core or feasible contraction range is established.
 |---|---|
 | What works? | Illustrative animation, saved-data checks and separate reference/analysis tools. |
 | Is the engineering goal demonstrated? | No validated boundary-driven contraction or boundary-only state estimator exists yet. |
-| What did the latest step establish? | R251 admits one later fixed rotation assembly and passes six source-only caller checks; no numerical launch occurred. [Admission and limits](docs/realizability/ROTATION_ADMISSION_R251.md). |
+| What did the latest step establish? | R253 ran the R251 rotation fixture once: fixed exact-field oracle PASS, allowance spent. [Result and limits](docs/realizability/ROTATION_RESULT_R253.md). |
 | What blocks trusted numerical control results? | R246 passed one fixed Poiseuille oracle; rotation admission and actual assembly remain pending, followed by spatial/time verification. B2 still fails its independent response-accuracy comparison and q64/q96 remain unused. |
-| What is next? | Sol/high executes the R251 one-use rotation caller and preserves evidence; follow the single [next task](SESSION_HANDOFF.md#next-task). |
+| What is next? | Astra/high reviews R253 rotation PASS and defines the next milestone; follow the single [next task](SESSION_HANDOFF.md#next-task). |
 
 ## Goal and present conclusion
 

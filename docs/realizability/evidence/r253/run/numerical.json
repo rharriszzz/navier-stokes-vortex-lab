@@ -1,0 +1,1335 @@
+{
+  "actual_versions": {
+    "basix": "0.10.0",
+    "dolfinx": "0.10.0",
+    "ffcx": "0.10.0",
+    "mpi4py": "4.1.2",
+    "mpi_library": "MPICH Version:      5.0.1\nMPICH Release date: Fri Apr 10 09:45:31 AM CDT 2026\nMPICH ABI:          18:1:6\nMPICH Device:       ch4:ucx ofi\nMPICH configure:    --prefix=/tmp/navier-fenicsx-r229 --disable-doc --disable-dependency-tracking --enable-cxx --enable-fortran --enable-f08 --enable-mpi-abi --with-wrapper-dl-type=none --disable-static --with-device=ch4:ucx,ofi --with-ucx=/tmp/navier-fenicsx-r229 --with-libfabric=/tmp/navier-fenicsx-r229 --with-hwloc=/tmp/navier-fenicsx-r229 --with-yaksa=embedded --with-pm=hydra:gforker\nMPICH CC:           x86_64-conda-linux-gnu-cc -I/tmp/navier-fenicsx-r229/include -march=nocona -mtune=haswell -ftree-vectorize -fPIC -fstack-protector-strong -fno-plt -O2 -ffunction-sections -pipe -fno-merge-constants -isystem /tmp/navier-fenicsx-r229/include -fdebug-prefix-map=/home/conda/feedstock_root/build_artifacts/bld/rattler-build_mpich_1784230131/work=/usr/local/src/conda/mpich-5.0.1 -fdebug-prefix-map=/tmp/navier-fenicsx-r229=/usr/local/src/conda-prefix   -O2\nMPICH CXX:          x86_64-conda-linux-gnu-c++ -I/tmp/navier-fenicsx-r229/include -fvisibility-inlines-hidden -fmessage-length=0 -march=nocona -mtune=haswell -ftree-vectorize -fPIC -fstack-protector-strong -fno-plt -O2 -ffunction-sections -pipe -fno-merge-constants -isystem /tmp/navier-fenicsx-r229/include -fdebug-prefix-map=/home/conda/feedstock_root/build_artifacts/bld/rattler-build_mpich_1784230131/work=/usr/local/src/conda/mpich-5.0.1 -fdebug-prefix-map=/tmp/navier-fenicsx-r229=/usr/local/src/conda-prefix -O2\nMPICH F77:          x86_64-conda-linux-gnu-gfortran -I/tmp/navier-fenicsx-r229/include -march=nocona -mtune=haswell -ftree-vectorize -fPIC -fstack-protector-strong -fno-plt -O2 -ffunction-sections -pipe -fno-merge-constants -isystem /tmp/navier-fenicsx-r229/include -I/home/conda/feedstock_root/build_artifacts/bld/rattler-build_mpich_1784230131/build_env/include -fdebug-prefix-map=/home/conda/feedstock_root/build_artifacts/bld/rattler-build_mpich_1784230131/work=/usr/local/src/conda/mpich-5.0.1 -fdebug-prefix-map=/tmp/navier-fenicsx-r229=/usr/local/src/conda-prefix -O2\nMPICH FC:           x86_64-conda-linux-gnu-gfortran -I/tmp/navier-fenicsx-r229/include -march=nocona -mtune=haswell -ftree-vectorize -fPIC -fstack-protector-strong -fno-plt -O2 -ffunction-sections -pipe -fno-merge-constants -isystem /tmp/navier-fenicsx-r229/include -I/home/conda/feedstock_root/build_artifacts/bld/rattler-build_mpich_1784230131/build_env/include -fdebug-prefix-map=/home/conda/feedstock_root/build_artifacts/bld/rattler-build_mpich_1784230131/work=/usr/local/src/conda/mpich-5.0.1 -fdebug-prefix-map=/tmp/navier-fenicsx-r229=/usr/local/src/conda-prefix -O2\nMPICH features:     threadcomm",
+    "mpich": "5.0.1",
+    "petsc": "3.25.5",
+    "petsc4py": "3.25.5",
+    "python": "3.12.13",
+    "ufl": "2025.2.1"
+  },
+  "assembly_receipts": {
+    "24": {
+      "area_1": {
+        "compiled_rank": 0,
+        "method": "fem.form+assemble_scalar",
+        "ufl_integrals": 1
+      },
+      "area_2": {
+        "compiled_rank": 0,
+        "method": "fem.form+assemble_scalar",
+        "ufl_integrals": 1
+      },
+      "area_3": {
+        "compiled_rank": 0,
+        "method": "fem.form+assemble_scalar",
+        "ufl_integrals": 1
+      },
+      "area_4": {
+        "compiled_rank": 0,
+        "method": "fem.form+assemble_scalar",
+        "ufl_integrals": 1
+      },
+      "area_5": {
+        "compiled_rank": 0,
+        "method": "fem.form+assemble_scalar",
+        "ufl_integrals": 1
+      },
+      "area_6": {
+        "compiled_rank": 0,
+        "method": "fem.form+assemble_scalar",
+        "ufl_integrals": 1
+      },
+      "convection_l2_squared": {
+        "compiled_rank": 0,
+        "method": "fem.form+assemble_scalar",
+        "ufl_integrals": 1
+      },
+      "divergence_l2_squared": {
+        "compiled_rank": 0,
+        "method": "fem.form+assemble_scalar",
+        "ufl_integrals": 1
+      },
+      "gradient_l2_squared": {
+        "compiled_rank": 0,
+        "method": "fem.form+assemble_scalar",
+        "ufl_integrals": 1
+      },
+      "momentum_residual_l2_squared": {
+        "compiled_rank": 0,
+        "method": "fem.form+assemble_scalar",
+        "ufl_integrals": 1
+      },
+      "normal_1_0": {
+        "compiled_rank": 0,
+        "method": "fem.form+assemble_scalar",
+        "ufl_integrals": 1
+      },
+      "normal_1_1": {
+        "compiled_rank": 0,
+        "method": "fem.form+assemble_scalar",
+        "ufl_integrals": 1
+      },
+      "normal_1_2": {
+        "compiled_rank": 0,
+        "method": "fem.form+assemble_scalar",
+        "ufl_integrals": 1
+      },
+      "normal_2_0": {
+        "compiled_rank": 0,
+        "method": "fem.form+assemble_scalar",
+        "ufl_integrals": 1
+      },
+      "normal_2_1": {
+        "compiled_rank": 0,
+        "method": "fem.form+assemble_scalar",
+        "ufl_integrals": 1
+      },
+      "normal_2_2": {
+        "compiled_rank": 0,
+        "method": "fem.form+assemble_scalar",
+        "ufl_integrals": 1
+      },
+      "normal_3_0": {
+        "compiled_rank": 0,
+        "method": "fem.form+assemble_scalar",
+        "ufl_integrals": 1
+      },
+      "normal_3_1": {
+        "compiled_rank": 0,
+        "method": "fem.form+assemble_scalar",
+        "ufl_integrals": 1
+      },
+      "normal_3_2": {
+        "compiled_rank": 0,
+        "method": "fem.form+assemble_scalar",
+        "ufl_integrals": 1
+      },
+      "normal_4_0": {
+        "compiled_rank": 0,
+        "method": "fem.form+assemble_scalar",
+        "ufl_integrals": 1
+      },
+      "normal_4_1": {
+        "compiled_rank": 0,
+        "method": "fem.form+assemble_scalar",
+        "ufl_integrals": 1
+      },
+      "normal_4_2": {
+        "compiled_rank": 0,
+        "method": "fem.form+assemble_scalar",
+        "ufl_integrals": 1
+      },
+      "normal_5_0": {
+        "compiled_rank": 0,
+        "method": "fem.form+assemble_scalar",
+        "ufl_integrals": 1
+      },
+      "normal_5_1": {
+        "compiled_rank": 0,
+        "method": "fem.form+assemble_scalar",
+        "ufl_integrals": 1
+      },
+      "normal_5_2": {
+        "compiled_rank": 0,
+        "method": "fem.form+assemble_scalar",
+        "ufl_integrals": 1
+      },
+      "normal_6_0": {
+        "compiled_rank": 0,
+        "method": "fem.form+assemble_scalar",
+        "ufl_integrals": 1
+      },
+      "normal_6_1": {
+        "compiled_rank": 0,
+        "method": "fem.form+assemble_scalar",
+        "ufl_integrals": 1
+      },
+      "normal_6_2": {
+        "compiled_rank": 0,
+        "method": "fem.form+assemble_scalar",
+        "ufl_integrals": 1
+      },
+      "pressure_gradient_l2_squared": {
+        "compiled_rank": 0,
+        "method": "fem.form+assemble_scalar",
+        "ufl_integrals": 1
+      },
+      "pressure_l2_squared": {
+        "compiled_rank": 0,
+        "method": "fem.form+assemble_scalar",
+        "ufl_integrals": 1
+      },
+      "pressure_mean": {
+        "compiled_rank": 0,
+        "method": "fem.form+assemble_scalar",
+        "ufl_integrals": 1
+      },
+      "strain_l2_squared": {
+        "compiled_rank": 0,
+        "method": "fem.form+assemble_scalar",
+        "ufl_integrals": 1
+      },
+      "total_traction_boundary_l2_squared": {
+        "compiled_rank": 0,
+        "method": "fem.form+assemble_scalar",
+        "ufl_integrals": 6
+      },
+      "velocity_l2_squared": {
+        "compiled_rank": 0,
+        "method": "fem.form+assemble_scalar",
+        "ufl_integrals": 1
+      },
+      "viscous_dissipation": {
+        "compiled_rank": 0,
+        "method": "fem.form+assemble_scalar",
+        "ufl_integrals": 1
+      },
+      "viscous_stress_l2_squared": {
+        "compiled_rank": 0,
+        "method": "fem.form+assemble_scalar",
+        "ufl_integrals": 1
+      },
+      "viscous_traction_boundary_l2_squared": {
+        "compiled_rank": 0,
+        "method": "fem.form+assemble_scalar",
+        "ufl_integrals": 6
+      },
+      "volume": {
+        "compiled_rank": 0,
+        "method": "fem.form+assemble_scalar",
+        "ufl_integrals": 1
+      }
+    },
+    "26": {
+      "area_1": {
+        "compiled_rank": 0,
+        "method": "fem.form+assemble_scalar",
+        "ufl_integrals": 1
+      },
+      "area_2": {
+        "compiled_rank": 0,
+        "method": "fem.form+assemble_scalar",
+        "ufl_integrals": 1
+      },
+      "area_3": {
+        "compiled_rank": 0,
+        "method": "fem.form+assemble_scalar",
+        "ufl_integrals": 1
+      },
+      "area_4": {
+        "compiled_rank": 0,
+        "method": "fem.form+assemble_scalar",
+        "ufl_integrals": 1
+      },
+      "area_5": {
+        "compiled_rank": 0,
+        "method": "fem.form+assemble_scalar",
+        "ufl_integrals": 1
+      },
+      "area_6": {
+        "compiled_rank": 0,
+        "method": "fem.form+assemble_scalar",
+        "ufl_integrals": 1
+      },
+      "convection_l2_squared": {
+        "compiled_rank": 0,
+        "method": "fem.form+assemble_scalar",
+        "ufl_integrals": 1
+      },
+      "divergence_l2_squared": {
+        "compiled_rank": 0,
+        "method": "fem.form+assemble_scalar",
+        "ufl_integrals": 1
+      },
+      "gradient_l2_squared": {
+        "compiled_rank": 0,
+        "method": "fem.form+assemble_scalar",
+        "ufl_integrals": 1
+      },
+      "momentum_residual_l2_squared": {
+        "compiled_rank": 0,
+        "method": "fem.form+assemble_scalar",
+        "ufl_integrals": 1
+      },
+      "normal_1_0": {
+        "compiled_rank": 0,
+        "method": "fem.form+assemble_scalar",
+        "ufl_integrals": 1
+      },
+      "normal_1_1": {
+        "compiled_rank": 0,
+        "method": "fem.form+assemble_scalar",
+        "ufl_integrals": 1
+      },
+      "normal_1_2": {
+        "compiled_rank": 0,
+        "method": "fem.form+assemble_scalar",
+        "ufl_integrals": 1
+      },
+      "normal_2_0": {
+        "compiled_rank": 0,
+        "method": "fem.form+assemble_scalar",
+        "ufl_integrals": 1
+      },
+      "normal_2_1": {
+        "compiled_rank": 0,
+        "method": "fem.form+assemble_scalar",
+        "ufl_integrals": 1
+      },
+      "normal_2_2": {
+        "compiled_rank": 0,
+        "method": "fem.form+assemble_scalar",
+        "ufl_integrals": 1
+      },
+      "normal_3_0": {
+        "compiled_rank": 0,
+        "method": "fem.form+assemble_scalar",
+        "ufl_integrals": 1
+      },
+      "normal_3_1": {
+        "compiled_rank": 0,
+        "method": "fem.form+assemble_scalar",
+        "ufl_integrals": 1
+      },
+      "normal_3_2": {
+        "compiled_rank": 0,
+        "method": "fem.form+assemble_scalar",
+        "ufl_integrals": 1
+      },
+      "normal_4_0": {
+        "compiled_rank": 0,
+        "method": "fem.form+assemble_scalar",
+        "ufl_integrals": 1
+      },
+      "normal_4_1": {
+        "compiled_rank": 0,
+        "method": "fem.form+assemble_scalar",
+        "ufl_integrals": 1
+      },
+      "normal_4_2": {
+        "compiled_rank": 0,
+        "method": "fem.form+assemble_scalar",
+        "ufl_integrals": 1
+      },
+      "normal_5_0": {
+        "compiled_rank": 0,
+        "method": "fem.form+assemble_scalar",
+        "ufl_integrals": 1
+      },
+      "normal_5_1": {
+        "compiled_rank": 0,
+        "method": "fem.form+assemble_scalar",
+        "ufl_integrals": 1
+      },
+      "normal_5_2": {
+        "compiled_rank": 0,
+        "method": "fem.form+assemble_scalar",
+        "ufl_integrals": 1
+      },
+      "normal_6_0": {
+        "compiled_rank": 0,
+        "method": "fem.form+assemble_scalar",
+        "ufl_integrals": 1
+      },
+      "normal_6_1": {
+        "compiled_rank": 0,
+        "method": "fem.form+assemble_scalar",
+        "ufl_integrals": 1
+      },
+      "normal_6_2": {
+        "compiled_rank": 0,
+        "method": "fem.form+assemble_scalar",
+        "ufl_integrals": 1
+      },
+      "pressure_gradient_l2_squared": {
+        "compiled_rank": 0,
+        "method": "fem.form+assemble_scalar",
+        "ufl_integrals": 1
+      },
+      "pressure_l2_squared": {
+        "compiled_rank": 0,
+        "method": "fem.form+assemble_scalar",
+        "ufl_integrals": 1
+      },
+      "pressure_mean": {
+        "compiled_rank": 0,
+        "method": "fem.form+assemble_scalar",
+        "ufl_integrals": 1
+      },
+      "strain_l2_squared": {
+        "compiled_rank": 0,
+        "method": "fem.form+assemble_scalar",
+        "ufl_integrals": 1
+      },
+      "total_traction_boundary_l2_squared": {
+        "compiled_rank": 0,
+        "method": "fem.form+assemble_scalar",
+        "ufl_integrals": 6
+      },
+      "velocity_l2_squared": {
+        "compiled_rank": 0,
+        "method": "fem.form+assemble_scalar",
+        "ufl_integrals": 1
+      },
+      "viscous_dissipation": {
+        "compiled_rank": 0,
+        "method": "fem.form+assemble_scalar",
+        "ufl_integrals": 1
+      },
+      "viscous_stress_l2_squared": {
+        "compiled_rank": 0,
+        "method": "fem.form+assemble_scalar",
+        "ufl_integrals": 1
+      },
+      "viscous_traction_boundary_l2_squared": {
+        "compiled_rank": 0,
+        "method": "fem.form+assemble_scalar",
+        "ufl_integrals": 6
+      },
+      "volume": {
+        "compiled_rank": 0,
+        "method": "fem.form+assemble_scalar",
+        "ufl_integrals": 1
+      }
+    }
+  },
+  "contract_sha256": "5290c4357dba53fd47dde9e930506ddfd2453acdbe6c460332212c98d3c42507",
+  "ffcx_artifact": {
+    "embedded_version": "0.10.0",
+    "package": {
+      "build": "pyhbc3ee6d_1",
+      "md5": "d37671d8e59bdccbc1ef2defa740bdaa",
+      "name": "fenics-ffcx",
+      "sha256": "727926ec2782375707cd036f86ab3d5004d53074ee80cf127619134f763e3473",
+      "subdir": "noarch",
+      "url": "https://conda.anaconda.org/conda-forge/noarch/fenics-ffcx-0.10.1-pyhbc3ee6d_1.conda",
+      "version": "0.10.1"
+    },
+    "recovery_evidence": {
+      "run/cache_verified.json": "3c5a61e8747238ac557cce800f1881c5131847ebf1212f4c388018f08f7199ce",
+      "run/verification.json": "8c91f6cc2f1494be477885e9e0cfd535b72e4f6c36fb01208ce44bb044b2d3f5"
+    }
+  },
+  "fixture": "rotation",
+  "geometry": {
+    "cell_type": "tetrahedron",
+    "cells": 48,
+    "exterior_facets": 48,
+    "facet_counts": {
+      "1": 8,
+      "2": 8,
+      "3": 8,
+      "4": 8,
+      "5": 8,
+      "6": 8
+    },
+    "geometric_dimension": 3,
+    "mixed_space_dofs": 402,
+    "mixed_space_ghosts": 0,
+    "space_used_for_field_representation": false,
+    "subdivisions": 2,
+    "topological_dimension": 3,
+    "vertices": 27
+  },
+  "kind": "rotation_assembly",
+  "manifest_sha256": "5f15e1293c95acbf1bce2e7b18307f94655e168b09a4217ffc915e0c3c0fa1cb",
+  "mode": "exact_field_assembly",
+  "oracle": {
+    "contract": {
+      "degrees": [
+        24,
+        26
+      ],
+      "domain": "affine unit cube",
+      "field_representation": "exact coordinate expressions; no P1 pressure interpolation or PDE solve",
+      "fixture": "rotation",
+      "geometry_absolute_tolerance": 1e-12,
+      "geometry_keys": [
+        "volume",
+        "area_1",
+        "area_2",
+        "area_3",
+        "area_4",
+        "area_5",
+        "area_6",
+        "normal_1_0",
+        "normal_1_1",
+        "normal_1_2",
+        "normal_2_0",
+        "normal_2_1",
+        "normal_2_2",
+        "normal_3_0",
+        "normal_3_1",
+        "normal_3_2",
+        "normal_4_0",
+        "normal_4_1",
+        "normal_4_2",
+        "normal_5_0",
+        "normal_5_1",
+        "normal_5_2",
+        "normal_6_0",
+        "normal_6_1",
+        "normal_6_2"
+      ],
+      "mode": "exact_field_assembly",
+      "mu": 0.1,
+      "name": "rotation_assembly_v1",
+      "nonnegative_keys": [
+        "area_1",
+        "area_2",
+        "area_3",
+        "area_4",
+        "area_5",
+        "area_6",
+        "convection_l2_squared",
+        "divergence_l2_squared",
+        "gradient_l2_squared",
+        "momentum_residual_l2_squared",
+        "pressure_gradient_l2_squared",
+        "pressure_l2_squared",
+        "strain_l2_squared",
+        "total_traction_boundary_l2_squared",
+        "velocity_l2_squared",
+        "viscous_dissipation",
+        "viscous_stress_l2_squared",
+        "viscous_traction_boundary_l2_squared",
+        "volume"
+      ],
+      "pair_absolute_tolerance": 1e-10,
+      "raw_targets_rational": {
+        "area_1": "1",
+        "area_2": "1",
+        "area_3": "1",
+        "area_4": "1",
+        "area_5": "1",
+        "area_6": "1",
+        "convection_l2_squared": "1/6",
+        "divergence_l2_squared": "0",
+        "gradient_l2_squared": "2",
+        "momentum_residual_l2_squared": "0",
+        "normal_1_0": "-1",
+        "normal_1_1": "0",
+        "normal_1_2": "0",
+        "normal_2_0": "1",
+        "normal_2_1": "0",
+        "normal_2_2": "0",
+        "normal_3_0": "0",
+        "normal_3_1": "-1",
+        "normal_3_2": "0",
+        "normal_4_0": "0",
+        "normal_4_1": "1",
+        "normal_4_2": "0",
+        "normal_5_0": "0",
+        "normal_5_1": "0",
+        "normal_5_2": "-1",
+        "normal_6_0": "0",
+        "normal_6_1": "0",
+        "normal_6_2": "1",
+        "pressure_gradient_l2_squared": "1/6",
+        "pressure_l2_squared": "1/360",
+        "pressure_mean": "0",
+        "strain_l2_squared": "0",
+        "total_traction_boundary_l2_squared": "7/180",
+        "velocity_l2_squared": "1/6",
+        "viscous_dissipation": "0",
+        "viscous_stress_l2_squared": "0",
+        "viscous_traction_boundary_l2_squared": "0",
+        "volume": "1"
+      },
+      "rho": 1.0,
+      "scalar_absolute_tolerance": 1e-10,
+      "schema": 1,
+      "subdivisions": 2,
+      "zero_norm_squared_keys": [
+        "strain_l2_squared",
+        "divergence_l2_squared",
+        "momentum_residual_l2_squared",
+        "viscous_stress_l2_squared",
+        "viscous_traction_boundary_l2_squared"
+      ],
+      "zero_norm_squared_tolerance": 1e-20,
+      "zero_norm_tolerance": 1e-10
+    },
+    "degree_checks": {
+      "24": {
+        "accepted": true,
+        "derived_zero_norms": {
+          "divergence_l2_squared": 0.0,
+          "momentum_residual_l2_squared": 0.0,
+          "strain_l2_squared": 0.0,
+          "viscous_stress_l2_squared": 0.0,
+          "viscous_traction_boundary_l2_squared": 0.0
+        },
+        "target_checks": {
+          "area_1": {
+            "accepted": true,
+            "difference": 2.886579864025407e-15,
+            "expected": 1.0,
+            "limit": 1e-12
+          },
+          "area_2": {
+            "accepted": true,
+            "difference": 2.886579864025407e-15,
+            "expected": 1.0,
+            "limit": 1e-12
+          },
+          "area_3": {
+            "accepted": true,
+            "difference": 2.886579864025407e-15,
+            "expected": 1.0,
+            "limit": 1e-12
+          },
+          "area_4": {
+            "accepted": true,
+            "difference": 2.886579864025407e-15,
+            "expected": 1.0,
+            "limit": 1e-12
+          },
+          "area_5": {
+            "accepted": true,
+            "difference": 2.886579864025407e-15,
+            "expected": 1.0,
+            "limit": 1e-12
+          },
+          "area_6": {
+            "accepted": true,
+            "difference": 2.886579864025407e-15,
+            "expected": 1.0,
+            "limit": 1e-12
+          },
+          "convection_l2_squared": {
+            "accepted": true,
+            "difference": 6.661338147750939e-16,
+            "expected": 0.16666666666666666,
+            "limit": 1e-10
+          },
+          "divergence_l2_squared": {
+            "accepted": true,
+            "difference": 0.0,
+            "expected": 0.0,
+            "limit": 1e-20
+          },
+          "gradient_l2_squared": {
+            "accepted": true,
+            "difference": 1.8340884366807586e-13,
+            "expected": 2.0,
+            "limit": 1e-10
+          },
+          "momentum_residual_l2_squared": {
+            "accepted": true,
+            "difference": 0.0,
+            "expected": 0.0,
+            "limit": 1e-20
+          },
+          "normal_1_0": {
+            "accepted": true,
+            "difference": -2.886579864025407e-15,
+            "expected": -1.0,
+            "limit": 1e-12
+          },
+          "normal_1_1": {
+            "accepted": true,
+            "difference": 0.0,
+            "expected": 0.0,
+            "limit": 1e-12
+          },
+          "normal_1_2": {
+            "accepted": true,
+            "difference": 0.0,
+            "expected": 0.0,
+            "limit": 1e-12
+          },
+          "normal_2_0": {
+            "accepted": true,
+            "difference": 2.886579864025407e-15,
+            "expected": 1.0,
+            "limit": 1e-12
+          },
+          "normal_2_1": {
+            "accepted": true,
+            "difference": 0.0,
+            "expected": 0.0,
+            "limit": 1e-12
+          },
+          "normal_2_2": {
+            "accepted": true,
+            "difference": 0.0,
+            "expected": 0.0,
+            "limit": 1e-12
+          },
+          "normal_3_0": {
+            "accepted": true,
+            "difference": 0.0,
+            "expected": 0.0,
+            "limit": 1e-12
+          },
+          "normal_3_1": {
+            "accepted": true,
+            "difference": -2.886579864025407e-15,
+            "expected": -1.0,
+            "limit": 1e-12
+          },
+          "normal_3_2": {
+            "accepted": true,
+            "difference": 0.0,
+            "expected": 0.0,
+            "limit": 1e-12
+          },
+          "normal_4_0": {
+            "accepted": true,
+            "difference": 0.0,
+            "expected": 0.0,
+            "limit": 1e-12
+          },
+          "normal_4_1": {
+            "accepted": true,
+            "difference": 2.886579864025407e-15,
+            "expected": 1.0,
+            "limit": 1e-12
+          },
+          "normal_4_2": {
+            "accepted": true,
+            "difference": 0.0,
+            "expected": 0.0,
+            "limit": 1e-12
+          },
+          "normal_5_0": {
+            "accepted": true,
+            "difference": 0.0,
+            "expected": 0.0,
+            "limit": 1e-12
+          },
+          "normal_5_1": {
+            "accepted": true,
+            "difference": 0.0,
+            "expected": 0.0,
+            "limit": 1e-12
+          },
+          "normal_5_2": {
+            "accepted": true,
+            "difference": -2.886579864025407e-15,
+            "expected": -1.0,
+            "limit": 1e-12
+          },
+          "normal_6_0": {
+            "accepted": true,
+            "difference": 0.0,
+            "expected": 0.0,
+            "limit": 1e-12
+          },
+          "normal_6_1": {
+            "accepted": true,
+            "difference": 0.0,
+            "expected": 0.0,
+            "limit": 1e-12
+          },
+          "normal_6_2": {
+            "accepted": true,
+            "difference": 2.886579864025407e-15,
+            "expected": 1.0,
+            "limit": 1e-12
+          },
+          "pressure_gradient_l2_squared": {
+            "accepted": true,
+            "difference": 6.661338147750939e-16,
+            "expected": 0.16666666666666666,
+            "limit": 1e-10
+          },
+          "pressure_l2_squared": {
+            "accepted": true,
+            "difference": -2.688821387764051e-17,
+            "expected": 0.002777777777777778,
+            "limit": 1e-10
+          },
+          "pressure_mean": {
+            "accepted": true,
+            "difference": -2.0780305737465295e-17,
+            "expected": 0.0,
+            "limit": 1e-10
+          },
+          "strain_l2_squared": {
+            "accepted": true,
+            "difference": 0.0,
+            "expected": 0.0,
+            "limit": 1e-20
+          },
+          "total_traction_boundary_l2_squared": {
+            "accepted": true,
+            "difference": -2.0816681711721685e-17,
+            "expected": 0.03888888888888889,
+            "limit": 1e-10
+          },
+          "velocity_l2_squared": {
+            "accepted": true,
+            "difference": 6.661338147750939e-16,
+            "expected": 0.16666666666666666,
+            "limit": 1e-10
+          },
+          "viscous_dissipation": {
+            "accepted": true,
+            "difference": 0.0,
+            "expected": 0.0,
+            "limit": 1e-10
+          },
+          "viscous_stress_l2_squared": {
+            "accepted": true,
+            "difference": 0.0,
+            "expected": 0.0,
+            "limit": 1e-20
+          },
+          "viscous_traction_boundary_l2_squared": {
+            "accepted": true,
+            "difference": 0.0,
+            "expected": 0.0,
+            "limit": 1e-20
+          },
+          "volume": {
+            "accepted": true,
+            "difference": 9.170442183403793e-14,
+            "expected": 1.0,
+            "limit": 1e-12
+          }
+        }
+      },
+      "26": {
+        "accepted": true,
+        "derived_zero_norms": {
+          "divergence_l2_squared": 0.0,
+          "momentum_residual_l2_squared": 0.0,
+          "strain_l2_squared": 0.0,
+          "viscous_stress_l2_squared": 0.0,
+          "viscous_traction_boundary_l2_squared": 0.0
+        },
+        "target_checks": {
+          "area_1": {
+            "accepted": true,
+            "difference": 1.3322676295501878e-15,
+            "expected": 1.0,
+            "limit": 1e-12
+          },
+          "area_2": {
+            "accepted": true,
+            "difference": 1.3322676295501878e-15,
+            "expected": 1.0,
+            "limit": 1e-12
+          },
+          "area_3": {
+            "accepted": true,
+            "difference": 1.3322676295501878e-15,
+            "expected": 1.0,
+            "limit": 1e-12
+          },
+          "area_4": {
+            "accepted": true,
+            "difference": 1.3322676295501878e-15,
+            "expected": 1.0,
+            "limit": 1e-12
+          },
+          "area_5": {
+            "accepted": true,
+            "difference": 1.3322676295501878e-15,
+            "expected": 1.0,
+            "limit": 1e-12
+          },
+          "area_6": {
+            "accepted": true,
+            "difference": 1.3322676295501878e-15,
+            "expected": 1.0,
+            "limit": 1e-12
+          },
+          "convection_l2_squared": {
+            "accepted": true,
+            "difference": 8.049116928532385e-16,
+            "expected": 0.16666666666666666,
+            "limit": 1e-10
+          },
+          "divergence_l2_squared": {
+            "accepted": true,
+            "difference": 0.0,
+            "expected": 0.0,
+            "limit": 1e-20
+          },
+          "gradient_l2_squared": {
+            "accepted": true,
+            "difference": 1.8030021919912542e-13,
+            "expected": 2.0,
+            "limit": 1e-10
+          },
+          "momentum_residual_l2_squared": {
+            "accepted": true,
+            "difference": 0.0,
+            "expected": 0.0,
+            "limit": 1e-20
+          },
+          "normal_1_0": {
+            "accepted": true,
+            "difference": -1.3322676295501878e-15,
+            "expected": -1.0,
+            "limit": 1e-12
+          },
+          "normal_1_1": {
+            "accepted": true,
+            "difference": 0.0,
+            "expected": 0.0,
+            "limit": 1e-12
+          },
+          "normal_1_2": {
+            "accepted": true,
+            "difference": 0.0,
+            "expected": 0.0,
+            "limit": 1e-12
+          },
+          "normal_2_0": {
+            "accepted": true,
+            "difference": 1.3322676295501878e-15,
+            "expected": 1.0,
+            "limit": 1e-12
+          },
+          "normal_2_1": {
+            "accepted": true,
+            "difference": 0.0,
+            "expected": 0.0,
+            "limit": 1e-12
+          },
+          "normal_2_2": {
+            "accepted": true,
+            "difference": 0.0,
+            "expected": 0.0,
+            "limit": 1e-12
+          },
+          "normal_3_0": {
+            "accepted": true,
+            "difference": 0.0,
+            "expected": 0.0,
+            "limit": 1e-12
+          },
+          "normal_3_1": {
+            "accepted": true,
+            "difference": -1.3322676295501878e-15,
+            "expected": -1.0,
+            "limit": 1e-12
+          },
+          "normal_3_2": {
+            "accepted": true,
+            "difference": 0.0,
+            "expected": 0.0,
+            "limit": 1e-12
+          },
+          "normal_4_0": {
+            "accepted": true,
+            "difference": 0.0,
+            "expected": 0.0,
+            "limit": 1e-12
+          },
+          "normal_4_1": {
+            "accepted": true,
+            "difference": 1.3322676295501878e-15,
+            "expected": 1.0,
+            "limit": 1e-12
+          },
+          "normal_4_2": {
+            "accepted": true,
+            "difference": 0.0,
+            "expected": 0.0,
+            "limit": 1e-12
+          },
+          "normal_5_0": {
+            "accepted": true,
+            "difference": 0.0,
+            "expected": 0.0,
+            "limit": 1e-12
+          },
+          "normal_5_1": {
+            "accepted": true,
+            "difference": 0.0,
+            "expected": 0.0,
+            "limit": 1e-12
+          },
+          "normal_5_2": {
+            "accepted": true,
+            "difference": -1.3322676295501878e-15,
+            "expected": -1.0,
+            "limit": 1e-12
+          },
+          "normal_6_0": {
+            "accepted": true,
+            "difference": 0.0,
+            "expected": 0.0,
+            "limit": 1e-12
+          },
+          "normal_6_1": {
+            "accepted": true,
+            "difference": 0.0,
+            "expected": 0.0,
+            "limit": 1e-12
+          },
+          "normal_6_2": {
+            "accepted": true,
+            "difference": 1.3322676295501878e-15,
+            "expected": 1.0,
+            "limit": 1e-12
+          },
+          "pressure_gradient_l2_squared": {
+            "accepted": true,
+            "difference": 8.049116928532385e-16,
+            "expected": 0.16666666666666666,
+            "limit": 1e-10
+          },
+          "pressure_l2_squared": {
+            "accepted": true,
+            "difference": 2.2551405187698492e-17,
+            "expected": 0.002777777777777778,
+            "limit": 1e-10
+          },
+          "pressure_mean": {
+            "accepted": true,
+            "difference": 6.923785371925504e-17,
+            "expected": 0.0,
+            "limit": 1e-10
+          },
+          "strain_l2_squared": {
+            "accepted": true,
+            "difference": 0.0,
+            "expected": 0.0,
+            "limit": 1e-20
+          },
+          "total_traction_boundary_l2_squared": {
+            "accepted": true,
+            "difference": 9.71445146547012e-17,
+            "expected": 0.03888888888888889,
+            "limit": 1e-10
+          },
+          "velocity_l2_squared": {
+            "accepted": true,
+            "difference": 8.049116928532385e-16,
+            "expected": 0.16666666666666666,
+            "limit": 1e-10
+          },
+          "viscous_dissipation": {
+            "accepted": true,
+            "difference": 0.0,
+            "expected": 0.0,
+            "limit": 1e-10
+          },
+          "viscous_stress_l2_squared": {
+            "accepted": true,
+            "difference": 0.0,
+            "expected": 0.0,
+            "limit": 1e-20
+          },
+          "viscous_traction_boundary_l2_squared": {
+            "accepted": true,
+            "difference": 0.0,
+            "expected": 0.0,
+            "limit": 1e-20
+          },
+          "volume": {
+            "accepted": true,
+            "difference": 9.015010959956271e-14,
+            "expected": 1.0,
+            "limit": 1e-12
+          }
+        }
+      }
+    },
+    "numerical_accepted": true,
+    "pair_checks": {
+      "area_1": {
+        "accepted": true,
+        "difference": -1.5543122344752192e-15,
+        "limit": 1e-10
+      },
+      "area_2": {
+        "accepted": true,
+        "difference": -1.5543122344752192e-15,
+        "limit": 1e-10
+      },
+      "area_3": {
+        "accepted": true,
+        "difference": -1.5543122344752192e-15,
+        "limit": 1e-10
+      },
+      "area_4": {
+        "accepted": true,
+        "difference": -1.5543122344752192e-15,
+        "limit": 1e-10
+      },
+      "area_5": {
+        "accepted": true,
+        "difference": -1.5543122344752192e-15,
+        "limit": 1e-10
+      },
+      "area_6": {
+        "accepted": true,
+        "difference": -1.5543122344752192e-15,
+        "limit": 1e-10
+      },
+      "convection_l2_squared": {
+        "accepted": true,
+        "difference": 1.3877787807814457e-16,
+        "limit": 1e-10
+      },
+      "divergence_l2_squared": {
+        "accepted": true,
+        "difference": 0.0,
+        "limit": 1e-10
+      },
+      "gradient_l2_squared": {
+        "accepted": true,
+        "difference": -3.1086244689504383e-15,
+        "limit": 1e-10
+      },
+      "momentum_residual_l2_squared": {
+        "accepted": true,
+        "difference": 0.0,
+        "limit": 1e-10
+      },
+      "normal_1_0": {
+        "accepted": true,
+        "difference": 1.5543122344752192e-15,
+        "limit": 1e-10
+      },
+      "normal_1_1": {
+        "accepted": true,
+        "difference": 0.0,
+        "limit": 1e-10
+      },
+      "normal_1_2": {
+        "accepted": true,
+        "difference": 0.0,
+        "limit": 1e-10
+      },
+      "normal_2_0": {
+        "accepted": true,
+        "difference": -1.5543122344752192e-15,
+        "limit": 1e-10
+      },
+      "normal_2_1": {
+        "accepted": true,
+        "difference": 0.0,
+        "limit": 1e-10
+      },
+      "normal_2_2": {
+        "accepted": true,
+        "difference": 0.0,
+        "limit": 1e-10
+      },
+      "normal_3_0": {
+        "accepted": true,
+        "difference": 0.0,
+        "limit": 1e-10
+      },
+      "normal_3_1": {
+        "accepted": true,
+        "difference": 1.5543122344752192e-15,
+        "limit": 1e-10
+      },
+      "normal_3_2": {
+        "accepted": true,
+        "difference": 0.0,
+        "limit": 1e-10
+      },
+      "normal_4_0": {
+        "accepted": true,
+        "difference": 0.0,
+        "limit": 1e-10
+      },
+      "normal_4_1": {
+        "accepted": true,
+        "difference": -1.5543122344752192e-15,
+        "limit": 1e-10
+      },
+      "normal_4_2": {
+        "accepted": true,
+        "difference": 0.0,
+        "limit": 1e-10
+      },
+      "normal_5_0": {
+        "accepted": true,
+        "difference": 0.0,
+        "limit": 1e-10
+      },
+      "normal_5_1": {
+        "accepted": true,
+        "difference": 0.0,
+        "limit": 1e-10
+      },
+      "normal_5_2": {
+        "accepted": true,
+        "difference": 1.5543122344752192e-15,
+        "limit": 1e-10
+      },
+      "normal_6_0": {
+        "accepted": true,
+        "difference": 0.0,
+        "limit": 1e-10
+      },
+      "normal_6_1": {
+        "accepted": true,
+        "difference": 0.0,
+        "limit": 1e-10
+      },
+      "normal_6_2": {
+        "accepted": true,
+        "difference": -1.5543122344752192e-15,
+        "limit": 1e-10
+      },
+      "pressure_gradient_l2_squared": {
+        "accepted": true,
+        "difference": 1.3877787807814457e-16,
+        "limit": 1e-10
+      },
+      "pressure_l2_squared": {
+        "accepted": true,
+        "difference": 4.9439619065339e-17,
+        "limit": 1e-10
+      },
+      "pressure_mean": {
+        "accepted": true,
+        "difference": 9.001815945672034e-17,
+        "limit": 1e-10
+      },
+      "strain_l2_squared": {
+        "accepted": true,
+        "difference": 0.0,
+        "limit": 1e-10
+      },
+      "total_traction_boundary_l2_squared": {
+        "accepted": true,
+        "difference": 1.1796119636642288e-16,
+        "limit": 1e-10
+      },
+      "velocity_l2_squared": {
+        "accepted": true,
+        "difference": 1.3877787807814457e-16,
+        "limit": 1e-10
+      },
+      "viscous_dissipation": {
+        "accepted": true,
+        "difference": 0.0,
+        "limit": 1e-10
+      },
+      "viscous_stress_l2_squared": {
+        "accepted": true,
+        "difference": 0.0,
+        "limit": 1e-10
+      },
+      "viscous_traction_boundary_l2_squared": {
+        "accepted": true,
+        "difference": 0.0,
+        "limit": 1e-10
+      },
+      "volume": {
+        "accepted": true,
+        "difference": -1.5543122344752192e-15,
+        "limit": 1e-10
+      }
+    },
+    "raw_by_degree": {
+      "24": {
+        "area_1": 1.0000000000000029,
+        "area_2": 1.0000000000000029,
+        "area_3": 1.0000000000000029,
+        "area_4": 1.0000000000000029,
+        "area_5": 1.0000000000000029,
+        "area_6": 1.0000000000000029,
+        "convection_l2_squared": 0.16666666666666732,
+        "divergence_l2_squared": 0.0,
+        "gradient_l2_squared": 2.0000000000001834,
+        "momentum_residual_l2_squared": 0.0,
+        "normal_1_0": -1.0000000000000029,
+        "normal_1_1": 0.0,
+        "normal_1_2": 0.0,
+        "normal_2_0": 1.0000000000000029,
+        "normal_2_1": 0.0,
+        "normal_2_2": 0.0,
+        "normal_3_0": 0.0,
+        "normal_3_1": -1.0000000000000029,
+        "normal_3_2": 0.0,
+        "normal_4_0": 0.0,
+        "normal_4_1": 1.0000000000000029,
+        "normal_4_2": 0.0,
+        "normal_5_0": 0.0,
+        "normal_5_1": 0.0,
+        "normal_5_2": -1.0000000000000029,
+        "normal_6_0": 0.0,
+        "normal_6_1": 0.0,
+        "normal_6_2": 1.0000000000000029,
+        "pressure_gradient_l2_squared": 0.16666666666666732,
+        "pressure_l2_squared": 0.002777777777777751,
+        "pressure_mean": -2.0780305737465295e-17,
+        "strain_l2_squared": 0.0,
+        "total_traction_boundary_l2_squared": 0.03888888888888887,
+        "velocity_l2_squared": 0.16666666666666732,
+        "viscous_dissipation": 0.0,
+        "viscous_stress_l2_squared": 0.0,
+        "viscous_traction_boundary_l2_squared": 0.0,
+        "volume": 1.0000000000000917
+      },
+      "26": {
+        "area_1": 1.0000000000000013,
+        "area_2": 1.0000000000000013,
+        "area_3": 1.0000000000000013,
+        "area_4": 1.0000000000000013,
+        "area_5": 1.0000000000000013,
+        "area_6": 1.0000000000000013,
+        "convection_l2_squared": 0.16666666666666746,
+        "divergence_l2_squared": 0.0,
+        "gradient_l2_squared": 2.0000000000001803,
+        "momentum_residual_l2_squared": 0.0,
+        "normal_1_0": -1.0000000000000013,
+        "normal_1_1": 0.0,
+        "normal_1_2": 0.0,
+        "normal_2_0": 1.0000000000000013,
+        "normal_2_1": 0.0,
+        "normal_2_2": 0.0,
+        "normal_3_0": 0.0,
+        "normal_3_1": -1.0000000000000013,
+        "normal_3_2": 0.0,
+        "normal_4_0": 0.0,
+        "normal_4_1": 1.0000000000000013,
+        "normal_4_2": 0.0,
+        "normal_5_0": 0.0,
+        "normal_5_1": 0.0,
+        "normal_5_2": -1.0000000000000013,
+        "normal_6_0": 0.0,
+        "normal_6_1": 0.0,
+        "normal_6_2": 1.0000000000000013,
+        "pressure_gradient_l2_squared": 0.16666666666666746,
+        "pressure_l2_squared": 0.0027777777777778004,
+        "pressure_mean": 6.923785371925504e-17,
+        "strain_l2_squared": 0.0,
+        "total_traction_boundary_l2_squared": 0.03888888888888899,
+        "velocity_l2_squared": 0.16666666666666746,
+        "viscous_dissipation": 0.0,
+        "viscous_stress_l2_squared": 0.0,
+        "viscous_traction_boundary_l2_squared": 0.0,
+        "volume": 1.0000000000000902
+      }
+    },
+    "schema": 1
+  },
+  "phase_seconds": {
+    "degree24_form_jit_assembly": 5.710578993021045,
+    "degree26_form_jit_assembly": 6.219646687997738,
+    "mesh_and_tags": 0.010733388015069067,
+    "report_reduction": 0.0004809160018339753
+  },
+  "source_binding": {
+    "clean": true,
+    "executable": "/tmp/navier-fenicsx-r229/bin/python3.12",
+    "executable_sha256": "5f083df36ec986d5cd13d2549ca6cfe1ddaf658509f9e419b454b2fb375c27a3",
+    "interpreter": "/tmp/navier-fenicsx-r229/bin/python",
+    "root": "/home/rharris/git/navier-stokes-vortex-lab",
+    "source_commit": "2e60a7bdc635587b09e3da5f6a03eed2ef3c85c3"
+  },
+  "worker_intervals": {
+    "fixture_setup_jit_and_assembly_seconds": 11.941870598006062,
+    "import_seconds": 0.415166365011828
+  },
+  "worker_schema": 1
+}

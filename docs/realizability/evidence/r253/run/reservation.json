@@ -1,0 +1,28 @@
+{
+  "artifact_inventory_sha256": "cedc36294c6082f24e834805ada9a1035c70926af7070ca962aea1fb9b7d6ebe",
+  "attempt": 1,
+  "caps": {
+    "elapsed_seconds": 180,
+    "mpi_ranks": 1,
+    "pids": 32,
+    "swap_mib": 0,
+    "threads": 1,
+    "velocity_pressure_dofs": 20000,
+    "whole_task_memory_mib": 1536
+  },
+  "contract_sha256": "5290c4357dba53fd47dde9e930506ddfd2453acdbe6c460332212c98d3c42507",
+  "executable": "/tmp/navier-fenicsx-r229/bin/python3.12",
+  "executable_sha256": "5f083df36ec986d5cd13d2549ca6cfe1ddaf658509f9e419b454b2fb375c27a3",
+  "fixture": "rotation",
+  "interpreter": "/tmp/navier-fenicsx-r229/bin/python",
+  "kind": "rotation_assembly",
+  "manifest_sha256": "5f15e1293c95acbf1bce2e7b18307f94655e168b09a4217ffc915e0c3c0fa1cb",
+  "mode": "exact_field_assembly",
+  "monotonic_start": 179829.155340517,
+  "owner": "PC/WSL daisy / R251",
+  "release_nonce": "b0e1c64b3a5954bb9960c9aa471e9da3",
+  "source_commit": "2e60a7bdc635587b09e3da5f6a03eed2ef3c85c3",
+  "status": "RESERVED",
+  "wall_start_utc": "2026-09-26T22:52:34Z",
+  "worker_schema": 1
+}

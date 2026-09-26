@@ -1,0 +1,79 @@
+{
+  "assembly_calls": 76,
+  "attempts_granted": 1,
+  "attempts_spent": 1,
+  "caller_elapsed_after_save_seconds": 12.77116161599406,
+  "caller_exit": 0,
+  "controller_finish_seconds": 0.02548292899155058,
+  "controller_setup_seconds": 0.1596188039984554,
+  "controller_work_seconds": 12.472293549013557,
+  "empty_cleanup": true,
+  "final_save_tail_observed": false,
+  "geometry": {
+    "cell_type": "tetrahedron",
+    "cells": 48,
+    "exterior_facets": 48,
+    "facet_counts": {
+      "1": 8,
+      "2": 8,
+      "3": 8,
+      "4": 8,
+      "5": 8,
+      "6": 8
+    },
+    "geometric_dimension": 3,
+    "mixed_space_dofs": 402,
+    "mixed_space_ghosts": 0,
+    "space_used_for_field_representation": false,
+    "subdivisions": 2,
+    "topological_dimension": 3,
+    "vertices": 27
+  },
+  "independent_parent_wall_observed": false,
+  "launch_commit": "2e60a7bdc635587b09e3da5f6a03eed2ef3c85c3",
+  "maximum_degree_target_ratio": {
+    "24": 0.09170442183403793,
+    "26": 0.09015010959956271
+  },
+  "memory_events": {
+    "high": 0,
+    "low": 0,
+    "max": 0,
+    "oom": 0,
+    "oom_group_kill": 0,
+    "oom_kill": 0
+  },
+  "memory_peak_bytes": 223670272,
+  "no_late_marker": true,
+  "numerical_accepted": true,
+  "numerical_modules_loaded_by_audit": [],
+  "old_allocations_spent": 5,
+  "old_raw_originals_verified": 60,
+  "pair_checks_passed": 38,
+  "phase_seconds": {
+    "degree24_form_jit_assembly": 5.710578993021045,
+    "degree26_form_jit_assembly": 6.219646687997738,
+    "mesh_and_tags": 0.010733388015069067,
+    "report_reduction": 0.0004809160018339753
+  },
+  "pids_events": {
+    "max": 0
+  },
+  "pids_peak": 6,
+  "prior_audit_reproduced": true,
+  "r242_status": "INCOMPLETE",
+  "r246_saved_controller_replay": "PASS",
+  "raw_keys_per_degree": 38,
+  "raw_original_bytes": 99218,
+  "raw_originals_preserved": 14,
+  "recorded_cgroup_absent": true,
+  "recorded_pid_absent": true,
+  "report_bytes": 40167,
+  "source_files_unchanged": 36,
+  "status": "PASS",
+  "worker_exit": 0,
+  "worker_intervals": {
+    "fixture_setup_jit_and_assembly_seconds": 11.941870598006062,
+    "import_seconds": 0.415166365011828
+  }
+}

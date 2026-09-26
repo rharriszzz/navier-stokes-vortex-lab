@@ -1,5 +1,50 @@
 # Current session handoff
 
+Last updated 2026-09-26 (America/New_York) for R253/R254.
+**PC/WSL daisy owns the repository.** No transfer; Mac remains released.
+**R253 ran the R251 exact-field rotation assembly once: PASS, allowance spent 1/1.**
+See [result](docs/realizability/ROTATION_RESULT_R253.md), [raw files and hash
+inventory](docs/realizability/evidence/r253/run_hashes.json), and
+[saved-data audit](docs/realizability/evidence/r253/audit.json). The fixed
+`/tmp/navier-rotation-r251-once` directory and its 14 raw root files remain
+retained; all are copied byte-for-byte into evidence. Worker/caller exit 0,
+controller PROVISIONAL_PASS, completion/caller PASS, empty cleanup, recorded
+PID/cgroup absent. All 76 assembled scalars/receipts, both-degree exact targets
+and 38 pair checks pass. One-use rotation allowance spent; no retry.
+
+Managed peak 223,670,272 bytes / 1536 MiB and six tasks / 32, zero memory.max,
+OOM, OOM-kill and PID-limit events. Caller interval after save 12.771162 s /
+180 s. Resource snapshot ends before final handshake/exit; final save tails and
+independent parent wall interval remain unobserved. No cold-cache claim.
+R250 audit and saved R246 replay pass; 60 old raw originals/five prior
+reservations remain verified with absent recorded PIDs/cgroups. All 36 source
+hashes are unchanged. R246 stays PASS, R242 INCOMPLETE, R229 setup predicate
+false. R254 user asked whether Chrome restart would help memory; answered no
+after workload completion, with no restart performed or needed.
+
+**Next: Astra/high reviews the saved R253 PASS, defines the smallest justified
+next verification milestone or precise blocker, publishes and stops before new
+implementation, allocation or launch.** See [Next task](#next-task). Rotation's
+zero strain cannot validate viscosity coefficient, production weak forms or
+PDE convergence; exact-field oracle PASS has only the fixed scope above.
+
+R253 clean STARTED launch source `2e60a7b` published after R252 metadata
+reconciliation `b803250`; no new model/session snapshot supplied and no agent
+model switch. PC retains ownership, Mac released. Completion prepared for
+publication; delivery hash/result belongs in Git/final response.
+
+Changed: R253 result/audit/hash inventory/14 raw files/checks, seven current
+index/status pages, request/lifecycle/handoff. Checks: saved full envelope and
+76 receipts/log pairs, all R251 scientific/resource/exit/cleanup/caller gates,
+14 original-byte hashes, old R250 audit/R246 replay/60 originals/five spent
+reservations, 36 source hashes, JSON/AST/links, sequential requests, append-only
+records and whitespace. Skipped: new numerical imports/reassembly/solve/rank,
+new artifact rescan/install, full suite/tank/B2, physical/render and Mac
+transfer. Unknown: broader PDE/convergence/viscosity verification, R242 cause,
+rank and artifact-label origin. R253 attempt spent without retry.
+
+### Previous R251 admission (spent by R253)
+
 R252 metadata note (2026-09-26): user asked `model`; recommendation remains
 **GPT-6 Sol / high** for the R251 one-use execution, then Astra/high for result
 interpretation. Official Sol documentation searched/opened; no model switch or
@@ -966,19 +1011,18 @@ and physical-work limits remain unchanged.
 | Owner | PC/WSL `daisy`; Mac `fire.lan` released after published R161 handoff and R162 receipt. |
 | Checkout | `/home/rharris/git/navier-stokes-vortex-lab`. |
 | Branch/upstream | `main` / `origin/main` |
-| Starting state | R251 same-owner clean main/origin/main at 698bd2f after required fast-forward pull; rharris/daisy, empty stashes, R250 completed. STARTED ea8e824 published. |
+| Starting state | R253 same-owner clean main/origin/main at b803250 after required fast-forward pull; rharris/daisy, empty stashes, R252 completed. STARTED/launch 2e60a7b published. |
 | Interpreter | /tmp/navier-fenicsx-r229/bin/python verified as 3.12.13 with -I -S; exact environment artifacts verified, setup memory-event predicate refused. Project Python remains 3.12.14. Old /tmp/navier-fenicsx is still partial. |
 | Other owner/process | Mac `fire.lan` released in the published R161 handoff. Local Git cannot inspect another checkout's unpublished state. |
-| Task processes | Five old allocations spent; R251 verified reservations/raw originals and absent recorded PIDs/cgroups. Fresh rotation directory absent, allowance 0/1 spent. No manager connection or numerical worker in review; fake caller checks only. |
+| Task processes | R253 rotation allowance spent 1/1, PASS; original directory and 14 raw files retained. Worker/caller exit 0, manager cleanup empty, PID 162076 and saved cgroup absent. Five old allocations remain spent. |
 | Symbolic environment | `/tmp/navier-r183-sympy/bin/python`, Python 3.12.14, SymPy 1.14.0, mpmath 1.3.0; recreate using `requirements-symbolic.txt` if missing. Existing environments unchanged. |
-| Delivery state | R251 e09a166 published. R252 model-guidance metadata prepared for publication under the next Continue authorization before synchronization and R253 start. PC retains ownership. |
+| Delivery state | R252 b803250 verified by clean pull; R253 STARTED/launch 2e60a7b published. Result/evidence/completion prepared for publication; delivery in Git/final response. PC retains ownership. |
 
 ## Current result and limits
 
-R251 separately admits one later rotation assembly with the fixed caller and
-unchanged scientific/resource gates. No rotation attempt spent; the source
-proposal remains non-executable. Follow the [single next task](#next-task).
-Earlier results and their limits below retain their original scope.
+R253 passed the R251 exact-field rotation assembly oracle once; allocation
+spent. See [result](docs/realizability/ROTATION_RESULT_R253.md) and follow the
+[single next task](#next-task). Earlier results below retain their scope.
 
 R103 removes recursive infrastructure certification while preserving process
 safeguards, observed accounting, cleanup and incomplete-result refusal. R104
@@ -1107,56 +1151,34 @@ agent-side POV-Ray backtraces are unavailable.
 
 ## Next task
 
-**GPT-6 Sol / high / PC-WSL daisy: execute exactly one R251 rotation assembly,
-preserve all evidence and cleanup/spent state, publish and stop.**
-On **Continue**, follow clean synchronization/ownership/STARTED publication.
-Read [R251 admission](docs/realizability/ROTATION_ADMISSION_R251.md),
-[allocation](docs/realizability/evidence/r251/allocation.json),
-[caller](docs/realizability/evidence/r251/run_once.py), tests/audit and
-[R249 contract](docs/realizability/ROTATION_INTEGRATION_REVIEW_R249.md).
+**GPT-6 Astra / high / PC-WSL daisy: review R253's saved exact-field rotation
+PASS, define the smallest justified next verification milestone or a precise
+blocker, publish and stop.** On **Continue**, first follow clean synchronization,
+ownership and STARTED publication. Read [R253 result](docs/realizability/ROTATION_RESULT_R253.md),
+[retained audit/raw files](docs/realizability/evidence/r253/audit.json),
+[R251 admission](docs/realizability/ROTATION_ADMISSION_R251.md),
+[R247 independent targets](docs/realizability/VERIFICATION_MILESTONE_R247.md)
+and [R246 Poiseuille result](docs/realizability/POISEUILLE_RESULT_R246.md).
 
-1. Verify exact clean launch HEAD equals upstream after STARTED publication;
-   all 36 source hashes, caller/source-inventory/artifact-inventory hashes,
-   manifest/contract, interpreter, eleven runtime files, four library resolutions
-   and cached archive must match R251. Confirm fixed directory
-   `/tmp/navier-rotation-r251-once` absent including dangling links; preserve
-   five spent old reservations. No standalone numerical import or prewarming.
-2. Execute the fixed caller once with `/tmp/navier-fenicsx-r229/bin/python`
-   and the exact 40-character published launch commit argument. Caller refreshes
-   host memory, unified controllers and reviewed manager version before
-   reservation; actual held unit caps/source/expiry precede numerical release.
-   Keep checkout/environment unchanged until the caller and task processes stop.
-   Retain 180s total, 15/150/15 controller deadlines, 149s independent runtime
-   plus 1s grace, 1536 MiB/no swap/32 tasks/one rank/thread and 2-MB envelope.
-3. Directory creation/reservation or partial worker start spends this allowance,
-   including zero-form/API/JIT/numerical/resource failures. Preserve partial
-   files and logs; no alternate directory, symbolic-zero substitution, changed
-   gates or retry. Demonstrated pre-reservation/pre-worker/pre-import caller
-   errors are recoverable only after failure preservation, absent directory and
-   no new manager task verification, fix/test and clean republished source.
-   Uncertain process state stops for review; do not infer an unspent allocation.
-4. Preserve all small raw root files byte-for-byte in new result evidence, hash
-   them against originals, and retain source/manifest/admission/held/exit/resource/
-   cleanup and caller status. Verify recorded PID/cgroup absence, old reservations
-   and raw originals, and no unknown descendants. Recompute saved rotation
-   acceptance from raw values only if a complete report exists. Require actual
-   worker/caller exit 0, all 76 receipts/scalars/geometry/version bindings,
-   both-degree exact/zero/pair gates, finite peaks/zero limit events/empty cleanup
-   and completion/caller PASS with late/persistence failure precedence. Preserve
-   INCOMPLETE without inventing absent counters or raw values.
-5. Publish result, request/lifecycle/handoff and current status links; stop.
-   No full suite, extra numerical import/assembly/solve, installs, manufactured
-   convergence/tank/B2, physical/rendering or Mac transfer. R246 and R242 retain
-   their original statuses. Report snapshot/final-save/parent-wall limitations;
-   no cold-cache claim or reclassification of R229's setup predicate.
+1. Recheck original saved rotation envelope, all 76 raw scalar/receipt keys,
+   exact and pair decisions, geometry, source/artifact identity, manager exit,
+   resource events and cleanup against independent R247 algebra and fixed R251
+   gates. Preserve R253 PASS in its exact scope and all six spent allocations.
+2. Explain which new property is still unverified: rotation's D=0 cannot test
+   viscosity coefficients or production weak forms, and one n=2 exact-field
+   assembly cannot establish manufactured spatial/time convergence or general
+   solver stability. Compare a minimal nonzero-strain manufactured oracle with
+   the roadmap's convergence prerequisites using saved source/algebra only.
+3. Publish one implementation-ready milestone contract or precise blocker,
+   including required source/report/admission changes, checks and stop rules.
+   Do not implement, import FEM, connect to manager, grant a new allocation,
+   rerun/reassemble/solve, install, or start tank/B2/physical/render work in
+   this review. Leave R242 INCOMPLETE, R246 PASS and R229 setup predicate false.
 
-Completion: one spent result or evidenced pre-reservation blocker, with all
-available raw evidence, status/cleanup and source binding preserved and published.
-Recommend **Astra/high** to interpret the outcome and choose the next smallest
-verification step; do not grant a retry. Sol/high support was checked in
-[official OpenAI documentation](https://developers.openai.com/api/docs/models/gpt-6-sol);
-task fit is judgment. No model/session switch or new chat required.
-Next prompt: **Continue**.
+Completion: evidence-backed review and one concrete next source task or blocker,
+with no execution. Recommend Sol/high only if the next implementation contract
+is fixed and coding/tests remain routine; Astra/high interprets scientific
+results or revises gates. Next prompt: **Continue**.
 
 ### Historical R230 single-fixture execution task (R232 spent)
 
