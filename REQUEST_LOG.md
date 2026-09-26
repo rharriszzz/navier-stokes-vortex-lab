@@ -9259,3 +9259,28 @@ model high support rechecked; no model/session switch or /new needed. PC retains
 ownership; Mac released. R243 b8327da verified by clean pull; R244 STARTED
 32b444a published. Completion prepared for scoped publication; delivery hash/
 result in Git/final response, no post-push edit.
+
+## R245 — 2026-09-26 — Review separate R244-policy fixture admission
+
+**User request (supplied excerpt):**
+
+```text
+Worked for 13m 8s · done 5:30 PM  │  Context window:              22% left (204K used / 258K)                             │
+│  Weekly limit:                [██████████████████░░] 89% left (resets 13:10 on 3 Oct) │
+│  Luna Reserve Weekly limit:   [████████████████████] 99% left (resets 10:18 on 3 Oct) │, continue
+```
+
+**Scope/status:** STARTED. Review one new later n=2 Poiseuille admission under
+R244 policy; verify source/interpreter/artifacts, prepare and test a finite
+bound caller if justified, publish admission or blocker and stop before
+execution. All four old allocations stay spent. Continue authorizes scoped
+start/completion commits and pushes.
+
+Preflight: rharris/daisy, PC/WSL Linux 6.18.33.2-microsoft-standard-WSL2 x86_64;
+/home/rharris/git/navier-stokes-vortex-lab; clean main/origin/main equal at
+4449b1ae884bd1fa073e72aa99cd9889e763faaa after required fast-forward pull
+(already up to date), empty stashes, R244 completed, PC owner, Mac released.
+Supplied snapshot: completion 13m 8s / 5:30 PM, context 22% (204K/258K),
+weekly 89%, Luna Reserve 99%. No session/model/version/account fields, /new,
+literal /status, token totals or credit count supplied. User-reported values;
+no account verification or agent model/session switch.

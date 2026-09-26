@@ -1504,3 +1504,12 @@ model high support rechecked; no model/session switch or /new needed. PC retains
 ownership; Mac released. R243 b8327da verified by clean pull; R244 STARTED
 32b444a published. Completion prepared for scoped publication; delivery hash/
 result in Git/final response, no post-push edit.
+
+## R245 — R244-policy single-fixture admission review
+STARTED | 2026-09-26T21:33:20Z | PC/WSL daisy | released: no
+Identity rharris/daisy, Linux 6.18.33.2-microsoft-standard-WSL2 x86_64;
+/home/rharris/git/navier-stokes-vortex-lab; clean main/origin/main at
+4449b1ae884bd1fa073e72aa99cd9889e763faaa after required fast-forward pull,
+empty stashes, R244 completed, PC owner, Mac released. Review separate later
+admission, prepare bound caller if justified; publish and stop before execution.
+All four older allocations remain spent 1/1.
