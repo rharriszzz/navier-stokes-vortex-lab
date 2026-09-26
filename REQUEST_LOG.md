@@ -8454,3 +8454,51 @@ empty stashes and no open lifecycle record. First sandbox pull was refused by
 read-only .git/FETCH_HEAD; approved escalation reran the exact required clean
 fast-forward pull, already up to date, HEAD/upstream 0/0. No source or run work
 preceded that pull. R234 completion was published at this HEAD.
+
+### R235 outcome — one numerical attempt spent, INCOMPLETE
+
+The clean R235 launch bound f7ac56519a1bf4c99efae21ce8ba9510ed5113ea,
+all 25 R233 source hashes, R234 caller hash, manifest and R229 interpreter
+SHA-256. An initial read-only prelaunch script failed on a guessed full commit
+string, before caller/manager/reservation; corrected read-only verification
+passed. The one fixed-directory command then reserved
+/tmp/navier-poiseuille-r234-once at 2026-09-26T17:06:03Z, consuming the new
+allocation. The held worker verified clean source/interpreter and 1536 MiB/no
+swap/32-task/one-rank-thread limits; setup before release took 0.140517766 s.
+
+The worker printed `Refusal: sparse linear solve failed` and exited 1. In the
+unchanged source, this follows returned ksp.solve and occurs if KSP convergence
+reason is nonpositive or the answer contains a nonfinite value. Neither branch
+outcome was saved. The controller's generic final reason reflects missing
+resource evidence after failed worker exit; it is not a more specific numerical
+diagnosis. Caller and controller saved INCOMPLETE. Caller process exited 1;
+caller post-save time 1.584184013 s, controller result/log save 1.499145865 s.
+No numerical.json, finished.json or resource_snapshot.json exists. Actual KSP
+reason/answer, rank/conditioning, true residual, diagnostics/accuracy/budgets,
+memory peak/events and final save/return tails remain unmeasured.
+
+Manager final MainPID 0/empty ControlGroup; cleanup.empty=true and
+unknown_children=false. Read-only checks confirmed PID 147714/cgroup absent.
+Both R232 and R235 allowances are now spent 1/1; no retry or alternate directory
+used. R229's 303-event setup refusal remains false. The [R235 result](docs/realizability/POISEUILLE_RESULT_R235.md)
+and docs/realizability/evidence/r235/ retain ten byte-exact raw files (5,537
+bytes), run_hashes.json, execution.json and checks.json. All ten retained /tmp
+originals match. No numerical/resource PASS or full-suite/tank/B2 admission.
+
+Files changed: R235 result and 13 evidence files (ten raw plus three records),
+prototype README, B1_SETUP, four track overviews, STATUS, SESSION_HANDOFF,
+REQUEST_LOG and WORK_SESSIONS. Checks: exact launch/source/interpreter binding,
+actual held limits/exit, ten raw hashes/JSON, missing numerical/snapshot/finish
+reports, PID/cgroup absence, 187 local links, 235 unique IDs, append-only logs
+and Git whitespace. Skips: another numerical attempt, full suite, rotation,
+tank/B2, physical/render work, package install, Mac transfer and source suite
+rerun (reviewed code unchanged). Official OpenAI Docs was searched/opened for
+Astra/high; no model/session switch or account check.
+
+Next: Astra/high reviews the saved KSP refusal and source without FEM, determines
+the smallest diagnostic or a concrete blocker and stops before any new numerical
+allocation. Because the supplied context is 32% remaining and this is a distinct
+interpretation task, recommend /new, select Astra/high, then Continue. PC/WSL
+daisy retains ownership, Mac released. R234 completion 49a56cb verified by clean
+pull; R235 STARTED f7ac565 published. Completion prepared for scoped commit/push;
+final delivery hash/result belongs in Git/final response, no post-push edit.

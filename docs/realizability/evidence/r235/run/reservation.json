@@ -1,0 +1,21 @@
+{
+  "attempt": 1,
+  "caps": {
+    "elapsed_seconds": 180,
+    "mpi_ranks": 1,
+    "pids": 32,
+    "swap_mib": 0,
+    "threads": 1,
+    "velocity_pressure_dofs": 20000,
+    "whole_task_memory_mib": 1536
+  },
+  "fixture": "poiseuille",
+  "interpreter": "/tmp/navier-fenicsx-r229/bin/python",
+  "manifest_sha256": "7a8bda917e6b46994ad24c68e0b6c6013b7d6776f90c86a6de763f31f52fa558",
+  "monotonic_start": 160251.550918777,
+  "owner": "PC/WSL daisy / R234",
+  "release_nonce": "5285424c63dbba9bbe81279f0575b3bc",
+  "source_commit": "f7ac56519a1bf4c99efae21ce8ba9510ed5113ea",
+  "status": "RESERVED",
+  "wall_start_utc": "2026-09-26T17:06:03Z"
+}

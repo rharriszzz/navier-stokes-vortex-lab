@@ -1118,3 +1118,27 @@ authorizes scoped commit/push and exactly one R234 admitted n=2 fixture at
 spent-state preservation. Old R232 allocation remains spent 1/1; new 0/1
 until reservation or partial worker start. Recover a demonstrated pre-reservation
 caller fault only under the session protocol; no post-boundary retry.
+
+### R235 completion
+COMPLETED | 2026-09-26T17:09:17Z | PC/WSL daisy | released: no
+One fixed-directory n=2 Poiseuille attempt ran after clean STARTED f7ac565.
+Reservation/held worker/source binding/limits verified. Worker exited 1 with
+`Refusal: sparse linear solve failed`; caller/controller INCOMPLETE. Exact KSP
+reason versus nonfinite answer unknown. No numerical report or pre-exit
+resource snapshot; actual accuracy/rank/resource events unmeasured. Manager
+cleanup empty/unknown_children=false, PID/cgroup absent. New allocation spent
+1/1; older R232 allocation remains spent 1/1. No retry. R229 setup refusal
+retained. R235 result, ten raw files and three evidence records, prototype
+README/B1_SETUP, four overviews, STATUS, SESSION_HANDOFF, REQUEST_LOG and this
+log changed. Checks: clean binding, held limits and actual exit, ten raw hashes/
+JSON/originals, absent numerical/snapshot/finish records, empty cleanup and
+PID/cgroup absence, 187 local links, 235 unique request IDs, append-only logs
+and Git whitespace. Skips: numerical retry, full suite/rotation/tank/B2,
+physical/render, install, Mac transfer and source-suite rerun (unchanged).
+Evidence: docs/realizability/POISEUILLE_RESULT_R235.md and evidence/r235/.
+Next: Astra/high import-free review of KSP status/answer refusal, minimal
+discriminating diagnostic or blocker; no FEM/new allocation. Recommend /new
+for distinct review at reported 32% context, select Astra/high and Continue.
+PC retains ownership, Mac released. R234 completion 49a56cb verified; STARTED
+f7ac565 published. Completion prepared for scoped publication; final delivery
+hash/result belongs in Git/final response, no post-push edit.

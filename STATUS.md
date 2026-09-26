@@ -1,6 +1,6 @@
 # Project status: a boundary-controlled engineering approximation
 
-Updated 2026-09-26 (America/New_York), through R234. PC/WSL daisy owns the
+Updated 2026-09-26 (America/New_York), through R235. PC/WSL daisy owns the
 repository. **R232 corrects the recoverable R231 caller failure and resumes the
 same authorized, unspent one-use fixture, then spends it on a PETSc LU failure.**
 The [R232 result](docs/realizability/POISEUILLE_RESULT_R232.md) records an
@@ -12,11 +12,13 @@ spent 1/1; that allowance cannot be reused.** [R233 source review](docs/realizab
 demonstrates that CSR conversion discarded zero pressure/scalar diagonal slots
 and repairs their storage without changing the operator. All 59 standard-library
 tests pass; no numerical imports or new workload ran. [R234 admission](docs/realizability/POISEUILLE_ADMISSION_R234.md)
-grants one new later n=2 fixture in `/tmp/navier-poiseuille-r234-once`, 0/1 spent,
-with a prepared caller. The old 1/1 charge remains. Caller import/timer/refusal
-checks pass; source/interpreter and retained evidence hashes match. Next:
-Sol/high executes once after Continue; follow the
-[single task](SESSION_HANDOFF.md#next-task). No `/new` needed.
+granted one new n=2 fixture. [R235 result](docs/realizability/POISEUILLE_RESULT_R235.md)
+spent it 1/1: the worker reached the sparse linear solve and refused with
+`Refusal: sparse linear solve failed`. Exit 1 and empty cleanup are confirmed;
+no numerical report or resource snapshot exists, so the exact KSP reason,
+accuracy and resource events remain unknown. Both allocations are spent 1/1.
+Next: Astra/high reviews the saved refusal without FEM; follow the
+[single task](SESSION_HANDOFF.md#next-task).
 
 Historical R231 context: the
 [prelaunch result](docs/realizability/POISEUILLE_PRELAUNCH_R231.md) records a
@@ -38,7 +40,8 @@ fields are in REQUEST_LOG.md. These are snapshots, not independent checks.
 R231 STARTED c90193e, allocation c3b5598 and completion db68c61 were published.
 R232 completion 7c41b80 verified by clean pull; R233 STARTED c08eb25 published.
 R233 completion 15c62dd verified by clean pull; R234 STARTED 6cc9e88 published.
-R234 completion delivery belongs in Git/final response.
+R234 completion 49a56cb verified by clean pull; R235 STARTED f7ac565 published.
+R235 completion delivery belongs in Git/final response.
 R230 supplied snapshot: preceding completion 13m 26s / 11:45 AM; 938,400 tokens
 (831,406 input, 17,031,424 cached, 106,994 output, 23,518 reasoning). Current
 Astra/high, weekly 98% (11:23 Oct 3 reset), Luna Reserve 99% (10:18 Oct 3 reset).

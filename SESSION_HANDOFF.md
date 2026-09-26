@@ -1,7 +1,18 @@
 # Current session handoff
 
-Last updated 2026-09-26 (America/New_York) for R234.
+Last updated 2026-09-26 (America/New_York) for R235.
 **PC/WSL daisy owns the repository.** No transfer; Mac remains released.
+**R235 spent the new R234 n=2 Poiseuille allocation: INCOMPLETE at the
+sparse linear solve, with no retry.** The [result](docs/realizability/POISEUILLE_RESULT_R235.md)
+and [raw evidence](docs/realizability/evidence/r235/run/) preserve clean source/
+interpreter and held-limit binding, worker exit 1 with `Refusal: sparse linear
+solve failed`, caller/controller INCOMPLETE and empty cleanup. No numerical.json
+or resource snapshot exists. The exact KSP reason/answer, numerical diagnostics
+and resource events are unmeasured. The fixed R235 directory is retained,
+PID/cgroup absent. Both R232 and R235 one-use allowances are spent 1/1.
+R229's 303-event setup refusal remains false. Full suite/tank/B2 execution
+remains unadmitted.
+
 **R234 admits one NEW later bounded n=2 Poiseuille fixture, 0/1 spent.** The
 [admission contract](docs/realizability/POISEUILLE_ADMISSION_R234.md) and
 [allocation/caller](docs/realizability/evidence/r234/) fix the new directory at
@@ -28,12 +39,32 @@ absent. No numerical report or resource snapshot exists. R229's 303-event
 setup refusal remains false. No FEM, live scope, install or new allocation
 occurred in R233; full suite/tank/B2 work remains unadmitted.
 
-**Next: Sol/high executes the prepared R234 caller exactly once after Continue,
-preserves result/spent state/cleanup and publishes, then stops.** No `/new` is
-needed for this connected execution step. The new directory is currently absent;
-never reuse the old `/tmp/navier-poiseuille-r230-once` or reset its spent 1/1
-charge. R233 completion 15c62dd was verified by clean pull; R234 STARTED 6cc9e88
-is published. Completion delivery belongs in Git/final response, no post-push edit.
+**Next: Astra/high reviews the saved R235 KSP refusal and source without
+FEM, identifies the smallest discriminating diagnostic or blocker, then stops.**
+Do not launch another numerical attempt or reuse either fixed directory.
+Because this is a distinct review and the supplied context is 32% remaining,
+recommend `/new`, select Astra/high, then Continue. This is advice only; no
+agent-initiated session/model switch occurred. R234 completion 49a56cb was
+verified by clean pull; R235 STARTED f7ac565 published. Completion delivery
+belongs in Git/final response, with no post-push edit.
+
+R235 supplied snapshot: 9m 16s / 1:02 PM completion; Codex v0.155.1,
+Astra/high before user-reported switch to Sol/high, session
+01a0de98-b2e9-74c1-8c8f-97150fb60d8c, context 32% left (180K/258K),
+weekly 93% (11:23 on Oct 3), Luna Reserve 99% (10:18 on Oct 3). No /new,
+token-total or credit-count excerpt supplied. REQUEST_LOG.md R235 retains
+supplied fields with account email redacted. Values are user-reported account
+snapshots, not independently checked or project-specific usage.
+
+R235 changed its result and 13 evidence files (ten raw plus three records),
+prototype README, B1_SETUP, four track overviews, STATUS and request/lifecycle/
+handoff records. Checks: exact clean launch/source/interpreter binding, actual
+held scope and worker exit, ten raw hashes/JSON/originals (5,537 bytes), missing
+numerical/snapshot/finish reports, empty cleanup/PID/cgroup absence, 187 local
+links, 235 unique request IDs, append-only logs and Git whitespace. Skips:
+another numerical attempt, full suite/rotation/tank/B2, physical/render work,
+package install, Mac transfer and source-suite rerun (unchanged). Exact KSP
+reason/answer, matrix rank, accuracy and resource events remain unknown.
 
 R234 supplied snapshot: 9m 47s / 12:52 PM completion; Codex v0.155.1, Astra/high,
 thread Review Codex task output, session 01a0de98-b2e9-74c1-8c8f-97150fb60d8c,
@@ -290,12 +321,12 @@ and physical-work limits remain unchanged.
 | Owner | PC/WSL `daisy`; Mac `fire.lan` released after published R161 handoff and R162 receipt. |
 | Checkout | `/home/rharris/git/navier-stokes-vortex-lab`. |
 | Branch/upstream | `main` / `origin/main` |
-| Starting state | R234 same-owner clean entry at 15c62dd equal to origin/main after required fast-forward pull; rharris/daisy, empty stashes, no conflicting open session. |
+| Starting state | R235 same-owner clean entry at 49a56cb equal to origin/main after required fast-forward pull; rharris/daisy, empty stashes, no conflicting open session. First sandbox pull could not write .git/FETCH_HEAD; approved exact host rerun succeeded. |
 | Interpreter | /tmp/navier-fenicsx-r229/bin/python verified as 3.12.13 with -I -S; exact environment artifacts verified, setup memory-event predicate refused. Project Python remains 3.12.14. Old /tmp/navier-fenicsx is still partial. |
 | Other owner/process | Mac `fire.lan` released in the published R161 handoff. Local Git cannot inspect another checkout's unpublished state. |
-| Task processes | R234 read-only checks confirm R232 PID 144212/cgroup absent; old reservation/raw originals retained. New /tmp/navier-poiseuille-r234-once absent; no R234 worker/reservation. Old allowance spent 1/1; new allowance 0/1 spent. |
+| Task processes | R235 worker PID 147714 exited 1 after sparse-solve refusal; manager final MainPID 0/empty ControlGroup, cleanup empty/unknown_children=false. Read-only PID/cgroup absence confirmed. R235 directory/reservation and ten raw originals retained. R232 older worker absent; both allocations spent 1/1. |
 | Symbolic environment | `/tmp/navier-r183-sympy/bin/python`, Python 3.12.14, SymPy 1.14.0, mpmath 1.3.0; recreate using `requirements-symbolic.txt` if missing. Existing environments unchanged. |
-| Delivery state | R233 completion 15c62dd verified by clean pull; R234 STARTED 6cc9e88 published. R234 admission/caller/completion prepared for scoped publication; final delivery in Git/final response. PC retains ownership. |
+| Delivery state | R234 completion 49a56cb verified by clean pull; R235 STARTED f7ac565 published. R235 result/completion prepared for scoped publication; final delivery in Git/final response. PC retains ownership. |
 
 ## Current result and limits
 
@@ -426,56 +457,48 @@ agent-side POV-Ray backtraces are unavailable.
 
 ## Next task
 
-**GPT-6 Sol / high / PC-WSL daisy: execute exactly one admitted R234 n=2
-Poiseuille fixture using the prepared caller; persist the result and stop.**
-No `/new` needed. Select Sol/high and send **Continue**. The source/admission
-choice is complete; this is mechanical execution. Return to Astra/high for
-numerical interpretation or changed scientific/admission decisions. Official
-[OpenAI Docs](https://developers.openai.com/api/docs/models/gpt-6-sol) was
-searched/opened and confirms high support; fit is judgment, not an account check.
+**GPT-6 Astra / high / PC-WSL daisy: review the spent R235 sparse linear
+solve refusal, with no FEM or new allocation.** Recommend `/new` for this
+distinct numerical interpretation step, select Astra/high, then **Continue**.
+The supplied context is 32% remaining; the committed evidence and handoff
+carry the task to a fresh chat. [Official OpenAI Docs](https://developers.openai.com/api/docs/models/gpt-6-astra)
+was searched/opened and confirms high reasoning support. Model fit and /new
+advice are judgments, not account checks or agent-initiated switches.
 
-Read the [R234 contract](docs/realizability/POISEUILLE_ADMISSION_R234.md),
-[allocation](docs/realizability/evidence/r234/allocation.json),
-[caller/checks](docs/realizability/evidence/r234/),
-[R233 source review](docs/realizability/POISEUILLE_SPARSE_REVIEW_R233.md) and
-[R232 spent result](docs/realizability/POISEUILLE_RESULT_R232.md).
-The new allocation is 0/1 spent at R234 completion; the old R230/R232 allocation
-is permanently spent 1/1. No numerical or live workload ran in R234.
+Read the [R235 result](docs/realizability/POISEUILLE_RESULT_R235.md),
+[raw worker log](docs/realizability/evidence/r235/run/worker.log),
+[controller/caller records](docs/realizability/evidence/r235/run/),
+[checks](docs/realizability/evidence/r235/checks.json), R234 admission,
+R233 sparse review, `verification/nonlinear_port/{cube_adapter,sparse,fixture_driver}.py`
+and the frozen manifest. Both fixture allowances are spent 1/1. R235 reached
+`sparse_solve`: `ksp.solve` returned, then the source refused either a
+nonpositive KSP reason or a nonfinite answer. Neither branch outcome, the
+matrix nor a numerical/resource report was saved. The generic controller
+reason denotes absent resource evidence after failure, not the immediate cause.
 
 1. Follow normal clean Continue ownership/synchronization/start publication.
-   Check request/lifecycle records for any later reservation/spent state;
-   directory absence alone does not renew an allowance. PC retains ownership,
-   Mac released. Preserve `/tmp/navier-poiseuille-r230-once` and its raw evidence.
-2. Verify every hash in R233's `source_sha256` inventory, R234's caller hash
-   from allocation.json and the frozen manifest. Use only
-   `/tmp/navier-fenicsx-r229/bin/python`, resolved SHA-256
-   `5f083df36ec986d5cd13d2549ca6cfe1ddaf658509f9e419b454b2fb375c27a3`.
-   No pin substitution, package install, source repair after reservation,
-   standalone numerical imports or prewarming.
-3. After publishing a clean STARTED commit, obtain its exact 40-character HEAD
-   and run `docs/realizability/evidence/r234/run_once.py EXACT_LAUNCH_COMMIT`
-   with that pinned interpreter. The caller refreshes host/manager preflight
-   inside its outer timer, verifies the clean source and interpreter, and
-   reserves only `/tmp/navier-poiseuille-r234-once`. Keep source unchanged while
-   running. Use the existing reviewed SystemdBackend, with 180 s outer,
-   149+1 s worker expiry, 1536 MiB/no swap/32 tasks, one rank/thread and at most
-   20,000 mixed DOFs. All numerical/resource gates remain mandatory.
-4. Reservation/directory creation or partial worker start spends the new 1/1
-   allowance, including an incomplete result. Persist outputs and actual
-   exit/cleanup, missing-counter/timing gaps and spent state, then stop without
-   another numerical command or alternate directory. Do not relax gates.
-   A proven caller/preflight error before reservation, worker and numerical
-   import is recoverable: preserve it, verify no directory/new manager process,
-   fix/test without FEM, republish clean binding and continue the same unspent
-   allowance. Uncertain process state stops for review.
-5. Publish raw result/checks, updated status and handoff, completion record and
-   one next task. Recommend Astra/high to assess the actual numerical result
-   or failure. A pass verifies only this fixture; convergence, full suite,
-   rotation, tank/B2, physical and rendering work remain unadmitted.
+   Confirm no live R235 worker/cgroup and preserve both fixed directories/raw
+   evidence. No machine transfer, install or numerical launch.
+2. Audit the post-KSP status/answer check and its interaction with existing
+   Newton and PETSc settings, using saved evidence and import-free source/
+   synthetic tests. Distinguish proven facts from potential numeric pivots,
+   rank/conditioning, nonfinite answer or API behavior. Do not assert an
+   unrecorded KSP reason, resource counter or accuracy result.
+3. Identify the smallest diagnostic needed to disambiguate this refusal on a
+   later separately reviewed attempt. If source instrumentation is clearly
+   safe, implement/test only that diagnostic while preserving solver/operator,
+   gate thresholds, fixture and caps. Otherwise document a precise blocker
+   and next discriminating non-FEM check. No third allocation in this review.
+4. Publish the source/evidence result or blocker, checks/skips and one later
+   decision task. Any future numerical attempt needs a separate reviewed
+   admission and a new exclusive directory; neither spent directory may be
+   reused. Full suite, rotation, tank/B2, physical/rendering work remain
+   unadmitted.
 
-Completion: one persisted PASS or explicit INCOMPLETE outcome with actual
-exit/confirmed cleanup and honest missing-evidence accounting, old/new charges
-preserved, scoped commit/push, then stop. No automatic second numerical attempt.
+Completion: a tested minimal diagnostic source change or precise blocker,
+explicit old/new spent state, no FEM/import/JIT/solve or live task scope,
+scoped commit/push, then stop. Recommend Sol/high only if a later mechanical
+launch is separately admitted; retain Astra/high for numerical-method decisions.
 
 ### Historical R230 single-fixture execution task (R232 spent)
 

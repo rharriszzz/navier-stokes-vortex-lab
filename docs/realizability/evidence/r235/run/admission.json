@@ -1,0 +1,8 @@
+{
+  "approved": true,
+  "attempts_granted": 1,
+  "fixture": "poiseuille",
+  "manifest_sha256": "7a8bda917e6b46994ad24c68e0b6c6013b7d6776f90c86a6de763f31f52fa558",
+  "run_directory": "/tmp/navier-poiseuille-r234-once",
+  "source_commit": "f7ac56519a1bf4c99efae21ce8ba9510ed5113ea"
+}

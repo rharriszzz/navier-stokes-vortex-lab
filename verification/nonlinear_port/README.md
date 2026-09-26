@@ -19,9 +19,12 @@ The R231 prelaunch import error was corrected before this attempt.
 [R233](../../docs/realizability/POISEUILLE_SPARSE_REVIEW_R233.md) demonstrates and
 repairs CSR removal of structural zero pressure/scalar diagonals. No numerical
 rerun occurred in R233. [R234 admission](../../docs/realizability/POISEUILLE_ADMISSION_R234.md)
-grants one new later n=2 fixture, 0/1 spent, in a fresh fixed directory with a
-prepared caller. The old allocation stays spent 1/1; next is bounded execution
-after Continue through the [handoff task](../../SESSION_HANDOFF.md#next-task).
+granted one new n=2 fixture with a prepared caller.
+[R235](../../docs/realizability/POISEUILLE_RESULT_R235.md) spent it 1/1:
+`sparse_solve` refused after KSP solve returned, with exit 1 and empty cleanup.
+The exact KSP reason/answer, numerical diagnostics and resource events were not
+saved. Both fixture allowances are spent; next is an Astra/high source/evidence
+review through the [handoff task](../../SESSION_HANDOFF.md#next-task).
 
 - `polynomial.py`, `fixtures.py`: exact rational manufactured fields and
   independent Poiseuille/rigid-rotation oracles.

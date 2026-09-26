@@ -10,9 +10,12 @@ memory.max events, no OOM/kill) remains unchanged. Full convergence/tank/B2
 execution remains unadmitted. [R233](docs/realizability/POISEUILLE_SPARSE_REVIEW_R233.md)
 repairs the demonstrated loss of structural zero diagonals; 59 standard-library
 tests pass without numerical imports. [R234](docs/realizability/POISEUILLE_ADMISSION_R234.md)
-admits one new later fixture, 0/1 spent, with a prepared caller and fresh fixed
-directory; the old attempt remains spent 1/1. Follow the
-[handoff task](SESSION_HANDOFF.md#next-task) for Sol/high execution after Continue.
+admitted one new fixture. [R235](docs/realizability/POISEUILLE_RESULT_R235.md)
+spent that 1/1 allocation: the worker reached the sparse solve, then refused
+without a numerical report or resource snapshot. Cleanup is empty. Both fixture
+allowances are spent 1/1; full suite/tank/B2 execution remains unadmitted.
+Follow the [handoff task](SESSION_HANDOFF.md#next-task) for Astra/high review
+of the saved KSP refusal without FEM.
 No tank/hardware route or feasible contraction range is established.
 
 R188 priority update (2026-09-22): establish measurable essential dynamical

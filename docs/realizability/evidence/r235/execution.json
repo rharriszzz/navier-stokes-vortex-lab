@@ -1,0 +1,26 @@
+{
+  "actual_caller_exit_code": 1,
+  "caller_stdout": {
+    "elapsed_after_caller_save": 1.5841840130160563,
+    "inner_status": "INCOMPLETE",
+    "reason": null,
+    "run_directory": "/tmp/navier-poiseuille-r234-once",
+    "status": "INCOMPLETE"
+  },
+  "cgroup_absent_after_cleanup": true,
+  "command": [
+    "/tmp/navier-fenicsx-r229/bin/python",
+    "/home/rharris/git/navier-stokes-vortex-lab/docs/realizability/evidence/r234/run_once.py",
+    "f7ac56519a1bf4c99efae21ce8ba9510ed5113ea"
+  ],
+  "finished_json_present": false,
+  "numerical_attempts_granted": 1,
+  "numerical_attempts_spent": 1,
+  "numerical_json_present": false,
+  "raw_bytes_copied": 5537,
+  "raw_files_copied": 10,
+  "resource_snapshot_json_present": false,
+  "worker_pid": 147714,
+  "worker_pid_absent_after_cleanup": true,
+  "working_directory": "/tmp"
+}

@@ -1,0 +1,46 @@
+{
+  "files": {
+    "admission.json": {
+      "bytes": 282,
+      "sha256": "25e60e4d076af48bbadeefcc7272d2931d57a8aa0473a8cef3ee6ded1987e0f2"
+    },
+    "caller.json": {
+      "bytes": 752,
+      "sha256": "b8f971155aa4ea69408f084be3121ae4b747cb50be5c874171028d5c2b68d76d"
+    },
+    "caller_completion.json": {
+      "bytes": 128,
+      "sha256": "d3f4f9bd0837ffef553757ab3325530a5cf5863762d9908be5607bb25ec3c316"
+    },
+    "completion.json": {
+      "bytes": 273,
+      "sha256": "593a1a7f1b284d0e6c4c9046f74acfc211dd8bf047cedf02ce4008246749d777"
+    },
+    "held.json": {
+      "bytes": 657,
+      "sha256": "5a438bd46cc9599f5dc3c6e517f9c15661a267d889f817195e06715629425ed5"
+    },
+    "release.json": {
+      "bytes": 174,
+      "sha256": "526f8fffef7a14eecd234c32237fb36c6a5e66fefb32515e6621a277da6196b6"
+    },
+    "reservation.json": {
+      "bytes": 639,
+      "sha256": "f752656b179bca5faf5c366b982bb8f590d83931b567b7fb675e8854947c32cd"
+    },
+    "result.json": {
+      "bytes": 2489,
+      "sha256": "9a1120bc5e1ea68fa313fe0722e38aef8ce4a565a5a93f3fcc65188887f1b18d"
+    },
+    "run.log": {
+      "bytes": 107,
+      "sha256": "da87ef71c1e5745c4f5a11ea966d1e2cb3380d641174b23e231816245fbace32"
+    },
+    "worker.log": {
+      "bytes": 36,
+      "sha256": "4085d6090e41e56dc9028cdd098f9cf43ea09637404539ce5af986c801ca9ea4"
+    }
+  },
+  "request": "R235",
+  "source_directory": "/tmp/navier-poiseuille-r234-once"
+}
