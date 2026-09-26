@@ -1,12 +1,15 @@
 # B1 solver environment
 
-For this Mac's remaining install steps and future comparison with the PC, use
-[MAC_INSTALL_AND_BENCHMARK_PLAN.md](MAC_INSTALL_AND_BENCHMARK_PLAN.md). Its
-installed environment already passed imports/MPI. The general solver commands
-below describe available checks; the [current PC repair task](../../SESSION_HANDOFF.md#next-task)
-permits saved/synthetic checks only. R067's scientific review is complete,
-and physical execution remains deferred. A visualization smoke test
-does not establish FEM readiness.
+Current PC status: [R227 restoration](ENVIRONMENT_RESTORE_R227.md) timed out.
+`/tmp/navier-fenicsx` contains matching package records but an incomplete
+transaction; **do not treat it as ready or run the commands below there**.
+The [current recovery task](../../SESSION_HANDOFF.md#next-task) permits one
+newly bounded offline installation and metadata/interpreter checks, then stops
+before numerical imports. R226's launcher checks remain valid.
+For historical Mac setup/comparison, see
+[MAC_INSTALL_AND_BENCHMARK_PLAN.md](MAC_INSTALL_AND_BENCHMARK_PLAN.md); no machine
+transfer or new remote check is implied. General solver commands below are
+reference only and do not grant a workload attempt.
 
 B1 uses a separate conda-forge environment so the visualization pipeline keeps
 its small NumPy-only dependency set.

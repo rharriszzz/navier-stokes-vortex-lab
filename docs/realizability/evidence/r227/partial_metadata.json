@@ -1,0 +1,3997 @@
+{
+  "conda_history_bytes": 0,
+  "distribution_metadata": {
+    "lib/python3.12/site-packages/fenics_ffcx-0.10.0.dist-info/METADATA": [
+      "Name: fenics-ffcx",
+      "Version: 0.10.0"
+    ]
+  },
+  "executable_sha256": "3812170a5367aec8e2d95999479a20de13a621826b5f0ea1a3e4a4b14e416316",
+  "inspector_numerical_imports": false,
+  "installed_record_count": 338,
+  "later_cleanup_observation": {
+    "bootstrap": {
+      "cgroup_absent": true,
+      "worker_pid_absent": true
+    },
+    "install": {
+      "cgroup_absent": true,
+      "worker_pid_absent": true
+    }
+  },
+  "metadata_file_entries_checked": 76252,
+  "missing_completion_evidence": [
+    "verification.json",
+    "packages.json",
+    "resource_snapshot.json"
+  ],
+  "missing_file_count": 972,
+  "missing_files": [
+    {
+      "package": "aiohappyeyeballs",
+      "path": "lib/python3.12/site-packages/aiohappyeyeballs/__pycache__/__init__.cpython-312.pyc"
+    },
+    {
+      "package": "aiohappyeyeballs",
+      "path": "lib/python3.12/site-packages/aiohappyeyeballs/__pycache__/_staggered.cpython-312.pyc"
+    },
+    {
+      "package": "aiohappyeyeballs",
+      "path": "lib/python3.12/site-packages/aiohappyeyeballs/__pycache__/impl.cpython-312.pyc"
+    },
+    {
+      "package": "aiohappyeyeballs",
+      "path": "lib/python3.12/site-packages/aiohappyeyeballs/__pycache__/types.cpython-312.pyc"
+    },
+    {
+      "package": "aiohappyeyeballs",
+      "path": "lib/python3.12/site-packages/aiohappyeyeballs/__pycache__/utils.cpython-312.pyc"
+    },
+    {
+      "package": "aiosignal",
+      "path": "lib/python3.12/site-packages/aiosignal/__pycache__/__init__.cpython-312.pyc"
+    },
+    {
+      "package": "attrs",
+      "path": "lib/python3.12/site-packages/attr/__pycache__/__init__.cpython-312.pyc"
+    },
+    {
+      "package": "attrs",
+      "path": "lib/python3.12/site-packages/attr/__pycache__/_cmp.cpython-312.pyc"
+    },
+    {
+      "package": "attrs",
+      "path": "lib/python3.12/site-packages/attr/__pycache__/_compat.cpython-312.pyc"
+    },
+    {
+      "package": "attrs",
+      "path": "lib/python3.12/site-packages/attr/__pycache__/_config.cpython-312.pyc"
+    },
+    {
+      "package": "attrs",
+      "path": "lib/python3.12/site-packages/attr/__pycache__/_funcs.cpython-312.pyc"
+    },
+    {
+      "package": "attrs",
+      "path": "lib/python3.12/site-packages/attr/__pycache__/_make.cpython-312.pyc"
+    },
+    {
+      "package": "attrs",
+      "path": "lib/python3.12/site-packages/attr/__pycache__/_next_gen.cpython-312.pyc"
+    },
+    {
+      "package": "attrs",
+      "path": "lib/python3.12/site-packages/attr/__pycache__/_version_info.cpython-312.pyc"
+    },
+    {
+      "package": "attrs",
+      "path": "lib/python3.12/site-packages/attr/__pycache__/converters.cpython-312.pyc"
+    },
+    {
+      "package": "attrs",
+      "path": "lib/python3.12/site-packages/attr/__pycache__/exceptions.cpython-312.pyc"
+    },
+    {
+      "package": "attrs",
+      "path": "lib/python3.12/site-packages/attr/__pycache__/filters.cpython-312.pyc"
+    },
+    {
+      "package": "attrs",
+      "path": "lib/python3.12/site-packages/attr/__pycache__/setters.cpython-312.pyc"
+    },
+    {
+      "package": "attrs",
+      "path": "lib/python3.12/site-packages/attr/__pycache__/validators.cpython-312.pyc"
+    },
+    {
+      "package": "attrs",
+      "path": "lib/python3.12/site-packages/attrs/__pycache__/__init__.cpython-312.pyc"
+    },
+    {
+      "package": "attrs",
+      "path": "lib/python3.12/site-packages/attrs/__pycache__/converters.cpython-312.pyc"
+    },
+    {
+      "package": "attrs",
+      "path": "lib/python3.12/site-packages/attrs/__pycache__/exceptions.cpython-312.pyc"
+    },
+    {
+      "package": "attrs",
+      "path": "lib/python3.12/site-packages/attrs/__pycache__/filters.cpython-312.pyc"
+    },
+    {
+      "package": "attrs",
+      "path": "lib/python3.12/site-packages/attrs/__pycache__/setters.cpython-312.pyc"
+    },
+    {
+      "package": "attrs",
+      "path": "lib/python3.12/site-packages/attrs/__pycache__/validators.cpython-312.pyc"
+    },
+    {
+      "package": "cycler",
+      "path": "lib/python3.12/site-packages/cycler/__pycache__/__init__.cpython-312.pyc"
+    },
+    {
+      "package": "fenics-basix",
+      "path": "lib/python3.12/site-packages/basix/__pycache__/__init__.cpython-312.pyc"
+    },
+    {
+      "package": "fenics-basix",
+      "path": "lib/python3.12/site-packages/basix/__pycache__/cell.cpython-312.pyc"
+    },
+    {
+      "package": "fenics-basix",
+      "path": "lib/python3.12/site-packages/basix/__pycache__/finite_element.cpython-312.pyc"
+    },
+    {
+      "package": "fenics-basix",
+      "path": "lib/python3.12/site-packages/basix/__pycache__/interpolation.cpython-312.pyc"
+    },
+    {
+      "package": "fenics-basix",
+      "path": "lib/python3.12/site-packages/basix/__pycache__/lattice.cpython-312.pyc"
+    },
+    {
+      "package": "fenics-basix",
+      "path": "lib/python3.12/site-packages/basix/__pycache__/maps.cpython-312.pyc"
+    },
+    {
+      "package": "fenics-basix",
+      "path": "lib/python3.12/site-packages/basix/__pycache__/numba_helpers.cpython-312.pyc"
+    },
+    {
+      "package": "fenics-basix",
+      "path": "lib/python3.12/site-packages/basix/__pycache__/polynomials.cpython-312.pyc"
+    },
+    {
+      "package": "fenics-basix",
+      "path": "lib/python3.12/site-packages/basix/__pycache__/quadrature.cpython-312.pyc"
+    },
+    {
+      "package": "fenics-basix",
+      "path": "lib/python3.12/site-packages/basix/__pycache__/sobolev_spaces.cpython-312.pyc"
+    },
+    {
+      "package": "fenics-basix",
+      "path": "lib/python3.12/site-packages/basix/__pycache__/ufl.cpython-312.pyc"
+    },
+    {
+      "package": "fenics-basix",
+      "path": "lib/python3.12/site-packages/basix/__pycache__/utils.cpython-312.pyc"
+    },
+    {
+      "package": "fenics-dolfinx",
+      "path": "lib/python3.12/site-packages/dolfinx/__pycache__/__init__.cpython-312.pyc"
+    },
+    {
+      "package": "fenics-dolfinx",
+      "path": "lib/python3.12/site-packages/dolfinx/__pycache__/common.cpython-312.pyc"
+    },
+    {
+      "package": "fenics-dolfinx",
+      "path": "lib/python3.12/site-packages/dolfinx/fem/__pycache__/__init__.cpython-312.pyc"
+    },
+    {
+      "package": "fenics-dolfinx",
+      "path": "lib/python3.12/site-packages/dolfinx/fem/__pycache__/assemble.cpython-312.pyc"
+    },
+    {
+      "package": "fenics-dolfinx",
+      "path": "lib/python3.12/site-packages/dolfinx/fem/__pycache__/bcs.cpython-312.pyc"
+    },
+    {
+      "package": "fenics-dolfinx",
+      "path": "lib/python3.12/site-packages/dolfinx/fem/__pycache__/dofmap.cpython-312.pyc"
+    },
+    {
+      "package": "fenics-dolfinx",
+      "path": "lib/python3.12/site-packages/dolfinx/fem/__pycache__/element.cpython-312.pyc"
+    },
+    {
+      "package": "fenics-dolfinx",
+      "path": "lib/python3.12/site-packages/dolfinx/fem/__pycache__/forms.cpython-312.pyc"
+    },
+    {
+      "package": "fenics-dolfinx",
+      "path": "lib/python3.12/site-packages/dolfinx/fem/__pycache__/function.cpython-312.pyc"
+    },
+    {
+      "package": "fenics-dolfinx",
+      "path": "lib/python3.12/site-packages/dolfinx/fem/__pycache__/petsc.cpython-312.pyc"
+    },
+    {
+      "package": "fenics-dolfinx",
+      "path": "lib/python3.12/site-packages/dolfinx/__pycache__/geometry.cpython-312.pyc"
+    },
+    {
+      "package": "fenics-dolfinx",
+      "path": "lib/python3.12/site-packages/dolfinx/__pycache__/graph.cpython-312.pyc"
+    },
+    {
+      "package": "fenics-dolfinx",
+      "path": "lib/python3.12/site-packages/dolfinx/io/__pycache__/__init__.cpython-312.pyc"
+    },
+    {
+      "package": "fenics-dolfinx",
+      "path": "lib/python3.12/site-packages/dolfinx/io/__pycache__/gmsh.cpython-312.pyc"
+    },
+    {
+      "package": "fenics-dolfinx",
+      "path": "lib/python3.12/site-packages/dolfinx/io/__pycache__/utils.cpython-312.pyc"
+    },
+    {
+      "package": "fenics-dolfinx",
+      "path": "lib/python3.12/site-packages/dolfinx/io/__pycache__/vtkhdf.cpython-312.pyc"
+    },
+    {
+      "package": "fenics-dolfinx",
+      "path": "lib/python3.12/site-packages/dolfinx/__pycache__/jit.cpython-312.pyc"
+    },
+    {
+      "package": "fenics-dolfinx",
+      "path": "lib/python3.12/site-packages/dolfinx/la/__pycache__/__init__.cpython-312.pyc"
+    },
+    {
+      "package": "fenics-dolfinx",
+      "path": "lib/python3.12/site-packages/dolfinx/la/__pycache__/petsc.cpython-312.pyc"
+    },
+    {
+      "package": "fenics-dolfinx",
+      "path": "lib/python3.12/site-packages/dolfinx/__pycache__/log.cpython-312.pyc"
+    },
+    {
+      "package": "fenics-dolfinx",
+      "path": "lib/python3.12/site-packages/dolfinx/__pycache__/mesh.cpython-312.pyc"
+    },
+    {
+      "package": "fenics-dolfinx",
+      "path": "lib/python3.12/site-packages/dolfinx/nls/__pycache__/__init__.cpython-312.pyc"
+    },
+    {
+      "package": "fenics-dolfinx",
+      "path": "lib/python3.12/site-packages/dolfinx/nls/__pycache__/petsc.cpython-312.pyc"
+    },
+    {
+      "package": "fenics-dolfinx",
+      "path": "lib/python3.12/site-packages/dolfinx/__pycache__/pkgconfig.cpython-312.pyc"
+    },
+    {
+      "package": "fenics-dolfinx",
+      "path": "lib/python3.12/site-packages/dolfinx/__pycache__/plot.cpython-312.pyc"
+    },
+    {
+      "package": "fenics-ffcx",
+      "path": "lib/python3.12/site-packages/ffcx/__pycache__/__init__.cpython-312.pyc"
+    },
+    {
+      "package": "fenics-ffcx",
+      "path": "lib/python3.12/site-packages/ffcx/__pycache__/__main__.cpython-312.pyc"
+    },
+    {
+      "package": "fenics-ffcx",
+      "path": "lib/python3.12/site-packages/ffcx/__pycache__/analysis.cpython-312.pyc"
+    },
+    {
+      "package": "fenics-ffcx",
+      "path": "lib/python3.12/site-packages/ffcx/codegeneration/C/__pycache__/__init__.cpython-312.pyc"
+    },
+    {
+      "package": "fenics-ffcx",
+      "path": "lib/python3.12/site-packages/ffcx/codegeneration/C/__pycache__/c_implementation.cpython-312.pyc"
+    },
+    {
+      "package": "fenics-ffcx",
+      "path": "lib/python3.12/site-packages/ffcx/codegeneration/C/__pycache__/expressions.cpython-312.pyc"
+    },
+    {
+      "package": "fenics-ffcx",
+      "path": "lib/python3.12/site-packages/ffcx/codegeneration/C/__pycache__/expressions_template.cpython-312.pyc"
+    },
+    {
+      "package": "fenics-ffcx",
+      "path": "lib/python3.12/site-packages/ffcx/codegeneration/C/__pycache__/file.cpython-312.pyc"
+    },
+    {
+      "package": "fenics-ffcx",
+      "path": "lib/python3.12/site-packages/ffcx/codegeneration/C/__pycache__/file_template.cpython-312.pyc"
+    },
+    {
+      "package": "fenics-ffcx",
+      "path": "lib/python3.12/site-packages/ffcx/codegeneration/C/__pycache__/form.cpython-312.pyc"
+    },
+    {
+      "package": "fenics-ffcx",
+      "path": "lib/python3.12/site-packages/ffcx/codegeneration/C/__pycache__/form_template.cpython-312.pyc"
+    },
+    {
+      "package": "fenics-ffcx",
+      "path": "lib/python3.12/site-packages/ffcx/codegeneration/C/__pycache__/integrals.cpython-312.pyc"
+    },
+    {
+      "package": "fenics-ffcx",
+      "path": "lib/python3.12/site-packages/ffcx/codegeneration/C/__pycache__/integrals_template.cpython-312.pyc"
+    },
+    {
+      "package": "fenics-ffcx",
+      "path": "lib/python3.12/site-packages/ffcx/codegeneration/__pycache__/__init__.cpython-312.pyc"
+    },
+    {
+      "package": "fenics-ffcx",
+      "path": "lib/python3.12/site-packages/ffcx/codegeneration/__pycache__/access.cpython-312.pyc"
+    },
+    {
+      "package": "fenics-ffcx",
+      "path": "lib/python3.12/site-packages/ffcx/codegeneration/__pycache__/backend.cpython-312.pyc"
+    },
+    {
+      "package": "fenics-ffcx",
+      "path": "lib/python3.12/site-packages/ffcx/codegeneration/__pycache__/codegeneration.cpython-312.pyc"
+    },
+    {
+      "package": "fenics-ffcx",
+      "path": "lib/python3.12/site-packages/ffcx/codegeneration/__pycache__/definitions.cpython-312.pyc"
+    },
+    {
+      "package": "fenics-ffcx",
+      "path": "lib/python3.12/site-packages/ffcx/codegeneration/__pycache__/expression_generator.cpython-312.pyc"
+    },
+    {
+      "package": "fenics-ffcx",
+      "path": "lib/python3.12/site-packages/ffcx/codegeneration/__pycache__/geometry.cpython-312.pyc"
+    },
+    {
+      "package": "fenics-ffcx",
+      "path": "lib/python3.12/site-packages/ffcx/codegeneration/__pycache__/integral_generator.cpython-312.pyc"
+    },
+    {
+      "package": "fenics-ffcx",
+      "path": "lib/python3.12/site-packages/ffcx/codegeneration/__pycache__/jit.cpython-312.pyc"
+    },
+    {
+      "package": "fenics-ffcx",
+      "path": "lib/python3.12/site-packages/ffcx/codegeneration/__pycache__/lnodes.cpython-312.pyc"
+    },
+    {
+      "package": "fenics-ffcx",
+      "path": "lib/python3.12/site-packages/ffcx/codegeneration/__pycache__/optimizer.cpython-312.pyc"
+    },
+    {
+      "package": "fenics-ffcx",
+      "path": "lib/python3.12/site-packages/ffcx/codegeneration/__pycache__/symbols.cpython-312.pyc"
+    },
+    {
+      "package": "fenics-ffcx",
+      "path": "lib/python3.12/site-packages/ffcx/codegeneration/__pycache__/utils.cpython-312.pyc"
+    },
+    {
+      "package": "fenics-ffcx",
+      "path": "lib/python3.12/site-packages/ffcx/__pycache__/compiler.cpython-312.pyc"
+    },
+    {
+      "package": "fenics-ffcx",
+      "path": "lib/python3.12/site-packages/ffcx/__pycache__/definitions.cpython-312.pyc"
+    },
+    {
+      "package": "fenics-ffcx",
+      "path": "lib/python3.12/site-packages/ffcx/__pycache__/element_interface.cpython-312.pyc"
+    },
+    {
+      "package": "fenics-ffcx",
+      "path": "lib/python3.12/site-packages/ffcx/__pycache__/formatting.cpython-312.pyc"
+    },
+    {
+      "package": "fenics-ffcx",
+      "path": "lib/python3.12/site-packages/ffcx/ir/__pycache__/__init__.cpython-312.pyc"
+    },
+    {
+      "package": "fenics-ffcx",
+      "path": "lib/python3.12/site-packages/ffcx/ir/analysis/__pycache__/__init__.cpython-312.pyc"
+    },
+    {
+      "package": "fenics-ffcx",
+      "path": "lib/python3.12/site-packages/ffcx/ir/analysis/__pycache__/factorization.cpython-312.pyc"
+    },
+    {
+      "package": "fenics-ffcx",
+      "path": "lib/python3.12/site-packages/ffcx/ir/analysis/__pycache__/graph.cpython-312.pyc"
+    },
+    {
+      "package": "fenics-ffcx",
+      "path": "lib/python3.12/site-packages/ffcx/ir/analysis/__pycache__/indexing.cpython-312.pyc"
+    },
+    {
+      "package": "fenics-ffcx",
+      "path": "lib/python3.12/site-packages/ffcx/ir/analysis/__pycache__/modified_terminals.cpython-312.pyc"
+    },
+    {
+      "package": "fenics-ffcx",
+      "path": "lib/python3.12/site-packages/ffcx/ir/analysis/__pycache__/reconstruct.cpython-312.pyc"
+    },
+    {
+      "package": "fenics-ffcx",
+      "path": "lib/python3.12/site-packages/ffcx/ir/analysis/__pycache__/valuenumbering.cpython-312.pyc"
+    },
+    {
+      "package": "fenics-ffcx",
+      "path": "lib/python3.12/site-packages/ffcx/ir/analysis/__pycache__/visualise.cpython-312.pyc"
+    },
+    {
+      "package": "fenics-ffcx",
+      "path": "lib/python3.12/site-packages/ffcx/ir/__pycache__/elementtables.cpython-312.pyc"
+    },
+    {
+      "package": "fenics-ffcx",
+      "path": "lib/python3.12/site-packages/ffcx/ir/__pycache__/integral.cpython-312.pyc"
+    },
+    {
+      "package": "fenics-ffcx",
+      "path": "lib/python3.12/site-packages/ffcx/ir/__pycache__/representation.cpython-312.pyc"
+    },
+    {
+      "package": "fenics-ffcx",
+      "path": "lib/python3.12/site-packages/ffcx/ir/__pycache__/representationutils.cpython-312.pyc"
+    },
+    {
+      "package": "fenics-ffcx",
+      "path": "lib/python3.12/site-packages/ffcx/__pycache__/main.cpython-312.pyc"
+    },
+    {
+      "package": "fenics-ffcx",
+      "path": "lib/python3.12/site-packages/ffcx/__pycache__/naming.cpython-312.pyc"
+    },
+    {
+      "package": "fenics-ffcx",
+      "path": "lib/python3.12/site-packages/ffcx/__pycache__/options.cpython-312.pyc"
+    },
+    {
+      "package": "fenics-ufl",
+      "path": "lib/python3.12/site-packages/ufl/__pycache__/__init__.cpython-312.pyc"
+    },
+    {
+      "package": "fenics-ufl",
+      "path": "lib/python3.12/site-packages/ufl/__pycache__/action.cpython-312.pyc"
+    },
+    {
+      "package": "fenics-ufl",
+      "path": "lib/python3.12/site-packages/ufl/__pycache__/adjoint.cpython-312.pyc"
+    },
+    {
+      "package": "fenics-ufl",
+      "path": "lib/python3.12/site-packages/ufl/__pycache__/algebra.cpython-312.pyc"
+    },
+    {
+      "package": "fenics-ufl",
+      "path": "lib/python3.12/site-packages/ufl/algorithms/__pycache__/__init__.cpython-312.pyc"
+    },
+    {
+      "package": "fenics-ufl",
+      "path": "lib/python3.12/site-packages/ufl/algorithms/__pycache__/ad.cpython-312.pyc"
+    },
+    {
+      "package": "fenics-ufl",
+      "path": "lib/python3.12/site-packages/ufl/algorithms/__pycache__/analysis.cpython-312.pyc"
+    },
+    {
+      "package": "fenics-ufl",
+      "path": "lib/python3.12/site-packages/ufl/algorithms/__pycache__/apply_algebra_lowering.cpython-312.pyc"
+    },
+    {
+      "package": "fenics-ufl",
+      "path": "lib/python3.12/site-packages/ufl/algorithms/__pycache__/apply_coefficient_split.cpython-312.pyc"
+    },
+    {
+      "package": "fenics-ufl",
+      "path": "lib/python3.12/site-packages/ufl/algorithms/__pycache__/apply_derivatives.cpython-312.pyc"
+    },
+    {
+      "package": "fenics-ufl",
+      "path": "lib/python3.12/site-packages/ufl/algorithms/__pycache__/apply_function_pullbacks.cpython-312.pyc"
+    },
+    {
+      "package": "fenics-ufl",
+      "path": "lib/python3.12/site-packages/ufl/algorithms/__pycache__/apply_geometry_lowering.cpython-312.pyc"
+    },
+    {
+      "package": "fenics-ufl",
+      "path": "lib/python3.12/site-packages/ufl/algorithms/__pycache__/apply_integral_scaling.cpython-312.pyc"
+    },
+    {
+      "package": "fenics-ufl",
+      "path": "lib/python3.12/site-packages/ufl/algorithms/__pycache__/apply_restrictions.cpython-312.pyc"
+    },
+    {
+      "package": "fenics-ufl",
+      "path": "lib/python3.12/site-packages/ufl/algorithms/__pycache__/balancing.cpython-312.pyc"
+    },
+    {
+      "package": "fenics-ufl",
+      "path": "lib/python3.12/site-packages/ufl/algorithms/__pycache__/change_to_reference.cpython-312.pyc"
+    },
+    {
+      "package": "fenics-ufl",
+      "path": "lib/python3.12/site-packages/ufl/algorithms/__pycache__/check_arities.cpython-312.pyc"
+    },
+    {
+      "package": "fenics-ufl",
+      "path": "lib/python3.12/site-packages/ufl/algorithms/__pycache__/check_restrictions.cpython-312.pyc"
+    },
+    {
+      "package": "fenics-ufl",
+      "path": "lib/python3.12/site-packages/ufl/algorithms/__pycache__/checks.cpython-312.pyc"
+    },
+    {
+      "package": "fenics-ufl",
+      "path": "lib/python3.12/site-packages/ufl/algorithms/__pycache__/comparison_checker.cpython-312.pyc"
+    },
+    {
+      "package": "fenics-ufl",
+      "path": "lib/python3.12/site-packages/ufl/algorithms/__pycache__/compute_form_data.cpython-312.pyc"
+    },
+    {
+      "package": "fenics-ufl",
+      "path": "lib/python3.12/site-packages/ufl/algorithms/__pycache__/coordinate_derivative_helpers.cpython-312.pyc"
+    },
+    {
+      "package": "fenics-ufl",
+      "path": "lib/python3.12/site-packages/ufl/algorithms/__pycache__/domain_analysis.cpython-312.pyc"
+    },
+    {
+      "package": "fenics-ufl",
+      "path": "lib/python3.12/site-packages/ufl/algorithms/__pycache__/estimate_degrees.cpython-312.pyc"
+    },
+    {
+      "package": "fenics-ufl",
+      "path": "lib/python3.12/site-packages/ufl/algorithms/__pycache__/expand_indices.cpython-312.pyc"
+    },
+    {
+      "package": "fenics-ufl",
+      "path": "lib/python3.12/site-packages/ufl/algorithms/__pycache__/formdata.cpython-312.pyc"
+    },
+    {
+      "package": "fenics-ufl",
+      "path": "lib/python3.12/site-packages/ufl/algorithms/__pycache__/formfiles.cpython-312.pyc"
+    },
+    {
+      "package": "fenics-ufl",
+      "path": "lib/python3.12/site-packages/ufl/algorithms/__pycache__/formsplitter.cpython-312.pyc"
+    },
+    {
+      "package": "fenics-ufl",
+      "path": "lib/python3.12/site-packages/ufl/algorithms/__pycache__/formtransformations.cpython-312.pyc"
+    },
+    {
+      "package": "fenics-ufl",
+      "path": "lib/python3.12/site-packages/ufl/algorithms/__pycache__/map_integrands.cpython-312.pyc"
+    },
+    {
+      "package": "fenics-ufl",
+      "path": "lib/python3.12/site-packages/ufl/algorithms/__pycache__/remove_complex_nodes.cpython-312.pyc"
+    },
+    {
+      "package": "fenics-ufl",
+      "path": "lib/python3.12/site-packages/ufl/algorithms/__pycache__/remove_component_tensors.cpython-312.pyc"
+    },
+    {
+      "package": "fenics-ufl",
+      "path": "lib/python3.12/site-packages/ufl/algorithms/__pycache__/renumbering.cpython-312.pyc"
+    },
+    {
+      "package": "fenics-ufl",
+      "path": "lib/python3.12/site-packages/ufl/algorithms/__pycache__/replace.cpython-312.pyc"
+    },
+    {
+      "package": "fenics-ufl",
+      "path": "lib/python3.12/site-packages/ufl/algorithms/__pycache__/replace_derivative_nodes.cpython-312.pyc"
+    },
+    {
+      "package": "fenics-ufl",
+      "path": "lib/python3.12/site-packages/ufl/algorithms/__pycache__/signature.cpython-312.pyc"
+    },
+    {
+      "package": "fenics-ufl",
+      "path": "lib/python3.12/site-packages/ufl/algorithms/__pycache__/strip_terminal_data.cpython-312.pyc"
+    },
+    {
+      "package": "fenics-ufl",
+      "path": "lib/python3.12/site-packages/ufl/algorithms/__pycache__/transformer.cpython-312.pyc"
+    },
+    {
+      "package": "fenics-ufl",
+      "path": "lib/python3.12/site-packages/ufl/algorithms/__pycache__/traversal.cpython-312.pyc"
+    },
+    {
+      "package": "fenics-ufl",
+      "path": "lib/python3.12/site-packages/ufl/__pycache__/argument.cpython-312.pyc"
+    },
+    {
+      "package": "fenics-ufl",
+      "path": "lib/python3.12/site-packages/ufl/__pycache__/averaging.cpython-312.pyc"
+    },
+    {
+      "package": "fenics-ufl",
+      "path": "lib/python3.12/site-packages/ufl/__pycache__/cell.cpython-312.pyc"
+    },
+    {
+      "package": "fenics-ufl",
+      "path": "lib/python3.12/site-packages/ufl/__pycache__/checks.cpython-312.pyc"
+    },
+    {
+      "package": "fenics-ufl",
+      "path": "lib/python3.12/site-packages/ufl/__pycache__/classes.cpython-312.pyc"
+    },
+    {
+      "package": "fenics-ufl",
+      "path": "lib/python3.12/site-packages/ufl/__pycache__/coefficient.cpython-312.pyc"
+    },
+    {
+      "package": "fenics-ufl",
+      "path": "lib/python3.12/site-packages/ufl/__pycache__/compound_expressions.cpython-312.pyc"
+    },
+    {
+      "package": "fenics-ufl",
+      "path": "lib/python3.12/site-packages/ufl/__pycache__/conditional.cpython-312.pyc"
+    },
+    {
+      "package": "fenics-ufl",
+      "path": "lib/python3.12/site-packages/ufl/__pycache__/constant.cpython-312.pyc"
+    },
+    {
+      "package": "fenics-ufl",
+      "path": "lib/python3.12/site-packages/ufl/__pycache__/constantvalue.cpython-312.pyc"
+    },
+    {
+      "package": "fenics-ufl",
+      "path": "lib/python3.12/site-packages/ufl/core/__pycache__/__init__.cpython-312.pyc"
+    },
+    {
+      "package": "fenics-ufl",
+      "path": "lib/python3.12/site-packages/ufl/core/__pycache__/base_form_operator.cpython-312.pyc"
+    },
+    {
+      "package": "fenics-ufl",
+      "path": "lib/python3.12/site-packages/ufl/core/__pycache__/compute_expr_hash.cpython-312.pyc"
+    },
+    {
+      "package": "fenics-ufl",
+      "path": "lib/python3.12/site-packages/ufl/core/__pycache__/expr.cpython-312.pyc"
+    },
+    {
+      "package": "fenics-ufl",
+      "path": "lib/python3.12/site-packages/ufl/core/__pycache__/external_operator.cpython-312.pyc"
+    },
+    {
+      "package": "fenics-ufl",
+      "path": "lib/python3.12/site-packages/ufl/core/__pycache__/interpolate.cpython-312.pyc"
+    },
+    {
+      "package": "fenics-ufl",
+      "path": "lib/python3.12/site-packages/ufl/core/__pycache__/multiindex.cpython-312.pyc"
+    },
+    {
+      "package": "fenics-ufl",
+      "path": "lib/python3.12/site-packages/ufl/core/__pycache__/operator.cpython-312.pyc"
+    },
+    {
+      "package": "fenics-ufl",
+      "path": "lib/python3.12/site-packages/ufl/core/__pycache__/terminal.cpython-312.pyc"
+    },
+    {
+      "package": "fenics-ufl",
+      "path": "lib/python3.12/site-packages/ufl/core/__pycache__/ufl_id.cpython-312.pyc"
+    },
+    {
+      "package": "fenics-ufl",
+      "path": "lib/python3.12/site-packages/ufl/core/__pycache__/ufl_type.cpython-312.pyc"
+    },
+    {
+      "package": "fenics-ufl",
+      "path": "lib/python3.12/site-packages/ufl/corealg/__pycache__/__init__.cpython-312.pyc"
+    },
+    {
+      "package": "fenics-ufl",
+      "path": "lib/python3.12/site-packages/ufl/corealg/__pycache__/dag_traverser.cpython-312.pyc"
+    },
+    {
+      "package": "fenics-ufl",
+      "path": "lib/python3.12/site-packages/ufl/corealg/__pycache__/map_dag.cpython-312.pyc"
+    },
+    {
+      "package": "fenics-ufl",
+      "path": "lib/python3.12/site-packages/ufl/corealg/__pycache__/multifunction.cpython-312.pyc"
+    },
+    {
+      "package": "fenics-ufl",
+      "path": "lib/python3.12/site-packages/ufl/corealg/__pycache__/traversal.cpython-312.pyc"
+    },
+    {
+      "package": "fenics-ufl",
+      "path": "lib/python3.12/site-packages/ufl/__pycache__/differentiation.cpython-312.pyc"
+    },
+    {
+      "package": "fenics-ufl",
+      "path": "lib/python3.12/site-packages/ufl/__pycache__/domain.cpython-312.pyc"
+    },
+    {
+      "package": "fenics-ufl",
+      "path": "lib/python3.12/site-packages/ufl/__pycache__/duals.cpython-312.pyc"
+    },
+    {
+      "package": "fenics-ufl",
+      "path": "lib/python3.12/site-packages/ufl/__pycache__/equation.cpython-312.pyc"
+    },
+    {
+      "package": "fenics-ufl",
+      "path": "lib/python3.12/site-packages/ufl/__pycache__/exprcontainers.cpython-312.pyc"
+    },
+    {
+      "package": "fenics-ufl",
+      "path": "lib/python3.12/site-packages/ufl/__pycache__/exprequals.cpython-312.pyc"
+    },
+    {
+      "package": "fenics-ufl",
+      "path": "lib/python3.12/site-packages/ufl/__pycache__/exproperators.cpython-312.pyc"
+    },
+    {
+      "package": "fenics-ufl",
+      "path": "lib/python3.12/site-packages/ufl/__pycache__/finiteelement.cpython-312.pyc"
+    },
+    {
+      "package": "fenics-ufl",
+      "path": "lib/python3.12/site-packages/ufl/__pycache__/form.cpython-312.pyc"
+    },
+    {
+      "package": "fenics-ufl",
+      "path": "lib/python3.12/site-packages/ufl/formatting/__pycache__/__init__.cpython-312.pyc"
+    },
+    {
+      "package": "fenics-ufl",
+      "path": "lib/python3.12/site-packages/ufl/formatting/__pycache__/ufl2unicode.cpython-312.pyc"
+    },
+    {
+      "package": "fenics-ufl",
+      "path": "lib/python3.12/site-packages/ufl/__pycache__/formoperators.cpython-312.pyc"
+    },
+    {
+      "package": "fenics-ufl",
+      "path": "lib/python3.12/site-packages/ufl/__pycache__/functionspace.cpython-312.pyc"
+    },
+    {
+      "package": "fenics-ufl",
+      "path": "lib/python3.12/site-packages/ufl/__pycache__/geometry.cpython-312.pyc"
+    },
+    {
+      "package": "fenics-ufl",
+      "path": "lib/python3.12/site-packages/ufl/__pycache__/index_combination_utils.cpython-312.pyc"
+    },
+    {
+      "package": "fenics-ufl",
+      "path": "lib/python3.12/site-packages/ufl/__pycache__/indexed.cpython-312.pyc"
+    },
+    {
+      "package": "fenics-ufl",
+      "path": "lib/python3.12/site-packages/ufl/__pycache__/indexsum.cpython-312.pyc"
+    },
+    {
+      "package": "fenics-ufl",
+      "path": "lib/python3.12/site-packages/ufl/__pycache__/integral.cpython-312.pyc"
+    },
+    {
+      "package": "fenics-ufl",
+      "path": "lib/python3.12/site-packages/ufl/__pycache__/integral_domain.cpython-312.pyc"
+    },
+    {
+      "package": "fenics-ufl",
+      "path": "lib/python3.12/site-packages/ufl/__pycache__/mathfunctions.cpython-312.pyc"
+    },
+    {
+      "package": "fenics-ufl",
+      "path": "lib/python3.12/site-packages/ufl/__pycache__/matrix.cpython-312.pyc"
+    },
+    {
+      "package": "fenics-ufl",
+      "path": "lib/python3.12/site-packages/ufl/__pycache__/measure.cpython-312.pyc"
+    },
+    {
+      "package": "fenics-ufl",
+      "path": "lib/python3.12/site-packages/ufl/__pycache__/objects.cpython-312.pyc"
+    },
+    {
+      "package": "fenics-ufl",
+      "path": "lib/python3.12/site-packages/ufl/__pycache__/operators.cpython-312.pyc"
+    },
+    {
+      "package": "fenics-ufl",
+      "path": "lib/python3.12/site-packages/ufl/__pycache__/permutation.cpython-312.pyc"
+    },
+    {
+      "package": "fenics-ufl",
+      "path": "lib/python3.12/site-packages/ufl/__pycache__/precedence.cpython-312.pyc"
+    },
+    {
+      "package": "fenics-ufl",
+      "path": "lib/python3.12/site-packages/ufl/__pycache__/protocols.cpython-312.pyc"
+    },
+    {
+      "package": "fenics-ufl",
+      "path": "lib/python3.12/site-packages/ufl/__pycache__/pullback.cpython-312.pyc"
+    },
+    {
+      "package": "fenics-ufl",
+      "path": "lib/python3.12/site-packages/ufl/__pycache__/referencevalue.cpython-312.pyc"
+    },
+    {
+      "package": "fenics-ufl",
+      "path": "lib/python3.12/site-packages/ufl/__pycache__/restriction.cpython-312.pyc"
+    },
+    {
+      "package": "fenics-ufl",
+      "path": "lib/python3.12/site-packages/ufl/__pycache__/sobolevspace.cpython-312.pyc"
+    },
+    {
+      "package": "fenics-ufl",
+      "path": "lib/python3.12/site-packages/ufl/__pycache__/sorting.cpython-312.pyc"
+    },
+    {
+      "package": "fenics-ufl",
+      "path": "lib/python3.12/site-packages/ufl/__pycache__/split_functions.cpython-312.pyc"
+    },
+    {
+      "package": "fenics-ufl",
+      "path": "lib/python3.12/site-packages/ufl/__pycache__/tensoralgebra.cpython-312.pyc"
+    },
+    {
+      "package": "fenics-ufl",
+      "path": "lib/python3.12/site-packages/ufl/__pycache__/tensors.cpython-312.pyc"
+    },
+    {
+      "package": "fenics-ufl",
+      "path": "lib/python3.12/site-packages/ufl/utils/__pycache__/__init__.cpython-312.pyc"
+    },
+    {
+      "package": "fenics-ufl",
+      "path": "lib/python3.12/site-packages/ufl/utils/__pycache__/counted.cpython-312.pyc"
+    },
+    {
+      "package": "fenics-ufl",
+      "path": "lib/python3.12/site-packages/ufl/utils/__pycache__/formatting.cpython-312.pyc"
+    },
+    {
+      "package": "fenics-ufl",
+      "path": "lib/python3.12/site-packages/ufl/utils/__pycache__/indexflattening.cpython-312.pyc"
+    },
+    {
+      "package": "fenics-ufl",
+      "path": "lib/python3.12/site-packages/ufl/utils/__pycache__/sequences.cpython-312.pyc"
+    },
+    {
+      "package": "fenics-ufl",
+      "path": "lib/python3.12/site-packages/ufl/utils/__pycache__/sorting.cpython-312.pyc"
+    },
+    {
+      "package": "fenics-ufl",
+      "path": "lib/python3.12/site-packages/ufl/utils/__pycache__/stacks.cpython-312.pyc"
+    },
+    {
+      "package": "fenics-ufl",
+      "path": "lib/python3.12/site-packages/ufl/__pycache__/variable.cpython-312.pyc"
+    },
+    {
+      "package": "idna",
+      "path": "lib/python3.12/site-packages/idna/__pycache__/__init__.cpython-312.pyc"
+    },
+    {
+      "package": "idna",
+      "path": "lib/python3.12/site-packages/idna/__pycache__/__main__.cpython-312.pyc"
+    },
+    {
+      "package": "idna",
+      "path": "lib/python3.12/site-packages/idna/__pycache__/cli.cpython-312.pyc"
+    },
+    {
+      "package": "idna",
+      "path": "lib/python3.12/site-packages/idna/__pycache__/codec.cpython-312.pyc"
+    },
+    {
+      "package": "idna",
+      "path": "lib/python3.12/site-packages/idna/__pycache__/compat.cpython-312.pyc"
+    },
+    {
+      "package": "idna",
+      "path": "lib/python3.12/site-packages/idna/__pycache__/core.cpython-312.pyc"
+    },
+    {
+      "package": "idna",
+      "path": "lib/python3.12/site-packages/idna/__pycache__/idnadata.cpython-312.pyc"
+    },
+    {
+      "package": "idna",
+      "path": "lib/python3.12/site-packages/idna/__pycache__/intranges.cpython-312.pyc"
+    },
+    {
+      "package": "idna",
+      "path": "lib/python3.12/site-packages/idna/__pycache__/package_data.cpython-312.pyc"
+    },
+    {
+      "package": "idna",
+      "path": "lib/python3.12/site-packages/idna/__pycache__/uts46data.cpython-312.pyc"
+    },
+    {
+      "package": "munkres",
+      "path": "lib/python3.12/site-packages/__pycache__/munkres.cpython-312.pyc"
+    },
+    {
+      "package": "packaging",
+      "path": "lib/python3.12/site-packages/packaging/__pycache__/__init__.cpython-312.pyc"
+    },
+    {
+      "package": "packaging",
+      "path": "lib/python3.12/site-packages/packaging/__pycache__/_elffile.cpython-312.pyc"
+    },
+    {
+      "package": "packaging",
+      "path": "lib/python3.12/site-packages/packaging/__pycache__/_manylinux.cpython-312.pyc"
+    },
+    {
+      "package": "packaging",
+      "path": "lib/python3.12/site-packages/packaging/__pycache__/_musllinux.cpython-312.pyc"
+    },
+    {
+      "package": "packaging",
+      "path": "lib/python3.12/site-packages/packaging/__pycache__/_parser.cpython-312.pyc"
+    },
+    {
+      "package": "packaging",
+      "path": "lib/python3.12/site-packages/packaging/__pycache__/_ranges.cpython-312.pyc"
+    },
+    {
+      "package": "packaging",
+      "path": "lib/python3.12/site-packages/packaging/__pycache__/_structures.cpython-312.pyc"
+    },
+    {
+      "package": "packaging",
+      "path": "lib/python3.12/site-packages/packaging/__pycache__/_tokenizer.cpython-312.pyc"
+    },
+    {
+      "package": "packaging",
+      "path": "lib/python3.12/site-packages/packaging/__pycache__/dependency_groups.cpython-312.pyc"
+    },
+    {
+      "package": "packaging",
+      "path": "lib/python3.12/site-packages/packaging/__pycache__/direct_url.cpython-312.pyc"
+    },
+    {
+      "package": "packaging",
+      "path": "lib/python3.12/site-packages/packaging/__pycache__/errors.cpython-312.pyc"
+    },
+    {
+      "package": "packaging",
+      "path": "lib/python3.12/site-packages/packaging/licenses/__pycache__/__init__.cpython-312.pyc"
+    },
+    {
+      "package": "packaging",
+      "path": "lib/python3.12/site-packages/packaging/licenses/__pycache__/_spdx.cpython-312.pyc"
+    },
+    {
+      "package": "packaging",
+      "path": "lib/python3.12/site-packages/packaging/__pycache__/markers.cpython-312.pyc"
+    },
+    {
+      "package": "packaging",
+      "path": "lib/python3.12/site-packages/packaging/__pycache__/metadata.cpython-312.pyc"
+    },
+    {
+      "package": "packaging",
+      "path": "lib/python3.12/site-packages/packaging/__pycache__/pylock.cpython-312.pyc"
+    },
+    {
+      "package": "packaging",
+      "path": "lib/python3.12/site-packages/packaging/__pycache__/ranges.cpython-312.pyc"
+    },
+    {
+      "package": "packaging",
+      "path": "lib/python3.12/site-packages/packaging/__pycache__/requirements.cpython-312.pyc"
+    },
+    {
+      "package": "packaging",
+      "path": "lib/python3.12/site-packages/packaging/__pycache__/specifiers.cpython-312.pyc"
+    },
+    {
+      "package": "packaging",
+      "path": "lib/python3.12/site-packages/packaging/__pycache__/tags.cpython-312.pyc"
+    },
+    {
+      "package": "packaging",
+      "path": "lib/python3.12/site-packages/packaging/__pycache__/utils.cpython-312.pyc"
+    },
+    {
+      "package": "packaging",
+      "path": "lib/python3.12/site-packages/packaging/__pycache__/version.cpython-312.pyc"
+    },
+    {
+      "package": "petsc4py",
+      "path": "lib/python3.12/site-packages/petsc4py/__pycache__/PETSc.cpython-312.pyc"
+    },
+    {
+      "package": "petsc4py",
+      "path": "lib/python3.12/site-packages/petsc4py/__pycache__/__init__.cpython-312.pyc"
+    },
+    {
+      "package": "petsc4py",
+      "path": "lib/python3.12/site-packages/petsc4py/__pycache__/__main__.cpython-312.pyc"
+    },
+    {
+      "package": "petsc4py",
+      "path": "lib/python3.12/site-packages/petsc4py/lib/__pycache__/__init__.cpython-312.pyc"
+    },
+    {
+      "package": "petsc4py",
+      "path": "lib/python3.12/site-packages/petsc4py/lib/_pytypes/__pycache__/__init__.cpython-312.pyc"
+    },
+    {
+      "package": "petsc4py",
+      "path": "lib/python3.12/site-packages/petsc4py/lib/_pytypes/viewer/__pycache__/__init__.cpython-312.pyc"
+    },
+    {
+      "package": "petsc4py",
+      "path": "lib/python3.12/site-packages/petsc4py/lib/_pytypes/viewer/__pycache__/petscpyvista.cpython-312.pyc"
+    },
+    {
+      "package": "petsc4py",
+      "path": "lib/python3.12/site-packages/petsc4py/__pycache__/typing.cpython-312.pyc"
+    },
+    {
+      "package": "pip",
+      "path": "lib/python3.12/site-packages/pip/__pycache__/__init__.cpython-312.pyc"
+    },
+    {
+      "package": "pip",
+      "path": "lib/python3.12/site-packages/pip/__pycache__/__main__.cpython-312.pyc"
+    },
+    {
+      "package": "pip",
+      "path": "lib/python3.12/site-packages/pip/__pycache__/__pip-runner__.cpython-312.pyc"
+    },
+    {
+      "package": "pip",
+      "path": "lib/python3.12/site-packages/pip/_internal/__pycache__/__init__.cpython-312.pyc"
+    },
+    {
+      "package": "pip",
+      "path": "lib/python3.12/site-packages/pip/_internal/build_env/__pycache__/__init__.cpython-312.pyc"
+    },
+    {
+      "package": "pip",
+      "path": "lib/python3.12/site-packages/pip/_internal/build_env/__pycache__/base.cpython-312.pyc"
+    },
+    {
+      "package": "pip",
+      "path": "lib/python3.12/site-packages/pip/_internal/build_env/__pycache__/installer.cpython-312.pyc"
+    },
+    {
+      "package": "pip",
+      "path": "lib/python3.12/site-packages/pip/_internal/build_env/__pycache__/noop.cpython-312.pyc"
+    },
+    {
+      "package": "pip",
+      "path": "lib/python3.12/site-packages/pip/_internal/build_env/__pycache__/venv.cpython-312.pyc"
+    },
+    {
+      "package": "pip",
+      "path": "lib/python3.12/site-packages/pip/_internal/build_env/__pycache__/virtual.cpython-312.pyc"
+    },
+    {
+      "package": "pip",
+      "path": "lib/python3.12/site-packages/pip/_internal/__pycache__/cache.cpython-312.pyc"
+    },
+    {
+      "package": "pip",
+      "path": "lib/python3.12/site-packages/pip/_internal/cli/__pycache__/__init__.cpython-312.pyc"
+    },
+    {
+      "package": "pip",
+      "path": "lib/python3.12/site-packages/pip/_internal/cli/__pycache__/autocompletion.cpython-312.pyc"
+    },
+    {
+      "package": "pip",
+      "path": "lib/python3.12/site-packages/pip/_internal/cli/__pycache__/base_command.cpython-312.pyc"
+    },
+    {
+      "package": "pip",
+      "path": "lib/python3.12/site-packages/pip/_internal/cli/__pycache__/cmdoptions.cpython-312.pyc"
+    },
+    {
+      "package": "pip",
+      "path": "lib/python3.12/site-packages/pip/_internal/cli/__pycache__/command_context.cpython-312.pyc"
+    },
+    {
+      "package": "pip",
+      "path": "lib/python3.12/site-packages/pip/_internal/cli/__pycache__/index_command.cpython-312.pyc"
+    },
+    {
+      "package": "pip",
+      "path": "lib/python3.12/site-packages/pip/_internal/cli/__pycache__/main.cpython-312.pyc"
+    },
+    {
+      "package": "pip",
+      "path": "lib/python3.12/site-packages/pip/_internal/cli/__pycache__/main_parser.cpython-312.pyc"
+    },
+    {
+      "package": "pip",
+      "path": "lib/python3.12/site-packages/pip/_internal/cli/__pycache__/parser.cpython-312.pyc"
+    },
+    {
+      "package": "pip",
+      "path": "lib/python3.12/site-packages/pip/_internal/cli/__pycache__/progress_bars.cpython-312.pyc"
+    },
+    {
+      "package": "pip",
+      "path": "lib/python3.12/site-packages/pip/_internal/cli/__pycache__/req_command.cpython-312.pyc"
+    },
+    {
+      "package": "pip",
+      "path": "lib/python3.12/site-packages/pip/_internal/cli/__pycache__/spinners.cpython-312.pyc"
+    },
+    {
+      "package": "pip",
+      "path": "lib/python3.12/site-packages/pip/_internal/cli/__pycache__/status_codes.cpython-312.pyc"
+    },
+    {
+      "package": "pip",
+      "path": "lib/python3.12/site-packages/pip/_internal/commands/__pycache__/__init__.cpython-312.pyc"
+    },
+    {
+      "package": "pip",
+      "path": "lib/python3.12/site-packages/pip/_internal/commands/__pycache__/cache.cpython-312.pyc"
+    },
+    {
+      "package": "pip",
+      "path": "lib/python3.12/site-packages/pip/_internal/commands/__pycache__/check.cpython-312.pyc"
+    },
+    {
+      "package": "pip",
+      "path": "lib/python3.12/site-packages/pip/_internal/commands/__pycache__/completion.cpython-312.pyc"
+    },
+    {
+      "package": "pip",
+      "path": "lib/python3.12/site-packages/pip/_internal/commands/__pycache__/configuration.cpython-312.pyc"
+    },
+    {
+      "package": "pip",
+      "path": "lib/python3.12/site-packages/pip/_internal/commands/__pycache__/debug.cpython-312.pyc"
+    },
+    {
+      "package": "pip",
+      "path": "lib/python3.12/site-packages/pip/_internal/commands/__pycache__/download.cpython-312.pyc"
+    },
+    {
+      "package": "pip",
+      "path": "lib/python3.12/site-packages/pip/_internal/commands/__pycache__/freeze.cpython-312.pyc"
+    },
+    {
+      "package": "pip",
+      "path": "lib/python3.12/site-packages/pip/_internal/commands/__pycache__/hash.cpython-312.pyc"
+    },
+    {
+      "package": "pip",
+      "path": "lib/python3.12/site-packages/pip/_internal/commands/__pycache__/help.cpython-312.pyc"
+    },
+    {
+      "package": "pip",
+      "path": "lib/python3.12/site-packages/pip/_internal/commands/__pycache__/index.cpython-312.pyc"
+    },
+    {
+      "package": "pip",
+      "path": "lib/python3.12/site-packages/pip/_internal/commands/__pycache__/inspect.cpython-312.pyc"
+    },
+    {
+      "package": "pip",
+      "path": "lib/python3.12/site-packages/pip/_internal/commands/__pycache__/install.cpython-312.pyc"
+    },
+    {
+      "package": "pip",
+      "path": "lib/python3.12/site-packages/pip/_internal/commands/__pycache__/list.cpython-312.pyc"
+    },
+    {
+      "package": "pip",
+      "path": "lib/python3.12/site-packages/pip/_internal/commands/__pycache__/lock.cpython-312.pyc"
+    },
+    {
+      "package": "pip",
+      "path": "lib/python3.12/site-packages/pip/_internal/commands/__pycache__/search.cpython-312.pyc"
+    },
+    {
+      "package": "pip",
+      "path": "lib/python3.12/site-packages/pip/_internal/commands/__pycache__/show.cpython-312.pyc"
+    },
+    {
+      "package": "pip",
+      "path": "lib/python3.12/site-packages/pip/_internal/commands/__pycache__/uninstall.cpython-312.pyc"
+    },
+    {
+      "package": "pip",
+      "path": "lib/python3.12/site-packages/pip/_internal/commands/__pycache__/wheel.cpython-312.pyc"
+    },
+    {
+      "package": "pip",
+      "path": "lib/python3.12/site-packages/pip/_internal/__pycache__/configuration.cpython-312.pyc"
+    },
+    {
+      "package": "pip",
+      "path": "lib/python3.12/site-packages/pip/_internal/distributions/__pycache__/__init__.cpython-312.pyc"
+    },
+    {
+      "package": "pip",
+      "path": "lib/python3.12/site-packages/pip/_internal/distributions/__pycache__/base.cpython-312.pyc"
+    },
+    {
+      "package": "pip",
+      "path": "lib/python3.12/site-packages/pip/_internal/distributions/__pycache__/installed.cpython-312.pyc"
+    },
+    {
+      "package": "pip",
+      "path": "lib/python3.12/site-packages/pip/_internal/distributions/__pycache__/sdist.cpython-312.pyc"
+    },
+    {
+      "package": "pip",
+      "path": "lib/python3.12/site-packages/pip/_internal/distributions/__pycache__/wheel.cpython-312.pyc"
+    },
+    {
+      "package": "pip",
+      "path": "lib/python3.12/site-packages/pip/_internal/__pycache__/exceptions.cpython-312.pyc"
+    },
+    {
+      "package": "pip",
+      "path": "lib/python3.12/site-packages/pip/_internal/index/__pycache__/__init__.cpython-312.pyc"
+    },
+    {
+      "package": "pip",
+      "path": "lib/python3.12/site-packages/pip/_internal/index/__pycache__/collector.cpython-312.pyc"
+    },
+    {
+      "package": "pip",
+      "path": "lib/python3.12/site-packages/pip/_internal/index/__pycache__/package_finder.cpython-312.pyc"
+    },
+    {
+      "package": "pip",
+      "path": "lib/python3.12/site-packages/pip/_internal/index/__pycache__/sources.cpython-312.pyc"
+    },
+    {
+      "package": "pip",
+      "path": "lib/python3.12/site-packages/pip/_internal/locations/__pycache__/__init__.cpython-312.pyc"
+    },
+    {
+      "package": "pip",
+      "path": "lib/python3.12/site-packages/pip/_internal/locations/__pycache__/_distutils.cpython-312.pyc"
+    },
+    {
+      "package": "pip",
+      "path": "lib/python3.12/site-packages/pip/_internal/locations/__pycache__/_sysconfig.cpython-312.pyc"
+    },
+    {
+      "package": "pip",
+      "path": "lib/python3.12/site-packages/pip/_internal/locations/__pycache__/base.cpython-312.pyc"
+    },
+    {
+      "package": "pip",
+      "path": "lib/python3.12/site-packages/pip/_internal/__pycache__/main.cpython-312.pyc"
+    },
+    {
+      "package": "pip",
+      "path": "lib/python3.12/site-packages/pip/_internal/metadata/__pycache__/__init__.cpython-312.pyc"
+    },
+    {
+      "package": "pip",
+      "path": "lib/python3.12/site-packages/pip/_internal/metadata/__pycache__/_json.cpython-312.pyc"
+    },
+    {
+      "package": "pip",
+      "path": "lib/python3.12/site-packages/pip/_internal/metadata/__pycache__/base.cpython-312.pyc"
+    },
+    {
+      "package": "pip",
+      "path": "lib/python3.12/site-packages/pip/_internal/metadata/importlib/__pycache__/__init__.cpython-312.pyc"
+    },
+    {
+      "package": "pip",
+      "path": "lib/python3.12/site-packages/pip/_internal/metadata/importlib/__pycache__/_compat.cpython-312.pyc"
+    },
+    {
+      "package": "pip",
+      "path": "lib/python3.12/site-packages/pip/_internal/metadata/importlib/__pycache__/_dists.cpython-312.pyc"
+    },
+    {
+      "package": "pip",
+      "path": "lib/python3.12/site-packages/pip/_internal/metadata/importlib/__pycache__/_envs.cpython-312.pyc"
+    },
+    {
+      "package": "pip",
+      "path": "lib/python3.12/site-packages/pip/_internal/metadata/__pycache__/pkg_resources.cpython-312.pyc"
+    },
+    {
+      "package": "pip",
+      "path": "lib/python3.12/site-packages/pip/_internal/models/__pycache__/__init__.cpython-312.pyc"
+    },
+    {
+      "package": "pip",
+      "path": "lib/python3.12/site-packages/pip/_internal/models/__pycache__/candidate.cpython-312.pyc"
+    },
+    {
+      "package": "pip",
+      "path": "lib/python3.12/site-packages/pip/_internal/models/__pycache__/direct_url.cpython-312.pyc"
+    },
+    {
+      "package": "pip",
+      "path": "lib/python3.12/site-packages/pip/_internal/models/__pycache__/format_control.cpython-312.pyc"
+    },
+    {
+      "package": "pip",
+      "path": "lib/python3.12/site-packages/pip/_internal/models/__pycache__/index.cpython-312.pyc"
+    },
+    {
+      "package": "pip",
+      "path": "lib/python3.12/site-packages/pip/_internal/models/__pycache__/installation_report.cpython-312.pyc"
+    },
+    {
+      "package": "pip",
+      "path": "lib/python3.12/site-packages/pip/_internal/models/__pycache__/link.cpython-312.pyc"
+    },
+    {
+      "package": "pip",
+      "path": "lib/python3.12/site-packages/pip/_internal/models/__pycache__/release_control.cpython-312.pyc"
+    },
+    {
+      "package": "pip",
+      "path": "lib/python3.12/site-packages/pip/_internal/models/__pycache__/scheme.cpython-312.pyc"
+    },
+    {
+      "package": "pip",
+      "path": "lib/python3.12/site-packages/pip/_internal/models/__pycache__/search_scope.cpython-312.pyc"
+    },
+    {
+      "package": "pip",
+      "path": "lib/python3.12/site-packages/pip/_internal/models/__pycache__/selection_prefs.cpython-312.pyc"
+    },
+    {
+      "package": "pip",
+      "path": "lib/python3.12/site-packages/pip/_internal/models/__pycache__/target_python.cpython-312.pyc"
+    },
+    {
+      "package": "pip",
+      "path": "lib/python3.12/site-packages/pip/_internal/models/__pycache__/wheel.cpython-312.pyc"
+    },
+    {
+      "package": "pip",
+      "path": "lib/python3.12/site-packages/pip/_internal/network/__pycache__/__init__.cpython-312.pyc"
+    },
+    {
+      "package": "pip",
+      "path": "lib/python3.12/site-packages/pip/_internal/network/__pycache__/auth.cpython-312.pyc"
+    },
+    {
+      "package": "pip",
+      "path": "lib/python3.12/site-packages/pip/_internal/network/__pycache__/cache.cpython-312.pyc"
+    },
+    {
+      "package": "pip",
+      "path": "lib/python3.12/site-packages/pip/_internal/network/__pycache__/download.cpython-312.pyc"
+    },
+    {
+      "package": "pip",
+      "path": "lib/python3.12/site-packages/pip/_internal/network/__pycache__/lazy_wheel.cpython-312.pyc"
+    },
+    {
+      "package": "pip",
+      "path": "lib/python3.12/site-packages/pip/_internal/network/__pycache__/session.cpython-312.pyc"
+    },
+    {
+      "package": "pip",
+      "path": "lib/python3.12/site-packages/pip/_internal/network/__pycache__/utils.cpython-312.pyc"
+    },
+    {
+      "package": "pip",
+      "path": "lib/python3.12/site-packages/pip/_internal/network/__pycache__/xmlrpc.cpython-312.pyc"
+    },
+    {
+      "package": "pip",
+      "path": "lib/python3.12/site-packages/pip/_internal/operations/__pycache__/__init__.cpython-312.pyc"
+    },
+    {
+      "package": "pip",
+      "path": "lib/python3.12/site-packages/pip/_internal/operations/build/__pycache__/__init__.cpython-312.pyc"
+    },
+    {
+      "package": "pip",
+      "path": "lib/python3.12/site-packages/pip/_internal/operations/build/__pycache__/build_tracker.cpython-312.pyc"
+    },
+    {
+      "package": "pip",
+      "path": "lib/python3.12/site-packages/pip/_internal/operations/build/__pycache__/metadata.cpython-312.pyc"
+    },
+    {
+      "package": "pip",
+      "path": "lib/python3.12/site-packages/pip/_internal/operations/build/__pycache__/metadata_editable.cpython-312.pyc"
+    },
+    {
+      "package": "pip",
+      "path": "lib/python3.12/site-packages/pip/_internal/operations/build/__pycache__/wheel.cpython-312.pyc"
+    },
+    {
+      "package": "pip",
+      "path": "lib/python3.12/site-packages/pip/_internal/operations/build/__pycache__/wheel_editable.cpython-312.pyc"
+    },
+    {
+      "package": "pip",
+      "path": "lib/python3.12/site-packages/pip/_internal/operations/__pycache__/check.cpython-312.pyc"
+    },
+    {
+      "package": "pip",
+      "path": "lib/python3.12/site-packages/pip/_internal/operations/__pycache__/freeze.cpython-312.pyc"
+    },
+    {
+      "package": "pip",
+      "path": "lib/python3.12/site-packages/pip/_internal/operations/install/__pycache__/__init__.cpython-312.pyc"
+    },
+    {
+      "package": "pip",
+      "path": "lib/python3.12/site-packages/pip/_internal/operations/install/__pycache__/wheel.cpython-312.pyc"
+    },
+    {
+      "package": "pip",
+      "path": "lib/python3.12/site-packages/pip/_internal/operations/__pycache__/prepare.cpython-312.pyc"
+    },
+    {
+      "package": "pip",
+      "path": "lib/python3.12/site-packages/pip/_internal/__pycache__/pyproject.cpython-312.pyc"
+    },
+    {
+      "package": "pip",
+      "path": "lib/python3.12/site-packages/pip/_internal/req/__pycache__/__init__.cpython-312.pyc"
+    },
+    {
+      "package": "pip",
+      "path": "lib/python3.12/site-packages/pip/_internal/req/__pycache__/constructors.cpython-312.pyc"
+    },
+    {
+      "package": "pip",
+      "path": "lib/python3.12/site-packages/pip/_internal/req/__pycache__/pep723.cpython-312.pyc"
+    },
+    {
+      "package": "pip",
+      "path": "lib/python3.12/site-packages/pip/_internal/req/__pycache__/req_dependency_group.cpython-312.pyc"
+    },
+    {
+      "package": "pip",
+      "path": "lib/python3.12/site-packages/pip/_internal/req/__pycache__/req_file.cpython-312.pyc"
+    },
+    {
+      "package": "pip",
+      "path": "lib/python3.12/site-packages/pip/_internal/req/__pycache__/req_install.cpython-312.pyc"
+    },
+    {
+      "package": "pip",
+      "path": "lib/python3.12/site-packages/pip/_internal/req/__pycache__/req_set.cpython-312.pyc"
+    },
+    {
+      "package": "pip",
+      "path": "lib/python3.12/site-packages/pip/_internal/req/__pycache__/req_uninstall.cpython-312.pyc"
+    },
+    {
+      "package": "pip",
+      "path": "lib/python3.12/site-packages/pip/_internal/resolution/__pycache__/__init__.cpython-312.pyc"
+    },
+    {
+      "package": "pip",
+      "path": "lib/python3.12/site-packages/pip/_internal/resolution/__pycache__/base.cpython-312.pyc"
+    },
+    {
+      "package": "pip",
+      "path": "lib/python3.12/site-packages/pip/_internal/resolution/legacy/__pycache__/__init__.cpython-312.pyc"
+    },
+    {
+      "package": "pip",
+      "path": "lib/python3.12/site-packages/pip/_internal/resolution/legacy/__pycache__/resolver.cpython-312.pyc"
+    },
+    {
+      "package": "pip",
+      "path": "lib/python3.12/site-packages/pip/_internal/resolution/resolvelib/__pycache__/__init__.cpython-312.pyc"
+    },
+    {
+      "package": "pip",
+      "path": "lib/python3.12/site-packages/pip/_internal/resolution/resolvelib/__pycache__/base.cpython-312.pyc"
+    },
+    {
+      "package": "pip",
+      "path": "lib/python3.12/site-packages/pip/_internal/resolution/resolvelib/__pycache__/candidates.cpython-312.pyc"
+    },
+    {
+      "package": "pip",
+      "path": "lib/python3.12/site-packages/pip/_internal/resolution/resolvelib/__pycache__/factory.cpython-312.pyc"
+    },
+    {
+      "package": "pip",
+      "path": "lib/python3.12/site-packages/pip/_internal/resolution/resolvelib/__pycache__/found_candidates.cpython-312.pyc"
+    },
+    {
+      "package": "pip",
+      "path": "lib/python3.12/site-packages/pip/_internal/resolution/resolvelib/__pycache__/provider.cpython-312.pyc"
+    },
+    {
+      "package": "pip",
+      "path": "lib/python3.12/site-packages/pip/_internal/resolution/resolvelib/__pycache__/reporter.cpython-312.pyc"
+    },
+    {
+      "package": "pip",
+      "path": "lib/python3.12/site-packages/pip/_internal/resolution/resolvelib/__pycache__/requirements.cpython-312.pyc"
+    },
+    {
+      "package": "pip",
+      "path": "lib/python3.12/site-packages/pip/_internal/resolution/resolvelib/__pycache__/resolver.cpython-312.pyc"
+    },
+    {
+      "package": "pip",
+      "path": "lib/python3.12/site-packages/pip/_internal/__pycache__/self_outdated_check.cpython-312.pyc"
+    },
+    {
+      "package": "pip",
+      "path": "lib/python3.12/site-packages/pip/_internal/utils/__pycache__/__init__.cpython-312.pyc"
+    },
+    {
+      "package": "pip",
+      "path": "lib/python3.12/site-packages/pip/_internal/utils/__pycache__/_jaraco_text.cpython-312.pyc"
+    },
+    {
+      "package": "pip",
+      "path": "lib/python3.12/site-packages/pip/_internal/utils/__pycache__/_log.cpython-312.pyc"
+    },
+    {
+      "package": "pip",
+      "path": "lib/python3.12/site-packages/pip/_internal/utils/__pycache__/appdirs.cpython-312.pyc"
+    },
+    {
+      "package": "pip",
+      "path": "lib/python3.12/site-packages/pip/_internal/utils/__pycache__/compat.cpython-312.pyc"
+    },
+    {
+      "package": "pip",
+      "path": "lib/python3.12/site-packages/pip/_internal/utils/__pycache__/compatibility_tags.cpython-312.pyc"
+    },
+    {
+      "package": "pip",
+      "path": "lib/python3.12/site-packages/pip/_internal/utils/__pycache__/datetime.cpython-312.pyc"
+    },
+    {
+      "package": "pip",
+      "path": "lib/python3.12/site-packages/pip/_internal/utils/__pycache__/deprecation.cpython-312.pyc"
+    },
+    {
+      "package": "pip",
+      "path": "lib/python3.12/site-packages/pip/_internal/utils/__pycache__/direct_url_helpers.cpython-312.pyc"
+    },
+    {
+      "package": "pip",
+      "path": "lib/python3.12/site-packages/pip/_internal/utils/__pycache__/egg_link.cpython-312.pyc"
+    },
+    {
+      "package": "pip",
+      "path": "lib/python3.12/site-packages/pip/_internal/utils/__pycache__/entrypoints.cpython-312.pyc"
+    },
+    {
+      "package": "pip",
+      "path": "lib/python3.12/site-packages/pip/_internal/utils/__pycache__/filesystem.cpython-312.pyc"
+    },
+    {
+      "package": "pip",
+      "path": "lib/python3.12/site-packages/pip/_internal/utils/__pycache__/filetypes.cpython-312.pyc"
+    },
+    {
+      "package": "pip",
+      "path": "lib/python3.12/site-packages/pip/_internal/utils/__pycache__/glibc.cpython-312.pyc"
+    },
+    {
+      "package": "pip",
+      "path": "lib/python3.12/site-packages/pip/_internal/utils/__pycache__/hashes.cpython-312.pyc"
+    },
+    {
+      "package": "pip",
+      "path": "lib/python3.12/site-packages/pip/_internal/utils/__pycache__/logging.cpython-312.pyc"
+    },
+    {
+      "package": "pip",
+      "path": "lib/python3.12/site-packages/pip/_internal/utils/__pycache__/misc.cpython-312.pyc"
+    },
+    {
+      "package": "pip",
+      "path": "lib/python3.12/site-packages/pip/_internal/utils/__pycache__/packaging.cpython-312.pyc"
+    },
+    {
+      "package": "pip",
+      "path": "lib/python3.12/site-packages/pip/_internal/utils/__pycache__/pylock.cpython-312.pyc"
+    },
+    {
+      "package": "pip",
+      "path": "lib/python3.12/site-packages/pip/_internal/utils/__pycache__/retry.cpython-312.pyc"
+    },
+    {
+      "package": "pip",
+      "path": "lib/python3.12/site-packages/pip/_internal/utils/__pycache__/subprocess.cpython-312.pyc"
+    },
+    {
+      "package": "pip",
+      "path": "lib/python3.12/site-packages/pip/_internal/utils/__pycache__/temp_dir.cpython-312.pyc"
+    },
+    {
+      "package": "pip",
+      "path": "lib/python3.12/site-packages/pip/_internal/utils/__pycache__/unpacking.cpython-312.pyc"
+    },
+    {
+      "package": "pip",
+      "path": "lib/python3.12/site-packages/pip/_internal/utils/__pycache__/urls.cpython-312.pyc"
+    },
+    {
+      "package": "pip",
+      "path": "lib/python3.12/site-packages/pip/_internal/utils/__pycache__/virtualenv.cpython-312.pyc"
+    },
+    {
+      "package": "pip",
+      "path": "lib/python3.12/site-packages/pip/_internal/utils/__pycache__/wheel.cpython-312.pyc"
+    },
+    {
+      "package": "pip",
+      "path": "lib/python3.12/site-packages/pip/_internal/vcs/__pycache__/__init__.cpython-312.pyc"
+    },
+    {
+      "package": "pip",
+      "path": "lib/python3.12/site-packages/pip/_internal/vcs/__pycache__/bazaar.cpython-312.pyc"
+    },
+    {
+      "package": "pip",
+      "path": "lib/python3.12/site-packages/pip/_internal/vcs/__pycache__/git.cpython-312.pyc"
+    },
+    {
+      "package": "pip",
+      "path": "lib/python3.12/site-packages/pip/_internal/vcs/__pycache__/mercurial.cpython-312.pyc"
+    },
+    {
+      "package": "pip",
+      "path": "lib/python3.12/site-packages/pip/_internal/vcs/__pycache__/subversion.cpython-312.pyc"
+    },
+    {
+      "package": "pip",
+      "path": "lib/python3.12/site-packages/pip/_internal/vcs/__pycache__/versioncontrol.cpython-312.pyc"
+    },
+    {
+      "package": "pip",
+      "path": "lib/python3.12/site-packages/pip/_internal/__pycache__/wheel_builder.cpython-312.pyc"
+    },
+    {
+      "package": "pip",
+      "path": "lib/python3.12/site-packages/pip/_vendor/__pycache__/__init__.cpython-312.pyc"
+    },
+    {
+      "package": "pip",
+      "path": "lib/python3.12/site-packages/pip/_vendor/cachecontrol/__pycache__/__init__.cpython-312.pyc"
+    },
+    {
+      "package": "pip",
+      "path": "lib/python3.12/site-packages/pip/_vendor/cachecontrol/__pycache__/_cmd.cpython-312.pyc"
+    },
+    {
+      "package": "pip",
+      "path": "lib/python3.12/site-packages/pip/_vendor/cachecontrol/__pycache__/adapter.cpython-312.pyc"
+    },
+    {
+      "package": "pip",
+      "path": "lib/python3.12/site-packages/pip/_vendor/cachecontrol/__pycache__/cache.cpython-312.pyc"
+    },
+    {
+      "package": "pip",
+      "path": "lib/python3.12/site-packages/pip/_vendor/cachecontrol/caches/__pycache__/__init__.cpython-312.pyc"
+    },
+    {
+      "package": "pip",
+      "path": "lib/python3.12/site-packages/pip/_vendor/cachecontrol/caches/__pycache__/file_cache.cpython-312.pyc"
+    },
+    {
+      "package": "pip",
+      "path": "lib/python3.12/site-packages/pip/_vendor/cachecontrol/caches/__pycache__/redis_cache.cpython-312.pyc"
+    },
+    {
+      "package": "pip",
+      "path": "lib/python3.12/site-packages/pip/_vendor/cachecontrol/__pycache__/controller.cpython-312.pyc"
+    },
+    {
+      "package": "pip",
+      "path": "lib/python3.12/site-packages/pip/_vendor/cachecontrol/__pycache__/filewrapper.cpython-312.pyc"
+    },
+    {
+      "package": "pip",
+      "path": "lib/python3.12/site-packages/pip/_vendor/cachecontrol/__pycache__/heuristics.cpython-312.pyc"
+    },
+    {
+      "package": "pip",
+      "path": "lib/python3.12/site-packages/pip/_vendor/cachecontrol/__pycache__/serialize.cpython-312.pyc"
+    },
+    {
+      "package": "pip",
+      "path": "lib/python3.12/site-packages/pip/_vendor/cachecontrol/__pycache__/wrapper.cpython-312.pyc"
+    },
+    {
+      "package": "pip",
+      "path": "lib/python3.12/site-packages/pip/_vendor/certifi/__pycache__/__init__.cpython-312.pyc"
+    },
+    {
+      "package": "pip",
+      "path": "lib/python3.12/site-packages/pip/_vendor/certifi/__pycache__/__main__.cpython-312.pyc"
+    },
+    {
+      "package": "pip",
+      "path": "lib/python3.12/site-packages/pip/_vendor/certifi/__pycache__/core.cpython-312.pyc"
+    },
+    {
+      "package": "pip",
+      "path": "lib/python3.12/site-packages/pip/_vendor/distlib/__pycache__/__init__.cpython-312.pyc"
+    },
+    {
+      "package": "pip",
+      "path": "lib/python3.12/site-packages/pip/_vendor/distlib/__pycache__/compat.cpython-312.pyc"
+    },
+    {
+      "package": "pip",
+      "path": "lib/python3.12/site-packages/pip/_vendor/distlib/__pycache__/resources.cpython-312.pyc"
+    },
+    {
+      "package": "pip",
+      "path": "lib/python3.12/site-packages/pip/_vendor/distlib/__pycache__/scripts.cpython-312.pyc"
+    },
+    {
+      "package": "pip",
+      "path": "lib/python3.12/site-packages/pip/_vendor/distlib/__pycache__/util.cpython-312.pyc"
+    },
+    {
+      "package": "pip",
+      "path": "lib/python3.12/site-packages/pip/_vendor/distro/__pycache__/__init__.cpython-312.pyc"
+    },
+    {
+      "package": "pip",
+      "path": "lib/python3.12/site-packages/pip/_vendor/distro/__pycache__/__main__.cpython-312.pyc"
+    },
+    {
+      "package": "pip",
+      "path": "lib/python3.12/site-packages/pip/_vendor/distro/__pycache__/distro.cpython-312.pyc"
+    },
+    {
+      "package": "pip",
+      "path": "lib/python3.12/site-packages/pip/_vendor/idna/__pycache__/__init__.cpython-312.pyc"
+    },
+    {
+      "package": "pip",
+      "path": "lib/python3.12/site-packages/pip/_vendor/idna/__pycache__/__main__.cpython-312.pyc"
+    },
+    {
+      "package": "pip",
+      "path": "lib/python3.12/site-packages/pip/_vendor/idna/__pycache__/cli.cpython-312.pyc"
+    },
+    {
+      "package": "pip",
+      "path": "lib/python3.12/site-packages/pip/_vendor/idna/__pycache__/codec.cpython-312.pyc"
+    },
+    {
+      "package": "pip",
+      "path": "lib/python3.12/site-packages/pip/_vendor/idna/__pycache__/compat.cpython-312.pyc"
+    },
+    {
+      "package": "pip",
+      "path": "lib/python3.12/site-packages/pip/_vendor/idna/__pycache__/core.cpython-312.pyc"
+    },
+    {
+      "package": "pip",
+      "path": "lib/python3.12/site-packages/pip/_vendor/idna/__pycache__/idnadata.cpython-312.pyc"
+    },
+    {
+      "package": "pip",
+      "path": "lib/python3.12/site-packages/pip/_vendor/idna/__pycache__/intranges.cpython-312.pyc"
+    },
+    {
+      "package": "pip",
+      "path": "lib/python3.12/site-packages/pip/_vendor/idna/__pycache__/package_data.cpython-312.pyc"
+    },
+    {
+      "package": "pip",
+      "path": "lib/python3.12/site-packages/pip/_vendor/idna/__pycache__/uts46data.cpython-312.pyc"
+    },
+    {
+      "package": "pip",
+      "path": "lib/python3.12/site-packages/pip/_vendor/msgpack/__pycache__/__init__.cpython-312.pyc"
+    },
+    {
+      "package": "pip",
+      "path": "lib/python3.12/site-packages/pip/_vendor/msgpack/__pycache__/exceptions.cpython-312.pyc"
+    },
+    {
+      "package": "pip",
+      "path": "lib/python3.12/site-packages/pip/_vendor/msgpack/__pycache__/ext.cpython-312.pyc"
+    },
+    {
+      "package": "pip",
+      "path": "lib/python3.12/site-packages/pip/_vendor/msgpack/__pycache__/fallback.cpython-312.pyc"
+    },
+    {
+      "package": "pip",
+      "path": "lib/python3.12/site-packages/pip/_vendor/packaging/__pycache__/__init__.cpython-312.pyc"
+    },
+    {
+      "package": "pip",
+      "path": "lib/python3.12/site-packages/pip/_vendor/packaging/__pycache__/_elffile.cpython-312.pyc"
+    },
+    {
+      "package": "pip",
+      "path": "lib/python3.12/site-packages/pip/_vendor/packaging/__pycache__/_manylinux.cpython-312.pyc"
+    },
+    {
+      "package": "pip",
+      "path": "lib/python3.12/site-packages/pip/_vendor/packaging/__pycache__/_musllinux.cpython-312.pyc"
+    },
+    {
+      "package": "pip",
+      "path": "lib/python3.12/site-packages/pip/_vendor/packaging/__pycache__/_parser.cpython-312.pyc"
+    },
+    {
+      "package": "pip",
+      "path": "lib/python3.12/site-packages/pip/_vendor/packaging/__pycache__/_structures.cpython-312.pyc"
+    },
+    {
+      "package": "pip",
+      "path": "lib/python3.12/site-packages/pip/_vendor/packaging/__pycache__/_tokenizer.cpython-312.pyc"
+    },
+    {
+      "package": "pip",
+      "path": "lib/python3.12/site-packages/pip/_vendor/packaging/__pycache__/dependency_groups.cpython-312.pyc"
+    },
+    {
+      "package": "pip",
+      "path": "lib/python3.12/site-packages/pip/_vendor/packaging/__pycache__/direct_url.cpython-312.pyc"
+    },
+    {
+      "package": "pip",
+      "path": "lib/python3.12/site-packages/pip/_vendor/packaging/__pycache__/errors.cpython-312.pyc"
+    },
+    {
+      "package": "pip",
+      "path": "lib/python3.12/site-packages/pip/_vendor/packaging/licenses/__pycache__/__init__.cpython-312.pyc"
+    },
+    {
+      "package": "pip",
+      "path": "lib/python3.12/site-packages/pip/_vendor/packaging/licenses/__pycache__/_spdx.cpython-312.pyc"
+    },
+    {
+      "package": "pip",
+      "path": "lib/python3.12/site-packages/pip/_vendor/packaging/__pycache__/markers.cpython-312.pyc"
+    },
+    {
+      "package": "pip",
+      "path": "lib/python3.12/site-packages/pip/_vendor/packaging/__pycache__/metadata.cpython-312.pyc"
+    },
+    {
+      "package": "pip",
+      "path": "lib/python3.12/site-packages/pip/_vendor/packaging/__pycache__/pylock.cpython-312.pyc"
+    },
+    {
+      "package": "pip",
+      "path": "lib/python3.12/site-packages/pip/_vendor/packaging/__pycache__/requirements.cpython-312.pyc"
+    },
+    {
+      "package": "pip",
+      "path": "lib/python3.12/site-packages/pip/_vendor/packaging/__pycache__/specifiers.cpython-312.pyc"
+    },
+    {
+      "package": "pip",
+      "path": "lib/python3.12/site-packages/pip/_vendor/packaging/__pycache__/tags.cpython-312.pyc"
+    },
+    {
+      "package": "pip",
+      "path": "lib/python3.12/site-packages/pip/_vendor/packaging/__pycache__/utils.cpython-312.pyc"
+    },
+    {
+      "package": "pip",
+      "path": "lib/python3.12/site-packages/pip/_vendor/packaging/__pycache__/version.cpython-312.pyc"
+    },
+    {
+      "package": "pip",
+      "path": "lib/python3.12/site-packages/pip/_vendor/pkg_resources/__pycache__/__init__.cpython-312.pyc"
+    },
+    {
+      "package": "pip",
+      "path": "lib/python3.12/site-packages/pip/_vendor/platformdirs/__pycache__/__init__.cpython-312.pyc"
+    },
+    {
+      "package": "pip",
+      "path": "lib/python3.12/site-packages/pip/_vendor/platformdirs/__pycache__/__main__.cpython-312.pyc"
+    },
+    {
+      "package": "pip",
+      "path": "lib/python3.12/site-packages/pip/_vendor/platformdirs/__pycache__/_xdg.cpython-312.pyc"
+    },
+    {
+      "package": "pip",
+      "path": "lib/python3.12/site-packages/pip/_vendor/platformdirs/__pycache__/android.cpython-312.pyc"
+    },
+    {
+      "package": "pip",
+      "path": "lib/python3.12/site-packages/pip/_vendor/platformdirs/__pycache__/api.cpython-312.pyc"
+    },
+    {
+      "package": "pip",
+      "path": "lib/python3.12/site-packages/pip/_vendor/platformdirs/__pycache__/macos.cpython-312.pyc"
+    },
+    {
+      "package": "pip",
+      "path": "lib/python3.12/site-packages/pip/_vendor/platformdirs/__pycache__/unix.cpython-312.pyc"
+    },
+    {
+      "package": "pip",
+      "path": "lib/python3.12/site-packages/pip/_vendor/platformdirs/__pycache__/version.cpython-312.pyc"
+    },
+    {
+      "package": "pip",
+      "path": "lib/python3.12/site-packages/pip/_vendor/platformdirs/__pycache__/windows.cpython-312.pyc"
+    },
+    {
+      "package": "pip",
+      "path": "lib/python3.12/site-packages/pip/_vendor/pygments/__pycache__/__init__.cpython-312.pyc"
+    },
+    {
+      "package": "pip",
+      "path": "lib/python3.12/site-packages/pip/_vendor/pygments/__pycache__/__main__.cpython-312.pyc"
+    },
+    {
+      "package": "pip",
+      "path": "lib/python3.12/site-packages/pip/_vendor/pygments/__pycache__/console.cpython-312.pyc"
+    },
+    {
+      "package": "pip",
+      "path": "lib/python3.12/site-packages/pip/_vendor/pygments/__pycache__/filter.cpython-312.pyc"
+    },
+    {
+      "package": "pip",
+      "path": "lib/python3.12/site-packages/pip/_vendor/pygments/filters/__pycache__/__init__.cpython-312.pyc"
+    },
+    {
+      "package": "pip",
+      "path": "lib/python3.12/site-packages/pip/_vendor/pygments/__pycache__/formatter.cpython-312.pyc"
+    },
+    {
+      "package": "pip",
+      "path": "lib/python3.12/site-packages/pip/_vendor/pygments/formatters/__pycache__/__init__.cpython-312.pyc"
+    },
+    {
+      "package": "pip",
+      "path": "lib/python3.12/site-packages/pip/_vendor/pygments/formatters/__pycache__/_mapping.cpython-312.pyc"
+    },
+    {
+      "package": "pip",
+      "path": "lib/python3.12/site-packages/pip/_vendor/pygments/__pycache__/lexer.cpython-312.pyc"
+    },
+    {
+      "package": "pip",
+      "path": "lib/python3.12/site-packages/pip/_vendor/pygments/lexers/__pycache__/__init__.cpython-312.pyc"
+    },
+    {
+      "package": "pip",
+      "path": "lib/python3.12/site-packages/pip/_vendor/pygments/lexers/__pycache__/_mapping.cpython-312.pyc"
+    },
+    {
+      "package": "pip",
+      "path": "lib/python3.12/site-packages/pip/_vendor/pygments/lexers/__pycache__/python.cpython-312.pyc"
+    },
+    {
+      "package": "pip",
+      "path": "lib/python3.12/site-packages/pip/_vendor/pygments/__pycache__/modeline.cpython-312.pyc"
+    },
+    {
+      "package": "pip",
+      "path": "lib/python3.12/site-packages/pip/_vendor/pygments/__pycache__/plugin.cpython-312.pyc"
+    },
+    {
+      "package": "pip",
+      "path": "lib/python3.12/site-packages/pip/_vendor/pygments/__pycache__/regexopt.cpython-312.pyc"
+    },
+    {
+      "package": "pip",
+      "path": "lib/python3.12/site-packages/pip/_vendor/pygments/__pycache__/scanner.cpython-312.pyc"
+    },
+    {
+      "package": "pip",
+      "path": "lib/python3.12/site-packages/pip/_vendor/pygments/__pycache__/sphinxext.cpython-312.pyc"
+    },
+    {
+      "package": "pip",
+      "path": "lib/python3.12/site-packages/pip/_vendor/pygments/__pycache__/style.cpython-312.pyc"
+    },
+    {
+      "package": "pip",
+      "path": "lib/python3.12/site-packages/pip/_vendor/pygments/styles/__pycache__/__init__.cpython-312.pyc"
+    },
+    {
+      "package": "pip",
+      "path": "lib/python3.12/site-packages/pip/_vendor/pygments/styles/__pycache__/_mapping.cpython-312.pyc"
+    },
+    {
+      "package": "pip",
+      "path": "lib/python3.12/site-packages/pip/_vendor/pygments/__pycache__/token.cpython-312.pyc"
+    },
+    {
+      "package": "pip",
+      "path": "lib/python3.12/site-packages/pip/_vendor/pygments/__pycache__/unistring.cpython-312.pyc"
+    },
+    {
+      "package": "pip",
+      "path": "lib/python3.12/site-packages/pip/_vendor/pygments/__pycache__/util.cpython-312.pyc"
+    },
+    {
+      "package": "pip",
+      "path": "lib/python3.12/site-packages/pip/_vendor/pyproject_hooks/__pycache__/__init__.cpython-312.pyc"
+    },
+    {
+      "package": "pip",
+      "path": "lib/python3.12/site-packages/pip/_vendor/pyproject_hooks/__pycache__/_impl.cpython-312.pyc"
+    },
+    {
+      "package": "pip",
+      "path": "lib/python3.12/site-packages/pip/_vendor/pyproject_hooks/_in_process/__pycache__/__init__.cpython-312.pyc"
+    },
+    {
+      "package": "pip",
+      "path": "lib/python3.12/site-packages/pip/_vendor/pyproject_hooks/_in_process/__pycache__/_in_process.cpython-312.pyc"
+    },
+    {
+      "package": "pip",
+      "path": "lib/python3.12/site-packages/pip/_vendor/requests/__pycache__/__init__.cpython-312.pyc"
+    },
+    {
+      "package": "pip",
+      "path": "lib/python3.12/site-packages/pip/_vendor/requests/__pycache__/__version__.cpython-312.pyc"
+    },
+    {
+      "package": "pip",
+      "path": "lib/python3.12/site-packages/pip/_vendor/requests/__pycache__/_internal_utils.cpython-312.pyc"
+    },
+    {
+      "package": "pip",
+      "path": "lib/python3.12/site-packages/pip/_vendor/requests/__pycache__/_types.cpython-312.pyc"
+    },
+    {
+      "package": "pip",
+      "path": "lib/python3.12/site-packages/pip/_vendor/requests/__pycache__/adapters.cpython-312.pyc"
+    },
+    {
+      "package": "pip",
+      "path": "lib/python3.12/site-packages/pip/_vendor/requests/__pycache__/api.cpython-312.pyc"
+    },
+    {
+      "package": "pip",
+      "path": "lib/python3.12/site-packages/pip/_vendor/requests/__pycache__/auth.cpython-312.pyc"
+    },
+    {
+      "package": "pip",
+      "path": "lib/python3.12/site-packages/pip/_vendor/requests/__pycache__/certs.cpython-312.pyc"
+    },
+    {
+      "package": "pip",
+      "path": "lib/python3.12/site-packages/pip/_vendor/requests/__pycache__/compat.cpython-312.pyc"
+    },
+    {
+      "package": "pip",
+      "path": "lib/python3.12/site-packages/pip/_vendor/requests/__pycache__/cookies.cpython-312.pyc"
+    },
+    {
+      "package": "pip",
+      "path": "lib/python3.12/site-packages/pip/_vendor/requests/__pycache__/exceptions.cpython-312.pyc"
+    },
+    {
+      "package": "pip",
+      "path": "lib/python3.12/site-packages/pip/_vendor/requests/__pycache__/help.cpython-312.pyc"
+    },
+    {
+      "package": "pip",
+      "path": "lib/python3.12/site-packages/pip/_vendor/requests/__pycache__/hooks.cpython-312.pyc"
+    },
+    {
+      "package": "pip",
+      "path": "lib/python3.12/site-packages/pip/_vendor/requests/__pycache__/models.cpython-312.pyc"
+    },
+    {
+      "package": "pip",
+      "path": "lib/python3.12/site-packages/pip/_vendor/requests/__pycache__/packages.cpython-312.pyc"
+    },
+    {
+      "package": "pip",
+      "path": "lib/python3.12/site-packages/pip/_vendor/requests/__pycache__/sessions.cpython-312.pyc"
+    },
+    {
+      "package": "pip",
+      "path": "lib/python3.12/site-packages/pip/_vendor/requests/__pycache__/status_codes.cpython-312.pyc"
+    },
+    {
+      "package": "pip",
+      "path": "lib/python3.12/site-packages/pip/_vendor/requests/__pycache__/structures.cpython-312.pyc"
+    },
+    {
+      "package": "pip",
+      "path": "lib/python3.12/site-packages/pip/_vendor/requests/__pycache__/utils.cpython-312.pyc"
+    },
+    {
+      "package": "pip",
+      "path": "lib/python3.12/site-packages/pip/_vendor/resolvelib/__pycache__/__init__.cpython-312.pyc"
+    },
+    {
+      "package": "pip",
+      "path": "lib/python3.12/site-packages/pip/_vendor/resolvelib/__pycache__/providers.cpython-312.pyc"
+    },
+    {
+      "package": "pip",
+      "path": "lib/python3.12/site-packages/pip/_vendor/resolvelib/__pycache__/reporters.cpython-312.pyc"
+    },
+    {
+      "package": "pip",
+      "path": "lib/python3.12/site-packages/pip/_vendor/resolvelib/resolvers/__pycache__/__init__.cpython-312.pyc"
+    },
+    {
+      "package": "pip",
+      "path": "lib/python3.12/site-packages/pip/_vendor/resolvelib/resolvers/__pycache__/abstract.cpython-312.pyc"
+    },
+    {
+      "package": "pip",
+      "path": "lib/python3.12/site-packages/pip/_vendor/resolvelib/resolvers/__pycache__/criterion.cpython-312.pyc"
+    },
+    {
+      "package": "pip",
+      "path": "lib/python3.12/site-packages/pip/_vendor/resolvelib/resolvers/__pycache__/exceptions.cpython-312.pyc"
+    },
+    {
+      "package": "pip",
+      "path": "lib/python3.12/site-packages/pip/_vendor/resolvelib/resolvers/__pycache__/resolution.cpython-312.pyc"
+    },
+    {
+      "package": "pip",
+      "path": "lib/python3.12/site-packages/pip/_vendor/resolvelib/__pycache__/structs.cpython-312.pyc"
+    },
+    {
+      "package": "pip",
+      "path": "lib/python3.12/site-packages/pip/_vendor/rich/__pycache__/__init__.cpython-312.pyc"
+    },
+    {
+      "package": "pip",
+      "path": "lib/python3.12/site-packages/pip/_vendor/rich/__pycache__/__main__.cpython-312.pyc"
+    },
+    {
+      "package": "pip",
+      "path": "lib/python3.12/site-packages/pip/_vendor/rich/__pycache__/_cell_widths.cpython-312.pyc"
+    },
+    {
+      "package": "pip",
+      "path": "lib/python3.12/site-packages/pip/_vendor/rich/__pycache__/_emoji_codes.cpython-312.pyc"
+    },
+    {
+      "package": "pip",
+      "path": "lib/python3.12/site-packages/pip/_vendor/rich/__pycache__/_emoji_replace.cpython-312.pyc"
+    },
+    {
+      "package": "pip",
+      "path": "lib/python3.12/site-packages/pip/_vendor/rich/__pycache__/_export_format.cpython-312.pyc"
+    },
+    {
+      "package": "pip",
+      "path": "lib/python3.12/site-packages/pip/_vendor/rich/__pycache__/_extension.cpython-312.pyc"
+    },
+    {
+      "package": "pip",
+      "path": "lib/python3.12/site-packages/pip/_vendor/rich/__pycache__/_fileno.cpython-312.pyc"
+    },
+    {
+      "package": "pip",
+      "path": "lib/python3.12/site-packages/pip/_vendor/rich/__pycache__/_inspect.cpython-312.pyc"
+    },
+    {
+      "package": "pip",
+      "path": "lib/python3.12/site-packages/pip/_vendor/rich/__pycache__/_log_render.cpython-312.pyc"
+    },
+    {
+      "package": "pip",
+      "path": "lib/python3.12/site-packages/pip/_vendor/rich/__pycache__/_loop.cpython-312.pyc"
+    },
+    {
+      "package": "pip",
+      "path": "lib/python3.12/site-packages/pip/_vendor/rich/__pycache__/_null_file.cpython-312.pyc"
+    },
+    {
+      "package": "pip",
+      "path": "lib/python3.12/site-packages/pip/_vendor/rich/__pycache__/_palettes.cpython-312.pyc"
+    },
+    {
+      "package": "pip",
+      "path": "lib/python3.12/site-packages/pip/_vendor/rich/__pycache__/_pick.cpython-312.pyc"
+    },
+    {
+      "package": "pip",
+      "path": "lib/python3.12/site-packages/pip/_vendor/rich/__pycache__/_ratio.cpython-312.pyc"
+    },
+    {
+      "package": "pip",
+      "path": "lib/python3.12/site-packages/pip/_vendor/rich/__pycache__/_spinners.cpython-312.pyc"
+    },
+    {
+      "package": "pip",
+      "path": "lib/python3.12/site-packages/pip/_vendor/rich/__pycache__/_stack.cpython-312.pyc"
+    },
+    {
+      "package": "pip",
+      "path": "lib/python3.12/site-packages/pip/_vendor/rich/__pycache__/_timer.cpython-312.pyc"
+    },
+    {
+      "package": "pip",
+      "path": "lib/python3.12/site-packages/pip/_vendor/rich/__pycache__/_win32_console.cpython-312.pyc"
+    },
+    {
+      "package": "pip",
+      "path": "lib/python3.12/site-packages/pip/_vendor/rich/__pycache__/_windows.cpython-312.pyc"
+    },
+    {
+      "package": "pip",
+      "path": "lib/python3.12/site-packages/pip/_vendor/rich/__pycache__/_windows_renderer.cpython-312.pyc"
+    },
+    {
+      "package": "pip",
+      "path": "lib/python3.12/site-packages/pip/_vendor/rich/__pycache__/_wrap.cpython-312.pyc"
+    },
+    {
+      "package": "pip",
+      "path": "lib/python3.12/site-packages/pip/_vendor/rich/__pycache__/abc.cpython-312.pyc"
+    },
+    {
+      "package": "pip",
+      "path": "lib/python3.12/site-packages/pip/_vendor/rich/__pycache__/align.cpython-312.pyc"
+    },
+    {
+      "package": "pip",
+      "path": "lib/python3.12/site-packages/pip/_vendor/rich/__pycache__/ansi.cpython-312.pyc"
+    },
+    {
+      "package": "pip",
+      "path": "lib/python3.12/site-packages/pip/_vendor/rich/__pycache__/bar.cpython-312.pyc"
+    },
+    {
+      "package": "pip",
+      "path": "lib/python3.12/site-packages/pip/_vendor/rich/__pycache__/box.cpython-312.pyc"
+    },
+    {
+      "package": "pip",
+      "path": "lib/python3.12/site-packages/pip/_vendor/rich/__pycache__/cells.cpython-312.pyc"
+    },
+    {
+      "package": "pip",
+      "path": "lib/python3.12/site-packages/pip/_vendor/rich/__pycache__/color.cpython-312.pyc"
+    },
+    {
+      "package": "pip",
+      "path": "lib/python3.12/site-packages/pip/_vendor/rich/__pycache__/color_triplet.cpython-312.pyc"
+    },
+    {
+      "package": "pip",
+      "path": "lib/python3.12/site-packages/pip/_vendor/rich/__pycache__/columns.cpython-312.pyc"
+    },
+    {
+      "package": "pip",
+      "path": "lib/python3.12/site-packages/pip/_vendor/rich/__pycache__/console.cpython-312.pyc"
+    },
+    {
+      "package": "pip",
+      "path": "lib/python3.12/site-packages/pip/_vendor/rich/__pycache__/constrain.cpython-312.pyc"
+    },
+    {
+      "package": "pip",
+      "path": "lib/python3.12/site-packages/pip/_vendor/rich/__pycache__/containers.cpython-312.pyc"
+    },
+    {
+      "package": "pip",
+      "path": "lib/python3.12/site-packages/pip/_vendor/rich/__pycache__/control.cpython-312.pyc"
+    },
+    {
+      "package": "pip",
+      "path": "lib/python3.12/site-packages/pip/_vendor/rich/__pycache__/default_styles.cpython-312.pyc"
+    },
+    {
+      "package": "pip",
+      "path": "lib/python3.12/site-packages/pip/_vendor/rich/__pycache__/diagnose.cpython-312.pyc"
+    },
+    {
+      "package": "pip",
+      "path": "lib/python3.12/site-packages/pip/_vendor/rich/__pycache__/emoji.cpython-312.pyc"
+    },
+    {
+      "package": "pip",
+      "path": "lib/python3.12/site-packages/pip/_vendor/rich/__pycache__/errors.cpython-312.pyc"
+    },
+    {
+      "package": "pip",
+      "path": "lib/python3.12/site-packages/pip/_vendor/rich/__pycache__/file_proxy.cpython-312.pyc"
+    },
+    {
+      "package": "pip",
+      "path": "lib/python3.12/site-packages/pip/_vendor/rich/__pycache__/filesize.cpython-312.pyc"
+    },
+    {
+      "package": "pip",
+      "path": "lib/python3.12/site-packages/pip/_vendor/rich/__pycache__/highlighter.cpython-312.pyc"
+    },
+    {
+      "package": "pip",
+      "path": "lib/python3.12/site-packages/pip/_vendor/rich/__pycache__/json.cpython-312.pyc"
+    },
+    {
+      "package": "pip",
+      "path": "lib/python3.12/site-packages/pip/_vendor/rich/__pycache__/jupyter.cpython-312.pyc"
+    },
+    {
+      "package": "pip",
+      "path": "lib/python3.12/site-packages/pip/_vendor/rich/__pycache__/layout.cpython-312.pyc"
+    },
+    {
+      "package": "pip",
+      "path": "lib/python3.12/site-packages/pip/_vendor/rich/__pycache__/live.cpython-312.pyc"
+    },
+    {
+      "package": "pip",
+      "path": "lib/python3.12/site-packages/pip/_vendor/rich/__pycache__/live_render.cpython-312.pyc"
+    },
+    {
+      "package": "pip",
+      "path": "lib/python3.12/site-packages/pip/_vendor/rich/__pycache__/logging.cpython-312.pyc"
+    },
+    {
+      "package": "pip",
+      "path": "lib/python3.12/site-packages/pip/_vendor/rich/__pycache__/markup.cpython-312.pyc"
+    },
+    {
+      "package": "pip",
+      "path": "lib/python3.12/site-packages/pip/_vendor/rich/__pycache__/measure.cpython-312.pyc"
+    },
+    {
+      "package": "pip",
+      "path": "lib/python3.12/site-packages/pip/_vendor/rich/__pycache__/padding.cpython-312.pyc"
+    },
+    {
+      "package": "pip",
+      "path": "lib/python3.12/site-packages/pip/_vendor/rich/__pycache__/pager.cpython-312.pyc"
+    },
+    {
+      "package": "pip",
+      "path": "lib/python3.12/site-packages/pip/_vendor/rich/__pycache__/palette.cpython-312.pyc"
+    },
+    {
+      "package": "pip",
+      "path": "lib/python3.12/site-packages/pip/_vendor/rich/__pycache__/panel.cpython-312.pyc"
+    },
+    {
+      "package": "pip",
+      "path": "lib/python3.12/site-packages/pip/_vendor/rich/__pycache__/pretty.cpython-312.pyc"
+    },
+    {
+      "package": "pip",
+      "path": "lib/python3.12/site-packages/pip/_vendor/rich/__pycache__/progress.cpython-312.pyc"
+    },
+    {
+      "package": "pip",
+      "path": "lib/python3.12/site-packages/pip/_vendor/rich/__pycache__/progress_bar.cpython-312.pyc"
+    },
+    {
+      "package": "pip",
+      "path": "lib/python3.12/site-packages/pip/_vendor/rich/__pycache__/prompt.cpython-312.pyc"
+    },
+    {
+      "package": "pip",
+      "path": "lib/python3.12/site-packages/pip/_vendor/rich/__pycache__/protocol.cpython-312.pyc"
+    },
+    {
+      "package": "pip",
+      "path": "lib/python3.12/site-packages/pip/_vendor/rich/__pycache__/region.cpython-312.pyc"
+    },
+    {
+      "package": "pip",
+      "path": "lib/python3.12/site-packages/pip/_vendor/rich/__pycache__/repr.cpython-312.pyc"
+    },
+    {
+      "package": "pip",
+      "path": "lib/python3.12/site-packages/pip/_vendor/rich/__pycache__/rule.cpython-312.pyc"
+    },
+    {
+      "package": "pip",
+      "path": "lib/python3.12/site-packages/pip/_vendor/rich/__pycache__/scope.cpython-312.pyc"
+    },
+    {
+      "package": "pip",
+      "path": "lib/python3.12/site-packages/pip/_vendor/rich/__pycache__/screen.cpython-312.pyc"
+    },
+    {
+      "package": "pip",
+      "path": "lib/python3.12/site-packages/pip/_vendor/rich/__pycache__/segment.cpython-312.pyc"
+    },
+    {
+      "package": "pip",
+      "path": "lib/python3.12/site-packages/pip/_vendor/rich/__pycache__/spinner.cpython-312.pyc"
+    },
+    {
+      "package": "pip",
+      "path": "lib/python3.12/site-packages/pip/_vendor/rich/__pycache__/status.cpython-312.pyc"
+    },
+    {
+      "package": "pip",
+      "path": "lib/python3.12/site-packages/pip/_vendor/rich/__pycache__/style.cpython-312.pyc"
+    },
+    {
+      "package": "pip",
+      "path": "lib/python3.12/site-packages/pip/_vendor/rich/__pycache__/styled.cpython-312.pyc"
+    },
+    {
+      "package": "pip",
+      "path": "lib/python3.12/site-packages/pip/_vendor/rich/__pycache__/syntax.cpython-312.pyc"
+    },
+    {
+      "package": "pip",
+      "path": "lib/python3.12/site-packages/pip/_vendor/rich/__pycache__/table.cpython-312.pyc"
+    },
+    {
+      "package": "pip",
+      "path": "lib/python3.12/site-packages/pip/_vendor/rich/__pycache__/terminal_theme.cpython-312.pyc"
+    },
+    {
+      "package": "pip",
+      "path": "lib/python3.12/site-packages/pip/_vendor/rich/__pycache__/text.cpython-312.pyc"
+    },
+    {
+      "package": "pip",
+      "path": "lib/python3.12/site-packages/pip/_vendor/rich/__pycache__/theme.cpython-312.pyc"
+    },
+    {
+      "package": "pip",
+      "path": "lib/python3.12/site-packages/pip/_vendor/rich/__pycache__/themes.cpython-312.pyc"
+    },
+    {
+      "package": "pip",
+      "path": "lib/python3.12/site-packages/pip/_vendor/rich/__pycache__/traceback.cpython-312.pyc"
+    },
+    {
+      "package": "pip",
+      "path": "lib/python3.12/site-packages/pip/_vendor/rich/__pycache__/tree.cpython-312.pyc"
+    },
+    {
+      "package": "pip",
+      "path": "lib/python3.12/site-packages/pip/_vendor/tomli/__pycache__/__init__.cpython-312.pyc"
+    },
+    {
+      "package": "pip",
+      "path": "lib/python3.12/site-packages/pip/_vendor/tomli/__pycache__/_parser.cpython-312.pyc"
+    },
+    {
+      "package": "pip",
+      "path": "lib/python3.12/site-packages/pip/_vendor/tomli/__pycache__/_re.cpython-312.pyc"
+    },
+    {
+      "package": "pip",
+      "path": "lib/python3.12/site-packages/pip/_vendor/tomli/__pycache__/_types.cpython-312.pyc"
+    },
+    {
+      "package": "pip",
+      "path": "lib/python3.12/site-packages/pip/_vendor/tomli_w/__pycache__/__init__.cpython-312.pyc"
+    },
+    {
+      "package": "pip",
+      "path": "lib/python3.12/site-packages/pip/_vendor/tomli_w/__pycache__/_writer.cpython-312.pyc"
+    },
+    {
+      "package": "pip",
+      "path": "lib/python3.12/site-packages/pip/_vendor/truststore/__pycache__/__init__.cpython-312.pyc"
+    },
+    {
+      "package": "pip",
+      "path": "lib/python3.12/site-packages/pip/_vendor/truststore/__pycache__/_api.cpython-312.pyc"
+    },
+    {
+      "package": "pip",
+      "path": "lib/python3.12/site-packages/pip/_vendor/truststore/__pycache__/_macos.cpython-312.pyc"
+    },
+    {
+      "package": "pip",
+      "path": "lib/python3.12/site-packages/pip/_vendor/truststore/__pycache__/_openssl.cpython-312.pyc"
+    },
+    {
+      "package": "pip",
+      "path": "lib/python3.12/site-packages/pip/_vendor/truststore/__pycache__/_ssl_constants.cpython-312.pyc"
+    },
+    {
+      "package": "pip",
+      "path": "lib/python3.12/site-packages/pip/_vendor/truststore/__pycache__/_windows.cpython-312.pyc"
+    },
+    {
+      "package": "pip",
+      "path": "lib/python3.12/site-packages/pip/_vendor/urllib3/__pycache__/__init__.cpython-312.pyc"
+    },
+    {
+      "package": "pip",
+      "path": "lib/python3.12/site-packages/pip/_vendor/urllib3/__pycache__/_base_connection.cpython-312.pyc"
+    },
+    {
+      "package": "pip",
+      "path": "lib/python3.12/site-packages/pip/_vendor/urllib3/__pycache__/_collections.cpython-312.pyc"
+    },
+    {
+      "package": "pip",
+      "path": "lib/python3.12/site-packages/pip/_vendor/urllib3/__pycache__/_request_methods.cpython-312.pyc"
+    },
+    {
+      "package": "pip",
+      "path": "lib/python3.12/site-packages/pip/_vendor/urllib3/__pycache__/_version.cpython-312.pyc"
+    },
+    {
+      "package": "pip",
+      "path": "lib/python3.12/site-packages/pip/_vendor/urllib3/__pycache__/connection.cpython-312.pyc"
+    },
+    {
+      "package": "pip",
+      "path": "lib/python3.12/site-packages/pip/_vendor/urllib3/__pycache__/connectionpool.cpython-312.pyc"
+    },
+    {
+      "package": "pip",
+      "path": "lib/python3.12/site-packages/pip/_vendor/urllib3/contrib/__pycache__/__init__.cpython-312.pyc"
+    },
+    {
+      "package": "pip",
+      "path": "lib/python3.12/site-packages/pip/_vendor/urllib3/contrib/emscripten/__pycache__/__init__.cpython-312.pyc"
+    },
+    {
+      "package": "pip",
+      "path": "lib/python3.12/site-packages/pip/_vendor/urllib3/contrib/emscripten/__pycache__/connection.cpython-312.pyc"
+    },
+    {
+      "package": "pip",
+      "path": "lib/python3.12/site-packages/pip/_vendor/urllib3/contrib/emscripten/__pycache__/fetch.cpython-312.pyc"
+    },
+    {
+      "package": "pip",
+      "path": "lib/python3.12/site-packages/pip/_vendor/urllib3/contrib/emscripten/__pycache__/request.cpython-312.pyc"
+    },
+    {
+      "package": "pip",
+      "path": "lib/python3.12/site-packages/pip/_vendor/urllib3/contrib/emscripten/__pycache__/response.cpython-312.pyc"
+    },
+    {
+      "package": "pip",
+      "path": "lib/python3.12/site-packages/pip/_vendor/urllib3/contrib/__pycache__/pyopenssl.cpython-312.pyc"
+    },
+    {
+      "package": "pip",
+      "path": "lib/python3.12/site-packages/pip/_vendor/urllib3/contrib/__pycache__/socks.cpython-312.pyc"
+    },
+    {
+      "package": "pip",
+      "path": "lib/python3.12/site-packages/pip/_vendor/urllib3/__pycache__/exceptions.cpython-312.pyc"
+    },
+    {
+      "package": "pip",
+      "path": "lib/python3.12/site-packages/pip/_vendor/urllib3/__pycache__/fields.cpython-312.pyc"
+    },
+    {
+      "package": "pip",
+      "path": "lib/python3.12/site-packages/pip/_vendor/urllib3/__pycache__/filepost.cpython-312.pyc"
+    },
+    {
+      "package": "pip",
+      "path": "lib/python3.12/site-packages/pip/_vendor/urllib3/http2/__pycache__/__init__.cpython-312.pyc"
+    },
+    {
+      "package": "pip",
+      "path": "lib/python3.12/site-packages/pip/_vendor/urllib3/http2/__pycache__/connection.cpython-312.pyc"
+    },
+    {
+      "package": "pip",
+      "path": "lib/python3.12/site-packages/pip/_vendor/urllib3/http2/__pycache__/probe.cpython-312.pyc"
+    },
+    {
+      "package": "pip",
+      "path": "lib/python3.12/site-packages/pip/_vendor/urllib3/__pycache__/poolmanager.cpython-312.pyc"
+    },
+    {
+      "package": "pip",
+      "path": "lib/python3.12/site-packages/pip/_vendor/urllib3/__pycache__/response.cpython-312.pyc"
+    },
+    {
+      "package": "pip",
+      "path": "lib/python3.12/site-packages/pip/_vendor/urllib3/util/__pycache__/__init__.cpython-312.pyc"
+    },
+    {
+      "package": "pip",
+      "path": "lib/python3.12/site-packages/pip/_vendor/urllib3/util/__pycache__/connection.cpython-312.pyc"
+    },
+    {
+      "package": "pip",
+      "path": "lib/python3.12/site-packages/pip/_vendor/urllib3/util/__pycache__/proxy.cpython-312.pyc"
+    },
+    {
+      "package": "pip",
+      "path": "lib/python3.12/site-packages/pip/_vendor/urllib3/util/__pycache__/request.cpython-312.pyc"
+    },
+    {
+      "package": "pip",
+      "path": "lib/python3.12/site-packages/pip/_vendor/urllib3/util/__pycache__/response.cpython-312.pyc"
+    },
+    {
+      "package": "pip",
+      "path": "lib/python3.12/site-packages/pip/_vendor/urllib3/util/__pycache__/retry.cpython-312.pyc"
+    },
+    {
+      "package": "pip",
+      "path": "lib/python3.12/site-packages/pip/_vendor/urllib3/util/__pycache__/ssl_.cpython-312.pyc"
+    },
+    {
+      "package": "pip",
+      "path": "lib/python3.12/site-packages/pip/_vendor/urllib3/util/__pycache__/ssl_match_hostname.cpython-312.pyc"
+    },
+    {
+      "package": "pip",
+      "path": "lib/python3.12/site-packages/pip/_vendor/urllib3/util/__pycache__/ssltransport.cpython-312.pyc"
+    },
+    {
+      "package": "pip",
+      "path": "lib/python3.12/site-packages/pip/_vendor/urllib3/util/__pycache__/timeout.cpython-312.pyc"
+    },
+    {
+      "package": "pip",
+      "path": "lib/python3.12/site-packages/pip/_vendor/urllib3/util/__pycache__/url.cpython-312.pyc"
+    },
+    {
+      "package": "pip",
+      "path": "lib/python3.12/site-packages/pip/_vendor/urllib3/util/__pycache__/util.cpython-312.pyc"
+    },
+    {
+      "package": "pip",
+      "path": "lib/python3.12/site-packages/pip/_vendor/urllib3/util/__pycache__/wait.cpython-312.pyc"
+    },
+    {
+      "package": "pycparser",
+      "path": "lib/python3.12/site-packages/pycparser/__pycache__/__init__.cpython-312.pyc"
+    },
+    {
+      "package": "pycparser",
+      "path": "lib/python3.12/site-packages/pycparser/__pycache__/_ast_gen.cpython-312.pyc"
+    },
+    {
+      "package": "pycparser",
+      "path": "lib/python3.12/site-packages/pycparser/__pycache__/ast_transforms.cpython-312.pyc"
+    },
+    {
+      "package": "pycparser",
+      "path": "lib/python3.12/site-packages/pycparser/__pycache__/c_ast.cpython-312.pyc"
+    },
+    {
+      "package": "pycparser",
+      "path": "lib/python3.12/site-packages/pycparser/__pycache__/c_generator.cpython-312.pyc"
+    },
+    {
+      "package": "pycparser",
+      "path": "lib/python3.12/site-packages/pycparser/__pycache__/c_lexer.cpython-312.pyc"
+    },
+    {
+      "package": "pycparser",
+      "path": "lib/python3.12/site-packages/pycparser/__pycache__/c_parser.cpython-312.pyc"
+    },
+    {
+      "package": "pyparsing",
+      "path": "lib/python3.12/site-packages/pyparsing/__pycache__/__init__.cpython-312.pyc"
+    },
+    {
+      "package": "pyparsing",
+      "path": "lib/python3.12/site-packages/pyparsing/__pycache__/actions.cpython-312.pyc"
+    },
+    {
+      "package": "pyparsing",
+      "path": "lib/python3.12/site-packages/pyparsing/ai/__pycache__/__init__.cpython-312.pyc"
+    },
+    {
+      "package": "pyparsing",
+      "path": "lib/python3.12/site-packages/pyparsing/ai/show_best_practices/__pycache__/__init__.cpython-312.pyc"
+    },
+    {
+      "package": "pyparsing",
+      "path": "lib/python3.12/site-packages/pyparsing/ai/show_best_practices/__pycache__/__main__.cpython-312.pyc"
+    },
+    {
+      "package": "pyparsing",
+      "path": "lib/python3.12/site-packages/pyparsing/__pycache__/common.cpython-312.pyc"
+    },
+    {
+      "package": "pyparsing",
+      "path": "lib/python3.12/site-packages/pyparsing/__pycache__/core.cpython-312.pyc"
+    },
+    {
+      "package": "pyparsing",
+      "path": "lib/python3.12/site-packages/pyparsing/diagram/__pycache__/__init__.cpython-312.pyc"
+    },
+    {
+      "package": "pyparsing",
+      "path": "lib/python3.12/site-packages/pyparsing/__pycache__/exceptions.cpython-312.pyc"
+    },
+    {
+      "package": "pyparsing",
+      "path": "lib/python3.12/site-packages/pyparsing/__pycache__/helpers.cpython-312.pyc"
+    },
+    {
+      "package": "pyparsing",
+      "path": "lib/python3.12/site-packages/pyparsing/__pycache__/results.cpython-312.pyc"
+    },
+    {
+      "package": "pyparsing",
+      "path": "lib/python3.12/site-packages/pyparsing/__pycache__/testing.cpython-312.pyc"
+    },
+    {
+      "package": "pyparsing",
+      "path": "lib/python3.12/site-packages/pyparsing/tools/__pycache__/__init__.cpython-312.pyc"
+    },
+    {
+      "package": "pyparsing",
+      "path": "lib/python3.12/site-packages/pyparsing/tools/__pycache__/cvt_pyparsing_pep8_names.cpython-312.pyc"
+    },
+    {
+      "package": "pyparsing",
+      "path": "lib/python3.12/site-packages/pyparsing/__pycache__/unicode.cpython-312.pyc"
+    },
+    {
+      "package": "pyparsing",
+      "path": "lib/python3.12/site-packages/pyparsing/__pycache__/util.cpython-312.pyc"
+    },
+    {
+      "package": "pyparsing",
+      "path": "lib/python3.12/site-packages/pyparsing/__pycache__/warnings.cpython-312.pyc"
+    },
+    {
+      "package": "python-dateutil",
+      "path": "lib/python3.12/site-packages/dateutil/__pycache__/__init__.cpython-312.pyc"
+    },
+    {
+      "package": "python-dateutil",
+      "path": "lib/python3.12/site-packages/dateutil/__pycache__/_common.cpython-312.pyc"
+    },
+    {
+      "package": "python-dateutil",
+      "path": "lib/python3.12/site-packages/dateutil/__pycache__/_version.cpython-312.pyc"
+    },
+    {
+      "package": "python-dateutil",
+      "path": "lib/python3.12/site-packages/dateutil/__pycache__/easter.cpython-312.pyc"
+    },
+    {
+      "package": "python-dateutil",
+      "path": "lib/python3.12/site-packages/dateutil/parser/__pycache__/__init__.cpython-312.pyc"
+    },
+    {
+      "package": "python-dateutil",
+      "path": "lib/python3.12/site-packages/dateutil/parser/__pycache__/_parser.cpython-312.pyc"
+    },
+    {
+      "package": "python-dateutil",
+      "path": "lib/python3.12/site-packages/dateutil/parser/__pycache__/isoparser.cpython-312.pyc"
+    },
+    {
+      "package": "python-dateutil",
+      "path": "lib/python3.12/site-packages/dateutil/__pycache__/relativedelta.cpython-312.pyc"
+    },
+    {
+      "package": "python-dateutil",
+      "path": "lib/python3.12/site-packages/dateutil/__pycache__/rrule.cpython-312.pyc"
+    },
+    {
+      "package": "python-dateutil",
+      "path": "lib/python3.12/site-packages/dateutil/tz/__pycache__/__init__.cpython-312.pyc"
+    },
+    {
+      "package": "python-dateutil",
+      "path": "lib/python3.12/site-packages/dateutil/tz/__pycache__/_common.cpython-312.pyc"
+    },
+    {
+      "package": "python-dateutil",
+      "path": "lib/python3.12/site-packages/dateutil/tz/__pycache__/_factories.cpython-312.pyc"
+    },
+    {
+      "package": "python-dateutil",
+      "path": "lib/python3.12/site-packages/dateutil/tz/__pycache__/tz.cpython-312.pyc"
+    },
+    {
+      "package": "python-dateutil",
+      "path": "lib/python3.12/site-packages/dateutil/tz/__pycache__/win.cpython-312.pyc"
+    },
+    {
+      "package": "python-dateutil",
+      "path": "lib/python3.12/site-packages/dateutil/__pycache__/tzwin.cpython-312.pyc"
+    },
+    {
+      "package": "python-dateutil",
+      "path": "lib/python3.12/site-packages/dateutil/__pycache__/utils.cpython-312.pyc"
+    },
+    {
+      "package": "python-dateutil",
+      "path": "lib/python3.12/site-packages/dateutil/zoneinfo/__pycache__/__init__.cpython-312.pyc"
+    },
+    {
+      "package": "python-dateutil",
+      "path": "lib/python3.12/site-packages/dateutil/zoneinfo/__pycache__/rebuild.cpython-312.pyc"
+    },
+    {
+      "package": "python-gmsh",
+      "path": "lib/python3.12/site-packages/__pycache__/gmsh.cpython-312.pyc"
+    },
+    {
+      "package": "setuptools",
+      "path": "lib/python3.12/site-packages/_distutils_hack/__pycache__/override.cpython-312.pyc"
+    },
+    {
+      "package": "setuptools",
+      "path": "lib/python3.12/site-packages/setuptools/__pycache__/__init__.cpython-312.pyc"
+    },
+    {
+      "package": "setuptools",
+      "path": "lib/python3.12/site-packages/setuptools/__pycache__/_core_metadata.cpython-312.pyc"
+    },
+    {
+      "package": "setuptools",
+      "path": "lib/python3.12/site-packages/setuptools/__pycache__/_discovery.cpython-312.pyc"
+    },
+    {
+      "package": "setuptools",
+      "path": "lib/python3.12/site-packages/setuptools/_distutils/__pycache__/__init__.cpython-312.pyc"
+    },
+    {
+      "package": "setuptools",
+      "path": "lib/python3.12/site-packages/setuptools/_distutils/__pycache__/_dataclass.cpython-312.pyc"
+    },
+    {
+      "package": "setuptools",
+      "path": "lib/python3.12/site-packages/setuptools/_distutils/__pycache__/_log.cpython-312.pyc"
+    },
+    {
+      "package": "setuptools",
+      "path": "lib/python3.12/site-packages/setuptools/_distutils/__pycache__/_macos_compat.cpython-312.pyc"
+    },
+    {
+      "package": "setuptools",
+      "path": "lib/python3.12/site-packages/setuptools/_distutils/__pycache__/_modified.cpython-312.pyc"
+    },
+    {
+      "package": "setuptools",
+      "path": "lib/python3.12/site-packages/setuptools/_distutils/__pycache__/_msvccompiler.cpython-312.pyc"
+    },
+    {
+      "package": "setuptools",
+      "path": "lib/python3.12/site-packages/setuptools/_distutils/__pycache__/archive_util.cpython-312.pyc"
+    },
+    {
+      "package": "setuptools",
+      "path": "lib/python3.12/site-packages/setuptools/_distutils/__pycache__/ccompiler.cpython-312.pyc"
+    },
+    {
+      "package": "setuptools",
+      "path": "lib/python3.12/site-packages/setuptools/_distutils/__pycache__/cmd.cpython-312.pyc"
+    },
+    {
+      "package": "setuptools",
+      "path": "lib/python3.12/site-packages/setuptools/_distutils/command/__pycache__/__init__.cpython-312.pyc"
+    },
+    {
+      "package": "setuptools",
+      "path": "lib/python3.12/site-packages/setuptools/_distutils/command/__pycache__/_framework_compat.cpython-312.pyc"
+    },
+    {
+      "package": "setuptools",
+      "path": "lib/python3.12/site-packages/setuptools/_distutils/command/__pycache__/bdist.cpython-312.pyc"
+    },
+    {
+      "package": "setuptools",
+      "path": "lib/python3.12/site-packages/setuptools/_distutils/command/__pycache__/bdist_dumb.cpython-312.pyc"
+    },
+    {
+      "package": "setuptools",
+      "path": "lib/python3.12/site-packages/setuptools/_distutils/command/__pycache__/bdist_rpm.cpython-312.pyc"
+    },
+    {
+      "package": "setuptools",
+      "path": "lib/python3.12/site-packages/setuptools/_distutils/command/__pycache__/build.cpython-312.pyc"
+    },
+    {
+      "package": "setuptools",
+      "path": "lib/python3.12/site-packages/setuptools/_distutils/command/__pycache__/build_clib.cpython-312.pyc"
+    },
+    {
+      "package": "setuptools",
+      "path": "lib/python3.12/site-packages/setuptools/_distutils/command/__pycache__/build_ext.cpython-312.pyc"
+    },
+    {
+      "package": "setuptools",
+      "path": "lib/python3.12/site-packages/setuptools/_distutils/command/__pycache__/build_py.cpython-312.pyc"
+    },
+    {
+      "package": "setuptools",
+      "path": "lib/python3.12/site-packages/setuptools/_distutils/command/__pycache__/build_scripts.cpython-312.pyc"
+    },
+    {
+      "package": "setuptools",
+      "path": "lib/python3.12/site-packages/setuptools/_distutils/command/__pycache__/check.cpython-312.pyc"
+    },
+    {
+      "package": "setuptools",
+      "path": "lib/python3.12/site-packages/setuptools/_distutils/command/__pycache__/clean.cpython-312.pyc"
+    },
+    {
+      "package": "setuptools",
+      "path": "lib/python3.12/site-packages/setuptools/_distutils/command/__pycache__/config.cpython-312.pyc"
+    },
+    {
+      "package": "setuptools",
+      "path": "lib/python3.12/site-packages/setuptools/_distutils/command/__pycache__/install.cpython-312.pyc"
+    },
+    {
+      "package": "setuptools",
+      "path": "lib/python3.12/site-packages/setuptools/_distutils/command/__pycache__/install_data.cpython-312.pyc"
+    },
+    {
+      "package": "setuptools",
+      "path": "lib/python3.12/site-packages/setuptools/_distutils/command/__pycache__/install_egg_info.cpython-312.pyc"
+    },
+    {
+      "package": "setuptools",
+      "path": "lib/python3.12/site-packages/setuptools/_distutils/command/__pycache__/install_headers.cpython-312.pyc"
+    },
+    {
+      "package": "setuptools",
+      "path": "lib/python3.12/site-packages/setuptools/_distutils/command/__pycache__/install_lib.cpython-312.pyc"
+    },
+    {
+      "package": "setuptools",
+      "path": "lib/python3.12/site-packages/setuptools/_distutils/command/__pycache__/install_scripts.cpython-312.pyc"
+    },
+    {
+      "package": "setuptools",
+      "path": "lib/python3.12/site-packages/setuptools/_distutils/command/__pycache__/sdist.cpython-312.pyc"
+    },
+    {
+      "package": "setuptools",
+      "path": "lib/python3.12/site-packages/setuptools/_distutils/compat/__pycache__/__init__.cpython-312.pyc"
+    },
+    {
+      "package": "setuptools",
+      "path": "lib/python3.12/site-packages/setuptools/_distutils/compat/__pycache__/numpy.cpython-312.pyc"
+    },
+    {
+      "package": "setuptools",
+      "path": "lib/python3.12/site-packages/setuptools/_distutils/compat/__pycache__/py310.cpython-312.pyc"
+    },
+    {
+      "package": "setuptools",
+      "path": "lib/python3.12/site-packages/setuptools/_distutils/compilers/C/__pycache__/base.cpython-312.pyc"
+    },
+    {
+      "package": "setuptools",
+      "path": "lib/python3.12/site-packages/setuptools/_distutils/compilers/C/__pycache__/cygwin.cpython-312.pyc"
+    },
+    {
+      "package": "setuptools",
+      "path": "lib/python3.12/site-packages/setuptools/_distutils/compilers/C/__pycache__/errors.cpython-312.pyc"
+    },
+    {
+      "package": "setuptools",
+      "path": "lib/python3.12/site-packages/setuptools/_distutils/compilers/C/__pycache__/msvc.cpython-312.pyc"
+    },
+    {
+      "package": "setuptools",
+      "path": "lib/python3.12/site-packages/setuptools/_distutils/compilers/C/__pycache__/unix.cpython-312.pyc"
+    },
+    {
+      "package": "setuptools",
+      "path": "lib/python3.12/site-packages/setuptools/_distutils/compilers/C/__pycache__/zos.cpython-312.pyc"
+    },
+    {
+      "package": "setuptools",
+      "path": "lib/python3.12/site-packages/setuptools/_distutils/compilers/__pycache__/_modified.cpython-312.pyc"
+    },
+    {
+      "package": "setuptools",
+      "path": "lib/python3.12/site-packages/setuptools/_distutils/compilers/__pycache__/_util.cpython-312.pyc"
+    },
+    {
+      "package": "setuptools",
+      "path": "lib/python3.12/site-packages/setuptools/_distutils/compilers/__pycache__/errors.cpython-312.pyc"
+    },
+    {
+      "package": "setuptools",
+      "path": "lib/python3.12/site-packages/setuptools/_distutils/compilers/__pycache__/logging.cpython-312.pyc"
+    },
+    {
+      "package": "setuptools",
+      "path": "lib/python3.12/site-packages/setuptools/_distutils/compilers/platform/__pycache__/detect.cpython-312.pyc"
+    },
+    {
+      "package": "setuptools",
+      "path": "lib/python3.12/site-packages/setuptools/_distutils/compilers/platform/__pycache__/macos.cpython-312.pyc"
+    },
+    {
+      "package": "setuptools",
+      "path": "lib/python3.12/site-packages/setuptools/_distutils/__pycache__/core.cpython-312.pyc"
+    },
+    {
+      "package": "setuptools",
+      "path": "lib/python3.12/site-packages/setuptools/_distutils/__pycache__/cygwinccompiler.cpython-312.pyc"
+    },
+    {
+      "package": "setuptools",
+      "path": "lib/python3.12/site-packages/setuptools/_distutils/__pycache__/debug.cpython-312.pyc"
+    },
+    {
+      "package": "setuptools",
+      "path": "lib/python3.12/site-packages/setuptools/_distutils/__pycache__/dep_util.cpython-312.pyc"
+    },
+    {
+      "package": "setuptools",
+      "path": "lib/python3.12/site-packages/setuptools/_distutils/__pycache__/dir_util.cpython-312.pyc"
+    },
+    {
+      "package": "setuptools",
+      "path": "lib/python3.12/site-packages/setuptools/_distutils/__pycache__/dist.cpython-312.pyc"
+    },
+    {
+      "package": "setuptools",
+      "path": "lib/python3.12/site-packages/setuptools/_distutils/__pycache__/errors.cpython-312.pyc"
+    },
+    {
+      "package": "setuptools",
+      "path": "lib/python3.12/site-packages/setuptools/_distutils/__pycache__/extension.cpython-312.pyc"
+    },
+    {
+      "package": "setuptools",
+      "path": "lib/python3.12/site-packages/setuptools/_distutils/__pycache__/fancy_getopt.cpython-312.pyc"
+    },
+    {
+      "package": "setuptools",
+      "path": "lib/python3.12/site-packages/setuptools/_distutils/__pycache__/file_util.cpython-312.pyc"
+    },
+    {
+      "package": "setuptools",
+      "path": "lib/python3.12/site-packages/setuptools/_distutils/__pycache__/filelist.cpython-312.pyc"
+    },
+    {
+      "package": "setuptools",
+      "path": "lib/python3.12/site-packages/setuptools/_distutils/__pycache__/log.cpython-312.pyc"
+    },
+    {
+      "package": "setuptools",
+      "path": "lib/python3.12/site-packages/setuptools/_distutils/__pycache__/spawn.cpython-312.pyc"
+    },
+    {
+      "package": "setuptools",
+      "path": "lib/python3.12/site-packages/setuptools/_distutils/__pycache__/sysconfig.cpython-312.pyc"
+    },
+    {
+      "package": "setuptools",
+      "path": "lib/python3.12/site-packages/setuptools/_distutils/__pycache__/text_file.cpython-312.pyc"
+    },
+    {
+      "package": "setuptools",
+      "path": "lib/python3.12/site-packages/setuptools/_distutils/__pycache__/unixccompiler.cpython-312.pyc"
+    },
+    {
+      "package": "setuptools",
+      "path": "lib/python3.12/site-packages/setuptools/_distutils/__pycache__/util.cpython-312.pyc"
+    },
+    {
+      "package": "setuptools",
+      "path": "lib/python3.12/site-packages/setuptools/_distutils/__pycache__/version.cpython-312.pyc"
+    },
+    {
+      "package": "setuptools",
+      "path": "lib/python3.12/site-packages/setuptools/_distutils/__pycache__/versionpredicate.cpython-312.pyc"
+    },
+    {
+      "package": "setuptools",
+      "path": "lib/python3.12/site-packages/setuptools/_distutils/__pycache__/zosccompiler.cpython-312.pyc"
+    },
+    {
+      "package": "setuptools",
+      "path": "lib/python3.12/site-packages/setuptools/__pycache__/_entry_points.cpython-312.pyc"
+    },
+    {
+      "package": "setuptools",
+      "path": "lib/python3.12/site-packages/setuptools/__pycache__/_imp.cpython-312.pyc"
+    },
+    {
+      "package": "setuptools",
+      "path": "lib/python3.12/site-packages/setuptools/__pycache__/_importlib.cpython-312.pyc"
+    },
+    {
+      "package": "setuptools",
+      "path": "lib/python3.12/site-packages/setuptools/__pycache__/_itertools.cpython-312.pyc"
+    },
+    {
+      "package": "setuptools",
+      "path": "lib/python3.12/site-packages/setuptools/__pycache__/_normalization.cpython-312.pyc"
+    },
+    {
+      "package": "setuptools",
+      "path": "lib/python3.12/site-packages/setuptools/__pycache__/_path.cpython-312.pyc"
+    },
+    {
+      "package": "setuptools",
+      "path": "lib/python3.12/site-packages/setuptools/__pycache__/_reqs.cpython-312.pyc"
+    },
+    {
+      "package": "setuptools",
+      "path": "lib/python3.12/site-packages/setuptools/__pycache__/_scripts.cpython-312.pyc"
+    },
+    {
+      "package": "setuptools",
+      "path": "lib/python3.12/site-packages/setuptools/__pycache__/_shutil.cpython-312.pyc"
+    },
+    {
+      "package": "setuptools",
+      "path": "lib/python3.12/site-packages/setuptools/__pycache__/_static.cpython-312.pyc"
+    },
+    {
+      "package": "setuptools",
+      "path": "lib/python3.12/site-packages/setuptools/_vendor/autocommand/__pycache__/__init__.cpython-312.pyc"
+    },
+    {
+      "package": "setuptools",
+      "path": "lib/python3.12/site-packages/setuptools/_vendor/autocommand/__pycache__/autoasync.cpython-312.pyc"
+    },
+    {
+      "package": "setuptools",
+      "path": "lib/python3.12/site-packages/setuptools/_vendor/autocommand/__pycache__/autocommand.cpython-312.pyc"
+    },
+    {
+      "package": "setuptools",
+      "path": "lib/python3.12/site-packages/setuptools/_vendor/autocommand/__pycache__/automain.cpython-312.pyc"
+    },
+    {
+      "package": "setuptools",
+      "path": "lib/python3.12/site-packages/setuptools/_vendor/autocommand/__pycache__/autoparse.cpython-312.pyc"
+    },
+    {
+      "package": "setuptools",
+      "path": "lib/python3.12/site-packages/setuptools/_vendor/autocommand/__pycache__/errors.cpython-312.pyc"
+    },
+    {
+      "package": "setuptools",
+      "path": "lib/python3.12/site-packages/setuptools/_vendor/backports/__pycache__/__init__.cpython-312.pyc"
+    },
+    {
+      "package": "setuptools",
+      "path": "lib/python3.12/site-packages/setuptools/_vendor/backports/tarfile/__pycache__/__init__.cpython-312.pyc"
+    },
+    {
+      "package": "setuptools",
+      "path": "lib/python3.12/site-packages/setuptools/_vendor/backports/tarfile/__pycache__/__main__.cpython-312.pyc"
+    },
+    {
+      "package": "setuptools",
+      "path": "lib/python3.12/site-packages/setuptools/_vendor/backports/tarfile/compat/__pycache__/__init__.cpython-312.pyc"
+    },
+    {
+      "package": "setuptools",
+      "path": "lib/python3.12/site-packages/setuptools/_vendor/backports/tarfile/compat/__pycache__/py38.cpython-312.pyc"
+    },
+    {
+      "package": "setuptools",
+      "path": "lib/python3.12/site-packages/setuptools/_vendor/importlib_metadata/__pycache__/__init__.cpython-312.pyc"
+    },
+    {
+      "package": "setuptools",
+      "path": "lib/python3.12/site-packages/setuptools/_vendor/importlib_metadata/__pycache__/_adapters.cpython-312.pyc"
+    },
+    {
+      "package": "setuptools",
+      "path": "lib/python3.12/site-packages/setuptools/_vendor/importlib_metadata/__pycache__/_collections.cpython-312.pyc"
+    },
+    {
+      "package": "setuptools",
+      "path": "lib/python3.12/site-packages/setuptools/_vendor/importlib_metadata/__pycache__/_compat.cpython-312.pyc"
+    },
+    {
+      "package": "setuptools",
+      "path": "lib/python3.12/site-packages/setuptools/_vendor/importlib_metadata/__pycache__/_functools.cpython-312.pyc"
+    },
+    {
+      "package": "setuptools",
+      "path": "lib/python3.12/site-packages/setuptools/_vendor/importlib_metadata/__pycache__/_itertools.cpython-312.pyc"
+    },
+    {
+      "package": "setuptools",
+      "path": "lib/python3.12/site-packages/setuptools/_vendor/importlib_metadata/__pycache__/_meta.cpython-312.pyc"
+    },
+    {
+      "package": "setuptools",
+      "path": "lib/python3.12/site-packages/setuptools/_vendor/importlib_metadata/__pycache__/_text.cpython-312.pyc"
+    },
+    {
+      "package": "setuptools",
+      "path": "lib/python3.12/site-packages/setuptools/_vendor/importlib_metadata/__pycache__/_typing.cpython-312.pyc"
+    },
+    {
+      "package": "setuptools",
+      "path": "lib/python3.12/site-packages/setuptools/_vendor/importlib_metadata/compat/__pycache__/__init__.cpython-312.pyc"
+    },
+    {
+      "package": "setuptools",
+      "path": "lib/python3.12/site-packages/setuptools/_vendor/importlib_metadata/compat/__pycache__/py311.cpython-312.pyc"
+    },
+    {
+      "package": "setuptools",
+      "path": "lib/python3.12/site-packages/setuptools/_vendor/importlib_metadata/compat/__pycache__/py39.cpython-312.pyc"
+    },
+    {
+      "package": "setuptools",
+      "path": "lib/python3.12/site-packages/setuptools/_vendor/importlib_metadata/__pycache__/diagnose.cpython-312.pyc"
+    },
+    {
+      "package": "setuptools",
+      "path": "lib/python3.12/site-packages/setuptools/_vendor/jaraco/context/__pycache__/__init__.cpython-312.pyc"
+    },
+    {
+      "package": "setuptools",
+      "path": "lib/python3.12/site-packages/setuptools/_vendor/jaraco/functools/__pycache__/__init__.cpython-312.pyc"
+    },
+    {
+      "package": "setuptools",
+      "path": "lib/python3.12/site-packages/setuptools/_vendor/jaraco/text/__pycache__/__init__.cpython-312.pyc"
+    },
+    {
+      "package": "setuptools",
+      "path": "lib/python3.12/site-packages/setuptools/_vendor/jaraco/text/__pycache__/layouts.cpython-312.pyc"
+    },
+    {
+      "package": "setuptools",
+      "path": "lib/python3.12/site-packages/setuptools/_vendor/jaraco/text/__pycache__/show-newlines.cpython-312.pyc"
+    },
+    {
+      "package": "setuptools",
+      "path": "lib/python3.12/site-packages/setuptools/_vendor/jaraco/text/__pycache__/strip-prefix.cpython-312.pyc"
+    },
+    {
+      "package": "setuptools",
+      "path": "lib/python3.12/site-packages/setuptools/_vendor/jaraco/text/__pycache__/to-dvorak.cpython-312.pyc"
+    },
+    {
+      "package": "setuptools",
+      "path": "lib/python3.12/site-packages/setuptools/_vendor/jaraco/text/__pycache__/to-qwerty.cpython-312.pyc"
+    },
+    {
+      "package": "setuptools",
+      "path": "lib/python3.12/site-packages/setuptools/_vendor/more_itertools/__pycache__/__init__.cpython-312.pyc"
+    },
+    {
+      "package": "setuptools",
+      "path": "lib/python3.12/site-packages/setuptools/_vendor/more_itertools/__pycache__/more.cpython-312.pyc"
+    },
+    {
+      "package": "setuptools",
+      "path": "lib/python3.12/site-packages/setuptools/_vendor/more_itertools/__pycache__/recipes.cpython-312.pyc"
+    },
+    {
+      "package": "setuptools",
+      "path": "lib/python3.12/site-packages/setuptools/_vendor/packaging/__pycache__/__init__.cpython-312.pyc"
+    },
+    {
+      "package": "setuptools",
+      "path": "lib/python3.12/site-packages/setuptools/_vendor/packaging/__pycache__/_elffile.cpython-312.pyc"
+    },
+    {
+      "package": "setuptools",
+      "path": "lib/python3.12/site-packages/setuptools/_vendor/packaging/__pycache__/_manylinux.cpython-312.pyc"
+    },
+    {
+      "package": "setuptools",
+      "path": "lib/python3.12/site-packages/setuptools/_vendor/packaging/__pycache__/_musllinux.cpython-312.pyc"
+    },
+    {
+      "package": "setuptools",
+      "path": "lib/python3.12/site-packages/setuptools/_vendor/packaging/__pycache__/_parser.cpython-312.pyc"
+    },
+    {
+      "package": "setuptools",
+      "path": "lib/python3.12/site-packages/setuptools/_vendor/packaging/__pycache__/_structures.cpython-312.pyc"
+    },
+    {
+      "package": "setuptools",
+      "path": "lib/python3.12/site-packages/setuptools/_vendor/packaging/__pycache__/_tokenizer.cpython-312.pyc"
+    },
+    {
+      "package": "setuptools",
+      "path": "lib/python3.12/site-packages/setuptools/_vendor/packaging/licenses/__pycache__/__init__.cpython-312.pyc"
+    },
+    {
+      "package": "setuptools",
+      "path": "lib/python3.12/site-packages/setuptools/_vendor/packaging/licenses/__pycache__/_spdx.cpython-312.pyc"
+    },
+    {
+      "package": "setuptools",
+      "path": "lib/python3.12/site-packages/setuptools/_vendor/packaging/__pycache__/markers.cpython-312.pyc"
+    },
+    {
+      "package": "setuptools",
+      "path": "lib/python3.12/site-packages/setuptools/_vendor/packaging/__pycache__/metadata.cpython-312.pyc"
+    },
+    {
+      "package": "setuptools",
+      "path": "lib/python3.12/site-packages/setuptools/_vendor/packaging/__pycache__/pylock.cpython-312.pyc"
+    },
+    {
+      "package": "setuptools",
+      "path": "lib/python3.12/site-packages/setuptools/_vendor/packaging/__pycache__/requirements.cpython-312.pyc"
+    },
+    {
+      "package": "setuptools",
+      "path": "lib/python3.12/site-packages/setuptools/_vendor/packaging/__pycache__/specifiers.cpython-312.pyc"
+    },
+    {
+      "package": "setuptools",
+      "path": "lib/python3.12/site-packages/setuptools/_vendor/packaging/__pycache__/tags.cpython-312.pyc"
+    },
+    {
+      "package": "setuptools",
+      "path": "lib/python3.12/site-packages/setuptools/_vendor/packaging/__pycache__/utils.cpython-312.pyc"
+    },
+    {
+      "package": "setuptools",
+      "path": "lib/python3.12/site-packages/setuptools/_vendor/packaging/__pycache__/version.cpython-312.pyc"
+    },
+    {
+      "package": "setuptools",
+      "path": "lib/python3.12/site-packages/setuptools/_vendor/platformdirs/__pycache__/__init__.cpython-312.pyc"
+    },
+    {
+      "package": "setuptools",
+      "path": "lib/python3.12/site-packages/setuptools/_vendor/platformdirs/__pycache__/__main__.cpython-312.pyc"
+    },
+    {
+      "package": "setuptools",
+      "path": "lib/python3.12/site-packages/setuptools/_vendor/platformdirs/__pycache__/android.cpython-312.pyc"
+    },
+    {
+      "package": "setuptools",
+      "path": "lib/python3.12/site-packages/setuptools/_vendor/platformdirs/__pycache__/api.cpython-312.pyc"
+    },
+    {
+      "package": "setuptools",
+      "path": "lib/python3.12/site-packages/setuptools/_vendor/platformdirs/__pycache__/macos.cpython-312.pyc"
+    },
+    {
+      "package": "setuptools",
+      "path": "lib/python3.12/site-packages/setuptools/_vendor/platformdirs/__pycache__/unix.cpython-312.pyc"
+    },
+    {
+      "package": "setuptools",
+      "path": "lib/python3.12/site-packages/setuptools/_vendor/platformdirs/__pycache__/version.cpython-312.pyc"
+    },
+    {
+      "package": "setuptools",
+      "path": "lib/python3.12/site-packages/setuptools/_vendor/platformdirs/__pycache__/windows.cpython-312.pyc"
+    },
+    {
+      "package": "setuptools",
+      "path": "lib/python3.12/site-packages/setuptools/_vendor/tomli/__pycache__/__init__.cpython-312.pyc"
+    },
+    {
+      "package": "setuptools",
+      "path": "lib/python3.12/site-packages/setuptools/_vendor/tomli/__pycache__/_parser.cpython-312.pyc"
+    },
+    {
+      "package": "setuptools",
+      "path": "lib/python3.12/site-packages/setuptools/_vendor/tomli/__pycache__/_re.cpython-312.pyc"
+    },
+    {
+      "package": "setuptools",
+      "path": "lib/python3.12/site-packages/setuptools/_vendor/tomli/__pycache__/_types.cpython-312.pyc"
+    },
+    {
+      "package": "setuptools",
+      "path": "lib/python3.12/site-packages/setuptools/_vendor/wheel/__pycache__/__init__.cpython-312.pyc"
+    },
+    {
+      "package": "setuptools",
+      "path": "lib/python3.12/site-packages/setuptools/_vendor/wheel/__pycache__/__main__.cpython-312.pyc"
+    },
+    {
+      "package": "setuptools",
+      "path": "lib/python3.12/site-packages/setuptools/_vendor/wheel/__pycache__/_bdist_wheel.cpython-312.pyc"
+    },
+    {
+      "package": "setuptools",
+      "path": "lib/python3.12/site-packages/setuptools/_vendor/wheel/_commands/__pycache__/__init__.cpython-312.pyc"
+    },
+    {
+      "package": "setuptools",
+      "path": "lib/python3.12/site-packages/setuptools/_vendor/wheel/_commands/__pycache__/convert.cpython-312.pyc"
+    },
+    {
+      "package": "setuptools",
+      "path": "lib/python3.12/site-packages/setuptools/_vendor/wheel/_commands/__pycache__/pack.cpython-312.pyc"
+    },
+    {
+      "package": "setuptools",
+      "path": "lib/python3.12/site-packages/setuptools/_vendor/wheel/_commands/__pycache__/tags.cpython-312.pyc"
+    },
+    {
+      "package": "setuptools",
+      "path": "lib/python3.12/site-packages/setuptools/_vendor/wheel/_commands/__pycache__/unpack.cpython-312.pyc"
+    },
+    {
+      "package": "setuptools",
+      "path": "lib/python3.12/site-packages/setuptools/_vendor/wheel/__pycache__/_metadata.cpython-312.pyc"
+    },
+    {
+      "package": "setuptools",
+      "path": "lib/python3.12/site-packages/setuptools/_vendor/wheel/__pycache__/_setuptools_logging.cpython-312.pyc"
+    },
+    {
+      "package": "setuptools",
+      "path": "lib/python3.12/site-packages/setuptools/_vendor/wheel/__pycache__/bdist_wheel.cpython-312.pyc"
+    },
+    {
+      "package": "setuptools",
+      "path": "lib/python3.12/site-packages/setuptools/_vendor/wheel/__pycache__/macosx_libfile.cpython-312.pyc"
+    },
+    {
+      "package": "setuptools",
+      "path": "lib/python3.12/site-packages/setuptools/_vendor/wheel/__pycache__/metadata.cpython-312.pyc"
+    },
+    {
+      "package": "setuptools",
+      "path": "lib/python3.12/site-packages/setuptools/_vendor/wheel/__pycache__/wheelfile.cpython-312.pyc"
+    },
+    {
+      "package": "setuptools",
+      "path": "lib/python3.12/site-packages/setuptools/_vendor/zipp/__pycache__/__init__.cpython-312.pyc"
+    },
+    {
+      "package": "setuptools",
+      "path": "lib/python3.12/site-packages/setuptools/_vendor/zipp/__pycache__/_functools.cpython-312.pyc"
+    },
+    {
+      "package": "setuptools",
+      "path": "lib/python3.12/site-packages/setuptools/_vendor/zipp/compat/__pycache__/__init__.cpython-312.pyc"
+    },
+    {
+      "package": "setuptools",
+      "path": "lib/python3.12/site-packages/setuptools/_vendor/zipp/compat/__pycache__/overlay.cpython-312.pyc"
+    },
+    {
+      "package": "setuptools",
+      "path": "lib/python3.12/site-packages/setuptools/_vendor/zipp/compat/__pycache__/py310.cpython-312.pyc"
+    },
+    {
+      "package": "setuptools",
+      "path": "lib/python3.12/site-packages/setuptools/_vendor/zipp/compat/__pycache__/py313.cpython-312.pyc"
+    },
+    {
+      "package": "setuptools",
+      "path": "lib/python3.12/site-packages/setuptools/_vendor/zipp/__pycache__/glob.cpython-312.pyc"
+    },
+    {
+      "package": "setuptools",
+      "path": "lib/python3.12/site-packages/setuptools/__pycache__/archive_util.cpython-312.pyc"
+    },
+    {
+      "package": "setuptools",
+      "path": "lib/python3.12/site-packages/setuptools/__pycache__/build_meta.cpython-312.pyc"
+    },
+    {
+      "package": "setuptools",
+      "path": "lib/python3.12/site-packages/setuptools/command/__pycache__/__init__.cpython-312.pyc"
+    },
+    {
+      "package": "setuptools",
+      "path": "lib/python3.12/site-packages/setuptools/command/__pycache__/_requirestxt.cpython-312.pyc"
+    },
+    {
+      "package": "setuptools",
+      "path": "lib/python3.12/site-packages/setuptools/command/__pycache__/alias.cpython-312.pyc"
+    },
+    {
+      "package": "setuptools",
+      "path": "lib/python3.12/site-packages/setuptools/command/__pycache__/bdist_egg.cpython-312.pyc"
+    },
+    {
+      "package": "setuptools",
+      "path": "lib/python3.12/site-packages/setuptools/command/__pycache__/bdist_rpm.cpython-312.pyc"
+    },
+    {
+      "package": "setuptools",
+      "path": "lib/python3.12/site-packages/setuptools/command/__pycache__/bdist_wheel.cpython-312.pyc"
+    },
+    {
+      "package": "setuptools",
+      "path": "lib/python3.12/site-packages/setuptools/command/__pycache__/build.cpython-312.pyc"
+    },
+    {
+      "package": "setuptools",
+      "path": "lib/python3.12/site-packages/setuptools/command/__pycache__/build_clib.cpython-312.pyc"
+    },
+    {
+      "package": "setuptools",
+      "path": "lib/python3.12/site-packages/setuptools/command/__pycache__/build_ext.cpython-312.pyc"
+    },
+    {
+      "package": "setuptools",
+      "path": "lib/python3.12/site-packages/setuptools/command/__pycache__/build_py.cpython-312.pyc"
+    },
+    {
+      "package": "setuptools",
+      "path": "lib/python3.12/site-packages/setuptools/command/__pycache__/develop.cpython-312.pyc"
+    },
+    {
+      "package": "setuptools",
+      "path": "lib/python3.12/site-packages/setuptools/command/__pycache__/dist_info.cpython-312.pyc"
+    },
+    {
+      "package": "setuptools",
+      "path": "lib/python3.12/site-packages/setuptools/command/__pycache__/easy_install.cpython-312.pyc"
+    },
+    {
+      "package": "setuptools",
+      "path": "lib/python3.12/site-packages/setuptools/command/__pycache__/editable_wheel.cpython-312.pyc"
+    },
+    {
+      "package": "setuptools",
+      "path": "lib/python3.12/site-packages/setuptools/command/__pycache__/egg_info.cpython-312.pyc"
+    },
+    {
+      "package": "setuptools",
+      "path": "lib/python3.12/site-packages/setuptools/command/__pycache__/install.cpython-312.pyc"
+    },
+    {
+      "package": "setuptools",
+      "path": "lib/python3.12/site-packages/setuptools/command/__pycache__/install_egg_info.cpython-312.pyc"
+    },
+    {
+      "package": "setuptools",
+      "path": "lib/python3.12/site-packages/setuptools/command/__pycache__/install_lib.cpython-312.pyc"
+    },
+    {
+      "package": "setuptools",
+      "path": "lib/python3.12/site-packages/setuptools/command/__pycache__/install_scripts.cpython-312.pyc"
+    },
+    {
+      "package": "setuptools",
+      "path": "lib/python3.12/site-packages/setuptools/command/__pycache__/rotate.cpython-312.pyc"
+    },
+    {
+      "package": "setuptools",
+      "path": "lib/python3.12/site-packages/setuptools/command/__pycache__/saveopts.cpython-312.pyc"
+    },
+    {
+      "package": "setuptools",
+      "path": "lib/python3.12/site-packages/setuptools/command/__pycache__/sdist.cpython-312.pyc"
+    },
+    {
+      "package": "setuptools",
+      "path": "lib/python3.12/site-packages/setuptools/command/__pycache__/setopt.cpython-312.pyc"
+    },
+    {
+      "package": "setuptools",
+      "path": "lib/python3.12/site-packages/setuptools/command/__pycache__/test.cpython-312.pyc"
+    },
+    {
+      "package": "setuptools",
+      "path": "lib/python3.12/site-packages/setuptools/compat/__pycache__/__init__.cpython-312.pyc"
+    },
+    {
+      "package": "setuptools",
+      "path": "lib/python3.12/site-packages/setuptools/compat/__pycache__/py310.cpython-312.pyc"
+    },
+    {
+      "package": "setuptools",
+      "path": "lib/python3.12/site-packages/setuptools/compat/__pycache__/py311.cpython-312.pyc"
+    },
+    {
+      "package": "setuptools",
+      "path": "lib/python3.12/site-packages/setuptools/compat/__pycache__/py312.cpython-312.pyc"
+    },
+    {
+      "package": "setuptools",
+      "path": "lib/python3.12/site-packages/setuptools/compat/__pycache__/py39.cpython-312.pyc"
+    },
+    {
+      "package": "setuptools",
+      "path": "lib/python3.12/site-packages/setuptools/config/__pycache__/__init__.cpython-312.pyc"
+    },
+    {
+      "package": "setuptools",
+      "path": "lib/python3.12/site-packages/setuptools/config/__pycache__/_apply_pyprojecttoml.cpython-312.pyc"
+    },
+    {
+      "package": "setuptools",
+      "path": "lib/python3.12/site-packages/setuptools/config/_validate_pyproject/__pycache__/__init__.cpython-312.pyc"
+    },
+    {
+      "package": "setuptools",
+      "path": "lib/python3.12/site-packages/setuptools/config/_validate_pyproject/__pycache__/error_reporting.cpython-312.pyc"
+    },
+    {
+      "package": "setuptools",
+      "path": "lib/python3.12/site-packages/setuptools/config/_validate_pyproject/__pycache__/extra_validations.cpython-312.pyc"
+    },
+    {
+      "package": "setuptools",
+      "path": "lib/python3.12/site-packages/setuptools/config/_validate_pyproject/__pycache__/fastjsonschema_exceptions.cpython-312.pyc"
+    },
+    {
+      "package": "setuptools",
+      "path": "lib/python3.12/site-packages/setuptools/config/_validate_pyproject/__pycache__/fastjsonschema_validations.cpython-312.pyc"
+    },
+    {
+      "package": "setuptools",
+      "path": "lib/python3.12/site-packages/setuptools/config/_validate_pyproject/__pycache__/formats.cpython-312.pyc"
+    },
+    {
+      "package": "setuptools",
+      "path": "lib/python3.12/site-packages/setuptools/config/__pycache__/expand.cpython-312.pyc"
+    },
+    {
+      "package": "setuptools",
+      "path": "lib/python3.12/site-packages/setuptools/config/__pycache__/pyprojecttoml.cpython-312.pyc"
+    },
+    {
+      "package": "setuptools",
+      "path": "lib/python3.12/site-packages/setuptools/config/__pycache__/setupcfg.cpython-312.pyc"
+    },
+    {
+      "package": "setuptools",
+      "path": "lib/python3.12/site-packages/setuptools/__pycache__/depends.cpython-312.pyc"
+    },
+    {
+      "package": "setuptools",
+      "path": "lib/python3.12/site-packages/setuptools/__pycache__/discovery.cpython-312.pyc"
+    },
+    {
+      "package": "setuptools",
+      "path": "lib/python3.12/site-packages/setuptools/__pycache__/dist.cpython-312.pyc"
+    },
+    {
+      "package": "setuptools",
+      "path": "lib/python3.12/site-packages/setuptools/__pycache__/errors.cpython-312.pyc"
+    },
+    {
+      "package": "setuptools",
+      "path": "lib/python3.12/site-packages/setuptools/__pycache__/extension.cpython-312.pyc"
+    },
+    {
+      "package": "setuptools",
+      "path": "lib/python3.12/site-packages/setuptools/__pycache__/glob.cpython-312.pyc"
+    },
+    {
+      "package": "setuptools",
+      "path": "lib/python3.12/site-packages/setuptools/__pycache__/installer.cpython-312.pyc"
+    },
+    {
+      "package": "setuptools",
+      "path": "lib/python3.12/site-packages/setuptools/__pycache__/launch.cpython-312.pyc"
+    },
+    {
+      "package": "setuptools",
+      "path": "lib/python3.12/site-packages/setuptools/__pycache__/logging.cpython-312.pyc"
+    },
+    {
+      "package": "setuptools",
+      "path": "lib/python3.12/site-packages/setuptools/__pycache__/modified.cpython-312.pyc"
+    },
+    {
+      "package": "setuptools",
+      "path": "lib/python3.12/site-packages/setuptools/__pycache__/monkey.cpython-312.pyc"
+    },
+    {
+      "package": "setuptools",
+      "path": "lib/python3.12/site-packages/setuptools/__pycache__/msvc.cpython-312.pyc"
+    },
+    {
+      "package": "setuptools",
+      "path": "lib/python3.12/site-packages/setuptools/__pycache__/namespaces.cpython-312.pyc"
+    },
+    {
+      "package": "setuptools",
+      "path": "lib/python3.12/site-packages/setuptools/__pycache__/unicode_utils.cpython-312.pyc"
+    },
+    {
+      "package": "setuptools",
+      "path": "lib/python3.12/site-packages/setuptools/__pycache__/version.cpython-312.pyc"
+    },
+    {
+      "package": "setuptools",
+      "path": "lib/python3.12/site-packages/setuptools/__pycache__/warnings.cpython-312.pyc"
+    },
+    {
+      "package": "setuptools",
+      "path": "lib/python3.12/site-packages/setuptools/__pycache__/wheel.cpython-312.pyc"
+    },
+    {
+      "package": "setuptools",
+      "path": "lib/python3.12/site-packages/setuptools/__pycache__/windows_support.cpython-312.pyc"
+    },
+    {
+      "package": "six",
+      "path": "lib/python3.12/site-packages/__pycache__/six.cpython-312.pyc"
+    },
+    {
+      "package": "slepc4py",
+      "path": "lib/python3.12/site-packages/slepc4py/__pycache__/SLEPc.cpython-312.pyc"
+    },
+    {
+      "package": "slepc4py",
+      "path": "lib/python3.12/site-packages/slepc4py/__pycache__/__init__.cpython-312.pyc"
+    },
+    {
+      "package": "slepc4py",
+      "path": "lib/python3.12/site-packages/slepc4py/__pycache__/__main__.cpython-312.pyc"
+    },
+    {
+      "package": "slepc4py",
+      "path": "lib/python3.12/site-packages/slepc4py/lib/__pycache__/__init__.cpython-312.pyc"
+    },
+    {
+      "package": "slepc4py",
+      "path": "lib/python3.12/site-packages/slepc4py/__pycache__/typing.cpython-312.pyc"
+    },
+    {
+      "package": "typing_extensions",
+      "path": "lib/python3.12/site-packages/__pycache__/typing_extensions.cpython-312.pyc"
+    },
+    {
+      "package": "wheel",
+      "path": "lib/python3.12/site-packages/wheel/__pycache__/__init__.cpython-312.pyc"
+    },
+    {
+      "package": "wheel",
+      "path": "lib/python3.12/site-packages/wheel/__pycache__/__main__.cpython-312.pyc"
+    },
+    {
+      "package": "wheel",
+      "path": "lib/python3.12/site-packages/wheel/__pycache__/_bdist_wheel.cpython-312.pyc"
+    },
+    {
+      "package": "wheel",
+      "path": "lib/python3.12/site-packages/wheel/_commands/__pycache__/__init__.cpython-312.pyc"
+    },
+    {
+      "package": "wheel",
+      "path": "lib/python3.12/site-packages/wheel/_commands/__pycache__/convert.cpython-312.pyc"
+    },
+    {
+      "package": "wheel",
+      "path": "lib/python3.12/site-packages/wheel/_commands/__pycache__/info.cpython-312.pyc"
+    },
+    {
+      "package": "wheel",
+      "path": "lib/python3.12/site-packages/wheel/_commands/__pycache__/pack.cpython-312.pyc"
+    },
+    {
+      "package": "wheel",
+      "path": "lib/python3.12/site-packages/wheel/_commands/__pycache__/tags.cpython-312.pyc"
+    },
+    {
+      "package": "wheel",
+      "path": "lib/python3.12/site-packages/wheel/_commands/__pycache__/unpack.cpython-312.pyc"
+    },
+    {
+      "package": "wheel",
+      "path": "lib/python3.12/site-packages/wheel/__pycache__/_metadata.cpython-312.pyc"
+    },
+    {
+      "package": "wheel",
+      "path": "lib/python3.12/site-packages/wheel/__pycache__/_setuptools_logging.cpython-312.pyc"
+    },
+    {
+      "package": "wheel",
+      "path": "lib/python3.12/site-packages/wheel/__pycache__/bdist_wheel.cpython-312.pyc"
+    },
+    {
+      "package": "wheel",
+      "path": "lib/python3.12/site-packages/wheel/__pycache__/macosx_libfile.cpython-312.pyc"
+    },
+    {
+      "package": "wheel",
+      "path": "lib/python3.12/site-packages/wheel/__pycache__/metadata.cpython-312.pyc"
+    },
+    {
+      "package": "wheel",
+      "path": "lib/python3.12/site-packages/wheel/__pycache__/wheelfile.cpython-312.pyc"
+    },
+    {
+      "package": "wslink",
+      "path": "lib/python3.12/site-packages/wslink/__pycache__/__init__.cpython-312.pyc"
+    },
+    {
+      "package": "wslink",
+      "path": "lib/python3.12/site-packages/wslink/backends/__pycache__/__init__.cpython-312.pyc"
+    },
+    {
+      "package": "wslink",
+      "path": "lib/python3.12/site-packages/wslink/backends/aiohttp/__pycache__/__init__.cpython-312.pyc"
+    },
+    {
+      "package": "wslink",
+      "path": "lib/python3.12/site-packages/wslink/backends/aiohttp/__pycache__/launcher.cpython-312.pyc"
+    },
+    {
+      "package": "wslink",
+      "path": "lib/python3.12/site-packages/wslink/backends/aiohttp/__pycache__/relay.cpython-312.pyc"
+    },
+    {
+      "package": "wslink",
+      "path": "lib/python3.12/site-packages/wslink/backends/generic/__pycache__/__init__.cpython-312.pyc"
+    },
+    {
+      "package": "wslink",
+      "path": "lib/python3.12/site-packages/wslink/backends/generic/__pycache__/core.cpython-312.pyc"
+    },
+    {
+      "package": "wslink",
+      "path": "lib/python3.12/site-packages/wslink/backends/jupyter/__pycache__/__init__.cpython-312.pyc"
+    },
+    {
+      "package": "wslink",
+      "path": "lib/python3.12/site-packages/wslink/backends/jupyter/__pycache__/core.cpython-312.pyc"
+    },
+    {
+      "package": "wslink",
+      "path": "lib/python3.12/site-packages/wslink/backends/tornado/__pycache__/__init__.cpython-312.pyc"
+    },
+    {
+      "package": "wslink",
+      "path": "lib/python3.12/site-packages/wslink/backends/tornado/__pycache__/core.cpython-312.pyc"
+    },
+    {
+      "package": "wslink",
+      "path": "lib/python3.12/site-packages/wslink/__pycache__/chunking.cpython-312.pyc"
+    },
+    {
+      "package": "wslink",
+      "path": "lib/python3.12/site-packages/wslink/__pycache__/core.cpython-312.pyc"
+    },
+    {
+      "package": "wslink",
+      "path": "lib/python3.12/site-packages/wslink/__pycache__/emitter.cpython-312.pyc"
+    },
+    {
+      "package": "wslink",
+      "path": "lib/python3.12/site-packages/wslink/__pycache__/launcher.cpython-312.pyc"
+    },
+    {
+      "package": "wslink",
+      "path": "lib/python3.12/site-packages/wslink/__pycache__/protocol.cpython-312.pyc"
+    },
+    {
+      "package": "wslink",
+      "path": "lib/python3.12/site-packages/wslink/__pycache__/publish.cpython-312.pyc"
+    },
+    {
+      "package": "wslink",
+      "path": "lib/python3.12/site-packages/wslink/__pycache__/relay.cpython-312.pyc"
+    },
+    {
+      "package": "wslink",
+      "path": "lib/python3.12/site-packages/wslink/__pycache__/server.cpython-312.pyc"
+    },
+    {
+      "package": "wslink",
+      "path": "lib/python3.12/site-packages/wslink/__pycache__/ssl_context.cpython-312.pyc"
+    },
+    {
+      "package": "wslink",
+      "path": "lib/python3.12/site-packages/wslink/__pycache__/uri.cpython-312.pyc"
+    },
+    {
+      "package": "wslink",
+      "path": "lib/python3.12/site-packages/wslink/__pycache__/websocket.cpython-312.pyc"
+    }
+  ],
+  "missing_nonbytecode_file_count": 0,
+  "pins": {
+    "fenics-basix": {
+      "build": "py312h31cd249_1",
+      "installed": "0.10.0",
+      "required": "0.10.0"
+    },
+    "fenics-dolfinx": {
+      "build": "py312hb628681_107",
+      "installed": "0.10.0",
+      "required": "0.10.0"
+    },
+    "fenics-ffcx": {
+      "build": "pyhbc3ee6d_1",
+      "installed": "0.10.1",
+      "required": "0.10.1"
+    },
+    "fenics-ufl": {
+      "build": "pyhcf101f3_0",
+      "installed": "2025.2.1",
+      "required": "2025.2.1"
+    },
+    "gmsh": {
+      "build": "h09a0abf_11",
+      "installed": "4.15.2",
+      "required": "4.15.2"
+    },
+    "mpi4py": {
+      "build": "py312h5ecf655_101",
+      "installed": "4.1.2",
+      "required": "4.1.2"
+    },
+    "mpich": {
+      "build": "h6f9170e_1",
+      "installed": "5.0.1",
+      "required": "5.0.1"
+    },
+    "numpy": {
+      "build": "py312he827f4e_0",
+      "installed": "2.5.3",
+      "required": "2.5.3"
+    },
+    "petsc": {
+      "build": "real_h848054b_0",
+      "installed": "3.25.5",
+      "required": "3.25.5"
+    },
+    "petsc4py": {
+      "build": "np2py311h3a91f14_1",
+      "installed": "3.25.5",
+      "required": "3.25.5"
+    },
+    "python": {
+      "build": "hd63d673_0_cpython",
+      "installed": "3.12.13",
+      "required": "3.12.13"
+    },
+    "python-gmsh": {
+      "build": "pyh694c41f_11",
+      "installed": "4.15.2",
+      "required": "4.15.2"
+    },
+    "scipy": {
+      "build": "py312h106c528_1",
+      "installed": "1.18.1",
+      "required": "1.18.1"
+    }
+  },
+  "plan_fetch_bytes": 377962800,
+  "plan_fetch_count": 48,
+  "planned_package_count": 338,
+  "planned_without_record": [],
+  "prefix": "/tmp/navier-fenicsx",
+  "raw_plan_sha256": "de414313f254b6620276b153d87fee74bdcd3c9adebf475c4151d027608ffb02",
+  "standalone_interpreter_check_executed": false,
+  "status": "PARTIAL_UNVALIDATED",
+  "unexpected_records": [],
+  "version_build_mismatches": []
+}

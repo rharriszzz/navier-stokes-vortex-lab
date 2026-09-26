@@ -1,0 +1,4 @@
+setting libfabric environment variables for conda-build
+FI_PROVIDER=tcp
+setting libfabric environment variables for conda-build
+FI_PROVIDER=tcp

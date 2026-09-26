@@ -1,0 +1,1 @@
+{"measurement_boundary": "before final worker handshake/exit; limits remain active", "memory_events": {"high": 0, "low": 0, "max": 0, "oom": 0, "oom_group_kill": 0, "oom_kill": 0}, "memory_peak_bytes": 67821568, "pids_events": {"max": 0}, "pids_peak": 5, "sampled_pids": [134584]}

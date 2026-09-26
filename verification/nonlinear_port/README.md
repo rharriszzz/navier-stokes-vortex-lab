@@ -5,7 +5,8 @@
 derives the exact data. The [R196 adapter review](../../docs/realizability/CUBE_ADAPTER_R196.md)
 records the adapter implementation. The [R225 critical review](../../docs/realizability/POISEUILLE_REVIEW_R225.md)
 repairs driver wiring/acceptance. The [R226 launcher review](../../docs/realizability/POISEUILLE_LAUNCHER_R226.md)
-records passed benign host checks; the absent pinned environment still prevents FEM admission. No production B1/B2
+records passed benign host checks; the [R227 partial environment](../../docs/realizability/ENVIRONMENT_RESTORE_R227.md)
+remains unvalidated after an installation timeout, preventing FEM admission. No production B1/B2
 module imports this directory; no dependency pins changed.
 
 - `polynomial.py`, `fixtures.py`: exact rational manufactured fields and

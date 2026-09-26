@@ -856,3 +856,33 @@ Bounded task: inventory exact artifacts, restore pinned environment with a
 recorded finite setup allocation, verify interpreter and package metadata.
 Stop before numerical imports/FEM/JIT/mesh/assembly/solve; zero FEM attempts.
 No pin changes, automatic retries, model switch or machine transfer.
+
+### R227 completion, including R228 follow-up
+COMPLETED | 2026-09-26T15:29:26Z | PC/WSL daisy | released: no
+Bounded restoration attempt and failure reconciliation complete; environment
+restoration remains INCOMPLETE. R228 requested continuation of the active step,
+not a new attempt. Micromamba 2.9.0 bootstrap passed; exact 338-package plan
+resolved; install exceeded 65 s subdeadline and completion snapshot refused
+remaining descendants. Controller cleanup confirmed empty removed unit, no
+unknown children; later both groups and worker PIDs absent. Partial prefix kept.
+Observed bootstrap/install through result saves: 2.155504145/73.649600392 s;
+sum 75.805104537 s; enclosing interval 105.012757848 s. Later reconciliation
+4641.794490448 s after bootstrap is separate, not a within-allocation success.
+Final caller tails unmeasured; installation peaks/actual final worker exit missing.
+All 338 records match plan and thirteen direct pins. 76,252 file entries checked;
+972 missing bytecode entries, none non-bytecode; transaction history empty.
+No standalone target-interpreter check or numerical verification; zero FEM
+attempts. FFCx package 0.10.1/embedded 0.10.0 discrepancy retained for admission.
+Files: setup procedure/inspector/raw evidence, R227 review, B1 setup/prototype
+README, four track overviews, status/handoff and request/lifecycle logs; full
+inventory in REQUEST_LOG.md. Evidence: docs/realizability/ENVIRONMENT_RESTORE_R227.md
+and evidence/r227. Metadata/hash/AST/JSON/docs/log/Git checks apply. Numerical
+suite skipped; unchanged scientific code/pins/manifest and R225/R226 evidence.
+No retry, pin change, numerical/physical/render workload, model/session switch,
+delegation or transfer. PC retains ownership; Mac released.
+Next: Sol/high performs one newly bounded offline cached transaction into a new
+prefix with --no-pyc, then exact metadata/history/isolated interpreter checks;
+stop before numerical imports. Same 180 s/1536 MiB/no swap/32 task constraints.
+Recommend Astra/high for FFCx artifact handling and later one-fixture admission.
+STARTED d170ae5 and procedure 6cf892c published. Completion prepared for scoped
+commit/push; delivery hash/result in Git/final response, no post-push edit.

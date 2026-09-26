@@ -1,0 +1,1 @@
+{"error": "TimeoutExpired: Command '['/tmp/navier-r227-restore/bin/micromamba', '--no-rc', 'create', '--prefix', '/tmp/navier-fenicsx', '--yes', '--json', '--file', '/tmp/navier-r227-restore/install/explicit.txt']' timed out after 64.99999268501415 seconds", "success": false}

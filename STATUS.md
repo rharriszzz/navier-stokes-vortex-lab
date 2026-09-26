@@ -1,18 +1,19 @@
 # Project status: a boundary-controlled engineering approximation
 
-Updated 2026-09-26 (America/New_York), through R226. PC/WSL `daisy` owns the
-repository. **The finite whole-task launcher now passes benign clean-exit and
-independent-expiry/child-cleanup checks.** In-process manager calls remove the
-spawned-client gap; held workers verify clean source/interpreter identity.
-49 standard-library tests pass. The [R226 review](docs/realizability/POISEUILLE_LAUNCHER_R226.md)
-records the 5.418188160 s observed pair, effective limits and confirmed empty
-removed cgroups. R225 failure evidence remains unchanged. **No FEM is admitted;
-zero attempts granted/spent.** The pinned environment is absent.
-Next: Sol/high restores that exact environment and verifies package metadata,
-stopping before FEM imports or runs; follow the
+Updated 2026-09-26 (America/New_York), through R228. PC/WSL `daisy` owns the
+repository. **R227's bounded environment restoration timed out; cleanup is
+confirmed and the partial prefix is retained.** All 338 planned package records
+match, but transaction history is empty and 972 bytecode entries are missing.
+The [R227 review](docs/realizability/ENVIRONMENT_RESTORE_R227.md) records the failed
+attempt and evidence. R228 continued this step through reconciliation/publication.
+**No FEM is admitted; zero numerical attempts.** R226's launcher remains validated;
+R227 did not rerun its 49-test suite or alter numerical source/pins.
+Next: Sol/high performs one newly bounded offline recovery into a new prefix,
+using the saved exact transaction with eager bytecode compilation disabled;
+verify completion/metadata/interpreter and stop before FEM imports. Follow the
 [single next task](SESSION_HANDOFF.md#next-task).
-R225 completion dc3cadd, R226 STARTED dd27c10 and tested source b07dbdc published;
-R226 completion delivery belongs in Git/final response.
+R227 STARTED d170ae5 and procedure 6cf892c published; R226 delivery 669d2a0
+verified. Final completion delivery belongs in Git/final response.
 R223 was published as c679cfa. Historical September 22 snapshot: 21m 22s / 9:33 PM completion; 355,910 total
 tokens (300,015 input, 8,700,288 cached, 55,895 output, 20,311 reasoning);
 current Astra/high; 53% weekly left (17:37 on 28 Sep reset), 283 credits,
@@ -23,7 +24,7 @@ not project-specific usage. R222 completion bdc51f9 is verified on live remote m
 remain paused, with zero execution attempts.** The
 [R222 source and admission review](docs/realizability/POISEUILLE_DRIVER_R222.md)
 records the earlier 33 import-free checks. R225 subsequently reviewed and
-repaired that source; R226 completed the launcher task and the environment prerequisite is linked above. R220 was published as
+repaired that source; R226 completed the launcher; R227 recovery is linked above. R220 was published as
 f252f31; R221 reminder as cecb4dd. The
 [cost estimate](docs/PROJECT_RESOURCE_AND_COST_ESTIMATE.md) now includes confirmed
 $40 packages and the $100 Pro upgrade. The [process/model review](docs/PROCESS_REVIEW_AND_MODEL_ROUTING.md)
@@ -59,9 +60,9 @@ estimated at $12k–35k from scratch or $5k–18k additional in an equipped lab,
 excluding research labor. Extra pressure earns no range if delivery/optics
 limit first. These are budgetary judgments, not quotations or performance claims.
 Latest usage snapshot is recorded in REQUEST_LOG.md (R223); R197 remains historical.
-Latest technical work: [R226 whole-task launcher and benign validation](docs/realizability/POISEUILLE_LAUNCHER_R226.md)
-on the R222 driver and [R196 cube adapter](docs/realizability/CUBE_ADAPTER_R196.md).
-Forty-nine import-free checks passed. FEM forms have not been constructed or assembled,
+Latest technical work: [R227 bounded environment restoration and reconciliation](docs/realizability/ENVIRONMENT_RESTORE_R227.md).
+R226 previously passed 49 import-free checks for the R222 driver and
+[R196 cube adapter](docs/realizability/CUBE_ADAPTER_R196.md); those were not rerun in R227. FEM forms have not been constructed or assembled,
 and convergence is untested. Execution remains unadmitted with zero attempts.
 No boundary-driven core or feasible contraction range is established.
 
@@ -69,9 +70,9 @@ No boundary-driven core or feasible contraction range is established.
 |---|---|
 | What works? | Illustrative animation, saved-data checks and separate reference/analysis tools. |
 | Is the engineering goal demonstrated? | No validated boundary-driven contraction or boundary-only state estimator exists yet. |
-| What did the latest step establish? | In-process whole-task launcher, verified clean source/interpreter binding, actual benign exit and independent expiry/child cleanup. [Evidence and limits](docs/realizability/POISEUILLE_LAUNCHER_R226.md). |
+| What did the latest step establish? | Exact package plan resolved and partial records match; installation timed out, cleanup confirmed, readiness refused. [Evidence and limits](docs/realizability/ENVIRONMENT_RESTORE_R227.md). |
 | What blocks trusted numerical control results? | The nonlinear fixture has not run; B2 still fails its independent response-accuracy comparison and q64/q96 remain unused. |
-| What is next? | Restore the exact pinned environment on Sol/high, PC/WSL daisy; follow the single [next task](SESSION_HANDOFF.md#next-task). No FEM launch. |
+| What is next? | One bounded offline environment recovery on Sol/high, PC/WSL daisy; follow the single [next task](SESSION_HANDOFF.md#next-task). No FEM launch. |
 
 ## Goal and present conclusion
 
@@ -465,8 +466,8 @@ further movies. R191 completed the [similarity contract and first-test design](d
 including checked central side/endcap and surrounding-fluid accounting. The
 historical next analysis assessed inward transport versus wall diffusion after
 R192 quantified the operating point; R193 subsequently completed that screen.
-For the current [next task](SESSION_HANDOFF.md#next-task), R226 recommends
-**GPT-6 Sol / high / PC-WSL daisy** for exact environment restoration.
+For the current [next task](SESSION_HANDOFF.md#next-task), R227 recommends
+**GPT-6 Sol / high / PC-WSL daisy** for bounded offline environment recovery.
 Stop before FEM imports/execution, tank/controller
 implementation, procurement or physical work.
 R021 launch integration stays deferred; its accuracy diagnostic,

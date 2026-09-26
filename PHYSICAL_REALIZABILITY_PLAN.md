@@ -1,12 +1,13 @@
 # Physical Realizability Plan for `navier-stokes-vortex-lab`
 
-R226 completed [whole-task launcher and benign validation](docs/realizability/POISEUILLE_LAUNCHER_R226.md).
-Forty-nine standard-library checks pass. In-process manager calls and verified
-clean source/interpreter binding passed actual clean exit and independent
-expiry/child cleanup in 5.418188160 s. FEM assembly/convergence remain untested,
-with zero attempts; the exact pinned environment is absent. Sol/high restores
-that environment next, stopping before FEM imports or execution; follow the
-single [handoff task](SESSION_HANDOFF.md#next-task).
+R227's [bounded environment restoration](docs/realizability/ENVIRONMENT_RESTORE_R227.md)
+resolved the exact package plan but timed out during installation; cleanup is
+confirmed, the partial prefix retained and readiness refused. R228 continued
+reconciliation/publication without a retry. R226 launcher validation remains;
+no numerical source/pin change or FEM attempt. Next: Sol/high performs one
+newly bounded offline recovery using the saved transaction, verifies metadata/
+interpreter and stops before FEM imports; follow the single
+[handoff task](SESSION_HANDOFF.md#next-task).
 No tank/hardware route or feasible contraction range is established.
 
 R188 priority update (2026-09-22): establish measurable essential dynamical

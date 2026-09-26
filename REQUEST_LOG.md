@@ -7688,3 +7688,88 @@ scope. Metadata checks and Python -I -S only; no FEM/NumPy/PETSc/MPI imports.
 stdout/stderr/plans/results persist under the phase directories. First failure,
 resource event, timeout or unknown cleanup stops restoration; retain partial
 prefix/logs and report the concrete blocker, without silently retrying.
+
+## R228 — 2026-09-26 (America/New_York) — Finish the active restoration step
+
+**User wording:**
+
+```text
+did you finish the current step?  if not, please continue
+```
+
+**Scope/status:** Continue the already active R227 task through verification,
+cleanup and publication; no new attempt, allocation, model switch or ownership
+transfer. At receipt the installation was running. Replied that it was not yet
+finished and retained the stop before FEM imports. Waited for the running
+source-bound worker to stop before changing this checkout/log. Its final result
+refused completion because descendants remained at the completion handshake;
+controller cleanup then confirmed an empty removed cgroup. R227 reconciliation
+and evidence publication continue without an automatic install retry.
+
+### R227/R228 outcome — bounded attempt finished; restoration incomplete
+
+Micromamba 2.9.0 bootstrap passed in 2.155504145 s through result save. The
+exact-version dry-run selected 338 packages and passed all thirteen direct pins
+and real-PETSc checks; its FETCH plan had 48 packages/377,962,800 bytes (not
+measured transfer bytes). Installation exceeded its 65 s subdeadline. The worker
+reported TimeoutExpired; remaining descendants prevented a completion resource
+snapshot. Supervisor stop/cleanup then confirmed an empty removed unit with
+unknown_children=false. Installation phase: 73.649600392 s through result save.
+No automatic retry. Total observed phase time 75.805104537 s; bootstrap entry
+through install result 105.012757848 s including the interphase gap. Later
+read-only reconciliation at 4641.794490448 s since bootstrap is separately
+reported, not a claimed success inside the 900 s setup window. Final caller
+stdout/return tails unmeasured; installation peaks and actual final worker exit
+are unavailable. Both cgroups and observed worker PIDs later absent.
+
+Retained partial /tmp/navier-fenicsx: all 338 selected records match versions/
+builds and all thirteen direct pins; history is empty. Of 76,252 file entries,
+972 missing entries are all bytecode; zero missing non-bytecode file entries.
+This does not establish file contents, ABI or transaction completion. Target
+Python binary hashed, but no standalone interpreter/version check ran. No FEM
+workload/numerical imports were requested by setup/verification code; installer
+helpers' own imports were not instrumented. Zero numerical attempts remain.
+FFCx Conda artifact is 0.10.1/pyhbc3ee6d_1, embedded metadata 0.10.0, matching
+R056 and official v0.10.1 source. Current worker runtime-string gate needs later
+artifact-aware admission review, not a pin downgrade. Scientific source unchanged.
+
+Files changed: REQUEST_LOG.md, WORK_SESSIONS.md, SESSION_HANDOFF.md, STATUS.md;
+PROJECT_TRACKS.md, EXPERIMENT.md, PHYSICAL_REALIZABILITY_PLAN.md,
+CONTROL_RESEARCH_ROADMAP.md; docs/realizability/B1_SETUP.md,
+ENVIRONMENT_RESTORE_R227.md and evidence/r227/{restore.py,inspect_partial.py,
+checks.json,partial_metadata.json,installed_records.json,run/...};
+verification/nonlinear_port/README.md. Evidence includes raw plan, explicit URLs/
+checksums, phase messages/stdout/stderr, failed task and cleanup records, manager
+hash/version/help and metadata comparison. Large binaries/cache/prefix stay local.
+Checks: actual bounded bootstrap/resolve/install observations and cleanup,
+record/file-entry comparison, metadata/JSON/artifact/source hash checks, source
+AST, links/log-prefix/ID/whitespace/staging checks before final publication.
+No numerical test suite rerun: production/fixture code, pins, manifest and prior
+R225/R226 evidence unchanged. Skipped numerical imports/FEM/JIT/mesh/assembly/
+solve/full-suite, physical/render work, model/session switch, delegation and Mac
+transfer. Exact readiness and FFCx runtime identity handling remain unresolved.
+
+Next: Sol/high on PC/WSL daisy performs one newly bounded offline recovery into
+a new prefix from the saved exact transaction, using --no-pyc, normal link
+scripts and the same 180 s observed/<=150 s worker/1536 MiB/no swap/32 task limits.
+Verify actual success/history/records/required files and isolated Python -I -S
+identity/version/hash, then stop before numerical imports. Preserve this failed
+prefix/evidence/charges; no repeat solve/download/pin substitution. Astra/high
+for later FFCx artifact-aware gate and single-fixture admission review. Official
+Sol/high documentation searched/opened; task fit is judgment, no model switch.
+No /new needed; next prompt Continue. R227 STARTED d170ae5 and procedure/allocation
+6cf892c published; completion prepared for authorized scoped commit/push. Delivery
+hash/result in Git/final response, no post-push edit. PC retains ownership.
+
+R227/R228 final checks passed: 30 artifact hashes, 18 JSON records, two source
+ASTs, 148 local links, balanced Markdown fences, 228 unique request IDs and
+append-only prior logs. Metadata comparison matches the stated partial outcome.
+Executed restoration source unchanged since 6cf892c; scientific code, frozen
+pins/manifest and R225/R226 evidence unchanged. Git whitespace passes before
+staging; final staged and remote-delivery checks follow. No extra install or
+numerical test was launched during reconciliation.
+
+Staged whitespace check flagged 22 trailing-space lines in captured micromamba
+help and a final blank line in its stderr. These are byte-exact raw evidence,
+retained with their hashes. The scoped code/document check excludes only those
+two captured files; no source/document whitespace failure is waived.

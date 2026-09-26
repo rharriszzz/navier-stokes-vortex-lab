@@ -1,23 +1,25 @@
 # Current session handoff
 
-Last updated 2026-09-26 (America/New_York) for R226.
+Last updated 2026-09-26 (America/New_York) for R227–R228.
 **PC/WSL `daisy` owns the repository.** No transfer; Mac remains released.
-**R226 completed the finite whole-task launcher and benign validation.**
-In-process sd-bus replaces spawned control clients; held workers verify the
-actual clean source revision and interpreter before release. **49 standard-library
-tests pass; no FEM imported.** The [R226 review](docs/realizability/POISEUILLE_LAUNCHER_R226.md)
-records successful actual clean exit and independent expiry/child cleanup:
-5.418188160 s through summary save, within the separately declared 30 s allocation.
-Both task cgroups and observed PIDs are absent; inert failed-unit metadata is
-retained. R225's failure and unknown later reconciliation interval are preserved.
-**Zero FEM attempts granted/spent.** The exact pinned environment is absent;
-actual FEM API/rank/accuracy/runtime are still unmeasured.
-Next: **GPT-6 Sol/high on PC/WSL daisy restores the exact pinned environment**
-and verifies package metadata/interpreter, stopping before FEM imports or runs.
-See the single Next task below for bounds and completion criteria.
-R225 completion dc3cadd, R226 STARTED dd27c10 and clean tested source checkpoint
-b07dbdc were published. R226 completion delivery belongs in Git/final response.
-No model/session switch, delegation or ownership transfer occurred.
+**R227 finished its bounded restoration attempt; the environment is incomplete.**
+Micromamba 2.9.0 was restored and the exact 338-package plan resolved. Installation
+hit its 65 s subdeadline; remaining descendants made the completion snapshot
+refuse, then supervisor cleanup confirmed the unit empty and removed.
+The [R227 review](docs/realizability/ENVIRONMENT_RESTORE_R227.md) preserves results,
+explicit package list, metadata inspection and observed time. All 338 records
+match the plan and all thirteen direct pins; history is empty and 972 recorded
+bytecode files are missing. `/tmp/navier-fenicsx` is **partial/unvalidated**.
+R228 requested completion of this same step; reconciliation/publication followed,
+without a new install attempt. **Zero FEM attempts granted/spent.** No numerical
+verification/import or standalone target-interpreter check was performed.
+R226's benign launcher validation remains valid; production source/pins unchanged.
+Next: **Sol/high performs one newly bounded offline recovery into a new prefix**
+from the saved exact transaction, with eager bytecode compilation disabled,
+then verifies completion/metadata/interpreter. Stop before FEM imports/runs.
+R227 STARTED d170ae5 and tested procedure/allocation 6cf892c were published.
+R226 delivery 669d2a0 was verified at synchronization. R227/R228 completion
+delivery belongs in Git/final response. No model/session switch or delegation.
 R223 published the supplied snapshot and pause as c679cfa. Historical snapshot:
 User reports 21m 22s / 9:33 PM completion, 355,910 total tokens (300,015 input,
 8,700,288 cached, 55,895 output, 20,311 reasoning), current Astra/high,
@@ -29,8 +31,8 @@ R222 completion bdc51f9 was verified on live remote main during R223 preflight.
 R222 completed the bounded n=2 Poiseuille driver, held worker and finite
 supervision **source** step with 33 import-free tests. No FEM or scope ran;
 execution remains unadmitted with zero attempts. The [R222 review](docs/realizability/POISEUILLE_DRIVER_R222.md)
-records source and host limits. R225 completed that critical review; the
-R226 completed that launcher work; the environment prerequisite is in the single Next task below.
+records source and host limits. R225 completed the critical review and R226 completed the launcher. R227 reached
+the environment timeout; the recovery prerequisite is in the single Next task below.
 R220 published as f252f31 and was verified on remote main. R221 reminder
 records were prepared locally; Git history records their later delivery.
 R221 did not switch models or resume implementation; R222 resumed only source work.
@@ -89,7 +91,7 @@ mesh/assembly/solves, actual scope and convergence remain untested.
 **R225 reviewed the source; R226 completed whole-task launcher validation.**
 Execution remains unadmitted with zero FEM attempts. Clean source/interpreter
 binding, actual benign exit and independent expiry/child cleanup are verified;
-restore the exact environment before a separate fixture-admission decision.
+recover the partial environment before a separate fixture-admission decision.
 Full convergence-suite and tank launches remain unadmitted. No actual base,
 gain or feasible contraction range is established. Sol/high is recommended for
 the current environment task; no agent-initiated switch or machine transfer.
@@ -189,12 +191,12 @@ and physical-work limits remain unchanged.
 | Owner | PC/WSL `daisy`; Mac `fire.lan` released after published R161 handoff and R162 receipt. |
 | Checkout | `/home/rharris/git/navier-stokes-vortex-lab`. |
 | Branch/upstream | `main` / `origin/main` |
-| Starting state | R226 required clean fast-forward pull at dc3cadd, equal to fetched origin/main; empty stashes, same rharris/daisy owner. STARTED dd27c10 published. |
-| Interpreter | `/home/rharris/git/navier-stokes-vortex-lab/.venv/bin/python`, CPython 3.12.14 with NumPy 2.5.3 |
+| Starting state | R227 clean fast-forward pull at 669d2a0, equal to fetched origin/main; empty stashes, same rharris/daisy owner. STARTED d170ae5 published. |
+| Interpreter | Project Python remains 3.12.14. /tmp/navier-fenicsx has a Python 3.12.13 package record but is partial/unvalidated; do not use it for FEM. Actual standalone interpreter check skipped after timeout. |
 | Other owner/process | Mac `fire.lan` released in the published R161 handoff. Local Git cannot inspect another checkout's unpublished state. |
-| Task processes | R226 ran 49 standard-library tests and two benign managed cases. Clean exit and independent expiry/child cleanup passed; both groups and observed PIDs absent. Only inert expiry-unit failure metadata remains. No FEM or physical workload. |
+| Task processes | R227 bootstrap succeeded, installer timed out, supervisor stopped remaining descendants. Both cgroups and worker PIDs absent. Partial prefix retained; no current task process or FEM workload. |
 | Symbolic environment | `/tmp/navier-r183-sympy/bin/python`, Python 3.12.14, SymPy 1.14.0, mpmath 1.3.0; recreate using `requirements-symbolic.txt` if missing. Existing environments unchanged. |
-| Delivery state | R225 completion dc3cadd, R226 STARTED dd27c10 and tested source/allocation b07dbdc published. R226 completion prepared for scoped commit/push; delivery hash/result in Git/final response. PC retains ownership, FEM attempts zero. |
+| Delivery state | R226 delivery 669d2a0, R227 STARTED d170ae5 and tested procedure 6cf892c published. R227/R228 completion prepared for scoped publication; final hash/result in Git/final response. PC retains ownership. |
 
 ## Current result and limits
 
@@ -324,6 +326,63 @@ write access. The tool sandbox denies `.git` writes, `ps`, unrestricted
 agent-side POV-Ray backtraces are unavailable.
 
 ## Next task
+
+**GPT-6 Sol / high / PC-WSL daisy: recover the exact environment with one new
+bounded offline transaction, verify it, then stop before numerical imports.**
+Read the [R227 review](docs/realizability/ENVIRONMENT_RESTORE_R227.md),
+[failed result](docs/realizability/evidence/r227/run/install/result.json),
+[metadata reconciliation](docs/realizability/evidence/r227/partial_metadata.json),
+[R226 launcher review](docs/realizability/POISEUILLE_LAUNCHER_R226.md),
+[environment pins](environment-b1.yml) and frozen manifest. R227's two phase
+observations and later reconciliation interval remain charged; no automatic retry.
+
+1. Follow the normal clean Continue ownership/synchronization/start publication.
+   Recheck no task survivors, the cached manager/artifact hashes and exact saved
+   [explicit transaction](docs/realizability/evidence/r227/run/install/explicit.txt).
+   Local manager: `/tmp/navier-r227-restore/bin/micromamba` (2.9.0); cached packages:
+   `/home/rharris/.local/share/mamba/pkgs`. Preserve `/tmp/navier-fenicsx` as the
+   failed partial prefix. If disposable cache/artifacts disappeared, record that
+   concrete blocker rather than quietly solving/downloading replacements.
+2. Before launch record one new recovery allocation: <=180 s observed total,
+   <=150 s independent worker expiry, 1536 MiB/no swap/32 tasks, one numerical
+   thread. Use a new prefix, e.g. `/tmp/navier-fenicsx-r229`, and a new exclusive
+   result directory. Reuse the existing verified in-process launcher; adjust
+   only the finite setup procedure. Install offline from the exact checksummed
+   list with `--no-pyc`; retain normal link scripts. The solver is already done,
+   so allocate the work interval to the transaction and verification instead
+   of R227's 75 s solve / 65 s install split. No changed pins, new solver,
+   opportunistic network fetch, unrelated environment changes or auto retry.
+3. Require actual manager/installer success, populated transaction history,
+   exact package version/build/provenance, required source/binary files and
+   isolated Python `-I -S` version/executable/hash. Disclose deliberately omitted
+   optional bytecode. Retain effective limits, available counters, all timing,
+   exit and confirmed child cleanup. Failure/late/missing evidence refuses
+   readiness and retains the new partial prefix. No NumPy/FEM/PETSc/MPI imports.
+4. End with the environment ready for separate admission or a specific blocker.
+   Stop before FEM/JIT/mesh/assembly/solve, full suite, physical/render work.
+   If ready, recommend Astra/high to handle the known FFCx artifact 0.10.1 versus
+   embedded 0.10.0 identity and make the later one-fixture admission decision.
+   Current worker runtime comparison would reject that known upstream string;
+   preserve exact artifact evidence and all other gates, never lower the pin.
+
+Sol/high support was rechecked in [official OpenAI documentation](https://developers.openai.com/api/docs/models/gpt-6-sol).
+Task fit is judgment; no account-access or model-switch claim. No /new required;
+next prompt **Continue**. PC retains ownership; early Mac algebra validation
+still requires the normal ownership handoff and does not block this PC task.
+
+R227/R228 changed request/lifecycle records, a finite restoration procedure and
+read-only inspector, raw/evidence metadata, R227 review, B1 setup/prototype README,
+four current track overviews, status and this handoff. Checks: ASTs, 338-record
+plan comparison, 76,252 file entries, metadata/JSON/hashes, cgroup/PID cleanup,
+links/log preservation/Git checks. Numerical suite not rerun: solver source,
+frozen pins/manifest and prior R225/R226 evidence are unchanged. No scientific
+acceptance or model/owner change. Completion publication follows; delivery
+hash/result in Git/final response, no post-push edits.
+
+### Historical R226 restoration task (attempted by R227; timeout retained)
+
+The following initial restoration contract is retained as historical context;
+use the recovery task above for the next execution allocation.
 
 **GPT-6 Sol / high / PC-WSL daisy: restore the exact pinned FEM environment,
 verify its metadata and interpreter, then stop before FEM imports or execution.**
