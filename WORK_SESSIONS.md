@@ -886,3 +886,14 @@ stop before numerical imports. Same 180 s/1536 MiB/no swap/32 task constraints.
 Recommend Astra/high for FFCx artifact handling and later one-fixture admission.
 STARTED d170ae5 and procedure 6cf892c published. Completion prepared for scoped
 commit/push; delivery hash/result in Git/final response, no post-push edit.
+
+## R229 — Bounded offline environment recovery
+STARTED | 2026-09-26T15:33:20Z | PC/WSL daisy | released: no
+Identity: rharris; Linux x86_64; /home/rharris/git/navier-stokes-vortex-lab;
+clean main/origin/main at 23a84be6f703a8c69616ea8b9816323155ed57f8 after required
+fast-forward pull, equal to fetched upstream; empty stashes. Same owner, Mac
+released, no open task. User supplied Astra/high session snapshot, recorded in
+R229 with account email redacted; no model switch inferred. Continue authorizes
+scoped commit/push. Task: one new bounded offline transaction into a new prefix
+from the saved exact list, --no-pyc, metadata/interpreter and cleanup checks.
+Preserve prior failed prefix/evidence/charges; stop before numerical imports/FEM.

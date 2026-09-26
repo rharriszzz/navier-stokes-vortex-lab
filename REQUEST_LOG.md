@@ -7773,3 +7773,41 @@ Staged whitespace check flagged 22 trailing-space lines in captured micromamba
 help and a final blank line in its stderr. These are byte-exact raw evidence,
 retained with their hashes. The scoped code/document check excludes only those
 two captured files; no source/document whitespace failure is waived.
+
+## R229 — 2026-09-26 (America/New_York) — Status snapshot and offline recovery
+
+**User wording (account address redacted; all supplied fields retained):**
+
+```text
+╭───────────────────────────────────────────────────────────────────────────────────────╮
+│  >_ OpenAI Codex (v0.155.1)                                                           │
+│                                                                                       │
+│ Visit https://chatgpt.com/codex/settings/usage for up-to-date                         │
+│ information on rate limits and credits                                                │
+│                                                                                       │
+│  Model:                       gpt-6-astra (reasoning high, summaries auto)            │
+│  Model provider:              openai                                                  │
+│  Directory:                   ~/git/navier-stokes-vortex-lab                          │
+│  Permissions:                 Workspace (Ask for approval)                            │
+│  Agents.md:                   AGENTS.md                                               │
+│  Account:                     [email redacted] (Pro Lite)                             │
+│  Thread name:                 Summarize Codex session                                 │
+│  Collaboration mode:          Default                                                 │
+│  Session:                     01a0cbe6-635a-7761-a6b1-454b78e9b316                    │
+│                                                                                       │
+│  Context window:              28% left (190K used / 258K)                             │
+│  Weekly limit:                [████████████████████] 99% left (resets 11:23 on 3 Oct) │
+│  Luna Reserve Weekly limit:   [████████████████████] 99% left (resets 10:18 on 3 Oct) │
+╰───────────────────────────────────────────────────────────────────────────────────────╯ continue
+```
+
+**Scope/status:** Supplied account/session snapshot, not independently verified
+usage or project-specific cost. No worked-for/token totals/credit count supplied
+in this excerpt. The user still reports Astra/high; no switch to recommended Sol
+is inferred. Continue authorizes scoped publication and the handoff's one newly
+bounded offline recovery, preserving R227 failure/partial prefix/charges.
+Same rharris-owned PC/WSL daisy checkout; main/origin/main clean and equal at
+23a84be6f703a8c69616ea8b9816323155ed57f8 after required fast-forward pull, empty
+stashes, Mac released and no conflicting task. Verify exact cache, install into
+a new prefix with --no-pyc, verify metadata/interpreter/cleanup, then stop before
+numerical imports/FEM. Zero numerical attempts. Publish STARTED before work.
