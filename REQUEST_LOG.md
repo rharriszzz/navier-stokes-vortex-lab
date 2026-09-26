@@ -8205,3 +8205,59 @@ official Codex guidance says `/new` resets chat context in the same CLI/repo.
 No /new or model switch occurred here. PC/WSL daisy retains ownership, Mac
 released. Completion prepared for scoped commit/push; final delivery hash and
 push result belong in Git/final response, no post-push edit.
+## R233 — 2026-09-26 — Continue PETSc sparse-source failure review
+
+**User wording (supplied terminal excerpt; account email redacted):**
+
+```text
+Worked for 17m 32s · done 12:31 PM ╭──────────────────────────────────────────────╮
+│ >_ OpenAI Codex (v0.155.1)                   │
+│                                              │
+│ model:     gpt-6-sol high   /model to change │
+│ directory: ~/git/navier-stokes-vortex-lab    │
+╰──────────────────────────────────────────────╯
+
+  Tip: New Use /fast to enable our fastest inference with increased plan usage.
+
+Token usage: total=276,343 input=212,003 (+ 16,967,168 cached) output=64,340 (reasoning 20,057)
+To continue this session, run codex resume, then select Summarize completed work (01a0de6f-8d3d-7ce1-af0d-3a81516bf8ae)
+
+/status
+
+╭───────────────────────────────────────────────────────────────────────────────────────╮
+│  >_ OpenAI Codex (v0.155.1)                                                           │
+│                                                                                       │
+│ Visit https://chatgpt.com/codex/settings/usage for up-to-date                         │
+│ information on rate limits and credits                                                │
+│                                                                                       │
+│  Model:                       gpt-6-sol (reasoning high, summaries auto)              │
+│  Model provider:              openai                                                  │
+│  Directory:                   ~/git/navier-stokes-vortex-lab                          │
+│  Permissions:                 Workspace (Ask for approval)                            │
+│  Agents.md:                   AGENTS.md                                               │
+│  Account:                     [account email redacted] (Pro Lite)                         │
+│  Collaboration mode:          Default                                                 │
+│  Session:                     01a0de98-b2e9-74c1-8c8f-97150fb60d8c                    │
+│                                                                                       │
+│  Weekly limit:                [███████████████████░] 95% left (resets 11:23 on 3 Oct) │
+│  Luna Reserve Weekly limit:   [████████████████████] 99% left (resets 10:18 on 3 Oct) │
+╰───────────────────────────────────────────────────────────────────────────────────────╯
+
+• Model changed to gpt-6-astra high continue
+```
+
+**Scope/status:** STARTED. Lowercase continue invokes the scoped session
+workflow and commit/push authorization. Review R232's saved PETSc symbolic-LU
+failure, bordered CSR, lifting and solver setup without numerical imports;
+implement a minimal demonstrated repair and regression or record a precise
+blocker. Stop before FEM or a new allocation; R232 remains spent 1/1.
+The completion/resume and current status have separate supplied session IDs.
+These are user-reported snapshots, not independently verified project usage.
+No `/new` excerpt, context percentage or credit count supplied. The excerpt
+reports a user model change to Astra/high; no agent-initiated switch occurred.
+
+Read-only preflight: rharris, Linux x86_64, PC/WSL daisy, same checkout;
+clean main/origin/main and empty stashes. Required fast-forward pull returned
+already up to date at 7c41b801c25e3c76d62293905f90f566640ea2c7, with 0/0
+divergence. R232 completion is published there, no open lifecycle record;
+Mac remains released. Local Git cannot establish another checkout's live state.

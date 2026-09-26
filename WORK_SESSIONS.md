@@ -1035,3 +1035,15 @@ failure, minimal demonstrated source fix or blocker; no FEM/new allocation.
 Recommend /new, select Astra/high, then Continue. PC retains ownership,
 Mac released; final scoped publication follows. Delivery hash/result belongs
 in Git/final response, with no post-push edit.
+## R233 — PETSc sparse-source failure review
+STARTED | 2026-09-26T16:43:38Z | PC/WSL daisy | released: no
+Identity: rharris; Linux 6.18.33.2-microsoft-standard-WSL2 x86_64; daisy;
+/home/rharris/git/navier-stokes-vortex-lab; clean main/origin/main equal at
+7c41b801c25e3c76d62293905f90f566640ea2c7 after required fast-forward pull;
+empty stashes, same owner, Mac released, no open lifecycle record.
+User supplies prior completion/status and reports Astra/high selection.
+Continue authorizes scoped publication. Audit saved R232 failure, sparse
+diagonals/lifting/PETSc setup without numerical imports, minimally repair a
+demonstrated structural cause and test it, or document a precise blocker.
+Stop before numerical execution/admission; the R232 allowance remains spent
+1/1 and its fixed directory/evidence must be preserved. No new task worker.
