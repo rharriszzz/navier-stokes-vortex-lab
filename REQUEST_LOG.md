@@ -7811,3 +7811,27 @@ Same rharris-owned PC/WSL daisy checkout; main/origin/main clean and equal at
 stashes, Mac released and no conflicting task. Verify exact cache, install into
 a new prefix with --no-pyc, verify metadata/interpreter/cleanup, then stop before
 numerical imports/FEM. Zero numerical attempts. Publish STARTED before work.
+
+### R229 recovery allocation — before launch
+
+All 338 selected archives are present after URL-decoding their filenames;
+aggregate archive size 841,552,029 bytes. Prior bootstrap/install cgroups and
+worker PIDs are absent. Manager exists; /tmp/navier-fenicsx-r229 is absent.
+Allocate exactly one new offline recovery: 180 s observed total, independent
+149+1 s worker expiry, 1536 MiB/no swap/32 tasks, one numerical thread. New run
+/tmp/navier-r229-recovery; new prefix /tmp/navier-fenicsx-r229. Preserve failed
+/tmp/navier-fenicsx and all R227 evidence/charges. This is dependency setup,
+not a numerical attempt; zero FEM attempts and no numerical budget change.
+
+The published recovery procedure verifies manager SHA-256 and all 338 archive
+SHA-256/MD5 values inside the held/released scope, then calls micromamba create
+--offline --no-pyc --yes --json --file the retained explicit transaction into the
+new prefix. Normal link scripts remain enabled; no solve/download or automatic
+retry. Installer subdeadline 125 s leaves time for checks inside the existing
+150 s managed interval. Require installer/worker success, exact records/digests,
+nonempty history, required files, isolated Python -I -S identity/version/hash,
+limits/counters and empty cleanup. Optional bytecode omissions are disclosed.
+First failure/expiry/unknown cleanup stops this allocation and retains evidence.
+Source: docs/realizability/evidence/r229/recover.py, bound to the clean checkpoint
+created from this record. stdout/stderr/handshakes/results stay in the run folder;
+small evidence is committed afterward. Stop before numerical imports or FEM.
