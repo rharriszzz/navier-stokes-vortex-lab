@@ -9534,3 +9534,48 @@ No model/session switch or /new needed. PC retains ownership; Mac released.
 R246 3076956 verified by clean pull; R247 STARTED 349dee7 published. Completion
 prepared for scoped publication; delivery hash/result in Git/final response,
 no post-push edit.
+
+## R248 — 2026-09-26 — Implement rotation oracle source and tests
+
+**User request (account email redacted):**
+
+```text
+Worked for 9m 19s · done 5:59 PM ╭───────────────────────────────────────────────────────────────────────────────────────╮
+│  >_ OpenAI Codex (v0.155.1)                                                           │
+│                                                                                       │
+│ Visit https://chatgpt.com/codex/settings/usage for up-to-date                         │
+│ information on rate limits and credits                                                │
+│                                                                                       │
+│  Model:                       gpt-6-astra (reasoning high, summaries auto)            │
+│  Model provider:              openai                                                  │
+│  Directory:                   ~/git/navier-stokes-vortex-lab                          │
+│  Permissions:                 Workspace (Ask for approval)                            │
+│  Agents.md:                   AGENTS.md                                               │
+│  Account:                     [account email redacted] (Pro Lite)                         │
+│  Thread name:                 Review Codex session output                             │
+│  Collaboration mode:          Default                                                 │
+│  Session:                     01a0deb4-08c7-78e2-ab83-65111b56ad3d                    │
+│                                                                                       │
+│  Context window:              31% left (183K used / 258K)                             │
+│  Weekly limit:                [█████████████████░░░] 86% left (resets 13:10 on 3 Oct) │
+│  Luna Reserve Weekly limit:   [████████████████████] 99% left (resets 10:18 on 3 Oct) │
+╰───────────────────────────────────────────────────────────────────────────────────────╯
+
+• Model changed to gpt-6-sol high
+ continue
+```
+
+**Scope/status:** STARTED. Implement only the R247 rotation oracle injected
+forms, pure contract/reducer/validator and focused tests; run stdlib regressions
+and import audit, publish and stop for Astra/high integration review. No FEM
+import/JIT/assembly, manager, worker/controller/caller integration or new
+allocation. Continue authorizes scoped start/completion commits and pushes.
+
+Identity rharris/daisy, PC/WSL Linux 6.18.33.2-microsoft-standard-WSL2 x86_64;
+/home/rharris/git/navier-stokes-vortex-lab; clean main/origin/main equal at
+1facbf5d62cecbf2e3e01e2830f31f376a68c7c7 after required fast-forward pull
+(already up to date), empty stashes, R247 completed, PC owner, Mac released.
+Supplied snapshot: completion 9m 19s / 5:59 PM, Codex v0.155.1,
+Astra/high before user-reported change to Sol/high, same session, context 31%
+(183K/258K), weekly 86%, Luna Reserve 99%. No /new, literal /status, token
+totals or credit count supplied; values user reported, no account verification.

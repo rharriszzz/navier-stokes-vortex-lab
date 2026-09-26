@@ -1693,3 +1693,13 @@ No model/session switch or /new needed. PC retains ownership; Mac released.
 R246 3076956 verified by clean pull; R247 STARTED 349dee7 published. Completion
 prepared for scoped publication; delivery hash/result in Git/final response,
 no post-push edit.
+
+## R248 — Implement rotation oracle source and tests
+STARTED | 2026-09-26T22:02:02Z | PC/WSL daisy | released: no
+Identity rharris/daisy, PC/WSL Linux 6.18.33.2-microsoft-standard-WSL2 x86_64;
+/home/rharris/git/navier-stokes-vortex-lab; clean main/origin/main equal at
+1facbf5d62cecbf2e3e01e2830f31f376a68c7c7 after required fast-forward pull
+(already up to date), empty stashes, R247 completed, PC owner, Mac released.
+Implement the R247 source-only rotation contract with injected forms and
+strict pure reducer/tests; publish and stop before runtime integration/FEM.
+All five earlier numerical allocations remain spent.
