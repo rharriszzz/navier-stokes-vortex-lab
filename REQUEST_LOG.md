@@ -7654,3 +7654,37 @@ artifacts; verify interpreter/package metadata without numerical imports.
 Preserve pins and existing environments. Stop before FEM imports/JIT/mesh/
 assembly/solve, full suite, physical/render work. Zero FEM attempts. No model
 switch is inferred from this request.
+
+### R227 restoration allocation, before download/solve/install
+
+Read-only inventory found 337 cached extracted conda-forge package records.
+Twelve of thirteen direct pins are present; python-gmsh is absent. The petsc4py
+py310-labelled build supplies PETSc.abi3.so and declares cpython>=3.10, so its
+label alone is not an incompatibility. No conda-compatible manager executable
+was found. The registered /tmp/navier-fenicsx prefix is absent. Cache and current
+environments remain intact. B1_SETUP.md also records FFCx's package 0.10.1 versus
+embedded 0.10.0 discrepancy; preserve both identities for later admission review.
+
+Allocate one two-phase restoration at /tmp/navier-r227-restore: bootstrap once
+(max 60 s observed, manager runtime 49+1 s), then one resolve-and-install phase
+(max 180 s observed, runtime 149+1 s), only after bootstrap succeeds. Total setup
+wall allowance 900 s from bootstrap entry including intervening review; install
+cannot start after 720 s. Each task scope retains 1536 MiB/no swap/32 tasks and
+one numerical thread. These are dependency-setup allocations, not numerical
+attempts; numerical 180 s limits and zero granted attempts are unchanged.
+Bootstrap downloads the official micromamba Linux archive (<=30 MiB), extracts
+only its executable, and records version/hash/help. Installation dry-runs exact
+environment-b1.yml once, checks all direct pins/real PETSc, then installs its
+explicit checksummed transaction into the absent /tmp/navier-fenicsx prefix.
+Use the existing cache; network may supply missing exact artifacts. No source
+build, pin substitution, automatic retry or modification of an existing prefix.
+Package-manager cache additions/normal environment registration are allowed;
+no existing environment is changed. Manager retry count is zero.
+
+Command: project Python runs docs/realizability/evidence/r227/restore.py with
+bootstrap then install and the exact clean source checkpoint. Its worker and
+all downloader/solver/installer/verification children stay in R226's verified
+scope. Metadata checks and Python -I -S only; no FEM/NumPy/PETSc/MPI imports.
+stdout/stderr/plans/results persist under the phase directories. First failure,
+resource event, timeout or unknown cleanup stops restoration; retain partial
+prefix/logs and report the concrete blocker, without silently retrying.
