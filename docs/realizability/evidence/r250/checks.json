@@ -1,0 +1,23 @@
+{
+  "append_only_logs": true,
+  "ast_files": 8,
+  "attempts_granted": 0,
+  "files_changed": 24,
+  "json_files_before_this_record": 3,
+  "local_link_targets_checked": 264,
+  "next_task": "Astra/high source and separate one-use admission review",
+  "no_fem_import_jit_assembly": true,
+  "no_manager_connection": true,
+  "no_new_reservation": true,
+  "numerical_modules_loaded": [],
+  "old_evidence_unchanged": true,
+  "old_reservations_spent": 5,
+  "old_source_files_unchanged": 29,
+  "raw_originals_verified": 60,
+  "source_files": 36,
+  "status": "SOURCE_INTEGRATED_NO_EXECUTION",
+  "stdlib_tests": 93,
+  "test_errors": 0,
+  "test_failures": 0,
+  "unique_sequential_requests": 250
+}

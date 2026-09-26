@@ -185,15 +185,67 @@ def supervise_once(run_dir, manifest_path, admission, backend, *,
     if backend is None:
         raise Refusal('host containment backend unavailable')
 
+    def check_poiseuille(payload, reservation):
+        return validate_worker_result(payload, manifest['versions'], manifest['gates'],
+                                      policy=manifest['poiseuille_diagnostic_policy'])
+
+    return _supervise_finite(run_dir, manifest_path, admission, backend,
+                            source_commit=source_commit, interpreter=interpreter,
+                            owner=owner, monotonic=monotonic, fixture='poiseuille',
+                            worker_module='verification.nonlinear_port.worker',
+                            payload_loader=_load_limited, payload_validator=check_poiseuille,
+                            manifest_digest=digest)
+
+
+def supervise_rotation_once(run_dir, manifest_path, admission, backend, *,
+                            source_commit, interpreter, owner, monotonic=time.monotonic):
+    """Fixture-locked rotation entry point; no default admission or backend."""
+    from .rotation_driver import (expected_admission, read_limited,
+                                  strict_json_bytes, validate_worker_payload)
+    from .rotation_manifest import validate as validate_rotation_manifest
+
+    manifest_bytes = Path(manifest_path).read_bytes()
+    manifest = strict_json_bytes(manifest_bytes)
+    validate_rotation_manifest(manifest)
+    expected_admission(admission, manifest_bytes, manifest, run_dir,
+                       source_commit, interpreter, owner)
+    if backend is None:
+        raise Refusal('host containment backend unavailable')
+
+    def check_rotation(payload, reservation):
+        return validate_worker_payload(payload, manifest, reservation, admission)
+
+    return _supervise_finite(run_dir, manifest_path, admission, backend,
+                            source_commit=source_commit, interpreter=interpreter,
+                            owner=owner, monotonic=monotonic, fixture='rotation',
+                            worker_module='verification.nonlinear_port.rotation_worker',
+                            payload_loader=read_limited, payload_validator=check_rotation,
+                            manifest_digest=hashlib.sha256(manifest_bytes).hexdigest())
+
+
+def _supervise_finite(run_dir, manifest_path, admission, backend, *,
+                      source_commit, interpreter, owner, monotonic, fixture,
+                      worker_module, payload_loader, payload_validator,
+                      manifest_digest):
+    """Private finite reservation/held/cleanup sequence for fixed wrappers."""
+    modules = {'poiseuille': 'verification.nonlinear_port.worker',
+               'rotation': 'verification.nonlinear_port.rotation_worker'}
+    if modules.get(fixture) != worker_module:
+        raise Refusal('unknown finite fixture dispatch')
+
     start = monotonic()
     directory = Path(run_dir).resolve()
     directory.mkdir(parents=False, exist_ok=False)
-    reservation = dict(status='RESERVED', fixture='poiseuille', attempt=1,
-                       source_commit=source_commit, manifest_sha256=digest,
+    reservation = dict(status='RESERVED', fixture=fixture, attempt=1,
+                       source_commit=source_commit, manifest_sha256=manifest_digest,
                        interpreter=interpreter, owner=owner,
                        release_nonce=secrets.token_hex(16),
                        wall_start_utc=time.strftime('%Y-%m-%dT%H:%M:%SZ', time.gmtime()),
                        monotonic_start=start, caps=CAPS)
+    if fixture == 'rotation':
+        for key in ('mode', 'kind', 'worker_schema', 'contract_sha256', 'executable',
+                    'executable_sha256', 'artifact_inventory_sha256'):
+            reservation[key] = admission[key]
     _save_new(directory/'reservation.json', reservation)
     _save_new(directory/'admission.json', admission)
     handle = None
@@ -201,7 +253,7 @@ def supervise_once(run_dir, manifest_path, admission, backend, *,
     log = []
     finish_start = None
     try:
-        command = (interpreter, '-m', 'verification.nonlinear_port.worker',
+        command = (interpreter, '-m', worker_module,
                    str(directory), str(Path(manifest_path).resolve()))
         handle = backend.start_held(command, directory, CAPS)
         facts = verify_held_scope(handle.facts(), handle.scope_id)
@@ -219,9 +271,7 @@ def supervise_once(run_dir, manifest_path, admission, backend, *,
         if (not isinstance(observed, dict) or type(observed.get('exit_code')) is not int
                 or observed['exit_code'] != 0 or not 0 <= result['work_seconds'] <= WORK_SECONDS):
             raise Refusal('worker exit or managed time failed')
-        payload = validate_worker_result(_load_limited(directory/'numerical.json'),
-                                         manifest['versions'], manifest['gates'],
-                                         policy=manifest['poiseuille_diagnostic_policy'])
+        payload = payload_validator(payload_loader(directory/'numerical.json'), reservation)
         result['numerical'] = payload
         log.append('Complete numerical payload loaded and checked.')
     except Exception as exc:

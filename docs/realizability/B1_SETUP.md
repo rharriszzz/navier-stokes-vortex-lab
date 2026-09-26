@@ -1,11 +1,11 @@
 # B1 solver environment
 
-[R249 integration review](../../docs/realizability/ROTATION_INTEGRATION_REVIEW_R249.md) fixes the separate rotation
-manifest/worker/report contract and preserves the shared containment lifecycle.
-Zero-form API risk is explicit; unsupported forms must refuse. No runtime source
-or numerical workload changed. All five allocations remain spent; R246 stays
-PASS and R242 INCOMPLETE. Follow the [current task](../../SESSION_HANDOFF.md#next-task)
-for Sol/high source integration and fake tests, then Astra/high admission review.
+[R250 rotation integration](../../docs/realizability/ROTATION_INTEGRATION_R250.md) adds a strict non-executable
+rotation proposal, held worker, 76-call assembly driver and fixture-locked
+controller checks. All 93 standard-library tests pass without numerical
+imports. No real assembly or new allocation occurred; all five old allowances
+remain spent. R246 stays PASS, R242 INCOMPLETE. Follow the
+[current task](../../SESSION_HANDOFF.md#next-task) for Astra/high admission review.
 
 Historical PC status: [R232's one-use Poiseuille result](POISEUILLE_RESULT_R232.md)
 is INCOMPLETE at PETSc symbolic LU, and the single numerical allocation is

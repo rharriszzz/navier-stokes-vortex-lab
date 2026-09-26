@@ -1,13 +1,13 @@
 # Project status: a boundary-controlled engineering approximation
 
-[R249 integration review](docs/realizability/ROTATION_INTEGRATION_REVIEW_R249.md) fixes the separate rotation
-manifest/worker/report contract and preserves the shared containment lifecycle.
-Zero-form API risk is explicit; unsupported forms must refuse. No runtime source
-or numerical workload changed. All five allocations remain spent; R246 stays
-PASS and R242 INCOMPLETE. Follow the [current task](SESSION_HANDOFF.md#next-task)
-for Sol/high source integration and fake tests, then Astra/high admission review.
+[R250 rotation integration](docs/realizability/ROTATION_INTEGRATION_R250.md) adds a strict non-executable
+rotation proposal, held worker, 76-call assembly driver and fixture-locked
+controller checks. All 93 standard-library tests pass without numerical
+imports. No real assembly or new allocation occurred; all five old allowances
+remain spent. R246 stays PASS, R242 INCOMPLETE. Follow the
+[current task](SESSION_HANDOFF.md#next-task) for Astra/high admission review.
 
-Updated 2026-09-26 (America/New_York), through R249. PC/WSL daisy owns the
+Updated 2026-09-26 (America/New_York), through R250. PC/WSL daisy owns the
 repository. **R232 corrects the recoverable R231 caller failure and resumes the
 same authorized, unspent one-use fixture, then spends it on a PETSc LU failure.**
 The [R232 result](docs/realizability/POISEUILLE_RESULT_R232.md) records an
@@ -31,8 +31,8 @@ or live scope occurred in R236. [R237 admission](docs/realizability/POISEUILLE_A
 granted one instrumented fixture. [R238 result](docs/realizability/POISEUILLE_RESULT_R238.md)
 spent it 1/1: KSP -11, 405 nonfinite answer entries and PC reason 2 (reported
 numeric zero pivot). Worker/caller exited 1 with empty cleanup but no numerical
-or resource report. Those three allocations were spent 1/1 at R238. Next: Sol/high
-implements the reviewed rotation integration with source-only tests; follow the
+or resource report. Those three allocations were spent 1/1 at R238. Next: Astra/high
+reviews the rotation source and separate admission; follow the
 [single task](SESSION_HANDOFF.md#next-task).
 
 Historical R231 context: the
@@ -125,9 +125,9 @@ No boundary-driven core or feasible contraction range is established.
 |---|---|
 | What works? | Illustrative animation, saved-data checks and separate reference/analysis tools. |
 | Is the engineering goal demonstrated? | No validated boundary-driven contraction or boundary-only state estimator exists yet. |
-| What did the latest step establish? | R249 fixed the rotation worker/controller integration contract and documented a conditional zero-form API risk. Source and saved-data audits passed; no new numerical run. [Review and limits](docs/realizability/ROTATION_INTEGRATION_REVIEW_R249.md). |
-| What blocks trusted numerical control results? | R246 passed one fixed Poiseuille oracle; rotation integration and separately admitted assembly remain pending, followed by spatial/time verification. B2 still fails its independent response-accuracy comparison and q64/q96 remain unused. |
-| What is next? | Sol/high implements R249 rotation integration with source-only tests; follow the single [next task](SESSION_HANDOFF.md#next-task). |
+| What did the latest step establish? | R250 implemented the rotation worker/controller source and passed 93 import-free tests; real assembly remains unadmitted. [Source and limits](docs/realizability/ROTATION_INTEGRATION_R250.md). |
+| What blocks trusted numerical control results? | R246 passed one fixed Poiseuille oracle; rotation admission and actual assembly remain pending, followed by spatial/time verification. B2 still fails its independent response-accuracy comparison and q64/q96 remain unused. |
+| What is next? | Astra/high reviews R250 rotation integration and separate admission; follow the single [next task](SESSION_HANDOFF.md#next-task). |
 
 ## Goal and present conclusion
 

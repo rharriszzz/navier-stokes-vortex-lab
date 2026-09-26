@@ -48,12 +48,15 @@ class SystemdBackend:
 class Handle:
     def __init__(self, root, directory, runtime):
         self.root, self.directory, self.runtime = root, directory, runtime
-        self.unit = 'navier-poiseuille-'+uuid.uuid4().hex+'.service'
+        self.reservation = read(directory/'reservation.json')
+        fixture = self.reservation.get('fixture', 'poiseuille')
+        if fixture not in ('poiseuille', 'rotation'):
+            raise Refusal('unsupported finite worker fixture')
+        self.unit = 'navier-'+fixture+'-'+uuid.uuid4().hex+'.service'
         self.scope_id = None
         self.resource_snapshot = None
         self.stopped = False
         self.pid = None
-        self.reservation = read(directory/'reservation.json')
         self.bus = None
 
     def connection(self):
