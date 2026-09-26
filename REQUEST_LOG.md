@@ -9892,3 +9892,31 @@ Evidence: docs/realizability/MANUFACTURED_INTEGRATION_R256.md and evidence/r256/
 Changed: manufactured manifest/policy/driver/report/worker/test; linear_evidence.py, supervision.py and systemd_backend.py; R256 integration and evidence; seven current index/status pages; REQUEST_LOG.md, WORK_SESSIONS.md and SESSION_HANDOFF.md. Skipped: real FEM/UFL imports, JIT/assembly/solve, manager/worker/reservation, admission/caller, install, full convergence/tank/B2, physical/render and Mac transfer. All six old allowances remain spent; R246/R253 saved PASS, R242 INCOMPLETE and R229 setup predicate false. Unknown: real form/API/zero-form behavior, runtime/resource cost, nonlinear convergence, pilot errors/budgets, full spatial/time convergence and rank, R242 cause and artifact-label origin.
 
 Next: GPT-6 Astra/high reviews R256 source against R255 and publishes one separate fresh source/interpreter/artifact-bound one-use admission and finite caller or a precise blocker; stop before numerical launch. Routine source repair within fixed gates may return to Sol/high, a later admitted launch fits Sol/high, and Astra/high should interpret results or change scientific gates. The [official OpenAI Astra model page](https://developers.openai.com/api/docs/models/gpt-6-astra) lists high reasoning support; task fit is judgment, account-specific availability unverified and no agent model/session switch occurred. PC/WSL daisy retains ownership, Mac released. Clean pull verified R255 delivery efaf117; R256 STARTED 1786d46 published. Completion prepared for scoped publication; delivery result/hash belongs in Git/final response, with no post-push edit.
+
+## R257 — 2026-09-26 — Session guidance and manufactured source/admission review
+
+**User request (supplied display transcribed without box padding; account redacted):**
+
+```text
+Worked for 23m 37s · done 7:39 PM
+OpenAI Codex (v0.155.1)
+Visit https://chatgpt.com/codex/settings/usage for up-to-date information on rate limits and credits
+Model: gpt-6-sol (reasoning high, summaries auto)
+Model provider: openai
+Directory: ~/git/navier-stokes-vortex-lab
+Permissions: Workspace (Ask for approval)
+Agents.md: AGENTS.md
+Account: [account email redacted] (Pro Lite)
+Thread name: Review Codex session output
+Collaboration mode: Default
+Session: 01a0e002-3f5d-7453-b9d9-8fb656d795ba
+Context window: 22% left (204K used / 258K)
+Weekly limit: 79% left (resets 13:10 on 3 Oct)
+Luna Reserve Weekly limit: 99% left (resets 10:18 on 3 Oct)
+• Model changed to gpt-6-astra high
+sol never tells me whether to use /new.  should i base this choice on the percent remaining of the context window?  continue
+```
+
+**Scope/status:** STARTED. Answer the session-context question and make future completion recommendations explicit; review R256 against R255 and publish one separately bound prospective admission/caller or precise blocker, then stop before numerical launch. Routine source repairs within fixed gates are authorized; no scientific/resource relaxation. Continue authorizes scoped lifecycle/completion commits and pushes. Snapshot is user reported, same session as R256 with a reported Astra/high switch; no literal /new or /status command, new token totals or credit count supplied. No private session inspection or agent model/session switch.
+
+Identity rharris/daisy, PC/WSL Linux 6.18.33.2-microsoft-standard-WSL2 x86_64, /home/rharris/git/navier-stokes-vortex-lab. Clean main/origin/main equal at a00049a724f98e0094ce693d9b547a9fbc9564c5 after required fast-forward pull (already up to date); empty stashes, R256 complete, PC owner, Mac released. All six old allowances remain spent. Zero launch in this review.
