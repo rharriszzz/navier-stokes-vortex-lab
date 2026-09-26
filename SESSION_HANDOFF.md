@@ -1,45 +1,44 @@
 # Current session handoff
 
-Last updated 2026-09-26 (America/New_York) for R238.
+Last updated 2026-09-26 (America/New_York) for R239.
 **PC/WSL daisy owns the repository.** No transfer; Mac remains released.
-**R238 spent the R237 n=2 Poiseuille diagnostic allocation: INCOMPLETE at
-a reported numeric LU zero pivot, with no retry.** The [result](docs/realizability/POISEUILLE_RESULT_R238.md)
-and [raw evidence](docs/realizability/evidence/r238/run/) preserve the worker
-line `ksp_reason=-11; nonfinite_answer_entries=405; pc_failed_reason=2`.
-The reported KSP category is preconditioner failure and PC code 2 means a
-numeric zero pivot in pinned PETSc 3.25.5. The actual pivot row, matrix rank,
-accuracy and resource events are unmeasured. Worker/caller exited 1; controller/
-caller INCOMPLETE, cleanup empty. No numerical or resource report exists.
-All three one-use allocations (R232, R235, R238) are now spent 1/1.
+**R239 completed the import-free numeric-pivot/operator review.** The
+[review](docs/realizability/POISEUILLE_PIVOT_REVIEW_R239.md) and
+[exact algebra evidence](docs/realizability/evidence/r239/algebra.json) show a
+full-rank gauged toy that fails without row pivoting; a singular control still
+passes the scalar Gram check. The common pressure shift is removed by the
+source gauge, but actual FEM rank/ordering remain unknown. No runtime source,
+solver setting or scientific/resource gate changed. No FEM or new allocation.
 
-The first R238 caller command was refused by sandbox sd-bus access *before*
-reservation, worker or numerical import. Its [prelaunch record](docs/realizability/evidence/r238/prelaunch.json)
-was published on clean `cd3cc5e`; approved host manager inspection found no
-R237 task, and the unchanged caller then used that clean HEAD for the one
-admitted numerical attempt. The fixed directory is retained; PID/cgroup absent.
-R229's 303-event setup refusal remains false. Full suite/tank/B2 unadmitted.
+R238 remains INCOMPLETE: KSP -11, 405 nonfinite answer entries, PC reason 2
+(numeric zero pivot). All three allocations R232/R235/R238 are spent 1/1.
+Thirty raw files match retained originals; reservations persist and saved
+worker PIDs/cgroups are absent. R229's 303-event setup refusal remains false.
 
-**Next: Astra/high reviews the saved numeric zero-pivot refusal and mixed
-operator without FEM, identifies the smallest discriminating source/algebra
-check or a blocker, then stops.** See [Next task](#next-task). Any later
-numerical attempt needs a separate admission and new directory. No model or
-session switch was initiated here.
+**Next: Astra/high reviews explicit serial SuperLU pivoting controls, makes a
+minimal source change only if justified, and stops before numerical admission.**
+See [Next task](#next-task). Static installed build declarations support
+reviewing this candidate; no dynamic availability or solve claim is made.
 
-R237 completion efc9dbc verified by clean pull; R238 STARTED 6625a89 and
-recoverable prelaunch evidence cd3cc5e published. Completion delivery belongs
-in Git/final response, no post-push edit.
+R239 records the user's Sol/high snapshot: 7m 28s / 1:37 PM, context 25%
+(197K/258K), weekly 98%, Luna Reserve 99%, existing session. No /new requested
+or needed for this connected task; no agent model/session switch. Account
+email is redacted in REQUEST_LOG.md. Values are user reported.
+R238 delivery ce68c04 verified by clean pull; R239 STARTED 4d5acd6 published.
+Completion is prepared for scoped publication; delivery hash/result belongs
+in Git/final response, with no post-push edit.
 
-R238 changed its result and 14 evidence files (ten raw plus prelaunch,
-run_hashes, execution and checks), prototype README, B1_SETUP, four track
-overviews, STATUS and request/lifecycle/handoff records. Checks: clean
-launch/source/interpreter binding, actual held limits and worker/caller exit,
-all ten raw hashes/JSON/originals (5,604 bytes), absent numerical/finish/resource
-reports, empty cleanup and PID/cgroup absence, local links, 238 unique request
-IDs, append-only logs and Git whitespace. Skips: any second numerical attempt,
-full suite/rotation/tank/B2, physical/render work, install, Mac transfer and
-source-suite rerun (unchanged). Actual pivot row, matrix rank, accuracy, worker
-memory/events and final save tails remain unknown. PC retains ownership;
-Mac remains released.
+R239 changes its review, algebra script/output and checks, current status/track
+pages, prototype README, B1 setup and request/lifecycle/handoff records. Checks:
+exact toy assertions and import audit; 25 unchanged source hashes; 30 raw hashes
+and originals; reservations/PID/cgroup absence; static backend build evidence;
+new AST/JSON, local links, 239 unique request IDs, append-only logs and whitespace.
+R236's 62-test result is reused, not rerun. Skips: numerical imports/FEM/JIT/
+assembly/backend solve, live manager/scope, install, full suite/rotation/tank/B2,
+physical/render work and Mac transfer. Actual matrix/rank/pivot, accuracy and
+resource events remain unmeasured. PC retains ownership; Mac remains released.
+
+### Earlier R237–R238 context (allocations now spent; not execution authority)
 
 **R237 admits one NEW later bounded n=2 Poiseuille diagnostic fixture, 0/1
 spent.** The [admission](docs/realizability/POISEUILLE_ADMISSION_R237.md) and
@@ -421,12 +420,12 @@ and physical-work limits remain unchanged.
 | Owner | PC/WSL `daisy`; Mac `fire.lan` released after published R161 handoff and R162 receipt. |
 | Checkout | `/home/rharris/git/navier-stokes-vortex-lab`. |
 | Branch/upstream | `main` / `origin/main` |
-| Starting state | R238 same-owner clean main/origin/main at efc9dbc after required fast-forward pull; rharris/daisy, empty stashes, R237 completed. Start 6625a89 published. |
+| Starting state | R239 same-owner clean main/origin/main at ce68c04 after required fast-forward pull; rharris/daisy, empty stashes, R238 completed. Start 4d5acd6 published. |
 | Interpreter | /tmp/navier-fenicsx-r229/bin/python verified as 3.12.13 with -I -S; exact environment artifacts verified, setup memory-event predicate refused. Project Python remains 3.12.14. Old /tmp/navier-fenicsx is still partial. |
 | Other owner/process | Mac `fire.lan` released in the published R161 handoff. Local Git cannot inspect another checkout's unpublished state. |
 | Task processes | R238 worker PID 149905 exited 1 after sparse-solve refusal; manager final MainPID 0/empty ControlGroup, cleanup empty/unknown_children=false. PID/cgroup absent. All three allocations spent 1/1; R238 directory and ten raw originals retained. |
 | Symbolic environment | `/tmp/navier-r183-sympy/bin/python`, Python 3.12.14, SymPy 1.14.0, mpmath 1.3.0; recreate using `requirements-symbolic.txt` if missing. Existing environments unchanged. |
-| Delivery state | R237 completion efc9dbc verified by clean pull; R238 STARTED 6625a89 and clean prelaunch evidence cd3cc5e published. R238 result/completion prepared for scoped publication; final delivery in Git/final response. PC retains ownership. |
+| Delivery state | R238 ce68c04 verified by clean pull; R239 STARTED 4d5acd6 published. R239 review/completion prepared for scoped publication; delivery in Git/final response. PC retains ownership. |
 
 ## Current result and limits
 
@@ -557,41 +556,41 @@ agent-side POV-Ray backtraces are unavailable.
 
 ## Next task
 
-**GPT-6 Astra / high / PC-WSL daisy: review the spent R238 numeric zero-pivot
-refusal and exact mixed operator without FEM or a new allocation.** After
-**Continue**, follow the normal clean ownership/synchronization/start record.
-Read the [R238 result](docs/realizability/POISEUILLE_RESULT_R238.md),
-[raw worker log](docs/realizability/evidence/r238/run/worker.log),
-[execution/checks](docs/realizability/evidence/r238/), R236 sparse review,
-R237 admission, `verification/nonlinear_port/{cube_adapter,sparse,fixture_driver,prototype}.py`
-and the frozen manifest. All three numerical allocations are spent 1/1.
+**GPT-6 Astra / high / PC-WSL daisy: review and, if justified, implement an
+explicit serial SuperLU backend for the bordered mixed operator; stop before
+new numerical admission or execution.** After **Continue**, follow the normal
+clean ownership/synchronization/start publication. Read
+[R239 review](docs/realizability/POISEUILLE_PIVOT_REVIEW_R239.md), its
+[evidence](docs/realizability/evidence/r239/), R238 result, R225 acceptance
+review, `cube_adapter.py`, `test_adapter.py`, and the frozen manifest.
 
-The worker reported `ksp_reason=-11`, 405 nonfinite answer entries and
-`pc_failed_reason=2` after `ksp.solve` returned. Pinned PETSc labels these
-preconditioner failure and numeric zero pivot. These are diagnostic status
-codes, not a saved matrix, pivot row, rank proof, true residual, accuracy or
-resource event measurement. Cleanup is empty; no numerical/resource report.
+1. Preserve all three spent states and unchanged raw evidence. No installation,
+   FEM/numerical imports, JIT, assembly, live manager/scope or numerical attempt.
+2. Review pinned PETSc 3.25.5's serial SuperLU interface and exact available
+   build/version declarations. Specify row pivoting, ordering and singularity
+   behavior with no diagonal shifts, tiny-pivot replacement, ambient option
+   leakage or fallback. Static declarations are not a dynamic capability pass.
+3. If justified, make the smallest source change that selects and records this
+   explicit backend, with focused standard-library/mocked tests of configuration,
+   refusal/cleanup and unchanged true-residual gate. Preserve the physical
+   operator, lifting/gauge/flux rows, pins, resource caps and accuracy gates.
+   Otherwise record a precise configuration or scientific blocker. No silent
+   tolerance relaxation. Specify minimal bounded evidence for future failures
+   so another status-only refusal need not leave the same matrix/pivot gap.
+4. Publish review/source evidence and recommend a separate Astra/high admission
+   decision if ready. That later decision must allocate a new directory/attempt;
+   none is granted here. Stop at source/method completion. Recommend Sol/high
+   only after a fully specified mechanical execution has been separately admitted.
 
-1. Preserve all three spent states and directories/raw evidence. Confirm no
-   live R238 worker/cgroup. No launch, install, model transfer or gate change.
-2. Audit the exact bordered mixed operator, gauge/flux rows, fixed velocity
-   elimination and frozen scaling using import-free source/algebra analysis.
-   Distinguish a matrix nullspace, numeric pivoting sensitivity, assembly/sign
-   defect, and insufficient evidence. Do not infer singularity solely from
-   PETSc code 2 or treat nonfinite answer entries as independent root cause.
-3. Identify the smallest discriminating check that can safely be performed
-   without FEM, or a precise blocker. Implement/test a source-only diagnostic
-   if justified and within the task; otherwise record the next method decision.
-   Do not introduce a solver fallback, pivot shift/tolerance change or new
-   numerical allocation without separate scientific review.
-4. Publish the analysis, checks/skips and one concrete later decision task;
-   stop before FEM/import/JIT/solve or manager/live scope. Full suite, rotation,
-   tank/B2, physical/render work remain unadmitted.
+Completion: defensible explicit solver configuration with focused source checks,
+or a precise blocker, scoped publication and stop. Actual FEM rank remains
+unknown until separately admitted evidence resolves it. No full suite/rotation/
+tank/B2, physical/render work or Mac transfer.
 
-Completion: reviewable source/algebra result or precise blocker, explicit
-three-way spent state, scoped commit/push and stop. Retain Astra/high for
-numerical-method choices; recommend Sol/high only for a separately admitted
-mechanical launch. No agent-initiated model/session switch.
+Astra/high availability was rechecked in this session against
+[official OpenAI documentation](https://developers.openai.com/api/docs/models/gpt-6-astra).
+Task fit is judgment; no account-access or model-switch claim. Continue in the
+existing session; no /new required. Next prompt: **Continue**.
 
 ### Historical R230 single-fixture execution task (R232 spent)
 

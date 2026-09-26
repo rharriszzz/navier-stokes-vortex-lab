@@ -8833,3 +8833,34 @@ Sol/high, same session ID, context 25% (197K/258K), weekly 98%, Luna Reserve 99%
 No /new, literal /status command, token totals, credit count or user model-change
 excerpt supplied. These are user-reported values, not independent/account or
 project-specific accounting. No agent-initiated model/session switch.
+
+**R239 outcome — 2026-09-26: COMPLETED, publication prepared.**
+The gauged 8 by 8 toy has exact rank 8/determinant -1 but natural elimination
+fails at index 6; one row swap completes elimination. A singular control has
+rank 7 while the scalar Gram remains identity. Real CSR/border/lift/scaling
+helpers preserve the padded 9 by 9 toy's rank. No actual FEM matrix was built.
+Source gauge removes the common pressure shift; actual R238 rank and assembly
+remain unverified. PETSc documents native LU's absent numerical pivoting;
+installed build files declare serial SuperLU, without dynamic validation.
+
+Changed files: POISEUILLE_PIVOT_REVIEW_R239.md, evidence/r239/check_algebra.py,
+algebra.json and checks.json; prototype README, B1_SETUP, four track overviews,
+STATUS and request/lifecycle/handoff records. Checks: bounded exact algebra
+assertions and no-numerical-import audit; all 25 unchanged R236 source/pin hashes;
+30 saved raw hashes and retained originals; all three reservations present and
+saved worker PIDs/cgroups absent; static backend file hashes/declarations;
+new AST/JSON, local links, 239 unique request IDs, append-only logs, whitespace.
+The unchanged R236 62-test result is reused, not rerun. Skipped numerical
+imports/FEM/JIT/assembly/backend solve, live manager/scope, install, full suite/
+rotation/tank/B2, physical/render work and Mac transfer. All three allocations
+remain spent 1/1; no new allocation. Actual pivot/permutation/matrix rank,
+accuracy and resource events remain unknown; no numerical/resource PASS.
+
+Evidence: docs/realizability/POISEUILLE_PIVOT_REVIEW_R239.md and evidence/r239/.
+Next: Astra/high import-free scientific review of explicit serial SuperLU
+controls, minimal source change/tests only if justified, stop before new
+numerical admission; otherwise precise blocker. Continue in this session,
+no /new or model switch required/performed. PC retains ownership, Mac released.
+R238 ce68c04 verified by clean pull; R239 STARTED 4d5acd6 published. Completion
+prepared for scoped commit/push; delivery hash/result in Git/final response,
+with no post-push log edit.

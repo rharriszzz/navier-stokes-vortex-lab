@@ -1,5 +1,13 @@
 # B1 solver environment
 
+[R239 pivot review](../../docs/realizability/POISEUILLE_PIVOT_REVIEW_R239.md) gives an exact full-rank toy that fails
+without row pivoting and a singular toy that passes the scalar Gram check.
+Actual R238 matrix rank remains unknown. Runtime source and all three spent
+allocations are unchanged; no FEM ran. Next: Astra/high reviews an explicit
+serial SuperLU backend and its controls, with a minimal source change only if
+justified; stop before new numerical admission. Follow the
+[current task](../../SESSION_HANDOFF.md#next-task).
+
 Current PC status: [R232's one-use Poiseuille result](POISEUILLE_RESULT_R232.md)
 is INCOMPLETE at PETSc symbolic LU, and the single numerical allocation is
 spent 1/1. [R233](POISEUILLE_SPARSE_REVIEW_R233.md) repairs structural zero
@@ -13,7 +21,7 @@ changing the solver or running FEM. [R237](POISEUILLE_ADMISSION_R237.md) grants
 one diagnostic fixture with the unchanged solver/gates.
 [R238](POISEUILLE_RESULT_R238.md) spent it 1/1: KSP -11 and PC reason 2
 (reported numeric zero pivot), worker exit 1, empty cleanup and no numerical/
-resource report. All three fixture allowances are spent; next is source review.
+resource report. All three fixture allowances are spent; next is backend review.
 R229's transaction/metadata/interpreter checks completed; its setup
 memory-event refusal remains unchanged. FFCx's exact artifact/runtime gate is
 repaired. Retain `/tmp/navier-fenicsx-r229`; old `/tmp/navier-fenicsx` stays partial.

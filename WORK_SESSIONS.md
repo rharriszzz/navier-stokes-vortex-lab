@@ -1280,3 +1280,22 @@ in existing session despite supplied 25% context. Scope: import-free source/
 algebra review of numeric pivot, discriminating check or blocker, scoped
 publication and stop. No FEM/live scope/solver changes/new allocation; three
 prior numerical allocations remain spent 1/1.
+
+COMPLETED | 2026-09-26T17:49:21Z | PC/WSL daisy | released: no
+R239 exact toy demonstrates full rank can coexist with a natural zero pivot;
+negative control shows scalar Gram cannot certify mixed rank. Source/gauge
+review complete, actual R238 matrix/rank still unknown. Runtime source unchanged.
+Changed: R239 review and three evidence files, prototype README, B1_SETUP,
+four track overviews, STATUS and request/lifecycle/handoff records. Checks:
+exact toy/import audit, 25 unchanged source hashes, 30 raw hashes/originals,
+three spent reservations and absent saved PIDs/cgroups, static backend build
+hashes/declarations, new AST/JSON, links, 239 unique IDs, append-only logs and
+whitespace. R236 62 tests reused, not rerun. Skips: numerical imports/FEM/JIT/
+assembly/backend solve, live manager/scope, install, full suite/rotation/tank/B2,
+physical/render and Mac work. No new allocation; all three old ones spent 1/1.
+Evidence: docs/realizability/POISEUILLE_PIVOT_REVIEW_R239.md and evidence/r239/.
+Next: Astra/high reviews serial SuperLU controls and implements minimal source
+only if justified, otherwise blocker; stop before new numerical admission.
+No /new needed, no model/session switch. PC retains ownership; Mac released.
+R238 ce68c04 verified; R239 STARTED 4d5acd6 published. Completion prepared for
+scoped publication; final delivery hash/result in Git/final response.

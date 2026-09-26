@@ -1,5 +1,13 @@
 # Isolated nonlinear port verification source — R195/R196/R222/R225/R226
 
+[R239 pivot review](../../docs/realizability/POISEUILLE_PIVOT_REVIEW_R239.md) gives an exact full-rank toy that fails
+without row pivoting and a singular toy that passes the scalar Gram check.
+Actual R238 matrix rank remains unknown. Runtime source and all three spent
+allocations are unchanged; no FEM ran. Next: Astra/high reviews an explicit
+serial SuperLU backend and its controls, with a minimal source change only if
+justified; stop before new numerical admission. Follow the
+[current task](../../SESSION_HANDOFF.md#next-task).
+
 **Source and algebra evidence, not a validated FEM solver.** The
 [R195 fixture review](../../docs/realizability/NONLINEAR_VERIFICATION_R195.md)
 derives the exact data. The [R196 adapter review](../../docs/realizability/CUBE_ADAPTER_R196.md)

@@ -1,5 +1,13 @@
 # Physical Realizability Plan for `navier-stokes-vortex-lab`
 
+[R239 pivot review](docs/realizability/POISEUILLE_PIVOT_REVIEW_R239.md) gives an exact full-rank toy that fails
+without row pivoting and a singular toy that passes the scalar Gram check.
+Actual R238 matrix rank remains unknown. Runtime source and all three spent
+allocations are unchanged; no FEM ran. Next: Astra/high reviews an explicit
+serial SuperLU backend and its controls, with a minimal source change only if
+justified; stop before new numerical admission. Follow the
+[current task](SESSION_HANDOFF.md#next-task).
+
 R232's [single-fixture result](docs/realizability/POISEUILLE_RESULT_R232.md)
 is INCOMPLETE: the worker reached PETSc symbolic LU and exited 1 after a
 missing-diagonal error. The one-use allocation is spent 1/1, with empty
@@ -20,7 +28,7 @@ diagnostic; 62 standard-library tests pass without numerical imports.
 bounded diagnostic fixture; [R238](docs/realizability/POISEUILLE_RESULT_R238.md)
 spent it 1/1 on a reported numeric LU zero pivot, with empty cleanup but no
 numerical/resource report. All three allowances are spent. Follow the
-[handoff task](SESSION_HANDOFF.md#next-task) for import-free Astra/high review.
+[handoff task](SESSION_HANDOFF.md#next-task) for the Astra/high backend review.
 No tank/hardware route or feasible contraction range is established.
 
 R188 priority update (2026-09-22): establish measurable essential dynamical
