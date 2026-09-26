@@ -8947,3 +8947,46 @@ no agent model/session switch. PC retains ownership; Mac remains released.
 R239 5ed9253 verified by clean pull; R240 STARTED 628e04d published. Completion
 prepared for scoped publication; delivery hash/result in Git/final response,
 with no post-push log edit.
+
+## R241 — 2026-09-26 — Continue bounded matrix evidence and admission review
+
+**User wording (supplied terminal excerpt; account email redacted):**
+
+```text
+Worked for 12m 19s · done 2:23 PM ╭───────────────────────────────────────────────────────────────────────────────────────╮
+│  >_ OpenAI Codex (v0.155.1)                                                           │
+│                                                                                       │
+│ Visit https://chatgpt.com/codex/settings/usage for up-to-date                         │
+│ information on rate limits and credits                                                │
+│                                                                                       │
+│  Model:                       gpt-6-astra (reasoning high, summaries auto)            │
+│  Model provider:              openai                                                  │
+│  Directory:                   ~/git/navier-stokes-vortex-lab                          │
+│  Permissions:                 Workspace (Ask for approval)                            │
+│  Agents.md:                   AGENTS.md                                               │
+│  Account:                     [account email redacted] (Pro Lite)                     │
+│  Thread name:                 Review Codex session output                             │
+│  Collaboration mode:          Default                                                 │
+│  Session:                     01a0deb4-08c7-78e2-ab83-65111b56ad3d                    │
+│                                                                                       │
+│  Context window:              38% left (164K used / 258K)                             │
+│  Weekly limit:                [███████████████████░] 95% left (resets 13:10 on 3 Oct) │
+│  Luna Reserve Weekly limit:   [████████████████████] 99% left (resets 10:18 on 3 Oct) │
+╰───────────────────────────────────────────────────────────────────────────────────────╯ continue
+```
+
+**Scope/status:** STARTED. Follow R240 handoff: implement/test bounded latest
+CSR/RHS evidence, review exact SuperLU artifact identity, decide a separate
+one-fixture admission or precise blocker, publish then stop before numerical
+execution. Three prior allocations remain spent 1/1. No live scope/import/FEM
+or installation. Continue authorizes scoped start/completion commits/pushes.
+
+Preflight: rharris/daisy, PC/WSL Linux 6.18.33.2-microsoft-standard-WSL2 x86_64,
+/home/rharris/git/navier-stokes-vortex-lab; clean main/origin/main equal at
+14a402a5e48e6f4f502e9cbaa99cde7408625a12, empty stashes, R240 completed,
+PC retains ownership, Mac released. Required approved fast-forward pull:
+already up to date. Snapshot is user reported: preceding completion 12m 19s /
+2:23 PM, Codex v0.155.1, Astra/high, same session, context 38% (164K/258K),
+weekly 95%, Luna Reserve 99%. No /new, literal /status, token totals, credit count
+or model-change command supplied. No independent account accounting or agent
+model/session switch.

@@ -1329,3 +1329,12 @@ separate one-fixture admission, or precise blocker; stop before execution.
 PC retains ownership, Mac released; no /new or model/session switch.
 R239 5ed9253 verified; R240 STARTED 628e04d published. Completion prepared for
 scoped publication; delivery hash/result in Git/final response.
+
+## R241 — Bounded matrix evidence and serial SuperLU admission review
+STARTED | 2026-09-26T20:17:10Z | PC/WSL daisy | released: no
+Identity rharris/daisy, Linux 6.18.33.2-microsoft-standard-WSL2 x86_64;
+/home/rharris/git/navier-stokes-vortex-lab; clean main/origin/main at
+14a402a5e48e6f4f502e9cbaa99cde7408625a12 after required fast-forward pull,
+empty stashes, R240 completed, same PC owner, Mac released. Bounded evidence
+source/tests, artifact review and separate admission or blocker; publish and
+stop before numerical execution. Three older allocations remain spent 1/1.
