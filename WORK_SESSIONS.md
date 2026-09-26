@@ -1179,3 +1179,13 @@ retain Astra/high for numerical-method decisions. No new chat needed.
 R235 delivery fe5295b verified; R236 STARTED 2e21a9c published. Completion
 prepared for scoped publication; final delivery hash/result in Git/final
 response, no post-push edit. PC retains ownership; Mac remains released.
+
+## R237 — Instrumented Poiseuille admission decision
+STARTED | 2026-09-26T17:23:57Z | PC/WSL daisy | released: no
+Identity: rharris; Linux 6.18.33.2-microsoft-standard-WSL2 x86_64; daisy;
+/home/rharris/git/navier-stokes-vortex-lab; clean main/origin/main equal at
+739eff81afeef88fff0a89e5f1c34d588fe8a6a0 after required fast-forward pull;
+empty stashes, same owner, Mac released, R236 completed. Continue authorizes
+one separate go/no-go decision, new allocation/caller contract if admitted,
+scoped publication and stop before any numerical import/reservation/live scope.
+Both old one-use allocations remain spent 1/1; solver and all gates unchanged.

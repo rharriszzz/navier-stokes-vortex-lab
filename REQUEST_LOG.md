@@ -8608,3 +8608,47 @@ was searched/opened to verify Astra/high support; fit is judgment, no account
 check or agent-initiated model/session switch. R235 delivery fe5295b verified
 by clean pull; R236 STARTED 2e21a9c published. Completion prepared for scoped
 commit/push; final delivery belongs in Git/final response, no post-push edit.
+
+## R237 — 2026-09-26 — Continue diagnostic-fixture admission decision
+
+**User wording (supplied terminal excerpt; account email redacted):**
+
+```text
+Worked for 7m 30s · done 1:20 PM ╭───────────────────────────────────────────────────────────────────────────────────────╮
+│  >_ OpenAI Codex (v0.155.1)                                                           │
+│                                                                                       │
+│ Visit https://chatgpt.com/codex/settings/usage for up-to-date                         │
+│ information on rate limits and credits                                                │
+│                                                                                       │
+│  Model:                       gpt-6-astra (reasoning high, summaries auto)            │
+│  Model provider:              openai                                                  │
+│  Directory:                   ~/git/navier-stokes-vortex-lab                          │
+│  Permissions:                 Workspace (Ask for approval)                            │
+│  Agents.md:                   AGENTS.md                                               │
+│  Account:                     [account email redacted] (Pro Lite)                     │
+│  Thread name:                 Review Codex session output                             │
+│  Collaboration mode:          Default                                                 │
+│  Session:                     01a0deb4-08c7-78e2-ab83-65111b56ad3d                    │
+│                                                                                       │
+│  Context window:              60% left (111K used / 258K)                             │
+│  Weekly limit:                [████████████████████] 99% left (resets 13:10 on 3 Oct) │
+│  Luna Reserve Weekly limit:   [████████████████████] 99% left (resets 10:18 on 3 Oct) │
+╰───────────────────────────────────────────────────────────────────────────────────────╯ continue
+```
+
+**Scope/status:** STARTED. Continue authorizes the separate go/no-go decision
+for one later bounded n=2 Poiseuille fixture using R236 diagnostics, preparation
+of a concrete new allocation/caller if admitted, and scoped commit/push. Stop
+before reservation, numerical imports, manager/live scope, installation or FEM.
+Both R232 and R235 remain INCOMPLETE and spent 1/1; no reuse of old directories.
+All solver/operator, numerical and resource gates remain unchanged.
+
+Preflight: rharris/daisy, PC/WSL, Linux 6.18.33.2-microsoft-standard-WSL2 x86_64,
+/home/rharris/git/navier-stokes-vortex-lab. Clean main/origin/main equal at
+739eff81afeef88fff0a89e5f1c34d588fe8a6a0 after required clean fast-forward
+pull, already up to date; empty stashes, completed R236 lifecycle. Same owner,
+Mac remains released. Supplied snapshot is Astra/high in the same session ID,
+60% context left (111K/258K), weekly 99%, Luna Reserve 99%. No /new, literal
+/status command, token totals or credit count supplied. These are user-reported
+snapshots, not independently checked or project-specific accounting. No
+agent-initiated model/session switch.
