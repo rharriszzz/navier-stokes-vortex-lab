@@ -50,7 +50,7 @@ class Handle:
         self.root, self.directory, self.runtime = root, directory, runtime
         self.reservation = read(directory/'reservation.json')
         fixture = self.reservation.get('fixture', 'poiseuille')
-        if fixture not in ('poiseuille', 'rotation'):
+        if fixture not in ('poiseuille', 'rotation', 'manufactured'):
             raise Refusal('unsupported finite worker fixture')
         self.unit = 'navier-'+fixture+'-'+uuid.uuid4().hex+'.service'
         self.scope_id = None

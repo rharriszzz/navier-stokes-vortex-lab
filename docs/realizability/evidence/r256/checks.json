@@ -1,0 +1,11 @@
+{
+  "ast_files": 12,
+  "json_files": 3,
+  "local_link_targets_checked": 263,
+  "next_task": "Astra/high reviews R256 source and publishes separate admission/caller or blocker; stop before launch.",
+  "numerical_modules_loaded": [],
+  "r256_completed_once": true,
+  "r256_started_once": true,
+  "status": "SOURCE_IMPLEMENTED_NO_ADMISSION",
+  "unique_contiguous_request_ids": 256
+}

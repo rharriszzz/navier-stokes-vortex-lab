@@ -1,13 +1,11 @@
 # Project Tracks
 
-[R255 review and fixed contract](docs/realizability/VERIFICATION_MILESTONE_R255.md)
-reproduces the R253 rotation PASS and defines one n=2 manufactured spatial BE
-pilot through the production residual, solve and diagnostics. Exact rational
-checks cover nonzero strain, return totals, corrected load/history and signed
-budgets. No runtime source or numerical allocation changed; all six allowances
-remain spent. R246 remains PASS, R242 INCOMPLETE. Follow the
-[single current task](SESSION_HANDOFF.md#next-task): Sol/high implements
-the fixed pilot source/tests, then stops for Astra/high source/admission review.
+[R256 source integration](docs/realizability/MANUFACTURED_INTEGRATION_R256.md)
+implements the fixed R255 manufactured spatial BE pilot without numerical
+execution or admission. All 103 source/fake tests and saved R246/R253 validator
+replays pass; no numerical modules loaded. Six old allowances remain spent,
+R242 stays INCOMPLETE. Follow the [single current task](SESSION_HANDOFF.md#next-task):
+Astra/high reviews source and a separate one-use admission/caller or blocker.
 
 R232's [single-fixture result](docs/realizability/POISEUILLE_RESULT_R232.md)
 is INCOMPLETE: the worker reached PETSc symbolic LU and exited 1 after a
@@ -29,7 +27,7 @@ diagnostic; 62 standard-library tests pass without numerical imports.
 bounded diagnostic fixture; [R238](docs/realizability/POISEUILLE_RESULT_R238.md)
 spent it 1/1 on a reported numeric LU zero pivot, with empty cleanup but no
 numerical/resource report. All three allowances are spent. Follow the
-[handoff task](SESSION_HANDOFF.md#next-task) for the R255 manufactured-pilot source task.
+[handoff task](SESSION_HANDOFF.md#next-task) for the R256 source/admission review.
 No tank/hardware route or feasible contraction range is established.
 
 R188 priority update (2026-09-22): establish measurable essential dynamical

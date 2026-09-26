@@ -1,0 +1,41 @@
+{
+  "added_fixture_files": [
+    "verification/nonlinear_port/future_manufactured.json",
+    "verification/nonlinear_port/manufactured_driver.py",
+    "verification/nonlinear_port/manufactured_manifest.py",
+    "verification/nonlinear_port/manufactured_policy.py",
+    "verification/nonlinear_port/manufactured_report.py",
+    "verification/nonlinear_port/manufactured_worker.py",
+    "verification/nonlinear_port/test_manufactured_integration.py"
+  ],
+  "attempts_granted": 0,
+  "copied_manifest_sha256": "429c1b2752106ff834ab2cffc1670be3129dfe67ebacb8c80d0ab2a7fb61b6d6",
+  "exact_reference_rederived": true,
+  "intentionally_modified_prior_files": [
+    "verification/nonlinear_port/linear_evidence.py",
+    "verification/nonlinear_port/supervision.py",
+    "verification/nonlinear_port/systemd_backend.py"
+  ],
+  "manager_connection": false,
+  "new_numerical_work": false,
+  "numerical_modules_loaded": [],
+  "previous_bound_source_files": 36,
+  "previous_files_unchanged": 33,
+  "proposal_sha256": "429c1b2752106ff834ab2cffc1670be3129dfe67ebacb8c80d0ab2a7fb61b6d6",
+  "saved_r246_validator": "PASS",
+  "saved_r253_validator": "PASS",
+  "source_sha256": {
+    "verification/nonlinear_port/future_manufactured.json": "429c1b2752106ff834ab2cffc1670be3129dfe67ebacb8c80d0ab2a7fb61b6d6",
+    "verification/nonlinear_port/linear_evidence.py": "a950da1aaf518cd3504036e668318907e92a445822a37375767af5f81197d4b0",
+    "verification/nonlinear_port/manufactured_driver.py": "abd5b0d1e0f84d63b526874a712394839d69a53ef784c7682af5049011cc207a",
+    "verification/nonlinear_port/manufactured_manifest.py": "51153c9d3caa9011a2807747b6021eba54cb4617925d34cf26936881c87a0237",
+    "verification/nonlinear_port/manufactured_policy.py": "5f1da5afb3a3e7ef4e3659c4084e4f17d15c24b7f154b35dfeead8d1e8c98200",
+    "verification/nonlinear_port/manufactured_report.py": "6ba550fdd201bb7da1a96ae410036a4624d184b5b1ce384128f49a0091b4d84e",
+    "verification/nonlinear_port/manufactured_worker.py": "df71fd0e9fa321c1dab01c4d7db188cff9290d9d26017305afa1c133fe584e9f",
+    "verification/nonlinear_port/supervision.py": "0d9bc944080a5d9ee97b2c30dff706dae930e6dd25ea09f7d515bd21f248202f",
+    "verification/nonlinear_port/systemd_backend.py": "a102fbfae5afe9ed25cc966be433e3632f1c25b5a82adafae9f3a31eedf20263",
+    "verification/nonlinear_port/test_manufactured_integration.py": "0bd871f9b246ca61a60e977721c0d608e468e9d84c99ab66f823fdb2f71a3f8a"
+  },
+  "status": "SOURCE_IMPLEMENTED_NO_ADMISSION",
+  "tests": 103
+}

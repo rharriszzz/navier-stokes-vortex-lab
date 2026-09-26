@@ -33,9 +33,12 @@ class LatestSystem:
     A failed write leaves the previous complete record and any partial .writing
     file. No diagnostic failure permits a solve or another numerical attempt.
     """
-    def __init__(self, directory, binding):
+    def __init__(self, directory, binding, *, fixture='poiseuille'):
         self.directory = Path(directory)
         self.binding = dict(binding)
+        if fixture not in ('poiseuille', 'manufactured'):
+            raise Refusal('unsupported linear evidence fixture')
+        self.fixture = fixture
         if (not self.directory.is_dir()
                 or not re.fullmatch('[0-9a-f]{40}', binding.get('source_commit', ''))
                 or not re.fullmatch('[0-9a-f]{64}', binding.get('executable_sha256', ''))):
@@ -67,7 +70,7 @@ class LatestSystem:
         if any(state[i] != value for i, value in zip(indices, fixed_values)):
             raise Refusal('linear evidence state lost installed lift')
         record = dict(
-            schema=1, fixture='poiseuille', subdivisions=2, step=step,
+            schema=1, fixture=self.fixture, subdivisions=2, step=step,
             dt=0.125, correction=correction, stage='before_factorization',
             source_binding=self.binding, shape=[n, n], mixed_dofs=n-3,
             unknown_order='mixed u/p, P_minus, P_plus, eta',

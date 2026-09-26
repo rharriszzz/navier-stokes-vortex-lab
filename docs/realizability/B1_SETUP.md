@@ -1,13 +1,11 @@
 # B1 solver environment
 
-[R255 review and fixed contract](../../docs/realizability/VERIFICATION_MILESTONE_R255.md)
-reproduces the R253 rotation PASS and defines one n=2 manufactured spatial BE
-pilot through the production residual, solve and diagnostics. Exact rational
-checks cover nonzero strain, return totals, corrected load/history and signed
-budgets. No runtime source or numerical allocation changed; all six allowances
-remain spent. R246 remains PASS, R242 INCOMPLETE. Follow the
-[single current task](../../SESSION_HANDOFF.md#next-task): Sol/high implements
-the fixed pilot source/tests, then stops for Astra/high source/admission review.
+[R256 source integration](MANUFACTURED_INTEGRATION_R256.md) implements the
+fixed manufactured spatial BE pilot without numerical imports, execution or
+admission. All 103 source/fake tests and saved R246/R253 validator replays pass.
+Six old allowances remain spent and R242 stays INCOMPLETE. Follow the
+[single current task](../../SESSION_HANDOFF.md#next-task): Astra/high reviews
+source and a separately bound one-use admission/caller or blocker.
 
 Historical PC status: [R232's one-use Poiseuille result](POISEUILLE_RESULT_R232.md)
 is INCOMPLETE at PETSc symbolic LU, and the single numerical allocation is

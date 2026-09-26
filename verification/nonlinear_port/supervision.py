@@ -223,13 +223,43 @@ def supervise_rotation_once(run_dir, manifest_path, admission, backend, *,
                             manifest_digest=hashlib.sha256(manifest_bytes).hexdigest())
 
 
+def supervise_manufactured_once(run_dir, manifest_path, admission, backend, *,
+                                source_commit, interpreter, owner,
+                                monotonic=time.monotonic):
+    """Fixture-locked manufactured pilot; separate admission before reservation."""
+    from .manufactured_driver import expected_admission, validate_worker_payload
+    from .manufactured_manifest import validate as validate_manufactured_manifest
+    from .rotation_driver import read_limited, strict_json_bytes
+
+    manifest_bytes = Path(manifest_path).read_bytes()
+    manifest = strict_json_bytes(manifest_bytes)
+    validate_manufactured_manifest(manifest)
+    expected_admission(admission, manifest_bytes, manifest, run_dir,
+                       source_commit, interpreter, owner)
+    if backend is None:
+        raise Refusal('host containment backend unavailable')
+
+    def check_manufactured(payload, reservation):
+        return validate_worker_payload(payload, manifest, reservation, admission,
+                                       run_dir)
+
+    return _supervise_finite(run_dir, manifest_path, admission, backend,
+                            source_commit=source_commit, interpreter=interpreter,
+                            owner=owner, monotonic=monotonic, fixture='manufactured',
+                            worker_module='verification.nonlinear_port.manufactured_worker',
+                            payload_loader=read_limited,
+                            payload_validator=check_manufactured,
+                            manifest_digest=hashlib.sha256(manifest_bytes).hexdigest())
+
+
 def _supervise_finite(run_dir, manifest_path, admission, backend, *,
                       source_commit, interpreter, owner, monotonic, fixture,
                       worker_module, payload_loader, payload_validator,
                       manifest_digest):
     """Private finite reservation/held/cleanup sequence for fixed wrappers."""
     modules = {'poiseuille': 'verification.nonlinear_port.worker',
-               'rotation': 'verification.nonlinear_port.rotation_worker'}
+               'rotation': 'verification.nonlinear_port.rotation_worker',
+               'manufactured': 'verification.nonlinear_port.manufactured_worker'}
     if modules.get(fixture) != worker_module:
         raise Refusal('unknown finite fixture dispatch')
 
@@ -242,7 +272,7 @@ def _supervise_finite(run_dir, manifest_path, admission, backend, *,
                        release_nonce=secrets.token_hex(16),
                        wall_start_utc=time.strftime('%Y-%m-%dT%H:%M:%SZ', time.gmtime()),
                        monotonic_start=start, caps=CAPS)
-    if fixture == 'rotation':
+    if fixture in ('rotation', 'manufactured'):
         for key in ('mode', 'kind', 'worker_schema', 'contract_sha256', 'executable',
                     'executable_sha256', 'artifact_inventory_sha256'):
             reservation[key] = admission[key]

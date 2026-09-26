@@ -1,13 +1,11 @@
 # Isolated nonlinear port verification source — R195/R196/R222/R225/R226
 
-[R255 review and fixed contract](../../docs/realizability/VERIFICATION_MILESTONE_R255.md)
-reproduces the R253 rotation PASS and defines one n=2 manufactured spatial BE
-pilot through the production residual, solve and diagnostics. Exact rational
-checks cover nonzero strain, return totals, corrected load/history and signed
-budgets. No runtime source or numerical allocation changed; all six allowances
-remain spent. R246 remains PASS, R242 INCOMPLETE. Follow the
-[single current task](../../SESSION_HANDOFF.md#next-task): Sol/high implements
-the fixed pilot source/tests, then stops for Astra/high source/admission review.
+[R256 source integration](../../docs/realizability/MANUFACTURED_INTEGRATION_R256.md)
+implements R255's n=2 manufactured spatial BE pilot as source and injected
+fakes. All 103 standard-library tests and saved R246/R253 validator replays
+pass without numerical modules. No new admission or attempt exists; six old
+allowances remain spent. Follow the [single current task](../../SESSION_HANDOFF.md#next-task):
+Astra/high reviews source and a separate admission/caller or blocker.
 
 **Source and algebra evidence, not a validated FEM solver.** The
 [R195 fixture review](../../docs/realizability/NONLINEAR_VERIFICATION_R195.md)
@@ -58,6 +56,13 @@ follow the [handoff task](../../SESSION_HANDOFF.md#next-task).
   versus discrete time-integrated balances. It cannot accept a whole run.
 - `future_fem.json`, `manifest.py`: frozen **non-executable** proposal; zero
   granted attempts. The 180 s / 1536 MiB one-suite caps remain proposals.
+- `future_manufactured.json`, `manufactured_manifest.py`,
+  `manufactured_policy.py`: byte-fixed R255 non-executable proposal, strict
+  canonical validation and separate 30-key signed accuracy policy.
+- `manufactured_driver.py`, `manufactured_report.py`,
+  `manufactured_worker.py`: injected n=2 exact-history/corrected-load BE path,
+  two-degree diagnostic receipts, pure saved-result replay and held worker.
+  A separate admission remains required before reservation.
 - `fixture_driver.py`: one n=2 Poiseuille BE step, measured compatibility and
   constraint rows, a non-exact free velocity guess, frozen scales, checked
   correction, degree-24/26 diagnostics and return quadrature samples. All FEM
@@ -77,12 +82,12 @@ follow the [handoff task](../../SESSION_HANDOFF.md#next-task).
   R225 failure evidence is retained; do not rerun without a new bounded scope.
 - `package_identity.py`: exact FFCx Conda artifact and retained recovery evidence
   binding, with a shared worker/result runtime gate; package 0.10.1, runtime 0.10.0.
-- Ten `test_*.py` modules: 85 standard-library tests, including complete driver
-  wiring with fake FEM boundaries, raw-evidence corruption, source binding,
-  rotation form/decision checks and manager-failure refusals; no FEM import.
+- Twelve `test_*.py` modules: 103 standard-library tests, including the
+  manufactured source/fake controls, old fixture regressions, source binding,
+  report mutations and manager-failure refusals; no FEM import.
 
 ```sh
-.venv/bin/python docs/realizability/evidence/r248/test_runner.py
+/tmp/navier-fenicsx-r229/bin/python -B docs/realizability/evidence/r256/test_runner.py
 ```
 
 The host backend creates and verifies a held task scope, observes actual exit

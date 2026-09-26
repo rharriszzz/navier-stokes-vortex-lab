@@ -1,15 +1,13 @@
 # Project status: a boundary-controlled engineering approximation
 
-[R255 review and fixed contract](docs/realizability/VERIFICATION_MILESTONE_R255.md)
-reproduces the R253 rotation PASS and defines one n=2 manufactured spatial BE
-pilot through the production residual, solve and diagnostics. Exact rational
-checks cover nonzero strain, return totals, corrected load/history and signed
-budgets. No runtime source or numerical allocation changed; all six allowances
-remain spent. R246 remains PASS, R242 INCOMPLETE. Follow the
-[single current task](SESSION_HANDOFF.md#next-task): Sol/high implements
-the fixed pilot source/tests, then stops for Astra/high source/admission review.
+[R256 source integration](docs/realizability/MANUFACTURED_INTEGRATION_R256.md)
+implements the fixed manufactured spatial BE pilot without numerical imports,
+execution or admission. All 103 source/fake tests and saved R246/R253 validator
+replays pass. Six old allowances remain spent; R242 stays INCOMPLETE. Follow
+the [single current task](SESSION_HANDOFF.md#next-task): Astra/high reviews
+source and a separately bound one-use admission/caller or blocker.
 
-Updated 2026-09-26 (America/New_York), through R255. PC/WSL daisy owns the
+Updated 2026-09-26 (America/New_York), through R256. PC/WSL daisy owns the
 repository. **R232 corrects the recoverable R231 caller failure and resumes the
 same authorized, unspent one-use fixture, then spends it on a PETSc LU failure.**
 The [R232 result](docs/realizability/POISEUILLE_RESULT_R232.md) records an
@@ -33,8 +31,8 @@ or live scope occurred in R236. [R237 admission](docs/realizability/POISEUILLE_A
 granted one instrumented fixture. [R238 result](docs/realizability/POISEUILLE_RESULT_R238.md)
 spent it 1/1: KSP -11, 405 nonfinite answer entries and PC reason 2 (reported
 numeric zero pivot). Worker/caller exited 1 with empty cleanup but no numerical
-or resource report. Those three allocations were spent 1/1 at R238. Next: Sol/high
-implements the fixed R255 manufactured-pilot source and tests; follow the
+or resource report. Those three allocations were spent 1/1 at R238. Next: Astra/high
+reviews the R256 manufactured-pilot source/admission boundary; follow the
 [single task](SESSION_HANDOFF.md#next-task).
 
 Historical R231 context: the
