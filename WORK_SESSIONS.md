@@ -1556,3 +1556,13 @@ high support rechecked; no model/session switch or /new needed. PC retains
 ownership; Mac released. R244 4449b1a verified by clean pull; R245 STARTED
 4c6b9ae published. Completion prepared for scoped publication; delivery hash/
 result in Git/final response, no post-push edit.
+
+## R246 — Execute R245 one-use fixture
+STARTED | 2026-09-26T21:44:02Z | PC/WSL daisy | released: no
+Identity rharris/daisy, PC/WSL Linux 6.18.33.2-microsoft-standard-WSL2 x86_64;
+/home/rharris/git/navier-stokes-vortex-lab; main/origin/main clean and equal at
+8de00a46feedb13cd261739ed0ef743a0ca6a6e4 after required fast-forward pull
+(already up to date; initial sandbox FETCH_HEAD write refused, escalated pull
+succeeded). Empty stashes, R245 completed, PC owner, Mac released.
+Execute exact bound caller once, preserve raw evidence/cleanup/spent state,
+publish and stop. Four older allocations spent; new allocation 0/1 before launch.
