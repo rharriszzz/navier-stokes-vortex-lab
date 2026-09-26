@@ -2,26 +2,35 @@
 
 Updated 2026-09-26 (America/New_York), through R232. PC/WSL daisy owns the
 repository. **R232 corrects the recoverable R231 caller failure and resumes the
-same authorized, unspent one-use fixture.** The
+same authorized, unspent one-use fixture, then spends it on a PETSc LU failure.**
+The [R232 result](docs/realizability/POISEUILLE_RESULT_R232.md) records an
+`INCOMPLETE` worker exit 1 at symbolic LU with “Matrix is missing diagonal
+entries.” The manager confirmed an empty group and the worker PID/cgroup are
+gone. No numerical report or pre-exit resource snapshot exists, so actual
+memory events, rank and accuracy remain unknown. **The one-use allocation is
+spent 1/1; no retry is admitted.** Next: Astra/high reviews the sparse source
+and saved error without FEM; follow the [single task](SESSION_HANDOFF.md#next-task).
+Use `/new` before that distinct review, select Astra/high, then Continue.
+
+Historical R231 context: the
 [prelaunch result](docs/realizability/POISEUILLE_PRELAUNCH_R231.md) records a
 caller import-path failure before preflight, timer, reservation or worker; the
-fixed run directory remains absent and zero numerical attempts were spent.
+fixed run directory was then absent and zero numerical attempts were spent.
 The user corrected R231's premature stop. R232's caller now resolves imports
 from outside the repo and has a tested outer timer boundary without FEM or
-manager activity. Next: publish the clean correction and execute the same
-fixed contract once; follow the [single task](SESSION_HANDOFF.md#next-task).
+manager activity. It was published at 980ef7f before the one-use launch.
 The historical
 [R230 review](docs/realizability/POISEUILLE_ADMISSION_R230.md) accepts reuse of
 R229's completed artifact evidence and repairs exact FFCx package/runtime identity.
 R229's setup resource refusal remains false: 303 memory.max events at 1536 MiB,
-no OOM/kill; no numerical footprint inferred. No FEM ran. R230's 56 standard-library
+no OOM/kill; no numerical footprint inferred. R230 ran no FEM. Its 56 standard-library
 tests passed without numerical imports.
 Full convergence/tank/B2 launches remain unadmitted.
 R231 user-supplied status reports Sol/high after a model change, weekly 97% and
 Luna Reserve 99%; distinct session IDs, token snapshot and redacted account
 fields are in REQUEST_LOG.md. These are snapshots, not independent checks.
-R231 STARTED c90193e and allocation c3b5598 were published; completion delivery
-belongs in Git/final response.
+R231 STARTED c90193e, allocation c3b5598 and completion db68c61 were published.
+R232 result completion delivery belongs in Git/final response.
 R230 supplied snapshot: preceding completion 13m 26s / 11:45 AM; 938,400 tokens
 (831,406 input, 17,031,424 cached, 106,994 output, 23,518 reasoning). Current
 Astra/high, weekly 98% (11:23 Oct 3 reset), Luna Reserve 99% (10:18 Oct 3 reset).
@@ -75,20 +84,21 @@ estimated at $12k–35k from scratch or $5k–18k additional in an equipped lab,
 excluding research labor. Extra pressure earns no range if delivery/optics
 limit first. These are budgetary judgments, not quotations or performance claims.
 Latest usage snapshot is recorded in REQUEST_LOG.md (R231); earlier entries remain historical.
-Latest technical work: [R231 prelaunch refusal](docs/realizability/POISEUILLE_PRELAUNCH_R231.md).
+Latest technical work: [R232 spent single-fixture result](docs/realizability/POISEUILLE_RESULT_R232.md).
 R226 previously passed 49 import-free checks for the R222 driver and
-[R196 cube adapter](docs/realizability/CUBE_ADAPTER_R196.md); those were not rerun in R227. FEM forms have not been constructed or assembled,
-and convergence is untested. The full suite remains unadmitted; the R230
-single-fixture numerical allocation has zero attempts spent.
+[R196 cube adapter](docs/realizability/CUBE_ADAPTER_R196.md); those were not rerun in R227.
+R232 reached actual FEM/PETSc symbolic LU but produced no numerical report;
+convergence remains untested. The full suite remains unadmitted; the R230
+single-fixture numerical allocation is spent 1/1.
 No boundary-driven core or feasible contraction range is established.
 
 | Current question | Answer |
 |---|---|
 | What works? | Illustrative animation, saved-data checks and separate reference/analysis tools. |
 | Is the engineering goal demonstrated? | No validated boundary-driven contraction or boundary-only state estimator exists yet. |
-| What did the latest step establish? | R231 failed before reservation or FEM; R232 corrected and tested the caller without spending the numerical allocation. [Failure and limits](docs/realizability/POISEUILLE_PRELAUNCH_R231.md). |
-| What blocks trusted numerical control results? | The nonlinear fixture has not run; B2 still fails its independent response-accuracy comparison and q64/q96 remain unused. |
-| What is next? | Sol/high publishes the corrected caller, executes the single fixed contract and stops; follow the single [next task](SESSION_HANDOFF.md#next-task). |
+| What did the latest step establish? | The single fixture reached PETSc symbolic LU and failed with missing diagonal entries; cleanup was empty but numerical/resource results were incomplete. [Evidence and limits](docs/realizability/POISEUILLE_RESULT_R232.md). |
+| What blocks trusted numerical control results? | The one-use fixture failed before a numerical report; B2 still fails its independent response-accuracy comparison and q64/q96 remain unused. |
+| What is next? | Astra/high reviews the saved LU error and sparse source without FEM; follow the single [next task](SESSION_HANDOFF.md#next-task). |
 
 ## Goal and present conclusion
 

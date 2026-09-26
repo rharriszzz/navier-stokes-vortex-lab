@@ -2,23 +2,37 @@
 
 Last updated 2026-09-26 (America/New_York) for R232.
 **PC/WSL daisy owns the repository.** No transfer; Mac remains released.
-**R232 resumes the same authorized single fixture after correcting R231's
-recoverable import-path error; zero numerical attempts spent before launch.**
+**R232 spent the one authorized n=2 Poiseuille allocation: INCOMPLETE at PETSc
+symbolic LU, with no retry.** The [result](docs/realizability/POISEUILLE_RESULT_R232.md)
+preserves the exact one-use run, error 73 (“Matrix is missing diagonal entries”),
+clean source/interpreter binding, effective held limits, actual exit and empty
+cleanup. No numerical.json or pre-exit resource snapshot exists; rank, accuracy
+and resource events remain unmeasured. The fixed run directory and raw evidence
+are retained. R229's 303-event setup refusal remains false. Full suite/tank/B2
+execution remains unadmitted.
+
+**Next: Astra/high reviews the saved PETSc failure and sparse source without
+FEM, identifies a minimal correction or blocker, then stops.** Do not launch a
+replacement numerical attempt or reuse the fixed directory. **Use `/new` now**
+for that distinct review, select Astra/high, then Continue. Official
+[Codex command guidance](https://learn.chatgpt.com/docs/developer-commands)
+confirms `/new` starts a fresh chat in the same CLI/repo; the committed handoff
+preserves the task context. No agent-initiated model or session switch occurred.
+R232 correction/start was published at 980ef7f; completion delivery belongs
+in Git/final response, with no post-push edit.
+
+Historical R231/R232 prelaunch recovery context follows. R232 resumed the same
+authorized single fixture after correcting R231's recoverable import-path
+error; zero numerical attempts had been spent before the R232 launch.
 The [R231 result](docs/realizability/POISEUILLE_PRELAUNCH_R231.md) records exit 1
 before caller preflight, timer, reservation or worker. The fixed run directory is
-absent; no FEM imported or ran. The user corrected the premature-stop rule in
+was absent then; no FEM imported or ran in R231. The user corrected the premature-stop rule in
 R232, so the prior Continue's scoped authorization carries the unspent attempt
 forward. The caller now resolves project imports when invoked by path and starts
 its outer timer before them. A standard-library-only check exercised both from
 an outside directory with no manager connection or reservation.
-**Next: publish the clean R232 caller/rule correction, execute the same fixed
-one-use Poiseuille contract once, record result/cleanup, and stop.** No new
-allocation or alternate directory. All caps/thresholds remain; full suite/tank/
-B2 execution remains unadmitted. After the result, recommend a fresh Astra/high
-chat for scientific interpretation; explicitly state whether `/new` is advised.
 R231 STARTED c90193e, allocation/caller c3b5598, and completion db68c61 were
-published. R232 publication/result remains pending; final delivery hash belongs
-in Git/final response, with no post-push edit.
+published. R232 corrected caller/start published at 980ef7f.
 
 Historical R230 admission: one later bounded n=2 Poiseuille attempt, zero
 numerical attempts spent at its decision.
@@ -26,7 +40,7 @@ The [admission review](docs/realizability/POISEUILLE_ADMISSION_R230.md) accepts
 reuse of the existing artifact evidence and repairs the exact FFCx gate in both
 worker and result validation. Package remains 0.10.1/pyhbc3ee6d_1 with its saved
 digest; only that artifact permits the embedded/runtime 0.10.0 string. Fifty-six
-standard-library tests pass without numerical imports. No FEM ran.
+standard-library tests passed without numerical imports. No FEM ran in R230.
 R229's top-level setup result remains false: 303 memory.max events at 1536 MiB,
 no OOM/kill. Transaction, metadata/interpreter, exit and cleanup succeeded;
 this is no numerical-footprint prediction or retroactive setup waiver. Retain
@@ -118,15 +132,16 @@ and account snapshot: 63% weekly remaining (17:37 on 28 Sep reset), 283 credits,
 the separate resume/status session IDs are retained in REQUEST_LOG.md.
 R196 completed [cube adapter and diagnostic source](docs/realizability/CUBE_ADAPTER_R196.md).
 R222 joined it to a single-fixture driver and finite supervised worker/controller
-source; 33 standard-library checks pass. FEM imports, UFL construction,
-mesh/assembly/solves, actual scope and convergence remain untested.
+source; 33 standard-library checks passed at that point. R232 later reached
+actual FEM assembly and PETSc LU; a complete solve and convergence remain untested.
 **R225 reviewed the source; R226 completed whole-task launcher validation.**
-R230 now admits one later fixture with zero spent. Clean source/interpreter
+R230 admitted one later fixture; R232 spent it with an incomplete PETSc result.
+Clean source/interpreter
 binding, actual benign exit and independent expiry/child cleanup are verified;
 the completed environment/setup resource review is linked above.
 Full convergence-suite and tank launches remain unadmitted. No actual base,
-gain or feasible contraction range is established. Sol/high is recommended for
-the admitted fixed-contract execution; no agent-initiated switch or machine transfer.
+gain or feasible contraction range is established. Astra/high is recommended for
+the saved sparse-source failure review; no agent-initiated switch or machine transfer.
 R191 similarity and R192 operating/error gates remain.
 The ideal 0.3927 micro-N m contrast, separate 0.1309 micro-N m residual/confound
 limits and 1.528e-7 m²/s² covariance allocation remain unverified requirements.
@@ -226,9 +241,9 @@ and physical-work limits remain unchanged.
 | Starting state | R232 same-owner clean entry at db68c61 equal to stored origin/main; empty stashes, rharris/daisy owner. The R231 one-use directory/reservation remained absent. |
 | Interpreter | /tmp/navier-fenicsx-r229/bin/python verified as 3.12.13 with -I -S; exact environment artifacts verified, setup memory-event predicate refused. Project Python remains 3.12.14. Old /tmp/navier-fenicsx is still partial. |
 | Other owner/process | Mac `fire.lan` released in the published R161 handoff. Local Git cannot inspect another checkout's unpublished state. |
-| Task processes | R231 top-level import failed before any worker; fixed run directory absent and numerical attempt unspent at R232 entry. Existing R226 failed expiry unit has MainPID 0 and empty cgroup. R232 caller correction tests launched no task worker/FEM. |
+| Task processes | R232 worker 144212 exited 1 after PETSc LU error; manager final MainPID 0/empty ControlGroup, cleanup empty with unknown_children=false; read-only PID/cgroup absence confirmed. The one numerical allocation is spent. Historical R226 failed expiry unit is separate. |
 | Symbolic environment | `/tmp/navier-r183-sympy/bin/python`, Python 3.12.14, SymPy 1.14.0, mpmath 1.3.0; recreate using `requirements-symbolic.txt` if missing. Existing environments unchanged. |
-| Delivery state | R231 completion db68c61 published and clean at R232 entry. R232 correction/start publication and one-use result pending; final hash/result in Git/final response. PC retains ownership. |
+| Delivery state | R231 completion db68c61 and R232 correction/start 980ef7f published. R232 result/completion prepared for scoped publication; final hash/result in Git/final response. PC retains ownership. |
 
 ## Current result and limits
 
@@ -359,48 +374,55 @@ agent-side POV-Ray backtraces are unavailable.
 
 ## Next task
 
-**GPT-6 Sol / high / PC-WSL daisy: finish the same unspent R230 one-use n=2
-Poiseuille fixture after publishing R232's corrected caller, then stop.** The
-user's R232 correction supersedes the premature R231 prelaunch stop. The R231
-command failed before timer, preflight, reservation, backend or worker; its raw
-failure remains preserved. No numerical attempt was spent. The prior Continue
-authorized this exact fixture and scoped publication, and R232 does not add an
-attempt. Read the [R230 admission](docs/realizability/POISEUILLE_ADMISSION_R230.md),
-[R231 failure](docs/realizability/POISEUILLE_PRELAUNCH_R231.md),
-[allocation](docs/realizability/evidence/r231/allocation.json), reviewed source
-inventory, R226 launcher and R229 environment result.
+**GPT-6 Astra / high / PC-WSL daisy: review the spent R232 PETSc symbolic-LU
+failure and sparse source; stop before FEM or another numerical allocation.**
+Use `/new` now for this distinct result review, select Astra/high, then
+**Continue**. [Official Codex guidance](https://learn.chatgpt.com/docs/developer-commands)
+says `/new` starts a fresh chat in the same CLI/repo; the saved evidence and
+handoff provide the new chat's context. [Official Astra documentation](https://developers.openai.com/api/docs/models/gpt-6-astra)
+confirms high reasoning support. Model fit is a judgment, not an account check.
 
-1. Publish R232's corrected caller, regression check and policy/coordination
-   record. Confirm a clean launch commit, unchanged 25 reviewed source hashes
-   and frozen manifest, exact R229 interpreter hash and no fixed run directory.
-   Recheck live host capacity/manager inside the finite caller. No reinstall,
-   numerical import smoke test, prewarming or alternate directory.
-2. Execute exactly one `supervise_once`/`SystemdBackend` fixture at
-   `/tmp/navier-poiseuille-r230-once`, binding the actual clean commit in
-   admission and reservation. Keep 180 s observed total (15 setup/150 work/15
-   finish), 149+1 s independent worker expiry, 1536 MiB/no swap/32 tasks, one
-   rank/thread and <=20,000 mixed DOFs. Preserve exact n=2, dt=.125, degree
-   24/26, physical/error/budget and zero memory/PID-event gates.
-3. Any reservation or partial worker start consumes the sole allocation.
-   Persist raw terms, timing/counters, actual exit and cleanup; stop after that
-   result or any uncertain/spent attempt. Never repair-and-rerun a spent
-   attempt or relax gates. No full suite, rotation, tank, B2, physical/render
-   work or Mac transfer. R229's 303-event setup refusal remains false.
-4. Record result, changed files, checks/skips, evidence, spent state, cleanup
-   and a single next task in log/handoff/status. Recommend Astra/high for
-   scientific interpretation or source/admission change. Explicitly recommend
-   `/new` or staying in this chat for that next task.
+Read the [R232 result](docs/realizability/POISEUILLE_RESULT_R232.md),
+[raw worker log](docs/realizability/evidence/r232/run/worker.log),
+[controller result](docs/realizability/evidence/r232/run/result.json),
+[R230 admission](docs/realizability/POISEUILLE_ADMISSION_R230.md),
+`verification/nonlinear_port/{sparse,cube_adapter,fixture_driver}.py`,
+the frozen manifest and R225/R226 reviews. Preserve the raw failure, missing
+measurements and one-use charge. The worker reached PETSc symbolic LU and exited
+1 after error 73, “Matrix is missing diagonal entries.” No matrix row or CSR
+pattern was saved, so the immediate log does not identify the originating row.
 
-Completion: one observed numerical result or a concrete refusal with exact
-attempt/cleanup state and publication. The previous prelaunch failure and
-current caller fix are not numerical results. Actual FEM cost, rank and
-accuracy remain unknown until the attempt.
+1. Follow normal clean Continue ownership/synchronization/start publication.
+   Confirm no live R232 worker or cgroup and the fixed run directory remains
+   reserved. No machine transfer or numerical launch.
+2. Audit structural diagonals in the bordered CSR and Dirichlet lifting path,
+   then the PETSc `createAIJ(..., csr=...)`/LU setup. Use import-free algebra
+   or synthetic CSR tests to reproduce or exclude a missing diagonal. State
+   whether the absent slot could be a constraint scalar, pressure, constrained
+   velocity or another row; do not claim a specific cause without evidence.
+3. If the cause is demonstrated, implement the smallest source correction and
+   meaningful regression while preserving the gauge, flux constraints, exact
+   fixture and all numerical/resource gates. If unresolved, record a concrete
+   blocker and the next discriminating non-FEM check. Do not fabricate a saved
+   rank, resource counter or accuracy result.
+4. End with a reviewed source result or blocker, evidence, checks/skips and a
+   separate future admission decision boundary. This spent attempt grants no
+   retry; do not use the fixed directory again, install packages, run FEM/JIT/
+   solve, full suite, rotation, tank/B2, physical or rendering workloads.
 
-### Historical R230 single-fixture execution task (R231 stopped prelaunch)
+Completion: source/evidence review with a tested minimal repair or precise
+blocker, published with an explicit statement that **1/1** numerical attempts
+is spent. Recommend Sol/high only for a later mechanical launch after a
+separate reviewed admission; otherwise retain Astra/high for numerical-method
+decisions. The next prompt is **Continue** after `/new` and selecting Astra/high.
+
+### Historical R230 single-fixture execution task (R232 spent)
 
 R230's fixed execution contract is retained in its admission review and the
 R231 allocation. R231 published a caller but its top-level import failed before
-the contract's reservation or worker. No repair-and-rerun occurred in R231.
+the contract's reservation or worker. R232 corrected that prelaunch fault under
+the user's new rule and ran the same unspent allocation exactly once; the actual
+PETSc failure consumed it. No post-reservation retry occurred.
 
 R230 changed the package identity gate, worker/result wiring and tests; added
 its admission/check record; updated status, four track overviews, B1 setup,

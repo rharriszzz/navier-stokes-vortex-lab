@@ -1,0 +1,10 @@
+Error: error code 73
+[0] KSPSolve() at /home/conda/feedstock_root/build_artifacts/bld/rattler-build_petsc_1788117046/work/src/ksp/ksp/interface/itfunc.c:1094
+[0] KSPSolve_Private() at /home/conda/feedstock_root/build_artifacts/bld/rattler-build_petsc_1788117046/work/src/ksp/ksp/interface/itfunc.c:841
+[0] KSPSetUp() at /home/conda/feedstock_root/build_artifacts/bld/rattler-build_petsc_1788117046/work/src/ksp/ksp/interface/itfunc.c:428
+[0] PCSetUp() at /home/conda/feedstock_root/build_artifacts/bld/rattler-build_petsc_1788117046/work/src/ksp/pc/interface/precon.c:1120
+[0] PCSetUp_LU() at /home/conda/feedstock_root/build_artifacts/bld/rattler-build_petsc_1788117046/work/src/ksp/pc/impls/factor/lu/lu.c:91
+[0] MatLUFactorSymbolic() at /home/conda/feedstock_root/build_artifacts/bld/rattler-build_petsc_1788117046/work/src/mat/interface/matrix.c:3361
+[0] MatLUFactorSymbolic_SeqAIJ() at /home/conda/feedstock_root/build_artifacts/bld/rattler-build_petsc_1788117046/work/src/mat/impls/aij/seq/aijfact.c:71
+[0] Object is in wrong state
+[0] Matrix is missing diagonal entries

@@ -1011,3 +1011,27 @@ fixed directory absent and zero numerical attempts spent. Renewed review and
 checks are in docs/realizability/POISEUILLE_CALLER_REVIEW_R232.md and
 evidence/r232/checks.json. Publish these records/source before the single
 fixed-contract launch; bind the new clean HEAD, with no allocation reset.
+
+### R232 completion
+COMPLETED | 2026-09-26T16:29:48Z | PC/WSL daisy | released: no
+One fixed-directory n=2 Poiseuille attempt ran after clean correction/start
+980ef7f. Reservation/held worker/source binding/limits verified; worker exited
+1 during PETSc symbolic LU (error 73, missing diagonal entries). Controller
+and caller saved INCOMPLETE. Manager cleanup empty, unknown_children=false;
+worker PID and cgroup absent. No numerical report or pre-exit resource snapshot,
+so actual events/rank/accuracy unknown. The one-use allocation is spent 1/1;
+no retry. R229 setup refusal and full-suite/tank/B2 non-admission remain.
+Files: AGENTS and SESSION_PROTOCOL, R231 caller/addendum, R232 caller test/checks/
+review/raw run/result, B1_SETUP, prototype README, four track overviews,
+STATUS, SESSION_HANDOFF, REQUEST_LOG and WORK_SESSIONS. Checks: caller import/
+timer regression, direct invalid-commit refusal, ASTs, 25 source hashes and
+manifest/interpreter/caller hashes, clean launch binding, actual held scope,
+10 raw-file hashes/JSON, empty cleanup/PID/cgroup absence, 172 local links,
+232 unique request IDs and Git whitespace. Skips: any retry, full suite,
+rotation, tank/B2, physical/render work, suite rerun, Mac transfer. Evidence:
+docs/realizability/POISEUILLE_RESULT_R232.md and evidence/r232/run/.
+Next: Astra/high import-free review of sparse border/lift/CSR and PETSc LU
+failure, minimal demonstrated source fix or blocker; no FEM/new allocation.
+Recommend /new, select Astra/high, then Continue. PC retains ownership,
+Mac released; final scoped publication follows. Delivery hash/result belongs
+in Git/final response, with no post-push edit.

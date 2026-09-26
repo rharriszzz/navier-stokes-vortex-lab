@@ -1,0 +1,72 @@
+{
+  "cleanup": {
+    "empty": true,
+    "manager_final": {
+      "ActiveState": "failed",
+      "ControlGroup": "",
+      "ExecMainCode": "1",
+      "ExecMainStatus": "1",
+      "KillMode": "control-group",
+      "LoadState": "loaded",
+      "MainPID": "0",
+      "Restart": "no",
+      "Result": "exit-code",
+      "RuntimeMaxUSec": "149000000us",
+      "SendSIGKILL": "yes",
+      "SubState": "failed",
+      "TimeoutStopUSec": "1000000us"
+    },
+    "resource_snapshot_complete": false,
+    "unit": "navier-poiseuille-4a36071b6a364867859fb2ddd01fd416.service",
+    "unknown_children": false
+  },
+  "cleanup_seconds": 0.002218481997260824,
+  "elapsed_seconds_before_save": 5.990505163004855,
+  "final_save_tail_observed": false,
+  "held_scope": {
+    "all_task_processes_in_scope": true,
+    "cgroup_path": "/user.slice/user-1000.slice/user@1000.service/app.slice/navier-poiseuille-4a36071b6a364867859fb2ddd01fd416.service",
+    "control_boundary": "pre-existing caller and OS manager; R103",
+    "independent_expiry_seconds": 150.0,
+    "memory_max_bytes": 1610612736,
+    "mpi_ranks": 1,
+    "pids_max": 32,
+    "source_binding": {
+      "clean": true,
+      "executable": "/tmp/navier-fenicsx-r229/bin/python3.12",
+      "executable_sha256": "5f083df36ec986d5cd13d2549ca6cfe1ddaf658509f9e419b454b2fb375c27a3",
+      "interpreter": "/tmp/navier-fenicsx-r229/bin/python",
+      "root": "/home/rharris/git/navier-stokes-vortex-lab",
+      "source_commit": "980ef7fb85941d31fab7951be4a1a7105846e840"
+    },
+    "spawned_control_clients": 0,
+    "swap_max_bytes": 0,
+    "threads": 1,
+    "worker_descendants_in_scope": true,
+    "worker_held": true
+  },
+  "reason": "missing, exceeded or unknown cleanup/resource evidence",
+  "reservation": {
+    "attempt": 1,
+    "caps": {
+      "elapsed_seconds": 180,
+      "mpi_ranks": 1,
+      "pids": 32,
+      "swap_mib": 0,
+      "threads": 1,
+      "velocity_pressure_dofs": 20000,
+      "whole_task_memory_mib": 1536
+    },
+    "fixture": "poiseuille",
+    "interpreter": "/tmp/navier-fenicsx-r229/bin/python",
+    "manifest_sha256": "7a8bda917e6b46994ad24c68e0b6c6013b7d6776f90c86a6de763f31f52fa558",
+    "monotonic_start": 157536.086922554,
+    "owner": "PC/WSL daisy / R231",
+    "release_nonce": "0953d09e64475d1125ed43958bffca39",
+    "source_commit": "980ef7fb85941d31fab7951be4a1a7105846e840",
+    "status": "RESERVED",
+    "wall_start_utc": "2026-09-26T16:23:43Z"
+  },
+  "setup_seconds": 0.18860250298166648,
+  "status": "INCOMPLETE"
+}

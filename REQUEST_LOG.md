@@ -8152,3 +8152,56 @@ clean R232 launch commit after publication; no new allocation or cap/gate
 change. Any reservation or partial worker start consumes it. Official OpenAI
 Docs confirms `/new` starts a fresh Codex CLI chat in the same repository and
 Astra supports high reasoning. No /new or model switch was performed here.
+
+### R232 outcome — one numerical attempt spent, INCOMPLETE
+
+R232 correction/start was published at 980ef7fb85941d31fab7951be4a1a7105846e840.
+The clean launch bound that commit, all 25 reviewed source hashes, frozen
+manifest and R229 interpreter binary hash. Caller preflight observed 6,536,732
+KiB host MemAvailable and user manager 249.11-0ubuntu3.22. At
+2026-09-26T16:23:43Z the fixed `/tmp/navier-poiseuille-r230-once` directory
+was reserved, consuming the sole allocation. The held worker verified its
+source/executable, one thread and cgroup limits (1536 MiB/no swap/32 tasks;
+150 s independent expiry), and was released. No second command or alternate
+directory was used.
+
+The worker log reports PETSc error 73 in `MatLUFactorSymbolic_SeqAIJ`:
+“Matrix is missing diagonal entries.” The manager recorded actual exit 1.
+Controller and caller both saved INCOMPLETE; controller result/log save was
+observed at 5.998947526 s, outer caller save at 6.051312914 s. The final
+completion-save/return tail is unmeasured. Controller cleanup observed empty
+group and `unknown_children=false`; later read-only checks found PID 144212
+and its cgroup absent. No numerical.json, finished handshake or resource
+snapshot exists. The final generic controller reason flags missing resource
+evidence; the worker log supplies the immediate LU error. Actual memory
+peak/events, PID events, matrix's missing row, rank/condition, correction,
+degree-24/26 terms, accuracy and budgets are unmeasured. No resource/numerical
+PASS or convergence claim. R229's 303-event setup refusal remains false.
+
+The [R232 result](docs/realizability/POISEUILLE_RESULT_R232.md) and
+evidence/r232/run/ retain ten byte-exact raw files; run_hashes.json verifies
+6,574 copied bytes against the originals. The allocation is spent **1/1**;
+no repair-and-rerun occurred after reservation. Full suite/rotation/tank/B2,
+physical and rendering work remain unadmitted.
+
+Changed files across R232: AGENTS.md and SESSION_PROTOCOL; corrected R231
+caller, R232 regression/check record/caller review, R231 historical addendum;
+R232 raw run, hashes and result review; B1_SETUP, prototype README, four track
+overviews, STATUS, SESSION_HANDOFF, REQUEST_LOG and WORK_SESSIONS. Checks:
+corrected caller from outside checkout and active-timer synthetic preflight,
+direct invalid-commit refusal, two Python ASTs, 25 source hashes, manifest/
+interpreter/caller hashes, clean launch commit, actual held scope and exit,
+10 raw copy hashes, JSON records, missing numerical/snapshot reports, worker
+PID/cgroup absence, 172 local links, 232 unique request IDs and Git whitespace.
+Skips: a second numerical fixture, full suite, rotation, tank/B2, physical/
+render work and Mac transfer; standard-library numerical suite not rerun because
+its reviewed source is unchanged. No new numerical allocation is granted.
+
+Next: Astra/high performs a read-only/import-free audit of bordered CSR,
+Dirichlet lifting and PETSc LU setup; implement a minimal source repair only if
+the structural cause is demonstrated, then stop before FEM or new allocation.
+Recommend `/new` now for this distinct review, select Astra/high and Continue;
+official Codex guidance says `/new` resets chat context in the same CLI/repo.
+No /new or model switch occurred here. PC/WSL daisy retains ownership, Mac
+released. Completion prepared for scoped commit/push; final delivery hash and
+push result belong in Git/final response, no post-push edit.

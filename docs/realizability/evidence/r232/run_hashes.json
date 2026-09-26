@@ -1,0 +1,46 @@
+{
+  "files": {
+    "admission.json": {
+      "bytes": 282,
+      "sha256": "823b384508299f39e408945efdf5c4637473f7ea68a415b2524e33b6056af0ca"
+    },
+    "caller.json": {
+      "bytes": 751,
+      "sha256": "d2420a46a11a9500097b93f75b0f2a7d33860d904662d96d2d035f5669823e71"
+    },
+    "caller_completion.json": {
+      "bytes": 127,
+      "sha256": "dc900d8ca7f457a017be1340da526355983caa63858c20cfb912e5309a64c573"
+    },
+    "completion.json": {
+      "bytes": 271,
+      "sha256": "cde8cc850801e5199790f5029fd226e144815bb9b9673693006294650f01fc01"
+    },
+    "held.json": {
+      "bytes": 657,
+      "sha256": "c02c12cc33cb34a07cf146f64efafcee10f399a425e2fd00c246a8cba04ded14"
+    },
+    "release.json": {
+      "bytes": 174,
+      "sha256": "237b0f76b3052ccfd73a3b020cff5bda0908bfae8b5c18d32e41dcd0a58d5560"
+    },
+    "reservation.json": {
+      "bytes": 639,
+      "sha256": "f46333509e2f22dabfa6e96239fdff8610b7184934d28824447c592bdf47eea1"
+    },
+    "result.json": {
+      "bytes": 2489,
+      "sha256": "4362f0131b3c570531b86e306a5a97aabe7bb99cf952c84cd29ec4be91363093"
+    },
+    "run.log": {
+      "bytes": 107,
+      "sha256": "da87ef71c1e5745c4f5a11ea966d1e2cb3380d641174b23e231816245fbace32"
+    },
+    "worker.log": {
+      "bytes": 1077,
+      "sha256": "4979ddeb38be1497297d89d42031db478295835f6ac0ca3f89bbc0665b892bef"
+    }
+  },
+  "request": "R232",
+  "source_directory": "/tmp/navier-poiseuille-r230-once"
+}

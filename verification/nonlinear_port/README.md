@@ -11,6 +11,12 @@ retains its setup resource refusal, repairs the artifact/runtime gate and admits
 one later bounded Poiseuille attempt. Zero spent; no FEM ran in this review. No production B1/B2
 module imports this directory; no dependency pins changed.
 
+Current result: [R232](../../docs/realizability/POISEUILLE_RESULT_R232.md)
+used that allocation once. The real worker reached PETSc symbolic LU and exited
+1 with missing diagonal entries; no numerical report or resource snapshot was
+produced. The allocation is spent, cleanup is empty, and no retry is admitted.
+The R231 prelaunch import error was corrected before this attempt.
+
 - `polynomial.py`, `fixtures.py`: exact rational manufactured fields and
   independent Poiseuille/rigid-rotation oracles.
 - `prototype.py`: injected P2/P1 weak forms, damped Newton and BE/BDF2 kernels;
@@ -53,11 +59,11 @@ module imports this directory; no dependency pins changed.
 ```
 
 The host backend creates and verifies a held task scope, observes actual exit
-and confirms cleanup. R230 grants one later fixture; its exact one-use admission
-and source/interpreter binding are required before releasing `worker.py` for FEM. No FEM package was imported and no mesh, form or
-solver ran. R226 validates benign behavior under the disclosed R103 boundary;
-it does not validate the numerical fixture. See its review for measurement tails,
-shortened probe deadlines, exact source revision and saved evidence.
+and confirms cleanup. R230 granted one fixture; R232 used it with exact one-use
+admission and clean source/interpreter binding, then failed at PETSc symbolic
+LU. R226's benign validation under the disclosed R103 boundary remains
+separate from this incomplete numerical result. See the [R232 result](../../docs/realizability/POISEUILLE_RESULT_R232.md)
+for the actual exit, cleanup, missing counters and measurement tails.
 The [R222 review](../../docs/realizability/POISEUILLE_DRIVER_R222.md) records
 the exact source boundary and the remaining execution-admission decision.
 The sparse and analytical checks do not establish UFL validity, actual mesh

@@ -1,13 +1,14 @@
 # Physical Realizability Plan for `navier-stokes-vortex-lab`
 
-R231's [prelaunch result](docs/realizability/POISEUILLE_PRELAUNCH_R231.md)
-records a caller import-path refusal before timer, reservation or FEM. Zero
-numerical attempts were spent. R232 corrected and tested the caller without
-FEM; the user directed continuation of the same one-use allocation after clean
-publication. R230's artifact-bound FFCx gate and caps remain unchanged. R229's
-setup resource refusal (303 memory.max events, no OOM/kill) remains unchanged.
-Full convergence/tank/B2 execution remains unadmitted. Next: Sol/high runs the
-fixed fixture once and stops; follow the [handoff task](SESSION_HANDOFF.md#next-task).
+R232's [single-fixture result](docs/realizability/POISEUILLE_RESULT_R232.md)
+is INCOMPLETE: the worker reached PETSc symbolic LU and exited 1 after a
+missing-diagonal error. The one-use allocation is spent 1/1, with empty
+cleanup but no numerical report or resource snapshot. R231's earlier caller
+failure was pre-reservation and remains separate evidence. R230's artifact-bound
+FFCx gate and caps remain unchanged. R229's setup resource refusal (303
+memory.max events, no OOM/kill) remains unchanged. Full convergence/tank/B2
+execution remains unadmitted. Next: Astra/high reviews the sparse source and
+saved error without FEM; follow the [handoff task](SESSION_HANDOFF.md#next-task).
 No tank/hardware route or feasible contraction range is established.
 
 R188 priority update (2026-09-22): establish measurable essential dynamical
