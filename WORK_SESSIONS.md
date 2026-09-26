@@ -1105,3 +1105,16 @@ spent state/cleanup and stops; no /new needed. Astra/high afterward for result
 review or changed admission/science. R233 delivery 15c62dd verified; STARTED
 6cc9e88 published. Scoped completion publication follows; final delivery in
 Git/final response, no post-push edit. PC retains ownership, Mac released.
+
+## R235 — One admitted repaired-source Poiseuille fixture
+STARTED | 2026-09-26T17:04:27Z | PC/WSL daisy | released: no
+Identity: rharris; Linux 6.18.33.2-microsoft-standard-WSL2 x86_64; daisy;
+/home/rharris/git/navier-stokes-vortex-lab; clean main/origin/main equal at
+49a56cb926648f932df4d78befd717e3ff7e02c7 after required fast-forward
+pull; empty stashes, same owner, Mac released, no conflicting open record.
+User reports model change to Sol/high and supplies status snapshot. Continue
+authorizes scoped commit/push and exactly one R234 admitted n=2 fixture at
+/tmp/navier-poiseuille-r234-once, with all hashes/caps/gates, result/cleanup and
+spent-state preservation. Old R232 allocation remains spent 1/1; new 0/1
+until reservation or partial worker start. Recover a demonstrated pre-reservation
+caller fault only under the session protocol; no post-boundary retry.

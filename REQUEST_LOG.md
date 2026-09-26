@@ -8399,3 +8399,58 @@ raw result, actual exit/cleanup and spent state, publishes and stops. No /new
 needed for this connected execution. Recommend Astra/high afterward for result
 interpretation or changed scientific/admission choices. Official OpenAI Docs
 was searched/opened for Sol/high support; task fit is judgment, no account check.
+
+## R235 — 2026-09-26 — Continue one admitted R234 Poiseuille fixture
+
+**User wording (supplied terminal excerpt; account email redacted):**
+
+```text
+Worked for 9m 16s · done 1:02 PM /status
+
+╭───────────────────────────────────────────────────────────────────────────────────────╮
+│  >_ OpenAI Codex (v0.155.1)                                                           │
+│                                                                                       │
+│ Visit https://chatgpt.com/codex/settings/usage for up-to-date                         │
+│ information on rate limits and credits                                                │
+│                                                                                       │
+│  Model:                       gpt-6-astra (reasoning high, summaries auto)            │
+│  Model provider:              openai                                                  │
+│  Directory:                   ~/git/navier-stokes-vortex-lab                          │
+│  Permissions:                 Workspace (Ask for approval)                            │
+│  Agents.md:                   AGENTS.md                                               │
+│  Account:                     [account email redacted] (Pro Lite)                         │
+│  Thread name:                 Review Codex task output                                │
+│  Collaboration mode:          Default                                                 │
+│  Session:                     01a0de98-b2e9-74c1-8c8f-97150fb60d8c                    │
+│                                                                                       │
+│  Context window:              32% left (180K used / 258K)                             │
+│  Weekly limit:                [███████████████████░] 93% left (resets 11:23 on 3 Oct) │
+│  Luna Reserve Weekly limit:   [████████████████████] 99% left (resets 10:18 on 3 Oct) │
+╰───────────────────────────────────────────────────────────────────────────────────────╯
+
+• Model changed to gpt-6-sol high continue
+```
+
+**Scope/status:** STARTED. Lowercase continue authorizes the already admitted
+one-use R234 n=2 Poiseuille execution and scoped commit/push. Bind the actual
+clean launch HEAD, reviewed 25-file source inventory and pinned interpreter;
+use only /tmp/navier-poiseuille-r234-once under the unchanged caps/gates. Preserve
+raw result, actual exit/cleanup and old/new spent state, then stop. A proven
+caller/preflight error before reservation/worker/numerical import can be repaired
+within this unspent allocation after preserving/clearing its evidence and
+publishing clean binding. Any reservation or partial start spends it 1/1, with
+no automatic retry. The R232 allocation remains spent 1/1 and INCOMPLETE.
+
+Supplied snapshot: preceding completion 9m 16s / 1:02 PM; Codex v0.155.1,
+Astra/high before the reported user model change to Sol/high, same session
+01a0de98-b2e9-74c1-8c8f-97150fb60d8c; context 32% left (180K/258K), weekly
+93%, Luna Reserve 99%. No /new, token-usage or credit-count excerpt supplied.
+These are user-reported account/session snapshots, not independently checked or
+project-specific usage. No agent-initiated model/session switch.
+
+Preflight: rharris, PC/WSL daisy, Linux x86_64, same checkout/owner, Mac
+released. Clean main/origin/main at 49a56cb926648f932df4d78befd717e3ff7e02c7,
+empty stashes and no open lifecycle record. First sandbox pull was refused by
+read-only .git/FETCH_HEAD; approved escalation reran the exact required clean
+fast-forward pull, already up to date, HEAD/upstream 0/0. No source or run work
+preceded that pull. R234 completion was published at this HEAD.
