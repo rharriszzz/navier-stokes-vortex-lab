@@ -1,0 +1,24 @@
+{
+  "attempts_granted": 0,
+  "audit_output_sha256": "f8b77c5c68b5b71f80a0e222fcd4c5118368e913881677bd1f0994cf19f456c0",
+  "audit_reproduced": true,
+  "audit_sha256": "12249acaa89f5ed305bab66fca3d3b165029adbcef4fad381281e8a664a9011e",
+  "exact_targets": 38,
+  "final_document_checks": {
+    "append_only_logs": true,
+    "ast_files": 1,
+    "historical_evidence_unchanged": true,
+    "json_files": 3,
+    "local_link_targets": 243,
+    "unique_request_ids": 247
+  },
+  "no_manager_connection": true,
+  "numerical_modules_loaded": [],
+  "proposal_sha256": "c4f65f67710036bd79d14396b543f187134e6a066aad519d9b6720e2577be4b6",
+  "raw_original_files_verified": 60,
+  "recorded_pids_cgroups_absent": true,
+  "reservations_retained": 5,
+  "source_files_unchanged": 29,
+  "status": "REVIEW_COMPLETE_SOURCE_PROPOSAL_ONLY",
+  "tests_reused": "R244 77-test result; R245 caller and nine focused tests; not rerun"
+}

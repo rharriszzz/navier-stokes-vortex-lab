@@ -1,14 +1,13 @@
 # Project status: a boundary-controlled engineering approximation
 
-[R246 result](docs/realizability/POISEUILLE_RESULT_R246.md): **PASS**
-for the single n=2 Poiseuille fixture under the explicit R244 policy. Both-degree
-physical checks and all 30 pair comparisons pass; worker/caller exit 0, cleanup
-empty. R245 allocation is spent 1/1; all five allocations are spent and R242
-remains INCOMPLETE. This fixed oracle does not establish convergence or physical
-realizability. Follow the [current task](SESSION_HANDOFF.md#next-task)
-for Astra/high review of the next verification milestone; no new workload.
+[R247 review](docs/realizability/VERIFICATION_MILESTONE_R247.md)
+selects the rigid-rotation exact-field assembly oracle next. Exact rational
+checks define 38 scalar targets, both-degree gates and negative controls.
+R246 remains a fixed Poiseuille PASS; R242 remains INCOMPLETE and all five
+allocations stay spent. Follow the [current task](SESSION_HANDOFF.md#next-task)
+for Sol/high source-only implementation/tests; no new allocation or workload.
 
-Updated 2026-09-26 (America/New_York), through R246. PC/WSL daisy owns the
+Updated 2026-09-26 (America/New_York), through R247. PC/WSL daisy owns the
 repository. **R232 corrects the recoverable R231 caller failure and resumes the
 same authorized, unspent one-use fixture, then spends it on a PETSc LU failure.**
 The [R232 result](docs/realizability/POISEUILLE_RESULT_R232.md) records an
@@ -32,8 +31,8 @@ or live scope occurred in R236. [R237 admission](docs/realizability/POISEUILLE_A
 granted one instrumented fixture. [R238 result](docs/realizability/POISEUILLE_RESULT_R238.md)
 spent it 1/1: KSP -11, 405 nonfinite answer entries and PC reason 2 (reported
 numeric zero pivot). Worker/caller exited 1 with empty cleanup but no numerical
-or resource report. Those three allocations were spent 1/1 at R238. Next: Astra/high
-reviews the R246 result and next verification milestone; follow the
+or resource report. Those three allocations were spent 1/1 at R238. Next: Sol/high
+implements the R247 rotation source contract and tests; follow the
 [single task](SESSION_HANDOFF.md#next-task).
 
 Historical R231 context: the
@@ -128,7 +127,7 @@ No boundary-driven core or feasible contraction range is established.
 | Is the engineering goal demonstrated? | No validated boundary-driven contraction or boundary-only state estimator exists yet. |
 | What did the latest step establish? | The single fixture reached PETSc symbolic LU and failed with missing diagonal entries; cleanup was empty but numerical/resource results were incomplete. [Evidence and limits](docs/realizability/POISEUILLE_RESULT_R232.md). |
 | What blocks trusted numerical control results? | The one-use fixture failed before a numerical report; B2 still fails its independent response-accuracy comparison and q64/q96 remain unused. |
-| What is next? | Astra/high reviews the R246 result and next verification milestone; follow the single [next task](SESSION_HANDOFF.md#next-task). |
+| What is next? | Sol/high implements the R247 rotation source contract and tests; follow the single [next task](SESSION_HANDOFF.md#next-task). |
 
 ## Goal and present conclusion
 

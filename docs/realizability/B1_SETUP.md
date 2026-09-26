@@ -1,12 +1,11 @@
 # B1 solver environment
 
-[R246 result](../../docs/realizability/POISEUILLE_RESULT_R246.md): **PASS**
-for the single n=2 Poiseuille fixture under the explicit R244 policy. Both-degree
-physical checks and all 30 pair comparisons pass; worker/caller exit 0, cleanup
-empty. R245 allocation is spent 1/1; all five allocations are spent and R242
-remains INCOMPLETE. This fixed oracle does not establish convergence or physical
-realizability. Follow the [current task](../../SESSION_HANDOFF.md#next-task)
-for Astra/high review of the next verification milestone; no new workload.
+[R247 review](../../docs/realizability/VERIFICATION_MILESTONE_R247.md)
+selects the rigid-rotation exact-field assembly oracle next. Exact rational
+checks define 38 scalar targets, both-degree gates and negative controls.
+R246 remains a fixed Poiseuille PASS; R242 remains INCOMPLETE and all five
+allocations stay spent. Follow the [current task](../../SESSION_HANDOFF.md#next-task)
+for Sol/high source-only implementation/tests; no new allocation or workload.
 
 Historical PC status: [R232's one-use Poiseuille result](POISEUILLE_RESULT_R232.md)
 is INCOMPLETE at PETSc symbolic LU, and the single numerical allocation is

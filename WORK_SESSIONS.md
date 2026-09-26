@@ -1629,3 +1629,67 @@ Identity rharris/daisy, PC/WSL Linux 6.18.33.2-microsoft-standard-WSL2 x86_64;
 (already up to date), empty stashes, R246 completed, PC owner, Mac released.
 Saved-evidence/source/algebra review; publish next milestone or blocker and
 stop before implementation/new allocation/numerical workload. Five attempts spent.
+
+COMPLETED | 2026-09-26T21:58:47Z | R247 | PC/WSL daisy | released: no
+Selected the existing rigid-rotation exact-field assembly oracle as the
+smallest next verification milestone. R247 publishes a concrete source-only
+contract; no runtime implementation, new allocation, manager connection or
+numerical workload. All five allocations stay spent. R246 remains PASS for
+its frozen single Poiseuille contract; R242 remains INCOMPLETE.
+
+Saved R246 schema-2 controller replay passes. R242/R246 raw degree-24/26 scalar
+inventories are identical; prospective policy/schema acceptance does not
+reclassify history or prove the cause of earlier discrepancies. Both-degree
+scalar gates do not imply degree-26 backflow sampling. Shared-helper checks
+are not independent physics validation. Resource/save-tail limits and R229's
+false setup resource predicate remain unchanged.
+
+Exact rational rotation audit establishes 38 scalar targets and decisive
+negative controls: omitting pressure has zero signed volume momentum but
+squared residual 1/6; reversed pressure gives 2/3. Wrong nonsymmetric viscous
+stress has squared volume norm 1/50 and all-face traction norm 1/25, yet zero
+cap traction; gradient-based dissipation is 1/5. Require actual tensor
+expressions, squared residual norms, nonzero anchors and all six faces.
+Rotation's D=0 cannot by itself validate a viscous coefficient or hard-coded
+zero stress. No PDE pressure-exactness, convergence or physical claim.
+
+Proposal: exact coordinate rotation/quadratic pressure, rho=1, mu=.1, n=2,
+degrees 24/26, complete 38-key inventory. Each degree independently meets exact
+targets; geometry tolerance 1e-12, other scalar targets 1e-10, five zero norm
+squares<=1e-20 (norms<=1e-10), pair differences<=1e-10. Strict context/schema/
+types/finite/nonnegative and cached-decision checks; numerical acceptance only.
+This concretizes the existing rotation tolerance, with no Poiseuille/legacy
+policy change. Later execution needs separate tested worker/controller binding
+and a new explicit admission; none is granted. Future proposed ceilings remain
+180 s, 15/150/15 phases, 149+1 expiry, 1536 MiB/no swap/32 tasks/one rank/thread.
+Reservation/partial worker spends; pre-reservation recovery and uncertain-state
+stop rules remain explicit. Manufactured spatial/history/load diagnostics and
+affine BE/BDF2 temporal histories remain separate unresolved implementation/
+admission work before tank/boundary-response evidence.
+
+Changed: R247 review and four evidence files (audit source/output, proposal,
+checks); prototype README, B1_SETUP, four track overviews, STATUS and request/
+lifecycle/handoff. Evidence: docs/realizability/VERIFICATION_MILESTONE_R247.md
+and evidence/r247/. Checks: reproduced audit, R246 controller replay, exact
+38 targets/negative controls, unchanged 29 source/test/pin hashes, 60 raw old
+originals/hashes, five reservations and absent recorded PIDs/cgroups; no numerical
+modules, one AST/three JSON files, 243 local link targets, 247 unique request
+IDs, append-only records, unchanged historical evidence and whitespace.
+R244's 77 tests and R245's caller/nine focused results reused, not rerun.
+Skipped: real FEM/JIT/assembly/solve/rank/alternative factors, manager scope,
+runtime implementation/admission, artifact rescan/install, full suite/tank/B2,
+physical/render and Mac transfer. Actual rotation API/zero-form assembly behavior,
+later resource fit, broader convergence, historical discrepancy cause and
+artifact-label origin remain unknown.
+
+Next: Sol/high implements only rotation_oracle.py and focused tests: injected
+form builder, strict pure contract/report reducer/validator, exact and negative
+wiring controls; run stdlib regressions/import audit, publish and stop for
+Astra/high integration review. Preserve existing runtime source/pins/manifest
+and historical evidence. No worker/controller/caller integration or numerical
+launch in that task. Official UFL convention and OpenAI Sol high documentation
+retrieved; API conventions and model task-fit do not validate our implementation.
+No model/session switch or /new needed. PC retains ownership; Mac released.
+R246 3076956 verified by clean pull; R247 STARTED 349dee7 published. Completion
+prepared for scoped publication; delivery hash/result in Git/final response,
+no post-push edit.
