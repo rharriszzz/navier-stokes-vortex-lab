@@ -1,14 +1,25 @@
 # Project status: a boundary-controlled engineering approximation
 
-Updated 2026-09-26 (America/New_York), through R230. PC/WSL daisy owns the
-repository. **One later n=2 Poiseuille attempt admitted; zero spent.** The
+Updated 2026-09-26 (America/New_York), through R231. PC/WSL daisy owns the
+repository. **R231 stopped before the numerical attempt.** The
+[prelaunch result](docs/realizability/POISEUILLE_PRELAUNCH_R231.md) records a
+caller import-path failure before preflight, timer, reservation or worker; the
+fixed run directory remains absent and zero numerical attempts were spent.
+R231's stop rule forbids a repair-and-rerun in this task. Next: Astra/high
+reviews and tests the caller without FEM, then decides separate execution
+admission; follow the [single task](SESSION_HANDOFF.md#next-task).
+The historical
 [R230 review](docs/realizability/POISEUILLE_ADMISSION_R230.md) accepts reuse of
 R229's completed artifact evidence and repairs exact FFCx package/runtime identity.
 R229's setup resource refusal remains false: 303 memory.max events at 1536 MiB,
-no OOM/kill; no numerical footprint inferred. No FEM ran. All 56 standard-library
-tests pass without numerical imports. Next: Sol/high executes the one-use fixed
-contract after a separate Continue; follow the [single task](SESSION_HANDOFF.md#next-task).
+no OOM/kill; no numerical footprint inferred. No FEM ran. R230's 56 standard-library
+tests passed without numerical imports.
 Full convergence/tank/B2 launches remain unadmitted.
+R231 user-supplied status reports Sol/high after a model change, weekly 97% and
+Luna Reserve 99%; distinct session IDs, token snapshot and redacted account
+fields are in REQUEST_LOG.md. These are snapshots, not independent checks.
+R231 STARTED c90193e and allocation c3b5598 were published; completion delivery
+belongs in Git/final response.
 R230 supplied snapshot: preceding completion 13m 26s / 11:45 AM; 938,400 tokens
 (831,406 input, 17,031,424 cached, 106,994 output, 23,518 reasoning). Current
 Astra/high, weekly 98% (11:23 Oct 3 reset), Luna Reserve 99% (10:18 Oct 3 reset).
@@ -61,20 +72,21 @@ with both ownership routes. A modest atmospheric contraction apparatus is
 estimated at $12k–35k from scratch or $5k–18k additional in an equipped lab,
 excluding research labor. Extra pressure earns no range if delivery/optics
 limit first. These are budgetary judgments, not quotations or performance claims.
-Latest usage snapshot is recorded in REQUEST_LOG.md (R230); earlier entries remain historical.
-Latest technical work: [R230 version gate and one-fixture admission](docs/realizability/POISEUILLE_ADMISSION_R230.md).
+Latest usage snapshot is recorded in REQUEST_LOG.md (R231); earlier entries remain historical.
+Latest technical work: [R231 prelaunch refusal](docs/realizability/POISEUILLE_PRELAUNCH_R231.md).
 R226 previously passed 49 import-free checks for the R222 driver and
 [R196 cube adapter](docs/realizability/CUBE_ADAPTER_R196.md); those were not rerun in R227. FEM forms have not been constructed or assembled,
-and convergence is untested. Execution remains unadmitted with zero attempts.
+and convergence is untested. The full suite remains unadmitted; the R230
+single-fixture numerical allocation has zero attempts spent.
 No boundary-driven core or feasible contraction range is established.
 
 | Current question | Answer |
 |---|---|
 | What works? | Illustrative animation, saved-data checks and separate reference/analysis tools. |
 | Is the engineering goal demonstrated? | No validated boundary-driven contraction or boundary-only state estimator exists yet. |
-| What did the latest step establish? | Exact offline transaction and interpreter checks completed; memory-event predicate refused setup success, cleanup confirmed. [Evidence and limits](docs/realizability/ENVIRONMENT_RECOVERY_R229.md). |
+| What did the latest step establish? | The R231 caller failed before timer, reservation or FEM; the numerical allocation remains unspent. [Failure and limits](docs/realizability/POISEUILLE_PRELAUNCH_R231.md). |
 | What blocks trusted numerical control results? | The nonlinear fixture has not run; B2 still fails its independent response-accuracy comparison and q64/q96 remain unused. |
-| What is next? | Artifact/resource/FFCx admission review on Astra/high, PC/WSL daisy; follow the single [next task](SESSION_HANDOFF.md#next-task). No FEM launch. |
+| What is next? | Astra/high reviews the prelaunch refusal and tests a caller correction without FEM; follow the single [next task](SESSION_HANDOFF.md#next-task). |
 
 ## Goal and present conclusion
 

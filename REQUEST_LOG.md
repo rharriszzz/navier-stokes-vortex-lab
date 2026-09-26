@@ -8066,3 +8066,43 @@ Before reservation, the directory is absent; 25 hashes and interpreter match,
 host MemAvailable is about 6.2 GiB, and the existing user manager reports
 249.11-0ubuntu3.22. The sandbox socket check failed EPERM; the approved host
 read-only check succeeded. R229 setup refusal remains false and separate.
+
+### R231 outcome — prelaunch refusal, task stopped
+
+The clean launch commit was c3b55986f0ad9bffde243423bb3d6875824c6b9f.
+The one command exited 1 at Python's top-level `supervision` import with
+`ModuleNotFoundError: No module named 'verification'`: invoking nested
+`evidence/r231/run_once.py` by path did not put the repository root on Python's
+initial search path. Its `main()`, outer timer, caller preflight, reservation,
+backend and worker were never reached. No FEM or numerical import ran. Raw
+command/stderr and scope are in evidence/r231/prelaunch_result.json and the
+review in POISEUILLE_PRELAUNCH_R231.md. Command elapsed is not certified by
+the caller; no numerical resource or accuracy counters exist.
+
+The fixed `/tmp/navier-poiseuille-r230-once` directory remains absent. The
+only listed Poiseuille manager unit is a historical R226 failed timeout unit
+from 00:22:36 EDT, MainPID 0 and empty ControlGroup; it is not an R231 worker.
+Thus zero numerical attempts were spent, with no new child to clean up. The
+R231 stop-after-refusal rule ends this task; no repair-and-rerun occurred.
+R230 admission and R229's 303-event setup refusal remain unchanged. No
+automatic later retry is inferred from the unreserved allocation.
+
+Changed files across R231: REQUEST_LOG.md, WORK_SESSIONS.md, allocation.json,
+run_once.py, prelaunch_result.json, POISEUILLE_PRELAUNCH_R231.md, STATUS.md,
+SESSION_HANDOFF.md and the four current track overviews. The failed caller is
+preserved unchanged as evidence. Checks: required clean pull and owner/stash
+review; all 25 R230 source hashes, frozen manifest and R229 interpreter SHA-256;
+manager response/host capacity; committed allocation and clean launch HEAD;
+caller AST; exact failure and absent run directory; historical unit state;
+two R231 JSON records; 140 local links across updated status/review documents;
+Git whitespace. Skips: standard-library suite rerun (reviewed numerical source
+unchanged), FEM imports/JIT/mesh/solve, numerical/resource gates, installation,
+full suite, tank/B2, physical/render work and machine transfer. No measured
+fixture rank, accuracy or resource footprint.
+
+Next: Astra/high reviews the prelaunch refusal, fixes/tests caller import and
+timer behavior without FEM, and makes a separate explicit go/no-go decision for
+the unreserved fixed-directory allocation. Stop before numerical execution;
+recommend Sol/high only for a later mechanical launch if admitted. PC/WSL daisy
+retains ownership, Mac released. Completion prepared for scoped commit/push;
+final delivery hash/result belongs in Git/final response, no post-push edit.

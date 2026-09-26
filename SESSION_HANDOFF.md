@@ -1,8 +1,22 @@
 # Current session handoff
 
-Last updated 2026-09-26 (America/New_York) for R230.
+Last updated 2026-09-26 (America/New_York) for R231.
 **PC/WSL daisy owns the repository.** No transfer; Mac remains released.
-**R230 admits one later bounded n=2 Poiseuille attempt; zero spent.**
+**R231 stopped at a prelaunch import-path refusal; zero numerical attempts spent.**
+The [R231 result](docs/realizability/POISEUILLE_PRELAUNCH_R231.md) records exit 1
+before caller preflight, timer, reservation or worker. The fixed run directory is
+absent; no FEM imported or ran. R231's stop rule bars repair-and-rerun in this
+task. A separate Astra/high review must resolve the caller and allocation before
+any later execution decision. R230's one-use admission is retained; a retry is
+not automatically authorized.
+**Next: Astra/high reviews the prelaunch refusal, corrects and tests the caller
+without FEM, decides go/no-go for a separate later Continue, and stops.**
+All caps/thresholds remain; full suite/tank/B2 execution remains unadmitted.
+R231 STARTED c90193e and allocation/caller c3b5598 were published; completion
+delivery belongs in Git/final response, with no post-push edit.
+
+Historical R230 admission: one later bounded n=2 Poiseuille attempt, zero
+numerical attempts spent at its decision.
 The [admission review](docs/realizability/POISEUILLE_ADMISSION_R230.md) accepts
 reuse of the existing artifact evidence and repairs the exact FFCx gate in both
 worker and result validation. Package remains 0.10.1/pyhbc3ee6d_1 with its saved
@@ -12,11 +26,18 @@ R229's top-level setup result remains false: 303 memory.max events at 1536 MiB,
 no OOM/kill. Transaction, metadata/interpreter, exit and cleanup succeeded;
 this is no numerical-footprint prediction or retroactive setup waiver. Retain
 /tmp/navier-fenicsx-r229 for the fixture and /tmp/navier-fenicsx as partial.
-**Next: Sol/high executes the single-use contract after a separate Continue,
-records the result and stops.** All caps/thresholds remain. Full suite/tank/B2
-execution remains unadmitted. Read the complete Next task before any launch.
 R229 completion 2943a8a verified by clean pull; R230 STARTED ad40b3a published.
-R230 completion delivery belongs in Git/final response, no post-push edit.
+R230 completion df3e6cb was verified by R231's clean pull.
+R231 supplied snapshot: 10m 43s / 11:56 AM completion, 120,248 total tokens
+(101,587 input, 1,419,904 cached, 18,661 output, 2,640 reasoning), preceding
+review session 01a0de65-6733-7371-9a22-d258ffe15779. Current reported status:
+Codex v0.155.1, Sol/high after a user-reported change, session
+01a0de6f-8d3d-7ce1-af0d-3a81516bf8ae, weekly 97% and Luna Reserve 99%
+(3 Oct resets). R231 log retains supplied fields with account email redacted.
+No /new excerpt, context percentage or credit count supplied. These are
+reported snapshots, not independently checked or project-specific usage.
+No agent-initiated model/session switch occurred.
+Historical R230 snapshot follows.
 Supplied snapshot: 13m 26s / 11:45 AM completion; 938,400 total tokens (831,406
 input, 17,031,424 cached, 106,994 output, 23,518 reasoning), preceding resume
 session 01a0cbe6-635a-7761-a6b1-454b78e9b316. Current status: Codex v0.155.1,
@@ -197,12 +218,12 @@ and physical-work limits remain unchanged.
 | Owner | PC/WSL `daisy`; Mac `fire.lan` released after published R161 handoff and R162 receipt. |
 | Checkout | `/home/rharris/git/navier-stokes-vortex-lab`. |
 | Branch/upstream | `main` / `origin/main` |
-| Starting state | R230 clean required fast-forward pull retained 2943a8a equal to fetched origin/main; empty stashes, rharris/daisy owner. STARTED ad40b3a published. |
+| Starting state | R231 clean required fast-forward pull retained df3e6cb equal to fetched origin/main; empty stashes, rharris/daisy owner. STARTED c90193e and allocation c3b5598 published. |
 | Interpreter | /tmp/navier-fenicsx-r229/bin/python verified as 3.12.13 with -I -S; exact environment artifacts verified, setup memory-event predicate refused. Project Python remains 3.12.14. Old /tmp/navier-fenicsx is still partial. |
 | Other owner/process | Mac `fire.lan` released in the published R161 handoff. Local Git cannot inspect another checkout's unpublished state. |
-| Task processes | R230 launched no task worker or FEM. Read-only check found R229 PID/cgroup absent; prior actual exit/cleanup retained. One later fixture admitted, zero spent; no run directory reserved. |
+| Task processes | R231 top-level import failed before caller preflight/reservation/backend; no worker or FEM. Fixed run directory absent; existing R226 failed expiry unit has MainPID 0 and empty cgroup. Zero numerical attempts spent; R231 stopped without retry. |
 | Symbolic environment | `/tmp/navier-r183-sympy/bin/python`, Python 3.12.14, SymPy 1.14.0, mpmath 1.3.0; recreate using `requirements-symbolic.txt` if missing. Existing environments unchanged. |
-| Delivery state | R229 completion 2943a8a verified remotely via pull; R230 STARTED ad40b3a published. R230 completion prepared for scoped publication; final hash/result in Git/final response. PC retains ownership. |
+| Delivery state | R230 completion df3e6cb verified by clean pull; R231 STARTED c90193e and allocation c3b5598 published. R231 completion prepared for scoped publication; final hash/result in Git/final response. PC retains ownership. |
 
 ## Current result and limits
 
@@ -333,45 +354,48 @@ agent-side POV-Ray backtraces are unavailable.
 
 ## Next task
 
-**GPT-6 Sol / high / PC-WSL daisy: execute exactly one admitted n=2 Poiseuille
-fixture after a new Continue, publish the result and stop.**
-Read the [R230 one-use admission contract](docs/realizability/POISEUILLE_ADMISSION_R230.md),
-[reviewed source inventory](docs/realizability/evidence/r230/checks.json),
-R229 result/verification and R226 launcher review. Preserve all prior failures,
-charges and evidence. One separate fixture allocation admitted, zero spent;
-the non-executable manufactured-suite manifest remains unchanged at zero attempts.
+**GPT-6 Astra / high / PC-WSL daisy: review R231's prelaunch refusal and decide
+whether a separately authorized execution may use the unreserved one-use
+allocation. Stop before FEM.** Read the [R231 result](docs/realizability/POISEUILLE_PRELAUNCH_R231.md),
+[raw failure](docs/realizability/evidence/r231/prelaunch_result.json),
+[caller](docs/realizability/evidence/r231/run_once.py),
+[R230 admission](docs/realizability/POISEUILLE_ADMISSION_R230.md),
+reviewed source inventory and R226 launcher review. Preserve the exact failure
+and all prior charges/evidence. R231's command exited at a top-level package
+import before its timer, preflight, reservation or backend; no numerical attempt
+was spent. The fixed run directory is absent. R231 stops here without retry.
 
-1. Normal Continue ownership, clean synchronization and STARTED publication.
-   Inspect logs for any spent/unresolved R230 fixture reservation before launch;
-   missing disposable files never reset its attempt. No Mac transfer.
-2. Verify reviewed source inventory and frozen manifest hash from R230. Bind the
-   actual clean launch commit (metadata-only descendants permitted) in admission
-   and reservation. Use /tmp/navier-fenicsx-r229/bin/python and require R229's
-   binary SHA-256 5f083df36ec986d5cd13d2549ca6cfe1ddaf658509f9e419b454b2fb375c27a3.
-   Refresh live host capacity/manager facts. No reinstall, changed pins, standalone
-   numerical import test or prewarming. Missing artifacts/changed source stop.
-3. Record the one-use allocation before launch, for exactly
-   /tmp/navier-poiseuille-r230-once. Use supervise_once and SystemdBackend, with
-   matching approved fixture/source/manifest/directory admission. Any reservation
-   or partial start consumes it. No alternate directory or automatic retry.
-   Use one finite caller whose outer timer includes its preflight and result save;
-   include interpreter hash comparison before starting the unit. Existing held
-   source/interpreter binding must match before release. Follow R230's contract.
-4. Keep 180 s observed total (15 setup/150 work/15 finish), 149+1 s independent
-   worker expiry, 1536 MiB/no swap/32 tasks, one rank/thread, <=20,000 mixed DOFs.
-   Execute only Poiseuille n=2, dt=.125 with exact history/trace, non-exact free
-   guess and checked correction. Keep all degree-24/26/error/budget gates and
-   zero max/OOM/PID-event requirement. Never relax a gate after seeing results.
-5. Persist raw terms, version/artifact evidence, timing/counters, actual exit and
-   confirmed cleanup; preserve incomplete outcomes and report unmeasured tails.
-   Stop after one result or any refusal, without repair-and-rerun. No full suite,
-   rotation, tank, B2, physical/optical or render work. Recommend Astra/high for
-   interpretation or any source/scientific/admission change afterward.
+1. Follow normal Continue ownership, clean synchronization and STARTED
+   publication. Recheck the absence of a reservation and live task unit; local
+   Git cannot reveal another machine's unpublished state. No Mac transfer.
+2. Correct the finite caller's import-path error in the smallest explicit way.
+   Verify module loading and the outer timer boundary using standard-library,
+   no-manager/no-FEM tests. Keep the failed file and raw result as evidence;
+   do not overwrite or erase R231. Recheck source inventory, frozen manifest,
+   interpreter hash and clean-commit binding logic.
+3. Make an explicit go/no-go decision for a **later** single fixture under the
+   original exact directory, 180 s observed / 149+1 s independent expiry,
+   1536 MiB/no swap/32 tasks, one rank/thread, <=20,000 DOFs and unchanged
+   numerical/zero-event gates. A prelaunch failure does not itself certify a
+   future run; no alternate directory or automatic retry. Stop before FEM,
+   installation, full suite, rotation, tank, B2, physical/render work.
+4. Record source changes, checks/skips, evidence, allocation state, cleanup
+   and one concrete next task. Recommend Sol/high for a later mechanical launch
+   only if admission remains justified; return to Astra/high for a numerical
+   result or changed science/containment decision.
 
-Completion: one bounded observed result, or a concrete prelaunch refusal, with
-source/interpreter binding, spent-attempt state, cleanup and publication recorded.
-Actual library compatibility, JIT/mesh/solve cost, rank and accuracy are unknown.
-R229's failed setup resource predicate remains false even if the fixture passes.
+Completion: a reviewed and standard-library-tested caller plus explicit
+separate-execution admission/refusal, published without running FEM. Current
+actual library compatibility, JIT/mesh/solve cost, rank and accuracy remain
+unknown; R229's setup resource predicate remains false. The next prompt is
+**Continue**.
+
+### Historical R230 single-fixture execution task (R231 stopped prelaunch)
+
+R230's fixed execution contract is retained in its admission review and the
+R231 allocation. R231 published a caller but its top-level import failed before
+the contract's reservation or worker. No repair-and-rerun occurred in R231.
+
 R230 changed the package identity gate, worker/result wiring and tests; added
 its admission/check record; updated status, four track overviews, B1 setup,
 prototype README and request/lifecycle/handoff records. Checks: 56 standard-library

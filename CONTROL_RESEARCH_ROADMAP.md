@@ -1,12 +1,13 @@
 # Control Research Roadmap
 
-R230's [environment/version review](docs/realizability/POISEUILLE_ADMISSION_R230.md)
-completed the artifact-bound FFCx gate and admits one later bounded n=2 Poiseuille
-attempt on daisy. Zero numerical attempts spent; execution awaits a separate
-Continue. R229's setup resource refusal (303 memory.max events, no OOM/kill)
-remains unchanged. Full convergence/tank/B2 execution remains unadmitted.
-Next: Sol/high executes the one-use fixed contract and stops; follow the single
-[handoff task](SESSION_HANDOFF.md#next-task).
+R231's [prelaunch result](docs/realizability/POISEUILLE_PRELAUNCH_R231.md)
+records a caller import-path refusal before timer, reservation or FEM. Zero
+numerical attempts spent; this task stopped without retry. R230's artifact-bound
+FFCx gate and one-use admission remain the historical contract. R229's setup
+resource refusal (303 memory.max events, no OOM/kill) remains unchanged. Full
+convergence/tank/B2 execution remains unadmitted. Next: Astra/high reviews and
+tests the caller without FEM, then decides separate execution admission; follow
+the single [handoff task](SESSION_HANDOFF.md#next-task).
 No tank/hardware route or feasible contraction range is established.
 
 R188 priority update (2026-09-22): establish measurable essential dynamical

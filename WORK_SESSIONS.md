@@ -969,3 +969,24 @@ caller is evidence/r231/run_once.py. The fixed run directory is absent, source
 inventory/manifest and R229 interpreter hashes match, live capacity is
 sufficient for the cap, and the user manager responds. Any reservation or
 partial start spends the one allocation. No attempt has started at this point.
+
+### R231 completion
+COMPLETED | 2026-09-26T16:08:10Z | PC/WSL daisy | released: no
+The single clean-commit launch command exited 1 before caller main/preflight,
+timer, reservation, backend or worker: nested script import raised
+ModuleNotFoundError for verification. Fixed run directory absent; no FEM or
+numerical attempt, no new child/unit to clean up. Historical R226 failed unit
+is inactive with MainPID 0 and empty ControlGroup. Zero numerical attempts
+spent, but R231 stopped without repair-and-rerun. R229 setup refusal retained.
+Files: R231 allocation/caller/raw result/review, REQUEST_LOG, WORK_SESSIONS,
+STATUS, SESSION_HANDOFF and four track overviews. Checks: owner/clean pull,
+25 source hashes/manifest/interpreter, host/manager, AST, JSON, run-directory
+absence and historical unit, 140 local links, Git whitespace. Skips: numerical
+imports/FEM/JIT/solve, numerical gates, suite rerun, install, full suite/tank/
+B2/physical/render, transfer. Evidence: docs/realizability/POISEUILLE_PRELAUNCH_R231.md
+and evidence/r231/prelaunch_result.json; elapsed/counters unmeasured.
+Next: Astra/high reviews the prelaunch refusal, corrects/tests caller without
+FEM, decides separate later go/no-go for the unreserved one-use allocation;
+Sol/high only for later mechanical execution if admitted. PC retains ownership,
+Mac released. STARTED c90193e, allocation/caller c3b5598 published; completion
+prepared for scoped publication, delivery hash/result in final/Git, no post-push edit.

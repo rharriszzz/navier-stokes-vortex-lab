@@ -1,0 +1,15 @@
+{
+  "request": "R231",
+  "launch_source_commit": "c3b55986f0ad9bffde243423bb3d6875824c6b9f",
+  "command": ".venv/bin/python docs/realizability/evidence/r231/run_once.py c3b55986f0ad9bffde243423bb3d6875824c6b9f",
+  "exit_code": 1,
+  "phase": "Python top-level imports, before main/preflight/timer/reservation/backend/worker",
+  "stderr": "Traceback (most recent call last):\n  File \"/home/rharris/git/navier-stokes-vortex-lab/docs/realizability/evidence/r231/run_once.py\", line 15, in <module>\n    from verification.nonlinear_port.supervision import supervise_once\nModuleNotFoundError: No module named 'verification'\n",
+  "run_directory_exists_afterward": false,
+  "reservation_created": false,
+  "numerical_attempts_spent": 0,
+  "new_manager_unit_started": false,
+  "cleanup": "No new child or unit was started; the historical inactive failed R226 probe unit remained from 2026-09-26 00:22:36 EDT with MainPID=0 and empty ControlGroup.",
+  "limits": "Outer timer did not start; launch elapsed and final command-return tail were not measured by the caller.",
+  "next_launch": "Forbidden in R231 by the stop-after-refusal rule; needs a separate reviewed decision."
+}
