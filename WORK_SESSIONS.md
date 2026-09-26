@@ -803,3 +803,15 @@ binding and a newly bounded benign exit/expiry check pair, retaining prior faile
 evidence/charges. Stop before dependencies/FEM; then restore exact environment
 as a subsequent prerequisite. Completion prepared for scoped commit/push;
 delivery hash/result in Git/final response; no post-push edit. PC retains ownership.
+
+
+## R226 — Whole-task launcher and benign validation
+STARTED | 2026-09-26T04:14:03Z | PC/WSL daisy | released: no
+Identity: rharris; Linux x86_64; /home/rharris/git/navier-stokes-vortex-lab;
+main/origin/main at dc3caddb81c1b7269d0a19e06c0b9a79dc944f24 after required clean
+fast-forward pull, equal to fetched upstream; empty stashes. Same owner, no
+open conflicting task, Mac released. Continue authorizes scoped publication.
+Bounded task: finite whole-task launcher/source binding, then newly bounded
+benign clean-exit and independent-expiry checks. Preserve R225 failed evidence
+and unknown late-reconciliation interval. Stop before dependencies/FEM, full
+suite, tank/physical/render work. FEM attempts remain zero.
