@@ -1,8 +1,11 @@
 # Project status: a boundary-controlled engineering approximation
 
-Updated 2026-09-22 (America/New_York), through R223. PC/WSL `daisy` owns the
-repository. **R223 records the supplied status; after publication, wait for the
-user's next instruction.** Snapshot: 21m 22s / 9:33 PM completion; 355,910 total
+Updated 2026-09-24 (America/New_York), through R224. PC/WSL `daisy` owns the
+repository. **R224 recommends an Astra/high critical review of the tiny
+Poiseuille test and actual host supervision, ending with a go/no-go decision
+for one later test.** Implementation remains paused pending user instruction;
+follow the [next task](SESSION_HANDOFF.md#next-task). R224 records are local.
+R223 was published as c679cfa. Historical September 22 snapshot: 21m 22s / 9:33 PM completion; 355,910 total
 tokens (300,015 input, 8,700,288 cached, 55,895 output, 20,311 reasoning);
 current Astra/high; 53% weekly left (17:37 on 28 Sep reset), 283 credits,
 100% Luna Reserve (21:34 on 29 Sep reset). Full supplied fields and distinct

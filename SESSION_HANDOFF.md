@@ -1,9 +1,14 @@
 # Current session handoff
 
-Last updated 2026-09-22 (America/New_York) for R223.
+Last updated 2026-09-24 (America/New_York) for R224.
 **PC/WSL `daisy` owns the repository.** No transfer; Mac remains released.
-**R223 records the supplied status and requests publication, then waiting.**
-Next: wait for the user's instruction; the Astra/high review below is deferred.
+**R224 recommends the R222 critical review as the next substantive step:**
+audit the tiny Poiseuille test's mathematics and acceptance checks, complete
+and verify the smallest host supervision backend where possible, then give a
+specific go/no-go decision for one later test. Use Astra/high on PC/WSL daisy.
+The source has 33 import-free checks but no actual FEM execution evidence.
+This recommendation does not resume implementation; wait for user instruction.
+R223 published the supplied snapshot and pause as c679cfa.
 User reports 21m 22s / 9:33 PM completion, 355,910 total tokens (300,015 input,
 8,700,288 cached, 55,895 output, 20,311 reasoning), current Astra/high,
 53% weekly remaining (17:37 on 28 Sep reset), 283 credits and 100% Luna Reserve
@@ -173,12 +178,12 @@ and physical-work limits remain unchanged.
 | Owner | PC/WSL `daisy`; Mac `fire.lan` released after published R161 handoff and R162 receipt. |
 | Checkout | `/home/rharris/git/navier-stokes-vortex-lab`. |
 | Branch/upstream | `main` / `origin/main` |
-| Starting state | R223 began with clean rharris-owned main/origin/main at bdc51f9, equal to live remote main, and empty stashes. R222 completion is published. |
+| Starting state | R224 began with clean rharris-owned main tracking locally stored origin/main at c679cfa and empty stashes. |
 | Interpreter | `/home/rharris/git/navier-stokes-vortex-lab/.venv/bin/python`, CPython 3.12.14 with NumPy 2.5.3 |
 | Other owner/process | Mac `fire.lan` released in the published R161 handoff. Local Git cannot inspect another checkout's unpublished state. |
-| Task processes | R223 performs metadata/Git checks only and launches no workload. R222 recorded no task child remaining. |
+| Task processes | R224 performs recommendation/documentation checks only; no workload launched. R222 recorded no task child remaining. |
 | Symbolic environment | `/tmp/navier-r183-sympy/bin/python`, Python 3.12.14, SymPy 1.14.0, mpmath 1.3.0; recreate using `requirements-symbolic.txt` if missing. Existing environments unchanged. |
-| Delivery state | R222 completion bdc51f9 verified on live remote main. R223 status/pause metadata authorized for commit/push; delivery result belongs in Git/final response. Then wait; no owner release, FEM attempts zero. |
+| Delivery state | R223 published as c679cfa. R224 recommendation records remain local; no new commit/push authorization. Wait for user instruction; PC retains ownership, FEM attempts zero. |
 
 ## Current result and limits
 
@@ -309,7 +314,17 @@ agent-side POV-Ray backtraces are unavailable.
 
 ## Next task
 
-**Wait for the user's next instruction after publishing R223 status metadata.**
+**Wait for the user's instruction to resume the critical review below.**
+R224 recommends that bounded task with a concrete go/no-go endpoint for one
+later n=2 Poiseuille test, stopping before FEM execution. Changed files:
+REQUEST_LOG.md, SESSION_HANDOFF.md and STATUS.md. Checks: identity/ownership,
+Git/stashes, request preservation/IDs and whitespace. OpenAI Docs was searched
+and the official Astra model page opened; it confirms high reasoning support.
+Model fit is judgment, not measured performance or an account-access claim.
+No implementation/runtime tests, scientific work, commit or push; existing FEM,
+pins and host-enforcement uncertainties remain. R224 records are local.
+
+R223 publication checks, retained as historical evidence:
 PC/WSL daisy retains ownership. R223 changes REQUEST_LOG.md, SESSION_HANDOFF.md
 and STATUS.md only. Checks: identity/ownership, clean starting Git/stashes,
 live remote equality, preserved request-log prefix/IDs, local links and
