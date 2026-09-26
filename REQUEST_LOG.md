@@ -9674,3 +9674,37 @@ Evidence: docs/realizability/ROTATION_INTEGRATION_REVIEW_R249.md and evidence/r2
 Changed files: review and three evidence files, prototype README, B1_SETUP, PROJECT_TRACKS, EXPERIMENT, PHYSICAL_REALIZABILITY_PLAN, CONTROL_RESEARCH_ROADMAP, STATUS, handoff and request/lifecycle records. Checks: source/exact contract and saved-data audit above, AST/JSON/local links, sequential request IDs, append-only logs, historical evidence/source unchanged and whitespace. Skipped: new regression run on unchanged runtime, actual UFL/FEM/JIT/assembly/solve, manager/worker, allocation, full artifact rescan/install, full numerical suite/tank/B2, physical/render and Mac transfer. Unresolved: real zero-form/API behavior/resource cost, implementation review/later admission, convergence, R242 discrepancy cause, rank and artifact-label origin.
 
 Next: Sol/high implements the fixed R249 contract with required fake/source regressions and R246 saved-report replay; publish then stop for Astra/high source/admission review. Stop earlier with a precise blocker if scientific, containment or zero-form requirements must change. Official Sol/high support searched/opened; task fit is judgment. No model/session switch by agent or /new. PC retains ownership, Mac released. Clean pull verified R248 3bd7d4a; R249 STARTED 06c7296 published. Completion prepared for scoped publication; delivery hash/outcome in Git/final response, no post-push edit.
+
+## R250 — 2026-09-26 — Implement rotation supervised integration source
+
+**User request (account email redacted):**
+
+```text
+Worked for 11m 54s · done 6:20 PM ╭───────────────────────────────────────────────────────────────────────────────────────╮
+│  >_ OpenAI Codex (v0.155.1)                                                           │
+│                                                                                       │
+│ Visit https://chatgpt.com/codex/settings/usage for up-to-date                         │
+│ information on rate limits and credits                                                │
+│                                                                                       │
+│  Model:                       gpt-6-astra (reasoning high, summaries auto)            │
+│  Model provider:              openai                                                  │
+│  Directory:                   ~/git/navier-stokes-vortex-lab                          │
+│  Permissions:                 Workspace (Ask for approval)                            │
+│  Agents.md:                   AGENTS.md                                               │
+│  Account:                     [account email redacted] (Pro Lite)                    │
+│  Thread name:                 Review Codex session output                             │
+│  Collaboration mode:          Default                                                 │
+│  Session:                     01a0deb4-08c7-78e2-ab83-65111b56ad3d                    │
+│                                                                                       │
+│  Context window:              62% left (105K used / 258K)                             │
+│  Weekly limit:                [█████████████████░░░] 84% left (resets 13:10 on 3 Oct) │
+│  Luna Reserve Weekly limit:   [████████████████████] 99% left (resets 10:18 on 3 Oct) │
+╰───────────────────────────────────────────────────────────────────────────────────────╯
+
+• Model changed to gpt-6-sol high
+ continue
+```
+
+**Scope/status:** STARTED. Implement the fixed R249 rotation integration contract and source/fake tests, then publish and stop for Astra/high source/admission review. No FEM import/JIT/assembly, manager, numerical reservation/real caller or new admission. Continue authorizes scoped start/completion commits and pushes.
+
+Identity rharris/daisy, PC/WSL Linux 6.18.33.2-microsoft-standard-WSL2 x86_64; /home/rharris/git/navier-stokes-vortex-lab; clean main/origin/main equal at 65dc3667f6e2119d4d23277d845a825b63eb73a0 after required fast-forward pull (already up to date); empty stashes. R249 completed, PC owner, Mac released. User-reported snapshot: 11m 54s / 6:20 PM, Codex v0.155.1, Astra/high before reported change to Sol/high, same session, context 62% (105K/258K), weekly 84%, Luna Reserve 99%. No /new, literal /status, token totals or credit count supplied; no private session inspection or account verification.
