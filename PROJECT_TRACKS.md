@@ -1,11 +1,12 @@
 # Project Tracks
 
-R225 completed [critical fixture review and source repairs](docs/realizability/POISEUILLE_REVIEW_R225.md).
-Forty-three standard-library checks pass; actual FEM assembly and convergence
-remain untested, with zero attempts. The worker backend lacks whole-task coverage;
-a benign live exit check failed and cleanup was confirmed. Next complete the
-finite whole-task launcher and benign checks; follow the single
-[handoff task](SESSION_HANDOFF.md#next-task). Stop before dependencies or FEM.
+R226 completed [whole-task launcher and benign validation](docs/realizability/POISEUILLE_LAUNCHER_R226.md).
+Forty-nine standard-library checks pass. In-process manager calls and verified
+clean source/interpreter binding passed actual clean exit and independent
+expiry/child cleanup in 5.418188160 s. FEM assembly/convergence remain untested,
+with zero attempts; the exact pinned environment is absent. Sol/high restores
+that environment next, stopping before FEM imports or execution; follow the
+single [handoff task](SESSION_HANDOFF.md#next-task).
 No tank/hardware route or feasible contraction range is established.
 
 R188 priority update (2026-09-22): establish measurable essential dynamical

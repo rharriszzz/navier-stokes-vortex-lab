@@ -7579,3 +7579,60 @@ from this record. No automatic retries; an unexpected failure stops the pair,
 retains its evidence and requires explicit reconciliation. R225 failed intervals
 and unknown later elapsed remain unchanged, not erased or reclassified. The
 source checkpoint is intermediate publication, not task completion.
+
+### R226 outcome — launcher validated; FEM still unadmitted
+
+Completed the bounded launcher task. Both benign cases verified clean checkpoint
+b07dbdc68ba46659a4548786278fc46a5210bc13 and actual executable/hash before release.
+The in-process sd-bus path creates no external control helpers. Under the explicit
+R103 finite caller/OS manager trust boundary, all newly spawned worker/source-check/
+child processes inherit the capped scope. Effective 1536 MiB/no swap/32 tasks and
+one-thread settings observed. Clean exit status 0 was retained, counters saved,
+and cleanup confirmed. Independent expiry killed the SIGTERM-ignoring worker and
+ready child with signal 9; manager Result=timeout was observed before any stop.
+Both groups removed, unknown_children=false, all three observed PIDs absent.
+The expiry service keeps inert failure metadata; it has no remaining process.
+
+Observed pair: 5.418188160 s through final summary save, within the new 30 s
+allocation. Final stdout/return tail is unmeasured under R103. Clean snapshot:
+40,218,624 bytes peak, 5 tasks peak, zero max/OOM/PID-limit events; snapshot is
+before final worker handshake/exit and not an exact final peak. Expiry claims
+no peak snapshot. Prior R225 failure and unknown later elapsed are unchanged.
+No retry, FEM import, JIT, mesh, assembly, solve or numerical attempt. The pinned
+/tmp/navier-fenicsx environment is absent; current Python 3.12.14 is not 3.12.13.
+
+Changed files across R226: REQUEST_LOG.md, WORK_SESSIONS.md; isolated
+verification/nonlinear_port/{systemd_bus.py,source_binding.py,systemd_backend.py,
+handshake.py,worker.py,probe_systemd.py,test_source_bus.py,test_host_protocol.py,
+README.md}; docs/realizability/POISEUILLE_LAUNCHER_R226.md and evidence/r226;
+SESSION_HANDOFF.md, STATUS.md, PROJECT_TRACKS.md, EXPERIMENT.md,
+PHYSICAL_REALIZABILITY_PLAN.md and CONTROL_RESEARCH_ROADMAP.md.
+Checks: 49 standard-library tests across six modules pass, no optional numerical
+modules loaded; all 21 Python files parse; real benign D-Bus/property/exit/expiry
+checks pass; cleanup confirmed; unchanged frozen manifest/environment,
+production sources and R225 evidence. Source/artifact SHA-256 and raw messages
+are in evidence/r226. Links/log-prefix/ID/whitespace/staging checks follow before
+publication. Read-only connection failures and successful private-manager
+connection are documented; no unit was launched during those checks.
+
+Skips: dependency installation, FEM/numerical/full-suite runs, tank/controller,
+physical/optical/hardware, trajectory/render/encode, Mac transfer, model/session
+switch and delegation. Actual FEM APIs/rank/accuracy/runtime remain unknown.
+No changed science, caps or pins; B2 failed, q64/q96 unused, R021 deferred.
+Next: GPT-6 Sol/high on PC/WSL daisy restores the exact pinned environment under
+a declared finite setup allocation, checks package metadata/interpreter, then
+stops before FEM imports or execution. No /new is required; next prompt Continue.
+Recommend Astra/high for later explicit fixture admission or any pin/scientific/
+containment decision. OpenAI Docs searched/opened the official Sol model page
+and checked high support; task fit is judgment, account access not verified.
+PC retains ownership, Mac released. STARTED dd27c10 and tested source b07dbdc
+published; final completion prepared for authorized scoped commit/push, with
+actual delivery hash/result in Git/final response and no post-push log edit.
+
+R226 final validation: 135 local documentation links resolve; Markdown fences
+balanced; 226 unique sequential requests; both prior log prefixes preserved.
+Frozen environment/manifest, production and R225 evidence unchanged. All tested
+Python source remains byte-identical to live checkpoint b07dbdc; recorded source
+and raw-artifact hashes match. All retained JSON parses; Git whitespace passes.
+Publication staged checks and remote delivery verification are the remaining
+Git operations, not additional scientific work.

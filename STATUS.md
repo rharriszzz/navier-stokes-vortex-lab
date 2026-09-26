@@ -1,15 +1,18 @@
 # Project status: a boundary-controlled engineering approximation
 
-Updated 2026-09-26 (America/New_York), through R225. PC/WSL `daisy` owns the
-repository. **R225 completed the critical source review, fixed the missing
-three-scalar state and numerical acceptance gaps, and passed 43 standard-library
-tests. No FEM execution is admitted.** The [R225 review](docs/realizability/POISEUILLE_REVIEW_R225.md)
-records the partial host backend, failed benign exit-metadata check and confirmed
-cleanup. Control clients remain outside the capped worker scope, corrected live
-exit/expiry is unverified, and the pinned FEM environment is absent. Next:
-Astra/high completes the finite whole-task launcher and bounded benign checks;
-follow the [single next task](SESSION_HANDOFF.md#next-task). No dependencies or
-FEM run in that step. R224 was published as f8f734f; R225 STARTED as c94a2d7.
+Updated 2026-09-26 (America/New_York), through R226. PC/WSL `daisy` owns the
+repository. **The finite whole-task launcher now passes benign clean-exit and
+independent-expiry/child-cleanup checks.** In-process manager calls remove the
+spawned-client gap; held workers verify clean source/interpreter identity.
+49 standard-library tests pass. The [R226 review](docs/realizability/POISEUILLE_LAUNCHER_R226.md)
+records the 5.418188160 s observed pair, effective limits and confirmed empty
+removed cgroups. R225 failure evidence remains unchanged. **No FEM is admitted;
+zero attempts granted/spent.** The pinned environment is absent.
+Next: Sol/high restores that exact environment and verifies package metadata,
+stopping before FEM imports or runs; follow the
+[single next task](SESSION_HANDOFF.md#next-task).
+R225 completion dc3cadd, R226 STARTED dd27c10 and tested source b07dbdc published;
+R226 completion delivery belongs in Git/final response.
 R223 was published as c679cfa. Historical September 22 snapshot: 21m 22s / 9:33 PM completion; 355,910 total
 tokens (300,015 input, 8,700,288 cached, 55,895 output, 20,311 reasoning);
 current Astra/high; 53% weekly left (17:37 on 28 Sep reset), 283 credits,
@@ -20,7 +23,7 @@ not project-specific usage. R222 completion bdc51f9 is verified on live remote m
 remain paused, with zero execution attempts.** The
 [R222 source and admission review](docs/realizability/POISEUILLE_DRIVER_R222.md)
 records the earlier 33 import-free checks. R225 subsequently reviewed and
-repaired that source; the remaining launcher task is linked above. R220 was published as
+repaired that source; R226 completed the launcher task and the environment prerequisite is linked above. R220 was published as
 f252f31; R221 reminder as cecb4dd. The
 [cost estimate](docs/PROJECT_RESOURCE_AND_COST_ESTIMATE.md) now includes confirmed
 $40 packages and the $100 Pro upgrade. The [process/model review](docs/PROCESS_REVIEW_AND_MODEL_ROUTING.md)
@@ -56,9 +59,9 @@ estimated at $12k–35k from scratch or $5k–18k additional in an equipped lab,
 excluding research labor. Extra pressure earns no range if delivery/optics
 limit first. These are budgetary judgments, not quotations or performance claims.
 Latest usage snapshot is recorded in REQUEST_LOG.md (R223); R197 remains historical.
-Latest technical work: [R225 critical review and source repairs](docs/realizability/POISEUILLE_REVIEW_R225.md)
+Latest technical work: [R226 whole-task launcher and benign validation](docs/realizability/POISEUILLE_LAUNCHER_R226.md)
 on the R222 driver and [R196 cube adapter](docs/realizability/CUBE_ADAPTER_R196.md).
-Forty-three import-free checks passed. FEM forms have not been constructed or assembled,
+Forty-nine import-free checks passed. FEM forms have not been constructed or assembled,
 and convergence is untested. Execution remains unadmitted with zero attempts.
 No boundary-driven core or feasible contraction range is established.
 
@@ -66,9 +69,9 @@ No boundary-driven core or feasible contraction range is established.
 |---|---|
 | What works? | Illustrative animation, saved-data checks and separate reference/analysis tools. |
 | Is the engineering goal demonstrated? | No validated boundary-driven contraction or boundary-only state estimator exists yet. |
-| What did the latest step establish? | Corrected driver wiring and recomputed result acceptance; partial Linux backend with observed held-worker limits, failed live exit collection and reconciled cleanup. [Evidence and limits](docs/realizability/POISEUILLE_REVIEW_R225.md). |
+| What did the latest step establish? | In-process whole-task launcher, verified clean source/interpreter binding, actual benign exit and independent expiry/child cleanup. [Evidence and limits](docs/realizability/POISEUILLE_LAUNCHER_R226.md). |
 | What blocks trusted numerical control results? | The nonlinear fixture has not run; B2 still fails its independent response-accuracy comparison and q64/q96 remain unused. |
-| What is next? | Complete whole-task coverage and bounded benign launcher checks on Astra/high, PC/WSL daisy; follow the single [next task](SESSION_HANDOFF.md#next-task). No FEM launch. |
+| What is next? | Restore the exact pinned environment on Sol/high, PC/WSL daisy; follow the single [next task](SESSION_HANDOFF.md#next-task). No FEM launch. |
 
 ## Goal and present conclusion
 
@@ -462,9 +465,9 @@ further movies. R191 completed the [similarity contract and first-test design](d
 including checked central side/endcap and surrounding-fluid accounting. The
 historical next analysis assessed inward transport versus wall diffusion after
 R192 quantified the operating point; R193 subsequently completed that screen.
-For the current [next task](SESSION_HANDOFF.md#next-task), R222 recommends
-**GPT-6 Astra / high / PC-WSL daisy** for critical source/admission review.
-Stop before FEM execution, tank/controller
+For the current [next task](SESSION_HANDOFF.md#next-task), R226 recommends
+**GPT-6 Sol / high / PC-WSL daisy** for exact environment restoration.
+Stop before FEM imports/execution, tank/controller
 implementation, procurement or physical work.
 R021 launch integration stays deferred; its accuracy diagnostic,
 completed R033 prerequisites and R070 repairs remain relevant. B2 is still

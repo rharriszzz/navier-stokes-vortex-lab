@@ -815,3 +815,33 @@ Bounded task: finite whole-task launcher/source binding, then newly bounded
 benign clean-exit and independent-expiry checks. Preserve R225 failed evidence
 and unknown late-reconciliation interval. Stop before dependencies/FEM, full
 suite, tank/physical/render work. FEM attempts remain zero.
+
+### R226 completion
+COMPLETED | 2026-09-26T04:28:12Z | PC/WSL daisy | released: no
+Outcome: finite in-process launcher/source binding and bounded benign validation
+complete. All 49 standard-library tests pass, no optional numerical imports;
+21 Python files parse. Clean actual exit 0 and independent timeout/signal-9
+worker+child termination verified in 5.418188160 s through summary save, within
+the declared new 30 s allocation. Both cgroups removed, observed PIDs absent,
+unknown_children=false. Inert failed-unit metadata remains. Snapshot/timing
+measurement tails disclosed; no exact final peak or recursive caller guarantee.
+R225 failure/charges and unknown later elapsed retained unchanged. Zero FEM
+attempts; no packages installed or FEM/JIT/mesh/assembly/solve executed.
+Files: in-process bus, source binding, backend/handshake/worker/probe/regressions,
+prototype README, R226 review and raw evidence, four track overviews, status/
+handoff and request/lifecycle logs; full scope in REQUEST_LOG.md R226.
+Evidence: docs/realizability/POISEUILLE_LAUNCHER_R226.md and evidence/r226.
+Checks: tests/import audit/ASTs, actual benign manager behaviors and cleanup;
+unchanged production/pins/manifest/R225 evidence. Documentation/log-prefix/
+ID/whitespace/staged checks before publication. Initial read-only connection
+failures resolved via host manager private socket, without worker launches.
+Skips: all numerical/dependency/full-suite/physical/render work, Mac transfer,
+model/session switch, delegation. Pinned environment absent; numerical APIs,
+rank, accuracy and runtime unmeasured. B2 failed, q64/q96 unused, R021 deferred.
+Next: Sol/high on this owner restores the exact environment with finite setup
+allocation and metadata/interpreter checks, stopping before FEM imports/runs.
+Astra/high for later fixture admission or changed scientific/pin/containment
+choices. Official Sol/high docs rechecked; no account/model switch claim.
+STARTED dd27c10 and clean tested source b07dbdc published. Final completion
+prepared for authorized scoped commit/push; delivery hash/result in Git/final
+response, no post-push edit. PC retains ownership; Mac released.

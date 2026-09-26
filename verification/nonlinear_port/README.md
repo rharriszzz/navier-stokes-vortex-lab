@@ -1,10 +1,11 @@
-# Isolated nonlinear port verification source — R195/R196/R222/R225
+# Isolated nonlinear port verification source — R195/R196/R222/R225/R226
 
 **Source and algebra evidence, not a validated FEM solver.** The
 [R195 fixture review](../../docs/realizability/NONLINEAR_VERIFICATION_R195.md)
 derives the exact data. The [R196 adapter review](../../docs/realizability/CUBE_ADAPTER_R196.md)
 records the adapter implementation. The [R225 critical review](../../docs/realizability/POISEUILLE_REVIEW_R225.md)
-repairs driver wiring/acceptance and records the current execution refusal. No production B1/B2
+repairs driver wiring/acceptance. The [R226 launcher review](../../docs/realizability/POISEUILLE_LAUNCHER_R226.md)
+records passed benign host checks; the absent pinned environment still prevents FEM admission. No production B1/B2
 module imports this directory; no dependency pins changed.
 
 - `polynomial.py`, `fixtures.py`: exact rational manufactured fields and
@@ -26,29 +27,32 @@ module imports this directory; no dependency pins changed.
   correction, degree-24/26 diagnostics and return quadrature samples. All FEM
   modules are injected after a supervised release.
 - `worker.py`: held worker entry point; checks reservation, admission, own
-  cgroup and one-thread settings before importing pinned FEM packages.
+  cgroup, clean source/interpreter binding and one-thread settings before importing pinned FEM packages.
 - `supervision.py`: exclusive reservation, held-scope fact checks, finite
-  timing/cleanup/result records and refusal of missing evidence. The concrete worker backend below remains refused for whole-task execution;
-  the current manifest admits zero attempts.
-- `handshake.py`, `systemd_backend.py`: atomic held/completed messages and a
-  Linux worker-scope backend. It reports incomplete whole-task coverage honestly:
-  newly spawned control clients are outside the worker scope. No FEM release.
-- `probe_systemd.py`: explicit benign host checks only; no FEM admission. R225's
-  clean case failed exit metadata collection and stopped before expiry testing.
-  Source repairs have mocked evidence only. Do not rerun without a bounded scope.
-- Five `test_*.py` modules: 43 standard-library tests, including complete driver
-  wiring with fake FEM boundaries and raw-evidence corruption refusals; no FEM import.
+  timing/cleanup/result records and refusal of missing evidence. The Linux backend
+  now passes benign whole-task checks; the current manifest admits zero attempts.
+- `handshake.py`, `systemd_backend.py`, `systemd_bus.py`: atomic held/completed
+  messages and in-process Linux manager calls, with no spawned control clients.
+  The finite caller and OS manager remain the explicit R103 trusted boundary.
+- `source_binding.py`: clean Git revision/root checks inside the held scope and
+  actual executable identity/hash binding before release.
+- `probe_systemd.py`: explicit benign host checks only. R226's separately bounded
+  clean-exit and independent-expiry/child-cleanup pair passed in 5.418188160 s.
+  R225 failure evidence is retained; do not rerun without a new bounded scope.
+- Six `test_*.py` modules: 49 standard-library tests, including complete driver
+  wiring with fake FEM boundaries, raw-evidence corruption, source binding and
+  manager-failure refusals; no FEM import.
 
 ```sh
-.venv/bin/python -m unittest verification.nonlinear_port.test_algebra verification.nonlinear_port.test_adapter verification.nonlinear_port.test_driver_supervision verification.nonlinear_port.test_driver_wiring verification.nonlinear_port.test_host_protocol -v
+.venv/bin/python -m unittest verification.nonlinear_port.test_algebra verification.nonlinear_port.test_adapter verification.nonlinear_port.test_driver_supervision verification.nonlinear_port.test_driver_wiring verification.nonlinear_port.test_host_protocol verification.nonlinear_port.test_source_bus -v
 ```
 
-A future admitted host backend must create and verify the held whole-task
-scope, release `worker.py`, observe its exit and confirm cleanup. The source
-joins the existing adapter and diagnostics for a single oracle, but no FEM
-package was imported and no mesh, form or solver was run. R225 ran a benign
-standard-library worker and reconciled its cleanup; its failed live check does
-not validate the corrected backend or independent expiry.
+The host backend creates and verifies a held task scope, observes actual exit
+and confirms cleanup; a separate execution admission is still required before
+releasing `worker.py` for FEM. No FEM package was imported and no mesh, form or
+solver ran. R226 validates benign behavior under the disclosed R103 boundary;
+it does not validate the numerical fixture. See its review for measurement tails,
+shortened probe deadlines, exact source revision and saved evidence.
 The [R222 review](../../docs/realizability/POISEUILLE_DRIVER_R222.md) records
 the exact source boundary and the remaining execution-admission decision.
 The sparse and analytical checks do not establish UFL validity, actual mesh
