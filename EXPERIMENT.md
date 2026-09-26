@@ -1,10 +1,11 @@
 # Experimental Concept: Finite-Scale Forced Vortex Analogue
 
-R196 completed [cube adapter and diagnostic source](docs/realizability/CUBE_ADAPTER_R196.md).
-Twenty-four import-free checks pass; FEM construction/assembly and convergence
-remain untested. Execution is unadmitted, with zero attempts. Next implement the
-single-fixture driver and finite supervision path; follow the single
-[handoff task](SESSION_HANDOFF.md#next-task). Stop before FEM execution.
+R225 completed [critical fixture review and source repairs](docs/realizability/POISEUILLE_REVIEW_R225.md).
+Forty-three standard-library checks pass; actual FEM assembly and convergence
+remain untested, with zero attempts. The worker backend lacks whole-task coverage;
+a benign live exit check failed and cleanup was confirmed. Next complete the
+finite whole-task launcher and benign checks; follow the single
+[handoff task](SESSION_HANDOFF.md#next-task). Stop before dependencies or FEM.
 No tank/hardware route or feasible contraction range is established.
 
 R188 priority update (2026-09-22): establish measurable essential dynamical

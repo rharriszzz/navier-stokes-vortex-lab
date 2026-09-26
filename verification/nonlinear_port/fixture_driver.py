@@ -11,7 +11,8 @@ from . import fixtures
 from .cube_adapter import (Assembler, RETURNS, boundary_values, create_cube,
                            exact_data, interpolate_state, sparse_solve, step_forms)
 from .diagnostics import (assemble_scalars, compatibility_report, field_forms,
-                          field_report, quadrature_comparison, step_checks)
+                          field_report, quadrature_comparison, step_checks,
+                          poiseuille_endpoint_budgets)
 from .manifest import validate as validate_manifest
 from .polynomial import face
 from .prototype import Refusal, newton
@@ -89,10 +90,14 @@ def numerical_decision(report, checked, comparison, corrections, gates):
                 'multiplier_errors', 'both_flux_errors'}
     if not required <= report.keys() or not comparison or not checked:
         raise Refusal('incomplete Poiseuille numerical evidence')
+    if any(len(report[k]) != 2 for k in ('multiplier_errors', 'both_flux_errors')):
+        raise Refusal('both return errors required')
     values = [report[k] for k in required if k not in ('multiplier_errors', 'both_flux_errors')]
     values += [*report['multiplier_errors'], *report['both_flux_errors']]
     if not all(type(v) in (float, int) and isfinite(v) for v in values):
         raise Refusal('nonfinite Poiseuille oracle evidence')
+    if any(report[k] < 0 for k in ('u_L2', 'p_L2_mean_zero', 'div_u_L2', 'traction_L2_returns')):
+        raise Refusal('negative Poiseuille norm')
     tol = gates['flux_gauge_eta_absolute']
     checks = {
         'velocity_pressure_exact': report['u_L2'] <= 1e-9 and report['p_L2_mean_zero'] <= 1e-9,
@@ -130,9 +135,13 @@ def run_poiseuille(modules, manifest, clock=time.monotonic):
     if not len(fixed) or not len(velocity_map):
         raise Refusal('missing lateral lift or velocity inventory')
     guess, perturbed_dof = nonexact_guess(trace.x.array.tolist(), velocity_map, fixed)
+    mixed_dofs = len(guess)
     w = fem.Function(space)
     w.x.array[:] = guess
     w.x.scatter_forward()
+    # The adapter's global state is (mixed u/p, P_minus, P_plus, eta).
+    # Keep the mixed Function assignment above separate from its scalar border.
+    guess += [0., 0., 0.]
     t_mesh = clock()
     forms, constants, context = step_forms(U, fem, domain, space, tags, w,
                                            previous, previous, dt, dt, 1,
@@ -203,10 +212,14 @@ def run_poiseuille(modules, manifest, clock=time.monotonic):
                           manifest['gates'], latest['rhs_norm'])
     decision = numerical_decision(report, checked, comparison,
                                    len(corrections), manifest['gates'])
+    endpoints = poiseuille_endpoint_budgets(base_values, dt)
+    decision['checks']['physical_endpoint_budgets'] = all(
+        entry['physical']['accepted'] for entry in endpoints.values())
+    decision['numerical_accepted'] = all(decision['checks'].values())
     t_diagnostics = clock()
     return {
         'fixture': 'poiseuille', 'subdivisions': 2, 'dt': dt,
-        'mixed_dofs': len(guess), 'global_dofs': len(guess)+3,
+        'mixed_dofs': mixed_dofs, 'global_dofs': len(guess),
         'fixed_velocity_dofs': len(fixed), 'perturbed_velocity_dof': perturbed_dof,
         'constraint_condition': condition, 'compatibility': compatibility,
         'frozen_row_scales': {'minimum': min(scales), 'maximum': max(scales)},
@@ -218,6 +231,8 @@ def run_poiseuille(modules, manifest, clock=time.monotonic):
                           'compatibility_rank_newton': t_solve-t_forms,
                           'diagnostic_form_jit_assembly_sampling': t_diagnostics-t_solve},
         'diagnostics_degree24': report, 'diagnostics_degree26': check_values,
+        'multipliers': state[-3:-1], 'eta': state[-1],
+        'physical_endpoint_budgets': endpoints,
         'quadrature_comparison': comparison, 'step_checks': checked,
         **decision,
     }

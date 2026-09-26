@@ -7477,3 +7477,62 @@ implement/verify the smallest real host backend if possible without FEM.
 End with explicit single-fixture admission or refusal. Stop before FEM imports,
 JIT/mesh/assembly/solves, dependencies, full suite, tank/physical/render work.
 FEM attempts remain zero. Publish STARTED before substantive review.
+
+**R225 outcome — 2026-09-26:** Completed the critical review in the existing
+session and repaired understood source defects. The n=2 driver omitted its
+three scalar unknowns; it now uses the complete mixed-plus-scalar state, with
+an end-to-end driver/Newton wiring regression using fake FEM boundaries.
+The controller recomputes numerical decisions from raw norms, signed budgets,
+quadrature differences, residual history, scalar values and measured Gram data.
+Added steady physical endpoint budgets with independently checked initial
+inventories, admission/run-directory binding, partial-start cleanup and
+memory/PID-event/late-completion refusals. Frozen science, manifest and pins
+unchanged. See docs/realizability/POISEUILLE_REVIEW_R225.md and evidence/r225.
+
+Added a concrete Linux held-worker backend and atomic completion handshake.
+The first sleep capability probe observed service exit but loss of cgroup
+counters (0.800626675 s). One benign standard-library worker case then verified
+actual held-worker memory/swap/PID/thread settings, but failed when systemd
+discarded exit metadata and unloaded the unit (0.173068943 s to failure).
+It stopped before the planned expiry case. Source fixes retain the exit record
+and handle a confirmed unloaded unit; mocked regressions pass, no live retry.
+Read-only reconciliation confirmed the exact unit not-found/inactive, MainPID=0,
+no cgroup directory and no worker PID 121650. No task child remains. That later
+reconciliation was outside the probe timer: complete elapsed time is unknown,
+not zero or a claimed success within the 30-second allocation.
+
+**Single-fixture admission refused; zero FEM attempts granted/spent.** Newly
+spawned systemd clients are outside the worker scope, so the backend deliberately
+reports whole-task coverage false. The corrected live exit/expiry path remains
+unverified. Exact source/interpreter binding at launch still needs a concrete
+check, and /tmp/navier-fenicsx is absent. No pinned environment was installed;
+project Python 3.12.14 is not the required FEM 3.12.13. Worker-scope observations
+cannot establish whole-task enforcement. The failed probe is retained unchanged.
+
+Changed files: verification/nonlinear_port/{diagnostics.py,fixture_driver.py,
+sparse.py,supervision.py,worker.py,test_algebra.py,test_driver_supervision.py,
+handshake.py,systemd_backend.py,probe_systemd.py,test_driver_wiring.py,
+test_host_protocol.py,README.md}; docs/realizability/POISEUILLE_REVIEW_R225.md;
+docs/realizability/evidence/r225/{checks.json,host_probe_failed.json};
+PROJECT_TRACKS.md, EXPERIMENT.md, PHYSICAL_REALIZABILITY_PLAN.md,
+CONTROL_RESEARCH_ROADMAP.md, SESSION_HANDOFF.md, STATUS.md, REQUEST_LOG.md and
+WORK_SESSIONS.md. Checks: 43 standard-library tests passed with no NumPy/FEM
+imports; 18 Python AST/whitespace checks; 130 local links; 225 unique IDs;
+append-only logs, unchanged manifest/environment and Git whitespace. Initial
+unittest discovery rejected the namespace-package directory; explicit loading
+of all five modules passed. Initial sandbox Git/systemd access refusals used
+approved external checks. Official DOLFINx mesh docs and installed systemd 249
+manuals were read; public systemd page retrieval failed. Final lifecycle/staged
+checks follow. OpenAI Docs rechecked Astra/high support; task fit is judgment.
+
+Skips: FEM imports/JIT/mesh/assembly/solve, dependencies, live expiry and corrected
+live retry, full suite, tank/controller, physical/optical/hardware, trajectory/
+render/encode, model/session switch, delegation and machine transfer. Numerical
+API/rank/accuracy/runtime remain unmeasured. PC retains ownership, Mac released;
+B2 failed, q64/q96 unused, R021 deferred. Next: Astra/high on daisy completes the
+finite whole-task launcher/source binding and bounded benign exit/expiry checks,
+stopping before dependencies or FEM. Exact environment restoration follows once
+that works. Recommend a cheaper model only once the containment choice is settled
+and availability checked. Next prompt: Continue; no new session required by the
+repository protocol. R224 f8f734f and R225 STARTED c94a2d7 were pushed; completion
+is prepared for scoped publication, with delivery hash/result in Git/final response.

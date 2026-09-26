@@ -128,6 +128,9 @@ class AlgebraChecks(unittest.TestCase):
         self.assertEqual(volume(u[0]), F(2, 3))
         self.assertEqual(p.at(0, 0)-p.at(0, 1), 8*MU)
         self.assertEqual(stress(u, p)[1][0], 4*MU*(1-2*y))
+        self.assertEqual(volume(F(1, 2)*dot(u, u)), F(4, 15))
+        self.assertEqual(volume(x*u[1]-y*u[0]), -F(1, 3))
+        self.assertEqual(volume(MU*u[0].d(1)**2), F(8, 15))
         self.assertEqual(volume(p), 0)
 
     def test_rigid_rotation_oracle(self):

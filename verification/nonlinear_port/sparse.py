@@ -102,7 +102,6 @@ def constraint_condition(rows, fixed):
     For C with the fixed velocity columns removed, cond2(C) is bounded by
     sqrt(||CC^T||inf ||(CC^T)^-1||inf). Tiny pivots or bound > 1e6 refuse.
     """
-    from math import sqrt
     from .prototype import Refusal
     if len(rows) != 3 or not rows[0] or any(len(r) != len(rows[0]) for r in rows):
         raise Refusal('three equally sized scalar rows required')
@@ -112,9 +111,26 @@ def constraint_condition(rows, fixed):
         raise Refusal('invalid fixed constraint column')
     gram = [[fsum(a*b for k, (a, b) in enumerate(zip(ri, rj)) if k not in fixed)
              for rj in rows] for ri in rows]
+    return condition_from_gram(gram)
+
+
+def condition_from_gram(gram):
+    """Recompute the saved three-row condition bound without trusting its flag."""
+    from math import sqrt
+    from .prototype import Refusal
+    if (len(gram) != 3 or any(len(row) != 3 for row in gram)
+            or any(type(v) not in (float, int) or not isfinite(v) for row in gram for v in row)
+            or any(gram[i][i] <= 0 for i in range(3))
+            or any(gram[i][j] != gram[j][i] for i in range(3) for j in range(3))):
+        raise Refusal('invalid constraint Gram matrix')
     norm = max(fsum(abs(v) for v in r) for r in gram)
     if not isfinite(norm) or norm == 0:
         raise Refusal('zero or overflowing constraint Gram matrix')
+    a, b, c = gram[0]
+    _, d, e = gram[1]
+    f = gram[2][2]
+    if a*d-b*b <= 0 or a*(d*f-e*e)-b*(b*f-c*e)+c*(b*e-c*d) <= 0:
+        raise Refusal('constraint Gram matrix is not positive definite')
     aug = [r[:] + [float(i == j) for j in range(3)] for i, r in enumerate(gram)]
     for j in range(3):
         pivot = max(range(j, 3), key=lambda i: abs(aug[i][j]))

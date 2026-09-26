@@ -1,14 +1,22 @@
 # Current session handoff
 
-Last updated 2026-09-24 (America/New_York) for R224.
+Last updated 2026-09-26 (America/New_York) for R225.
 **PC/WSL `daisy` owns the repository.** No transfer; Mac remains released.
-**R224 recommends the R222 critical review as the next substantive step:**
-audit the tiny Poiseuille test's mathematics and acceptance checks, complete
-and verify the smallest host supervision backend where possible, then give a
-specific go/no-go decision for one later test. Use Astra/high on PC/WSL daisy.
-The source has 33 import-free checks but no actual FEM execution evidence.
-This recommendation does not resume implementation; wait for user instruction.
-R223 published the supplied snapshot and pause as c679cfa.
+**R225 completed the critical review and scoped source repairs in this session.**
+The driver now includes all three scalar unknowns; numerical acceptance is
+recomputed from raw terms, with physical endpoint budgets and stronger attempt,
+cleanup and persistence checks. **43 standard-library tests pass; no FEM imported.**
+The [R225 review](docs/realizability/POISEUILLE_REVIEW_R225.md) records the concrete
+Linux worker backend, one failed benign completion probe and confirmed cleanup.
+Execution is refused: newly spawned control clients are outside the capped worker
+scope, the corrected live exit/expiry path is unverified and the pinned FEM
+environment is absent. **Zero FEM attempts granted/spent.**
+Next: Astra/high on PC/WSL daisy completes the finite whole-task launcher and
+bounded benign exit/expiry checks; stop before dependency installation or FEM.
+R224 recommendation was published as f8f734f before R225's required clean pull;
+R225 STARTED was published as c94a2d7. Completion delivery belongs in Git/final
+response. No model/session switch, delegation or ownership transfer occurred.
+R223 published the supplied snapshot and pause as c679cfa. Historical snapshot:
 User reports 21m 22s / 9:33 PM completion, 355,910 total tokens (300,015 input,
 8,700,288 cached, 55,895 output, 20,311 reasoning), current Astra/high,
 53% weekly remaining (17:37 on 28 Sep reset), 283 credits and 100% Luna Reserve
@@ -19,8 +27,8 @@ R222 completion bdc51f9 was verified on live remote main during R223 preflight.
 R222 completed the bounded n=2 Poiseuille driver, held worker and finite
 supervision **source** step with 33 import-free tests. No FEM or scope ran;
 execution remains unadmitted with zero attempts. The [R222 review](docs/realizability/POISEUILLE_DRIVER_R222.md)
-records source and host limits. **When resumed: GPT-6 Astra / high / PC-WSL daisy** for
-critical formulation, source and admission review; stop before FEM execution.
+records source and host limits. R225 completed that critical review; the
+remaining launcher work is specified in the single Next task below.
 R220 published as f252f31 and was verified on remote main. R221 reminder
 records were prepared locally; Git history records their later delivery.
 R221 did not switch models or resume implementation; R222 resumed only source work.
@@ -76,9 +84,9 @@ R196 completed [cube adapter and diagnostic source](docs/realizability/CUBE_ADAP
 R222 joined it to a single-fixture driver and finite supervised worker/controller
 source; 33 standard-library checks pass. FEM imports, UFL construction,
 mesh/assembly/solves, actual scope and convergence remain untested.
-**Review the R222 source and host backend/admission boundary. Stop before FEM
-execution.** Execution remains unadmitted, with zero attempts; there is a held
-worker entry point but no concrete verified host backend. Full convergence-suite
+**R225 reviewed the R222 source and admission boundary. Complete the remaining
+whole-task launcher before any FEM execution.** Execution remains unadmitted, with zero attempts; there is a concrete worker backend, but whole-task coverage and its corrected
+live completion/expiry behavior are not verified. Full convergence-suite
 and tank launches remain unadmitted.
 Tank implementation/execution remains unadmitted. No actual base, gain or feasible
 contraction range is established. R222 recommends GPT-6 Astra / high / PC-WSL `daisy` for critical review;
@@ -178,12 +186,12 @@ and physical-work limits remain unchanged.
 | Owner | PC/WSL `daisy`; Mac `fire.lan` released after published R161 handoff and R162 receipt. |
 | Checkout | `/home/rharris/git/navier-stokes-vortex-lab`. |
 | Branch/upstream | `main` / `origin/main` |
-| Starting state | R224 began with clean rharris-owned main tracking locally stored origin/main at c679cfa and empty stashes. |
+| Starting state | R225 deliberately published R224 as f8f734f, then completed the required clean fast-forward pull with HEAD equal to fetched origin/main; empty stashes, same rharris/daisy owner. STARTED c94a2d7 published. |
 | Interpreter | `/home/rharris/git/navier-stokes-vortex-lab/.venv/bin/python`, CPython 3.12.14 with NumPy 2.5.3 |
 | Other owner/process | Mac `fire.lan` released in the published R161 handoff. Local Git cannot inspect another checkout's unpublished state. |
-| Task processes | R224 performs recommendation/documentation checks only; no workload launched. R222 recorded no task child remaining. |
+| Task processes | R225 ran standard-library tests, a sleep capability probe and one benign held-worker case. The latter failed exit metadata collection; exact unit/cgroup/PID cleanup was confirmed. No remaining task process, FEM or physical workload. |
 | Symbolic environment | `/tmp/navier-r183-sympy/bin/python`, Python 3.12.14, SymPy 1.14.0, mpmath 1.3.0; recreate using `requirements-symbolic.txt` if missing. Existing environments unchanged. |
-| Delivery state | R223 published as c679cfa. R224 recommendation records remain local; no new commit/push authorization. Wait for user instruction; PC retains ownership, FEM attempts zero. |
+| Delivery state | R224 f8f734f and R225 STARTED c94a2d7 published. R225 completion prepared for authorized scoped commit/push; final delivery hash/result belong in Git/final response. PC retains ownership, FEM attempts zero. |
 
 ## Current result and limits
 
@@ -313,6 +321,53 @@ write access. The tool sandbox denies `.git` writes, `ps`, unrestricted
 agent-side POV-Ray backtraces are unavailable.
 
 ## Next task
+
+**Astra/high / PC-WSL daisy: complete the finite whole-task launcher for the
+single n=2 Poiseuille fixture and validate its benign exit/expiry behavior.**
+Read the [R225 review](docs/realizability/POISEUILLE_REVIEW_R225.md), retained
+[evidence](docs/realizability/evidence/r225/checks.json), prototype source and
+frozen manifest. The numerical state-size/acceptance repairs are complete;
+actual FEM assembly remains untested. Preserve the R103 practical trust boundary
+and all limits; no general monitor/platform rewrite or new science choices.
+
+1. Bring newly spawned control clients into the enforced/measured task boundary,
+   or replace them with an in-process manager interface. Do not call them shared
+   infrastructure. Verify the actual clean executed source and interpreter match
+   the admission; a supplied commit string alone is insufficient.
+2. Before live checks, state one bounded allocation for the corrected clean
+   completion and independent-expiry/child-cleanup cases. Preserve R225's
+   0.800626675 s capability and 0.173068943 s failed-probe observations and raw
+   failure. Later manual reconciliation was outside that timer; total elapsed
+   through reconciliation is unknown, not a claimed 30-second success. Do not
+   silently reset or auto-retry. Use only benign standard-library work,
+   held release, kernel limits, independent expiry, and explicit cleanup.
+   The RemainAfterExit repair has mocked evidence only; expiry case was not run.
+3. End with measured whole-task coverage or a specific remaining blocker.
+   Stop before dependency installation, FEM imports/JIT/mesh/assembly/solves,
+   full suite, tank/physical/render work. Grant no FEM attempt in this step.
+   Once the launcher works, exact pinned-environment restoration is the next
+   prerequisite; project Python 3.12.14 cannot replace pinned FEM Python 3.12.13.
+
+Completion means a small usable launcher with bounded benign evidence and a
+concrete remaining admission checklist. Keep 180 s total / 1536 MiB / no swap /
+32 tasks, one rank/numerical thread and independent <=150 s worker expiry.
+Early Mac validation remains portable algebra after normal ownership handoff;
+no transfer now. Retain Astra/high until the containment decision is settled,
+then recommend a current available cheaper model for mechanical work only.
+No new session is required by repository policy; the next prompt is **Continue**.
+
+R225 changed the isolated driver/diagnostic/condition/worker/supervision sources,
+added atomic handshake, systemd backend, benign probe and two regression modules;
+updated tests, prototype README, review/evidence, the four track overviews and
+REQUEST_LOG.md, WORK_SESSIONS.md, STATUS.md and this handoff. Checks: 43 tests
+with no optional numerical imports, source/links/log-preservation/whitespace,
+read-only host checks, the failed live probe and subsequent confirmed cleanup.
+No numerical result, FEM attempt, installation, rendering or physical work.
+Unresolved: complete task coverage, corrected live exit/expiry, clean source
+binding, pinned environment and actual FEM API/rank/accuracy/runtime. Completion
+prepared for scoped publication; no post-push metadata edit.
+
+### Historical R223–R224 review recommendation (completed by R225)
 
 **Wait for the user's instruction to resume the critical review below.**
 R224 recommends that bounded task with a concrete go/no-go endpoint for one

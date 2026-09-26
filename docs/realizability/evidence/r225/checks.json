@@ -1,0 +1,73 @@
+{
+  "request": "R225",
+  "fem_attempts_granted": 0,
+  "fem_attempts_spent": 0,
+  "standard_library_tests": 43,
+  "tests_passed": true,
+  "interpreter": "project .venv CPython 3.12.14",
+  "optional_numerical_modules_imported": [],
+  "test_modules": [
+    "test_algebra",
+    "test_adapter",
+    "test_driver_supervision",
+    "test_driver_wiring",
+    "test_host_protocol"
+  ],
+  "test_discovery_failure": "unittest discover rejected the namespace-package start directory; explicit module loading passed",
+  "host": "daisy",
+  "systemd_version": "249.11-0ubuntu3.22",
+  "capability_probe": {
+    "unit": "navier-r225-probe-70b9b574ac694a038f663ff81795f7fc.service",
+    "sleep_seconds": 0.5,
+    "elapsed_seconds": 0.8006266750162467,
+    "result": "active/exited and ExecMainStatus=0; ControlGroup empty; stop succeeded"
+  },
+  "backend_probe": {
+    "result": "FAILED: manager discarded exit status and unloaded service",
+    "elapsed_seconds": 0.17306894299690612,
+    "expiry_case_ran": false,
+    "corrected_source_retested_live": false,
+    "end_to_end_through_manual_reconciliation_seconds": null,
+    "observed_interval_excludes_later_manual_reconciliation": true
+  },
+  "cleanup_reconciliation": {
+    "unit": "navier-poiseuille-a07c0bd308b94b398260264ca153992d.service",
+    "LoadState": "not-found",
+    "ActiveState": "inactive",
+    "MainPID": 0,
+    "ControlGroup": "",
+    "cgroup_directory_absent": true,
+    "worker_pid": 121650,
+    "worker_proc_directory_absent": true
+  },
+  "pinned_environment": "/tmp/navier-fenicsx absent; no install",
+  "execution_decision": "REFUSED: worker-only scope excludes spawned control clients; live expiry and corrected exit path unverified; pinned environment absent",
+  "source_sha256": {
+    "verification/nonlinear_port/test_host_protocol.py": "f9d27ad0077410737ec7454d57909122997bf80bf1a4dd2d8d98f922c2a911f1",
+    "verification/nonlinear_port/diagnostics.py": "795ac30f63534e955e4639df26aaf4b1e11c1a2c1bef64404bb1ae236acc6f99",
+    "verification/nonlinear_port/supervision.py": "0b3dcb685c6672a1fb096ba06fb7aa7468d8903cb698337260b9f4e5ae2f9e04",
+    "verification/nonlinear_port/fixtures.py": "91e5c8a971efe1687ad5856192b37436932a4ac094fce4b26ed994697431c584",
+    "verification/nonlinear_port/sparse.py": "38e5b9c847a51b41a366d4e5f82fcb7a805b2f31fc4f878d695368dd33abfc44",
+    "verification/nonlinear_port/probe_systemd.py": "a27af6f2492318aa5692944182db03a78e87f8aa84572b80c58eb5b4816542a3",
+    "verification/nonlinear_port/fixture_driver.py": "b2d185e1aba145f0547ca8073a0cf56479fff2e31864870076e500e54ed4dc8a",
+    "verification/nonlinear_port/test_adapter.py": "1fa9bfbccc34648e398c5f2d7c12c1833f0fef4522aba39d9e8e74ca75ac6e00",
+    "verification/nonlinear_port/worker.py": "d937a31e0d4149388dc5e19f9de4dcc6dee2eecdcd0b67eb95af0e32bf7c16c4",
+    "verification/nonlinear_port/test_algebra.py": "5667e2144e13ede1b2d1d7cab8752b2c74f89c040ff4eddc33993d6e7608d459",
+    "verification/nonlinear_port/manifest.py": "3c343522aa294e0fa3971ffa109b9060d3bea0cfb7e998a7194f5abd779a0269",
+    "verification/nonlinear_port/cube_adapter.py": "a606b475774d9322f14ab8844e41c6489e614de4c1d9c461a6d3f5414063c6a2",
+    "verification/nonlinear_port/test_driver_wiring.py": "19ec80c8442b7b5f4da6af9201ee6adcaccb031ad92e726824ba61585c907220",
+    "verification/nonlinear_port/systemd_backend.py": "b4aaafac51700386274ffe9bc0cf7e1a647a2d2f7200c94137648bc3f22be0a2",
+    "verification/nonlinear_port/polynomial.py": "418a3ac9338f14c659716579abb3404b95ad550de062083606de13b7b4e159b3",
+    "verification/nonlinear_port/test_driver_supervision.py": "87e074ef873703b71cfff7f6fb53af8b168634da18cc3361200de65d2f832330",
+    "verification/nonlinear_port/prototype.py": "883f4df2765930655a859aa9e5f9882b90c122632f823f0a081e366284e34c96",
+    "verification/nonlinear_port/handshake.py": "911f7f0fe2d2f21e7dc4960fe47125c51cb0e1c6d6669623e68f474dde8c436c"
+  },
+  "manifest_sha256": "7a8bda917e6b46994ad24c68e0b6c6013b7d6776f90c86a6de763f31f52fa558",
+  "metadata_validation": {
+    "python_files": 18,
+    "unique_request_ids": 225,
+    "local_link_targets": 130,
+    "log_prefix_preserved": true,
+    "frozen_manifest_and_environment_unchanged": true
+  }
+}

@@ -772,3 +772,34 @@ Bounded task: critical formulation/source/acceptance review, understood fixes,
 and minimal actual host backend verification if possible without FEM. End with
 explicit single-fixture admission/refusal. Stop before FEM imports/JIT/mesh/
 assembly/solves, dependencies, full suite, tank/physical/render work. Attempts 0.
+
+
+### R225 completion
+COMPLETED | 2026-09-26T04:11:01Z | PC/WSL daisy | released: no
+Outcome: critical fixture review and source corrections complete; single-fixture
+execution REFUSED, FEM attempts 0. Fixed N versus N+3 driver state, recomputed
+raw numerical acceptance/condition, endpoint budgets, one-directory admission,
+partial-start cleanup and cap/late-save refusals. Added atomic worker handshake,
+Linux worker-scope backend and regression/benign probe source. Whole-task control
+client coverage is false, live exit repair/expiry unverified, pinned FEM absent.
+Files: 24 completion files, enumerated in REQUEST_LOG.md R225; isolated prototype
+sources/tests/README, R225 review/evidence, four track overviews, status/handoff
+and lifecycle/request logs. STARTED c94a2d7 pushed after R224 f8f734f and required
+clean fast-forward pull. Same owner; no stashes, transfer, model switch or delegation.
+Checks: 43 standard-library tests, no optional numerical imports, 18 source AST/
+whitespace checks, 130 local links, 225 unique IDs, log-prefix preservation,
+unchanged manifest/environment and Git whitespace. Namespace-package discovery
+failed; explicit module loading passed. Final staged/lifecycle checks follow.
+Host evidence: capability probe 0.800626675 s; benign held-worker case failed
+exit metadata collection at 0.173068943 s, before expiry case. Exact unit/cgroup/
+PID cleanup later confirmed read-only; no task survivor. Full elapsed interval
+through that later reconciliation is unknown; no within-cap success asserted.
+No automatic retry. Source repairs have mocked evidence only.
+Evidence: docs/realizability/POISEUILLE_REVIEW_R225.md and evidence/r225.
+Skips: FEM/JIT/assembly/solve, dependencies, corrected live retry/expiry, full
+suite, tank/physical/optical/hardware, trajectory/render/encode or production B1/B2.
+Next: Astra/high on PC/WSL daisy completes finite whole-task launcher/source
+binding and a newly bounded benign exit/expiry check pair, retaining prior failed
+evidence/charges. Stop before dependencies/FEM; then restore exact environment
+as a subsequent prerequisite. Completion prepared for scoped commit/push;
+delivery hash/result in Git/final response; no post-push edit. PC retains ownership.

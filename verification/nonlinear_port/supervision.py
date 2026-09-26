@@ -1,4 +1,4 @@
-"""Finite one-attempt Poiseuille controller source, with no live backend.
+"""Finite one-attempt Poiseuille controller; no admitted whole-task backend.
 
 An admitted Linux backend must create a held whole-task scope, verify effective
 limits and independent expiry, then release a pinned worker. This controller
@@ -16,8 +16,10 @@ import time
 
 from .manifest import validate as validate_manifest
 from .prototype import Refusal
+from .sparse import condition_from_gram
 from .fixture_driver import numerical_decision
-from .diagnostics import ANGULAR_TERMS, ENERGY_TERMS
+from .diagnostics import (field_report, quadrature_comparison, step_checks,
+                          compatibility_report, finite, poiseuille_endpoint_budgets)
 
 
 CAPS = dict(elapsed_seconds=180, whole_task_memory_mib=1536, swap_mib=0,
@@ -73,73 +75,93 @@ def verify_held_scope(facts, scope_id):
     return dict(facts)
 
 
-def validate_worker_result(payload, versions=None, gates=None):
-    """A field report alone can never accept an attempt."""
-    required = {'fixture', 'subdivisions', 'numerical_accepted', 'checks',
-                'compatibility', 'constraint_condition', 'nonlinear_history',
-                'linear_corrections', 'return_quadrature_sample_counts',
-                'minimum_return_normal_velocity', 'diagnostics_degree24',
-                'diagnostics_degree26', 'quadrature_comparison', 'step_checks',
+def validate_worker_result(payload, versions, gates):
+    """Recompute decisions from finite saved terms; never trust cached PASS flags."""
+    required = {'fixture', 'subdivisions', 'dt', 'mixed_dofs', 'global_dofs',
+                'numerical_accepted', 'checks', 'compatibility',
+                'constraint_condition', 'nonlinear_history', 'linear_corrections',
+                'return_quadrature_sample_counts', 'minimum_return_normal_velocity',
+                'diagnostics_degree24', 'diagnostics_degree26',
+                'quadrature_comparison', 'step_checks', 'multipliers', 'eta',
+                'physical_endpoint_budgets',
                 'phase_seconds', 'worker_intervals', 'actual_versions'}
-    if not required <= payload.keys() or payload['fixture'] != 'poiseuille' or payload['subdivisions'] != 2:
+    if not isinstance(payload, dict) or not required <= payload.keys():
         raise Refusal('incomplete one-fixture worker result')
-    if (payload['numerical_accepted'] is not True or not payload['checks']
-            or any(v is not True for v in payload['checks'].values())
-            or payload['step_checks'].get('numerical_step_accepted') is not True
-            or len(payload['linear_corrections']) < 1
-            or any(not item.get('accepted') for item in payload['quadrature_comparison'].values())):
-        raise Refusal('failed numerical gate or missing verified correction')
+    if (payload['fixture'] != 'poiseuille' or type(payload['subdivisions']) is not int
+            or payload['subdivisions'] != 2 or payload['dt'] != .125
+            or type(payload['mixed_dofs']) is not int
+            or not 0 < payload['mixed_dofs'] <= CAPS['velocity_pressure_dofs']
+            or type(payload['global_dofs']) is not int
+            or payload['global_dofs'] != payload['mixed_dofs']+3):
+        raise Refusal('wrong fixture or dof inventory')
     compatibility = payload['compatibility']
     condition = payload['constraint_condition']
-    if (not isinstance(compatibility, dict) or not isinstance(condition, dict)
-            or any(type(compatibility.get(k)) not in (int, float) or not isfinite(compatibility[k])
-                   for k in ('defect', 'limit'))
-            or abs(compatibility['defect']) > compatibility['limit']
-            or type(condition.get('condition_bound')) not in (int, float)
-            or not isfinite(condition['condition_bound'])
-            or not 1 <= condition['condition_bound'] <= 1e6):
-        raise Refusal('missing or failed compatibility/rank evidence')
-    if (payload['return_quadrature_sample_counts'] is None
-            or len(payload['return_quadrature_sample_counts']) != 2
-            or any(type(n) is not int or n < 1 for n in payload['return_quadrature_sample_counts'])
-            or len(payload['nonlinear_history']) < 2):
-        raise Refusal('missing return samples or correction history')
+    if (not isinstance(condition, dict)
+            or condition.get('method') != 'sqrt infinity-norm condition of three-row Gram'
+            or len(condition.get('gram', [])) != 3
+            or any(len(row) != 3 for row in condition['gram'])):
+        raise Refusal('missing measured constraint rank evidence')
+    finite([v for row in condition['gram'] for v in row])
+    if condition_from_gram(condition['gram']) != condition:
+        raise Refusal('constraint condition differs from saved Gram matrix')
+    if not isinstance(compatibility, dict) or compatibility.get('targets') != [0., 0.]:
+        raise Refusal('wrong Poiseuille return targets')
+    recomputed = compatibility_report(compatibility['lateral_flux'],
+                                     compatibility['targets'],
+                                     compatibility['absolute_term_sum'],
+                                     condition['condition_bound'])
+    if recomputed != compatibility:
+        raise Refusal('compatibility decision differs from saved terms')
+    counts = payload['return_quadrature_sample_counts']
+    history, corrections = payload['nonlinear_history'], payload['linear_corrections']
+    if (not isinstance(counts, list) or len(counts) != 2
+            or any(type(n) is not int or n < 1 for n in counts)
+            or not 2 <= len(history) <= 13 or len(corrections) != len(history)-1):
+        raise Refusal('missing return samples or complete correction history')
+    for item in corrections:
+        if not isinstance(item, dict) or set(item) != {'true_residual', 'rhs_norm'}:
+            raise Refusal('incomplete linear correction evidence')
+        finite(item.values())
+        if (min(item.values()) < 0
+                or item['true_residual'] > max(1e-13, 1e-8*item['rhs_norm'])):
+            raise Refusal('failed linear correction')
     report = payload['diagnostics_degree24']
-    raw = report.get('raw') if isinstance(report, dict) else None
-    raw_required = {'volume', 'pressure_mean', 'p_error_integral', 'p_error_squared',
-                    'flux_0', 'flux_1', 'area_0', 'area_1', 'lateral_flux',
-                    'boundary_absolute_flux', 'energy_identity_storage',
-                    'energy_identity_dissipation', 'kinetic_discrete_derivative',
-                    *('angular.'+k for k in ANGULAR_TERMS),
-                    *('energy.'+k for k in ENERGY_TERMS),
-                    *(k+'_squared' for k in ('u_L2', 'u_H1_seminorm',
-                                            'div_u_L2', 'traction_L2_returns'))}
-    if (not isinstance(raw, dict) or not raw_required <= raw.keys()
-            or set(payload['diagnostics_degree26']) != set(raw)
-            or set(payload['quadrature_comparison']) != set(raw)
-            or report.get('angular_budget', {}).get('accepted') is not True
-            or report.get('energy_budget', {}).get('accepted') is not True):
-        raise Refusal('incomplete raw diagnostic or budget inventory')
-    if gates is not None:
-        decision = numerical_decision(report, payload['step_checks'],
-                                       payload['quadrature_comparison'],
-                                       len(payload['linear_corrections']), gates)
-        if decision['numerical_accepted'] is not True or decision['checks'] != payload['checks']:
-            raise Refusal('worker numerical decision does not match recorded terms')
-    if versions is not None and any(payload['actual_versions'].get(k) != v
-                                    for k, v in versions.items()):
+    if not isinstance(report, dict) or 'raw' not in report:
+        raise Refusal('missing raw diagnostics')
+    # For this frozen oracle both cap pressure means and flux totals are zero.
+    rebuilt = field_report(report['raw'], payload['multipliers'], [0., 0.],
+                           [0., 0.], payload['eta'])
+    if rebuilt != report:
+        raise Refusal('field report differs from raw diagnostics')
+    comparison = quadrature_comparison(report['raw'], payload['diagnostics_degree26'],
+                                       gates['quadrature_relative_change'])
+    latest = corrections[-1]
+    checked = step_checks(rebuilt, [payload['minimum_return_normal_velocity']],
+                          history, latest['true_residual'], gates, latest['rhs_norm'])
+    decision = numerical_decision(rebuilt, checked, comparison, len(corrections), gates)
+    endpoints = poiseuille_endpoint_budgets(report['raw'], payload['dt'])
+    decision['checks']['physical_endpoint_budgets'] = all(
+        entry['physical']['accepted'] for entry in endpoints.values())
+    decision['numerical_accepted'] = all(decision['checks'].values())
+    if (comparison != payload['quadrature_comparison'] or checked != payload['step_checks']
+            or endpoints != payload['physical_endpoint_budgets']
+            or decision['checks'] != payload['checks']
+            or payload['numerical_accepted'] is not True
+            or decision['numerical_accepted'] is not True):
+        raise Refusal('failed or inconsistent numerical evidence')
+    if any(payload['actual_versions'].get(k) != v for k, v in versions.items()):
         raise Refusal('worker reported different pinned versions')
     phases = payload['phase_seconds']
+    intervals = payload['worker_intervals']
     if (not isinstance(phases, dict) or set(phases) != {
             'mesh_and_lift', 'primary_form_setup_jit',
             'compatibility_rank_newton', 'diagnostic_form_jit_assembly_sampling'}
-            or not isinstance(payload['worker_intervals'], dict)
-            or not all(type(v) in (int, float) and isfinite(v) and v >= 0
-                       for v in [*phases.values(), *payload['worker_intervals'].values()])):
-        raise Refusal('missing or nonfinite worker timing inventory')
-    minimum = payload['minimum_return_normal_velocity']
-    if type(minimum) not in (float, int) or not isfinite(minimum) or minimum < -1e-8:
-        raise Refusal('unresolved return backflow')
+            or not isinstance(intervals, dict) or set(intervals) != {
+                'import_seconds', 'fixture_setup_jit_and_solve_seconds'}):
+        raise Refusal('missing worker timing inventory')
+    finite([*phases.values(), *intervals.values()])
+    if any(v < 0 for v in [*phases.values(), *intervals.values()]):
+        raise Refusal('negative worker timing')
     return payload
 
 
@@ -159,7 +181,8 @@ def supervise_once(run_dir, manifest_path, admission, backend, *,
             or admission.get('fixture') != 'poiseuille'
             or admission.get('attempts_granted') != 1
             or admission.get('source_commit') != source_commit
-            or admission.get('manifest_sha256') != digest):
+            or admission.get('manifest_sha256') != digest
+            or admission.get('run_directory') != str(Path(run_dir).resolve())):
         raise Refusal('no matching explicit one-fixture execution admission')
     if not isinstance(source_commit, str) or len(source_commit) != 40:
         raise Refusal('missing bound source commit')
@@ -169,7 +192,7 @@ def supervise_once(run_dir, manifest_path, admission, backend, *,
         raise Refusal('host containment backend unavailable')
 
     start = monotonic()
-    directory = Path(run_dir)
+    directory = Path(run_dir).resolve()
     directory.mkdir(parents=False, exist_ok=False)
     reservation = dict(status='RESERVED', fixture='poiseuille', attempt=1,
                        source_commit=source_commit, manifest_sha256=digest,
@@ -207,6 +230,8 @@ def supervise_once(run_dir, manifest_path, admission, backend, *,
         result['numerical'] = payload
         log.append('Complete numerical payload loaded and checked.')
     except Exception as exc:
+        # A partially started service still belongs to this attempt.
+        handle = handle or getattr(backend, 'active_handle', None)
         result['reason'] = f'{type(exc).__name__}: {exc}'
         log.append(result['reason'])
     finally:
@@ -223,8 +248,10 @@ def supervise_once(run_dir, manifest_path, admission, backend, *,
                         or cleanup['memory_peak_bytes'] < 0
                         or cleanup.get('memory_events') is None
                         or not isinstance(cleanup['memory_events'], dict)
+                        or cleanup['memory_events'].get('max', 1) != 0
                         or cleanup['memory_events'].get('oom', 1) != 0
                         or cleanup['memory_events'].get('oom_kill', 1) != 0
+                        or cleanup.get('pids_events', {}).get('max', 1) != 0
                         or type(cleanup.get('pids_peak')) is not int
                         or not 0 <= cleanup['pids_peak'] <= 32):
                     result['reason'] = 'missing, exceeded or unknown cleanup/resource evidence'
@@ -265,7 +292,8 @@ def supervise_once(run_dir, manifest_path, admission, backend, *,
             _save_new(directory/'completion.json', completion)
         except Exception as exc:
             raise Refusal(f'completion persistence incomplete: {exc}') from exc
-        if monotonic()-start > CAPS['elapsed_seconds']:
+        if (monotonic()-start > CAPS['elapsed_seconds']
+                or (finish_start is not None and monotonic()-finish_start > FINISH_SECONDS)):
             # The completion record itself finished late. Preserve both records;
             # a late marker overrides a formerly provisional/PASS observation.
             _save_new(directory/'late.json', dict(status='INCOMPLETE', reason='completion saved late'))

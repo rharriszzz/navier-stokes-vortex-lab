@@ -158,7 +158,8 @@ def field_report(values, multipliers, expected_multipliers, targets, eta):
 def compatibility_report(lateral, targets, absolute_terms, condition):
     defect, limit = compatible_fluxes(lateral, targets, absolute_terms, condition)
     return dict(defect=defect, limit=limit, condition=condition,
-                absolute_term_sum=absolute_terms)
+                absolute_term_sum=absolute_terms, lateral_flux=lateral,
+                targets=list(targets))
 
 
 def integrate_budgets(times, samples, kind):
@@ -186,6 +187,28 @@ def physical_interval_budget(times, samples, kind, initial_inventory, final_inve
     terms = dict(integral['budget']['terms'], storage=final_inventory-initial_inventory)
     return dict(physical=signed_budget(terms, kind), discrete_term_integral=integral,
                 storage_difference=terms['storage']-integral['budget']['terms']['storage'])
+
+
+def poiseuille_endpoint_budgets(values, dt):
+    """One steady BE oracle: exact initial inventories and signed initial terms.
+
+    K(0)=4/15, Lz(0)=-1/3, viscous power=8/15. The final field supplies
+    the other trapezoidal endpoint. This is not a temporal convergence claim.
+    """
+    finite([dt, values['kinetic_energy'], values['angular_momentum']])
+    if dt != .125:
+        raise Refusal('frozen Poiseuille time step required')
+    result = {}
+    for kind, names, inventory, initial in (
+            ('angular', ANGULAR_TERMS, 'angular_momentum', -1/3),
+            ('energy', ENERGY_TERMS, 'kinetic_energy', 4/15)):
+        old = {key: 0. for key in names}
+        if kind == 'energy':
+            old.update(traction=-8/15, dissipation=8/15)
+        final = {key: values[kind+'.'+key] for key in names}
+        result[kind] = physical_interval_budget([0., dt], [old, final], kind,
+                                                initial, values[inventory])
+    return result
 
 
 def step_checks(report, normal_samples, nonlinear_history, linear_residual, gates,

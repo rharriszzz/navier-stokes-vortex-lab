@@ -1,4 +1,5 @@
 """Import-free driver decisions and finite supervision failure paths."""
+from copy import deepcopy
 import hashlib
 import json
 from pathlib import Path
@@ -6,18 +7,21 @@ from tempfile import TemporaryDirectory
 import unittest
 
 from .fixture_driver import nonexact_guess, numerical_decision, return_quadrature_samples
-from .diagnostics import ANGULAR_TERMS, ENERGY_TERMS, field_report
+from .diagnostics import (ANGULAR_TERMS, ENERGY_TERMS, field_report,
+                          step_checks, quadrature_comparison, compatibility_report,
+                          poiseuille_endpoint_budgets)
 from .prototype import Refusal
 from .supervision import supervise_once, verify_held_scope, validate_worker_result
-from .worker import verify_release
 
 
 MANIFEST = Path(__file__).with_name('future_fem.json')
 SOURCE = 'a'*40
+CONTRACT = json.loads(MANIFEST.read_text())
 
 
-def admission():
+def admission(path):
     return dict(approved=True, fixture='poiseuille', attempts_granted=1,
+                run_directory=str(path.resolve()),
                 source_commit=SOURCE,
                 manifest_sha256=hashlib.sha256(MANIFEST.read_bytes()).hexdigest())
 
@@ -27,23 +31,30 @@ def payload():
     gates = json.loads(MANIFEST.read_text())['gates']
     values = dict(volume=1., pressure_mean=0., p_error_integral=0., p_error_squared=0.,
                   flux_0=0., flux_1=0., area_0=1., area_1=1., lateral_flux=0.,
-                  boundary_absolute_flux=1., energy_identity_storage=0.,
+                  boundary_absolute_flux=1., kinetic_energy=4/15, angular_momentum=-1/3,
+                  energy_identity_storage=0.,
                   energy_identity_dissipation=0., kinetic_discrete_derivative=0.)
     values.update({k+'_squared': 0. for k in
                    ('u_L2', 'u_H1_seminorm', 'div_u_L2', 'traction_L2_returns')})
     values.update({'angular.'+k: 0. for k in ANGULAR_TERMS})
     values.update({'energy.'+k: 0. for k in ENERGY_TERMS})
     report = field_report(values, [0., 0.], [0., 0.], [0., 0.], 0.)
-    comparison = {k: {'accepted': True} for k in values}
-    checked = {'numerical_step_accepted': True}
+    comparison = quadrature_comparison(values, values)
+    checked = step_checks(report, [0.], [1., 1e-12], 0., gates, 1.)
     decision = numerical_decision(report, checked, comparison, 1, gates)
-    return dict(fixture='poiseuille', subdivisions=2, numerical_accepted=True,
-                checks=decision['checks'], compatibility={'defect': 0., 'limit': 1e-12},
-                constraint_condition={'condition_bound': 2.}, nonlinear_history=[1., 1e-12],
+    endpoints = poiseuille_endpoint_budgets(values, .125)
+    decision['checks']['physical_endpoint_budgets'] = True
+    return dict(fixture='poiseuille', subdivisions=2, dt=.125,
+                mixed_dofs=10, global_dofs=13, multipliers=[0., 0.], eta=0.,
+                numerical_accepted=True,
+                checks=decision['checks'], compatibility=compatibility_report(0., [0., 0.], 1., 1.),
+                constraint_condition={'condition_bound': 1.,
+                    'method': 'sqrt infinity-norm condition of three-row Gram',
+                    'gram': [[1., 0., 0.], [0., 1., 0.], [0., 0., 1.]]}, nonlinear_history=[1., 1e-12],
                 linear_corrections=[{'true_residual': 0., 'rhs_norm': 1.}],
                 return_quadrature_sample_counts=[6, 6], minimum_return_normal_velocity=0.,
                 diagnostics_degree24=report, diagnostics_degree26=values,
-                quadrature_comparison=comparison,
+                quadrature_comparison=comparison, physical_endpoint_budgets=endpoints,
                 step_checks=checked,
                 phase_seconds=dict(mesh_and_lift=0., primary_form_setup_jit=0.,
                                    compatibility_rank_newton=0.,
@@ -92,7 +103,8 @@ class FakeHandle:
 
     def cleanup(self):
         return dict(empty=self.cleanup_ok, unknown_children=not self.cleanup_ok,
-                    memory_peak_bytes=1024, memory_events={'oom': 0, 'oom_kill': 0}, pids_peak=1)
+                    memory_peak_bytes=1024, memory_events={'max': 0, 'oom': 0, 'oom_kill': 0},
+                    pids_events={'max': 0}, pids_peak=1)
 
 
 class FakeBackend:
@@ -200,7 +212,7 @@ class DriverSupervisionChecks(unittest.TestCase):
             path = Path(base)/'run'
             clock = Clock()
             backend = FakeBackend(clock)
-            result = supervise_once(path, MANIFEST, admission(), backend,
+            result = supervise_once(path, MANIFEST, admission(path), backend,
                                     source_commit=SOURCE, interpreter='python',
                                     owner='daisy', monotonic=clock)
             self.assertEqual(result['status'], 'PASS')
@@ -208,7 +220,7 @@ class DriverSupervisionChecks(unittest.TestCase):
             self.assertEqual(json.loads((path/'completion.json').read_text())['status'], 'PASS')
             self.assertTrue(backend.handle.stopped)
             with self.assertRaises(FileExistsError):
-                supervise_once(path, MANIFEST, admission(), backend,
+                supervise_once(path, MANIFEST, admission(path), backend,
                                source_commit=SOURCE, interpreter='python',
                                owner='daisy', monotonic=clock)
 
@@ -218,7 +230,7 @@ class DriverSupervisionChecks(unittest.TestCase):
             with self.subTest(kwargs=kwargs), TemporaryDirectory() as base:
                 path = Path(base)/'run'
                 clock = Clock()
-                result = supervise_once(path, MANIFEST, admission(), FakeBackend(clock, **kwargs),
+                result = supervise_once(path, MANIFEST, admission(path), FakeBackend(clock, **kwargs),
                                         source_commit=SOURCE,
                                         interpreter='python', owner='daisy', monotonic=clock)
                 self.assertEqual(result['status'], 'INCOMPLETE')
@@ -227,22 +239,46 @@ class DriverSupervisionChecks(unittest.TestCase):
 
     def test_incomplete_payload_does_not_accept_field_report(self):
         valid = payload()
-        self.assertEqual(validate_worker_result(valid), valid)
+        self.assertEqual(validate_worker_result(valid, CONTRACT['versions'], CONTRACT['gates']), valid)
         for bad in (dict(valid, numerical_accepted=False),
                     dict(valid, linear_corrections=[]),
                     dict(valid, minimum_return_normal_velocity=-1e-7),
                     {'diagnostics_degree24': valid['diagnostics_degree24']}):
             with self.assertRaises(Refusal):
-                validate_worker_result(bad)
+                validate_worker_result(bad, CONTRACT['versions'], CONTRACT['gates'])
 
-    def test_worker_release_requires_reserved_nonce_and_own_scope(self):
-        reservation = {'release_nonce': 'abc'}
-        verify_release('RELEASE abc /user.slice/fixture.scope\n', reservation,
-                       '/user.slice/fixture.scope')
-        for line in ('RELEASE wrong /user.slice/fixture.scope\n',
-                     'RELEASE abc /other.scope\n', 'RELEASE abc /\n', ''):
+    def test_corrupt_raw_terms_cannot_hide_behind_pass_flags(self):
+        changes = [
+            lambda p: p['diagnostics_degree24']['raw'].__setitem__('energy.body', 1.),
+            lambda p: p['diagnostics_degree26'].__setitem__('u_L2_squared', 1.),
+            lambda p: p['diagnostics_degree24']['raw'].__setitem__('pressure_mean', float('nan')),
+            lambda p: p['linear_corrections'][0].__setitem__('true_residual', .1),
+            lambda p: p['linear_corrections'][0].__setitem__('rhs_norm', -1.),
+            lambda p: p['nonlinear_history'].__setitem__(-1, .1),
+            lambda p: p.__setitem__('eta', .1),
+            lambda p: p['physical_endpoint_budgets']['energy']['physical'].__setitem__('signed_defect', 1.),
+            lambda p: p.__setitem__('multipliers', []),
+            lambda p: p.__setitem__('worker_intervals', {}),
+            lambda p: p.__setitem__('global_dofs', 10),
+            lambda p: p['compatibility'].__setitem__('limit', 1e10),
+        ]
+        for change in changes:
+            bad = deepcopy(payload())
+            change(bad)
+            with self.subTest(change=change), self.assertRaises(Refusal):
+                validate_worker_result(bad, CONTRACT['versions'], CONTRACT['gates'])
+
+    def test_admission_cannot_be_reused_with_another_directory(self):
+        with TemporaryDirectory() as base:
+            path = Path(base)/'reserved'
+            other = Path(base)/'other'
+            clock = Clock()
             with self.assertRaises(Refusal):
-                verify_release(line, reservation, '/user.slice/fixture.scope')
+                supervise_once(other, MANIFEST, admission(path), FakeBackend(clock),
+                               source_commit=SOURCE, interpreter='python',
+                               owner='daisy', monotonic=clock)
+            self.assertFalse(other.exists())
+
 
 
 if __name__ == '__main__':

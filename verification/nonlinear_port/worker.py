@@ -1,7 +1,7 @@
 """Held Poiseuille worker. FEM imports occur only after supervisor release.
 
 This is source for a future admitted scope, not a standalone launch command.
-The controller has no live backend and the current manifest grants zero attempts.
+The worker-scope backend remains unadmitted for whole-task execution; attempts zero.
 """
 import hashlib
 import json
@@ -11,6 +11,7 @@ import sys
 import time
 
 from .fixture_driver import run_poiseuille
+from .handshake import held, completed
 from .manifest import validate as validate_manifest
 from .prototype import Refusal
 
@@ -25,16 +26,6 @@ def _cgroup_path():
     if len(lines) != 1 or not lines[0].startswith('0::'):
         raise Refusal('unresolved unified worker cgroup')
     return lines[0][3:]
-
-
-def verify_release(line, reservation, actual_cgroup):
-    """The held worker checks its own scope before importing FEM packages."""
-    pieces = line.rstrip('\n').split(' ', 2)
-    if (len(pieces) != 3 or pieces[0] != 'RELEASE'
-            or pieces[1] != reservation.get('release_nonce')
-            or pieces[2] != actual_cgroup or not actual_cgroup.startswith('/')
-            or actual_cgroup == '/'):
-        raise Refusal('worker release/cgroup identity failed')
 
 
 def load_pinned_modules(versions):
@@ -88,13 +79,14 @@ def main(args=None):
             or reservation.get('manifest_sha256') != digest
             or reservation.get('interpreter') != sys.executable
             or admission.get('approved') is not True
+            or admission.get('fixture') != 'poiseuille'
+            or admission.get('run_directory') != str(directory.resolve())
             or admission.get('source_commit') != reservation.get('source_commit')
             or admission.get('manifest_sha256') != digest
             or admission.get('attempts_granted') != 1):
         raise Refusal('worker reservation/admission mismatch')
     actual_cgroup = _cgroup_path()
-    print(json.dumps(dict(held=True, pid=os.getpid(), cgroup=actual_cgroup)), flush=True)
-    verify_release(sys.stdin.readline(), reservation, actual_cgroup)
+    held(directory, reservation, actual_cgroup)
     if any(os.environ.get(name) != '1' for name in
            ('OMP_NUM_THREADS', 'OPENBLAS_NUM_THREADS', 'MKL_NUM_THREADS',
             'NUMEXPR_NUM_THREADS')):
@@ -112,6 +104,7 @@ def main(args=None):
         stream.write('\n')
         stream.flush()
         os.fsync(stream.fileno())
+    completed(directory, reservation)
     return 0
 
 
