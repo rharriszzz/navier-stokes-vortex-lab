@@ -9031,3 +9031,30 @@ interprets result or method/admission change. No /new needed or agent model/
 session switch. PC retains ownership; Mac released. R240 14a402a verified by
 clean pull; R241 STARTED afcd53f published. Completion prepared for scoped
 publication; final delivery hash/result in Git/final response, no post-push edit.
+
+## R242 — 2026-09-26 — Execute admitted R241 fixture once
+
+**User request (supplied excerpt):**
+
+```text
+Worked for 12m 15s · done 4:27 PM
+│  Session:                     01a0deb4-08c7-78e2-ab83-65111b56ad3d                    │
+│                                                                                       │
+│  Context window:              14% left (224K used / 258K)                             │
+│  Weekly limit:                [███████████████████░] 93% left (resets 13:10 on 3 Oct) │
+│  Luna Reserve Weekly limit:   [████████████████████] 99% left (resets 10:18 on 3 Oct) │ continue
+```
+
+**Scope/status:** STARTED. Execute the exact R241 caller once under its frozen
+admission; preserve raw matrix/logs/result/cleanup and spent state, publish and
+stop. No rank analysis, method change, retry or additional allocation. Continue
+authorizes scoped start/completion commits and pushes.
+
+Preflight: rharris/daisy, PC/WSL Linux 6.18.33.2-microsoft-standard-WSL2
+x86_64, /home/rharris/git/navier-stokes-vortex-lab; clean main/origin/main
+equal at a118ee205e163240e5988bc92e6eb62a139fc299 after required fast-forward
+pull (already up to date), empty stashes, R241 completed, PC retains ownership,
+Mac released. Snapshot is user reported: completion 12m 15s / 4:27 PM, same
+session, context 14% (224K/258K), weekly 93%, Luna Reserve 99%. No /new, literal
+/status, model/version/account fields, token totals or credit count supplied.
+No independent accounting or agent model/session switch.

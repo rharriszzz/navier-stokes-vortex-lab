@@ -1360,3 +1360,12 @@ logs/result/cleanup and spent state, publish and stop; Astra/high interprets.
 No /new or agent model/session switch. PC retains ownership; Mac released.
 R240 14a402a verified; R241 STARTED afcd53f published. Completion prepared for
 scoped publication; delivery hash/result in Git/final response.
+
+## R242 — Execute the admitted serial SuperLU fixture once
+STARTED | 2026-09-26T20:32:12Z | PC/WSL daisy | released: no
+Identity rharris/daisy, Linux 6.18.33.2-microsoft-standard-WSL2 x86_64;
+/home/rharris/git/navier-stokes-vortex-lab; clean main/origin/main at
+a118ee205e163240e5988bc92e6eb62a139fc299 after required fast-forward pull,
+empty stashes, R241 completed, same PC owner, Mac released. Execute exact R241
+caller once, preserve raw evidence and cleanup/spent state, publish and stop.
+Three older allocations remain spent 1/1; R241 admitted 0/1 before launch.
