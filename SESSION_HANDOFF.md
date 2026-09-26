@@ -1,5 +1,14 @@
 # Current session handoff
 
+R252 metadata note (2026-09-26): user asked `model`; recommendation remains
+**GPT-6 Sol / high** for the R251 one-use execution, then Astra/high for result
+interpretation. Official Sol documentation searched/opened; no model switch or
+launch. Changed request log and this handoff only; identity/ownership/Git and
+whitespace checked, numerical tests skipped. R251 delivery `e09a166` was locally
+synchronized with origin/main. R252 metadata is prepared for publication under
+the next Continue authorization before synchronization and R253 start. PC retains
+ownership; scientific unknowns and [Next task](#next-task) unchanged.
+
 Last updated 2026-09-26 (America/New_York) for R251.
 **PC/WSL daisy owns the repository.** No transfer; Mac remains released.
 **R251 admits one NEW later exact-field rotation assembly; zero attempts spent.**
@@ -962,7 +971,7 @@ and physical-work limits remain unchanged.
 | Other owner/process | Mac `fire.lan` released in the published R161 handoff. Local Git cannot inspect another checkout's unpublished state. |
 | Task processes | Five old allocations spent; R251 verified reservations/raw originals and absent recorded PIDs/cgroups. Fresh rotation directory absent, allowance 0/1 spent. No manager connection or numerical worker in review; fake caller checks only. |
 | Symbolic environment | `/tmp/navier-r183-sympy/bin/python`, Python 3.12.14, SymPy 1.14.0, mpmath 1.3.0; recreate using `requirements-symbolic.txt` if missing. Existing environments unchanged. |
-| Delivery state | R250 698bd2f verified by clean pull; R251 STARTED ea8e824 published. Review/admission/caller/evidence/completion prepared for publication; delivery in Git/final response. PC retains ownership. |
+| Delivery state | R251 e09a166 published. R252 model-guidance metadata prepared for publication under the next Continue authorization before synchronization and R253 start. PC retains ownership. |
 
 ## Current result and limits
 
