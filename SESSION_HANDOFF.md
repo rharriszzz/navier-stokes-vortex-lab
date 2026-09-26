@@ -1,7 +1,45 @@
 # Current session handoff
 
-Last updated 2026-09-26 (America/New_York) for R236.
+Last updated 2026-09-26 (America/New_York) for R237.
 **PC/WSL daisy owns the repository.** No transfer; Mac remains released.
+**R237 admits one NEW later bounded n=2 Poiseuille diagnostic fixture, 0/1
+spent.** The [admission](docs/realizability/POISEUILLE_ADMISSION_R237.md) and
+[allocation/caller](docs/realizability/evidence/r237/) bind R236's instrumented
+source and the R229 interpreter to a future clean launch HEAD, at the exclusive
+`/tmp/navier-poiseuille-r237-once`. The unchanged solver may refuse again; the
+purpose is to measure KSP reason, nonfinite-answer count and optional PC failure
+reason. A useful diagnostic does not waive INCOMPLETE or any numerical/resource
+gate. Both older allocations remain spent 1/1. No numerical import, reservation
+or live scope occurred in this admission review.
+
+**Next: Sol/high executes this exact prepared caller once after Continue,
+preserves diagnostic/result/cleanup and spent state, publishes and stops.**
+See [Next task](#next-task). No new chat is needed for this connected execution.
+Astra/high should interpret the outcome or any changed method/admission choice.
+
+R237 supplied snapshot: 7m 30s / 1:20 PM completion, Codex v0.155.1,
+Astra/high, thread Review Codex session output, same session
+01a0deb4-08c7-78e2-ab83-65111b56ad3d; context 60% left (111K/258K), weekly
+99% (13:10 on Oct 3), Luna Reserve 99% (10:18 on Oct 3). No /new, literal
+/status, token-total or credit-count excerpt supplied. REQUEST_LOG.md records
+the supplied wording with account email redacted. These are user-reported
+snapshots, not independent or project-specific accounting. No agent switch.
+R236 completion 739eff8 verified by clean pull; R237 STARTED d5872eb published.
+Completion delivery belongs in Git/final response, with no post-push edit.
+
+R237 changed its admission and five evidence/caller files, prototype README,
+B1_SETUP, four track overviews, STATUS and request/lifecycle/handoff records.
+Checks: all 25 R236 source and three test-evidence hashes, 17 R229 artifacts,
+20 R232/R235 raw files and local originals, interpreter/current-history hashes,
+both old reservations/PID/cgroup absence and new directory absence, caller
+path/timer/changed-source/existing-path refusals and unmocked invalid-commit CLI,
+two ASTs/new JSON, local links, unique request IDs, append-only logs and Git
+whitespace. R236's 62-test and R226 host results reused, not rerun. Skips:
+numerical imports/FEM/JIT/assembly/solve, live manager/scope/probe, install/full
+environment rescan, full suite/rotation/tank/B2, physical/render and Mac work.
+Actual KSP/pivot/rank/accuracy/resource events remain unknown. PC retains
+ownership; Mac remains released.
+
 **R236 completed the KSP refusal review and minimal diagnostic source.**
 The [review](docs/realizability/POISEUILLE_KSP_REVIEW_R236.md) preserves the
 unmeasured R235 cause. Future sparse-solve refusals now include the integer KSP
@@ -10,10 +48,6 @@ acceptance gates and caps are unchanged. All 62 standard-library tests pass,
 with no numerical imports. Both previous allocations remain spent 1/1; no new
 allocation or live scope occurred. Twenty raw files match retained originals,
 and both old worker PIDs/cgroups are absent.
-
-**Next: Astra/high makes the separate admission decision for one later
-instrumented diagnostic fixture, then stops before execution.** Follow the
-[Next task](#next-task). No new chat is necessary for this connected decision.
 
 R236 supplied snapshot: preceding completion 8m 15s / 1:11 PM; 459,457 total
 (409,921 input, 9,454,976 cached, 49,536 output, 8,407 reasoning), preceding
@@ -348,12 +382,12 @@ and physical-work limits remain unchanged.
 | Owner | PC/WSL `daisy`; Mac `fire.lan` released after published R161 handoff and R162 receipt. |
 | Checkout | `/home/rharris/git/navier-stokes-vortex-lab`. |
 | Branch/upstream | `main` / `origin/main` |
-| Starting state | R236 same-owner clean main/origin/main at fe5295b after required fast-forward pull; rharris/daisy, empty stashes, R235 completed. Initial sandbox pull refused FETCH_HEAD write; approved exact rerun succeeded. |
+| Starting state | R237 same-owner clean main/origin/main at 739eff8 after required fast-forward pull; rharris/daisy, empty stashes, R236 completed. |
 | Interpreter | /tmp/navier-fenicsx-r229/bin/python verified as 3.12.13 with -I -S; exact environment artifacts verified, setup memory-event predicate refused. Project Python remains 3.12.14. Old /tmp/navier-fenicsx is still partial. |
 | Other owner/process | Mac `fire.lan` released in the published R161 handoff. Local Git cannot inspect another checkout's unpublished state. |
-| Task processes | R236 launched no numerical worker or live scope. Both R232/R235 recorded PIDs/cgroups absent, both reservations and all 20 raw originals retained; both allocations remain spent 1/1. |
+| Task processes | R237 no numerical import/worker/manager/live scope; new fixed directory absent, 0/1 spent. R232/R235 reservations and 20 raw originals retained, recorded PIDs/cgroups absent, both old charges spent 1/1. |
 | Symbolic environment | `/tmp/navier-r183-sympy/bin/python`, Python 3.12.14, SymPy 1.14.0, mpmath 1.3.0; recreate using `requirements-symbolic.txt` if missing. Existing environments unchanged. |
-| Delivery state | R235 completion fe5295b verified by clean pull; R236 STARTED 2e21a9c published. R236 completion prepared for scoped publication; final delivery belongs in Git/final response. PC retains ownership. |
+| Delivery state | R236 completion 739eff8 verified by clean pull; R237 STARTED d5872eb published. R237 completion prepared for scoped publication; delivery hash/result in Git/final response. PC retains ownership. |
 
 ## Current result and limits
 
@@ -484,41 +518,48 @@ agent-side POV-Ray backtraces are unavailable.
 
 ## Next task
 
-**GPT-6 Astra / high / PC-WSL daisy: decide whether to admit one later bounded
-Poiseuille diagnostic fixture using R236 instrumentation. No execution in this
-review.** Continue in the current chat; no new chat is required. Official
-[OpenAI Docs](https://developers.openai.com/api/docs/models/gpt-6-astra) was
-searched/opened for high reasoning support; task fit is judgment.
+**GPT-6 Sol / high / PC-WSL daisy: execute the single admitted R237 n=2
+Poiseuille diagnostic fixture, preserve the outcome and stop.** No new chat
+needed; select Sol/high, then **Continue**. Official
+[OpenAI Docs](https://developers.openai.com/api/docs/models/gpt-6-sol) was
+searched/opened for high reasoning support; task fit is judgment. No model
+switch or execution occurred in the R237 review.
 
-Read [R236 review](docs/realizability/POISEUILLE_KSP_REVIEW_R236.md), its
-[evidence](docs/realizability/evidence/r236/), R235 result/raw records, R234
-admission and the frozen manifest. Both prior allocations are spent 1/1.
-The diagnostic reports KSP reason/nonfinite count and best-effort PC failure
-reason through existing worker.log; it does not repair a demonstrated solver
-failure or recover the missing R235 data.
+Read [R237 admission](docs/realizability/POISEUILLE_ADMISSION_R237.md), its
+[allocation](docs/realizability/evidence/r237/allocation.json),
+[caller](docs/realizability/evidence/r237/run_once.py),
+[checks](docs/realizability/evidence/r237/checks.json), R236 review/source
+inventory and R235 saved failure. R237 grants exactly one attempt, currently
+0/1 spent at `/tmp/navier-poiseuille-r237-once`. Both R232 and R235 are spent
+1/1 and must never be reused. This attempt measures a diagnostic with the
+unchanged solver; it is not predicated on a demonstrated numerical repair.
 
-1. Follow the clean Continue protocol and publish STARTED. Preserve both old
-   directories/ledgers and all numerical/resource gates. No live scope or FEM.
-2. Make a specific go/no-go decision on whether the diagnostic's information
-   gain justifies one new n=2 fixture with the same solver. Do not infer that
-   a future numeric-pivot code proves singularity or a PC memory code proves
-   cgroup events. Consider the saved API/source evidence and 62 passing tests;
-   rerun checks only for changed source or a concrete unresolved risk.
-3. If admitted, prepare a new exclusive directory/allocation/caller contract
-   binding R236 reviewed source hashes, exact R229 interpreter and a future
-   actual clean launch HEAD. Preserve 180 s / 1536 MiB / no swap / 32 tasks /
-   one rank-thread / 20,000 mixed-DOF limits and all acceptance gates. State
-   the expected diagnostic fields and interpretation, spent-at-reservation
-   rule, no retry and pre-reservation recovery boundary. Never modify old
-   caller inventories to reuse either spent allocation.
-4. If refused, state the exact blocker and next discriminating source check.
-   Publish the decision/contract and stop before reservation, numerical import,
-   JIT/assembly/solve, install or manager/live-scope work.
+1. Follow normal clean Continue ownership/pull/start publication. Verify the
+   new allowance is still unspent in logs and fixed directory inventory.
+   Check R237 caller digest, all 25 R236 source hashes, frozen manifest and
+   exact R229 interpreter binding. Use the actual full clean launch HEAD.
+2. Invoke the prepared R237 caller once using `/tmp/navier-fenicsx-r229/bin/python`
+   and that 40-character HEAD argument. No separate worker/import/prewarming.
+   Caller refreshes live host/manager facts inside its outer timer. Preserve
+   every cap and numerical/resource gate. Do not edit the checkout during work.
+3. Reservation/directory creation or partial worker start spends 1/1. After
+   any numerical/resource/API refusal, timeout or uncertain cleanup, preserve
+   raw files and stop with no retry/alternate directory. Only a demonstrated
+   pre-reservation caller error before worker/numerical import may be recovered:
+   save evidence/timing gaps, verify absent directory and no new manager task,
+   fix/test, publish clean source binding, continue the same unspent contract.
+4. Save worker.log and actual exit/cleanup, all numerical/controller/caller
+   records or explicit missing records. If present, report raw `ksp_reason`,
+   `nonfinite_answer_entries` and `pc_failed_reason`, including unavailable
+   labels. Do not infer matrix singularity, PC-memory/cgroup equivalence,
+   accuracy or resource PASS. A diagnostic refusal remains INCOMPLETE.
+5. Update result/evidence, charges, status and handoff; publish completion and
+   stop. Recommend Astra/high for numerical interpretation or changed method/
+   admission decisions, even if the diagnostic itself is clear.
 
-Completion: one reviewed admission contract or concrete no-go, scoped commit/
-push and one next task. Only after admission recommend Sol/high for mechanical
-execution on a later Continue; retain Astra/high for scientific/method choices.
-Full suite, rotation, tank/B2 and physical/rendering work remain unadmitted.
+Completion: one retained outcome with actual exit/cleanup and spent accounting,
+scoped publication and stop. No full suite, rotation, tank/B2, physical/render,
+installation or additional allocation. R229 setup resource refusal stays false.
 
 ### Historical R230 single-fixture execution task (R232 spent)
 

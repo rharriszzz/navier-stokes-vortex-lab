@@ -1,0 +1,71 @@
+{
+  "attempts_granted": 1,
+  "attempts_spent_at_review": 0,
+  "caller_regression": "PASS: outside-directory imports; timer before imports/preflight; changed adapter source, existing directory and dangling symlink refuse before manager/reservation",
+  "current_conda_history_matches_r229": true,
+  "decision": "GO_ONE_LATER_DIAGNOSTIC_FIXTURE",
+  "direct_cli_check": "Expected invalid-commit INCOMPLETE, exit 1; invalid_commit_check.json",
+  "evidence_sha256": {
+    "allocation.json": "6469b62d663b5dd7c5b48765aef6e99b93023a2abe22baaf0044536dddf1e886",
+    "check_caller.py": "093415324ffa60d21c59ee4e75c571e8120aa8a9aae8a35d288a15ee8511c4d4",
+    "invalid_commit_check.json": "56dd4d857ae6309534e7b1016632cad19c5cb1e8d829a5c5e91b57951a9c9754",
+    "run_once.py": "ab293fa6cdd1d593f19eeaed8bedcf0328cf249dc41530aaf0946a014885cab8"
+  },
+  "full_source_suite": "R236 62-test result reused by unchanged source/test hashes; not rerun",
+  "historical_callers_allocations_ledgers_unchanged": true,
+  "interpreter_sha256_verified": "5f083df36ec986d5cd13d2549ca6cfe1ddaf658509f9e419b454b2fb375c27a3",
+  "limits": {
+    "finish_seconds": 15,
+    "independent_stop_grace_seconds": 1,
+    "independent_worker_runtime_seconds": 149,
+    "memory_max_events": 0,
+    "mixed_dofs_max": 20000,
+    "mpi_ranks": 1,
+    "observed_total_seconds": 180,
+    "oom_events": 0,
+    "oom_kill_events": 0,
+    "pids_max_events": 0,
+    "setup_seconds": 15,
+    "swap_mib": 0,
+    "tasks": 32,
+    "threads_per_library": 1,
+    "whole_task_memory_mib": 1536,
+    "work_seconds": 150
+  },
+  "live_host_suite": "R226 retained host evidence reused; no live probe or manager connection",
+  "live_scope_or_worker": false,
+  "local_links_checked": 213,
+  "manager_connection": false,
+  "new_python_asts": 2,
+  "new_reservation": false,
+  "new_run_directory": "/tmp/navier-poiseuille-r237-once",
+  "new_run_directory_absent": true,
+  "numerical_imports": false,
+  "old_pids_cgroups_absent": true,
+  "old_raw_files_and_originals_verified": 20,
+  "old_reservations_preserved": true,
+  "prior_allocations": [
+    {
+      "granted": 1,
+      "outcome": "INCOMPLETE",
+      "request": "R230/R231/R232",
+      "run_directory": "/tmp/navier-poiseuille-r230-once",
+      "spent": 1
+    },
+    {
+      "granted": 1,
+      "outcome": "INCOMPLETE",
+      "request": "R234/R235",
+      "run_directory": "/tmp/navier-poiseuille-r234-once",
+      "spent": 1
+    }
+  ],
+  "prior_logs_append_only": true,
+  "r229_artifacts_verified": 17,
+  "r236_inventory_sha256": "7c5f6c4eb05f3b47407097d213f3e3fcf36f6fdcd1fd0358bfe36bacc9ef5af4",
+  "r236_source_hashes_verified": 25,
+  "r236_test_evidence_hashes_verified": 3,
+  "request": "R237",
+  "request_ids": 237,
+  "source_base": "d5872eb"
+}

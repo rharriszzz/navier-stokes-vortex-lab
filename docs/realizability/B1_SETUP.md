@@ -9,7 +9,9 @@ in a fresh directory. [R235](POISEUILLE_RESULT_R235.md) spent the new 1/1
 allocation: sparse linear solve refused, exit 1, empty cleanup, no numerical
 report or resource snapshot. The older 1/1 charge remains unchanged.
 [R236](POISEUILLE_KSP_REVIEW_R236.md) adds a tested refusal diagnostic without
-changing the solver or running FEM. Any later fixture needs separate admission.
+changing the solver or running FEM. [R237](POISEUILLE_ADMISSION_R237.md) grants
+one new later diagnostic fixture, 0/1 spent, using that unchanged solver and
+all prior gates. No numerical execution occurred in the admission review.
 R229's transaction/metadata/interpreter checks completed; its setup
 memory-event refusal remains unchanged. FFCx's exact artifact/runtime gate is
 repaired. Retain `/tmp/navier-fenicsx-r229`; old `/tmp/navier-fenicsx` stays partial.

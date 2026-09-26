@@ -1189,3 +1189,32 @@ empty stashes, same owner, Mac released, R236 completed. Continue authorizes
 one separate go/no-go decision, new allocation/caller contract if admitted,
 scoped publication and stop before any numerical import/reservation/live scope.
 Both old one-use allocations remain spent 1/1; solver and all gates unchanged.
+
+### R237 completion
+COMPLETED | 2026-09-26T17:29:19Z | PC/WSL daisy | released: no
+GO for one NEW later n=2 Poiseuille diagnostic fixture, 0/1 spent, fixed at
+/tmp/navier-poiseuille-r237-once with R236 source/R229 interpreter/future clean
+launch HEAD. Purpose: measure failure category with unchanged solver. All
+numerical/resource gates and old R232/R235 spent charges preserved. No numerical
+import, reservation, manager connection or live scope. Diagnostic usefulness
+never waives INCOMPLETE, missing evidence or no-retry rules.
+R237 changed its admission and five evidence/caller files, prototype README,
+B1_SETUP, four track overviews, STATUS and request/lifecycle/handoff records.
+Checks: all 25 R236 source and three test-evidence hashes, 17 R229 artifacts,
+20 R232/R235 raw files and local originals, interpreter/current-history hashes,
+both old reservations/PID/cgroup absence and new directory absence, caller
+path/timer/changed-source/existing-path refusals and unmocked invalid-commit CLI,
+two ASTs/new JSON, local links, unique request IDs, append-only logs and Git
+whitespace. R236's 62-test and R226 host results reused, not rerun. Skips:
+numerical imports/FEM/JIT/assembly/solve, live manager/scope/probe, install/full
+environment rescan, full suite/rotation/tank/B2, physical/render and Mac work.
+Actual KSP/pivot/rank/accuracy/resource events remain unknown. PC retains
+ownership; Mac remains released.
+
+Evidence: docs/realizability/POISEUILLE_ADMISSION_R237.md and evidence/r237/.
+Next: Sol/high single prepared caller execution after Continue, result/diagnostic/
+exit/cleanup/spent-state preservation, publication and stop. Astra/high afterward
+for numerical interpretation or changed scientific/admission decisions. No new
+chat needed. R236 delivery 739eff8 verified; R237 STARTED d5872eb published.
+Completion prepared for scoped publication; final delivery hash/result belongs
+in Git/final response, no post-push edit. PC retains ownership, Mac released.

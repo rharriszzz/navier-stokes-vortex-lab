@@ -1,0 +1,19 @@
+{
+  "command": [
+    "/home/rharris/git/navier-stokes-vortex-lab/.venv/bin/python",
+    "/home/rharris/git/navier-stokes-vortex-lab/docs/realizability/evidence/r237/run_once.py",
+    "0000000000000000000000000000000000000000"
+  ],
+  "cwd": "/tmp",
+  "exit_code": 1,
+  "stdout": {
+    "status": "INCOMPLETE",
+    "reason": "RuntimeError: launch checkout is not the expected clean commit",
+    "elapsed_after_caller_save": 0.016646823001792654,
+    "run_directory": "/tmp/navier-poiseuille-r237-once",
+    "inner_status": null
+  },
+  "stderr": "",
+  "outer_observed_seconds": 0.03815101200598292,
+  "scope": "Intentional preflight refusal, before manager/reservation/worker; not a numerical attempt"
+}

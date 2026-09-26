@@ -8652,3 +8652,57 @@ Mac remains released. Supplied snapshot is Astra/high in the same session ID,
 /status command, token totals or credit count supplied. These are user-reported
 snapshots, not independently checked or project-specific accounting. No
 agent-initiated model/session switch.
+
+### R237 outcome — one later diagnostic fixture admitted, no execution
+
+GO for exactly one new n=2 Poiseuille allocation, 0/1 spent, fixed at
+/tmp/navier-poiseuille-r237-once. Its justification is a concrete information
+gain from R236's KSP reason/nonfinite count/optional PC failure diagnostic.
+The solver is unchanged and a repeat refusal is plausible; no numerical repair
+or successful factorization is asserted. A useful diagnostic refusal remains
+INCOMPLETE. R232 and R235 remain spent 1/1; neither directory/caller ledger is
+reused. No reservation, numerical import or live scope occurred in this review.
+
+The new caller changes only description, owner, directory and inventory from
+R234; its source binding uses all 25 R236 hashes, exact R229 interpreter and a
+future actual clean launch HEAD. Caps stay 180 s outer / 149+1 s independent
+worker expiry / 1536 MiB / no swap / 32 tasks / one rank-thread / 20,000 mixed
+DOFs. All compatibility, Newton/linear, flux/gauge/eta, quadrature, oracle,
+endpoint and resource gates remain. R229's 303-event setup refusal remains
+false. The admission specifies raw diagnostic interpretation without assuming
+singularity from pivot codes or cgroup events from PC memory codes.
+
+Reservation/directory creation or partial worker start spends 1/1, including
+incomplete outcomes; no retry/alternate path. A demonstrated pre-reservation
+caller fault can be recovered only under the existing evidence/process-check,
+fix/test and clean-republication rule. Unknown process state requires review.
+
+R237 changed its admission and five evidence/caller files, prototype README,
+B1_SETUP, four track overviews, STATUS and request/lifecycle/handoff records.
+Checks: all 25 R236 source and three test-evidence hashes, 17 R229 artifacts,
+20 R232/R235 raw files and local originals, interpreter/current-history hashes,
+both old reservations/PID/cgroup absence and new directory absence, caller
+path/timer/changed-source/existing-path refusals and unmocked invalid-commit CLI,
+two ASTs/new JSON, local links, unique request IDs, append-only logs and Git
+whitespace. R236's 62-test and R226 host results reused, not rerun. Skips:
+numerical imports/FEM/JIT/assembly/solve, live manager/scope/probe, install/full
+environment rescan, full suite/rotation/tank/B2, physical/render and Mac work.
+Actual KSP/pivot/rank/accuracy/resource events remain unknown. PC retains
+ownership; Mac remains released.
+
+Evidence: docs/realizability/POISEUILLE_ADMISSION_R237.md and evidence/r237/.
+The direct CLI deliberately used an invalid commit from /tmp and exited 1 at
+clean-source preflight, before manager/reservation; caller observed 0.016646823 s,
+parent observed 0.038151012 s. This is an intentional test, not an attempt.
+Caller regression uses synthetic Git only in refusal cases; no fake result is
+claimed as host or numerical validation. New fixed directory remains absent.
+
+Next: Sol/high executes the prepared R237 caller once after Continue, preserves
+raw diagnostic/result, actual exit/cleanup and spent state, publishes and stops.
+No new chat required. Return to Astra/high for interpretation or method/admission
+changes. Official OpenAI Docs searched/opened confirms Sol/high support; task
+fit is judgment, no account check or agent-initiated switch. R236 completion
+739eff8 verified by clean pull; R237 STARTED d5872eb published. Start staging
+initially hit sandbox index.lock refusal; approved scoped Git commands succeeded.
+Completion prepared for scoped publication; final delivery hash/result belongs
+in Git/final response, no post-push edit.

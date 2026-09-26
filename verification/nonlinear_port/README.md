@@ -26,8 +26,10 @@ The exact KSP reason/answer, numerical diagnostics and resource events were not
 saved. [R236](../../docs/realizability/POISEUILLE_KSP_REVIEW_R236.md) adds the
 KSP reason, nonfinite-answer count and optional PC failure reason to future
 refusals; 62 standard-library tests pass without numerical imports. Both fixture
-allowances are spent; next is a separate diagnostic-fixture admission decision
-through the [handoff task](../../SESSION_HANDOFF.md#next-task).
+allowances are spent. [R237](../../docs/realizability/POISEUILLE_ADMISSION_R237.md)
+admits one new later diagnostic fixture, 0/1 spent, with the unchanged solver
+and gates. Execute only through the [handoff task](../../SESSION_HANDOFF.md#next-task)
+and new R237 caller after Continue. No numerical work ran in the review.
 
 - `polynomial.py`, `fixtures.py`: exact rational manufactured fields and
   independent Poiseuille/rigid-rotation oracles.
