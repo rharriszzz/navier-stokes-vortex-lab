@@ -1,5 +1,52 @@
 # Current session handoff
 
+Last updated 2026-09-26 (America/New_York) for R246.
+**PC/WSL daisy owns the repository.** No transfer; Mac remains released.
+**R246 ran the exact R245 fixture once: PASS; allocation spent 1/1.**
+See [result](docs/realizability/POISEUILLE_RESULT_R246.md) and
+[retained evidence](docs/realizability/evidence/r246/). Three serial SuperLU
+corrections passed true-residual checks; Newton converged. All 30 pair
+comparisons and physical checks at both degrees pass under the frozen R244
+policy/schema 2. Worker/caller exit 0, empty cleanup, unknown_children=false.
+All five allocations are spent; **R242 remains INCOMPLETE**. No retry or new
+allocation. This fixed n=2 oracle does not establish convergence, general
+stability, tank behavior or physical realizability.
+
+All 15 raw files are retained byte-for-byte, including latest lifted/scaled
+405-by-405 CSR/RHS before correction 3 (6,909 entries, 186,809 bytes) and
+matching receipts/source binding. Recorded PID 157349 and cgroup are absent.
+Caller interval after caller save: 2.897688477 s. Saved peak 319,332,352 bytes /
+5 tasks, zero memory.max/OOM/OOM-kill/PID-limit events. Resource sampling ends
+before final handshake/exit; final completion-save tails and independent parent
+wall interval are unobserved. No cold-start performance claim. R229 setup
+resource predicate remains false. Package/embedded labels remain as accepted.
+
+**Next: Astra/high reviews the saved PASS and defines the smallest justified
+next verification milestone, or precise blocker, then publishes and stops.**
+Use saved evidence/source/algebra; no implementation, new admission or workload.
+See [Next task](#next-task). No model/session switch or /new required.
+
+R246 supplied snapshot: completion 10m 48s / 5:42 PM, Codex v0.155.1,
+Astra/high, same session, context 84% (52K/258K), weekly 88%, Luna Reserve 99%.
+No /new, literal /status, token totals or credit count supplied; account email
+redacted. Values user reported. R245 delivery 8de00a4 verified by clean pull;
+R246 STARTED/launch 65ab4bf published. Completion prepared for scoped publication;
+delivery belongs in Git/final response. PC retains ownership; Mac released.
+
+Changed: result, 19 evidence files, prototype README, B1_SETUP, four track
+overviews, STATUS and request/lifecycle/handoff. All 29 source/test/pin hashes
+unchanged. Checks: launch source/manifest/policy/caller/interpreter/seven runtime
+files/four library resolutions/archive, 15 new/45 old raw hashes, matrix receipt,
+five reservations and absent recorded PIDs/cgroups, saved schema/acceptance,
+JSON/links, request IDs, append-only logs and whitespace. R244's 77 tests and
+R245's caller/nine focused tests reused, not rerun. Skips: additional numerical
+imports/assembly/solve/rank/alternative factors, installation, full suite/
+rotation/tank/B2, physical/render and Mac transfer. Unknown: next verification
+scope, general convergence/stability, cause of R242 discrepancy, actual rank/
+permutation and artifact-label origin.
+
+### Previous R245 admission (completed; allocation spent by R246)
+
 Last updated 2026-09-26 (America/New_York) for R245.
 **PC/WSL daisy owns the repository.** No transfer; Mac remains released.
 **R245 admits one NEW later n=2 Poiseuille fixture under the R244 policy.**
@@ -677,12 +724,12 @@ and physical-work limits remain unchanged.
 | Owner | PC/WSL `daisy`; Mac `fire.lan` released after published R161 handoff and R162 receipt. |
 | Checkout | `/home/rharris/git/navier-stokes-vortex-lab`. |
 | Branch/upstream | `main` / `origin/main` |
-| Starting state | R245 same-owner clean main/origin/main at 4449b1a after required fast-forward pull; rharris/daisy, empty stashes, R244 completed. STARTED 4c6b9ae published. |
+| Starting state | R246 same-owner clean main/origin/main at 8de00a4 after required fast-forward pull; rharris/daisy, empty stashes, R245 completed. STARTED/launch 65ab4bf published. |
 | Interpreter | /tmp/navier-fenicsx-r229/bin/python verified as 3.12.13 with -I -S; exact environment artifacts verified, setup memory-event predicate refused. Project Python remains 3.12.14. Old /tmp/navier-fenicsx is still partial. |
 | Other owner/process | Mac `fire.lan` released in the published R161 handoff. Local Git cannot inspect another checkout's unpublished state. |
-| Task processes | All four old allocations spent 1/1; 45 raw originals match, reservations persist and recorded PIDs/cgroups absent. New R245 directory absent, 0/1 spent. No manager connection, reservation or numerical launch; only stdlib/mocked tests. |
+| Task processes | All five allocations spent 1/1; R246 PASS with worker/caller exit 0 and empty cleanup. All 60 raw originals match; reservations persist, recorded PIDs/cgroups absent (latest PID 157349). No task left running. |
 | Symbolic environment | `/tmp/navier-r183-sympy/bin/python`, Python 3.12.14, SymPy 1.14.0, mpmath 1.3.0; recreate using `requirements-symbolic.txt` if missing. Existing environments unchanged. |
-| Delivery state | R244 4449b1a verified by clean pull; R245 STARTED 4c6b9ae published. Admission/caller/evidence/completion prepared for publication; delivery in Git/final response. PC retains ownership. |
+| Delivery state | R245 8de00a4 verified by clean pull; R246 STARTED/launch 65ab4bf published. Result/evidence/completion prepared for publication; delivery in Git/final response. PC retains ownership. |
 
 ## Current result and limits
 
@@ -813,47 +860,42 @@ agent-side POV-Ray backtraces are unavailable.
 
 ## Next task
 
-**GPT-6 Sol / high / PC-WSL daisy: execute the exact R245 caller once,
-preserve all raw evidence and cleanup/spent state, publish and stop.**
+**GPT-6 Astra / high / PC-WSL daisy: review the saved R246 PASS against the
+verification roadmap and define the smallest justified next verification
+milestone, or a precise blocker; publish and stop before implementation,
+new allocation or numerical execution.**
 After **Continue**, follow clean synchronization/ownership/STARTED publication.
-Read [R245 admission](docs/realizability/POISEUILLE_ADMISSION_R245.md),
-[allocation](docs/realizability/evidence/r245/allocation.json),
-[caller](docs/realizability/evidence/r245/run_once.py),
-[checks/source hashes](docs/realizability/evidence/r245/checks.json),
-[artifacts](docs/realizability/evidence/r245/artifacts.json) and
-[R244 implementation](docs/realizability/POISEUILLE_POLICY_IMPLEMENTATION_R244.md).
-All four older allocations remain spent; new R245 allocation is 0/1 spent.
+Read [R246 result](docs/realizability/POISEUILLE_RESULT_R246.md),
+[checks/raw inventory](docs/realizability/evidence/r246/),
+[R245 admission](docs/realizability/POISEUILLE_ADMISSION_R245.md),
+[R244 implementation](docs/realizability/POISEUILLE_POLICY_IMPLEMENTATION_R244.md),
+[prototype scope](verification/nonlinear_port/README.md) and the existing
+[verification manifest](verification/nonlinear_port/future_fem.json).
 
-1. Verify the fixed `/tmp/navier-poiseuille-r245-once` directory is absent
-   (including dangling links), all 29 source hashes, caller/manifest/policy
-   digests, interpreter and exact artifact/library bindings. No prewarming or
-   standalone numerical import. Preserve accepted package/embedded labels and
-   R229's false setup resource predicate. Missing/drifted inputs stop for review.
-2. After clean STARTED publication, use that turn's actual full clean HEAD:
-   `/tmp/navier-fenicsx-r229/bin/python docs/realizability/evidence/r245/run_once.py FULL_CLEAN_LAUNCH_HEAD`.
-   The caller refreshes capacity/manager facts under its timer. Keep checkout
-   and environment unchanged during execution. Do not substitute historical HEAD.
-3. Freeze n=2/dt=.125/one BE step, R244 policy and both-degree physical gates,
-   serial SuperLU controls, all other numerical/resource checks. Limits:
-   180 s total, 15/150/15 phases, 149 s independent expiry plus 1 s grace,
-   1536 MiB/no swap/32 tasks/one rank/thread. Latest CSR caps: 512 global DOFs,
-   65,536 entries, 4 MiB, 12 corrections. No fallback or additional solve.
-4. Preserve raw schema-2 report and both-degree decisions, caller/worker logs,
-   complete/partial matrix files and receipts, reservation, resource/cleanup
-   evidence and actual exit/elapsed. Record measurement/save tails honestly.
-   Directory/reservation creation or partial worker start spends 1/1, including
-   INCOMPLETE. No retry, alternate directory, extra rank/factor analysis or
-   threshold adjustment. Publish the outcome and stop at this boundary.
-5. Only a demonstrated caller/preflight error before reservation, worker and
-   numerical import permits recovery: preserve failure/command/timing gaps,
-   verify absent fixed directory and no new manager task, fix/test the cause,
-   publish a clean binding, continue within the same unspent contract. Uncertain
-   state stops for review; never reset a charge by inference.
+1. Review saved schema-2 numerical/physical evidence, exact policy/source binding,
+   true residuals, both-degree checks and resource/cleanup/completion boundaries.
+   Any saved-data recomputation is source/algebra review, not another FEM run.
+   Preserve raw bytes and status history; R242 stays INCOMPLETE, all five
+   allocations remain spent. Do not reuse any directory or historical caller.
+2. State what this single fixed Poiseuille oracle establishes and what remains
+   before manufactured-solution, mesh/time convergence and boundary-response
+   work. Separate shared-helper agreement from independent validation, degree-24
+   backflow sampling from both-degree scalar checks, and accepted contract
+   observations from unobserved resource/save tails. No general stability or
+   physical-realizability conclusion from this result alone.
+3. Select one smallest useful next verification milestone consistent with the
+   existing roadmap. Specify the missing source/fixture/diagnostic support,
+   acceptance evidence, resource and attempt boundaries, and implementation/
+   admission prerequisites. Give a justified proposal or precise blocker;
+   do not expand to a full suite, silently change gates or grant a new allocation.
+4. Publish the review and stop. Retain Astra/high for unresolved method or
+   admission decisions; recommend Sol/high only if the next implementation
+   task has a concrete frozen contract and meaningful checks. No additional
+   solve, rank/alternative factorization, installation, full suite/rotation/
+   tank/B2, physical/render or Mac transfer in this review.
 
-Completion: one retained outcome with spent/cleanup state or precise preflight
-blocker, scoped publication, then stop. Recommend Astra/high next to interpret
-results or reconsider method/admission. No full suite/rotation/tank/B2,
-physical/render or Mac transfer. [Official OpenAI documentation](https://developers.openai.com/api/docs/models/gpt-6-sol)
+Completion: an evidence-backed next verification proposal or blocker and one
+concrete next task, with scoped publication. [Official OpenAI documentation](https://developers.openai.com/api/docs/models/gpt-6-astra)
 was searched/opened for high support; task fit is judgment. No model/session
 switch or new chat required. Next prompt: **Continue**.
 

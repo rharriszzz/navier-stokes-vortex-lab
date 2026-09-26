@@ -1,0 +1,157 @@
+{
+  "attempts_granted": 1,
+  "attempts_spent": 1,
+  "caller_exit": 0,
+  "cleanup_empty": true,
+  "degree_checks": {
+    "24": {
+      "divergence": true,
+      "multipliers": true,
+      "physical_endpoint_budgets": true,
+      "quadrature_24_26": true,
+      "return_traction": true,
+      "step_gates": true,
+      "velocity_pressure_exact": true,
+      "verified_correction": true
+    },
+    "26": {
+      "divergence": true,
+      "multipliers": true,
+      "physical_endpoint_budgets": true,
+      "quadrature_24_26": true,
+      "return_traction": true,
+      "step_gates": true,
+      "velocity_pressure_exact": true,
+      "verified_correction": true
+    }
+  },
+  "final_document_checks": {
+    "append_only_logs": true,
+    "historical_evidence_unchanged": true,
+    "json_files": 17,
+    "local_link_targets": 245,
+    "raw_copies_reverified": 15,
+    "unique_request_ids": 246
+  },
+  "limitations": [
+    "Resource snapshot ends before final handshake/exit; limits remain active.",
+    "Final completion save tails unobserved; parent wall interval not independently measured.",
+    "Latest matrix is before correction 3 factorization, not the final converged state; earlier matrices overwritten by design.",
+    "Single fixed oracle result; no convergence, general stability, tank or physical-realizability claim.",
+    "No additional solve, rank/alternative factorization or acceptance change."
+  ],
+  "matrix": {
+    "bytes": 186809,
+    "correction": 3,
+    "fixed_indices": 240,
+    "latest_receipt_matches": true,
+    "nnz": 6909,
+    "partial_writing_present": false,
+    "rank_analysis_performed": false,
+    "receipts": [
+      {
+        "bytes": 182042,
+        "correction": 1,
+        "file": "linear_system.json",
+        "sha256": "72f278ce4fe77200b9652ae86166d8304252730ad37389c4712db5a0858933bb"
+      },
+      {
+        "bytes": 186868,
+        "correction": 2,
+        "file": "linear_system.json",
+        "sha256": "a05debe7a316fbb76ec9c496295678eca9040bac6f44f8c740acebdd259b05f7"
+      },
+      {
+        "bytes": 186809,
+        "correction": 3,
+        "file": "linear_system.json",
+        "sha256": "25be7abc311a8cfc6ce0e3fe4cf960a456a7a170d2caf5bff85793e3d00038eb"
+      }
+    ],
+    "sha256": "25be7abc311a8cfc6ce0e3fe4cf960a456a7a170d2caf5bff85793e3d00038eb",
+    "shape": [
+      405,
+      405
+    ],
+    "source_binding_matches": true
+  },
+  "numerical_checks": {
+    "divergence": true,
+    "multipliers": true,
+    "physical_endpoint_budgets": true,
+    "quadrature_24_26": true,
+    "return_traction": true,
+    "step_gates": true,
+    "velocity_pressure_exact": true,
+    "verified_correction": true
+  },
+  "numerical_schema": 2,
+  "prior_allocations": [
+    {
+      "raw_originals_verified": 10,
+      "recorded_cgroup_absent": true,
+      "recorded_pid_absent": true,
+      "request": "r232",
+      "reservation_present": true,
+      "spent": 1
+    },
+    {
+      "raw_originals_verified": 10,
+      "recorded_cgroup_absent": true,
+      "recorded_pid_absent": true,
+      "request": "r235",
+      "reservation_present": true,
+      "spent": 1
+    },
+    {
+      "raw_originals_verified": 10,
+      "recorded_cgroup_absent": true,
+      "recorded_pid_absent": true,
+      "request": "r238",
+      "reservation_present": true,
+      "spent": 1
+    },
+    {
+      "raw_originals_verified": 15,
+      "recorded_cgroup_absent": true,
+      "recorded_pid_absent": true,
+      "request": "r242",
+      "reservation_present": true,
+      "spent": 1
+    }
+  ],
+  "quadrature_entries_accepted": 30,
+  "raw_files_verified": 15,
+  "recorded_cgroup_absent": true,
+  "recorded_pid_absent": true,
+  "recorded_worker_pid": 157349,
+  "resource_snapshot": {
+    "measurement_boundary": "before final worker handshake/exit; limits remain active",
+    "memory_events": {
+      "high": 0,
+      "low": 0,
+      "max": 0,
+      "oom": 0,
+      "oom_group_kill": 0,
+      "oom_kill": 0
+    },
+    "memory_peak_bytes": 319332352,
+    "pids_events": {
+      "max": 0
+    },
+    "pids_peak": 5,
+    "sampled_pids": [
+      157349
+    ]
+  },
+  "source_files_unchanged": 29,
+  "status": "PASS",
+  "tests_reused": "R244 77-test result and R245 caller/nine focused tests reused; unchanged source, no rerun",
+  "time_utc": "2026-09-26T21:46:16.227741+00:00",
+  "unknown_children": false,
+  "worker_exit": {
+    "exit_code": 0,
+    "manager_result": "success",
+    "unit": "navier-poiseuille-49b4bda20b1d43e39cc73e51dbc46edb.service"
+  }
+}

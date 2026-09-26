@@ -1,12 +1,12 @@
 # B1 solver environment
 
-[R245 admission](../../docs/realizability/POISEUILLE_ADMISSION_R245.md) grants one
-NEW later n=2 Poiseuille fixture under the explicit R244 policy and both-degree
-checks. The exact source, manifest, policy, interpreter and artifacts are bound.
-`/tmp/navier-poiseuille-r245-once` is unreserved, 0/1 spent. All four older
-allocations remain spent; R242 remains INCOMPLETE. Follow the
-[current task](../../SESSION_HANDOFF.md#next-task) for Sol/high execution after
-Continue, then preserve evidence, publish and stop.
+[R246 result](../../docs/realizability/POISEUILLE_RESULT_R246.md): **PASS**
+for the single n=2 Poiseuille fixture under the explicit R244 policy. Both-degree
+physical checks and all 30 pair comparisons pass; worker/caller exit 0, cleanup
+empty. R245 allocation is spent 1/1; all five allocations are spent and R242
+remains INCOMPLETE. This fixed oracle does not establish convergence or physical
+realizability. Follow the [current task](../../SESSION_HANDOFF.md#next-task)
+for Astra/high review of the next verification milestone; no new workload.
 
 Historical PC status: [R232's one-use Poiseuille result](POISEUILLE_RESULT_R232.md)
 is INCOMPLETE at PETSc symbolic LU, and the single numerical allocation is

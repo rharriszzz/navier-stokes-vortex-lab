@@ -1566,3 +1566,57 @@ Identity rharris/daisy, PC/WSL Linux 6.18.33.2-microsoft-standard-WSL2 x86_64;
 succeeded). Empty stashes, R245 completed, PC owner, Mac released.
 Execute exact bound caller once, preserve raw evidence/cleanup/spent state,
 publish and stop. Four older allocations spent; new allocation 0/1 before launch.
+
+COMPLETED | 2026-09-26T21:49:26Z | R246 | PC/WSL daisy | released: no
+Executed the exact R245 caller once from clean published launch source
+65ab4bf108c941cbc9a549b20c5bce50883cdd5e: PASS, worker/caller exit 0.
+Reservation at 2026-09-26T21:44:43Z in /tmp/navier-poiseuille-r245-once;
+R245 allocation now spent 1/1. No preflight failure/recovery or retry. All five
+allocations are spent; four older outcomes unchanged, R242 remains INCOMPLETE.
+Three serial SuperLU corrections passed true-residual checks, Newton converged,
+and all 30 quadrature comparisons plus physical checks at both degrees passed
+under frozen policy/schema 2. This single fixed n=2 oracle is not convergence,
+general stability, tank or physical-realizability evidence.
+
+Caller interval after save 2.897688477009069 s. Saved peak 319,332,352 bytes /
+5 tasks; zero memory.max/OOM/OOM-kill/PID-limit events. Cleanup empty,
+unknown_children=false; manager inactive/not-found/MainPID 0. Recorded worker
+PID 157349 and saved cgroup absent. Resource sampling ends before final worker
+handshake/exit; final completion-save tails and independent parent wall interval
+unobserved. Existing cache state retained; no cold-start performance claim.
+R229 setup resource predicate stays false and exact package/embedded-label
+acceptance remains as R245. Raw result PROVISIONAL_PASS and final controller/
+caller PASS records preserved without rewriting.
+
+All 15 raw files copied byte-for-byte; 405-by-405 latest lifted/scaled CSR/RHS
+before correction 3, 6,909 entries, 186,809 bytes, SHA256
+25be7abc311a8cfc6ce0e3fe4cf960a456a7a170d2caf5bff85793e3d00038eb.
+Final receipt/held/controller source bindings match; earlier matrix receipts
+remain but their files were overwritten as designed. No rank/alternative factor
+analysis or additional solve. Forty-five older raw files still match originals;
+all reservations persist and their recorded PIDs/cgroups are absent.
+
+Changed: R246 result and 19 evidence files; prototype README, B1_SETUP, four
+track overviews, STATUS, request/lifecycle/handoff. Evidence:
+docs/realizability/POISEUILLE_RESULT_R246.md and evidence/r246/.
+Checks: launch 29 source/test/pin hashes, caller/manifest/policy/interpreter,
+seven runtime files/four library resolutions/archive; 15 new/45 old raw hashes,
+receipt/source bindings, saved schema/acceptance and process cleanup; 17 JSON
+files, 245 local link targets, 246 unique request IDs, append-only records,
+unchanged historical evidence and whitespace. Prelaunch record written after
+execution from observed checks/caller facts; no invented timestamp.
+R244 77-test and R245 caller/nine focused test results reused, not rerun.
+Skipped: additional numerical import/assembly/solve, rank/alternative factors,
+install, full suite/rotation/tank/B2, physical/render and Mac transfer.
+
+Next: Astra/high reviews saved PASS against the verification roadmap, defines
+the smallest justified next verification milestone or precise blocker, with
+necessary source/admission prerequisites, acceptance evidence and stop rules;
+publish and stop before implementation/new admission/workload. Recommend Sol/high
+only after a concrete implementation contract is frozen. Official OpenAI model
+high support searched/opened; task fit is judgment. No model/session switch or
+/new needed. Unknown: next verification scope and general convergence/stability,
+cause of R242 discrepancies, actual rank/permutation and artifact-label origin.
+PC retains ownership, Mac released. R245 8de00a4 verified by clean pull;
+R246 STARTED/launch 65ab4bf published. Completion prepared for scoped publication;
+delivery hash/result in Git/final response, no post-push edit.

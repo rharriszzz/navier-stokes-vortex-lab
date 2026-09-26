@@ -1,0 +1,65 @@
+{
+  "files": {
+    "admission.json": {
+      "bytes": 282,
+      "sha256": "aac4217e3178ae871f0e2d87ce6556848d2373257160098ebef470e01c34fae4"
+    },
+    "caller.json": {
+      "bytes": 1004,
+      "sha256": "dbbd7e82db9d133e4b5a2bf2b2b5063d9a0bba13b45f49c75ebcfe29c75d0f9d"
+    },
+    "caller_completion.json": {
+      "bytes": 121,
+      "sha256": "8fdf01dc5ca1a3aab8ebed3f2387bff8a89be994558541455313f58a32104d00"
+    },
+    "completion.json": {
+      "bytes": 283,
+      "sha256": "4f3bf897861cfa9857588f261a21a135e6e59f11aa5621a6fc9ccb8deac68b48"
+    },
+    "exit.json": {
+      "bytes": 46,
+      "sha256": "e1646ace24cea0f5a855c7b1fce7bf7d799d12ed82c1287ddda406af354ba948"
+    },
+    "finished.json": {
+      "bytes": 46,
+      "sha256": "e1646ace24cea0f5a855c7b1fce7bf7d799d12ed82c1287ddda406af354ba948"
+    },
+    "held.json": {
+      "bytes": 657,
+      "sha256": "485cd3673fdbb6ba5e35f77c26951e9213d925592799371f4786178a75607478"
+    },
+    "linear_system.json": {
+      "bytes": 186809,
+      "sha256": "25be7abc311a8cfc6ce0e3fe4cf960a456a7a170d2caf5bff85793e3d00038eb"
+    },
+    "numerical.json": {
+      "bytes": 34931,
+      "sha256": "c366ab9ae5e826bd30b6e16f1e5e7d847f8764c9706bc0c67f96d4f47bdeb501"
+    },
+    "release.json": {
+      "bytes": 174,
+      "sha256": "56672ea4f6f7f9d7c1594613585d274f748209d0385ef72fcd5b46332b17d56e"
+    },
+    "reservation.json": {
+      "bytes": 639,
+      "sha256": "d523694fdfc7e59c9025c0275a888d8067ce563cf6872261724e2b2cdccd53b8"
+    },
+    "resource_snapshot.json": {
+      "bytes": 282,
+      "sha256": "daf4781ba5c7901033838b6aee17bf95552a92bd6a118581c5ccdfd335ce9202"
+    },
+    "result.json": {
+      "bytes": 39667,
+      "sha256": "69a6c3a38a2d16802b618215df70affead9005882fd1e14768e1cc9626d4f8cd"
+    },
+    "run.log": {
+      "bytes": 102,
+      "sha256": "4588a33928b32b726061e820269932526f9847dee16c34820a344a4654734bed"
+    },
+    "worker.log": {
+      "bytes": 1752,
+      "sha256": "c237944b0a38f86e192dc5e3b744681dec7ddd4b1d449b9827b4c2ed50e3f52c"
+    }
+  },
+  "source_directory": "/tmp/navier-poiseuille-r245-once"
+}

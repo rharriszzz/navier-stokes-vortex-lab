@@ -1,0 +1,17 @@
+{
+  "archive_verified": true,
+  "artifact_inventory_sha256": "f098f8287e1d1318cb8b389bf1b80c17db682911244a346ad7e1ac5c6e266f58",
+  "caller_sha256": "5003f99cd79abac979ef26496638563ee8518f4b2d2f69dcdaa6c4288ab9e873",
+  "checkout_clean_before_launch": true,
+  "diagnostic_policy_sha256": "cdfaceeffc892f8b2243131e5fd3eded02cdb5a6d2d4f9e85972a04461b2e8f5",
+  "interpreter_sha256": "5f083df36ec986d5cd13d2549ca6cfe1ddaf658509f9e419b454b2fb375c27a3",
+  "launch_commit": "65ab4bf108c941cbc9a549b20c5bce50883cdd5e",
+  "library_resolutions_verified": 4,
+  "manifest_sha256": "061962ccc9fc26aa71c5c77d232e28591a0807e63b942e13e7255330245da0ca",
+  "numerical_imports_before_launch": false,
+  "provenance": "Prelaunch tool verification and caller preflight record; timestamp not independently saved before launch",
+  "recorded_after_execution": true,
+  "run_directory_absent_before_launch": true,
+  "runtime_files_verified": 7,
+  "source_files_verified": 29
+}
