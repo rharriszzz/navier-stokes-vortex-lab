@@ -9092,3 +9092,45 @@ execution. Official model high support rechecked; no model/session switch or
 /new needed. PC retains ownership; Mac released. R241 a118ee2 verified by clean
 pull; R242 STARTED/launch 8622c8a published. Completion prepared for scoped
 publication; delivery hash/result in Git/final response, no post-push edit.
+
+## R243 — 2026-09-26 — Review saved quadrature refusal
+
+**User request (account email redacted):**
+
+```text
+Worked for 40m 22s · done 5:06 PM ╭───────────────────────────────────────────────────────────────────────────────────────╮
+│  >_ OpenAI Codex (v0.155.1)                                                           │
+│                                                                                       │
+│ Visit https://chatgpt.com/codex/settings/usage for up-to-date                         │
+│ information on rate limits and credits                                                │
+│                                                                                       │
+│  Model:                       gpt-6-astra (reasoning high, summaries auto)            │
+│  Model provider:              openai                                                  │
+│  Directory:                   ~/git/navier-stokes-vortex-lab                          │
+│  Permissions:                 Workspace (Ask for approval)                            │
+│  Agents.md:                   AGENTS.md                                               │
+│  Account:                     [account email redacted] (Pro Lite)                    │
+│  Thread name:                 Review Codex session output                             │
+│  Collaboration mode:          Default                                                 │
+│  Session:                     01a0deb4-08c7-78e2-ab83-65111b56ad3d                    │
+│                                                                                       │
+│  Context window:              72% left (80K used / 258K)                              │
+│  Weekly limit:                [██████████████████░░] 92% left (resets 13:10 on 3 Oct) │
+│  Luna Reserve Weekly limit:   [████████████████████] 99% left (resets 10:18 on 3 Oct) │
+╰───────────────────────────────────────────────────────────────────────────────────────╯ Continue
+```
+
+**Scope/status:** STARTED. Review saved R242 quadrature failures and acceptance
+scales using source/algebra evidence; publish justified proposal or precise
+blocker, then stop before new admission/execution. Preserve original refusal
+and all four spent allocations. Continue authorizes scoped start/completion
+commits and pushes.
+
+Preflight: rharris/daisy, PC/WSL Linux 6.18.33.2-microsoft-standard-WSL2 x86_64,
+/home/rharris/git/navier-stokes-vortex-lab, clean main/origin/main equal at
+332d902f9e46aa03c8db1e9938b83f8e8a82f7e9 after required fast-forward pull
+(already up to date), empty stashes, R242 completed. PC retains ownership;
+Mac released. Supplied snapshot: completion 40m 22s / 5:06 PM, Codex v0.155.1,
+Astra/high, same session, context 72% (80K/258K), weekly 92%, Luna Reserve 99%.
+No /new, literal /status, token totals or credit count supplied. User-reported
+values only; no account verification or agent model/session switch.

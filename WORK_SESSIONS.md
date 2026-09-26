@@ -1403,3 +1403,12 @@ execution. Official model high support rechecked; no model/session switch or
 /new needed. PC retains ownership; Mac released. R241 a118ee2 verified by clean
 pull; R242 STARTED/launch 8622c8a published. Completion prepared for scoped
 publication; delivery hash/result in Git/final response, no post-push edit.
+
+## R243 — Saved quadrature refusal and acceptance-scale review
+STARTED | 2026-09-26T21:09:00Z | PC/WSL daisy | released: no
+Identity rharris/daisy, Linux 6.18.33.2-microsoft-standard-WSL2 x86_64;
+/home/rharris/git/navier-stokes-vortex-lab; clean main/origin/main at
+332d902f9e46aa03c8db1e9938b83f8e8a82f7e9 after required fast-forward pull,
+empty stashes, R242 completed, same owner, Mac released. Source/algebra review
+of saved quadrature refusal; publish proposal or blocker, stop before numerical
+admission/execution. All four allocations remain spent 1/1.
