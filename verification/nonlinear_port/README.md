@@ -1,12 +1,13 @@
 # Isolated nonlinear port verification source — R195/R196/R222/R225/R226
 
-[R241 admission](../../docs/realizability/POISEUILLE_ADMISSION_R241.md) grants one NEW later bounded n=2 Poiseuille
-fixture using explicit serial SuperLU and bounded pre-solve CSR/RHS evidence.
-All 69 standard-library tests pass without numerical imports. The exact packaged
-artifact is accepted by hash with its version-label discrepancy preserved.
-The new `/tmp/navier-poiseuille-r241-once` allocation is 0/1 spent; all three
-old allocations remain spent 1/1. Follow the
-[current task](../../SESSION_HANDOFF.md#next-task) for Sol/high execution after Continue.
+[R242 result](../../docs/realizability/POISEUILLE_RESULT_R242.md) is **INCOMPLETE**:
+three verified SuperLU corrections completed, but 12 degree-24/26 diagnostic
+comparisons failed the unchanged limits. Numerical/resource reports and the
+latest 405-by-405 CSR/RHS are retained; worker exit 0, caller exit 1, empty cleanup.
+The resource snapshot records zero limit events before final handshake/exit.
+All four fixture allocations are spent 1/1. Follow the
+[current task](../../SESSION_HANDOFF.md#next-task) for Astra/high review of the
+saved quadrature refusal; no rerun or new allocation.
 
 **Source and algebra evidence, not a validated FEM solver.** The
 [R195 fixture review](../../docs/realizability/NONLINEAR_VERIFICATION_R195.md)
@@ -19,7 +20,7 @@ retains its setup resource refusal, repairs the artifact/runtime gate and admits
 one later bounded Poiseuille attempt. At R230, zero were spent and no FEM ran. No production B1/B2
 module imports this directory; no dependency pins changed.
 
-Current result: [R232](../../docs/realizability/POISEUILLE_RESULT_R232.md)
+Historical result: [R232](../../docs/realizability/POISEUILLE_RESULT_R232.md)
 used that allocation once. The real worker reached PETSc symbolic LU and exited
 1 with missing diagonal entries; no numerical report or resource snapshot was
 produced. That allocation is spent, cleanup is empty, and its allowance cannot be reused.
@@ -39,7 +40,7 @@ admitted one diagnostic fixture with the unchanged solver and gates.
 [R238](../../docs/realizability/POISEUILLE_RESULT_R238.md) spent it 1/1:
 KSP -11, 405 nonfinite entries, PC reason 2 (numeric zero pivot), worker exit 1,
 empty cleanup, no numerical/resource report. All three fixture allowances are
-spent. R241 separately admits one later fixture with bounded matrix evidence;
+spent. R242 spent the separately admitted R241 fixture with bounded matrix evidence;
 follow the [handoff task](../../SESSION_HANDOFF.md#next-task).
 
 - `polynomial.py`, `fixtures.py`: exact rational manufactured fields and

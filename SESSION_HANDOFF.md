@@ -1,5 +1,48 @@
 # Current session handoff
 
+Last updated 2026-09-26 (America/New_York) for R242.
+**PC/WSL daisy owns the repository.** No transfer; Mac remains released.
+**R242 ran the single R241 fixture: INCOMPLETE, spent 1/1.** Three serial
+SuperLU corrections passed true-residual checks and Newton converged, but
+12 degree-24/26 diagnostic comparisons failed their unchanged 1e-18 limits.
+The controller refused numerical acceptance; worker exit 0, caller exit 1.
+See [result](docs/realizability/POISEUILLE_RESULT_R242.md) and
+[retained evidence](docs/realizability/evidence/r242/).
+
+All 15 raw files are retained byte-for-byte, including numerical/resource
+reports and the actual lifted/scaled 405-by-405 CSR/RHS before correction 3
+(6,909 stored entries, 186,809 bytes). Final receipt/hash/source bindings match.
+The earlier two matrices were overwritten as designed; their receipts remain.
+No rank/alternative factor analysis or second solve occurred after execution.
+Caller interval after save: 22.424088506 s. Saved peak 280,064,000 bytes / 6 tasks;
+zero memory.max/OOM/OOM-kill/PID-limit events before final handshake/exit.
+Cleanup empty, unknown_children=false; recorded PID 154443 and cgroup absent.
+Final save tails remain unobserved. No overall numerical/resource PASS.
+All four allocations are spent; R229 setup resource refusal remains false.
+
+**Next: Astra/high reviews the saved quadrature refusal and acceptance scales,
+with source/algebra evidence only; publish a justified proposal or blocker.**
+See [Next task](#next-task). No new allocation, rerun or retroactive PASS.
+
+R242 supplied excerpt: completion 12m 15s / 4:27 PM, same session, context
+14% (224K/258K), weekly 93%, Luna Reserve 99%. No /new, literal /status, current
+model/version/account fields, token totals or credit count supplied. Values
+are user reported; no agent model/session switch. No /new needed.
+R241 delivery a118ee2 verified by clean pull; R242 STARTED/launch 8622c8a published.
+Completion prepared for scoped publication; delivery belongs in Git/final response.
+
+Changed: R242 result and 19 evidence files, prototype README, B1_SETUP, four
+track overviews, STATUS and request/lifecycle/handoff. Source and pins unchanged.
+Checks: 27 source/seven artifact/four library/interpreter launch bindings;
+15 new/30 older raw file hashes, matrix receipt, four spent reservations and
+recorded PID/cgroup absence; JSON/links, request IDs, append-only logs/whitespace.
+R241's 69 tests reused, not rerun. Skips: additional FEM/assembly/solve or rank
+analysis, install, full suite/rotation/tank/B2, physical/render and Mac work.
+Unresolved: cause and suitable scaling of quadrature failures; actual matrix
+rank/pivot permutation; retained artifact-label discrepancy. PC retains ownership.
+
+### Previous R241 admission (completed; allocation spent by R242)
+
 Last updated 2026-09-26 (America/New_York) for R241.
 **PC/WSL daisy owns the repository.** No transfer; Mac remains released.
 **R241 admits one NEW later n=2 Poiseuille fixture, 0/1 spent.** The
@@ -500,12 +543,12 @@ and physical-work limits remain unchanged.
 | Owner | PC/WSL `daisy`; Mac `fire.lan` released after published R161 handoff and R162 receipt. |
 | Checkout | `/home/rharris/git/navier-stokes-vortex-lab`. |
 | Branch/upstream | `main` / `origin/main` |
-| Starting state | R241 same-owner clean main/origin/main at 14a402a after required fast-forward pull; rharris/daisy, empty stashes, R240 completed. Start afcd53f published. |
+| Starting state | R242 same-owner clean main/origin/main at a118ee2 after required fast-forward pull; rharris/daisy, empty stashes, R241 completed. STARTED/launch 8622c8a published. |
 | Interpreter | /tmp/navier-fenicsx-r229/bin/python verified as 3.12.13 with -I -S; exact environment artifacts verified, setup memory-event predicate refused. Project Python remains 3.12.14. Old /tmp/navier-fenicsx is still partial. |
 | Other owner/process | Mac `fire.lan` released in the published R161 handoff. Local Git cannot inspect another checkout's unpublished state. |
-| Task processes | Three old allocations spent 1/1, retained raw originals match and recorded PIDs/cgroups absent. New R241 directory absent, no reservation/worker/live scope, 0/1 spent. No manager connection during review. |
+| Task processes | All four allocations spent 1/1. R242 worker exit 0, caller exit 1, cleanup empty; saved PID 154443/cgroup absent. Thirty older raw originals match, reservations persist and recorded PIDs/cgroups absent. No active task worker. |
 | Symbolic environment | `/tmp/navier-r183-sympy/bin/python`, Python 3.12.14, SymPy 1.14.0, mpmath 1.3.0; recreate using `requirements-symbolic.txt` if missing. Existing environments unchanged. |
-| Delivery state | R240 14a402a verified by clean pull; R241 STARTED afcd53f published. R241 evidence/admission/completion prepared for publication; delivery in Git/final response. PC retains ownership. |
+| Delivery state | R241 a118ee2 verified by clean pull; R242 STARTED/launch 8622c8a published. R242 result/evidence/completion prepared for publication; delivery in Git/final response. PC retains ownership. |
 
 ## Current result and limits
 
@@ -636,51 +679,44 @@ agent-side POV-Ray backtraces are unavailable.
 
 ## Next task
 
-**GPT-6 Sol / high / PC-WSL daisy: execute the exact R241 caller once,
-preserve all result/evidence/cleanup and spent state, publish and stop.**
+**GPT-6 Astra / high / PC-WSL daisy: review the saved R242 quadrature refusal
+and its acceptance scales; publish a source/algebra proposal or precise blocker,
+then stop before numerical admission or execution.**
 After **Continue**, follow clean synchronization/ownership/STARTED publication.
-Read [R241 admission](docs/realizability/POISEUILLE_ADMISSION_R241.md),
-[allocation](docs/realizability/evidence/r241/allocation.json),
-[caller](docs/realizability/evidence/r241/run_once.py),
-[artifact binding](docs/realizability/evidence/r241/artifacts.json),
-[checks](docs/realizability/evidence/r241/checks.json), R240 method review and
-R238 result. All three older allocations remain spent; no source change needed.
+Read [R242 result](docs/realizability/POISEUILLE_RESULT_R242.md),
+[numerical report](docs/realizability/evidence/r242/run/numerical.json),
+[checks](docs/realizability/evidence/r242/checks.json),
+[raw inventory](docs/realizability/evidence/r242/run_hashes.json), R241 admission
+and R225 acceptance review. All four numerical allocations remain spent 1/1.
 
-1. Verify new fixed directory `/tmp/navier-poiseuille-r241-once` remains absent
-   (including dangling links) and allocation unspent. Verify caller digest,
-   27 source hashes, artifact inventory/hash bindings and exact R229 interpreter.
-   Publish STARTED, then obtain actual full clean `git rev-parse HEAD`.
-2. Invoke `/tmp/navier-fenicsx-r229/bin/python
-   docs/realizability/evidence/r241/run_once.py EXACT_LAUNCH_COMMIT` once.
-   Use the actual hash, keep checkout/environment unchanged; no standalone FEM
-   imports, prewarming, worker invocation, second solve or alternate directory.
-   The caller refreshes capacity/manager facts under its 180-second timer.
-3. Preserve all raw files, including `linear_system.json`, any `.writing`,
-   hashed evidence receipts, configuration/status logs, actual exit/elapsed and
-   cleanup. Check file hash/size/correction and label missing/partial/older
-   records honestly. Do not run rank/SVD/alternative-factor analysis in this
-   execution step. Any reservation or partial worker start spends 1/1, including
-   refusals; no retry or changed solver, pivot setting, physics or resource gate.
-4. A demonstrated caller failure before reservation/worker/numerical import is
-   recoverable only by preserving evidence, verifying absent directory and no
-   new manager task, fixing/testing the cause and publishing a clean binding.
-   Uncertain state stops for review. Never reset any charge by inference.
-5. Publish outcome/raw hashes/cleanup/spent state, request/lifecycle/handoff and
-   current status, then stop. Recommend Astra/high to interpret the exact result
-   or any required method/admission decision. A useful saved matrix is not a
-   numerical/resource PASS. Missing reports preserve INCOMPLETE.
+1. Verify the retained raw hashes/source provenance and recorded cleanup. Read
+   the saved degree-24/26 values and all 12 failed entries. Separate solver
+   correction/step acceptance from overall numerical acceptance; preserve
+   INCOMPLETE and the original frozen limits. No live FEM import/assembly/solve.
+2. Trace each comparison through fixture_driver.py, diagnostics.py, gates.py
+   and supervision.py and its research specification. Review cancellation,
+   zero-valued diagnostics, units/reference scales and rounding bounds using
+   the saved report and source/algebra evidence. Do not assume that small
+   differences are harmless or change a threshold merely to obtain a pass.
+3. State whether there is a demonstrated implementation/specification problem,
+   a scientifically justified scale proposal, or an unresolved blocker. Explain
+   assumptions and independent negative controls before any research-significant
+   gate change. Preserve raw evidence and historical acceptance unchanged.
+   No matrix rank/SVD or alternative factorization is needed unless a concrete
+   issue in the saved result justifies a separately bounded later task.
+4. Publish the review, evidence and one concrete next task; stop before new
+   admission/execution. A source-only test/change may be proposed with rationale,
+   but this handoff does not grant a new numerical allowance or relaxed gates.
 
-Frozen: n=2 Poiseuille only; 180 s total/150 s work/15 s setup/15 s finish;
-149 s independent expiry plus 1 s grace; 1536 MiB/no swap/32 tasks/one rank/thread;
-unchanged acceptance gates and R229 false setup resource predicate. New evidence
-caps 512 global DOFs/65,536 entries/4 MiB/12 corrections. No install, full suite,
-rotation/tank/B2, physical/render work or Mac transfer.
-
-Completion: one spent fixture with retained honest evidence/cleanup and scoped
-publication, or preserved pre-reservation blocker. Sol/high support rechecked in
-[official OpenAI documentation](https://developers.openai.com/api/docs/models/gpt-6-sol);
-task fit is judgment. No agent model/session switch or new chat required.
-Next prompt: **Continue**.
+Completion: explicit interpretation/proposal with evidence, uncertainty and
+validation requirements, or precise blocker. No install, full suite/rotation/
+tank/B2, physical/render or Mac transfer. R229 setup resource refusal stays false.
+Keep Astra/high for unresolved scientific/method decisions. Recommend Sol/high
+only when the following implementation or separately admitted execution is
+routine and has concrete checks/stopping rules; recheck availability then.
+[Official model documentation](https://developers.openai.com/api/docs/models/gpt-6-astra)
+was rechecked for high support; task fit is judgment. No agent model/session
+switch or new chat required. Next prompt: **Continue**.
 
 ### Historical R230 single-fixture execution task (R232 spent)
 

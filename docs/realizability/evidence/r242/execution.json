@@ -1,0 +1,20 @@
+{
+  "caller_exit_code": 1,
+  "caller_stdout": {
+    "elapsed_after_caller_save": 22.424088505998952,
+    "inner_status": "INCOMPLETE",
+    "reason": null,
+    "run_directory": "/tmp/navier-poiseuille-r241-once",
+    "status": "INCOMPLETE"
+  },
+  "command": [
+    "/tmp/navier-fenicsx-r229/bin/python",
+    "docs/realizability/evidence/r241/run_once.py",
+    "8622c8af8481ec4c4c11194dbc7d41571aa38ad8"
+  ],
+  "host_escalation": true,
+  "launch_commit": "8622c8af8481ec4c4c11194dbc7d41571aa38ad8",
+  "notes": "One direct caller invocation; reservation at 2026-09-26T21:01:59Z. Tool session 85529 completed exit 1. Caller timer excludes final completion-save tail; no inferred full wall interval.",
+  "parent_wall_interval_independently_measured": false,
+  "retries": 0
+}

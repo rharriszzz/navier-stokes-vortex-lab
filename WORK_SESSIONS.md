@@ -1369,3 +1369,37 @@ a118ee205e163240e5988bc92e6eb62a139fc299 after required fast-forward pull,
 empty stashes, R241 completed, same PC owner, Mac released. Execute exact R241
 caller once, preserve raw evidence and cleanup/spent state, publish and stop.
 Three older allocations remain spent 1/1; R241 admitted 0/1 before launch.
+
+COMPLETED | 2026-09-26T21:06:16Z | PC/WSL daisy | released: no
+R242 executed the exact R241 caller once from clean published launch source
+8622c8af8481ec4c4c11194dbc7d41571aa38ad8. INCOMPLETE: three verified SuperLU
+corrections and converged Newton, but 12 degree-24/26 comparisons failed their
+unchanged 1e-18 limits. Worker exit 0, caller exit 1; no retry/gate change.
+All four allocations are spent 1/1. Caller interval after save 22.424088506 s;
+saved peak 280,064,000 bytes, six tasks, zero memory.max/OOM/OOM-kill/PID-limit
+events before final handshake/exit. Empty cleanup, unknown_children=false;
+recorded PID 154443/cgroup absent. Final save tails and independent parent wall
+interval unobserved; no overall numerical/resource PASS. R229 setup refusal
+remains false. No pre-reservation failure/recovery occurred in this request.
+
+Changed: R242 result and 19 evidence files (15 byte-for-byte raw files plus
+prelaunch/execution/checks/hash inventory), prototype README, B1_SETUP, four
+track overviews, STATUS and request/lifecycle/handoff. Runtime source/pins are
+unchanged. Latest 405-by-405 CSR has 6,909 stored entries and 186,809 bytes,
+before correction 3; hash/size/correction/source match the flushed receipt and
+held worker. No partial .writing; prior correction matrices overwritten as
+designed, their receipts retained. No rank/alternative-factor analysis.
+Checks: 27 source/seven artifact/four library/interpreter launch bindings;
+15 new/30 older raw hashes and originals, four spent reservations and saved
+PID/cgroup absence; 17 JSON files, 235 local link targets, 242 unique request
+IDs, append-only logs and whitespace. R241's 69 tests reused, not rerun.
+Skips: further numerical imports/assembly/solve, installation, full suite/
+rotation/tank/B2, physical/render and Mac transfer. Unresolved: quadrature
+failure cause/scales, actual matrix rank/permutation, artifact-label origin.
+Evidence: docs/realizability/POISEUILLE_RESULT_R242.md and evidence/r242/.
+Next: Astra/high reviews saved quadrature refusal and acceptance scales with
+source/algebra evidence, publishes proposal or blocker, stops before admission/
+execution. Official model high support rechecked; no model/session switch or
+/new needed. PC retains ownership; Mac released. R241 a118ee2 verified by clean
+pull; R242 STARTED/launch 8622c8a published. Completion prepared for scoped
+publication; delivery hash/result in Git/final response, no post-push edit.

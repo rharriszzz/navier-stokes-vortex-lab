@@ -1,0 +1,508 @@
+{
+  "actual_versions": {
+    "basix": "0.10.0",
+    "dolfinx": "0.10.0",
+    "ffcx": "0.10.0",
+    "mpi4py": "4.1.2",
+    "mpi_library": "MPICH Version:      5.0.1\nMPICH Release date: Fri Apr 10 09:45:31 AM CDT 2026\nMPICH ABI:          18:1:6\nMPICH Device:       ch4:ucx ofi\nMPICH configure:    --prefix=/tmp/navier-fenicsx-r229 --disable-doc --disable-dependency-tracking --enable-cxx --enable-fortran --enable-f08 --enable-mpi-abi --with-wrapper-dl-type=none --disable-static --with-device=ch4:ucx,ofi --with-ucx=/tmp/navier-fenicsx-r229 --with-libfabric=/tmp/navier-fenicsx-r229 --with-hwloc=/tmp/navier-fenicsx-r229 --with-yaksa=embedded --with-pm=hydra:gforker\nMPICH CC:           x86_64-conda-linux-gnu-cc -I/tmp/navier-fenicsx-r229/include -march=nocona -mtune=haswell -ftree-vectorize -fPIC -fstack-protector-strong -fno-plt -O2 -ffunction-sections -pipe -fno-merge-constants -isystem /tmp/navier-fenicsx-r229/include -fdebug-prefix-map=/home/conda/feedstock_root/build_artifacts/bld/rattler-build_mpich_1784230131/work=/usr/local/src/conda/mpich-5.0.1 -fdebug-prefix-map=/tmp/navier-fenicsx-r229=/usr/local/src/conda-prefix   -O2\nMPICH CXX:          x86_64-conda-linux-gnu-c++ -I/tmp/navier-fenicsx-r229/include -fvisibility-inlines-hidden -fmessage-length=0 -march=nocona -mtune=haswell -ftree-vectorize -fPIC -fstack-protector-strong -fno-plt -O2 -ffunction-sections -pipe -fno-merge-constants -isystem /tmp/navier-fenicsx-r229/include -fdebug-prefix-map=/home/conda/feedstock_root/build_artifacts/bld/rattler-build_mpich_1784230131/work=/usr/local/src/conda/mpich-5.0.1 -fdebug-prefix-map=/tmp/navier-fenicsx-r229=/usr/local/src/conda-prefix -O2\nMPICH F77:          x86_64-conda-linux-gnu-gfortran -I/tmp/navier-fenicsx-r229/include -march=nocona -mtune=haswell -ftree-vectorize -fPIC -fstack-protector-strong -fno-plt -O2 -ffunction-sections -pipe -fno-merge-constants -isystem /tmp/navier-fenicsx-r229/include -I/home/conda/feedstock_root/build_artifacts/bld/rattler-build_mpich_1784230131/build_env/include -fdebug-prefix-map=/home/conda/feedstock_root/build_artifacts/bld/rattler-build_mpich_1784230131/work=/usr/local/src/conda/mpich-5.0.1 -fdebug-prefix-map=/tmp/navier-fenicsx-r229=/usr/local/src/conda-prefix -O2\nMPICH FC:           x86_64-conda-linux-gnu-gfortran -I/tmp/navier-fenicsx-r229/include -march=nocona -mtune=haswell -ftree-vectorize -fPIC -fstack-protector-strong -fno-plt -O2 -ffunction-sections -pipe -fno-merge-constants -isystem /tmp/navier-fenicsx-r229/include -I/home/conda/feedstock_root/build_artifacts/bld/rattler-build_mpich_1784230131/build_env/include -fdebug-prefix-map=/home/conda/feedstock_root/build_artifacts/bld/rattler-build_mpich_1784230131/work=/usr/local/src/conda/mpich-5.0.1 -fdebug-prefix-map=/tmp/navier-fenicsx-r229=/usr/local/src/conda-prefix -O2\nMPICH features:     threadcomm",
+    "mpich": "5.0.1",
+    "petsc": "3.25.5",
+    "petsc4py": "3.25.5",
+    "python": "3.12.13",
+    "ufl": "2025.2.1"
+  },
+  "checks": {
+    "divergence": true,
+    "multipliers": true,
+    "physical_endpoint_budgets": true,
+    "quadrature_24_26": false,
+    "return_traction": true,
+    "step_gates": true,
+    "velocity_pressure_exact": true,
+    "verified_correction": true
+  },
+  "compatibility": {
+    "absolute_term_sum": 1.3333333333333357,
+    "condition": 1.00790526135794,
+    "defect": 0.0,
+    "lateral_flux": 0.0,
+    "limit": 3.819518729558777e-14,
+    "targets": [
+      0.0,
+      0.0
+    ]
+  },
+  "constraint_condition": {
+    "condition_bound": 1.00790526135794,
+    "gram": [
+      [
+        0.05555555555555559,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        0.055555555555555594,
+        0.0
+      ],
+      [
+        0.0,
+        0.0,
+        0.05468749999999996
+      ]
+    ],
+    "method": "sqrt infinity-norm condition of three-row Gram"
+  },
+  "diagnostics_degree24": {
+    "angular_budget": {
+      "absolute_term_sum": 4.8072100173466706e-15,
+      "accepted": true,
+      "limit": 1e-10,
+      "signed_defect": -4.8072100173466706e-15,
+      "terms": {
+        "advective": -2.1182013597915243e-16,
+        "body": 0.0,
+        "storage": -1.5158408266029868e-16,
+        "traction": -4.443805798707219e-15
+      }
+    },
+    "both_flux_errors": [
+      3.0695950407547474e-26,
+      1.1275449278990863e-26
+    ],
+    "div_u_L2": 4.4007379975717e-15,
+    "energy_budget": {
+      "absolute_term_sum": 1.0666666666666607,
+      "accepted": true,
+      "limit": 0.010666666666666607,
+      "signed_defect": -1.5802476290187858e-15,
+      "terms": {
+        "advective": 2.0937266448977623e-16,
+        "body": 0.0,
+        "conservative_divergence": -5.282505378027176e-17,
+        "dissipation": 0.5333333333333293,
+        "pressure_divergence": 3.260138455794096e-19,
+        "storage": -7.178671663613492e-17,
+        "traction": -0.533333333333331
+      }
+    },
+    "energy_identity_defect": -9.574225344995209e-19,
+    "eta": 1.9648076819327133e-16,
+    "multiplier_errors": [
+      -2.832242866670648e-15,
+      -1.240348708413517e-15
+    ],
+    "p_L2_mean_zero": 2.423256914026362e-15,
+    "pressure_mean": -1.019717097640052e-17,
+    "raw": {
+      "angular.advective": -2.1182013597915243e-16,
+      "angular.body": 0.0,
+      "angular.storage": -1.5158408266029868e-16,
+      "angular.traction": -4.443805798707219e-15,
+      "angular_momentum": -0.3333333333333418,
+      "area_0": 1.0000000000000029,
+      "area_1": 1.0000000000000029,
+      "boundary_absolute_flux": 1.3333333333333335,
+      "div_u_L2_squared": 1.9366494923271378e-29,
+      "energy.advective": 2.0937266448977623e-16,
+      "energy.body": 0.0,
+      "energy.conservative_divergence": -5.282505378027176e-17,
+      "energy.dissipation": 0.5333333333333293,
+      "energy.pressure_divergence": 3.260138455794096e-19,
+      "energy.storage": -7.178671663613492e-17,
+      "energy.traction": -0.533333333333331,
+      "energy_identity_dissipation": 1.5090065423334327e-30,
+      "energy_identity_storage": -7.082929410163691e-17,
+      "flux_0": 3.0695950407547474e-26,
+      "flux_1": 1.1275449278990863e-26,
+      "kinetic_discrete_derivative": -7.082929410163691e-17,
+      "kinetic_energy": 0.2666666666666677,
+      "lateral_flux": 0.0,
+      "p_error_integral": -1.5474892851238188e-15,
+      "p_error_squared": 8.266897158949373e-30,
+      "pressure_mean": -1.019717097640052e-17,
+      "traction_L2_returns_squared": 2.3468838340561387e-29,
+      "u_H1_seminorm_squared": 8.851258776670153e-29,
+      "u_L2_squared": 4.839479766652023e-31,
+      "volume": 1.0000000000000917
+    },
+    "traction_L2_returns": 4.844464711457953e-15,
+    "u_H1_seminorm": 9.408112869577062e-15,
+    "u_L2": 6.956636950892309e-16
+  },
+  "diagnostics_degree26": {
+    "angular.advective": -3.8911429623484474e-16,
+    "angular.body": 0.0,
+    "angular.storage": -1.4978506817826304e-16,
+    "angular.traction": -3.767002312876258e-15,
+    "angular_momentum": -0.33333333333332904,
+    "area_0": 1.0000000000000013,
+    "area_1": 1.0000000000000013,
+    "boundary_absolute_flux": 1.333333333333331,
+    "div_u_L2_squared": 1.9363265572512348e-29,
+    "energy.advective": 6.930729633180515e-17,
+    "energy.body": 0.0,
+    "energy.conservative_divergence": -1.370508116859436e-17,
+    "energy.dissipation": 0.5333333333333325,
+    "energy.pressure_divergence": 1.1180835855639295e-17,
+    "energy.storage": -7.801528378254075e-17,
+    "energy.traction": -0.5333333333333313,
+    "energy_identity_dissipation": 1.509779337522265e-30,
+    "energy_identity_storage": -7.703093006501529e-17,
+    "flux_0": 3.0696072985477025e-26,
+    "flux_1": 1.127553920698589e-26,
+    "kinetic_discrete_derivative": -7.703093006501529e-17,
+    "kinetic_energy": 0.26666666666667144,
+    "lateral_flux": -2.220446049250313e-16,
+    "p_error_integral": -1.5393555469816015e-15,
+    "p_error_squared": 8.24862306486727e-30,
+    "pressure_mean": 4.419585630359123e-16,
+    "traction_L2_returns_squared": 2.3415093743461338e-29,
+    "u_H1_seminorm_squared": 8.879198388602563e-29,
+    "u_L2_squared": 4.833054520693442e-31,
+    "volume": 1.0000000000000902
+  },
+  "dt": 0.125,
+  "eta": 1.9648076819327133e-16,
+  "ffcx_artifact": {
+    "embedded_version": "0.10.0",
+    "package": {
+      "build": "pyhbc3ee6d_1",
+      "md5": "d37671d8e59bdccbc1ef2defa740bdaa",
+      "name": "fenics-ffcx",
+      "sha256": "727926ec2782375707cd036f86ab3d5004d53074ee80cf127619134f763e3473",
+      "subdir": "noarch",
+      "url": "https://conda.anaconda.org/conda-forge/noarch/fenics-ffcx-0.10.1-pyhbc3ee6d_1.conda",
+      "version": "0.10.1"
+    },
+    "recovery_evidence": {
+      "run/cache_verified.json": "3c5a61e8747238ac557cce800f1881c5131847ebf1212f4c388018f08f7199ce",
+      "run/verification.json": "8c91f6cc2f1494be477885e9e0cfd535b72e4f6c36fb01208ce44bb044b2d3f5"
+    }
+  },
+  "fixed_velocity_dofs": 240,
+  "fixture": "poiseuille",
+  "frozen_row_scales": {
+    "maximum": 1.0,
+    "minimum": 0.6249999999999999
+  },
+  "global_dofs": 405,
+  "linear_corrections": [
+    {
+      "rhs_norm": 0.014886035070117069,
+      "true_residual": 1.2839311693647426e-17
+    },
+    {
+      "rhs_norm": 3.416928913535827e-05,
+      "true_residual": 4.644630596411413e-20
+    },
+    {
+      "rhs_norm": 1.449690234409104e-10,
+      "true_residual": 2.7329637786591138e-25
+    }
+  ],
+  "minimum_return_normal_velocity": -1.2031204872954579e-15,
+  "mixed_dofs": 402,
+  "multipliers": [
+    -2.832242866670648e-15,
+    -1.240348708413517e-15
+  ],
+  "nonlinear_history": [
+    0.014886035070117069,
+    3.416928913535827e-05,
+    1.449690234409104e-10,
+    1.5160682224468997e-15
+  ],
+  "numerical_accepted": false,
+  "perturbed_velocity_dof": 21,
+  "phase_seconds": {
+    "compatibility_rank_newton": 1.4984660070040263,
+    "diagnostic_form_jit_assembly_sampling": 20.100023186998442,
+    "mesh_and_lift": 0.01917169100488536,
+    "primary_form_setup_jit": 0.017088601976865903
+  },
+  "physical_endpoint_budgets": {
+    "angular": {
+      "discrete_term_integral": {
+        "budget": {
+          "absolute_term_sum": 3.004506260841669e-16,
+          "accepted": true,
+          "limit": 1e-10,
+          "signed_defect": -3.004506260841669e-16,
+          "terms": {
+            "advective": -1.3238758498697027e-17,
+            "body": 0.0,
+            "storage": -9.474005166268667e-18,
+            "traction": -2.777378624192012e-16
+          }
+        },
+        "rule": "trapezoidal signed terms",
+        "samples": [
+          {
+            "advective": 0.0,
+            "body": 0.0,
+            "storage": 0.0,
+            "traction": 0.0
+          },
+          {
+            "advective": -2.1182013597915243e-16,
+            "body": 0.0,
+            "storage": -1.5158408266029868e-16,
+            "traction": -4.443805798707219e-15
+          }
+        ],
+        "times": [
+          0.0,
+          0.125
+        ]
+      },
+      "physical": {
+        "absolute_term_sum": 8.784182759300346e-15,
+        "accepted": true,
+        "limit": 1e-10,
+        "signed_defect": -8.784182759300346e-15,
+        "terms": {
+          "advective": -1.3238758498697027e-17,
+          "body": 0.0,
+          "storage": -8.493206138382448e-15,
+          "traction": -2.777378624192012e-16
+        }
+      },
+      "storage_difference": -8.483732133216179e-15
+    },
+    "energy": {
+      "discrete_term_integral": {
+        "budget": {
+          "absolute_term_sum": 0.13333333333333294,
+          "accepted": true,
+          "limit": 0.0013333333333333294,
+          "signed_defect": -9.182658290976689e-17,
+          "terms": {
+            "advective": 1.3085791530611014e-17,
+            "body": 0.0,
+            "conservative_divergence": -3.301565861266985e-18,
+            "dissipation": 0.06666666666666642,
+            "pressure_divergence": 2.03758653487131e-20,
+            "storage": -4.486669789758432e-18,
+            "traction": -0.06666666666666651
+          }
+        },
+        "rule": "trapezoidal signed terms",
+        "samples": [
+          {
+            "advective": 0.0,
+            "body": 0.0,
+            "conservative_divergence": 0.0,
+            "dissipation": 0.5333333333333333,
+            "pressure_divergence": 0.0,
+            "storage": 0.0,
+            "traction": -0.5333333333333333
+          },
+          {
+            "advective": 2.0937266448977623e-16,
+            "body": 0.0,
+            "conservative_divergence": -5.282505378027176e-17,
+            "dissipation": 0.5333333333333293,
+            "pressure_divergence": 3.260138455794096e-19,
+            "storage": -7.178671663613492e-17,
+            "traction": -0.533333333333331
+          }
+        ],
+        "times": [
+          0.0,
+          0.125
+        ]
+      },
+      "physical": {
+        "absolute_term_sum": 0.133333333333334,
+        "accepted": true,
+        "limit": 0.00133333333333334,
+        "signed_defect": 9.673719602738902e-16,
+        "terms": {
+          "advective": 1.3085791530611014e-17,
+          "body": 0.0,
+          "conservative_divergence": -3.301565861266985e-18,
+          "dissipation": 0.06666666666666642,
+          "pressure_divergence": 2.03758653487131e-20,
+          "storage": 1.0547118733938987e-15,
+          "traction": -0.06666666666666651
+        }
+      },
+      "storage_difference": 1.0591985431836572e-15
+    }
+  },
+  "quadrature_comparison": {
+    "angular.advective": {
+      "accepted": false,
+      "difference": -1.772941602556923e-16,
+      "limit": 1e-18
+    },
+    "angular.body": {
+      "accepted": true,
+      "difference": 0.0,
+      "limit": 1e-18
+    },
+    "angular.storage": {
+      "accepted": false,
+      "difference": 1.799014482035635e-18,
+      "limit": 1e-18
+    },
+    "angular.traction": {
+      "accepted": false,
+      "difference": 6.768034858309613e-16,
+      "limit": 1e-18
+    },
+    "angular_momentum": {
+      "accepted": true,
+      "difference": 1.27675647831893e-14,
+      "limit": 3.333333333333418e-09
+    },
+    "area_0": {
+      "accepted": true,
+      "difference": -1.5543122344752192e-15,
+      "limit": 1.0000000000000028e-08
+    },
+    "area_1": {
+      "accepted": true,
+      "difference": -1.5543122344752192e-15,
+      "limit": 1.0000000000000028e-08
+    },
+    "boundary_absolute_flux": {
+      "accepted": true,
+      "difference": -2.4424906541753444e-15,
+      "limit": 1.3333333333333335e-08
+    },
+    "div_u_L2_squared": {
+      "accepted": true,
+      "difference": -3.229350759030135e-33,
+      "limit": 1e-18
+    },
+    "energy.advective": {
+      "accepted": false,
+      "difference": -1.4006536815797108e-16,
+      "limit": 1e-18
+    },
+    "energy.body": {
+      "accepted": true,
+      "difference": 0.0,
+      "limit": 1e-18
+    },
+    "energy.conservative_divergence": {
+      "accepted": false,
+      "difference": 3.91199726116774e-17,
+      "limit": 1e-18
+    },
+    "energy.dissipation": {
+      "accepted": true,
+      "difference": 3.219646771412954e-15,
+      "limit": 5.333333333333293e-09
+    },
+    "energy.pressure_divergence": {
+      "accepted": false,
+      "difference": 1.0854822010059886e-17,
+      "limit": 1e-18
+    },
+    "energy.storage": {
+      "accepted": false,
+      "difference": -6.2285671464058356e-18,
+      "limit": 1e-18
+    },
+    "energy.traction": {
+      "accepted": true,
+      "difference": -3.3306690738754696e-16,
+      "limit": 5.33333333333331e-09
+    },
+    "energy_identity_dissipation": {
+      "accepted": true,
+      "difference": 7.727951888321832e-34,
+      "limit": 1e-18
+    },
+    "energy_identity_storage": {
+      "accepted": false,
+      "difference": -6.201635963378381e-18,
+      "limit": 1e-18
+    },
+    "flux_0": {
+      "accepted": true,
+      "difference": 1.225779295513458e-31,
+      "limit": 1e-18
+    },
+    "flux_1": {
+      "accepted": true,
+      "difference": 8.992799502628899e-32,
+      "limit": 1e-18
+    },
+    "kinetic_discrete_derivative": {
+      "accepted": false,
+      "difference": -6.201635963378381e-18,
+      "limit": 1e-18
+    },
+    "kinetic_energy": {
+      "accepted": true,
+      "difference": 3.7192471324942744e-15,
+      "limit": 2.6666666666666773e-09
+    },
+    "lateral_flux": {
+      "accepted": false,
+      "difference": -2.220446049250313e-16,
+      "limit": 1e-18
+    },
+    "p_error_integral": {
+      "accepted": false,
+      "difference": 8.133738142217297e-18,
+      "limit": 1e-18
+    },
+    "p_error_squared": {
+      "accepted": true,
+      "difference": -1.82740940821036e-32,
+      "limit": 1e-18
+    },
+    "pressure_mean": {
+      "accepted": false,
+      "difference": 4.521557340123128e-16,
+      "limit": 1e-18
+    },
+    "traction_L2_returns_squared": {
+      "accepted": true,
+      "difference": -5.374459710004875e-32,
+      "limit": 1e-18
+    },
+    "u_H1_seminorm_squared": {
+      "accepted": true,
+      "difference": 2.7939611932409946e-31,
+      "limit": 1e-18
+    },
+    "u_L2_squared": {
+      "accepted": true,
+      "difference": -6.4252459585815075e-34,
+      "limit": 1e-18
+    },
+    "volume": {
+      "accepted": true,
+      "difference": -1.5543122344752192e-15,
+      "limit": 1.0000000000000917e-08
+    }
+  },
+  "return_quadrature_sample_counts": [
+    896,
+    896
+  ],
+  "step_checks": {
+    "checks": {
+      "angular_budget": true,
+      "backflow": true,
+      "constraints": true,
+      "energy_budget": true,
+      "energy_identity": true,
+      "linear": true,
+      "nonlinear": true
+    },
+    "minimum_return_normal_velocity": -1.2031204872954579e-15,
+    "numerical_step_accepted": true
+  },
+  "subdivisions": 2,
+  "worker_intervals": {
+    "fixture_setup_jit_and_solve_seconds": 21.63514350898913,
+    "import_seconds": 0.4456596640229691
+  }
+}

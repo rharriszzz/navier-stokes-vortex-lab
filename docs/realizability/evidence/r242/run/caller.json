@@ -1,0 +1,21 @@
+{
+  "elapsed_before_caller_save": 22.422122646996286,
+  "final_save_tail_observed": false,
+  "inner_status": "INCOMPLETE",
+  "outer_limit_seconds": 180,
+  "preflight": {
+    "artifact_inventory_sha256": "f098f8287e1d1318cb8b389bf1b80c17db682911244a346ad7e1ac5c6e266f58",
+    "executable": "/tmp/navier-fenicsx-r229/bin/python3.12",
+    "executable_sha256": "5f083df36ec986d5cd13d2549ca6cfe1ddaf658509f9e419b454b2fb375c27a3",
+    "host_mem_available_kib": 6540840,
+    "interpreter": "/tmp/navier-fenicsx-r229/bin/python",
+    "manager_version": "249.11-0ubuntu3.22",
+    "manifest_sha256": "7a8bda917e6b46994ad24c68e0b6c6013b7d6776f90c86a6de763f31f52fa558",
+    "run_directory": "/tmp/navier-poiseuille-r241-once",
+    "runtime_artifacts_verified": 7,
+    "source_commit": "8622c8af8481ec4c4c11194dbc7d41571aa38ad8",
+    "source_files": 27
+  },
+  "reason": null,
+  "status": "INCOMPLETE"
+}

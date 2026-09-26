@@ -1,0 +1,174 @@
+{
+  "attempts_granted": 1,
+  "attempts_spent": 1,
+  "caller_exit": 1,
+  "cleanup_empty": true,
+  "failed_quadrature_entries": {
+    "angular.advective": {
+      "accepted": false,
+      "difference": -1.772941602556923e-16,
+      "limit": 1e-18
+    },
+    "angular.storage": {
+      "accepted": false,
+      "difference": 1.799014482035635e-18,
+      "limit": 1e-18
+    },
+    "angular.traction": {
+      "accepted": false,
+      "difference": 6.768034858309613e-16,
+      "limit": 1e-18
+    },
+    "energy.advective": {
+      "accepted": false,
+      "difference": -1.4006536815797108e-16,
+      "limit": 1e-18
+    },
+    "energy.conservative_divergence": {
+      "accepted": false,
+      "difference": 3.91199726116774e-17,
+      "limit": 1e-18
+    },
+    "energy.pressure_divergence": {
+      "accepted": false,
+      "difference": 1.0854822010059886e-17,
+      "limit": 1e-18
+    },
+    "energy.storage": {
+      "accepted": false,
+      "difference": -6.2285671464058356e-18,
+      "limit": 1e-18
+    },
+    "energy_identity_storage": {
+      "accepted": false,
+      "difference": -6.201635963378381e-18,
+      "limit": 1e-18
+    },
+    "kinetic_discrete_derivative": {
+      "accepted": false,
+      "difference": -6.201635963378381e-18,
+      "limit": 1e-18
+    },
+    "lateral_flux": {
+      "accepted": false,
+      "difference": -2.220446049250313e-16,
+      "limit": 1e-18
+    },
+    "p_error_integral": {
+      "accepted": false,
+      "difference": 8.133738142217297e-18,
+      "limit": 1e-18
+    },
+    "pressure_mean": {
+      "accepted": false,
+      "difference": 4.521557340123128e-16,
+      "limit": 1e-18
+    }
+  },
+  "limitations": [
+    "Resource snapshot ends before final handshake/exit; limits remain active.",
+    "Final completion save tails unobserved.",
+    "Latest matrix is before correction 3 factorization, not the final converged state; earlier matrices overwritten by design.",
+    "No rank/SVD/alternative factorization, new solve or acceptance change."
+  ],
+  "matrix": {
+    "bytes": 186809,
+    "correction": 3,
+    "fixed_indices": 240,
+    "latest_receipt_matches": true,
+    "nnz": 6909,
+    "partial_writing_present": false,
+    "rank_analysis_performed": false,
+    "receipts": [
+      {
+        "bytes": 182042,
+        "correction": 1,
+        "file": "linear_system.json",
+        "sha256": "2ffa369b83fe783d97e3fe17b8a20f24ec9748f9b7c355a3b65bb5d068cc39a1"
+      },
+      {
+        "bytes": 186868,
+        "correction": 2,
+        "file": "linear_system.json",
+        "sha256": "61967ffc58f61dfda3074a03314360e647b4ed4eafe4f38319160d71c32222f4"
+      },
+      {
+        "bytes": 186809,
+        "correction": 3,
+        "file": "linear_system.json",
+        "sha256": "76bd07d6cde88cf6693c1e2cc6bfc2892137f8cd93ddda4a318799a3fd113c23"
+      }
+    ],
+    "sha256": "76bd07d6cde88cf6693c1e2cc6bfc2892137f8cd93ddda4a318799a3fd113c23",
+    "shape": [
+      405,
+      405
+    ],
+    "source_binding_matches": true
+  },
+  "numerical_checks": {
+    "divergence": true,
+    "multipliers": true,
+    "physical_endpoint_budgets": true,
+    "quadrature_24_26": false,
+    "return_traction": true,
+    "step_gates": true,
+    "velocity_pressure_exact": true,
+    "verified_correction": true
+  },
+  "prior_allocations": [
+    {
+      "raw_originals_verified": 10,
+      "recorded_cgroup_absent": true,
+      "recorded_pid_absent": true,
+      "request": "r232",
+      "spent": 1
+    },
+    {
+      "raw_originals_verified": 10,
+      "recorded_cgroup_absent": true,
+      "recorded_pid_absent": true,
+      "request": "r235",
+      "spent": 1
+    },
+    {
+      "raw_originals_verified": 10,
+      "recorded_cgroup_absent": true,
+      "recorded_pid_absent": true,
+      "request": "r238",
+      "spent": 1
+    }
+  ],
+  "raw_files_verified": 15,
+  "recorded_cgroup_absent": true,
+  "recorded_pid_absent": true,
+  "recorded_worker_pid": 154443,
+  "resource_snapshot": {
+    "measurement_boundary": "before final worker handshake/exit; limits remain active",
+    "memory_events": {
+      "high": 0,
+      "low": 0,
+      "max": 0,
+      "oom": 0,
+      "oom_group_kill": 0,
+      "oom_kill": 0
+    },
+    "memory_peak_bytes": 280064000,
+    "pids_events": {
+      "max": 0
+    },
+    "pids_peak": 6,
+    "sampled_pids": [
+      154443
+    ]
+  },
+  "source_files_unchanged": 27,
+  "status": "INCOMPLETE",
+  "time_utc": "2026-09-26T21:03:26.751310+00:00",
+  "unknown_children": false,
+  "worker_exit": {
+    "exit_code": 0,
+    "manager_result": "success",
+    "unit": "navier-poiseuille-d8a0ee35427643a9bba47963ee572f0b.service"
+  }
+}
