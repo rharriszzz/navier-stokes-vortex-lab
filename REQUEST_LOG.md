@@ -8909,3 +8909,41 @@ existing session, context 82% (56.9K/258K), weekly 96%, Luna Reserve 99%.
 No /new, literal /status, token totals, credit count or model-change command
 supplied. Values are user reported, not independently verified accounting.
 No agent-initiated model/session switch.
+
+**R240 outcome — 2026-09-26: COMPLETED, publication prepared.**
+Selected explicit serial SuperLU LU for the nonsymmetric bordered system:
+threshold 1/COLAMD, no factor shift/tiny-pivot replacement, no equilibration or
+refinement, no fallback. PETSc reads backend options internally; a reserved
+prefix and scoped fixed settings prevent ambient collisions, with cleanup and
+configuration logging before solve. Status and true-residual/physics gates
+remain intact. This is source-level readiness, not a successful FEM solve.
+
+Changed: verification/nonlinear_port/cube_adapter.py and test_adapter.py;
+POISEUILLE_SUPERLU_REVIEW_R240.md and evidence/r240/{checks.json,tests.json,
+tests.txt}; prototype README, B1_SETUP, four track overviews, STATUS and
+request/lifecycle/handoff records. Checks: focused 18 tests then all 65
+standard-library tests, no numerical modules; seven exact-tag upstream source
+receipts, installed API/build/package/header/CMake/library hashes; 25 source/pin
+inventory (only adapter/test changed); 30 raw files and retained originals,
+three spent reservations and absent saved PIDs/cgroups; AST/JSON/local links,
+240 unique request IDs, append-only logs and whitespace. Source fetch initially
+failed sandbox DNS, then approved fetch succeeded; no install or workload.
+
+SuperLU package metadata says 7.0.1 h8f6e6c4_0 while installed header/CMake/
+library filename say 7.0.0. Those three files match their package manifest;
+origin of the label discrepancy remains unresolved, not silently relabelled.
+Dynamic backend availability/API behavior and actual matrix/rank/pivot,
+accuracy and resource events remain unknown. Skips: numerical imports/FEM/JIT/
+assembly/backend solve, live manager/scope, install, full suite/rotation/tank/B2,
+physical/render and Mac work. All three allocations remain spent 1/1; no new
+allocation. R229's setup resource predicate stays false. No numerical PASS.
+
+Evidence: docs/realizability/POISEUILLE_SUPERLU_REVIEW_R240.md and evidence/r240/.
+Next: Astra/high implements/tests bounded latest CSR/RHS evidence, reviews
+artifact identity and decides a separate one-fixture admission or precise
+blocker; stop before execution. Sol/high only after a complete mechanical
+execution is separately admitted. Continue in this session; no /new needed,
+no agent model/session switch. PC retains ownership; Mac remains released.
+R239 5ed9253 verified by clean pull; R240 STARTED 628e04d published. Completion
+prepared for scoped publication; delivery hash/result in Git/final response,
+with no post-push log edit.

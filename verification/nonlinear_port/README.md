@@ -1,12 +1,12 @@
 # Isolated nonlinear port verification source — R195/R196/R222/R225/R226
 
-[R239 pivot review](../../docs/realizability/POISEUILLE_PIVOT_REVIEW_R239.md) gives an exact full-rank toy that fails
-without row pivoting and a singular toy that passes the scalar Gram check.
-Actual R238 matrix rank remains unknown. Runtime source and all three spent
-allocations are unchanged; no FEM ran. Next: Astra/high reviews an explicit
-serial SuperLU backend and its controls, with a minimal source change only if
-justified; stop before new numerical admission. Follow the
-[current task](../../SESSION_HANDOFF.md#next-task).
+[R240 SuperLU review](../../docs/realizability/POISEUILLE_SUPERLU_REVIEW_R240.md) implements explicit serial SuperLU settings
+and isolated backend options; 65 standard-library tests pass with no numerical
+imports. The package's 7.0.1 label differs from its 7.0.0 header/CMake/library
+names, which match its own artifact hashes. No FEM/new allocation occurred;
+all three prior allocations remain spent. Next: Astra/high completes bounded
+matrix evidence and artifact review for a separate one-fixture admission;
+follow the [current task](../../SESSION_HANDOFF.md#next-task), stopping before execution.
 
 **Source and algebra evidence, not a validated FEM solver.** The
 [R195 fixture review](../../docs/realizability/NONLINEAR_VERIFICATION_R195.md)

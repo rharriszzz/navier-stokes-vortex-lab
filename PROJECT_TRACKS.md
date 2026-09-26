@@ -1,12 +1,12 @@
 # Project Tracks
 
-[R239 pivot review](docs/realizability/POISEUILLE_PIVOT_REVIEW_R239.md) gives an exact full-rank toy that fails
-without row pivoting and a singular toy that passes the scalar Gram check.
-Actual R238 matrix rank remains unknown. Runtime source and all three spent
-allocations are unchanged; no FEM ran. Next: Astra/high reviews an explicit
-serial SuperLU backend and its controls, with a minimal source change only if
-justified; stop before new numerical admission. Follow the
-[current task](SESSION_HANDOFF.md#next-task).
+[R240 SuperLU review](docs/realizability/POISEUILLE_SUPERLU_REVIEW_R240.md) implements explicit serial SuperLU settings
+and isolated backend options; 65 standard-library tests pass with no numerical
+imports. The package's 7.0.1 label differs from its 7.0.0 header/CMake/library
+names, which match its own artifact hashes. No FEM/new allocation occurred;
+all three prior allocations remain spent. Next: Astra/high completes bounded
+matrix evidence and artifact review for a separate one-fixture admission;
+follow the [current task](SESSION_HANDOFF.md#next-task), stopping before execution.
 
 R232's [single-fixture result](docs/realizability/POISEUILLE_RESULT_R232.md)
 is INCOMPLETE: the worker reached PETSc symbolic LU and exited 1 after a
@@ -28,7 +28,7 @@ diagnostic; 62 standard-library tests pass without numerical imports.
 bounded diagnostic fixture; [R238](docs/realizability/POISEUILLE_RESULT_R238.md)
 spent it 1/1 on a reported numeric LU zero pivot, with empty cleanup but no
 numerical/resource report. All three allowances are spent. Follow the
-[handoff task](SESSION_HANDOFF.md#next-task) for the Astra/high backend review.
+[handoff task](SESSION_HANDOFF.md#next-task) for the Astra/high admission review.
 No tank/hardware route or feasible contraction range is established.
 
 R188 priority update (2026-09-22): establish measurable essential dynamical

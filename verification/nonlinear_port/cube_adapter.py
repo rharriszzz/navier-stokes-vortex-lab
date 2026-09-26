@@ -4,6 +4,7 @@ There is intentionally no importer, CLI or execution admission here. A future
 supervised driver must supply the pinned modules and own the full attempt.
 """
 from math import isfinite
+from contextlib import contextmanager
 from . import fixtures
 from .polynomial import face
 from .prototype import Refusal, make_space, build_forms, require_fixture, time_coefficients
@@ -13,6 +14,47 @@ from .sparse import CSR, border_and_lift
 FACE_TAGS = {(axis, side): 1+2*axis+side
              for axis in range(3) for side in (0, 1)}
 RETURNS = (5, 6)
+
+# PETSc 3.25.5 reads these during SuperLU symbolic factorization even without
+# KSP.setFromOptions(). A reserved prefix isolates the serial worker's settings.
+SUPERLU_PREFIX = 'navier_port_superlu_'
+SUPERLU_OPTIONS = (
+    ('mat_superlu_equil', 'false'),
+    ('mat_superlu_colperm', 'COLAMD'),
+    ('mat_superlu_iterrefine', 'NOREFINE'),
+    ('mat_superlu_symmetricmode', 'false'),
+    ('mat_superlu_diagpivotthresh', '1'),
+    ('mat_superlu_pivotgrowth', 'false'),
+    ('mat_superlu_conditionnumber', 'false'),
+    ('mat_superlu_rowperm', 'NOROWPERM'),
+    ('mat_superlu_replacetinypivot', 'false'),
+    ('mat_superlu_printstat', 'false'),
+    ('mat_superlu_lwork', '0'),
+    # PETSc also consults this field when reporting a singular LU factor.
+    ('mat_superlu_ilu_filltol', '0'),
+)
+
+
+@contextmanager
+def superlu_options(PETSc):
+    """Reserve, populate, then remove only our options; never overwrite ambient.
+
+    One serial worker/thread owns the solve. Prefix collisions refuse, including
+    unknown keys. This is not a process-global concurrent-solve interface.
+    """
+    options = PETSc.Options()
+    if any(key.startswith(SUPERLU_PREFIX) for key in options.getAll()):
+        raise Refusal('reserved SuperLU options prefix is already populated')
+    installed = []
+    try:
+        for key, value in SUPERLU_OPTIONS:
+            name = SUPERLU_PREFIX + key
+            installed.append(name)
+            options.setValue(name, value)
+        yield
+    finally:
+        for name in reversed(installed):
+            options.delValue(name)
 
 
 def merge_tags(groups, exterior):
@@ -189,7 +231,7 @@ class Assembler:
 
 
 def sparse_solve(np, PETSc, comm, matrix, rhs):
-    """Serial LU, with explicit status AND true residual checks; no fallback."""
+    """Serial SuperLU; fixed pivoting, status AND true residual; no fallback."""
     if comm.size != 1:
         raise Refusal('serial solve only')
     matrix.validate(len(rhs))
@@ -210,10 +252,19 @@ def sparse_solve(np, PETSc, comm, matrix, rhs):
         objects.append(ksp)
         ksp.setOperators(a)
         ksp.setType('preonly')
-        ksp.getPC().setType('lu')
-        ksp.getPC().setFactorSolverType('petsc')
-        # No setFromOptions: ambient command-line options must not alter method.
-        ksp.solve(b, x)
+        pc = ksp.getPC()
+        pc.setType('lu')
+        pc.setFactorSolverType('superlu')
+        pc.setFactorShift(PETSc.Mat.FactorShiftType.NONE, 0.0)
+        # PCSetUp_LU propagates this prefix to its new factor matrix.
+        pc.setOptionsPrefix(SUPERLU_PREFIX)
+        with superlu_options(PETSc):
+            # Flush before setup/solve so a backend exception retains the method.
+            print('sparse linear configuration: backend=superlu; shift=none; '
+                  + '; '.join(f'{key}={value}' for key, value in SUPERLU_OPTIONS),
+                  flush=True)
+            # No KSP/PC setFromOptions and no fallback to another backend.
+            ksp.solve(b, x)
         answer = x.getArray(readonly=True).tolist()
         reason = int(ksp.getConvergedReason())
         nonfinite = sum(not isfinite(v) for v in answer)
@@ -226,7 +277,7 @@ def sparse_solve(np, PETSc, comm, matrix, rhs):
                 pc_reason = f'unavailable:{type(exc).__name__}'
             raise Refusal('sparse linear solve failed: '
                           f'ksp_reason={reason}; nonfinite_answer_entries={nonfinite}; '
-                          f'pc_failed_reason={pc_reason}')
+                          f'pc_failed_reason={pc_reason}; backend=superlu')
         from math import sqrt, fsum
         defect = sqrt(fsum((v-b)**2 for v, b in zip(matrix.matvec(answer), rhs)))
         if defect > max(1e-13, 1e-8*sqrt(fsum(v*v for v in rhs))):

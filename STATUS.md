@@ -1,14 +1,14 @@
 # Project status: a boundary-controlled engineering approximation
 
-[R239 pivot review](docs/realizability/POISEUILLE_PIVOT_REVIEW_R239.md) gives an exact full-rank toy that fails
-without row pivoting and a singular toy that passes the scalar Gram check.
-Actual R238 matrix rank remains unknown. Runtime source and all three spent
-allocations are unchanged; no FEM ran. Next: Astra/high reviews an explicit
-serial SuperLU backend and its controls, with a minimal source change only if
-justified; stop before new numerical admission. Follow the
-[current task](SESSION_HANDOFF.md#next-task).
+[R240 SuperLU review](docs/realizability/POISEUILLE_SUPERLU_REVIEW_R240.md) implements explicit serial SuperLU settings
+and isolated backend options; 65 standard-library tests pass with no numerical
+imports. The package's 7.0.1 label differs from its 7.0.0 header/CMake/library
+names, which match its own artifact hashes. No FEM/new allocation occurred;
+all three prior allocations remain spent. Next: Astra/high completes bounded
+matrix evidence and artifact review for a separate one-fixture admission;
+follow the [current task](SESSION_HANDOFF.md#next-task), stopping before execution.
 
-Updated 2026-09-26 (America/New_York), through R239. PC/WSL daisy owns the
+Updated 2026-09-26 (America/New_York), through R240. PC/WSL daisy owns the
 repository. **R232 corrects the recoverable R231 caller failure and resumes the
 same authorized, unspent one-use fixture, then spends it on a PETSc LU failure.**
 The [R232 result](docs/realizability/POISEUILLE_RESULT_R232.md) records an
@@ -33,7 +33,7 @@ granted one instrumented fixture. [R238 result](docs/realizability/POISEUILLE_RE
 spent it 1/1: KSP -11, 405 nonfinite answer entries and PC reason 2 (reported
 numeric zero pivot). Worker/caller exited 1 with empty cleanup but no numerical
 or resource report. All three allocations are spent 1/1. Next: Astra/high
-reviews explicit serial SuperLU controls without FEM; follow the
+reviews bounded evidence and artifact identity for admission; follow the
 [single task](SESSION_HANDOFF.md#next-task).
 
 Historical R231 context: the

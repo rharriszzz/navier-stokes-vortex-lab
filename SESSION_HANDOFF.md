@@ -1,7 +1,44 @@
 # Current session handoff
 
-Last updated 2026-09-26 (America/New_York) for R239.
+Last updated 2026-09-26 (America/New_York) for R240.
 **PC/WSL daisy owns the repository.** No transfer; Mac remains released.
+**R240 completed the serial SuperLU scientific/source review.** The
+[review](docs/realizability/POISEUILLE_SUPERLU_REVIEW_R240.md) implements explicit
+serial SuperLU LU, threshold 1/COLAMD, no shift or tiny-pivot replacement, and
+reserved prefixed settings because the backend reads options internally.
+All 65 standard-library tests pass; no numerical imports or FEM execution.
+Only adapter and adapter tests changed among the 25 bound source/pin files.
+
+Static artifact checks found a version-label discrepancy: package 7.0.1,
+installed header/CMake/library filename 7.0.0. Those files match the package's
+own manifest. No relabel/install occurred; dynamic behavior remains untested.
+All three allocations R232/R235/R238 remain spent 1/1; 30 raw files match local
+originals, reservations persist and saved worker PIDs/cgroups are absent.
+Actual R238 matrix/rank/pivot, accuracy and resource events remain unknown.
+R229's 303-event setup resource refusal remains false.
+
+**Next: Astra/high completes the bounded CSR evidence and artifact-identity
+review for a separate one-fixture admission, then stops before execution.**
+See [Next task](#next-task). No numerical allocation is granted by R240.
+
+R240 supplied snapshot: 11m 15s / 1:50 PM completion, Codex v0.155.1,
+Astra/high, same session, context 82% (56.9K/258K), weekly 96%, Luna Reserve 99%.
+No /new, literal /status, token/credit totals or model-change command supplied;
+account email redacted in request log. These are reported values, not verified
+accounting. No agent model/session switch; continue in this session.
+R239 delivery 5ed9253 verified by clean pull; R240 STARTED 628e04d published.
+Completion prepared for scoped publication; delivery belongs in Git/final response.
+
+Changed: adapter/test, R240 review and three evidence files, prototype README,
+B1_SETUP, four track overviews, STATUS, request/lifecycle/handoff. Checks:
+65 standard-library tests/import audit, exact-version upstream source review,
+installed artifact hashes, 25-file source inventory, 30 raw originals and spent
+states, AST/JSON/links, 240 unique IDs, append-only logs and whitespace. Skips:
+FEM/import/JIT/assembly/backend solve, live manager/scope, install, full suite/
+rotation/tank/B2, physical/render and Mac transfer. PC retains ownership.
+
+### Previous R239 source review (completed; next task superseded)
+
 **R239 completed the import-free numeric-pivot/operator review.** The
 [review](docs/realizability/POISEUILLE_PIVOT_REVIEW_R239.md) and
 [exact algebra evidence](docs/realizability/evidence/r239/algebra.json) show a
@@ -420,12 +457,12 @@ and physical-work limits remain unchanged.
 | Owner | PC/WSL `daisy`; Mac `fire.lan` released after published R161 handoff and R162 receipt. |
 | Checkout | `/home/rharris/git/navier-stokes-vortex-lab`. |
 | Branch/upstream | `main` / `origin/main` |
-| Starting state | R239 same-owner clean main/origin/main at ce68c04 after required fast-forward pull; rharris/daisy, empty stashes, R238 completed. Start 4d5acd6 published. |
+| Starting state | R240 same-owner clean main/origin/main at 5ed9253 after required fast-forward pull; rharris/daisy, empty stashes, R239 completed. Start 628e04d published. |
 | Interpreter | /tmp/navier-fenicsx-r229/bin/python verified as 3.12.13 with -I -S; exact environment artifacts verified, setup memory-event predicate refused. Project Python remains 3.12.14. Old /tmp/navier-fenicsx is still partial. |
 | Other owner/process | Mac `fire.lan` released in the published R161 handoff. Local Git cannot inspect another checkout's unpublished state. |
 | Task processes | R238 worker PID 149905 exited 1 after sparse-solve refusal; manager final MainPID 0/empty ControlGroup, cleanup empty/unknown_children=false. PID/cgroup absent. All three allocations spent 1/1; R238 directory and ten raw originals retained. |
 | Symbolic environment | `/tmp/navier-r183-sympy/bin/python`, Python 3.12.14, SymPy 1.14.0, mpmath 1.3.0; recreate using `requirements-symbolic.txt` if missing. Existing environments unchanged. |
-| Delivery state | R238 ce68c04 verified by clean pull; R239 STARTED 4d5acd6 published. R239 review/completion prepared for scoped publication; delivery in Git/final response. PC retains ownership. |
+| Delivery state | R239 5ed9253 verified by clean pull; R240 STARTED 628e04d published. R240 review/source/completion prepared for scoped publication; delivery in Git/final response. PC retains ownership. |
 
 ## Current result and limits
 
@@ -556,41 +593,45 @@ agent-side POV-Ray backtraces are unavailable.
 
 ## Next task
 
-**GPT-6 Astra / high / PC-WSL daisy: review and, if justified, implement an
-explicit serial SuperLU backend for the bordered mixed operator; stop before
-new numerical admission or execution.** After **Continue**, follow the normal
-clean ownership/synchronization/start publication. Read
-[R239 review](docs/realizability/POISEUILLE_PIVOT_REVIEW_R239.md), its
-[evidence](docs/realizability/evidence/r239/), R238 result, R225 acceptance
-review, `cube_adapter.py`, `test_adapter.py`, and the frozen manifest.
+**GPT-6 Astra / high / PC-WSL daisy: complete import-free evidence preparation
+and decide a separate one-fixture admission for explicit serial SuperLU; stop
+before numerical execution.** After **Continue**, follow clean synchronization,
+ownership and STARTED publication. Read
+[R240 review](docs/realizability/POISEUILLE_SUPERLU_REVIEW_R240.md),
+[checks](docs/realizability/evidence/r240/checks.json), R239 algebra/R238 result,
+R237 admission/caller, adapter/fixture driver/worker and frozen manifest.
 
-1. Preserve all three spent states and unchanged raw evidence. No installation,
-   FEM/numerical imports, JIT, assembly, live manager/scope or numerical attempt.
-2. Review pinned PETSc 3.25.5's serial SuperLU interface and exact available
-   build/version declarations. Specify row pivoting, ordering and singularity
-   behavior with no diagonal shifts, tiny-pivot replacement, ambient option
-   leakage or fallback. Static declarations are not a dynamic capability pass.
-3. If justified, make the smallest source change that selects and records this
-   explicit backend, with focused standard-library/mocked tests of configuration,
-   refusal/cleanup and unchanged true-residual gate. Preserve the physical
-   operator, lifting/gauge/flux rows, pins, resource caps and accuracy gates.
-   Otherwise record a precise configuration or scientific blocker. No silent
-   tolerance relaxation. Specify minimal bounded evidence for future failures
-   so another status-only refusal need not leave the same matrix/pivot gap.
-4. Publish review/source evidence and recommend a separate Astra/high admission
-   decision if ready. That later decision must allocate a new directory/attempt;
-   none is granted here. Stop at source/method completion. Recommend Sol/high
-   only after a fully specified mechanical execution has been separately admitted.
+1. Preserve three spent allocations/raw originals. Verify required exact R229
+   artifacts and reconcile or explicitly justify accepting the SuperLU package
+   7.0.1 versus embedded 7.0.0 discrepancy using recorded artifact hashes and
+   source evidence. No silent relabel, pin change, install or numerical import.
+   A concrete unresolved identity/API issue blocks admission, not preservation.
+2. Implement/test the minimal bounded latest-system record specified in R240:
+   exact already assembled lifted/scaled CSR/RHS, dimensions, step/correction,
+   scales/fixed indices, source and backend settings. Atomically save before
+   factorization under the same run directory/timer; cap dimensions/nonzeros/
+   serialized bytes for n=2; refuse invalid/oversized evidence. No extra FEM
+   assembly, dense rank calculation, solve, backend fallback or live scope.
+3. Review all unchanged numerical/resource gates and source-only checks. If
+   justified, publish an explicit one-use later n=2 Poiseuille allocation and
+   tested caller in a NEW fixed directory, binding exact changed source and
+   interpreter/artifacts. Preserve 180 s total/150 s worker/1536 MiB/no swap/
+   32 tasks/one rank/thread and the no-retry stop. Distinguish recoverable
+   caller failure before reservation/import from a spent numerical attempt.
+   Otherwise publish the precise refusal/blocker. R229 setup predicate stays false.
+4. Publish review/evidence/admission or blocker, then stop before imports/JIT/
+   assembly/solve/launch. If admitted, recommend Sol/high for the exact later
+   mechanical caller; Astra/high interprets its outcome or any method change.
 
-Completion: defensible explicit solver configuration with focused source checks,
-or a precise blocker, scoped publication and stop. Actual FEM rank remains
-unknown until separately admitted evidence resolves it. No full suite/rotation/
-tank/B2, physical/render work or Mac transfer.
+Completion: bounded failure evidence source with focused tests plus explicit
+admission or blocker; scoped commit/push and stop. Full suite/rotation/tank/B2,
+physical/render work and Mac transfer remain unadmitted. Existing directories
+cannot be reused. No automatic workload follows this handoff.
 
-Astra/high availability was rechecked in this session against
+Astra/high availability was rechecked via
 [official OpenAI documentation](https://developers.openai.com/api/docs/models/gpt-6-astra).
-Task fit is judgment; no account-access or model-switch claim. Continue in the
-existing session; no /new required. Next prompt: **Continue**.
+Task fit is judgment, not account verification or a model switch. No /new is
+required. Next prompt: **Continue**.
 
 ### Historical R230 single-fixture execution task (R232 spent)
 

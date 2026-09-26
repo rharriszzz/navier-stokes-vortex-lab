@@ -1309,3 +1309,23 @@ empty stashes, R239 completed, same owner, Mac released. Review serial SuperLU
 controls, minimal source/tests if justified, otherwise blocker; scoped publish
 and stop before numerical admission or execution. Three prior allocations
 remain spent 1/1. No new allocation or live scope.
+
+COMPLETED | 2026-09-26T18:23:07Z | PC/WSL daisy | released: no
+R240 implemented explicit serial SuperLU controls and isolated backend options.
+Changed adapter/test, R240 review and three evidence files, prototype README,
+B1_SETUP, four track overviews, STATUS and request/lifecycle/handoff records.
+Checks: focused 18 tests and all 65 standard-library tests/import audit;
+upstream source receipts, installed artifact/API hashes, 25-file source inventory
+(only adapter/test changed), 30 raw originals, reservations/PID/cgroup absence,
+AST/JSON/links, 240 unique IDs, append-only logs and whitespace. SuperLU package
+7.0.1 has embedded 7.0.0 labels matching its artifact manifest; discrepancy
+preserved for explicit later admission decision. Actual FEM rank/API behavior,
+accuracy/resource events remain unknown. Skips: numerical imports/FEM/JIT/
+assembly/backend solve, live manager/scope, install, full suite/rotation/tank/B2,
+physical/render/Mac. All three old allocations spent; no new allocation.
+Evidence: docs/realizability/POISEUILLE_SUPERLU_REVIEW_R240.md and evidence/r240/.
+Next: Astra/high completes bounded CSR/RHS evidence and artifact review for a
+separate one-fixture admission, or precise blocker; stop before execution.
+PC retains ownership, Mac released; no /new or model/session switch.
+R239 5ed9253 verified; R240 STARTED 628e04d published. Completion prepared for
+scoped publication; delivery hash/result in Git/final response.

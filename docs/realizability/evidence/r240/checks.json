@@ -1,0 +1,167 @@
+{
+  "changed_source": [
+    "verification/nonlinear_port/cube_adapter.py",
+    "verification/nonlinear_port/test_adapter.py"
+  ],
+  "evidence_sha256": {
+    "tests.json": "09ed4fc668f2180255eaafffb61f44e3e27f53a586a83598f7fea0d1713c5efa",
+    "tests.txt": "7f4d85ceff852b57dd96f363e273e588e1ad32b235e4c565679e3e7f1427fbad"
+  },
+  "installed_evidence": {
+    "/home/rharris/.local/share/mamba/pkgs/https/conda.anaconda.org/conda-forge/linux-64/superlu-7.0.1-h8f6e6c4_0/info/paths.json": {
+      "sha256": "14a11fcd46bb91d17ffbe6a381e20625b5c7b745a188199473e117651ab8a3d2"
+    },
+    "/home/rharris/.local/share/mamba/pkgs/https/conda.anaconda.org/conda-forge/linux-64/superlu-7.0.1-h8f6e6c4_0/info/recipe/rendered_recipe.yaml": {
+      "sha256": "70019b3b79d4956fb8e6a0a6efe57a1fc151764ca5eb3a4564acc8600baa5e9f"
+    },
+    "/tmp/navier-fenicsx-r229/conda-meta/superlu-7.0.1-h8f6e6c4_0.json": {
+      "sha256": "c2d2daa8a95c84b80643eeb2a7fdcaf2c414f16262852f1408ff85d95f99a457"
+    },
+    "/tmp/navier-fenicsx-r229/include/petscconf.h": {
+      "selected_lines": [
+        "#define PETSC_HAVE_SUPERLU 1"
+      ],
+      "sha256": "13fad73d9971bf7a58396a9546bd77dd36e7b46198c2acd2a48e28941909e1aa"
+    },
+    "/tmp/navier-fenicsx-r229/include/slu_util.h": {
+      "matches_package_manifest": true,
+      "sha256": "ef5ca6b28f839a57e0a86e7bc2849024bf1f0a66b208bcb33254c3ba18d40a48"
+    },
+    "/tmp/navier-fenicsx-r229/lib/cmake/superlu/superluConfigVersion.cmake": {
+      "matches_package_manifest": true,
+      "sha256": "68315533335d14050df76a4027cedc55efc09515b3ee8e49bb5281000499ef50"
+    },
+    "/tmp/navier-fenicsx-r229/lib/libsuperlu.so.7.0.0": {
+      "matches_package_manifest": true,
+      "sha256": "3284a048fc72e0691f67103df2843621d661b65b347405f693dc65dacea3ad27"
+    },
+    "/tmp/navier-fenicsx-r229/lib/petsc/conf/petscvariables": {
+      "selected_lines": [
+        "SUPERLU_LIB = -lsuperlu"
+      ],
+      "sha256": "4942af199f2ec5db6019198d777294fb0703b306b27ae71571421003003f3b9b"
+    },
+    "/tmp/navier-fenicsx-r229/lib/python3.12/site-packages/petsc4py/PETSc.pyi": {
+      "sha256": "0c41448559aa36b7fd5e01bf6c9f2fdbfff95ebd3eea4297586748a10c7638f2"
+    }
+  },
+  "local_links_checked": 234,
+  "new_allocations": 0,
+  "new_numerical_attempts": 0,
+  "prior_logs_append_only": true,
+  "python_asts": 23,
+  "request": "R240",
+  "request_ids": 240,
+  "retained_runs": {
+    "r232": {
+      "attempts_spent": 1,
+      "cgroup_absent": true,
+      "pid_absent": true,
+      "raw_files_and_originals_verified": 10,
+      "reservation_present": true
+    },
+    "r235": {
+      "attempts_spent": 1,
+      "cgroup_absent": true,
+      "pid_absent": true,
+      "raw_files_and_originals_verified": 10,
+      "reservation_present": true
+    },
+    "r238": {
+      "attempts_spent": 1,
+      "cgroup_absent": true,
+      "pid_absent": true,
+      "raw_files_and_originals_verified": 10,
+      "reservation_present": true
+    }
+  },
+  "source_base": "5ed9253f77d627c1c951f2886a6f7e00aea1af60",
+  "source_sha256": {
+    "environment-b1.yml": "ecea6a42536e94ffe1d01a3ea173b82ef73c6a05c159fe1f6e05010b85b765ac",
+    "verification/nonlinear_port/cube_adapter.py": "3e2041ada3a2177bc9fe2bf4ded804af229b064a3b472077035979bc64ff7179",
+    "verification/nonlinear_port/diagnostics.py": "795ac30f63534e955e4639df26aaf4b1e11c1a2c1bef64404bb1ae236acc6f99",
+    "verification/nonlinear_port/fixture_driver.py": "b2d185e1aba145f0547ca8073a0cf56479fff2e31864870076e500e54ed4dc8a",
+    "verification/nonlinear_port/fixtures.py": "91e5c8a971efe1687ad5856192b37436932a4ac094fce4b26ed994697431c584",
+    "verification/nonlinear_port/future_fem.json": "7a8bda917e6b46994ad24c68e0b6c6013b7d6776f90c86a6de763f31f52fa558",
+    "verification/nonlinear_port/handshake.py": "850ade61143dc27449f1231529916fddc83bddf9b2edfeb59e6d93b4b8bf1ace",
+    "verification/nonlinear_port/manifest.py": "3c343522aa294e0fa3971ffa109b9060d3bea0cfb7e998a7194f5abd779a0269",
+    "verification/nonlinear_port/package_identity.py": "e85e5ad6c442af6d08bc248b01d3f4919c9d7af8134939d418c37d07a27d37fb",
+    "verification/nonlinear_port/polynomial.py": "418a3ac9338f14c659716579abb3404b95ad550de062083606de13b7b4e159b3",
+    "verification/nonlinear_port/probe_systemd.py": "2f344506e726c8b731a28b08065790d3a967754826ef4d9c19ab42291997edfe",
+    "verification/nonlinear_port/prototype.py": "883f4df2765930655a859aa9e5f9882b90c122632f823f0a081e366284e34c96",
+    "verification/nonlinear_port/source_binding.py": "b754e6c2735ed328341869ad449fc0261a2857ec2a1af76e4e86b2ad7cad62b2",
+    "verification/nonlinear_port/sparse.py": "db482601e6b388ded562d6c798a964362669a6d4e2444bc27acbc959c7807a8b",
+    "verification/nonlinear_port/supervision.py": "721f8bc4a5a0bc5edbcd234c52a87f5673de739c07dc44831cbbb3d1ba5b2401",
+    "verification/nonlinear_port/systemd_backend.py": "503d19765e257a317b3e252503d6db7d250cebf1fa13f81f8de809299cd34d21",
+    "verification/nonlinear_port/systemd_bus.py": "595a59ac77704f475207899b138dc68a0cf2d0f9c7f6dbba27ac5f134db2e8ce",
+    "verification/nonlinear_port/test_adapter.py": "739d7eb6a23ebf41eb33bfbc2f8ed6737851094aa62d92cdcecac62b3d18fab2",
+    "verification/nonlinear_port/test_algebra.py": "5667e2144e13ede1b2d1d7cab8752b2c74f89c040ff4eddc33993d6e7608d459",
+    "verification/nonlinear_port/test_driver_supervision.py": "784122c0a15a5e999242943001375dad73ba49b06f7be5a904c2ba69e19bdacd",
+    "verification/nonlinear_port/test_driver_wiring.py": "19ec80c8442b7b5f4da6af9201ee6adcaccb031ad92e726824ba61585c907220",
+    "verification/nonlinear_port/test_host_protocol.py": "7b73cafa5d06387d628229097f4bea5c9db178719ab931b8cc8388acc2de26a1",
+    "verification/nonlinear_port/test_package_identity.py": "aca04f4dcfb8a92c3772a0d685327950941c9ffee453f00ace81588acc6cdb01",
+    "verification/nonlinear_port/test_source_bus.py": "2917abfc381e35a2850041f84e05ec3ecdf069215d7f611cbcfcc998d8dd41d3",
+    "verification/nonlinear_port/worker.py": "4dd93b5bfef312b54f5efd01ce81ce6fbdfb17f8ddde6f135f61a54835367a94"
+  },
+  "superlu_package": {
+    "build": "h8f6e6c4_0",
+    "name": "superlu",
+    "sha256": "4e748f877553c7ed42290420ba1e9aa0e80cf72b23b463f12dbb7927c16f0437",
+    "url": "https://conda.anaconda.org/conda-forge/linux-64/superlu-7.0.1-h8f6e6c4_0.conda",
+    "version": "7.0.1"
+  },
+  "tests": {
+    "count": 65,
+    "errors": 0,
+    "executable": "/home/rharris/git/navier-stokes-vortex-lab/.venv/bin/python",
+    "failures": 0,
+    "numerical_modules_loaded": [],
+    "python": "3.12.14 (main, Sep  1 2026, 14:16:52) [Clang 22.1.3 ]",
+    "runner_seconds": 0.6424371129833162
+  },
+  "upstream_source_receipts": {
+    "Options.pyx": {
+      "bytes": 11959,
+      "local_copy": "/tmp/navier-r240-source/Options.pyx",
+      "sha256": "12c5fab92dade1f6be72808e93b2b437fabb37e2c0a3838b7f8bc3dee899d0b5",
+      "url": "https://raw.githubusercontent.com/petsc/petsc/v3.25.5/src/binding/petsc4py/src/petsc4py/PETSc/Options.pyx"
+    },
+    "dpivotL.c": {
+      "bytes": 5851,
+      "local_copy": "/tmp/navier-r240-source/dpivotL.c",
+      "sha256": "32b8ceae60d88d7c8f6bbdaf0e104ee1a3f971a345ba1e0cbcf6ec6e90603c06",
+      "url": "https://raw.githubusercontent.com/xiaoyeli/superlu/v7.0.1/SRC/dpivotL.c"
+    },
+    "factimpl.c": {
+      "bytes": 14465,
+      "local_copy": "/tmp/navier-r240-source/factimpl.c",
+      "sha256": "54a2a730038a8cecbb338e72956739fbae2eebbfa59d231f82441e990c166114",
+      "url": "https://raw.githubusercontent.com/petsc/petsc/v3.25.5/src/ksp/pc/impls/factor/factimpl.c"
+    },
+    "factor.c": {
+      "bytes": 28038,
+      "local_copy": "/tmp/navier-r240-source/factor.c",
+      "sha256": "303d9ba0755567a6e5f56b7aacfcc568c4540eee5c81cc35512d59aeb3c2d068",
+      "url": "https://raw.githubusercontent.com/petsc/petsc/v3.25.5/src/ksp/pc/impls/factor/factor.c"
+    },
+    "slu_util.h": {
+      "bytes": 16735,
+      "local_copy": "/tmp/navier-r240-source/slu_util.h",
+      "sha256": "671acec32756ef6351f0467ef0d26860db5fae223d428362d98efd95e54343f0",
+      "url": "https://raw.githubusercontent.com/xiaoyeli/superlu/v7.0.1/SRC/slu_util.h"
+    },
+    "superlu.c": {
+      "bytes": 31963,
+      "local_copy": "/tmp/navier-r240-source/superlu.c",
+      "sha256": "6792478334cd3ec4261ae8b5ae70b0ec8fd15c14e0f2e5a1fa6329f8d59d2d6c",
+      "url": "https://raw.githubusercontent.com/petsc/petsc/v3.25.5/src/mat/impls/aij/seq/superlu/superlu.c"
+    },
+    "util.c": {
+      "bytes": 16795,
+      "local_copy": "/tmp/navier-r240-source/util.c",
+      "sha256": "6cf2c24617f4363411047a1334a12412d68d82590ba69e8377a88f55ef250fa2",
+      "url": "https://raw.githubusercontent.com/xiaoyeli/superlu/v7.0.1/SRC/util.c"
+    }
+  },
+  "version_discrepancy": "Package 7.0.1; installed header/CMake/library filename 7.0.0. Files match package manifest; no relabel or reinstall. Current upstream v7.0.1 header differs only in PATCH_VERSION."
+}

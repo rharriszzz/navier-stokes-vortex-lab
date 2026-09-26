@@ -4,10 +4,13 @@ import json
 from pathlib import Path
 from types import SimpleNamespace
 import unittest
+from contextlib import redirect_stdout
+from io import StringIO
 
 from .sparse import CSR, border_and_lift, row_scales, scale_system, constraint_condition
 from .prototype import Refusal, newton, enforce_lifting
-from .cube_adapter import merge_tags, fields, sparse_solve
+from .cube_adapter import (merge_tags, fields, sparse_solve,
+                           SUPERLU_PREFIX, SUPERLU_OPTIONS)
 from .diagnostics import (signed_budget, refinement, quadrature_comparison,
                           ANGULAR_TERMS, ENERGY_TERMS, field_report,
                           integrate_budgets, step_checks, physical_interval_budget)
@@ -20,9 +23,23 @@ def dense(matrix):
     return [[row.get(j, 0.) for j in range(matrix.n)] for row in matrix.rows()]
 
 
-def scripted_solver(answer, reason=4, pc_reason=0, solve_error=None):
+def scripted_solver(answer, reason=4, pc_reason=0, solve_error=None,
+                    ambient=None, option_error_at=None):
     """Script status/answer only; never emulate or execute a factorization."""
     events = []
+    database = {} if ambient is None else ambient
+
+    class Options:
+        def getAll(self):
+            return dict(database)
+
+        def setValue(self, name, value):
+            database[name] = value
+            if name == option_error_at:
+                raise RuntimeError('scripted option insertion failure')
+
+        def delValue(self, name):
+            database.pop(name, None)
 
     class Array(list):
         def tolist(self):
@@ -39,6 +56,8 @@ def scripted_solver(answer, reason=4, pc_reason=0, solve_error=None):
             events.append(('destroy', self.name))
 
     class Mat:
+        FactorShiftType = SimpleNamespace(NONE=0)
+
         def createAIJ(self, **kwargs):
             self.vectors = 0
             return self
@@ -60,6 +79,12 @@ def scripted_solver(answer, reason=4, pc_reason=0, solve_error=None):
         def setFactorSolverType(self, value):
             events.append(('backend', value))
 
+        def setFactorShift(self, shift_type, amount):
+            events.append(('shift', shift_type, amount))
+
+        def setOptionsPrefix(self, prefix):
+            events.append(('prefix', prefix))
+
         def getFailedReason(self):
             events.append(('pc_reason',))
             if isinstance(pc_reason, Exception):
@@ -80,6 +105,7 @@ def scripted_solver(answer, reason=4, pc_reason=0, solve_error=None):
             return PC()
 
         def solve(self, b, x):
+            events.append(('options_at_solve', dict(database)))
             events.append(('solve', tuple(b.array)))
             if solve_error is not None:
                 raise solve_error
@@ -92,7 +118,7 @@ def scripted_solver(answer, reason=4, pc_reason=0, solve_error=None):
             events.append(('destroy', 'ksp'))
 
     np = SimpleNamespace(asarray=lambda values, dtype: tuple(dtype(v) for v in values))
-    petsc = SimpleNamespace(Mat=Mat, KSP=KSP, IntType=int, ScalarType=float)
+    petsc = SimpleNamespace(Mat=Mat, KSP=KSP, Options=Options, IntType=int, ScalarType=float)
     return np, petsc, SimpleNamespace(size=1), events
 
 
@@ -110,6 +136,8 @@ class AdapterChecks(unittest.TestCase):
                 self.assertIn(f'ksp_reason={reason};', message)
                 self.assertIn(f'nonfinite_answer_entries={count};', message)
                 self.assertIn('pc_failed_reason=2', message)
+                self.assertIn('backend=superlu', message)
+                self.assertEqual(petsc.Options().getAll(), {})
                 self.assertEqual(events[-4:], [('destroy', n) for n in ('ksp', 'x', 'b', 'a')])
 
     def test_optional_pc_diagnostic_failure_keeps_primary_refusal(self):
@@ -133,10 +161,55 @@ class AdapterChecks(unittest.TestCase):
                         sparse_solve(np, petsc, comm, matrix, [1., 2.])
                 else:
                     self.assertEqual(sparse_solve(np, petsc, comm, matrix, [1., 2.]), answer)
-                self.assertEqual(events[:4], [('ksp', 'preonly'), ('pc', 'lu'),
-                                              ('backend', 'petsc'), ('solve', (1., 2.))])
+                self.assertEqual(events[:5], [('ksp', 'preonly'), ('pc', 'lu'),
+                                              ('backend', 'superlu'), ('shift', 0, 0.),
+                                              ('prefix', SUPERLU_PREFIX)])
+                self.assertEqual(petsc.Options().getAll(), {})
                 self.assertNotIn(('pc_reason',), events)
                 self.assertEqual(events[-4:], [('destroy', n) for n in ('ksp', 'x', 'b', 'a')])
+
+    def test_superlu_options_are_scoped_and_method_is_logged_before_exception(self):
+        ambient = {'mat_superlu_diagpivotthresh': '0', 'pc_type': 'none',
+                   'mat_superlu_replacetinypivot': 'true'}
+        before = dict(ambient)
+        error = RuntimeError('backend missing')
+        np, petsc, comm, events = scripted_solver([1., 2.], solve_error=error, ambient=ambient)
+        output = StringIO()
+        with redirect_stdout(output), self.assertRaises(RuntimeError) as caught:
+            sparse_solve(np, petsc, comm, CSR.from_rows([{0: 1.}, {1: 1.}]), [1., 2.])
+        self.assertIs(caught.exception, error)
+        settings = next(e[1] for e in events if e[0] == 'options_at_solve')
+        self.assertEqual(settings, before | {SUPERLU_PREFIX+k: v for k, v in SUPERLU_OPTIONS})
+        self.assertEqual(settings[SUPERLU_PREFIX+'mat_superlu_diagpivotthresh'], '1')
+        self.assertEqual(settings[SUPERLU_PREFIX+'mat_superlu_ilu_filltol'], '0')
+        self.assertEqual(settings[SUPERLU_PREFIX+'mat_superlu_replacetinypivot'], 'false')
+        self.assertEqual(settings[SUPERLU_PREFIX+'mat_superlu_colperm'], 'COLAMD')
+        self.assertEqual(ambient, before)
+        self.assertIn('backend=superlu; shift=none;', output.getvalue())
+        self.assertEqual(sum(e[0] == 'solve' for e in events), 1)
+        self.assertEqual(events[-4:], [('destroy', n) for n in ('ksp', 'x', 'b', 'a')])
+
+    def test_superlu_prefix_collisions_refuse_without_overwriting_or_solving(self):
+        for key in ('mat_superlu_diagpivotthresh', 'unknown_future_setting'):
+            ambient = {SUPERLU_PREFIX+key: 'ambient'}
+            before = dict(ambient)
+            np, petsc, comm, events = scripted_solver([1., 2.], ambient=ambient)
+            with self.assertRaisesRegex(Refusal, 'reserved SuperLU options prefix'):
+                sparse_solve(np, petsc, comm, CSR.from_rows([{0: 1.}, {1: 1.}]), [1., 2.])
+            self.assertEqual(ambient, before)
+            self.assertFalse(any(e[0] == 'solve' for e in events))
+            self.assertEqual(events[-4:], [('destroy', n) for n in ('ksp', 'x', 'b', 'a')])
+
+    def test_superlu_partial_option_insertion_is_cleaned_before_refusal(self):
+        ambient = {'unrelated': 'retained'}
+        np, petsc, comm, events = scripted_solver(
+            [1., 2.], ambient=ambient,
+            option_error_at=SUPERLU_PREFIX+'mat_superlu_iterrefine')
+        with self.assertRaisesRegex(RuntimeError, 'scripted option insertion'):
+            sparse_solve(np, petsc, comm, CSR.from_rows([{0: 1.}, {1: 1.}]), [1., 2.])
+        self.assertEqual(ambient, {'unrelated': 'retained'})
+        self.assertFalse(any(e[0] == 'solve' for e in events))
+        self.assertEqual(events[-4:], [('destroy', n) for n in ('ksp', 'x', 'b', 'a')])
 
     def test_csr_keeps_zero_diagonal_without_changing_operator(self):
         rows = [{2: 4., 0: 0., 1: 0.}, {}, {0: -2., 2: 3.}]
