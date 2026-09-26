@@ -1,0 +1,38 @@
+{
+  "archive_sha256_verified": true,
+  "cached_archive": "/home/rharris/.local/share/mamba/pkgs/https/conda.anaconda.org/conda-forge/linux-64/superlu-7.0.1-h8f6e6c4_0.conda",
+  "decision": "ACCEPT_EXACT_ARTIFACT_FOR_ONE_LATER_BOUNDED_FIXTURE",
+  "discrepancy": "Preserved; do not equate binary with current upstream tag. Installed header/CMake/library match exact package manifest.",
+  "embedded_version": "7.0.0",
+  "library_resolutions": {
+    "/tmp/navier-fenicsx-r229/lib/libpetsc.so": "/tmp/navier-fenicsx-r229/lib/libpetsc.so.3.25.5",
+    "/tmp/navier-fenicsx-r229/lib/libpetsc.so.3.25": "/tmp/navier-fenicsx-r229/lib/libpetsc.so.3.25.5",
+    "/tmp/navier-fenicsx-r229/lib/libsuperlu.so": "/tmp/navier-fenicsx-r229/lib/libsuperlu.so.7.0.0",
+    "/tmp/navier-fenicsx-r229/lib/libsuperlu.so.7": "/tmp/navier-fenicsx-r229/lib/libsuperlu.so.7.0.0"
+  },
+  "package": {
+    "build": "h8f6e6c4_0",
+    "name": "superlu",
+    "sha256": "4e748f877553c7ed42290420ba1e9aa0e80cf72b23b463f12dbb7927c16f0437",
+    "url": "https://conda.anaconda.org/conda-forge/linux-64/superlu-7.0.1-h8f6e6c4_0.conda",
+    "version": "7.0.1"
+  },
+  "package_paths_sha256": "14a11fcd46bb91d17ffbe6a381e20625b5c7b745a188199473e117651ab8a3d2",
+  "package_version": "7.0.1",
+  "reason": "Exact unchanged conda artifact identity accepted under ordinary package/OS trust; explicit serial controls, no regularization, bounded evidence and unchanged numerical/resource gates. No dynamic capability or accuracy claim.",
+  "recipe_sha256": "70019b3b79d4956fb8e6a0a6efe57a1fc151764ca5eb3a4564acc8600baa5e9f",
+  "rotation_review": "R251 retains R245 exact artifact acceptance and binds inspected DOLFINx/UFL source; no solver is invoked by rotation.",
+  "runtime_files_sha256": {
+    "/tmp/navier-fenicsx-r229/conda-meta/superlu-7.0.1-h8f6e6c4_0.json": "c2d2daa8a95c84b80643eeb2a7fdcaf2c414f16262852f1408ff85d95f99a457",
+    "/tmp/navier-fenicsx-r229/include/petscconf.h": "13fad73d9971bf7a58396a9546bd77dd36e7b46198c2acd2a48e28941909e1aa",
+    "/tmp/navier-fenicsx-r229/include/slu_util.h": "ef5ca6b28f839a57e0a86e7bc2849024bf1f0a66b208bcb33254c3ba18d40a48",
+    "/tmp/navier-fenicsx-r229/lib/cmake/superlu/superluConfigVersion.cmake": "68315533335d14050df76a4027cedc55efc09515b3ee8e49bb5281000499ef50",
+    "/tmp/navier-fenicsx-r229/lib/libpetsc.so.3.25.5": "a7f58400ed84df9bd1b4799edfb328278111741ff6c08bb771c719580b403eca",
+    "/tmp/navier-fenicsx-r229/lib/libsuperlu.so.7.0.0": "3284a048fc72e0691f67103df2843621d661b65b347405f693dc65dacea3ad27",
+    "/tmp/navier-fenicsx-r229/lib/python3.12/site-packages/dolfinx/fem/forms.py": "fcf032a91720bb8f5849b95c7a47dcbc6e3391dc8dc3d22529b4f7baf0e1be8f",
+    "/tmp/navier-fenicsx-r229/lib/python3.12/site-packages/dolfinx/mesh.py": "95c99c369c71070ef2b6376282cdb728e704b117f5f0cbbb1f035abc6082f31f",
+    "/tmp/navier-fenicsx-r229/lib/python3.12/site-packages/petsc4py/PETSc.pyi": "0c41448559aa36b7fd5e01bf6c9f2fdbfff95ebd3eea4297586748a10c7638f2",
+    "/tmp/navier-fenicsx-r229/lib/python3.12/site-packages/ufl/form.py": "a64bf1a5c0cadbe06b81733b1f7f98f574d2654fba87a1ddb5774897b2d46dc9",
+    "/tmp/navier-fenicsx-r229/lib/python3.12/site-packages/ufl/integral.py": "bfca025915ff4e49b8a45d520918ae0f9af1167a5c92c08063e988dc83c9a2d2"
+  }
+}

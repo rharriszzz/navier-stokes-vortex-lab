@@ -8,6 +8,7 @@
 - Keep one active repository owner across machines. Treat local Git as unable to reveal another checkout's unpublished work or live processes. Resolve dirty work, ownership conflicts and incomplete transfers before dependent work.
 - For a bounded workload, distinguish a recoverable caller/preflight error from a spent attempt. If the error occurred before reservation and before any managed worker or numerical import, preserve its evidence, verify the fixed directory and manager have no new task process, fix and test the cause, then continue within the authorized scope after restoring a clean source binding. Do not consume or reset the one-use allocation by inference. Once reservation or partial worker start occurs, preserve the result and obey the attempt stop rule; never relax scientific or resource gates to obtain a pass.
 - At completion record changed files, checks/skips, evidence, unresolved decisions and one concrete next task in the log and handoff. Keep the handoff opening, owner table and Next task consistent; current status pages link to that task. Never claim an unrun check passed.
+- At each completion explicitly recommend either `/new` or continuing the current chat, with a brief reason. Prefer a saved, published task boundary for `/new`; context percentage is a signal, not a fixed cutoff. Follow the session protocol's context guidance.
 - Do not commit or push without user authorization. Preserve user work and Git history; never force, reset, rebase, or delete user data without explicit authorization.
 
 ## Conditional instructions

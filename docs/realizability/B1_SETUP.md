@@ -1,11 +1,11 @@
 # B1 solver environment
 
-[R256 source integration](MANUFACTURED_INTEGRATION_R256.md) implements the
-fixed manufactured spatial BE pilot without numerical imports, execution or
-admission. All 103 source/fake tests and saved R246/R253 validator replays pass.
-Six old allowances remain spent and R242 stays INCOMPLETE. Follow the
-[single current task](../../SESSION_HANDOFF.md#next-task): Astra/high reviews
-source and a separately bound one-use admission/caller or blocker.
+[R257 source review/admission](MANUFACTURED_ADMISSION_R257.md) repairs the fixed manufactured
+spatial BE pilot and admits one later n=2 attempt. All 104 regressions and six
+fake caller checks pass without numerical imports or launch; saved R246/R253
+remain PASS. New allowance unspent 0/1, six prior allowances spent. Follow the
+[single current task](../../SESSION_HANDOFF.md#next-task): use `/new`, Sol/high, then Continue
+for the fixed one-use execution and evidence handoff.
 
 Historical PC status: [R232's one-use Poiseuille result](POISEUILLE_RESULT_R232.md)
 is INCOMPLETE at PETSc symbolic LU, and the single numerical allocation is

@@ -30,6 +30,17 @@ def _identity(observed, expected, gates):
                 limit=limit, accepted=abs(defect) <= limit)
 
 
+def _be_identity(raw, gates):
+    # Preserve the three separate terms in the frozen R255 roundoff bound.
+    storage, inventory, dissipation = (raw[key] for key in
+        ('energy.storage', 'energy_identity_storage', 'energy_identity_dissipation'))
+    defect = storage-inventory-dissipation
+    limit = _limit((storage, inventory, dissipation),
+                   gates['identity_absolute_floor'], gates['identity_epsilon_multiplier'])
+    return dict(observed=storage, expected=inventory+dissipation,
+                defect=defect, limit=limit, accepted=abs(defect) <= limit)
+
+
 def _interval(inventory, initial, dt, terms, gates):
     pieces = dict(inventory_change=inventory-initial,
                   **{key: dt*value for key, value in terms.items()})
@@ -44,7 +55,7 @@ def build_report(raw_by_degree, multipliers, eta, history, corrections,
                  minimum_normal, sample_counts, condition, compatibility,
                  measured_targets, lateral_absolute_flux, proposal):
     """Recompute all decisions from finite records, keeping failed gate evidence."""
-    from .manufactured_manifest import validate
+    from .manufactured_manifest import canonical, validate
     validate(proposal)
     policy, gates = proposal['diagnostic_policy'], proposal['gates']
     validate_policy(policy)
@@ -83,7 +94,11 @@ def build_report(raw_by_degree, multipliers, eta, history, corrections,
                 or type(receipt['bytes']) is not int or not 0 < receipt['bytes'] <= 4*1024*1024):
             raise Refusal('invalid manufactured linear-system receipt')
     if (type(condition) is not dict or type(condition.get('gram')) is not list
-            or condition_from_gram(condition['gram']) != condition):
+            or len(condition['gram']) != 3
+            or any(type(row) is not list or len(row) != 3
+                   or any(type(v) not in (int, float) or not isfinite(v) for v in row)
+                   for row in condition['gram'])
+            or canonical(condition_from_gram(condition['gram'])) != canonical(condition)):
         raise Refusal('manufactured condition differs from measured Gram')
     if (type(compatibility) is not dict
             or set(compatibility) != {'defect', 'limit', 'condition', 'absolute_term_sum',
@@ -130,8 +145,7 @@ def build_report(raw_by_degree, multipliers, eta, history, corrections,
             angular_storage=_identity(angular_rate, raw['angular.storage'], gates),
             energy_storage=_identity(energy_rate, raw['energy_identity_storage'], gates),
             kinetic_derivative=_identity(energy_rate, raw['kinetic_discrete_derivative'], gates),
-            be_storage=_identity(raw['energy.storage'],
-                raw['energy_identity_storage']+raw['energy_identity_dissipation'], gates))
+            be_storage=_be_identity(raw, gates))
         angular = _interval(raw['angular_momentum'], l0, dt,
             {key: raw['angular.'+key] for key in ('advective', 'traction', 'body')}, gates)
         energy = _interval(raw['kinetic_energy'], k0, dt,

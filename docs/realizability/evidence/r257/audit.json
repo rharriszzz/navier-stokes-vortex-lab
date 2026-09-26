@@ -1,0 +1,132 @@
+{
+  "actual_api_jit_solver_budget_resource_behavior": "unmeasured; one bounded measurement admitted",
+  "archive_and_interpreter_verified": true,
+  "attempts_granted": 1,
+  "attempts_spent": 0,
+  "caller_tests": 6,
+  "controllers": [
+    "cpuset",
+    "cpu",
+    "io",
+    "memory",
+    "hugetlb",
+    "pids",
+    "rdma"
+  ],
+  "exact_reference_rederived": true,
+  "host_available_kib": 6443124,
+  "installed_zero_form_assertion": [
+    "len(V) > 0"
+  ],
+  "interpreter": "/tmp/navier-fenicsx-r229/bin/python3.12",
+  "library_resolutions_verified": 4,
+  "manager_connection": false,
+  "manager_version_source": "R251 reviewed 249.11-0ubuntu3.22; live refresh required by caller",
+  "new_numerical_work": false,
+  "numerical_modules_loaded": [],
+  "prior_runs": [
+    {
+      "recorded_cgroup_absent": true,
+      "recorded_pid_absent": true,
+      "request": "r232",
+      "reservation_present": true,
+      "spent": 1
+    },
+    {
+      "recorded_cgroup_absent": true,
+      "recorded_pid_absent": true,
+      "request": "r235",
+      "reservation_present": true,
+      "spent": 1
+    },
+    {
+      "recorded_cgroup_absent": true,
+      "recorded_pid_absent": true,
+      "request": "r238",
+      "reservation_present": true,
+      "spent": 1
+    },
+    {
+      "recorded_cgroup_absent": true,
+      "recorded_pid_absent": true,
+      "request": "r242",
+      "reservation_present": true,
+      "spent": 1
+    },
+    {
+      "recorded_cgroup_absent": true,
+      "recorded_pid_absent": true,
+      "request": "r246",
+      "reservation_present": true,
+      "spent": 1
+    },
+    {
+      "recorded_cgroup_absent": true,
+      "recorded_pid_absent": true,
+      "request": "r253",
+      "reservation_present": true,
+      "spent": 1
+    }
+  ],
+  "r242_status": "INCOMPLETE",
+  "r256_files_repaired": [
+    "verification/nonlinear_port/manufactured_driver.py",
+    "verification/nonlinear_port/manufactured_report.py",
+    "verification/nonlinear_port/test_manufactured_integration.py"
+  ],
+  "raw_originals_verified": 74,
+  "run_directory": "/tmp/navier-manufactured-r257-once",
+  "run_directory_absent": true,
+  "runtime_artifacts_verified": 11,
+  "saved_r246_validator": "PASS",
+  "saved_r253_validator": "PASS",
+  "source_files": 44,
+  "source_sha256": {
+    "docs/realizability/evidence/r255/proposal.json": "429c1b2752106ff834ab2cffc1670be3129dfe67ebacb8c80d0ab2a7fb61b6d6",
+    "environment-b1.yml": "ecea6a42536e94ffe1d01a3ea173b82ef73c6a05c159fe1f6e05010b85b765ac",
+    "verification/nonlinear_port/cube_adapter.py": "3e2041ada3a2177bc9fe2bf4ded804af229b064a3b472077035979bc64ff7179",
+    "verification/nonlinear_port/diagnostics.py": "795ac30f63534e955e4639df26aaf4b1e11c1a2c1bef64404bb1ae236acc6f99",
+    "verification/nonlinear_port/fixture_driver.py": "07c0c45a3b7d2e6a84417250362187be60d3e9f2348e353c4c37040b5f494217",
+    "verification/nonlinear_port/fixtures.py": "91e5c8a971efe1687ad5856192b37436932a4ac094fce4b26ed994697431c584",
+    "verification/nonlinear_port/future_fem.json": "061962ccc9fc26aa71c5c77d232e28591a0807e63b942e13e7255330245da0ca",
+    "verification/nonlinear_port/future_manufactured.json": "429c1b2752106ff834ab2cffc1670be3129dfe67ebacb8c80d0ab2a7fb61b6d6",
+    "verification/nonlinear_port/future_rotation.json": "5f15e1293c95acbf1bce2e7b18307f94655e168b09a4217ffc915e0c3c0fa1cb",
+    "verification/nonlinear_port/handshake.py": "850ade61143dc27449f1231529916fddc83bddf9b2edfeb59e6d93b4b8bf1ace",
+    "verification/nonlinear_port/linear_evidence.py": "a950da1aaf518cd3504036e668318907e92a445822a37375767af5f81197d4b0",
+    "verification/nonlinear_port/manifest.py": "c20d0b65984e91d48b815f2a6f17ca080a1433f221b3f5f8bbc360bf1c266c82",
+    "verification/nonlinear_port/manufactured_driver.py": "57d1c4f42fa03ab94afde670089645ab119e3d91f87f4c7456b3dd815a7d2b6d",
+    "verification/nonlinear_port/manufactured_manifest.py": "51153c9d3caa9011a2807747b6021eba54cb4617925d34cf26936881c87a0237",
+    "verification/nonlinear_port/manufactured_policy.py": "5f1da5afb3a3e7ef4e3659c4084e4f17d15c24b7f154b35dfeead8d1e8c98200",
+    "verification/nonlinear_port/manufactured_report.py": "ab1a63d00a7221df975f8ded616928bb944b55cf32b0792db07f48e44c9ecd71",
+    "verification/nonlinear_port/manufactured_worker.py": "df71fd0e9fa321c1dab01c4d7db188cff9290d9d26017305afa1c133fe584e9f",
+    "verification/nonlinear_port/package_identity.py": "e85e5ad6c442af6d08bc248b01d3f4919c9d7af8134939d418c37d07a27d37fb",
+    "verification/nonlinear_port/poiseuille_policy.py": "9f1b2c49f0953234b62ecc9d3dcfac12a314f424d7da9dc1c487962a770132eb",
+    "verification/nonlinear_port/polynomial.py": "418a3ac9338f14c659716579abb3404b95ad550de062083606de13b7b4e159b3",
+    "verification/nonlinear_port/probe_systemd.py": "2f344506e726c8b731a28b08065790d3a967754826ef4d9c19ab42291997edfe",
+    "verification/nonlinear_port/prototype.py": "883f4df2765930655a859aa9e5f9882b90c122632f823f0a081e366284e34c96",
+    "verification/nonlinear_port/rotation_driver.py": "6430183933e41c6c1a2bbae7d69432d19d27cac8fc6cc4a99f1845d258d0b03a",
+    "verification/nonlinear_port/rotation_manifest.py": "83c430ce932d2f159a7dcdabafa0f798b762259febb5cac07f7568167ab17e3d",
+    "verification/nonlinear_port/rotation_oracle.py": "ac626ed61062302e586046f408215c05cbc4de585878a909ab4bb2d7af31a115",
+    "verification/nonlinear_port/rotation_worker.py": "67e1a893a71733b2a5b1946c95ee9c3a0f16c70a1189e6824959daefb49228cd",
+    "verification/nonlinear_port/source_binding.py": "b754e6c2735ed328341869ad449fc0261a2857ec2a1af76e4e86b2ad7cad62b2",
+    "verification/nonlinear_port/sparse.py": "db482601e6b388ded562d6c798a964362669a6d4e2444bc27acbc959c7807a8b",
+    "verification/nonlinear_port/supervision.py": "0d9bc944080a5d9ee97b2c30dff706dae930e6dd25ea09f7d515bd21f248202f",
+    "verification/nonlinear_port/systemd_backend.py": "a102fbfae5afe9ed25cc966be433e3632f1c25b5a82adafae9f3a31eedf20263",
+    "verification/nonlinear_port/systemd_bus.py": "595a59ac77704f475207899b138dc68a0cf2d0f9c7f6dbba27ac5f134db2e8ce",
+    "verification/nonlinear_port/test_adapter.py": "739d7eb6a23ebf41eb33bfbc2f8ed6737851094aa62d92cdcecac62b3d18fab2",
+    "verification/nonlinear_port/test_algebra.py": "5667e2144e13ede1b2d1d7cab8752b2c74f89c040ff4eddc33993d6e7608d459",
+    "verification/nonlinear_port/test_driver_supervision.py": "1e873fcbf591cc8f3da00b69a441d23e7fb79cde44fcbf0ad77421e40930194b",
+    "verification/nonlinear_port/test_driver_wiring.py": "3b5eb66ca9e3925940b00c51ca59ba73aede872b3035c13a28c4e114012930fe",
+    "verification/nonlinear_port/test_host_protocol.py": "7b73cafa5d06387d628229097f4bea5c9db178719ab931b8cc8388acc2de26a1",
+    "verification/nonlinear_port/test_linear_evidence.py": "d9b91d9ea4b9e90b19795f34e968ef26d1252f4028362b5914b1e57e927b9ef6",
+    "verification/nonlinear_port/test_manufactured_integration.py": "65108ec51a36b03a554e1b7c96d4ff53d54f18254bcabb8c43df138e1eefca1b",
+    "verification/nonlinear_port/test_package_identity.py": "f084de12506ef12e78ca690926b875b6cd2b1892a4b5139acae095ec9612aa55",
+    "verification/nonlinear_port/test_poiseuille_policy.py": "f83c2281b27970054cfc139f2fecf4d03a39083982076eb71af26559d2fbc7a3",
+    "verification/nonlinear_port/test_rotation_integration.py": "a6768edcbdd5521ce2360de6704d1da88d90c596806e3f923bc855f9511d34a0",
+    "verification/nonlinear_port/test_rotation_oracle.py": "1dde02941cec00813df7c69c19f16443cc49d1305db4e0674dfb089e93c203ae",
+    "verification/nonlinear_port/test_source_bus.py": "2917abfc381e35a2850041f84e05ec3ecdf069215d7f611cbcfcc998d8dd41d3",
+    "verification/nonlinear_port/worker.py": "69e2ff277c1f924a99008aa2cebcf07e651e38e41070469a867677c29c49f803"
+  },
+  "status": "ADMITTED_FOR_LATER_EXECUTION",
+  "tests": 104
+}

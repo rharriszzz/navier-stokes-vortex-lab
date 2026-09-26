@@ -15,6 +15,7 @@ from .manufactured_driver import assemble_diagnostics, validate_worker_payload
 from .manufactured_manifest import contract_digest, expected, validate
 from .manufactured_policy import compare
 from .manufactured_report import build_report, validate_report
+from .linear_evidence import LatestSystem
 from .package_identity import FFCX_ARTIFACT, FFCX_RUNTIME, RECOVERY_EVIDENCE
 from .prototype import Refusal
 from .source_binding import expected_binding
@@ -77,6 +78,18 @@ def evidence(raw=None):
 
 
 class ManufacturedIntegrationChecks(unittest.TestCase):
+    def test_be_roundoff_bound_keeps_three_signed_terms(self):
+        from .manufactured_report import _be_identity
+        from sys import float_info
+        # Cancellation makes a two-value scale much smaller than the contract.
+        raw = {'energy.storage': 1e-3, 'energy_identity_storage': -1e6,
+               'energy_identity_dissipation': 1e6}
+        check = _be_identity(raw, PROPOSAL['gates'])
+        self.assertEqual(check['limit'], 128*float_info.epsilon*(2e6+1e-3))
+        self.assertFalse(check['accepted'])
+        raw['energy.storage'] = 1e-8
+        self.assertTrue(_be_identity(raw, PROPOSAL['gates'])['accepted'])
+
     def test_frozen_proposal_and_exact_reference(self):
         self.assertEqual(validate(json.loads(MANIFEST.read_text())), PROPOSAL)
         for key in ('strain_l2_squared', 'be_energy_dissipation', 'Q_minus', 'Q_plus'):
@@ -120,6 +133,8 @@ class ManufacturedIntegrationChecks(unittest.TestCase):
             lambda item: item['raw_by_degree']['24'].pop('volume'),
             lambda item: item['raw_by_degree']['24'].update(extra=1.),
             lambda item: item['corrections'][0].update(true_residual=float('nan')),
+            lambda item: item['condition'].update(condition_bound=True),
+            lambda item: item['condition']['gram'][0].__setitem__(0, True),
         ):
             bad = deepcopy(data); mutate(bad)
             with self.assertRaises(Refusal): build_report(**bad)
@@ -188,10 +203,18 @@ class ManufacturedIntegrationChecks(unittest.TestCase):
                 reservation[key]=admission[key]
             binding=expected_binding(Path(__file__).resolve().parents[2],
                                      reservation,sys.executable)
-            saved=dict(fixture='manufactured',shape=[405,405],
-                       source_binding=binding,correction=1)
-            data=(json.dumps(saved,sort_keys=True)+'\n').encode()
-            (directory/'linear_system.json').write_bytes(data)
+            driver.validate_reservation(reservation, admission, MANIFEST.read_bytes(),
+                PROPOSAL, directory, sys.executable, 'daisy')
+            for schema in (True, 1.):
+                bad = dict(reservation, worker_schema=schema)
+                with self.assertRaises(Refusal):
+                    driver.validate_reservation(bad, admission, MANIFEST.read_bytes(),
+                        PROPOSAL, directory, sys.executable, 'daisy')
+            LatestSystem(directory, binding, fixture='manufactured')(
+                CSR.from_rows([{i: 1.} for i in range(405)]), [0., 1.]+[0.]*403,
+                state=[2.]+[0.]*404, scales=[1.]*405, fixed={0: 2.}, step=1, correction=1)
+            data=(directory/'linear_system.json').read_bytes()
+            saved=json.loads(data)
             state=evidence()
             state['corrections'][0]['linear_system'].update(
                 sha256=hashlib.sha256(data).hexdigest(),bytes=len(data))
@@ -242,6 +265,24 @@ class ManufacturedIntegrationChecks(unittest.TestCase):
             for index,change in enumerate(mutations):
                 bad=deepcopy(payload);change(bad)
                 with self.subTest(index=index),self.assertRaises(Refusal):
+                    validate_worker_payload(bad,PROPOSAL,reservation,admission,directory)
+            # Rehash each malformed record, so these test content validation.
+            for change in (
+                lambda s:s.pop('csr'),
+                lambda s:s['csr']['indptr'].__setitem__(0, 1),
+                lambda s:s['csr']['values'].__setitem__(0, True),
+                lambda s:s['rhs'].__setitem__(1, 2.),
+                lambda s:s['state'].__setitem__(0, 3.),
+                lambda s:s['row_scales'].__setitem__(1, .5),
+                lambda s:s['solver'].update(shift='nonzero'),
+            ):
+                altered=deepcopy(saved); change(altered)
+                blob=(json.dumps(altered,sort_keys=True)+'\n').encode()
+                (directory/'linear_system.json').write_bytes(blob)
+                bad=deepcopy(payload)
+                bad['linear_corrections'][-1]['linear_system'].update(
+                    sha256=hashlib.sha256(blob).hexdigest(),bytes=len(blob))
+                with self.assertRaises(Refusal):
                     validate_worker_payload(bad,PROPOSAL,reservation,admission,directory)
 
     def test_fixture_dispatch_preserves_incomplete_attempts(self):

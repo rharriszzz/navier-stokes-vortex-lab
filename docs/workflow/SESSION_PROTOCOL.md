@@ -41,6 +41,32 @@ Do not claim an unexecuted check passed.
 On compaction/resume, continue the existing entry rather than duplicating it.
 The request log is history; do not replay completed requests as new assignments.
 
+### Explicit chat-continuation recommendation (R257)
+
+At every bounded completion, state either **use `/new` before the next task**
+or **continue in this chat**, with one concrete reason. Put the same choice
+in the current handoff. Do not leave this implicit when recommending a model.
+Use the supplied context percentage as a signal alongside task boundaries,
+remaining dependencies and the quality of the saved handoff. There is no
+repository-mandated percentage cutoff. Do not infer an unseen current percentage
+or promise that a fresh chat improves performance by a measured amount.
+
+Prefer a new chat when a substantial phase has ended, its decisions/evidence
+and next task are saved and published, and a long transcript offers little
+additional working context. At the user's R257 snapshot of 22% remaining,
+recommend `/new` after the source/admission review is published. Continue a
+connected unfinished task when its working context is still needed; `/compact`
+is available to summarize that chat. Do not interrupt an active workload just
+because of a percentage. A fresh chat does not replace the ownership protocol
+or reset one-use allocations. Carry forward the handoff and supplied session
+excerpts, then use **Continue** for the next bounded task.
+
+The [official CLI command guide](https://learn.chatgpt.com/docs/developer-commands?surface=cli)
+documents `/new` as starting a fresh chat and `/compact` as summarizing existing
+context. The task-boundary recommendation above is project judgment, not an
+official numerical threshold. No command or model switch is performed merely
+by recommending it.
+
 When the remaining task becomes routine, recommend a concrete available model
 and reasoning effort. Give it an actionable task, checks, a stop condition,
 and a rule for recommending the following model/effort. Routine execution is

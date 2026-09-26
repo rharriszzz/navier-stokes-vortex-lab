@@ -5,7 +5,7 @@ from math import fsum, isfinite, sqrt
 from pathlib import Path
 import time
 
-from .cube_adapter import (Assembler, RETURNS, boundary_values, create_cube,
+from .cube_adapter import (Assembler, RETURNS, SUPERLU_OPTIONS, SUPERLU_PREFIX, boundary_values, create_cube,
                            interpolate_state, sparse_solve, step_forms)
 from .diagnostics import field_forms
 from .fixture_driver import nonexact_guess, return_quadrature_samples
@@ -17,7 +17,7 @@ from .rotation_driver import (_duplicate_pairs, _nonfinite_constant,
                               geometry_receipt, read_limited, strict_json_bytes,
                               write_limited_new)
 from .source_binding import expected_binding
-from .sparse import constraint_condition, row_scales, scale_system
+from .sparse import CSR, constraint_condition, row_scales, scale_system
 
 
 PHASES = {'mesh_and_lift', 'primary_form_setup_jit',
@@ -276,7 +276,8 @@ def validate_reservation(reservation, admission, manifest_bytes, manifest,
     for key in ('fixture', 'kind', 'mode', 'worker_schema', 'source_commit',
                 'manifest_sha256', 'contract_sha256', 'interpreter', 'executable',
                 'executable_sha256', 'artifact_inventory_sha256'):
-        if reservation.get(key) != admission.get(key):
+        if (type(reservation.get(key)) is not type(admission.get(key))
+                or reservation.get(key) != admission.get(key)):
             raise Refusal('manufactured reservation/admission mismatch: ' + key)
     if reservation['manifest_sha256'] != template['manifest_sha256']:
         raise Refusal('manufactured manifest bytes changed')
@@ -288,6 +289,52 @@ def _times(values, keys):
             or any(type(value) not in (int, float) or not isfinite(value)
                    or value < 0 for value in values.values())):
         raise Refusal('missing manufactured timing inventory')
+
+
+def _validate_latest(saved, payload, latest):
+    """Validate the recorder's full sparse record and its envelope aliases."""
+    from .linear_evidence import MAX_BYTES, MAX_DOFS, MAX_NNZ, finite_vector
+    context = dict(schema=1, fixture='manufactured', subdivisions=2, step=1,
+        dt=.125, correction=latest['correction'], stage='before_factorization',
+        source_binding=payload['source_binding'], shape=[405, 405], mixed_dofs=402,
+        unknown_order='mixed u/p, P_minus, P_plus, eta',
+        operator='already lifted and row scaled; rhs is negative scaled residual',
+        solver=dict(ksp='preonly', pc='lu', backend='superlu', shift='none',
+                    options_prefix=SUPERLU_PREFIX, options=dict(SUPERLU_OPTIONS)),
+        factor_permutation=None, pivot_coordinate=None,
+        caps=dict(dofs=MAX_DOFS, nnz=MAX_NNZ, bytes=MAX_BYTES))
+    variable = {'csr', 'rhs', 'state', 'row_scales', 'fixed_indices', 'fixed_values'}
+    if (type(saved) is not dict or set(saved) != set(context) | variable
+            or any(canonical(saved[key]) != canonical(value) for key, value in context.items())):
+        raise Refusal('latest manufactured linear-system context/inventory changed')
+    csr = saved['csr']
+    if (type(csr) is not dict or set(csr) != {'indptr', 'indices', 'values'}
+            or any(type(value) is not list for value in csr.values())
+            or len(csr['values']) > MAX_NNZ):
+        raise Refusal('invalid latest manufactured CSR inventory')
+    finite_vector(csr['values'], len(csr['values']), 'CSR values')
+    matrix = CSR(405, tuple(csr['indptr']), tuple(csr['indices']), tuple(csr['values']))
+    try:
+        matrix.validate(405)
+    except (ValueError, TypeError, OverflowError) as exc:
+        raise Refusal('invalid latest manufactured CSR') from exc
+    for key in ('rhs', 'state', 'row_scales'):
+        if type(saved[key]) is not list:
+            raise Refusal('invalid latest manufactured vector: ' + key)
+        finite_vector(saved[key], 405, key)
+    scales = saved['row_scales']
+    fixed = payload['fixed_inventory']
+    indices = sorted(map(int, fixed))
+    if (canonical(saved['fixed_indices']) != canonical(indices)
+            or canonical(saved['fixed_values']) != canonical([fixed[str(i)] for i in indices])
+            or any(saved['state'][i] != fixed[str(i)] for i in indices)
+            or min(scales) <= 0
+            or canonical(dict(minimum=min(scales), maximum=max(scales)))
+               != canonical(payload['frozen_row_scales'])):
+        raise Refusal('latest manufactured lift/scales alias changed')
+    rhs_norm = sqrt(fsum(v*v for v in saved['rhs']))
+    if rhs_norm != payload['linear_corrections'][-1]['rhs_norm']:
+        raise Refusal('latest manufactured RHS norm changed')
 
 
 def validate_worker_payload(payload, manifest, reservation, admission, directory):
@@ -367,7 +414,8 @@ def validate_worker_payload(payload, manifest, reservation, admission, directory
     _times(payload['worker_intervals'], INTERVALS)
     validate_versions(payload['actual_versions'], manifest['versions'], payload['ffcx_artifact'])
     latest = payload['linear_corrections'][-1]['linear_system']
-    data = Path(directory, latest['file']).read_bytes()
+    with Path(directory, latest['file']).open('rb') as stream:
+        data = stream.read(4*1024*1024+1)
     if len(data) != latest['bytes'] or hashlib.sha256(data).hexdigest() != latest['sha256']:
         raise Refusal('latest manufactured linear-system bytes changed')
     if len(data) > 4*1024*1024:
@@ -377,9 +425,5 @@ def validate_worker_payload(payload, manifest, reservation, admission, directory
                            parse_constant=_nonfinite_constant)
     except (UnicodeError, ValueError, TypeError, RecursionError) as exc:
         raise Refusal('invalid manufactured linear-system JSON') from exc
-    if (type(saved) is not dict or saved.get('fixture') != 'manufactured'
-            or saved.get('shape') != [405, 405]
-            or canonical(saved.get('source_binding')) != canonical(payload['source_binding'])
-            or saved.get('correction') != latest['correction']):
-        raise Refusal('latest manufactured linear-system context changed')
+    _validate_latest(saved, payload, latest)
     return payload

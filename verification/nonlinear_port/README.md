@@ -1,11 +1,11 @@
 # Isolated nonlinear port verification source — R195/R196/R222/R225/R226
 
-[R256 source integration](../../docs/realizability/MANUFACTURED_INTEGRATION_R256.md)
-implements R255's n=2 manufactured spatial BE pilot as source and injected
-fakes. All 103 standard-library tests and saved R246/R253 validator replays
-pass without numerical modules. No new admission or attempt exists; six old
-allowances remain spent. Follow the [single current task](../../SESSION_HANDOFF.md#next-task):
-Astra/high reviews source and a separate admission/caller or blocker.
+[R257 source review/admission](../../docs/realizability/MANUFACTURED_ADMISSION_R257.md) repairs the fixed manufactured
+spatial BE pilot and admits one later n=2 attempt. All 104 regressions and six
+fake caller checks pass without numerical imports or launch; saved R246/R253
+remain PASS. New allowance unspent 0/1, six prior allowances spent. Follow the
+[single current task](../../SESSION_HANDOFF.md#next-task): use `/new`, Sol/high, then Continue
+for the fixed one-use execution and evidence handoff.
 
 **Source and algebra evidence, not a validated FEM solver.** The
 [R195 fixture review](../../docs/realizability/NONLINEAR_VERIFICATION_R195.md)
