@@ -990,3 +990,24 @@ FEM, decides separate later go/no-go for the unreserved one-use allocation;
 Sol/high only for later mechanical execution if admitted. PC retains ownership,
 Mac released. STARTED c90193e, allocation/caller c3b5598 published; completion
 prepared for scoped publication, delivery hash/result in final/Git, no post-push edit.
+
+## R232 — Correct recoverable prelaunch stop and resume one-use fixture
+STARTED | 2026-09-26T16:19:15Z | PC/WSL daisy | released: no
+Identity: rharris; Linux x86_64 daisy, same checkout and main/origin/main at
+db68c6136f7f95cb43ca386db2ef28fc7ba8423a on entry, empty stashes,
+same PC owner, Mac released. User correction supersedes R231's premature stop;
+the prior Continue's one-fixture scoped authorization persists. R231 command
+never reached preflight/reservation/backend/worker, fixed directory absent,
+zero numerical attempts spent. This is the same allocation, not a new one.
+Update recoverable-prelaunch policy, repair and test caller, publish clean
+binding, then execute the fixed one-use contract once. Any reservation or
+partial worker start consumes it; no automatic retry after that boundary.
+
+Correction checkpoint before launch: root-path bootstrap and project imports
+inside the outer timer repaired the R231 error. Standard-library regression
+and direct invalid-commit CLI check passed without manager, FEM or reservation.
+All 25 reviewed source hashes, manifest and R229 interpreter hash match;
+fixed directory absent and zero numerical attempts spent. Renewed review and
+checks are in docs/realizability/POISEUILLE_CALLER_REVIEW_R232.md and
+evidence/r232/checks.json. Publish these records/source before the single
+fixed-contract launch; bind the new clean HEAD, with no allocation reset.

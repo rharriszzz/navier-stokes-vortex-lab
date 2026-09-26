@@ -1,19 +1,24 @@
 # Current session handoff
 
-Last updated 2026-09-26 (America/New_York) for R231.
+Last updated 2026-09-26 (America/New_York) for R232.
 **PC/WSL daisy owns the repository.** No transfer; Mac remains released.
-**R231 stopped at a prelaunch import-path refusal; zero numerical attempts spent.**
+**R232 resumes the same authorized single fixture after correcting R231's
+recoverable import-path error; zero numerical attempts spent before launch.**
 The [R231 result](docs/realizability/POISEUILLE_PRELAUNCH_R231.md) records exit 1
 before caller preflight, timer, reservation or worker. The fixed run directory is
-absent; no FEM imported or ran. R231's stop rule bars repair-and-rerun in this
-task. A separate Astra/high review must resolve the caller and allocation before
-any later execution decision. R230's one-use admission is retained; a retry is
-not automatically authorized.
-**Next: Astra/high reviews the prelaunch refusal, corrects and tests the caller
-without FEM, decides go/no-go for a separate later Continue, and stops.**
-All caps/thresholds remain; full suite/tank/B2 execution remains unadmitted.
-R231 STARTED c90193e and allocation/caller c3b5598 were published; completion
-delivery belongs in Git/final response, with no post-push edit.
+absent; no FEM imported or ran. The user corrected the premature-stop rule in
+R232, so the prior Continue's scoped authorization carries the unspent attempt
+forward. The caller now resolves project imports when invoked by path and starts
+its outer timer before them. A standard-library-only check exercised both from
+an outside directory with no manager connection or reservation.
+**Next: publish the clean R232 caller/rule correction, execute the same fixed
+one-use Poiseuille contract once, record result/cleanup, and stop.** No new
+allocation or alternate directory. All caps/thresholds remain; full suite/tank/
+B2 execution remains unadmitted. After the result, recommend a fresh Astra/high
+chat for scientific interpretation; explicitly state whether `/new` is advised.
+R231 STARTED c90193e, allocation/caller c3b5598, and completion db68c61 were
+published. R232 publication/result remains pending; final delivery hash belongs
+in Git/final response, with no post-push edit.
 
 Historical R230 admission: one later bounded n=2 Poiseuille attempt, zero
 numerical attempts spent at its decision.
@@ -218,12 +223,12 @@ and physical-work limits remain unchanged.
 | Owner | PC/WSL `daisy`; Mac `fire.lan` released after published R161 handoff and R162 receipt. |
 | Checkout | `/home/rharris/git/navier-stokes-vortex-lab`. |
 | Branch/upstream | `main` / `origin/main` |
-| Starting state | R231 clean required fast-forward pull retained df3e6cb equal to fetched origin/main; empty stashes, rharris/daisy owner. STARTED c90193e and allocation c3b5598 published. |
+| Starting state | R232 same-owner clean entry at db68c61 equal to stored origin/main; empty stashes, rharris/daisy owner. The R231 one-use directory/reservation remained absent. |
 | Interpreter | /tmp/navier-fenicsx-r229/bin/python verified as 3.12.13 with -I -S; exact environment artifacts verified, setup memory-event predicate refused. Project Python remains 3.12.14. Old /tmp/navier-fenicsx is still partial. |
 | Other owner/process | Mac `fire.lan` released in the published R161 handoff. Local Git cannot inspect another checkout's unpublished state. |
-| Task processes | R231 top-level import failed before caller preflight/reservation/backend; no worker or FEM. Fixed run directory absent; existing R226 failed expiry unit has MainPID 0 and empty cgroup. Zero numerical attempts spent; R231 stopped without retry. |
+| Task processes | R231 top-level import failed before any worker; fixed run directory absent and numerical attempt unspent at R232 entry. Existing R226 failed expiry unit has MainPID 0 and empty cgroup. R232 caller correction tests launched no task worker/FEM. |
 | Symbolic environment | `/tmp/navier-r183-sympy/bin/python`, Python 3.12.14, SymPy 1.14.0, mpmath 1.3.0; recreate using `requirements-symbolic.txt` if missing. Existing environments unchanged. |
-| Delivery state | R230 completion df3e6cb verified by clean pull; R231 STARTED c90193e and allocation c3b5598 published. R231 completion prepared for scoped publication; final hash/result in Git/final response. PC retains ownership. |
+| Delivery state | R231 completion db68c61 published and clean at R232 entry. R232 correction/start publication and one-use result pending; final hash/result in Git/final response. PC retains ownership. |
 
 ## Current result and limits
 
@@ -354,41 +359,42 @@ agent-side POV-Ray backtraces are unavailable.
 
 ## Next task
 
-**GPT-6 Astra / high / PC-WSL daisy: review R231's prelaunch refusal and decide
-whether a separately authorized execution may use the unreserved one-use
-allocation. Stop before FEM.** Read the [R231 result](docs/realizability/POISEUILLE_PRELAUNCH_R231.md),
-[raw failure](docs/realizability/evidence/r231/prelaunch_result.json),
-[caller](docs/realizability/evidence/r231/run_once.py),
-[R230 admission](docs/realizability/POISEUILLE_ADMISSION_R230.md),
-reviewed source inventory and R226 launcher review. Preserve the exact failure
-and all prior charges/evidence. R231's command exited at a top-level package
-import before its timer, preflight, reservation or backend; no numerical attempt
-was spent. The fixed run directory is absent. R231 stops here without retry.
+**GPT-6 Sol / high / PC-WSL daisy: finish the same unspent R230 one-use n=2
+Poiseuille fixture after publishing R232's corrected caller, then stop.** The
+user's R232 correction supersedes the premature R231 prelaunch stop. The R231
+command failed before timer, preflight, reservation, backend or worker; its raw
+failure remains preserved. No numerical attempt was spent. The prior Continue
+authorized this exact fixture and scoped publication, and R232 does not add an
+attempt. Read the [R230 admission](docs/realizability/POISEUILLE_ADMISSION_R230.md),
+[R231 failure](docs/realizability/POISEUILLE_PRELAUNCH_R231.md),
+[allocation](docs/realizability/evidence/r231/allocation.json), reviewed source
+inventory, R226 launcher and R229 environment result.
 
-1. Follow normal Continue ownership, clean synchronization and STARTED
-   publication. Recheck the absence of a reservation and live task unit; local
-   Git cannot reveal another machine's unpublished state. No Mac transfer.
-2. Correct the finite caller's import-path error in the smallest explicit way.
-   Verify module loading and the outer timer boundary using standard-library,
-   no-manager/no-FEM tests. Keep the failed file and raw result as evidence;
-   do not overwrite or erase R231. Recheck source inventory, frozen manifest,
-   interpreter hash and clean-commit binding logic.
-3. Make an explicit go/no-go decision for a **later** single fixture under the
-   original exact directory, 180 s observed / 149+1 s independent expiry,
-   1536 MiB/no swap/32 tasks, one rank/thread, <=20,000 DOFs and unchanged
-   numerical/zero-event gates. A prelaunch failure does not itself certify a
-   future run; no alternate directory or automatic retry. Stop before FEM,
-   installation, full suite, rotation, tank, B2, physical/render work.
-4. Record source changes, checks/skips, evidence, allocation state, cleanup
-   and one concrete next task. Recommend Sol/high for a later mechanical launch
-   only if admission remains justified; return to Astra/high for a numerical
-   result or changed science/containment decision.
+1. Publish R232's corrected caller, regression check and policy/coordination
+   record. Confirm a clean launch commit, unchanged 25 reviewed source hashes
+   and frozen manifest, exact R229 interpreter hash and no fixed run directory.
+   Recheck live host capacity/manager inside the finite caller. No reinstall,
+   numerical import smoke test, prewarming or alternate directory.
+2. Execute exactly one `supervise_once`/`SystemdBackend` fixture at
+   `/tmp/navier-poiseuille-r230-once`, binding the actual clean commit in
+   admission and reservation. Keep 180 s observed total (15 setup/150 work/15
+   finish), 149+1 s independent worker expiry, 1536 MiB/no swap/32 tasks, one
+   rank/thread and <=20,000 mixed DOFs. Preserve exact n=2, dt=.125, degree
+   24/26, physical/error/budget and zero memory/PID-event gates.
+3. Any reservation or partial worker start consumes the sole allocation.
+   Persist raw terms, timing/counters, actual exit and cleanup; stop after that
+   result or any uncertain/spent attempt. Never repair-and-rerun a spent
+   attempt or relax gates. No full suite, rotation, tank, B2, physical/render
+   work or Mac transfer. R229's 303-event setup refusal remains false.
+4. Record result, changed files, checks/skips, evidence, spent state, cleanup
+   and a single next task in log/handoff/status. Recommend Astra/high for
+   scientific interpretation or source/admission change. Explicitly recommend
+   `/new` or staying in this chat for that next task.
 
-Completion: a reviewed and standard-library-tested caller plus explicit
-separate-execution admission/refusal, published without running FEM. Current
-actual library compatibility, JIT/mesh/solve cost, rank and accuracy remain
-unknown; R229's setup resource predicate remains false. The next prompt is
-**Continue**.
+Completion: one observed numerical result or a concrete refusal with exact
+attempt/cleanup state and publication. The previous prelaunch failure and
+current caller fix are not numerical results. Actual FEM cost, rank and
+accuracy remain unknown until the attempt.
 
 ### Historical R230 single-fixture execution task (R231 stopped prelaunch)
 

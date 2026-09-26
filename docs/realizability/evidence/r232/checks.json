@@ -1,0 +1,18 @@
+{
+  "request": "R232",
+  "result": "corrected caller reviewed before one-use launch",
+  "r231_failure_preserved": true,
+  "numerical_attempts_spent_before_launch": 0,
+  "fixed_run_directory_absent_before_launch": true,
+  "source_inventory_files": 25,
+  "source_inventory_mismatches": 0,
+  "manifest_sha256": "7a8bda917e6b46994ad24c68e0b6c6013b7d6776f90c86a6de763f31f52fa558",
+  "interpreter_sha256": "5f083df36ec986d5cd13d2549ca6cfe1ddaf658509f9e419b454b2fb375c27a3",
+  "corrected_caller_sha256": "66eb4820cfe898adaab692e5e1931b6878560ca868e9debec56fd751d46deff2",
+  "caller_regression": "PASS from outside checkout; timer active before synthetic preflight refusal; no manager, FEM, reservation or run directory",
+  "direct_path_invalid_commit": "expected INCOMPLETE clean-commit refusal; exited 1 in 0.01543095099623315 seconds before manager/reservation",
+  "numerical_imports_run": false,
+  "fem_run": false,
+  "new_allocation_granted": false,
+  "launch_condition": "publish clean R232 source and bind actual HEAD; fixed R230 contract unchanged"
+}

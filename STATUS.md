@@ -1,13 +1,15 @@
 # Project status: a boundary-controlled engineering approximation
 
-Updated 2026-09-26 (America/New_York), through R231. PC/WSL daisy owns the
-repository. **R231 stopped before the numerical attempt.** The
+Updated 2026-09-26 (America/New_York), through R232. PC/WSL daisy owns the
+repository. **R232 corrects the recoverable R231 caller failure and resumes the
+same authorized, unspent one-use fixture.** The
 [prelaunch result](docs/realizability/POISEUILLE_PRELAUNCH_R231.md) records a
 caller import-path failure before preflight, timer, reservation or worker; the
 fixed run directory remains absent and zero numerical attempts were spent.
-R231's stop rule forbids a repair-and-rerun in this task. Next: Astra/high
-reviews and tests the caller without FEM, then decides separate execution
-admission; follow the [single task](SESSION_HANDOFF.md#next-task).
+The user corrected R231's premature stop. R232's caller now resolves imports
+from outside the repo and has a tested outer timer boundary without FEM or
+manager activity. Next: publish the clean correction and execute the same
+fixed contract once; follow the [single task](SESSION_HANDOFF.md#next-task).
 The historical
 [R230 review](docs/realizability/POISEUILLE_ADMISSION_R230.md) accepts reuse of
 R229's completed artifact evidence and repairs exact FFCx package/runtime identity.
@@ -84,9 +86,9 @@ No boundary-driven core or feasible contraction range is established.
 |---|---|
 | What works? | Illustrative animation, saved-data checks and separate reference/analysis tools. |
 | Is the engineering goal demonstrated? | No validated boundary-driven contraction or boundary-only state estimator exists yet. |
-| What did the latest step establish? | The R231 caller failed before timer, reservation or FEM; the numerical allocation remains unspent. [Failure and limits](docs/realizability/POISEUILLE_PRELAUNCH_R231.md). |
+| What did the latest step establish? | R231 failed before reservation or FEM; R232 corrected and tested the caller without spending the numerical allocation. [Failure and limits](docs/realizability/POISEUILLE_PRELAUNCH_R231.md). |
 | What blocks trusted numerical control results? | The nonlinear fixture has not run; B2 still fails its independent response-accuracy comparison and q64/q96 remain unused. |
-| What is next? | Astra/high reviews the prelaunch refusal and tests a caller correction without FEM; follow the single [next task](SESSION_HANDOFF.md#next-task). |
+| What is next? | Sol/high publishes the corrected caller, executes the single fixed contract and stops; follow the single [next task](SESSION_HANDOFF.md#next-task). |
 
 ## Goal and present conclusion
 

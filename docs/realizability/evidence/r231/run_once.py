@@ -12,12 +12,9 @@ import subprocess
 import sys
 import time
 
-from verification.nonlinear_port.supervision import supervise_once
-from verification.nonlinear_port.systemd_backend import SystemdBackend
-from verification.nonlinear_port.systemd_bus import Bus
-
-
 ROOT = Path(__file__).resolve().parents[4]
+if str(ROOT) not in sys.path:
+    sys.path.insert(0, str(ROOT))
 RUN = Path('/tmp/navier-poiseuille-r230-once')
 PYTHON = '/tmp/navier-fenicsx-r229/bin/python'
 PYTHON_SHA256 = '5f083df36ec986d5cd13d2549ca6cfe1ddaf658509f9e419b454b2fb375c27a3'
@@ -25,6 +22,14 @@ MANIFEST = ROOT/'verification/nonlinear_port/future_fem.json'
 INVENTORY = ROOT/'docs/realizability/evidence/r230/checks.json'
 EXPECTED_MANIFEST = '7a8bda917e6b46994ad24c68e0b6c6013b7d6776f90c86a6de763f31f52fa558'
 LIMIT = 180
+
+
+def load_components():
+    # Include project imports in the outer timer and make direct path execution work.
+    from verification.nonlinear_port.supervision import supervise_once
+    from verification.nonlinear_port.systemd_backend import SystemdBackend
+    from verification.nonlinear_port.systemd_bus import Bus
+    return supervise_once, SystemdBackend, Bus
 
 
 def digest(path):
@@ -45,7 +50,7 @@ def save_new(path, value):
         os.fsync(stream.fileno())
 
 
-def preflight(expected_commit):
+def preflight(expected_commit, bus_type):
     if (git('rev-parse', 'HEAD') != expected_commit or
             git('status', '--porcelain', '--untracked-files=all') or
             git('rev-parse', '--show-toplevel') != str(ROOT)):
@@ -67,7 +72,7 @@ def preflight(expected_commit):
         raise RuntimeError('less than 1536 MiB host memory available')
     if not Path('/sys/fs/cgroup/cgroup.controllers').is_file():
         raise RuntimeError('unified cgroup unavailable')
-    bus = Bus()
+    bus = bus_type()
     try:
         version = bus.property(bus.path, 'Manager', 'Version', 's')
     finally:
@@ -94,7 +99,8 @@ def main():
     result = None
     reason = None
     try:
-        preflight_facts = preflight(expected_commit)
+        supervise_once, SystemdBackend, Bus = load_components()
+        preflight_facts = preflight(expected_commit, Bus)
         admission = dict(approved=True, fixture='poiseuille', attempts_granted=1,
                          run_directory=str(RUN), source_commit=expected_commit,
                          manifest_sha256=EXPECTED_MANIFEST)

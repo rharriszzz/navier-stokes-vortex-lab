@@ -113,6 +113,17 @@ This shorthand replaces the long prompt at the user's request, R003 in
 2. Carry out that task and its prescribed checks through completion. Preserve
    user work, scientific assumptions, acceptance thresholds, and recorded stop
    conditions. Fix understood implementation errors within the task's scope.
+   For a one-use workload, a deterministic caller/preflight failure is
+   recoverable in the same authorized task only when it happened before any
+   reservation, managed worker start or numerical import. Save the failure,
+   verify the fixed run directory and manager show no new task process, repair
+   and test the cause without numerical work, and publish a new clean source
+   binding before attempting the same fixed contract. Record the failed command
+   and elapsed/counter gaps; do not call it a numerical attempt or silently
+   reset an allocation. A reservation, partial worker start, uncertain process
+   state or actual numerical/resource refusal still triggers the one-attempt
+   stop rule unless a separate explicit admission says otherwise. Make this
+   boundary explicit when writing future task-specific stop conditions.
 3. At completion or a research-decision boundary, record evidence, changed
    files, checks/skips, and unresolved questions. Update the request log,
    relevant Markdown, `SESSION_HANDOFF.md`, and the matching completion entry

@@ -8106,3 +8106,49 @@ the unreserved fixed-directory allocation. Stop before numerical execution;
 recommend Sol/high only for a later mechanical launch if admitted. PC/WSL daisy
 retains ownership, Mac released. Completion prepared for scoped commit/push;
 final delivery hash/result belongs in Git/final response, no post-push edit.
+
+## R232 — 2026-09-26 — Correct premature-stop rule and caller import
+
+**User wording:**
+
+```text
+I don't like it when you stop after encountering easily fixable problems sugh as oduleNotFoundError:
+  No module named 'verification'.  I would like to suggest that you change your rules somehat.  You asked for astra high, but you didnot say whether you want /new.
+```
+
+**Scope/status:** STARTED. Treat this as a correction to the R231 stopping
+approach and resumption of the previously authorized, still-unspent single
+fixture: clarify the rule for recoverable failures before reservation, repair
+and validate the caller import, publish a clean source binding and carry the
+same fixed contract through one result or a genuine spent-attempt stop. The
+earlier R231 Continue authorized this one scoped launch and publication; the
+new correction overrides R231's premature prelaunch stop without granting a
+second numerical allocation. State an explicit /new recommendation.
+Identity: rharris / Linux x86_64 / PC-WSL daisy; clean main at
+db68c6136f7f95cb43ca386db2ef28fc7ba8423a equal to locally stored
+origin/main, empty stashes, same owner; Mac remains released. R231 completed,
+with no open lifecycle record. R230's one-use numerical allocation remains
+unreserved and zero spent; the R231 failure and stop remain historical evidence.
+R232 resumes the same authorized objective on the same owner and fixed directory.
+
+### R232 caller correction and launch review
+
+The finite caller now adds its resolved repository root to Python's import path
+and loads the three project components after the 180-second outer timer starts.
+The original failed caller bytes remain in Git at c3b5598; R231 raw failure is
+unchanged. The standard-library check in evidence/r232/check_caller.py passed
+from outside the checkout: project imports resolved, the timer was active
+before a synthetic preflight refusal, and no numerical module, manager,
+reservation or run directory appeared. A direct `/tmp` path invocation with a
+deliberately wrong commit reached the expected clean-commit refusal (exit 1,
+0.01543095099623315 s observed by its caller) rather than ModuleNotFoundError.
+The [renewed caller review](docs/realizability/POISEUILLE_CALLER_REVIEW_R232.md)
+and evidence/r232/checks.json bind its SHA-256 and the unchanged contract.
+
+All 25 R230 reviewed source hashes still match, as do the frozen manifest and
+R229 interpreter SHA-256. The fixed run directory remains absent, zero
+numerical attempts spent. The same one-use fixture is admitted for a later
+clean R232 launch commit after publication; no new allocation or cap/gate
+change. Any reservation or partial worker start consumes it. Official OpenAI
+Docs confirms `/new` starts a fresh Codex CLI chat in the same repository and
+Astra supports high reasoning. No /new or model switch was performed here.

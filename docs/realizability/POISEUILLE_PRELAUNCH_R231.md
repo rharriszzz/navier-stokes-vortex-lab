@@ -36,3 +36,14 @@ library checks only, then make an explicit new go/no-go decision for the same
 fixed directory and unchanged source/interpreter/caps. Stop before FEM in that
 review. A later execution needs a new Continue after the review; no automatic
 retry or alternate run directory follows from this zero-spent observation.
+
+## R232 correction to the stopping decision
+
+The user subsequently directed a change to the premature-stop rule. This page
+retains the exact R231 failure and original decision as history; the failed
+caller bytes remain available at commit `c3b5598`. R232 repairs the caller's
+import path and verifies its timer without a manager or FEM. Because R231 never
+reserved the directory or started a worker, the original one-use numerical
+allocation remains zero spent. The earlier Continue's scoped authorization
+persists for R232 to carry that same fixed contract forward; see the current
+[handoff](../../SESSION_HANDOFF.md#next-task) for its result and stop boundary.
