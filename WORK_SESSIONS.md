@@ -1229,3 +1229,12 @@ allows one bounded R237 n=2 fixture and scoped publication. Fixed directory
 /tmp/navier-poiseuille-r237-once, currently 0/1 spent pending reservation or
 partial worker start. Older R232/R235 charges stay spent 1/1. Preserve all
 caps/gates, actual exit/cleanup and raw diagnostic; no retry after spend.
+
+R238 pre-reservation note: exact first caller at clean 6625a894 exited 1 on
+sandbox-denied sd-bus connection after caller-observed 0.049598098 s. No new
+fixed directory, reservation, manager task, worker or numerical import; R237
+remains 0/1 spent. Host read-only manager check succeeded outside sandbox and
+found only old failed units with MainPID 0/empty ControlGroup, none referencing
+R237. Evidence: evidence/r238/prelaunch.json. Publish this note for clean source
+binding; continue same one-use caller outside sandbox, unchanged. STARTED stays
+open; no second allocation or retry after any later reservation/partial start.

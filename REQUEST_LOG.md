@@ -8727,3 +8727,21 @@ efc9dbc6816c1c1d5096be1813d4f177e396f64a, empty stashes and completed R237
 lifecycle. Required clean fast-forward pull succeeded, already up to date;
 HEAD equals upstream. No user-supplied session/account snapshot or model change
 in this message. No agent-initiated switch.
+
+### R238 recoverable sandbox manager preflight refusal
+
+The first exact caller command at clean HEAD 6625a894b3fd57f797241acd3e7c68aaa0b8c86a
+exited 1 with `Refusal: sd-bus operation failed: errno 1` after caller-observed
+0.049598098 s, before reservation, managed worker or numerical import. The
+fixed R237 directory/reservation is absent, so the allocation remains 0/1 spent.
+No preflight facts, resource snapshot or worker timing/counters exist.
+Inside the restricted sandbox, read-only `systemctl --user` also failed with
+Operation not permitted. Approved read-only host manager list/show succeeded:
+only three pre-existing failed units (R232, R235 and R226 host probe), each
+MainPID 0/empty ControlGroup; none references the R237 directory. The manager
+socket exists. This identifies a sandbox access error, not an experiment result.
+Preserved exact command/output/evidence in evidence/r238/prelaunch.json.
+Next within this same authorized attempt: publish this evidence to restore a
+clean source binding, then execute the unchanged caller outside the sandbox.
+The host manager read-only check tested the access remedy; no scientific or
+resource gate is changed. No new allocation or alternate directory.

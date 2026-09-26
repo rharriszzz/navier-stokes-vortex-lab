@@ -1,0 +1,27 @@
+{
+  "actual_exit_code": 1,
+  "attempts_spent": 0,
+  "boundary": "PRE_RESERVATION_MANAGER_PREFLIGHT",
+  "caller_stdout": {
+    "elapsed_after_caller_save": 0.04959809800493531,
+    "inner_status": null,
+    "reason": "Refusal: sd-bus operation failed: errno 1",
+    "run_directory": "/tmp/navier-poiseuille-r237-once",
+    "status": "INCOMPLETE"
+  },
+  "cause": "Sandbox denied connection to user manager sd-bus socket; host read-only manager check succeeds",
+  "command": [
+    "/tmp/navier-fenicsx-r229/bin/python",
+    "docs/realizability/evidence/r237/run_once.py",
+    "6625a894b3fd57f797241acd3e7c68aaa0b8c86a"
+  ],
+  "counter_gap": "No resource snapshot or manager counters for caller-only preflight; no worker scope existed",
+  "fixed_directory_absent": true,
+  "host_manager_check": "Approved read-only systemctl --user list/show succeeded: three pre-existing failed units only (R232, R235, R226 host probe); each MainPID 0 and empty ControlGroup; no unit references R237 directory",
+  "numerical_imports_before_failure": false,
+  "repair": "Run the unchanged source-bound caller outside sandbox after clean publication; no source/solver/gate change",
+  "request": "R238",
+  "reservation_absent": true,
+  "sandbox_manager_check": "systemctl --user list-units failed Operation not permitted inside sandbox",
+  "worker_started": false
+}
