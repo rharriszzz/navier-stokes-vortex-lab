@@ -8789,3 +8789,47 @@ R237 delivery efc9dbc verified by clean pull; R238 STARTED 6625a89 and
 prelaunch evidence cd3cc5e published. Completion prepared for scoped commit/
 push; final delivery hash/result belongs in Git/final response, no post-push edit.
 No user model/session switch or account snapshot was supplied in this turn.
+
+## R239 — 2026-09-26 — Continue numeric-pivot source review in this session
+
+**User wording (supplied terminal excerpt; account email redacted):**
+
+```text
+Worked for 7m 28s · done 1:37 PM ╭───────────────────────────────────────────────────────────────────────────────────────╮
+│  >_ OpenAI Codex (v0.155.1)                                                           │
+│                                                                                       │
+│ Visit https://chatgpt.com/codex/settings/usage for up-to-date                         │
+│ information on rate limits and credits                                                │
+│                                                                                       │
+│  Model:                       gpt-6-sol (reasoning high, summaries auto)              │
+│  Model provider:              openai                                                  │
+│  Directory:                   ~/git/navier-stokes-vortex-lab                          │
+│  Permissions:                 Workspace (Ask for approval)                            │
+│  Agents.md:                   AGENTS.md                                               │
+│  Account:                     [account email redacted] (Pro Lite)                     │
+│  Thread name:                 Review Codex session output                             │
+│  Collaboration mode:          Default                                                 │
+│  Session:                     01a0deb4-08c7-78e2-ab83-65111b56ad3d                    │
+│                                                                                       │
+│  Context window:              25% left (197K used / 258K)                             │
+│  Weekly limit:                [████████████████████] 98% left (resets 13:10 on 3 Oct) │
+│  Luna Reserve Weekly limit:   [████████████████████] 99% left (resets 10:18 on 3 Oct) │
+╰───────────────────────────────────────────────────────────────────────────────────────╯; gpt-6-sol high did not say to use /new, so continue
+```
+
+**Scope/status:** STARTED. Continue in the existing session as requested:
+review saved R238 numeric-pivot result and exact bordered mixed operator with
+import-free source/algebra analysis. Produce the smallest discriminating
+source/algebra check or precise blocker, publish scoped changes, then stop.
+No FEM/import/JIT/assembly/solve, live scope, solver/pivot-gate change or new
+allocation. All three numerical allocations remain spent 1/1.
+
+Preflight: rharris/daisy, PC/WSL, Linux 6.18.33.2-microsoft-standard-WSL2 x86_64,
+/home/rharris/git/navier-stokes-vortex-lab; clean main/origin/main equal at
+ce68c044681747a6728f38a8014d913ace1348d3 after required fast-forward pull,
+already up to date. Empty stashes, R238 completed, same owner, Mac released.
+Supplied snapshot: preceding completion 7m 28s / 1:37 PM, Codex v0.155.1,
+Sol/high, same session ID, context 25% (197K/258K), weekly 98%, Luna Reserve 99%.
+No /new, literal /status command, token totals, credit count or user model-change
+excerpt supplied. These are user-reported values, not independent/account or
+project-specific accounting. No agent-initiated model/session switch.

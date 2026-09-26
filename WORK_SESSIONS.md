@@ -1269,3 +1269,14 @@ Sol/high only for later separately admitted mechanical launch. PC retains
 ownership, Mac released. R237 delivery efc9dbc verified; R238 STARTED 6625a89
 and prelaunch evidence cd3cc5e published. Completion prepared for scoped
 publication; final delivery hash/result in Git/final response, no post-push edit.
+
+## R239 — Numeric zero-pivot and mixed-operator source review
+STARTED | 2026-09-26T17:41:10Z | PC/WSL daisy | released: no
+Identity: rharris; Linux 6.18.33.2-microsoft-standard-WSL2 x86_64; daisy;
+/home/rharris/git/navier-stokes-vortex-lab; clean main/origin/main equal at
+ce68c044681747a6728f38a8014d913ace1348d3 after required fast-forward pull;
+empty stashes, R238 completed, same owner, Mac released. User asks to continue
+in existing session despite supplied 25% context. Scope: import-free source/
+algebra review of numeric pivot, discriminating check or blocker, scoped
+publication and stop. No FEM/live scope/solver changes/new allocation; three
+prior numerical allocations remain spent 1/1.
