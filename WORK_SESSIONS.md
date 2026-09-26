@@ -1452,3 +1452,12 @@ before admission/execution. Official model high support rechecked; no model/
 session switch or /new needed. PC retains ownership; Mac released. R242 332d902
 verified by clean pull; R243 STARTED d74a670 published. Completion prepared for
 scoped publication; delivery hash/result in Git/final response, no post-push edit.
+
+## R244 — Prospective Poiseuille policy and both-degree validation
+STARTED | 2026-09-26T21:19:44Z | PC/WSL daisy | released: no
+Identity rharris/daisy, Linux 6.18.33.2-microsoft-standard-WSL2 x86_64;
+/home/rharris/git/navier-stokes-vortex-lab; clean main/origin/main at
+b8327dae01576b2650683b5d02bb9b08763ae1ea after required fast-forward pull,
+empty stashes, R243 completed, same owner, Mac released. Implement and test
+R243 policy/both-degree checks; publish recommendation, stop before admission/
+execution. All four allocations remain spent 1/1.
