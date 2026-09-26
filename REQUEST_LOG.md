@@ -9720,3 +9720,49 @@ Evidence: docs/realizability/ROTATION_INTEGRATION_R250.md and evidence/r250/{tes
 Changed files: rotation_manifest.py, future_rotation.json, rotation_driver.py, rotation_worker.py, test_rotation_integration.py, supervision.py, systemd_backend.py, R250 review and six evidence files, seven index/status pages and request/lifecycle/handoff. Checks: 93 full stdlib tests/import audit, saved R246 replay, original/hash/process audit, AST/JSON/local links, sequential request IDs, append-only logs and whitespace. Unresolved: real assembly zero forms and resource cost, separate admission/finite caller, convergence, R242 discrepancy cause, matrix rank and artifact-label origin.
 
 Next: Astra/high reviews the R250 source and R249 contract; publishes one fresh source/interpreter/artifact-bound rotation admission and finite caller or a precise blocker, then stops before numerical launch. Sol/high only for the fixed finite launch; Astra/high interprets result or revises scientific contract. Official Astra/high support searched/opened. No model/session switch by agent or /new. PC retains ownership; Mac released. R249 65dc366 verified by clean pull; R250 STARTED 5f81c6b published. Completion prepared for scoped publication; delivery hash/result in Git/final response, no post-push edit.
+
+## R251 — 2026-09-26 — Review rotation source and separate admission
+
+**User request (account email redacted):**
+
+```text
+╭──────────────────────────────────────────────╮
+│ >_ OpenAI Codex (v0.155.1)                   │
+│                                              │
+│ model:     gpt-6-sol high   /model to change │
+│ directory: ~/git/navier-stokes-vortex-lab    │
+╰──────────────────────────────────────────────╯
+
+  Tip: Use /statusline to configure which items appear in the status line.
+
+Token usage: total=2,181,655 input=1,934,314 (+ 48,941,184 cached) output=247,341 (reasoning 40,781)
+To continue this session, run codex resume, then select Review Codex session output (01a0deb4-08c7-78e2-ab83-
+65111b56ad3d)
+
+/status
+
+╭───────────────────────────────────────────────────────────────────────────────────────╮
+│  >_ OpenAI Codex (v0.155.1)                                                           │
+│                                                                                       │
+│ Visit https://chatgpt.com/codex/settings/usage for up-to-date                         │
+│ information on rate limits and credits                                                │
+│                                                                                       │
+│  Model:                       gpt-6-sol (reasoning high, summaries auto)              │
+│  Model provider:              openai                                                  │
+│  Directory:                   ~/git/navier-stokes-vortex-lab                          │
+│  Permissions:                 Workspace (Ask for approval)                            │
+│  Agents.md:                   AGENTS.md                                               │
+│  Account:                     [account email redacted] (Pro Lite)                         │
+│  Collaboration mode:          Default                                                 │
+│  Session:                     01a0dfdc-ebf7-7603-b3e4-94d4923fb845                    │
+│                                                                                       │
+│  Weekly limit:                [█████████████████░░░] 84% left (resets 13:10 on 3 Oct) │
+│  Luna Reserve Weekly limit:   [████████████████████] 99% left (resets 10:18 on 3 Oct) │
+╰───────────────────────────────────────────────────────────────────────────────────────╯
+
+• Model changed to gpt-6-astra high continue
+```
+
+**Scope/status:** STARTED. Review R250 rotation integration and the R249 contract; publish a separate one-use source/interpreter/artifact-bound admission with finite caller or a precise blocker, then stop before reservation, manager connection, numerical imports or launch. Continue authorizes scoped lifecycle and completion commits/pushes.
+
+Identity rharris/daisy, PC/WSL Linux 6.18.33.2-microsoft-standard-WSL2 x86_64; /home/rharris/git/navier-stokes-vortex-lab; clean main/origin/main equal at 698bd2ff9e3fc974a934af0fcea3182a7f1c1d4d after required fast-forward pull (already up to date), empty stashes. R250 completed, PC owner, Mac released. Supplied token totals accompany the resume reference to session 01a0deb4-08c7-78e2-ab83-65111b56ad3d; supplied /status identifies new session 01a0dfdc-ebf7-7603-b3e4-94d4923fb845, Sol/high before reported switch to Astra/high, weekly 84%, Luna Reserve 99%. No worked-for, literal /new, context remaining or credit count supplied. These are user-reported values; no private session inspection or account verification.
