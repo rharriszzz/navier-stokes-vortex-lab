@@ -8706,3 +8706,24 @@ fit is judgment, no account check or agent-initiated switch. R236 completion
 initially hit sandbox index.lock refusal; approved scoped Git commands succeeded.
 Completion prepared for scoped publication; final delivery hash/result belongs
 in Git/final response, no post-push edit.
+
+## R238 — 2026-09-26 — Continue one admitted R237 Poiseuille diagnostic fixture
+
+**User wording (supplied):** `continue`
+
+**Scope/status:** STARTED. Continue authorizes one R237 admitted n=2 Poiseuille
+execution, scoped commit/push and no other numerical workload. Bind the actual
+clean launch HEAD, reviewed 25-file R236 source inventory, pinned R229 interpreter,
+fixed `/tmp/navier-poiseuille-r237-once` and unchanged limits/gates. Preserve
+raw diagnostic/result, actual exit/cleanup, old/new spent states and stop. A
+proven caller/preflight error before reservation, managed worker or numerical
+import may be repaired under the session protocol after evidence/process checks
+and clean republication. Reservation or partial worker start spends 1/1 with no
+retry. R232 and R235 remain INCOMPLETE, spent 1/1.
+
+Preflight: rharris / PC-WSL daisy / Linux 6.18.33.2-microsoft-standard-WSL2
+x86_64, same checkout/owner, Mac released. Clean main/origin/main at
+efc9dbc6816c1c1d5096be1813d4f177e396f64a, empty stashes and completed R237
+lifecycle. Required clean fast-forward pull succeeded, already up to date;
+HEAD equals upstream. No user-supplied session/account snapshot or model change
+in this message. No agent-initiated switch.

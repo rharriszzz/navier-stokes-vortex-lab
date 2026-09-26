@@ -1218,3 +1218,14 @@ for numerical interpretation or changed scientific/admission decisions. No new
 chat needed. R236 delivery 739eff8 verified; R237 STARTED d5872eb published.
 Completion prepared for scoped publication; final delivery hash/result belongs
 in Git/final response, no post-push edit. PC retains ownership, Mac released.
+
+## R238 — One admitted instrumented Poiseuille fixture
+STARTED | 2026-09-26T17:30:45Z | PC/WSL daisy | released: no
+Identity: rharris; Linux 6.18.33.2-microsoft-standard-WSL2 x86_64; daisy;
+/home/rharris/git/navier-stokes-vortex-lab; clean main/origin/main equal at
+efc9dbc6816c1c1d5096be1813d4f177e396f64a after required fast-forward
+pull; empty stashes, same owner, Mac released, R237 completed. Continue
+allows one bounded R237 n=2 fixture and scoped publication. Fixed directory
+/tmp/navier-poiseuille-r237-once, currently 0/1 spent pending reservation or
+partial worker start. Older R232/R235 charges stay spent 1/1. Preserve all
+caps/gates, actual exit/cleanup and raw diagnostic; no retry after spend.
