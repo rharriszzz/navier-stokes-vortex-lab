@@ -9,8 +9,10 @@ FFCx gate and caps remain unchanged. R229's setup resource refusal (303
 memory.max events, no OOM/kill) remains unchanged. Full convergence/tank/B2
 execution remains unadmitted. [R233](docs/realizability/POISEUILLE_SPARSE_REVIEW_R233.md)
 repairs the demonstrated loss of structural zero diagonals; 59 standard-library
-tests pass without numerical imports. No new attempt is admitted. Next is a
-separate admission decision; follow the [handoff task](SESSION_HANDOFF.md#next-task).
+tests pass without numerical imports. [R234](docs/realizability/POISEUILLE_ADMISSION_R234.md)
+admits one new later fixture, 0/1 spent, with a prepared caller and fresh fixed
+directory; the old attempt remains spent 1/1. Follow the
+[handoff task](SESSION_HANDOFF.md#next-task) for Sol/high execution after Continue.
 No tank/hardware route or feasible contraction range is established.
 
 R188 priority update (2026-09-22): establish measurable essential dynamical

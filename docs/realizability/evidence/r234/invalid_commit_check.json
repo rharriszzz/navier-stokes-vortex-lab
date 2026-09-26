@@ -1,0 +1,18 @@
+{
+  "command": [
+    "/home/rharris/.local/bin/python3.12",
+    "/home/rharris/git/navier-stokes-vortex-lab/docs/realizability/evidence/r234/run_once.py",
+    "0000000000000000000000000000000000000000"
+  ],
+  "cwd": "/tmp",
+  "returncode": 1,
+  "scope": "Unmocked CLI refusal before manager/reservation; not a numerical attempt",
+  "stderr": "",
+  "stdout": {
+    "elapsed_after_caller_save": 0.01672616199357435,
+    "inner_status": null,
+    "reason": "RuntimeError: launch checkout is not the expected clean commit",
+    "run_directory": "/tmp/navier-poiseuille-r234-once",
+    "status": "INCOMPLETE"
+  }
+}

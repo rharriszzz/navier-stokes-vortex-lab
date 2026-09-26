@@ -1081,3 +1081,27 @@ environment/containment evidence; make separate go/no-go for one later bounded
 n=2 fixture with a fresh directory and source/interpreter binding. Stop before
 reservation, real numerical imports, FEM or any live task scope. R232 remains
 INCOMPLETE and spent 1/1. Supplied snapshot recorded with account redacted.
+
+### R234 completion
+COMPLETED | 2026-09-26T17:00:40Z | PC/WSL daisy | released: no
+Admitted one NEW later bounded n=2 Poiseuille fixture on R233 repaired source,
+0/1 spent, fixed /tmp/navier-poiseuille-r234-once. Prepared allocation/caller
+with unchanged caps/gates, exact R233 inventory/R229 interpreter and future
+clean commit binding. R232 remains INCOMPLETE/spent 1/1; R229 setup refusal
+retained. No reservation, numerical imports or live scope. Caller path/timer/
+source-directory refusal tests passed; direct invalid-commit CLI refused as
+expected. Checks: 25 source/two prior test-output hashes, 17 R229 artifacts,
+ten R232 raw/original files, interpreter/history, old PID/cgroup absent and
+new directory absent, two ASTs, three JSON files, 181 local links, 234 IDs,
+append-only logs, historical caller/ledgers unchanged and Git whitespace.
+Unchanged R233 59-test/R226 host evidence reused, not rerun. Skips: real FEM,
+manager/live probes, installation/full environment scan, full suite/rotation/
+tank/B2, physical/render and Mac work. Actual pivots/rank/accuracy/quadrature/
+footprint remain unknown. Files: R234 admission/five evidence-caller files,
+prototype README/B1_SETUP, four overviews, STATUS and request/lifecycle/handoff.
+Evidence: docs/realizability/POISEUILLE_ADMISSION_R234.md and evidence/r234/.
+Next: Sol/high executes prepared caller once after Continue, records result/
+spent state/cleanup and stops; no /new needed. Astra/high afterward for result
+review or changed admission/science. R233 delivery 15c62dd verified; STARTED
+6cc9e88 published. Scoped completion publication follows; final delivery in
+Git/final response, no post-push edit. PC retains ownership, Mac released.

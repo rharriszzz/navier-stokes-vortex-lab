@@ -1,7 +1,17 @@
 # Current session handoff
 
-Last updated 2026-09-26 (America/New_York) for R233.
+Last updated 2026-09-26 (America/New_York) for R234.
 **PC/WSL daisy owns the repository.** No transfer; Mac remains released.
+**R234 admits one NEW later bounded n=2 Poiseuille fixture, 0/1 spent.** The
+[admission contract](docs/realizability/POISEUILLE_ADMISSION_R234.md) and
+[allocation/caller](docs/realizability/evidence/r234/) fix the new directory at
+`/tmp/navier-poiseuille-r234-once`, preserve every numerical/resource gate and
+bind the R233 repaired source plus R229 interpreter to a future clean launch
+commit. No reservation, numerical import or live scope occurred in this review.
+Caller path/timer/refusal checks pass; all 25 reviewed source hashes, retained
+evidence and interpreter/history hashes match. R233's 59-test result is reused
+because the reviewed solver/test source is unchanged.
+
 **R233 demonstrates and repairs the CSR structural-diagonal defect behind
 R232's PETSc symbolic-LU refusal.** The [source review](docs/realizability/POISEUILLE_SPARSE_REVIEW_R233.md)
 traces omitted scalar diagonals and removed zero pressure diagonals through
@@ -18,13 +28,31 @@ absent. No numerical report or resource snapshot exists. R229's 303-event
 setup refusal remains false. No FEM, live scope, install or new allocation
 occurred in R233; full suite/tank/B2 work remains unadmitted.
 
-**Next: Astra/high makes the separate admission decision for one later bounded
-n=2 Poiseuille fixture using the repaired source; stop before execution.**
-No `/new` is needed for this directly connected review; next prompt **Continue**.
-Any later allocation needs fresh binding and a new exclusive directory, with
-all caps/gates preserved; never reuse the R232 directory or reset its charge.
-R232 completion 7c41b80 was verified by clean pull; R233 STARTED c08eb25 is
-published. Completion delivery belongs in Git/final response, no post-push edit.
+**Next: Sol/high executes the prepared R234 caller exactly once after Continue,
+preserves result/spent state/cleanup and publishes, then stops.** No `/new` is
+needed for this connected execution step. The new directory is currently absent;
+never reuse the old `/tmp/navier-poiseuille-r230-once` or reset its spent 1/1
+charge. R233 completion 15c62dd was verified by clean pull; R234 STARTED 6cc9e88
+is published. Completion delivery belongs in Git/final response, no post-push edit.
+
+R234 supplied snapshot: 9m 47s / 12:52 PM completion; Codex v0.155.1, Astra/high,
+thread Review Codex task output, session 01a0de98-b2e9-74c1-8c8f-97150fb60d8c,
+54% context left (125K used / 258K), weekly 94% (11:23 on Oct 3), Luna Reserve
+99% (10:18 on Oct 3). No `/new`, literal `/status` command, token-usage or
+credit-count excerpt supplied. Account email is redacted in REQUEST_LOG.md.
+These are user-reported snapshots, not independent/project-specific accounting.
+No agent-initiated model/session switch occurred.
+
+R234 changed its admission and five evidence/caller files, prototype README,
+B1_SETUP, four track overviews, STATUS and request/lifecycle/handoff records.
+Checks: 25 source/two R233 test-output hashes, 17 R229 artifacts, ten R232 raw/
+original files, interpreter/history hashes, old PID/cgroup absent/new directory
+absent, caller path/timer/refusal checks and direct invalid-commit CLI, two ASTs,
+three JSON files, 181 local links, 234 unique IDs, append-only logs and Git
+whitespace. The unchanged R233 59-test/R226 host evidence is reused, not rerun.
+Skipped FEM/numerical imports, manager/live scope, installation/full environment
+scan, suite/rotation/tank/B2, physical/render and Mac work. Numerical pivots,
+rank/accuracy/quadrature and resource footprint remain unknown.
 
 R233 supplied snapshot: 17m 32s / 12:31 PM completion; 276,343 total tokens
 (212,003 input, 16,967,168 cached, 64,340 output, 20,057 reasoning), preceding
@@ -262,12 +290,12 @@ and physical-work limits remain unchanged.
 | Owner | PC/WSL `daisy`; Mac `fire.lan` released after published R161 handoff and R162 receipt. |
 | Checkout | `/home/rharris/git/navier-stokes-vortex-lab`. |
 | Branch/upstream | `main` / `origin/main` |
-| Starting state | R233 clean same-owner entry at 7c41b80, equal to origin/main after required fast-forward pull; rharris/daisy, empty stashes, no conflicting open session. |
+| Starting state | R234 same-owner clean entry at 15c62dd equal to origin/main after required fast-forward pull; rharris/daisy, empty stashes, no conflicting open session. |
 | Interpreter | /tmp/navier-fenicsx-r229/bin/python verified as 3.12.13 with -I -S; exact environment artifacts verified, setup memory-event predicate refused. Project Python remains 3.12.14. Old /tmp/navier-fenicsx is still partial. |
 | Other owner/process | Mac `fire.lan` released in the published R161 handoff. Local Git cannot inspect another checkout's unpublished state. |
-| Task processes | R233 read-only checks confirm R232 worker PID 144212 and cgroup absent; fixed directory/reservation and ten raw originals retained. No R233 worker launched. R232 allowance spent 1/1. |
+| Task processes | R234 read-only checks confirm R232 PID 144212/cgroup absent; old reservation/raw originals retained. New /tmp/navier-poiseuille-r234-once absent; no R234 worker/reservation. Old allowance spent 1/1; new allowance 0/1 spent. |
 | Symbolic environment | `/tmp/navier-r183-sympy/bin/python`, Python 3.12.14, SymPy 1.14.0, mpmath 1.3.0; recreate using `requirements-symbolic.txt` if missing. Existing environments unchanged. |
-| Delivery state | R232 completion 7c41b80 verified by clean pull; R233 STARTED c08eb25 published. R233 repair/review/completion prepared for scoped publication; final delivery in Git/final response. PC retains ownership. |
+| Delivery state | R233 completion 15c62dd verified by clean pull; R234 STARTED 6cc9e88 published. R234 admission/caller/completion prepared for scoped publication; final delivery in Git/final response. PC retains ownership. |
 
 ## Current result and limits
 
@@ -398,45 +426,56 @@ agent-side POV-Ray backtraces are unavailable.
 
 ## Next task
 
-**GPT-6 Astra / high / PC-WSL daisy: make the separate go/no-go admission
-decision for one later bounded n=2 Poiseuille fixture with the R233 CSR repair.
-Stop before execution.** Continue in this session; no `/new` is needed for this
-connected decision. The next prompt is **Continue**. Official
-[OpenAI Docs](https://developers.openai.com/api/docs/models/gpt-6-astra) was
-searched and opened and confirms high support; task fit is judgment, not an
-account availability check. No agent model/session switch occurred.
+**GPT-6 Sol / high / PC-WSL daisy: execute exactly one admitted R234 n=2
+Poiseuille fixture using the prepared caller; persist the result and stop.**
+No `/new` needed. Select Sol/high and send **Continue**. The source/admission
+choice is complete; this is mechanical execution. Return to Astra/high for
+numerical interpretation or changed scientific/admission decisions. Official
+[OpenAI Docs](https://developers.openai.com/api/docs/models/gpt-6-sol) was
+searched/opened and confirms high support; fit is judgment, not an account check.
 
-Read the [R233 source review](docs/realizability/POISEUILLE_SPARSE_REVIEW_R233.md)
-and [checks/source inventory](docs/realizability/evidence/r233/checks.json),
-[R232 spent result](docs/realizability/POISEUILLE_RESULT_R232.md),
-[R230 historical admission](docs/realizability/POISEUILLE_ADMISSION_R230.md),
-R225/R226 reviews as needed, frozen manifest and actual caller. The R233 fix
-changes only zero-diagonal storage in executable source; pressure/gauge/flux
-formulation, row scaling, fixture, pins and numerical/resource gates are intact.
-Old R230 hashes and R231 caller remain unchanged and will reject this new source.
+Read the [R234 contract](docs/realizability/POISEUILLE_ADMISSION_R234.md),
+[allocation](docs/realizability/evidence/r234/allocation.json),
+[caller/checks](docs/realizability/evidence/r234/),
+[R233 source review](docs/realizability/POISEUILLE_SPARSE_REVIEW_R233.md) and
+[R232 spent result](docs/realizability/POISEUILLE_RESULT_R232.md).
+The new allocation is 0/1 spent at R234 completion; the old R230/R232 allocation
+is permanently spent 1/1. No numerical or live workload ran in R234.
 
-1. Follow the clean Continue protocol, ownership and start publication. Preserve
-   the R232 raw evidence and spent 1/1 charge; verify retained reservation and
-   absent PID/cgroup without starting a numerical or benign workload.
-2. Decide whether the demonstrated repair and existing environment/containment
-   evidence justify one separately allocated later fixture. Account for the
-   unchanged R229 resource refusal and untested numerical factorization,
-   actual rank/conditioning, accuracy, quadrature and footprint. No threshold
-   relaxation, solver fallback, package substitution or setup rerun by default.
-3. If admitted, define a new exclusive directory and source/interpreter binding
-   against the R233 inventory and a future clean launch commit. Retain the
-   180 s outer / 149+1 s worker, 1536 MiB/no swap/32 tasks, one rank/thread,
-   20,000 mixed-DOF ceiling and all existing scientific/resource gates. Keep
-   pre-reservation recovery distinct from a spent attempt. Never rewrite old
-   ledgers, reuse `/tmp/navier-poiseuille-r230-once`, or launch in this review.
-4. Publish a concrete admission contract or evidence-backed blocker, with one
-   next task. Recommend Sol/high only for a later mechanical launch if admitted;
-   retain Astra/high for changed numerical/scientific/admission decisions.
+1. Follow normal clean Continue ownership/synchronization/start publication.
+   Check request/lifecycle records for any later reservation/spent state;
+   directory absence alone does not renew an allowance. PC retains ownership,
+   Mac released. Preserve `/tmp/navier-poiseuille-r230-once` and its raw evidence.
+2. Verify every hash in R233's `source_sha256` inventory, R234's caller hash
+   from allocation.json and the frozen manifest. Use only
+   `/tmp/navier-fenicsx-r229/bin/python`, resolved SHA-256
+   `5f083df36ec986d5cd13d2549ca6cfe1ddaf658509f9e419b454b2fb375c27a3`.
+   No pin substitution, package install, source repair after reservation,
+   standalone numerical imports or prewarming.
+3. After publishing a clean STARTED commit, obtain its exact 40-character HEAD
+   and run `docs/realizability/evidence/r234/run_once.py EXACT_LAUNCH_COMMIT`
+   with that pinned interpreter. The caller refreshes host/manager preflight
+   inside its outer timer, verifies the clean source and interpreter, and
+   reserves only `/tmp/navier-poiseuille-r234-once`. Keep source unchanged while
+   running. Use the existing reviewed SystemdBackend, with 180 s outer,
+   149+1 s worker expiry, 1536 MiB/no swap/32 tasks, one rank/thread and at most
+   20,000 mixed DOFs. All numerical/resource gates remain mandatory.
+4. Reservation/directory creation or partial worker start spends the new 1/1
+   allowance, including an incomplete result. Persist outputs and actual
+   exit/cleanup, missing-counter/timing gaps and spent state, then stop without
+   another numerical command or alternate directory. Do not relax gates.
+   A proven caller/preflight error before reservation, worker and numerical
+   import is recoverable: preserve it, verify no directory/new manager process,
+   fix/test without FEM, republish clean binding and continue the same unspent
+   allowance. Uncertain process state stops for review.
+5. Publish raw result/checks, updated status and handoff, completion record and
+   one next task. Recommend Astra/high to assess the actual numerical result
+   or failure. A pass verifies only this fixture; convergence, full suite,
+   rotation, tank/B2, physical and rendering work remain unadmitted.
 
-Completion: reviewed go/no-go contract with evidence and unchanged prior charges,
-then stop before reservation/FEM/JIT/solve or any live workload. No new attempt
-is granted by R233 itself. Full suite, rotation, tank/B2, physical and rendering
-work remain unadmitted; Mac remains released.
+Completion: one persisted PASS or explicit INCOMPLETE outcome with actual
+exit/confirmed cleanup and honest missing-evidence accounting, old/new charges
+preserved, scoped commit/push, then stop. No automatic second numerical attempt.
 
 ### Historical R230 single-fixture execution task (R232 spent)
 

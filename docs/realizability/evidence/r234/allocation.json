@@ -1,0 +1,42 @@
+{
+  "attempts_granted": 1,
+  "attempts_spent_at_review": 0,
+  "caller_sha256": "bd0ca93f0166eaa609dfc566a7daa20ea3c2f508de85d9dddf1d584d92d21d45",
+  "consumption_rule": "Reservation/directory creation or partial worker start spends the new allowance, including incomplete outcomes; no retry or alternate directory",
+  "executable_sha256": "5f083df36ec986d5cd13d2549ca6cfe1ddaf658509f9e419b454b2fb375c27a3",
+  "interpreter": "/tmp/navier-fenicsx-r229/bin/python",
+  "limits": {
+    "finish_seconds": 15,
+    "independent_stop_grace_seconds": 1,
+    "independent_worker_runtime_seconds": 149,
+    "memory_max_events": 0,
+    "mixed_dofs_max": 20000,
+    "mpi_ranks": 1,
+    "observed_total_seconds": 180,
+    "oom_events": 0,
+    "oom_kill_events": 0,
+    "pids_max_events": 0,
+    "setup_seconds": 15,
+    "swap_mib": 0,
+    "tasks": 32,
+    "threads_per_library": 1,
+    "whole_task_memory_mib": 1536,
+    "work_seconds": 150
+  },
+  "manifest_sha256": "7a8bda917e6b46994ad24c68e0b6c6013b7d6776f90c86a6de763f31f52fa558",
+  "pre_reservation_recovery": "Only demonstrated caller/preflight error before reservation, worker or numerical import: preserve failure and timing gaps, verify absent directory and no new manager process, fix/test, republish clean source binding, continue same unspent allocation. Uncertain state stops for review.",
+  "prior_allocation": {
+    "granted": 1,
+    "outcome": "INCOMPLETE",
+    "request": "R230/R231/R232",
+    "run_directory": "/tmp/navier-poiseuille-r230-once",
+    "spent": 1
+  },
+  "procedure": "run_once.py; supervised SystemdBackend and supervise_once; no standalone numerical import or prewarming",
+  "request": "R234",
+  "run_directory": "/tmp/navier-poiseuille-r234-once",
+  "scope": "One NEW later n=2 Poiseuille fixture on R233 repaired source; execution requires later Continue",
+  "source_commit_rule": "Bind actual clean launch HEAD in admission/reservation; all R233 source_sha256 values must match; historical ledgers unchanged",
+  "source_inventory": "docs/realizability/evidence/r233/checks.json",
+  "state_before_launch": "ADMITTED_FOR_LATER_EXECUTION; no R234 reservation or worker in this review"
+}

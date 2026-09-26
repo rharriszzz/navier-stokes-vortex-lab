@@ -14,11 +14,14 @@ module imports this directory; no dependency pins changed.
 Current result: [R232](../../docs/realizability/POISEUILLE_RESULT_R232.md)
 used that allocation once. The real worker reached PETSc symbolic LU and exited
 1 with missing diagonal entries; no numerical report or resource snapshot was
-produced. The allocation is spent, cleanup is empty, and no retry is admitted.
+produced. That allocation is spent, cleanup is empty, and its allowance cannot be reused.
 The R231 prelaunch import error was corrected before this attempt.
 [R233](../../docs/realizability/POISEUILLE_SPARSE_REVIEW_R233.md) demonstrates and
 repairs CSR removal of structural zero pressure/scalar diagonals. No numerical
-rerun or new allocation; a separate admission decision is the next task.
+rerun occurred in R233. [R234 admission](../../docs/realizability/POISEUILLE_ADMISSION_R234.md)
+grants one new later n=2 fixture, 0/1 spent, in a fresh fixed directory with a
+prepared caller. The old allocation stays spent 1/1; next is bounded execution
+after Continue through the [handoff task](../../SESSION_HANDOFF.md#next-task).
 
 - `polynomial.py`, `fixtures.py`: exact rational manufactured fields and
   independent Poiseuille/rigid-rotation oracles.

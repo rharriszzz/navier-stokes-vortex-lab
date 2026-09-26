@@ -8351,3 +8351,51 @@ x86_64; same checkout and owner, Mac released. Clean main/origin/main, empty
 stashes; required fast-forward pull already up to date at
 15c62dd35e51f6d3bfa6bbc05e0bf7915e612d32, 0/0 divergence. R233 completion
 published, no open lifecycle record. No machine/model/session switch.
+
+### R234 outcome — one new later fixture admitted, no execution
+
+GO for one separate n=2 Poiseuille allocation on R233's repaired source,
+0/1 spent, fixed at /tmp/navier-poiseuille-r234-once. R232 remains INCOMPLETE
+and spent 1/1 in its original directory. The demonstrated structural-diagonal
+repair preserves the operator/gauge/flux/lift and every numerical/resource
+gate; this justifies one bounded later measurement, without predicting numeric
+pivots, rank, accuracy, quadrature or footprint. R229's setup resource refusal
+(303 memory.max events) remains false. No reservation, FEM or live scope ran.
+
+The new R234 caller changes only the corrected historical caller's description,
+directory, inventory reference and owner label. Its allocation binds R233's
+25-file source inventory, exact R229 interpreter SHA-256, a future actual clean
+launch HEAD and the unchanged 180 s / 149+1 s / 1536 MiB / no swap / 32 tasks /
+one rank-thread / 20,000 mixed-DOF contract. The old caller/ledgers are unchanged.
+Any reservation/directory creation or partial worker start spends the allowance;
+no retry/alternate directory after that point. The demonstrated pre-reservation
+caller-error recovery rule is retained, requiring preserved evidence, absent
+directory/no new manager process, tested repair and clean republication.
+
+Checks: all 25 R233 source hashes and two test-output hashes; 17 R229 artifact
+hashes; ten R232 raw hashes and local originals; interpreter binary and current
+conda history hashes; old reservation present, old PID/cgroup absent and new
+directory absent. New caller regression passed outside checkout with timer
+active before project imports/preflight; changed-source/existing-directory/
+dangling-symlink cases refused before manager/reservation. Direct CLI with an
+invalid commit from /tmp exited 1 with the expected refusal, caller-observed
+0.016726162 s; this intentional test is not a numerical attempt. Two new ASTs,
+three JSON files, 181 local links, 234 unique IDs, append-only logs, unchanged
+historical caller/allocation/ledgers and Git whitespace checked.
+R233's 59-test suite and R226 benign host results reused by unchanged hashes;
+not rerun. Skipped numerical imports/JIT/mesh/solve, manager connection/live
+scope, installs, new full environment scan, suite/rotation/tank/B2, physical/
+render work, Mac transfer and account access. No model/session switch.
+
+Files: POISEUILLE_ADMISSION_R234.md; evidence/r234/{allocation.json,run_once.py,
+check_caller.py,invalid_commit_check.json,checks.json}; prototype README/B1_SETUP;
+four track overviews; STATUS, SESSION_HANDOFF, REQUEST_LOG and WORK_SESSIONS.
+R233 completion 15c62dd verified by clean pull; R234 STARTED 6cc9e88 published.
+Completion prepared for scoped publication; final delivery hash/result belongs
+in Git/final response, no post-push edit. PC retains ownership, Mac released.
+
+Next: Sol/high executes the prepared caller once after Continue, preserves the
+raw result, actual exit/cleanup and spent state, publishes and stops. No /new
+needed for this connected execution. Recommend Astra/high afterward for result
+interpretation or changed scientific/admission choices. Official OpenAI Docs
+was searched/opened for Sol/high support; task fit is judgment, no account check.
