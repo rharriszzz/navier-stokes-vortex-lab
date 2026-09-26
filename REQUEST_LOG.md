@@ -8864,3 +8864,48 @@ no /new or model switch required/performed. PC retains ownership, Mac released.
 R238 ce68c04 verified by clean pull; R239 STARTED 4d5acd6 published. Completion
 prepared for scoped commit/push; delivery hash/result in Git/final response,
 with no post-push log edit.
+
+## R240 — 2026-09-26 — Continue serial SuperLU backend review
+
+**User wording (supplied terminal excerpt; account email redacted):**
+
+```text
+Worked for 11m 15s · done 1:50 PM  ╭───────────────────────────────────────────────────────────────────────────────────────╮
+│  >_ OpenAI Codex (v0.155.1)                                                           │
+│                                                                                       │
+│ Visit https://chatgpt.com/codex/settings/usage for up-to-date                         │
+│ information on rate limits and credits                                                │
+│                                                                                       │
+│  Model:                       gpt-6-astra (reasoning high, summaries auto)            │
+│  Model provider:              openai                                                  │
+│  Directory:                   ~/git/navier-stokes-vortex-lab                          │
+│  Permissions:                 Workspace (Ask for approval)                            │
+│  Agents.md:                   AGENTS.md                                               │
+│  Account:                     [account email redacted] (Pro Lite)                     │
+│  Thread name:                 Review Codex session output                             │
+│  Collaboration mode:          Default                                                 │
+│  Session:                     01a0deb4-08c7-78e2-ab83-65111b56ad3d                    │
+│                                                                                       │
+│  Context window:              82% left (56.9K used / 258K)                            │
+│  Weekly limit:                [███████████████████░] 96% left (resets 13:10 on 3 Oct) │
+│  Luna Reserve Weekly limit:   [████████████████████] 99% left (resets 10:18 on 3 Oct) │
+╰───────────────────────────────────────────────────────────────────────────────────────╯ continue
+```
+
+**Scope/status:** STARTED. Follow R239 next task: import-free scientific
+review of explicit serial SuperLU controls; minimal source implementation and
+focused mocked checks if justified, otherwise precise blocker. Publish and
+stop before numerical admission/import/JIT/assembly/solve/live manager work.
+No new allocation; R232/R235/R238 remain spent 1/1. Continue authorizes scoped
+start/completion commits and pushes under SESSION_PROTOCOL.md.
+
+Preflight: rharris/daisy, PC/WSL Linux 6.18.33.2-microsoft-standard-WSL2 x86_64,
+/home/rharris/git/navier-stokes-vortex-lab; clean main/origin/main equal at
+5ed9253f77d627c1c951f2886a6f7e00aea1af60, empty stashes, R239 completed,
+PC retains ownership, Mac released. Sandbox pull could not write FETCH_HEAD;
+approved pull --ff-only --no-rebase --no-autostash succeeded, already up to date.
+Supplied snapshot: completion 11m 15s / 1:50 PM, Codex v0.155.1, Astra/high,
+existing session, context 82% (56.9K/258K), weekly 96%, Luna Reserve 99%.
+No /new, literal /status, token totals, credit count or model-change command
+supplied. Values are user reported, not independently verified accounting.
+No agent-initiated model/session switch.

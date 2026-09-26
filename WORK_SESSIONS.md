@@ -1299,3 +1299,13 @@ only if justified, otherwise blocker; stop before new numerical admission.
 No /new needed, no model/session switch. PC retains ownership; Mac released.
 R238 ce68c04 verified; R239 STARTED 4d5acd6 published. Completion prepared for
 scoped publication; final delivery hash/result in Git/final response.
+
+## R240 — Serial SuperLU backend scientific/source review
+STARTED | 2026-09-26T18:13:19Z | PC/WSL daisy | released: no
+Identity: rharris; Linux 6.18.33.2-microsoft-standard-WSL2 x86_64; daisy;
+/home/rharris/git/navier-stokes-vortex-lab; clean main/origin/main at
+5ed9253f77d627c1c951f2886a6f7e00aea1af60 after required fast-forward pull;
+empty stashes, R239 completed, same owner, Mac released. Review serial SuperLU
+controls, minimal source/tests if justified, otherwise blocker; scoped publish
+and stop before numerical admission or execution. Three prior allocations
+remain spent 1/1. No new allocation or live scope.
