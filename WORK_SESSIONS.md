@@ -920,3 +920,13 @@ Next: Astra/high environment/resource/FFCx admission review; no reinstall/FEM.
 Recommend /new now, retain Astra/high, then Continue. STARTED e4cb868 and source
 c38a668 published; final scoped commit/push follows. Delivery result in Git/final
 response, no post-push edit. Mac remains released.
+
+## R230 — Environment/version admission review
+STARTED | 2026-09-26T15:47:45.611422+00:00 | PC/WSL daisy | released: no
+Identity: rharris; Linux 6.18.33.2-microsoft-standard-WSL2 x86_64;
+/home/rharris/git/navier-stokes-vortex-lab; main/origin/main clean and equal at
+2943a8ad684f875c5f50f94b7747901a1d181466 after required fast-forward pull;
+empty stashes, same owner, Mac released, no conflicting open record.
+Continue authorizes scoped publication. Review existing recovery and resource
+refusal; fix/test artifact-bound FFCx handling; explicit one-fixture admission
+or precise refusal. Stop before reinstall, numerical imports or FEM execution.

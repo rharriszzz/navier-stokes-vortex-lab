@@ -7891,3 +7891,53 @@ Staged whitespace flagged one final blank line in raw R229 install.stderr.
 Preserve its byte-exact captured contents and ledger hash. The scoped staged
 whitespace check excludes only that raw evidence file; source/document checks
 remain required. No evidence normalization or success-predicate waiver.
+
+## R230 — 2026-09-26 — Continue environment/version admission review
+
+**User wording (account address redacted; supplied text retained):**
+
+```text
+Worked for 13m 26s · done 11:45 AM ╭────────────────────────────────────────────────╮
+│ >_ OpenAI Codex (v0.155.1)                     │
+│                                                │
+│ model:     gpt-6-astra high   /model to change │
+│ directory: ~/git/navier-stokes-vortex-lab      │
+╰────────────────────────────────────────────────╯
+
+  Tip: New Use /fast to enable our fastest inference with increased plan usage.
+
+Token usage: total=938,400 input=831,406 (+ 17,031,424 cached) output=106,994 (reasoning 23,518)
+To continue this session, run codex resume, then select Summarize Codex session (01a0cbe6-635a-7761-a6b1-454b78e9b316)
+
+/status
+
+╭───────────────────────────────────────────────────────────────────────────────────────╮
+│  >_ OpenAI Codex (v0.155.1)                                                           │
+│                                                                                       │
+│ Visit https://chatgpt.com/codex/settings/usage for up-to-date                         │
+│ information on rate limits and credits                                                │
+│                                                                                       │
+│  Model:                       gpt-6-astra (reasoning high, summaries auto)            │
+│  Model provider:              openai                                                  │
+│  Directory:                   ~/git/navier-stokes-vortex-lab                          │
+│  Permissions:                 Workspace (Ask for approval)                            │
+│  Agents.md:                   AGENTS.md                                               │
+│  Account:                     [email redacted] (Pro Lite)                            │
+│  Collaboration mode:          Default                                                 │
+│  Session:                     01a0de65-6733-7371-9a22-d258ffe15779                    │
+│                                                                                       │
+│  Weekly limit:                [████████████████████] 98% left (resets 11:23 on 3 Oct) │
+│  Luna Reserve Weekly limit:   [████████████████████] 99% left (resets 10:18 on 3 Oct) │
+╰───────────────────────────────────────────────────────────────────────────────────────╯ continue
+```
+
+**Scope/status:** STARTED. User-reported completion/token snapshot belongs to
+the supplied resume session; status identifies a different current session.
+No /new excerpt, context percentage or credit count supplied; no private session
+inspection or project-specific usage inference. Continue authorizes scoped
+commit/push. Clean required fast-forward pull retained main/origin/main at
+2943a8ad684f875c5f50f94b7747901a1d181466; empty stashes, rharris / Linux x86_64 /
+PC-WSL daisy, Mac released, no conflicting open lifecycle record.
+Bounded task: review R229 environment/resource evidence, implement and test exact
+FFCx artifact/runtime handling, decide later one-fixture admission. No reinstall,
+numerical imports or FEM execution; preserve all caps, charges and prior refusal.
