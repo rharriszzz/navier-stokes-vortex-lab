@@ -1,0 +1,19 @@
+{
+  "append_only_logs": true,
+  "ast_files": 1,
+  "attempts_granted": 0,
+  "audit": "audit.json",
+  "historical_evidence_unchanged": true,
+  "json_files_parsed_before_this_record": 1,
+  "local_link_targets_checked": 253,
+  "official_sources": [
+    "https://docs.fenicsproject.org/dolfinx/v0.10.0.post0/python/_modules/dolfinx/fem/forms.html",
+    "https://docs.fenicsproject.org/dolfinx/v0.10.0/python/generated/dolfinx.fem.html",
+    "https://developers.openai.com/api/docs/models/gpt-6-sol"
+  ],
+  "planned_next_task": "Sol/high source integration and fake tests; stop for Astra/high admission review",
+  "runtime_tests": "R248 85 passing tests reused; no regression rerun on unchanged runtime",
+  "source_files_unchanged": 31,
+  "status": "REVIEW_COMPLETE_NO_RUNTIME_IMPLEMENTATION",
+  "unique_sequential_requests": 249
+}

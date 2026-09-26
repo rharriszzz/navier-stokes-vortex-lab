@@ -1,12 +1,11 @@
 # B1 solver environment
 
-[R248 implementation](../../docs/realizability/ROTATION_ORACLE_IMPLEMENTATION_R248.md)
-adds injected exact-field rotation forms and a strict pure report validator.
-All 85 standard-library tests pass with no numerical modules loaded. No FEM
-assembly, new admission or execution occurred. All five allocations remain
-spent; R246 Poiseuille stays PASS and R242 stays INCOMPLETE. Follow the
-[current task](../../SESSION_HANDOFF.md#next-task) for Astra/high integration
-review.
+[R249 integration review](../../docs/realizability/ROTATION_INTEGRATION_REVIEW_R249.md) fixes the separate rotation
+manifest/worker/report contract and preserves the shared containment lifecycle.
+Zero-form API risk is explicit; unsupported forms must refuse. No runtime source
+or numerical workload changed. All five allocations remain spent; R246 stays
+PASS and R242 INCOMPLETE. Follow the [current task](../../SESSION_HANDOFF.md#next-task)
+for Sol/high source integration and fake tests, then Astra/high admission review.
 
 Historical PC status: [R232's one-use Poiseuille result](POISEUILLE_RESULT_R232.md)
 is INCOMPLETE at PETSc symbolic LU, and the single numerical allocation is

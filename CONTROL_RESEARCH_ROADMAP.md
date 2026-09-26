@@ -1,12 +1,11 @@
 # Control Research Roadmap
 
-[R248 implementation](docs/realizability/ROTATION_ORACLE_IMPLEMENTATION_R248.md)
-adds injected exact-field rotation forms and a strict pure report validator.
-All 85 standard-library tests pass with no numerical modules loaded. No FEM
-assembly, new admission or execution occurred. All five allocations remain
-spent; R246 Poiseuille stays PASS and R242 stays INCOMPLETE. Follow the
-[current task](SESSION_HANDOFF.md#next-task) for Astra/high integration
-review.
+[R249 integration review](docs/realizability/ROTATION_INTEGRATION_REVIEW_R249.md) fixes the separate rotation
+manifest/worker/report contract and preserves the shared containment lifecycle.
+Zero-form API risk is explicit; unsupported forms must refuse. No runtime source
+or numerical workload changed. All five allocations remain spent; R246 stays
+PASS and R242 INCOMPLETE. Follow the [current task](SESSION_HANDOFF.md#next-task)
+for Sol/high source integration and fake tests, then Astra/high admission review.
 
 R232's [single-fixture result](docs/realizability/POISEUILLE_RESULT_R232.md)
 is INCOMPLETE: the worker reached PETSc symbolic LU and exited 1 after a
@@ -28,7 +27,7 @@ diagnostic; 62 standard-library tests pass without numerical imports.
 bounded diagnostic fixture; [R238](docs/realizability/POISEUILLE_RESULT_R238.md)
 spent it 1/1 on a reported numeric LU zero pivot, with empty cleanup but no
 numerical/resource report. All three allowances are spent. Follow the
-[handoff task](SESSION_HANDOFF.md#next-task) for the R248 rotation integration review.
+[handoff task](SESSION_HANDOFF.md#next-task) for the R249 rotation integration implementation.
 No tank/hardware route or feasible contraction range is established.
 
 R188 priority update (2026-09-22): establish measurable essential dynamical

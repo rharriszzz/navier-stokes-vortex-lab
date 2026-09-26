@@ -1,5 +1,53 @@
 # Current session handoff
 
+Last updated 2026-09-26 (America/New_York) for R249.
+**PC/WSL daisy owns the repository.** No transfer; Mac remains released.
+**R249 fixed the rotation integration contract; no execution is admitted.**
+See [review/implementation contract](docs/realizability/ROTATION_INTEGRATION_REVIEW_R249.md)
+and [audit](docs/realizability/evidence/r249/audit.json). The plan specifies a
+separate strict rotation manifest, worker and envelope validator with a shared
+finite lifecycle. Existing Poiseuille public gates stay intact. Reuse the cube
+adapter's unused setup space, measure mesh/tag receipts, assemble all 76
+scalars, recompute raw decisions and preserve source/artifact/held/cleanup gates.
+
+Installed DOLFINx source exposes a conditional zero-form risk: its ZeroBaseForm
+path requires argument spaces, absent for scalar forms. Actual simplification
+is untested. Ordinary domain-bound scalar forms must reach form/assembly;
+unsupported forms refuse, never substitute expected zeros. Source implementation
+is ready; later admission separately decides whether to measure runtime risk.
+
+Audit reproduces R247 exact targets and saved R246 validation, verifies all
+31 R248 source/test/pin hashes and 60 historical raw originals, and confirms
+five reservations retained with recorded PIDs/cgroups absent. R248's 85 passing
+stdlib tests are reused, not rerun. No numerical imports, manager connection,
+runtime implementation or new allocation. R246 stays PASS, R242 INCOMPLETE;
+all five allocations stay spent and R229 setup resource predicate stays false.
+
+**Next: Sol/high implements R249's fixed integration and source-only tests,
+then publishes and stops for Astra/high source/admission review.**
+See [Next task](#next-task). No FEM, real caller or allocation during that step.
+No model/session switch or /new needed.
+
+R249 supplied completion 8m 34s / 6:08 PM, Codex v0.155.1, Sol/high before
+reported change to Astra/high, same session, context 9% (236K/258K), weekly 86%,
+Luna Reserve 99%; no /new, literal /status, token totals or credits supplied.
+Email redacted; values user reported. Clean pull verified R248 3bd7d4a;
+R249 STARTED 06c7296 published. Completion prepared for scoped publication;
+delivery hash/result belongs in Git/final response. PC retains ownership.
+
+Changed: integration review and audit source/output/checks, seven status/index
+pages and request/lifecycle/handoff. Checks: exact contract/rational and saved
+report replay, 31 source hashes, 60 raw originals and five reservations/process
+absence, no numerical modules, AST/JSON/local links, append-only logs and
+whitespace. Skipped: new regression suite (unchanged code), real UFL/FEM/JIT/
+assembly/solve, manager/worker, allocation, full artifact rescan/install,
+full numerical suite/tank/B2, physical/render and Mac transfer. Unresolved:
+real zero-form/API behavior and resource cost, implementation review and later
+admission, general convergence, R242 discrepancy cause, matrix rank and artifact
+label origin. Numerical source and historical evidence are unchanged.
+
+### Previous R248 implementation (completed; integration reviewed by R249)
+
 Last updated 2026-09-26 (America/New_York) for R248.
 **PC/WSL daisy owns the repository.** No transfer; Mac remains released.
 **R248 implemented the rotation exact-field oracle source, without execution.**
@@ -815,12 +863,12 @@ and physical-work limits remain unchanged.
 | Owner | PC/WSL `daisy`; Mac `fire.lan` released after published R161 handoff and R162 receipt. |
 | Checkout | `/home/rharris/git/navier-stokes-vortex-lab`. |
 | Branch/upstream | `main` / `origin/main` |
-| Starting state | R248 same-owner clean main/origin/main at 1facbf5 after required fast-forward pull; rharris/daisy, empty stashes, R247 completed. STARTED c0f86b2 published. |
+| Starting state | R249 same-owner clean main/origin/main at 3bd7d4a after required fast-forward pull; rharris/daisy, empty stashes, R248 completed. STARTED 06c7296 published. |
 | Interpreter | /tmp/navier-fenicsx-r229/bin/python verified as 3.12.13 with -I -S; exact environment artifacts verified, setup memory-event predicate refused. Project Python remains 3.12.14. Old /tmp/navier-fenicsx is still partial. |
 | Other owner/process | Mac `fire.lan` released in the published R161 handoff. Local Git cannot inspect another checkout's unpublished state. |
-| Task processes | All five allocations spent 1/1; R246 PASS with worker/caller exit 0 and empty cleanup. Sixty old raw originals and reservations retained; recorded PIDs/cgroups absent (latest PID 157349). R248 used only stdlib/fake tests, no numerical workload or manager connection. |
+| Task processes | All five allocations spent; R246 PASS with worker/caller exit 0 and empty cleanup. R249 verified 60 raw originals and retained reservations, recorded PIDs/cgroups absent. Only stdlib saved-data audit and source inspection; no numerical worker or manager connection. |
 | Symbolic environment | `/tmp/navier-r183-sympy/bin/python`, Python 3.12.14, SymPy 1.14.0, mpmath 1.3.0; recreate using `requirements-symbolic.txt` if missing. Existing environments unchanged. |
-| Delivery state | R247 1facbf5 verified by clean pull; R248 STARTED c0f86b2 published. Rotation source/tests/evidence/completion prepared for publication; delivery in Git/final response. PC retains ownership. |
+| Delivery state | R248 3bd7d4a verified by clean pull; R249 STARTED 06c7296 published. Integration review/audit/completion prepared for publication; delivery in Git/final response. PC retains ownership. |
 
 ## Current result and limits
 
@@ -951,39 +999,42 @@ agent-side POV-Ray backtraces are unavailable.
 
 ## Next task
 
-**GPT-6 Astra / high / PC-WSL daisy: review rotation oracle integration and
-admission prerequisites, publish an implementation-ready plan or precise
-blocker, then stop before implementation, FEM or new numerical allocation.**
+**GPT-6 Sol / high / PC-WSL daisy: implement the R249 rotation integration
+contract and source-only tests, publish, then stop for Astra/high admission review.**
 After **Continue**, follow clean synchronization/ownership/STARTED publication.
-Read [R247 contract/audit](docs/realizability/VERIFICATION_MILESTONE_R247.md),
-[R248 implementation](docs/realizability/ROTATION_ORACLE_IMPLEMENTATION_R248.md),
-[source](verification/nonlinear_port/rotation_oracle.py),
-[tests](verification/nonlinear_port/test_rotation_oracle.py), current
-worker/controller/cube adapter and the R246 saved result.
+Read the [complete fixed integration contract](docs/realizability/ROTATION_INTEGRATION_REVIEW_R249.md),
+[R248 source review](docs/realizability/ROTATION_ORACLE_IMPLEMENTATION_R248.md),
+[R247 targets](docs/realizability/VERIFICATION_MILESTONE_R247.md), current worker,
+supervision/backend, cube adapter and rotation oracle, plus R246 saved report.
 
-1. Review exact form expressions, strict 38-key/two-degree report and independent
-   targets against R247. Distinguish fake expression tests from actual UFL/JIT/
-   assembly behavior, especially zero forms, quadratic pressure, all six face
-   tags and positive pressure-gradient sign. Do not infer a PDE solve or
-   constitutive coefficient validation from rigid rotation's zero strain.
-2. Define the smallest fixture-specific worker/controller integration so the
-   existing Poiseuille source binding and refusal gates remain intact. Specify
-   exact dispatch, report/schema/policy binding, raw result recomputation,
-   version/artifact checks, held release and cleanup. An assembly oracle should
-   not be passed through Poiseuille Newton/flux/CSR acceptance gates by label.
-3. Decide what source/fake tests and later bounded real assembly evidence are
-   required before **separate** admission. State full end-to-end resource caps,
-   report limit, clean source/interpreter/artifact binding, one-use reservation,
-   uncertainty/recovery boundary and stop conditions. All five old allocations
-   remain spent; no new directory, reuse or attempt in this review.
-4. Publish a concrete integration plan or precise blocker and stop. Recommend
-   Sol/high only after the scientific/integration contract is fixed; Astra/high
-   retains admission and interpretation. No worker changes, FEM import/JIT/
-   assembly/solve, manager scope, install, full suite/tank/B2, physical/render
-   or Mac transfer in this task.
+1. Add the strict non-executable rotation proposal/validator, injected driver
+   and envelope validator, and separate held rotation worker. Reuse unchanged
+   cube adapter/unused P2-P1 setup space and pinned module loader. Measure the
+   fixed geometry receipt. Assemble each of 38 scalars at degrees 24/26;
+   refuse unsupported/domainless zero forms rather than substitute zeros.
+2. Add the fixture-locked rotation supervisor wrapper and extract the shared
+   finite lifecycle without weakening Poiseuille entry/manifest/schema/policy/
+   Newton/flux/CSR gates. Use literal worker dispatch; preserve held/source/
+   interpreter/artifact binding, real exit, resource counters, cleanup and
+   persistence/late-marker semantics. Enforce exact report/contract schema,
+   raw recomputation, duplicate-key refusal and actual 2 MB envelope size.
+3. Complete all five test groups specified in R249: binding and cross-fixture
+   refusal, injected 76-call assembly/geometry/zero/API controls, raw/report
+   corruption and byte/persistence limits, pre-release import ordering, and
+   shared lifecycle failure controls. Run the stdlib regression suite with
+   import audit and R246 saved-report replay; check AST/JSON/links/whitespace.
+   Preserve historical evidence, callers, scientific gates and all spent budgets.
+4. Publish implementation and evidence, then stop. Recommend Astra/high for
+   source/admission review; raise any scientific/containment/zero-form-contract
+   change as a precise blocker instead of making that change implicitly.
+   No real caller or admission, allocation, FEM import/JIT/assembly/solve,
+   manager connection, install, full numerical suite/tank/B2, physical/render
+   or Mac transfer during implementation.
 
-Completion: implementation-ready reviewed integration task with checks and stop
-rule, or a precise blocker. [Official OpenAI documentation](https://developers.openai.com/api/docs/models/gpt-6-astra)
+Completion: implemented R249 contract with passing source/fake regressions and
+saved Poiseuille replay, or a precise blocker. Real assembly/resource behavior
+remains for a separately reviewed one-use admission. All five old allowances
+remain spent. [Official OpenAI documentation](https://developers.openai.com/api/docs/models/gpt-6-sol)
 was searched/opened for high support; model fit is judgment. No model/session
 switch or new chat required. Next prompt: **Continue**.
 
