@@ -1,0 +1,30 @@
+{
+  "request": "R231",
+  "scope": "One admitted R230 n=2 Poiseuille fixture; no retry or alternate run directory",
+  "state_before_launch": "ALLOCATED; zero numerical attempts spent until reservation or partial start",
+  "consumption_rule": "Any reservation or partial start consumes the one allocation, including incomplete outcomes",
+  "run_directory": "/tmp/navier-poiseuille-r230-once",
+  "source_commit_rule": "Bind the actual clean launch HEAD in admission and reservation; reviewed inventory must match R230",
+  "manifest_sha256": "7a8bda917e6b46994ad24c68e0b6c6013b7d6776f90c86a6de763f31f52fa558",
+  "interpreter": "/tmp/navier-fenicsx-r229/bin/python",
+  "executable_sha256": "5f083df36ec986d5cd13d2549ca6cfe1ddaf658509f9e419b454b2fb375c27a3",
+  "limits": {
+    "observed_total_seconds": 180,
+    "setup_seconds": 15,
+    "work_seconds": 150,
+    "finish_seconds": 15,
+    "independent_worker_runtime_seconds": 149,
+    "independent_stop_grace_seconds": 1,
+    "whole_task_memory_mib": 1536,
+    "swap_mib": 0,
+    "tasks": 32,
+    "mpi_ranks": 1,
+    "threads_per_library": 1,
+    "mixed_dofs_max": 20000,
+    "memory_max_events": 0,
+    "oom_events": 0,
+    "oom_kill_events": 0,
+    "pids_max_events": 0
+  },
+  "procedure": "run_once.py; supervised SystemdBackend and supervise_once; no standalone numerical import or prewarming"
+}

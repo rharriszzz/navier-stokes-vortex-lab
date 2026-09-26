@@ -963,3 +963,9 @@ empty stashes, same owner, Mac released, no conflicting open record.
 Lowercase continue authorizes scoped publication. Execute exactly one admitted
 R230 n=2 Poiseuille fixture with fixed source/interpreter binding and caps;
 persist raw result, spent state and cleanup, then stop without retry.
+
+Allocation recorded before launch in evidence/r231/allocation.json; finite
+caller is evidence/r231/run_once.py. The fixed run directory is absent, source
+inventory/manifest and R229 interpreter hashes match, live capacity is
+sufficient for the cap, and the user manager responds. Any reservation or
+partial start spends the one allocation. No attempt has started at this point.

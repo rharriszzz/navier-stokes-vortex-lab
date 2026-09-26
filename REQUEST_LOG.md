@@ -8051,3 +8051,18 @@ df3e6cb3eebbf8eaf0142a6c9443380f3dccf082, empty stashes, rharris on Linux
 x86_64 PC/WSL daisy, Mac released, no conflicting open lifecycle record.
 Bounded task: execute the single admitted R230 n=2 Poiseuille fixture once under
 its fixed limits, record binding, result, spent state and cleanup, then stop.
+
+### R231 allocation before launch
+
+The one-use allocation and finite caller are recorded in
+`docs/realizability/evidence/r231/`. Exactly one output directory is fixed at
+`/tmp/navier-poiseuille-r230-once`. Any reservation or partial start consumes
+the single allocation; no alternate directory or retry. The caller binds actual
+clean launch HEAD, checks all 25 reviewed source hashes, manifest and R229
+interpreter SHA-256, refreshes host capacity and manager availability, then
+uses `supervise_once` with `SystemdBackend` under the unchanged 180 s outer /
+149+1 s worker, 1536 MiB/no swap/32 tasks and one-rank/thread contract.
+Before reservation, the directory is absent; 25 hashes and interpreter match,
+host MemAvailable is about 6.2 GiB, and the existing user manager reports
+249.11-0ubuntu3.22. The sandbox socket check failed EPERM; the approved host
+read-only check succeeded. R229 setup refusal remains false and separate.
