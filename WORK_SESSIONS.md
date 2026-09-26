@@ -1238,3 +1238,34 @@ found only old failed units with MainPID 0/empty ControlGroup, none referencing
 R237. Evidence: evidence/r238/prelaunch.json. Publish this note for clean source
 binding; continue same one-use caller outside sandbox, unchanged. STARTED stays
 open; no second allocation or retry after any later reservation/partial start.
+
+### R238 completion
+COMPLETED | 2026-09-26T17:36:23Z | PC/WSL daisy | released: no
+One fixed-directory n=2 Poiseuille diagnostic attempt ran after clean
+prelaunch repair publication cd3cc5e. R237 directory reserved/worker held,
+source/interpreter/limits verified. Worker exited 1 with KSP -11, 405 nonfinite
+answer entries, PC reason 2 (numeric zero pivot); caller/controller INCOMPLETE.
+No numerical or resource report; actual rank, accuracy, worker resource events
+unmeasured. Manager cleanup empty/unknown_children=false, PID/cgroup absent.
+R237 allocation spent 1/1; R232/R235 remain spent 1/1. No retry. R229 setup
+refusal retained. Sandbox-only preflight refusal occurred before reservation and
+is preserved separately; not counted as a numerical attempt.
+R238 changed its result and 14 evidence files (ten raw plus prelaunch,
+run_hashes, execution and checks), prototype README, B1_SETUP, four track
+overviews, STATUS and request/lifecycle/handoff records. Checks: clean
+launch/source/interpreter binding, actual held limits and worker/caller exit,
+all ten raw hashes/JSON/originals (5,604 bytes), absent numerical/finish/resource
+reports, empty cleanup and PID/cgroup absence, local links, 238 unique request
+IDs, append-only logs and Git whitespace. Skips: any second numerical attempt,
+full suite/rotation/tank/B2, physical/render work, install, Mac transfer and
+source-suite rerun (unchanged). Actual pivot row, matrix rank, accuracy, worker
+memory/events and final save tails remain unknown. PC retains ownership;
+Mac remains released.
+
+Evidence: docs/realizability/POISEUILLE_RESULT_R238.md and evidence/r238/.
+Next: Astra/high import-free mixed-operator/numeric-pivot source review, minimal
+discriminating algebra check or blocker; no FEM or new allocation. Recommend
+Sol/high only for later separately admitted mechanical launch. PC retains
+ownership, Mac released. R237 delivery efc9dbc verified; R238 STARTED 6625a89
+and prelaunch evidence cd3cc5e published. Completion prepared for scoped
+publication; final delivery hash/result in Git/final response, no post-push edit.

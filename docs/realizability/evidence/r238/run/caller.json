@@ -1,0 +1,19 @@
+{
+  "elapsed_before_caller_save": 1.2626568529813085,
+  "final_save_tail_observed": false,
+  "inner_status": "INCOMPLETE",
+  "outer_limit_seconds": 180,
+  "preflight": {
+    "executable": "/tmp/navier-fenicsx-r229/bin/python3.12",
+    "executable_sha256": "5f083df36ec986d5cd13d2549ca6cfe1ddaf658509f9e419b454b2fb375c27a3",
+    "host_mem_available_kib": 6527400,
+    "interpreter": "/tmp/navier-fenicsx-r229/bin/python",
+    "manager_version": "249.11-0ubuntu3.22",
+    "manifest_sha256": "7a8bda917e6b46994ad24c68e0b6c6013b7d6776f90c86a6de763f31f52fa558",
+    "run_directory": "/tmp/navier-poiseuille-r237-once",
+    "source_commit": "cd3cc5e31fa7225d23310a4f06fa557e20e88947",
+    "source_files": 25
+  },
+  "reason": null,
+  "status": "INCOMPLETE"
+}

@@ -17,8 +17,10 @@ allowances are spent 1/1; full suite/tank/B2 execution remains unadmitted.
 [R236](docs/realizability/POISEUILLE_KSP_REVIEW_R236.md) adds a minimal refusal
 diagnostic; 62 standard-library tests pass without numerical imports.
 [R237](docs/realizability/POISEUILLE_ADMISSION_R237.md) admits one new later
-bounded diagnostic fixture, 0/1 spent, with unchanged solver/gates. No execution
-ran in that review. Follow the [handoff task](SESSION_HANDOFF.md#next-task).
+bounded diagnostic fixture; [R238](docs/realizability/POISEUILLE_RESULT_R238.md)
+spent it 1/1 on a reported numeric LU zero pivot, with empty cleanup but no
+numerical/resource report. All three allowances are spent. Follow the
+[handoff task](SESSION_HANDOFF.md#next-task) for import-free Astra/high review.
 No tank/hardware route or feasible contraction range is established.
 
 R188 priority update (2026-09-22): establish measurable essential dynamical

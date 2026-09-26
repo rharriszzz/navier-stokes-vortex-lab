@@ -1,7 +1,46 @@
 # Current session handoff
 
-Last updated 2026-09-26 (America/New_York) for R237.
+Last updated 2026-09-26 (America/New_York) for R238.
 **PC/WSL daisy owns the repository.** No transfer; Mac remains released.
+**R238 spent the R237 n=2 Poiseuille diagnostic allocation: INCOMPLETE at
+a reported numeric LU zero pivot, with no retry.** The [result](docs/realizability/POISEUILLE_RESULT_R238.md)
+and [raw evidence](docs/realizability/evidence/r238/run/) preserve the worker
+line `ksp_reason=-11; nonfinite_answer_entries=405; pc_failed_reason=2`.
+The reported KSP category is preconditioner failure and PC code 2 means a
+numeric zero pivot in pinned PETSc 3.25.5. The actual pivot row, matrix rank,
+accuracy and resource events are unmeasured. Worker/caller exited 1; controller/
+caller INCOMPLETE, cleanup empty. No numerical or resource report exists.
+All three one-use allocations (R232, R235, R238) are now spent 1/1.
+
+The first R238 caller command was refused by sandbox sd-bus access *before*
+reservation, worker or numerical import. Its [prelaunch record](docs/realizability/evidence/r238/prelaunch.json)
+was published on clean `cd3cc5e`; approved host manager inspection found no
+R237 task, and the unchanged caller then used that clean HEAD for the one
+admitted numerical attempt. The fixed directory is retained; PID/cgroup absent.
+R229's 303-event setup refusal remains false. Full suite/tank/B2 unadmitted.
+
+**Next: Astra/high reviews the saved numeric zero-pivot refusal and mixed
+operator without FEM, identifies the smallest discriminating source/algebra
+check or a blocker, then stops.** See [Next task](#next-task). Any later
+numerical attempt needs a separate admission and new directory. No model or
+session switch was initiated here.
+
+R237 completion efc9dbc verified by clean pull; R238 STARTED 6625a89 and
+recoverable prelaunch evidence cd3cc5e published. Completion delivery belongs
+in Git/final response, no post-push edit.
+
+R238 changed its result and 14 evidence files (ten raw plus prelaunch,
+run_hashes, execution and checks), prototype README, B1_SETUP, four track
+overviews, STATUS and request/lifecycle/handoff records. Checks: clean
+launch/source/interpreter binding, actual held limits and worker/caller exit,
+all ten raw hashes/JSON/originals (5,604 bytes), absent numerical/finish/resource
+reports, empty cleanup and PID/cgroup absence, local links, 238 unique request
+IDs, append-only logs and Git whitespace. Skips: any second numerical attempt,
+full suite/rotation/tank/B2, physical/render work, install, Mac transfer and
+source-suite rerun (unchanged). Actual pivot row, matrix rank, accuracy, worker
+memory/events and final save tails remain unknown. PC retains ownership;
+Mac remains released.
+
 **R237 admits one NEW later bounded n=2 Poiseuille diagnostic fixture, 0/1
 spent.** The [admission](docs/realizability/POISEUILLE_ADMISSION_R237.md) and
 [allocation/caller](docs/realizability/evidence/r237/) bind R236's instrumented
@@ -382,12 +421,12 @@ and physical-work limits remain unchanged.
 | Owner | PC/WSL `daisy`; Mac `fire.lan` released after published R161 handoff and R162 receipt. |
 | Checkout | `/home/rharris/git/navier-stokes-vortex-lab`. |
 | Branch/upstream | `main` / `origin/main` |
-| Starting state | R237 same-owner clean main/origin/main at 739eff8 after required fast-forward pull; rharris/daisy, empty stashes, R236 completed. |
+| Starting state | R238 same-owner clean main/origin/main at efc9dbc after required fast-forward pull; rharris/daisy, empty stashes, R237 completed. Start 6625a89 published. |
 | Interpreter | /tmp/navier-fenicsx-r229/bin/python verified as 3.12.13 with -I -S; exact environment artifacts verified, setup memory-event predicate refused. Project Python remains 3.12.14. Old /tmp/navier-fenicsx is still partial. |
 | Other owner/process | Mac `fire.lan` released in the published R161 handoff. Local Git cannot inspect another checkout's unpublished state. |
-| Task processes | R237 no numerical import/worker/manager/live scope; new fixed directory absent, 0/1 spent. R232/R235 reservations and 20 raw originals retained, recorded PIDs/cgroups absent, both old charges spent 1/1. |
+| Task processes | R238 worker PID 149905 exited 1 after sparse-solve refusal; manager final MainPID 0/empty ControlGroup, cleanup empty/unknown_children=false. PID/cgroup absent. All three allocations spent 1/1; R238 directory and ten raw originals retained. |
 | Symbolic environment | `/tmp/navier-r183-sympy/bin/python`, Python 3.12.14, SymPy 1.14.0, mpmath 1.3.0; recreate using `requirements-symbolic.txt` if missing. Existing environments unchanged. |
-| Delivery state | R236 completion 739eff8 verified by clean pull; R237 STARTED d5872eb published. R237 completion prepared for scoped publication; delivery hash/result in Git/final response. PC retains ownership. |
+| Delivery state | R237 completion efc9dbc verified by clean pull; R238 STARTED 6625a89 and clean prelaunch evidence cd3cc5e published. R238 result/completion prepared for scoped publication; final delivery in Git/final response. PC retains ownership. |
 
 ## Current result and limits
 
@@ -518,48 +557,41 @@ agent-side POV-Ray backtraces are unavailable.
 
 ## Next task
 
-**GPT-6 Sol / high / PC-WSL daisy: execute the single admitted R237 n=2
-Poiseuille diagnostic fixture, preserve the outcome and stop.** No new chat
-needed; select Sol/high, then **Continue**. Official
-[OpenAI Docs](https://developers.openai.com/api/docs/models/gpt-6-sol) was
-searched/opened for high reasoning support; task fit is judgment. No model
-switch or execution occurred in the R237 review.
+**GPT-6 Astra / high / PC-WSL daisy: review the spent R238 numeric zero-pivot
+refusal and exact mixed operator without FEM or a new allocation.** After
+**Continue**, follow the normal clean ownership/synchronization/start record.
+Read the [R238 result](docs/realizability/POISEUILLE_RESULT_R238.md),
+[raw worker log](docs/realizability/evidence/r238/run/worker.log),
+[execution/checks](docs/realizability/evidence/r238/), R236 sparse review,
+R237 admission, `verification/nonlinear_port/{cube_adapter,sparse,fixture_driver,prototype}.py`
+and the frozen manifest. All three numerical allocations are spent 1/1.
 
-Read [R237 admission](docs/realizability/POISEUILLE_ADMISSION_R237.md), its
-[allocation](docs/realizability/evidence/r237/allocation.json),
-[caller](docs/realizability/evidence/r237/run_once.py),
-[checks](docs/realizability/evidence/r237/checks.json), R236 review/source
-inventory and R235 saved failure. R237 grants exactly one attempt, currently
-0/1 spent at `/tmp/navier-poiseuille-r237-once`. Both R232 and R235 are spent
-1/1 and must never be reused. This attempt measures a diagnostic with the
-unchanged solver; it is not predicated on a demonstrated numerical repair.
+The worker reported `ksp_reason=-11`, 405 nonfinite answer entries and
+`pc_failed_reason=2` after `ksp.solve` returned. Pinned PETSc labels these
+preconditioner failure and numeric zero pivot. These are diagnostic status
+codes, not a saved matrix, pivot row, rank proof, true residual, accuracy or
+resource event measurement. Cleanup is empty; no numerical/resource report.
 
-1. Follow normal clean Continue ownership/pull/start publication. Verify the
-   new allowance is still unspent in logs and fixed directory inventory.
-   Check R237 caller digest, all 25 R236 source hashes, frozen manifest and
-   exact R229 interpreter binding. Use the actual full clean launch HEAD.
-2. Invoke the prepared R237 caller once using `/tmp/navier-fenicsx-r229/bin/python`
-   and that 40-character HEAD argument. No separate worker/import/prewarming.
-   Caller refreshes live host/manager facts inside its outer timer. Preserve
-   every cap and numerical/resource gate. Do not edit the checkout during work.
-3. Reservation/directory creation or partial worker start spends 1/1. After
-   any numerical/resource/API refusal, timeout or uncertain cleanup, preserve
-   raw files and stop with no retry/alternate directory. Only a demonstrated
-   pre-reservation caller error before worker/numerical import may be recovered:
-   save evidence/timing gaps, verify absent directory and no new manager task,
-   fix/test, publish clean source binding, continue the same unspent contract.
-4. Save worker.log and actual exit/cleanup, all numerical/controller/caller
-   records or explicit missing records. If present, report raw `ksp_reason`,
-   `nonfinite_answer_entries` and `pc_failed_reason`, including unavailable
-   labels. Do not infer matrix singularity, PC-memory/cgroup equivalence,
-   accuracy or resource PASS. A diagnostic refusal remains INCOMPLETE.
-5. Update result/evidence, charges, status and handoff; publish completion and
-   stop. Recommend Astra/high for numerical interpretation or changed method/
-   admission decisions, even if the diagnostic itself is clear.
+1. Preserve all three spent states and directories/raw evidence. Confirm no
+   live R238 worker/cgroup. No launch, install, model transfer or gate change.
+2. Audit the exact bordered mixed operator, gauge/flux rows, fixed velocity
+   elimination and frozen scaling using import-free source/algebra analysis.
+   Distinguish a matrix nullspace, numeric pivoting sensitivity, assembly/sign
+   defect, and insufficient evidence. Do not infer singularity solely from
+   PETSc code 2 or treat nonfinite answer entries as independent root cause.
+3. Identify the smallest discriminating check that can safely be performed
+   without FEM, or a precise blocker. Implement/test a source-only diagnostic
+   if justified and within the task; otherwise record the next method decision.
+   Do not introduce a solver fallback, pivot shift/tolerance change or new
+   numerical allocation without separate scientific review.
+4. Publish the analysis, checks/skips and one concrete later decision task;
+   stop before FEM/import/JIT/solve or manager/live scope. Full suite, rotation,
+   tank/B2, physical/render work remain unadmitted.
 
-Completion: one retained outcome with actual exit/cleanup and spent accounting,
-scoped publication and stop. No full suite, rotation, tank/B2, physical/render,
-installation or additional allocation. R229 setup resource refusal stays false.
+Completion: reviewable source/algebra result or precise blocker, explicit
+three-way spent state, scoped commit/push and stop. Retain Astra/high for
+numerical-method choices; recommend Sol/high only for a separately admitted
+mechanical launch. No agent-initiated model/session switch.
 
 ### Historical R230 single-fixture execution task (R232 spent)
 

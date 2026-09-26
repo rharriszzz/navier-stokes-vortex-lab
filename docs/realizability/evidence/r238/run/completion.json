@@ -1,0 +1,8 @@
+{
+  "cleanup_seconds": 0.0022781190054956824,
+  "final_completion_save_tail_observed": false,
+  "observed_elapsed_after_result_and_log": 1.2063048490090296,
+  "observed_finish_seconds": null,
+  "result_and_log_save_seconds": 0.00852870600647293,
+  "status": "INCOMPLETE"
+}

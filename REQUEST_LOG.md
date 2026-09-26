@@ -8745,3 +8745,47 @@ Next within this same authorized attempt: publish this evidence to restore a
 clean source binding, then execute the unchanged caller outside the sandbox.
 The host manager read-only check tested the access remedy; no scientific or
 resource gate is changed. No new allocation or alternate directory.
+
+### R238 outcome — one numerical attempt spent, INCOMPLETE
+
+After clean prelaunch publication cd3cc5e, the exact prepared caller ran outside
+the sandbox with source HEAD cd3cc5e31fa7225d23310a4f06fa557e20e88947.
+The fixed R237 directory was reserved at 2026-09-26T17:33:29Z, consuming its
+single allowance. Held worker confirmed clean source/pinned interpreter and
+1536 MiB/no swap/32 tasks/one rank-thread/150 s expiry; setup took
+0.143022389 s. It printed `Refusal: sparse linear solve failed:
+ksp_reason=-11; nonfinite_answer_entries=405; pc_failed_reason=2` and exited 1.
+Pinned PETSc labels the first preconditioner failure and the latter numeric
+zero pivot. The actual pivot row, matrix rank, answer values, true residual,
+accuracy and resource events were not saved. This is not a singularity proof.
+
+Caller/controller saved INCOMPLETE. Caller exit 1, after-save 1.264677333 s;
+controller result/log saved by 1.206304849 s from reservation. No
+numerical.json, finished.json or resource_snapshot.json. Manager final MainPID
+0/empty ControlGroup, cleanup.empty=true, unknown_children=false; read-only
+checks found PID 149905 and cgroup absent. Controller's generic reason reflects
+missing resource evidence after failed worker exit, not the immediate numeric
+failure. All three allocations are now spent 1/1; no retry or alternate path.
+R229's 303-event setup resource refusal remains false.
+
+R238 changed its result and 14 evidence files (ten raw plus prelaunch,
+run_hashes, execution and checks), prototype README, B1_SETUP, four track
+overviews, STATUS and request/lifecycle/handoff records. Checks: clean
+launch/source/interpreter binding, actual held limits and worker/caller exit,
+all ten raw hashes/JSON/originals (5,604 bytes), absent numerical/finish/resource
+reports, empty cleanup and PID/cgroup absence, local links, 238 unique request
+IDs, append-only logs and Git whitespace. Skips: any second numerical attempt,
+full suite/rotation/tank/B2, physical/render work, install, Mac transfer and
+source-suite rerun (unchanged). Actual pivot row, matrix rank, accuracy, worker
+memory/events and final save tails remain unknown. PC retains ownership;
+Mac remains released.
+
+Evidence: docs/realizability/POISEUILLE_RESULT_R238.md and evidence/r238/,
+including preserved recoverable prelaunch.json and ten raw files. No numerical
+or resource PASS and no full-suite/tank/B2 admission. Next: Astra/high import-free
+review of exact bordered mixed operator and reported numeric zero pivot,
+smallest discriminating source/algebra check or blocker; no FEM/new allocation.
+R237 delivery efc9dbc verified by clean pull; R238 STARTED 6625a89 and
+prelaunch evidence cd3cc5e published. Completion prepared for scoped commit/
+push; final delivery hash/result belongs in Git/final response, no post-push edit.
+No user model/session switch or account snapshot was supplied in this turn.

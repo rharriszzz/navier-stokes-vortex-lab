@@ -1,6 +1,6 @@
 # Project status: a boundary-controlled engineering approximation
 
-Updated 2026-09-26 (America/New_York), through R237. PC/WSL daisy owns the
+Updated 2026-09-26 (America/New_York), through R238. PC/WSL daisy owns the
 repository. **R232 corrects the recoverable R231 caller failure and resumes the
 same authorized, unspent one-use fixture, then spends it on a PETSc LU failure.**
 The [R232 result](docs/realizability/POISEUILLE_RESULT_R232.md) records an
@@ -21,9 +21,11 @@ accuracy and resource events remain unknown. Both allocations are spent 1/1.
 nonfinite-answer count and optional PC failure reason to future refusal logs.
 All 62 standard-library tests pass with no numerical imports. No new allocation
 or live scope occurred in R236. [R237 admission](docs/realizability/POISEUILLE_ADMISSION_R237.md)
-grants one new later instrumented fixture, 0/1 spent, with unchanged solver and
-gates. No numerical work ran in the review. Next: Sol/high executes the prepared
-caller once, preserves result/cleanup and stops; follow the
+granted one instrumented fixture. [R238 result](docs/realizability/POISEUILLE_RESULT_R238.md)
+spent it 1/1: KSP -11, 405 nonfinite answer entries and PC reason 2 (reported
+numeric zero pivot). Worker/caller exited 1 with empty cleanup but no numerical
+or resource report. All three allocations are spent 1/1. Next: Astra/high
+reviews the mixed operator and saved refusal without FEM; follow the
 [single task](SESSION_HANDOFF.md#next-task).
 
 Historical R231 context: the
@@ -49,7 +51,8 @@ R233 completion 15c62dd verified by clean pull; R234 STARTED 6cc9e88 published.
 R234 completion 49a56cb verified by clean pull; R235 STARTED f7ac565 published.
 R235 completion fe5295b verified by clean pull; R236 STARTED 2e21a9c published.
 R236 completion 739eff8 verified by clean pull; R237 STARTED d5872eb published.
-R237 completion delivery belongs in Git/final response.
+R237 completion efc9dbc verified by clean pull; R238 STARTED 6625a89 published.
+R238 prelaunch evidence cd3cc5e published; completion delivery belongs in Git/final response.
 R230 supplied snapshot: preceding completion 13m 26s / 11:45 AM; 938,400 tokens
 (831,406 input, 17,031,424 cached, 106,994 output, 23,518 reasoning). Current
 Astra/high, weekly 98% (11:23 Oct 3 reset), Luna Reserve 99% (10:18 Oct 3 reset).

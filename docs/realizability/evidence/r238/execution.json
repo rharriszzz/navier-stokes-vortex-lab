@@ -1,0 +1,39 @@
+{
+  "actual_launch_command": [
+    "/tmp/navier-fenicsx-r229/bin/python",
+    "docs/realizability/evidence/r237/run_once.py",
+    "cd3cc5e31fa7225d23310a4f06fa557e20e88947"
+  ],
+  "actual_launch_sandbox": "require_escalated after documented sandbox-denied manager access",
+  "caller_exit_code": 1,
+  "caller_stdout": {
+    "elapsed_after_caller_save": 1.2646773330052383,
+    "inner_status": "INCOMPLETE",
+    "reason": null,
+    "run_directory": "/tmp/navier-poiseuille-r237-once",
+    "status": "INCOMPLETE"
+  },
+  "cgroup_absent": true,
+  "held_cgroup": "/user.slice/user-1000.slice/user@1000.service/app.slice/navier-poiseuille-472795d2762947f4acf47f5d25b96daa.service",
+  "held_pid": 149905,
+  "manager_actual_exit_status": "1",
+  "manager_final": {
+    "ActiveState": "failed",
+    "ControlGroup": "",
+    "ExecMainCode": "1",
+    "ExecMainStatus": "1",
+    "KillMode": "control-group",
+    "LoadState": "loaded",
+    "MainPID": "0",
+    "Restart": "no",
+    "Result": "exit-code",
+    "RuntimeMaxUSec": "149000000us",
+    "SendSIGKILL": "yes",
+    "SubState": "failed",
+    "TimeoutStopUSec": "1000000us"
+  },
+  "pid_absent": true,
+  "prelaunch": "Sandbox preflight exit 1 before reservation; published at cd3cc5e, 0/1 spent",
+  "raw_evidence": "docs/realizability/evidence/r238/run",
+  "request": "R238"
+}
