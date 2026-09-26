@@ -14,6 +14,7 @@ from .fixture_driver import run_poiseuille
 from .handshake import held, completed
 from .manifest import validate as validate_manifest
 from .prototype import Refusal
+from .source_binding import verify_source
 
 
 def _read_json(path):
@@ -86,7 +87,8 @@ def main(args=None):
             or admission.get('attempts_granted') != 1):
         raise Refusal('worker reservation/admission mismatch')
     actual_cgroup = _cgroup_path()
-    held(directory, reservation, actual_cgroup)
+    binding = verify_source(reservation)
+    held(directory, reservation, actual_cgroup, binding)
     if any(os.environ.get(name) != '1' for name in
            ('OMP_NUM_THREADS', 'OPENBLAS_NUM_THREADS', 'MKL_NUM_THREADS',
             'NUMEXPR_NUM_THREADS')):

@@ -39,13 +39,13 @@ def await_message(path, seconds):
     raise Refusal('held worker handshake deadline exceeded')
 
 
-def held(directory, reservation, cgroup):
+def held(directory, reservation, cgroup, source_binding=None):
     environment = {key: os.environ.get(key) for key in
                    ('OMP_NUM_THREADS', 'OPENBLAS_NUM_THREADS', 'MKL_NUM_THREADS',
                     'NUMEXPR_NUM_THREADS')}
     publish(directory/'held.json', dict(pid=os.getpid(), cgroup=cgroup,
                                         nonce=reservation['release_nonce'],
-                                        threads=environment))
+                                        threads=environment, source_binding=source_binding))
     release = await_message(directory/'release.json', 15)
     if (release != dict(nonce=reservation['release_nonce'], cgroup=cgroup)
             or cgroup == '/' or not cgroup.startswith('/')

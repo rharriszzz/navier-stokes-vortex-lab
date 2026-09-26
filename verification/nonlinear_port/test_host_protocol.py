@@ -60,7 +60,7 @@ class HostProtocol(unittest.TestCase):
             h = Handle(path, path, 149)
             with (patch.object(h, 'show', return_value={
                     'LoadState': 'not-found', 'ActiveState': 'inactive', 'MainPID': '0'}),
-                  patch('verification.nonlinear_port.systemd_backend.command') as command):
+                  patch.object(h, 'connection') as command):
                 h.stop()
                 self.assertTrue(h.cleanup()['empty'])
                 command.assert_not_called()

@@ -7556,3 +7556,26 @@ Stop before dependencies, FEM imports/JIT/mesh/assembly/solves, full suite,
 tank/physical/render work. No FEM attempts granted. Preserve R225 failure and
 its two observed intervals; its later reconciliation elapsed remains unknown.
 A separate bounded benign allocation will be recorded before live cases.
+
+### R226 source checkpoint and benign allocation
+
+Replaced spawned systemd clients with fixed-ABI in-process libsystemd calls to
+this user's existing manager/private socket, checking peer credentials. The
+pre-existing finite caller and OS manager retain the R103 trust boundary; no
+newly spawned control helper is exempted. Git source checks run inside the
+capped held worker, require the reserved clean revision and actual interpreter,
+and report executable SHA-256. Source-only tests: 49 pass. Initial read-only
+session-bus access failed (sandbox EPERM, external absent socket); direct private
+manager connection observed systemd 249.11-0ubuntu3.22. No unit was started by
+these connection checks. No dependency or numerical import occurred.
+
+New, separate allocation before live work: exactly one clean case (RuntimeMax
+8 s plus stop 1 s) followed, only if successful, by one independent-expiry case
+(4 s plus stop 1 s). At most 30 s cumulative observed probe setup/work/cleanup/
+evidence persistence; same 1536 MiB, zero swap, 32 PID caps, one numerical thread.
+Only standard-library workers and an expiry child; zero FEM attempts. Exclusive
+output /tmp/navier-r226-host-probe-01, source bound to the clean checkpoint made
+from this record. No automatic retries; an unexpected failure stops the pair,
+retains its evidence and requires explicit reconciliation. R225 failed intervals
+and unknown later elapsed remain unchanged, not erased or reclassified. The
+source checkpoint is intermediate publication, not task completion.

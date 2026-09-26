@@ -1,37 +1,23 @@
-"""Linux held-worker backend, not whole-task admission.
+"""Linux held-worker backend using the existing caller and OS manager (R103).
 
-This configures kernel limits and manager expiry for the worker and descendants.
-Independent expiry has not yet been demonstrated by the bounded live probe.
-Short systemd command clients run in the caller's scope. Consequently this
-backend honestly reports all_task_processes_in_scope=False: supervise_once
-refuses a FEM release until that remaining whole-task boundary is resolved.
-No default execution entry point or admission is provided.
+All newly spawned task processes live in the capped unit. Manager calls use
+in-process sd-bus; no external client, monitor or reporter is created.
+No default execution admission is provided; FEM attempts remain zero.
 """
 from pathlib import Path
 import re
-import subprocess
 import time
 import uuid
 
 from .handshake import publish, read
 from .prototype import Refusal
 from .supervision import CAPS
+from .systemd_bus import Bus, BusError
+from .source_binding import expected_binding
 
 
 THREAD_ENV = ('OMP_NUM_THREADS', 'OPENBLAS_NUM_THREADS', 'MKL_NUM_THREADS',
               'NUMEXPR_NUM_THREADS', 'BLIS_NUM_THREADS', 'VECLIB_MAXIMUM_THREADS')
-PROPERTIES = ('ControlGroup', 'LoadState', 'ActiveState', 'SubState', 'MainPID',
-              'ExecMainCode', 'ExecMainStatus', 'Result', 'RuntimeMaxUSec',
-              'TimeoutStopUSec', 'KillMode', 'SendSIGKILL', 'Restart')
-
-
-def command(*args):
-    """Finite control client; never a shell or an implicit retry."""
-    result = subprocess.run(args, text=True, capture_output=True, timeout=3)
-    if result.returncode:
-        raise Refusal(f'control command failed: {args[0]}: {result.stderr.strip()}')
-    return result.stdout
-
 
 def seconds(value):
     units = {'min': 60, 's': 1, 'ms': .001, 'us': .000001}
@@ -68,28 +54,52 @@ class Handle:
         self.stopped = False
         self.pid = None
         self.reservation = read(directory/'reservation.json')
+        self.bus = None
+
+    def connection(self):
+        if self.bus is None:
+            self.bus = Bus()
+        return self.bus
 
     def show(self):
-        output = command('systemctl', '--user', 'show', self.unit,
-                         '--property='+','.join(PROPERTIES))
-        return dict(line.split('=', 1) for line in output.splitlines() if '=' in line)
+        bus = self.connection()
+        try:
+            path = bus.unit_path(self.unit)
+        except BusError as exc:
+            if exc.name != 'org.freedesktop.systemd1.NoSuchUnit':
+                raise
+            return dict(LoadState='not-found', ActiveState='inactive', MainPID='0', ControlGroup='')
+        result = {}
+        unit_properties = ('LoadState', 'ActiveState', 'SubState')
+        service_properties = dict(ControlGroup='s', MainPID='u', ExecMainCode='i',
+            ExecMainStatus='i', Result='s', RuntimeMaxUSec='t', TimeoutStopUSec='t',
+            KillMode='s', SendSIGKILL='b', Restart='s')
+        for name in unit_properties:
+            result[name] = bus.property(path, 'Unit', name, 's')
+        for name, kind in service_properties.items():
+            value = bus.property(path, 'Service', name, kind)
+            result[name] = ('yes' if value else 'no') if kind == 'b' else str(value)
+        for name in ('RuntimeMaxUSec', 'TimeoutStopUSec'):
+            result[name] += 'us'
+        return result
 
     def start(self, argv):
         if not argv or not Path(argv[0]).is_absolute():
             raise Refusal('absolute worker executable required')
-        command('systemd-run', '--user', '--unit='+self.unit,
-                '--property=Type=exec', '--property=Restart=no',
-                '--property=RemainAfterExit=yes',
-                '--property=MemoryMax=1610612736', '--property=MemorySwapMax=0',
-                '--property=TasksMax=32', '--property=MemoryAccounting=yes',
-                '--property=TasksAccounting=yes', '--property=KillMode=control-group',
-                '--property=SendSIGKILL=yes', '--property=TimeoutStopSec=1',
-                '--property=RuntimeMaxSec='+str(self.runtime),
-                '--property=WorkingDirectory='+str(self.root),
-                '--property=StandardOutput=append:'+str(self.directory/'worker.log'),
-                '--property=StandardError=append:'+str(self.directory/'worker.log'),
-                *('--setenv='+k+'=1' for k in THREAD_ENV),
-                '--', *map(str, argv))
+        self.expected_source = expected_binding(self.root, self.reservation, argv[0])
+        props = [('Type', 's', 'exec'), ('Restart', 's', 'no'),
+            ('RemainAfterExit', 'b', True), ('MemoryMax', 't', 1610612736),
+            ('MemorySwapMax', 't', 0), ('TasksMax', 't', 32),
+            ('MemoryAccounting', 'b', True), ('TasksAccounting', 'b', True),
+            ('KillMode', 's', 'control-group'), ('SendSIGKILL', 'b', True),
+            ('TimeoutStopUSec', 't', 1_000_000),
+            ('RuntimeMaxUSec', 't', self.runtime*1_000_000),
+            ('WorkingDirectory', 's', str(self.root)),
+            ('StandardOutputFileToAppend', 's', str(self.directory/'worker.log')),
+            ('StandardErrorFileToAppend', 's', str(self.directory/'worker.log')),
+            ('Environment', 'as', [*(k+'=1' for k in THREAD_ENV),
+                                   'PYTHONNOUSERSITE=1', 'PYTHONPATH='+str(self.root)])]
+        self.connection().start(self.unit, props, list(map(str, argv)))
         deadline = time.monotonic()+5
         while not (self.directory/'held.json').exists():
             if time.monotonic() >= deadline:
@@ -133,6 +143,8 @@ class Handle:
             raise Refusal('manager expiry or ownership settings changed')
         if self.pids() != [self.pid] or self.integer('pids.current') != 1:
             raise Refusal('unexpected processes in held scope')
+        if self.hello.get('source_binding') != self.expected_source:
+            raise Refusal('actual worker source/interpreter binding mismatch')
         threads = self.hello.get('threads', {})
         if set(threads) != set(THREAD_ENV[:4]) or any(v != '1' for v in threads.values()):
             raise Refusal('worker thread settings not observed')
@@ -143,9 +155,11 @@ class Handle:
                     independent_expiry_seconds=seconds(props['RuntimeMaxUSec'])
                                                +seconds(props['TimeoutStopUSec']),
                     worker_held=not (self.directory/'release.json').exists(),
-                    all_task_processes_in_scope=False,
+                    all_task_processes_in_scope=True,
                     worker_descendants_in_scope=True, mpi_ranks=1, threads=1,
-                    control_clients_in_worker_scope=False)
+                    spawned_control_clients=0,
+                    control_boundary='pre-existing caller and OS manager; R103',
+                    source_binding=self.hello['source_binding'])
 
     def release(self):
         publish(self.directory/'release.json', dict(nonce=self.reservation['release_nonce'],
@@ -193,7 +207,17 @@ class Handle:
     def stop(self):
         props = self.show()
         if props.get('LoadState') != 'not-found':
-            command('systemctl', '--user', 'stop', self.unit)
+            self.connection().stop(self.unit)
+            deadline = time.monotonic()+3
+            while time.monotonic() < deadline:
+                state = self.show()
+                if (state.get('LoadState') == 'not-found' or
+                        (state.get('MainPID') == '0' and not state.get('ControlGroup')
+                         and state.get('ActiveState') in ('inactive', 'failed'))):
+                    break
+                time.sleep(.02)
+            else:
+                raise Refusal('manager stop/cleanup deadline exceeded')
         self.stopped = True
 
     def cleanup(self):
@@ -205,6 +229,9 @@ class Handle:
         if self.scope_id:
             path = Path('/sys/fs/cgroup')/self.scope_id.lstrip('/')
             empty = empty and not path.exists()
+        if self.bus is not None:
+            self.bus.close()
+            self.bus = None
         return dict(self.resource_snapshot or {}, empty=empty,
                     unknown_children=not empty, unit=self.unit,
                     manager_final=props,
