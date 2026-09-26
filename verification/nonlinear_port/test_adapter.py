@@ -2,11 +2,12 @@
 from fractions import Fraction as F
 import json
 from pathlib import Path
+from types import SimpleNamespace
 import unittest
 
 from .sparse import CSR, border_and_lift, row_scales, scale_system, constraint_condition
 from .prototype import Refusal, newton, enforce_lifting
-from .cube_adapter import merge_tags, fields
+from .cube_adapter import merge_tags, fields, sparse_solve
 from .diagnostics import (signed_budget, refinement, quadrature_comparison,
                           ANGULAR_TERMS, ENERGY_TERMS, field_report,
                           integrate_budgets, step_checks, physical_interval_budget)
@@ -20,6 +21,69 @@ def dense(matrix):
 
 
 class AdapterChecks(unittest.TestCase):
+    def test_csr_keeps_zero_diagonal_without_changing_operator(self):
+        rows = [{2: 4., 0: 0., 1: 0.}, {}, {0: -2., 2: 3.}]
+        original = [dict(row) for row in rows]
+        matrix = CSR.from_rows(rows)
+        self.assertEqual(rows, original)
+        self.assertEqual(matrix.indptr, (0, 2, 3, 5))
+        self.assertEqual(matrix.indices, (0, 2, 1, 0, 2))
+        self.assertEqual(matrix.values, (0., 4., 0., -2., 3.))
+        self.assertEqual(matrix.matvec([2., 5., 7.]), [28., 0., 17.])
+        # Empty rows remain numerically zero: structural completion is no shift.
+        zero = CSR.from_rows([{}, {}, {}])
+        self.assertEqual(zero.indices, (0, 1, 2))
+        self.assertEqual(zero.values, (0., 0., 0.))
+        self.assertEqual(rank(dense(zero)), 0)
+
+    def test_border_lift_and_scaling_keep_pressure_and_scalar_diagonals(self):
+        full = toy_matrix()
+        core = CSR.from_rows([{j: full[i][j] for j in range(5)} for i in range(5)])
+        columns = [[float(full[i][j]) for i in range(5)] for j in range(5, 8)]
+        rows = [[float(v) for v in full[i][:5]] for i in range(5, 8)]
+        state, residual = [2.] + [0.]*7, [float(i-3) for i in range(8)]
+        for fixed in ({}, {0: 2.}):
+            with self.subTest(fixed=fixed):
+                r, matrix = border_and_lift(core, columns, rows, residual[:5],
+                                            residual[5:], state, fixed)
+                expected_r, expected = enforce_lifting(residual, full, state, fixed)
+                self.assertEqual(r, expected_r)
+                self.assertEqual(dense(matrix), expected)
+                scales = row_scales(matrix)
+                sr, scaled = scale_system(r, matrix, scales)
+                self.assertEqual(sr, [s*v for s, v in zip(scales, expected_r)])
+                self.assertEqual(dense(scaled), [[scales[i]*v for v in row]
+                                                for i, row in enumerate(expected)])
+                for candidate in (matrix, scaled):
+                    self.assertTrue(all(i in row for i, row in enumerate(candidate.rows())))
+                    for i in range(3, 8):  # two pressure rows, P-, P+, eta
+                        self.assertEqual(candidate.rows()[i][i], 0.)
+                if fixed:
+                    self.assertEqual(matrix.rows()[0], {0: 1.})
+                    self.assertTrue(all(0 not in row for row in matrix.rows()[1:]))
+                else:
+                    self.assertEqual(rank(dense(matrix)), 8)
+
+    def test_zero_diagonals_reach_petsc_csr_boundary(self):
+        # Exercise the real bridge up to createAIJ, without importing PETSc/NumPy
+        # or pretending to factor a matrix. The saddle matrix is invertible.
+        _, matrix = scale_system([1., 2.], CSR.from_rows([{1: 1.}, {0: 1.}]), (2., 3.))
+        captured = {}
+        class BoundaryReached(Exception):
+            pass
+        class Mat:
+            def createAIJ(self, **kwargs):
+                captured.update(kwargs)
+                raise BoundaryReached
+        np = SimpleNamespace(asarray=lambda values, dtype: tuple(dtype(v) for v in values))
+        petsc = SimpleNamespace(Mat=Mat, IntType=int, ScalarType=float)
+        comm = SimpleNamespace(size=1)
+        with self.assertRaises(BoundaryReached):
+            sparse_solve(np, petsc, comm, matrix, [2., 6.])
+        self.assertEqual(captured['size'], (2, 2))
+        self.assertIs(captured['comm'], comm)
+        self.assertEqual(captured['csr'], ((0, 2, 4), (0, 1, 0, 1), (0., 2., 3., 0.)))
+
     def test_constraint_condition_and_rank_refusal(self):
         report = constraint_condition([[1., 0., 0., 9.], [0., 2., 0., 9.], [0., 0., 3., 9.]], {3})
         self.assertEqual(report['condition_bound'], 3.)

@@ -1,0 +1,60 @@
+test_csr_keeps_zero_diagonal_without_changing_operator (verification.nonlinear_port.test_adapter.AdapterChecks.test_csr_keeps_zero_diagonal_without_changing_operator) ... FAIL
+test_border_lift_and_scaling_keep_pressure_and_scalar_diagonals (verification.nonlinear_port.test_adapter.AdapterChecks.test_border_lift_and_scaling_keep_pressure_and_scalar_diagonals) ...
+  test_border_lift_and_scaling_keep_pressure_and_scalar_diagonals (verification.nonlinear_port.test_adapter.AdapterChecks.test_border_lift_and_scaling_keep_pressure_and_scalar_diagonals) (fixed={}) ... FAIL
+  test_border_lift_and_scaling_keep_pressure_and_scalar_diagonals (verification.nonlinear_port.test_adapter.AdapterChecks.test_border_lift_and_scaling_keep_pressure_and_scalar_diagonals) (fixed={0: 2.0}) ... FAIL
+test_zero_diagonals_reach_petsc_csr_boundary (verification.nonlinear_port.test_adapter.AdapterChecks.test_zero_diagonals_reach_petsc_csr_boundary) ... FAIL
+
+======================================================================
+FAIL: test_csr_keeps_zero_diagonal_without_changing_operator (verification.nonlinear_port.test_adapter.AdapterChecks.test_csr_keeps_zero_diagonal_without_changing_operator)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/rharris/git/navier-stokes-vortex-lab/verification/nonlinear_port/test_adapter.py", line 29, in test_csr_keeps_zero_diagonal_without_changing_operator
+    self.assertEqual(matrix.indptr, (0, 2, 3, 5))
+AssertionError: Tuples differ: (0, 1, 1, 3) != (0, 2, 3, 5)
+
+First differing element 1:
+1
+2
+
+- (0, 1, 1, 3)
+?     ^  ^  ^
+
++ (0, 2, 3, 5)
+?     ^  ^  ^
+
+
+======================================================================
+FAIL: test_border_lift_and_scaling_keep_pressure_and_scalar_diagonals (verification.nonlinear_port.test_adapter.AdapterChecks.test_border_lift_and_scaling_keep_pressure_and_scalar_diagonals) (fixed={})
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/rharris/git/navier-stokes-vortex-lab/verification/nonlinear_port/test_adapter.py", line 58, in test_border_lift_and_scaling_keep_pressure_and_scalar_diagonals
+    self.assertTrue(all(i in row for i, row in enumerate(candidate.rows())))
+AssertionError: False is not true
+
+======================================================================
+FAIL: test_border_lift_and_scaling_keep_pressure_and_scalar_diagonals (verification.nonlinear_port.test_adapter.AdapterChecks.test_border_lift_and_scaling_keep_pressure_and_scalar_diagonals) (fixed={0: 2.0})
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/rharris/git/navier-stokes-vortex-lab/verification/nonlinear_port/test_adapter.py", line 58, in test_border_lift_and_scaling_keep_pressure_and_scalar_diagonals
+    self.assertTrue(all(i in row for i, row in enumerate(candidate.rows())))
+AssertionError: False is not true
+
+======================================================================
+FAIL: test_zero_diagonals_reach_petsc_csr_boundary (verification.nonlinear_port.test_adapter.AdapterChecks.test_zero_diagonals_reach_petsc_csr_boundary)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/rharris/git/navier-stokes-vortex-lab/verification/nonlinear_port/test_adapter.py", line 85, in test_zero_diagonals_reach_petsc_csr_boundary
+    self.assertEqual(captured['csr'], ((0, 2, 4), (0, 1, 0, 1), (0., 2., 3., 0.)))
+AssertionError: Tuples differ: ((0, 1, 2), (1, 0), (2.0, 3.0)) != ((0, 2, 4), (0, 1, 0, 1), (0.0, 2.0, 3.0, 0.0))
+
+First differing element 0:
+(0, 1, 2)
+(0, 2, 4)
+
+- ((0, 1, 2), (1, 0), (2.0, 3.0))
++ ((0, 2, 4), (0, 1, 0, 1), (0.0, 2.0, 3.0, 0.0))
+
+----------------------------------------------------------------------
+Ran 3 tests in 0.001s
+
+FAILED (failures=4)

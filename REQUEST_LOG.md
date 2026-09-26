@@ -8261,3 +8261,49 @@ clean main/origin/main and empty stashes. Required fast-forward pull returned
 already up to date at 7c41b801c25e3c76d62293905f90f566640ea2c7, with 0/0
 divergence. R232 completion is published there, no open lifecycle record;
 Mac remains released. Local Git cannot establish another checkout's live state.
+### R233 outcome — structural CSR repair reviewed, no numerical retry
+
+COMPLETED source review. The old CSR constructor dropped all numerical zeros,
+which necessarily omitted the three scalar diagonal slots and discarded any
+stored zero pressure diagonals. Row scaling used the same constructor. PETSc's
+published 3.25.5 symbolic-LU source checks diagonal structure at the exact line
+named by the saved error. The minimal fix retains/adds diagonal zeros without
+altering the operator, gauge, flux rows, lift, solver or any acceptance gate.
+Constrained velocity unit diagonals were already present. The actual first
+missing row and full assembled matrix remain unsaved; no rank/accuracy/resource
+result is inferred. See docs/realizability/POISEUILLE_SPARSE_REVIEW_R233.md.
+
+Three new regression methods failed on the old source (four assertions, because
+both lift subcases failed). All 59 tests across seven standard-library modules
+pass after repair in 0.565381042 s; post-suite audit found no NumPy/FEM/PETSc/MPI
+modules. They check CSR structure, empty-row rank, dense/matvec equivalence,
+pressure/scalar slots after real bordering/lifting/scaling, and the real solve
+bridge up to a fake createAIJ boundary; no actual factorization is claimed.
+Evidence: evidence/r233/{checks.json,regression_before_fix.txt,tests_after_fix.txt}
+under docs/realizability. The 25-file inventory has only sparse.py/test_adapter.py
+changed from R230. All 23 Python ASTs parse; 168 local links and 233 unique
+request IDs checked; prior logs append-only and Git whitespace clean.
+
+All ten raw R232 files and retained originals match hashes, fixed reservation
+present, PID 144212/cgroup absent. R232 remains INCOMPLETE and spent 1/1; no new
+allocation, manager/worker or numerical attempt. R229's 303-event setup refusal
+remains false. Skipped: real numerical imports/JIT/mesh/assembly/solve, live
+scope/probes, installation, full suite/rotation/tank/B2, physical/render work,
+Mac transfer and account access. Actual numeric pivots, rank/conditioning,
+quadrature, accuracy and resource events remain untested.
+
+Changed files: sparse.py, test_adapter.py, prototype README; R233 review and
+three evidence files; B1_SETUP; four track overviews; STATUS, SESSION_HANDOFF,
+REQUEST_LOG and WORK_SESSIONS. R232 completion 7c41b80 verified by clean pull;
+R233 STARTED c08eb25 published. Completion prepared for scoped commit/push;
+final delivery hash/result belongs in Git/final response, no post-push edits.
+PC/WSL daisy retains ownership, Mac remains released.
+
+Next: Astra/high makes a separate go/no-go admission decision for one later
+bounded n=2 Poiseuille fixture on the repaired source, stopping before execution.
+Any admission must preserve all caps/gates and the prior spent charge, and bind
+a new exclusive directory and clean source/interpreter; old R230 ledger and
+R231 caller remain historical. No `/new` needed for this connected review;
+next prompt Continue. Official OpenAI Docs was searched/opened for Astra/high
+support; task fit is judgment, no model switch or account check. Recommend
+Sol/high for a later mechanical launch only if separately admitted.

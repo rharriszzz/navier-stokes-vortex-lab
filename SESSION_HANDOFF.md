@@ -1,31 +1,55 @@
 # Current session handoff
 
-Last updated 2026-09-26 (America/New_York) for R232.
+Last updated 2026-09-26 (America/New_York) for R233.
 **PC/WSL daisy owns the repository.** No transfer; Mac remains released.
-**R232 spent the one authorized n=2 Poiseuille allocation: INCOMPLETE at PETSc
-symbolic LU, with no retry.** The [result](docs/realizability/POISEUILLE_RESULT_R232.md)
-preserves the exact one-use run, error 73 (“Matrix is missing diagonal entries”),
-clean source/interpreter binding, effective held limits, actual exit and empty
-cleanup. No numerical.json or pre-exit resource snapshot exists; rank, accuracy
-and resource events remain unmeasured. The fixed run directory and raw evidence
-are retained. R229's 303-event setup refusal remains false. Full suite/tank/B2
-execution remains unadmitted.
+**R233 demonstrates and repairs the CSR structural-diagonal defect behind
+R232's PETSc symbolic-LU refusal.** The [source review](docs/realizability/POISEUILLE_SPARSE_REVIEW_R233.md)
+traces omitted scalar diagonals and removed zero pressure diagonals through
+bordering, lifting and row scaling. `CSR.from_rows` now stores every diagonal
+slot, retaining zero values without changing the operator or numerical gates.
+Three regressions fail on the old source; all 59 standard-library tests pass
+with the fix, without numerical imports. This is source evidence, not an
+observed successful factorization or numerical accuracy result.
 
-**Next: Astra/high reviews the saved PETSc failure and sparse source without
-FEM, identifies a minimal correction or blocker, then stops.** Do not launch a
-replacement numerical attempt or reuse the fixed directory. **Use `/new` now**
-for that distinct review, select Astra/high, then Continue. Official
-[Codex command guidance](https://learn.chatgpt.com/docs/developer-commands)
-confirms `/new` starts a fresh chat in the same CLI/repo; the committed handoff
-preserves the task context. No agent-initiated model or session switch occurred.
-R232 correction/start was published at 980ef7f; completion delivery belongs
-in Git/final response, with no post-push edit.
+**The R232 allocation remains spent 1/1 and INCOMPLETE.** Its
+[result](docs/realizability/POISEUILLE_RESULT_R232.md), all ten raw files and
+retained originals are unchanged; fixed directory remains reserved, PID/cgroup
+absent. No numerical report or resource snapshot exists. R229's 303-event
+setup refusal remains false. No FEM, live scope, install or new allocation
+occurred in R233; full suite/tank/B2 work remains unadmitted.
+
+**Next: Astra/high makes the separate admission decision for one later bounded
+n=2 Poiseuille fixture using the repaired source; stop before execution.**
+No `/new` is needed for this directly connected review; next prompt **Continue**.
+Any later allocation needs fresh binding and a new exclusive directory, with
+all caps/gates preserved; never reuse the R232 directory or reset its charge.
+R232 completion 7c41b80 was verified by clean pull; R233 STARTED c08eb25 is
+published. Completion delivery belongs in Git/final response, no post-push edit.
+
+R233 supplied snapshot: 17m 32s / 12:31 PM completion; 276,343 total tokens
+(212,003 input, 16,967,168 cached, 64,340 output, 20,057 reasoning), preceding
+resume session 01a0de6f-8d3d-7ce1-af0d-3a81516bf8ae. Current reported status:
+Codex v0.155.1, Sol/high followed by user-reported change to Astra/high,
+session 01a0de98-b2e9-74c1-8c8f-97150fb60d8c, weekly 95% (11:23 on Oct 3),
+Luna Reserve 99% (10:18 on Oct 3). R233 log retains supplied fields with
+account email redacted. No `/new` excerpt, context percentage or credit count
+supplied. These are user-reported snapshots, not independently checked or
+project-specific usage. No agent-initiated model/session switch occurred.
+
+R233 changed sparse.py/test_adapter.py, prototype README, its review and three
+evidence files, B1_SETUP, four track overviews, STATUS and request/lifecycle/
+handoff records. Checks: 59 tests, 23 ASTs, 25 source hashes (two changed), ten
+R232 raw hashes/originals, 168 local links, 233 unique IDs, append-only logs and
+Git whitespace. Skips: real numerical imports/FEM/JIT/solve, live scopes/probes,
+installs, full suite/rotation/tank/B2, physical/render work and Mac transfer.
+Actual numerical pivots/rank, quadrature/accuracy and resource events remain
+unknown. No separate optional validation task is scheduled before admission.
 
 Historical R231/R232 prelaunch recovery context follows. R232 resumed the same
 authorized single fixture after correcting R231's recoverable import-path
 error; zero numerical attempts had been spent before the R232 launch.
 The [R231 result](docs/realizability/POISEUILLE_PRELAUNCH_R231.md) records exit 1
-before caller preflight, timer, reservation or worker. The fixed run directory is
+before caller preflight, timer, reservation or worker. The fixed run directory
 was absent then; no FEM imported or ran in R231. The user corrected the premature-stop rule in
 R232, so the prior Continue's scoped authorization carries the unspent attempt
 forward. The caller now resolves project imports when invoked by path and starts
@@ -238,12 +262,12 @@ and physical-work limits remain unchanged.
 | Owner | PC/WSL `daisy`; Mac `fire.lan` released after published R161 handoff and R162 receipt. |
 | Checkout | `/home/rharris/git/navier-stokes-vortex-lab`. |
 | Branch/upstream | `main` / `origin/main` |
-| Starting state | R232 same-owner clean entry at db68c61 equal to stored origin/main; empty stashes, rharris/daisy owner. The R231 one-use directory/reservation remained absent. |
+| Starting state | R233 clean same-owner entry at 7c41b80, equal to origin/main after required fast-forward pull; rharris/daisy, empty stashes, no conflicting open session. |
 | Interpreter | /tmp/navier-fenicsx-r229/bin/python verified as 3.12.13 with -I -S; exact environment artifacts verified, setup memory-event predicate refused. Project Python remains 3.12.14. Old /tmp/navier-fenicsx is still partial. |
 | Other owner/process | Mac `fire.lan` released in the published R161 handoff. Local Git cannot inspect another checkout's unpublished state. |
-| Task processes | R232 worker 144212 exited 1 after PETSc LU error; manager final MainPID 0/empty ControlGroup, cleanup empty with unknown_children=false; read-only PID/cgroup absence confirmed. The one numerical allocation is spent. Historical R226 failed expiry unit is separate. |
+| Task processes | R233 read-only checks confirm R232 worker PID 144212 and cgroup absent; fixed directory/reservation and ten raw originals retained. No R233 worker launched. R232 allowance spent 1/1. |
 | Symbolic environment | `/tmp/navier-r183-sympy/bin/python`, Python 3.12.14, SymPy 1.14.0, mpmath 1.3.0; recreate using `requirements-symbolic.txt` if missing. Existing environments unchanged. |
-| Delivery state | R231 completion db68c61 and R232 correction/start 980ef7f published. R232 result/completion prepared for scoped publication; final hash/result in Git/final response. PC retains ownership. |
+| Delivery state | R232 completion 7c41b80 verified by clean pull; R233 STARTED c08eb25 published. R233 repair/review/completion prepared for scoped publication; final delivery in Git/final response. PC retains ownership. |
 
 ## Current result and limits
 
@@ -374,47 +398,45 @@ agent-side POV-Ray backtraces are unavailable.
 
 ## Next task
 
-**GPT-6 Astra / high / PC-WSL daisy: review the spent R232 PETSc symbolic-LU
-failure and sparse source; stop before FEM or another numerical allocation.**
-Use `/new` now for this distinct result review, select Astra/high, then
-**Continue**. [Official Codex guidance](https://learn.chatgpt.com/docs/developer-commands)
-says `/new` starts a fresh chat in the same CLI/repo; the saved evidence and
-handoff provide the new chat's context. [Official Astra documentation](https://developers.openai.com/api/docs/models/gpt-6-astra)
-confirms high reasoning support. Model fit is a judgment, not an account check.
+**GPT-6 Astra / high / PC-WSL daisy: make the separate go/no-go admission
+decision for one later bounded n=2 Poiseuille fixture with the R233 CSR repair.
+Stop before execution.** Continue in this session; no `/new` is needed for this
+connected decision. The next prompt is **Continue**. Official
+[OpenAI Docs](https://developers.openai.com/api/docs/models/gpt-6-astra) was
+searched and opened and confirms high support; task fit is judgment, not an
+account availability check. No agent model/session switch occurred.
 
-Read the [R232 result](docs/realizability/POISEUILLE_RESULT_R232.md),
-[raw worker log](docs/realizability/evidence/r232/run/worker.log),
-[controller result](docs/realizability/evidence/r232/run/result.json),
-[R230 admission](docs/realizability/POISEUILLE_ADMISSION_R230.md),
-`verification/nonlinear_port/{sparse,cube_adapter,fixture_driver}.py`,
-the frozen manifest and R225/R226 reviews. Preserve the raw failure, missing
-measurements and one-use charge. The worker reached PETSc symbolic LU and exited
-1 after error 73, “Matrix is missing diagonal entries.” No matrix row or CSR
-pattern was saved, so the immediate log does not identify the originating row.
+Read the [R233 source review](docs/realizability/POISEUILLE_SPARSE_REVIEW_R233.md)
+and [checks/source inventory](docs/realizability/evidence/r233/checks.json),
+[R232 spent result](docs/realizability/POISEUILLE_RESULT_R232.md),
+[R230 historical admission](docs/realizability/POISEUILLE_ADMISSION_R230.md),
+R225/R226 reviews as needed, frozen manifest and actual caller. The R233 fix
+changes only zero-diagonal storage in executable source; pressure/gauge/flux
+formulation, row scaling, fixture, pins and numerical/resource gates are intact.
+Old R230 hashes and R231 caller remain unchanged and will reject this new source.
 
-1. Follow normal clean Continue ownership/synchronization/start publication.
-   Confirm no live R232 worker or cgroup and the fixed run directory remains
-   reserved. No machine transfer or numerical launch.
-2. Audit structural diagonals in the bordered CSR and Dirichlet lifting path,
-   then the PETSc `createAIJ(..., csr=...)`/LU setup. Use import-free algebra
-   or synthetic CSR tests to reproduce or exclude a missing diagonal. State
-   whether the absent slot could be a constraint scalar, pressure, constrained
-   velocity or another row; do not claim a specific cause without evidence.
-3. If the cause is demonstrated, implement the smallest source correction and
-   meaningful regression while preserving the gauge, flux constraints, exact
-   fixture and all numerical/resource gates. If unresolved, record a concrete
-   blocker and the next discriminating non-FEM check. Do not fabricate a saved
-   rank, resource counter or accuracy result.
-4. End with a reviewed source result or blocker, evidence, checks/skips and a
-   separate future admission decision boundary. This spent attempt grants no
-   retry; do not use the fixed directory again, install packages, run FEM/JIT/
-   solve, full suite, rotation, tank/B2, physical or rendering workloads.
+1. Follow the clean Continue protocol, ownership and start publication. Preserve
+   the R232 raw evidence and spent 1/1 charge; verify retained reservation and
+   absent PID/cgroup without starting a numerical or benign workload.
+2. Decide whether the demonstrated repair and existing environment/containment
+   evidence justify one separately allocated later fixture. Account for the
+   unchanged R229 resource refusal and untested numerical factorization,
+   actual rank/conditioning, accuracy, quadrature and footprint. No threshold
+   relaxation, solver fallback, package substitution or setup rerun by default.
+3. If admitted, define a new exclusive directory and source/interpreter binding
+   against the R233 inventory and a future clean launch commit. Retain the
+   180 s outer / 149+1 s worker, 1536 MiB/no swap/32 tasks, one rank/thread,
+   20,000 mixed-DOF ceiling and all existing scientific/resource gates. Keep
+   pre-reservation recovery distinct from a spent attempt. Never rewrite old
+   ledgers, reuse `/tmp/navier-poiseuille-r230-once`, or launch in this review.
+4. Publish a concrete admission contract or evidence-backed blocker, with one
+   next task. Recommend Sol/high only for a later mechanical launch if admitted;
+   retain Astra/high for changed numerical/scientific/admission decisions.
 
-Completion: source/evidence review with a tested minimal repair or precise
-blocker, published with an explicit statement that **1/1** numerical attempts
-is spent. Recommend Sol/high only for a later mechanical launch after a
-separate reviewed admission; otherwise retain Astra/high for numerical-method
-decisions. The next prompt is **Continue** after `/new` and selecting Astra/high.
+Completion: reviewed go/no-go contract with evidence and unchanged prior charges,
+then stop before reservation/FEM/JIT/solve or any live workload. No new attempt
+is granted by R233 itself. Full suite, rotation, tank/B2, physical and rendering
+work remain unadmitted; Mac remains released.
 
 ### Historical R230 single-fixture execution task (R232 spent)
 

@@ -8,7 +8,7 @@ repairs driver wiring/acceptance. The [R226 launcher review](../../docs/realizab
 records passed benign host checks; the [R229 completed environment](../../docs/realizability/ENVIRONMENT_RECOVERY_R229.md)
 passed metadata/interpreter checks. The [R230 admission](../../docs/realizability/POISEUILLE_ADMISSION_R230.md)
 retains its setup resource refusal, repairs the artifact/runtime gate and admits
-one later bounded Poiseuille attempt. Zero spent; no FEM ran in this review. No production B1/B2
+one later bounded Poiseuille attempt. At R230, zero were spent and no FEM ran. No production B1/B2
 module imports this directory; no dependency pins changed.
 
 Current result: [R232](../../docs/realizability/POISEUILLE_RESULT_R232.md)
@@ -16,6 +16,9 @@ used that allocation once. The real worker reached PETSc symbolic LU and exited
 1 with missing diagonal entries; no numerical report or resource snapshot was
 produced. The allocation is spent, cleanup is empty, and no retry is admitted.
 The R231 prelaunch import error was corrected before this attempt.
+[R233](../../docs/realizability/POISEUILLE_SPARSE_REVIEW_R233.md) demonstrates and
+repairs CSR removal of structural zero pressure/scalar diagonals. No numerical
+rerun or new allocation; a separate admission decision is the next task.
 
 - `polynomial.py`, `fixtures.py`: exact rational manufactured fields and
   independent Poiseuille/rigid-rotation oracles.
@@ -25,7 +28,8 @@ The R231 prelaunch import error was corrected before this attempt.
   loads, boundary-value extraction, mixed-plus-three-scalar assembly and sparse
   PETSc LU source. No external imports, CLI or supervised driver.
 - `sparse.py`: CSR bordering, retained lifting rows, fixed step scaling and
-  a three-constraint Gram rank/condition screen.
+  a three-constraint Gram rank/condition screen; explicit zero diagonal slots
+  survive both bordering and row scaling for PETSc symbolic LU.
 - `diagnostics.py`: unassembled field/error/budget forms, signed reductions,
   numerical step gates, refinement/quadrature checks and physical endpoint
   versus discrete time-integrated balances. It cannot accept a whole run.
@@ -50,7 +54,7 @@ The R231 prelaunch import error was corrected before this attempt.
   R225 failure evidence is retained; do not rerun without a new bounded scope.
 - `package_identity.py`: exact FFCx Conda artifact and retained recovery evidence
   binding, with a shared worker/result runtime gate; package 0.10.1, runtime 0.10.0.
-- Seven `test_*.py` modules: 56 standard-library tests, including complete driver
+- Seven `test_*.py` modules: 59 standard-library tests, including complete driver
   wiring with fake FEM boundaries, raw-evidence corruption, source binding and
   manager-failure refusals; no FEM import.
 

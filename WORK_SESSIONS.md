@@ -1047,3 +1047,25 @@ diagonals/lifting/PETSc setup without numerical imports, minimally repair a
 demonstrated structural cause and test it, or document a precise blocker.
 Stop before numerical execution/admission; the R232 allowance remains spent
 1/1 and its fixed directory/evidence must be preserved. No new task worker.
+### R233 completion
+COMPLETED | 2026-09-26T16:50:37Z | PC/WSL daisy | released: no
+Demonstrated CSR zero filtering removes pressure/scalar diagonal slots required
+by PETSc symbolic LU. Minimal constructor fix retains every diagonal without
+changing matrix values, constraints/lift/scales, solver, pins or gates. Three
+new regressions fail before fix; 59 standard-library tests pass after it, with
+no numerical modules loaded. Actual factorization/accuracy remain untested.
+R232 raw evidence and ten originals hash-identical, fixed reservation present,
+PID/cgroup absent; allowance spent 1/1, no new admission or workload. R229 setup
+resource refusal retained. Files: sparse.py/test_adapter.py, prototype README,
+R233 review/three evidence files, B1_SETUP, four track overviews, STATUS,
+SESSION_HANDOFF, REQUEST_LOG and WORK_SESSIONS. Checks: 59 tests, 23 ASTs,
+25 source hashes (two changed), ten raw hashes/originals, 168 local links,
+233 unique IDs, append-only logs and Git whitespace. Skips: all real numerical
+imports/FEM/JIT/solve, live probes/scopes, installs, suite/rotation/tank/B2,
+physical/render work and Mac transfer. Evidence: POISEUILLE_SPARSE_REVIEW_R233.md
+and docs/realizability/evidence/r233/. Actual rank/pivots/quadrature/resources
+remain unknown. Next: Astra/high separate admission decision, no execution;
+no /new needed, prompt Continue. Sol/high only for a later admitted launch.
+R232 completion 7c41b80 verified; STARTED c08eb25 published. Scoped completion
+publication follows; final delivery hash/result in Git/final response, no
+post-push edit. PC retains ownership, Mac released.

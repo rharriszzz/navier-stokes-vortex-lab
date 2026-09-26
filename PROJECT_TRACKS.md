@@ -7,8 +7,10 @@ cleanup but no numerical report or resource snapshot. R231's earlier caller
 failure was pre-reservation and remains separate evidence. R230's artifact-bound
 FFCx gate and caps remain unchanged. R229's setup resource refusal (303
 memory.max events, no OOM/kill) remains unchanged. Full convergence/tank/B2
-execution remains unadmitted. Next: Astra/high reviews the sparse source and
-saved error without FEM; follow the [handoff task](SESSION_HANDOFF.md#next-task).
+execution remains unadmitted. [R233](docs/realizability/POISEUILLE_SPARSE_REVIEW_R233.md)
+repairs the demonstrated loss of structural zero diagonals; 59 standard-library
+tests pass without numerical imports. No new attempt is admitted. Next is a
+separate admission decision; follow the [handoff task](SESSION_HANDOFF.md#next-task).
 No tank/hardware route or feasible contraction range is established.
 
 R188 priority update (2026-09-22): establish measurable essential dynamical

@@ -34,10 +34,17 @@ class CSR:
 
     @classmethod
     def from_rows(cls, rows):
+        """Store every diagonal slot, including zero pressure/scalar entries.
+
+        PETSc's serial AIJ symbolic LU requires structural diagonals. Adding
+        a zero slot leaves the operator unchanged; off-diagonal zeros may drop.
+        """
         ptr, cols, vals = [0], [], []
-        for row in rows:
+        for i, row in enumerate(rows):
+            row = dict(row)
+            row.setdefault(i, 0.0)
             for j, v in sorted(row.items()):
-                if v:
+                if v or j == i:
                     cols.append(int(j))
                     vals.append(float(v))
             ptr.append(len(cols))

@@ -1,6 +1,6 @@
 # Project status: a boundary-controlled engineering approximation
 
-Updated 2026-09-26 (America/New_York), through R232. PC/WSL daisy owns the
+Updated 2026-09-26 (America/New_York), through R233. PC/WSL daisy owns the
 repository. **R232 corrects the recoverable R231 caller failure and resumes the
 same authorized, unspent one-use fixture, then spends it on a PETSc LU failure.**
 The [R232 result](docs/realizability/POISEUILLE_RESULT_R232.md) records an
@@ -8,9 +8,12 @@ The [R232 result](docs/realizability/POISEUILLE_RESULT_R232.md) records an
 entries.” The manager confirmed an empty group and the worker PID/cgroup are
 gone. No numerical report or pre-exit resource snapshot exists, so actual
 memory events, rank and accuracy remain unknown. **The one-use allocation is
-spent 1/1; no retry is admitted.** Next: Astra/high reviews the sparse source
-and saved error without FEM; follow the [single task](SESSION_HANDOFF.md#next-task).
-Use `/new` before that distinct review, select Astra/high, then Continue.
+spent 1/1; no retry is admitted.** [R233 source review](docs/realizability/POISEUILLE_SPARSE_REVIEW_R233.md)
+demonstrates that CSR conversion discarded zero pressure/scalar diagonal slots
+and repairs their storage without changing the operator. All 59 standard-library
+tests pass; no numerical imports or new workload ran. Next: Astra/high makes
+the separate admission decision, stopping before execution; follow the
+[single task](SESSION_HANDOFF.md#next-task). No `/new` needed; next prompt Continue.
 
 Historical R231 context: the
 [prelaunch result](docs/realizability/POISEUILLE_PRELAUNCH_R231.md) records a
@@ -30,7 +33,8 @@ R231 user-supplied status reports Sol/high after a model change, weekly 97% and
 Luna Reserve 99%; distinct session IDs, token snapshot and redacted account
 fields are in REQUEST_LOG.md. These are snapshots, not independent checks.
 R231 STARTED c90193e, allocation c3b5598 and completion db68c61 were published.
-R232 result completion delivery belongs in Git/final response.
+R232 completion 7c41b80 verified by clean pull; R233 STARTED c08eb25 published.
+R233 completion delivery belongs in Git/final response.
 R230 supplied snapshot: preceding completion 13m 26s / 11:45 AM; 938,400 tokens
 (831,406 input, 17,031,424 cached, 106,994 output, 23,518 reasoning). Current
 Astra/high, weekly 98% (11:23 Oct 3 reset), Luna Reserve 99% (10:18 Oct 3 reset).

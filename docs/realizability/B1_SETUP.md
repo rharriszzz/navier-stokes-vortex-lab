@@ -2,7 +2,9 @@
 
 Current PC status: [R232's one-use Poiseuille result](POISEUILLE_RESULT_R232.md)
 is INCOMPLETE at PETSc symbolic LU, and the single numerical allocation is
-spent 1/1. R229's transaction/metadata/interpreter checks completed; its setup
+spent 1/1. [R233](POISEUILLE_SPARSE_REVIEW_R233.md) repairs structural zero
+diagonal storage and passes 59 standard-library tests, with no numerical rerun
+or new admission. R229's transaction/metadata/interpreter checks completed; its setup
 memory-event refusal remains unchanged. FFCx's exact artifact/runtime gate is
 repaired. Retain `/tmp/navier-fenicsx-r229`; old `/tmp/navier-fenicsx` stays partial.
 Follow the [single next task](../../SESSION_HANDOFF.md#next-task); do not reinstall
