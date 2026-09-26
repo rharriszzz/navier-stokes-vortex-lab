@@ -1,12 +1,12 @@
 # Project Tracks
 
-R229's [offline environment recovery](docs/realizability/ENVIRONMENT_RECOVERY_R229.md)
-completed the exact package transaction and Python 3.12.13 checks. The setup
-resource predicate refused success: 303 memory.max events at 1536 MiB, no OOM/kill.
-Exit/cleanup confirmed; prior evidence and partial prefix preserved. Zero FEM
-attempts. Next: Astra/high reviews existing artifacts/resource refusal and the
-FFCx version gate for single-fixture admission, without reinstall or FEM; follow
-the single [handoff task](SESSION_HANDOFF.md#next-task).
+R230's [environment/version review](docs/realizability/POISEUILLE_ADMISSION_R230.md)
+completed the artifact-bound FFCx gate and admits one later bounded n=2 Poiseuille
+attempt on daisy. Zero numerical attempts spent; execution awaits a separate
+Continue. R229's setup resource refusal (303 memory.max events, no OOM/kill)
+remains unchanged. Full convergence/tank/B2 execution remains unadmitted.
+Next: Sol/high executes the one-use fixed contract and stops; follow the single
+[handoff task](SESSION_HANDOFF.md#next-task).
 No tank/hardware route or feasible contraction range is established.
 
 R188 priority update (2026-09-22): establish measurable essential dynamical

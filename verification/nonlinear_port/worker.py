@@ -1,7 +1,7 @@
 """Held Poiseuille worker. FEM imports occur only after supervisor release.
 
-This is source for a future admitted scope, not a standalone launch command.
-The worker-scope backend remains unadmitted for whole-task execution; attempts zero.
+This is not a standalone launch command. R230 admits one later fixture;
+a separate source-bound, one-use reservation and supervised release are required.
 """
 import hashlib
 import json
@@ -15,6 +15,7 @@ from .handshake import held, completed
 from .manifest import validate as validate_manifest
 from .prototype import Refusal
 from .source_binding import verify_source
+from .package_identity import read_ffcx_artifact, validate_versions, MODULE
 
 
 def _read_json(path):
@@ -31,6 +32,7 @@ def _cgroup_path():
 
 def load_pinned_modules(versions):
     """Import inside the verified scope and refuse any different FEM pin."""
+    artifact = read_ffcx_artifact(sys.prefix)
     import numpy as np
     import dolfinx
     from dolfinx import fem, mesh
@@ -48,8 +50,8 @@ def load_pinned_modules(versions):
                   dolfinx=dolfinx.__version__, basix=basix.__version__,
                   ufl=ufl.__version__, ffcx=ffcx.__version__,
                   petsc4py=petsc4py.__version__, mpi4py=mpi4py.__version__)
-    if any(actual[k] != versions[k] for k in actual):
-        raise Refusal(f'pinned Python/FEM version mismatch: {actual}')
+    if Path(ffcx.__file__).resolve() != (Path(sys.prefix)/MODULE).resolve():
+        raise Refusal('FFCx imported outside the verified artifact')
     petsc_version = '.'.join(map(str, PETSc.Sys.getVersion()[:3]))
     if petsc_version != versions['petsc']:
         raise Refusal('PETSc library version mismatch')
@@ -60,9 +62,10 @@ def load_pinned_modules(versions):
         raise Refusal('one MPI rank required')
     actual.update(petsc=petsc_version, mpich=versions['mpich'],
                   mpi_library=mpi_library.strip())
+    validate_versions(actual, versions, artifact)
     return dict(np=np, mesh=mesh, fem=fem, fem_petsc=fem_petsc,
                 basix_ufl=basix_ufl, basix=basix, ufl=ufl,
-                PETSc=PETSc, comm=MPI.COMM_WORLD), actual
+                PETSc=PETSc, comm=MPI.COMM_WORLD), actual, artifact
 
 
 def main(args=None):
@@ -94,11 +97,12 @@ def main(args=None):
             'NUMEXPR_NUM_THREADS')):
         raise Refusal('one numerical thread per library required before imports')
     t0 = time.monotonic()
-    modules, actual_versions = load_pinned_modules(manifest['versions'])
+    modules, actual_versions, artifact = load_pinned_modules(manifest['versions'])
     t1 = time.monotonic()
     numerical = run_poiseuille(modules, manifest)
     t2 = time.monotonic()
     numerical['actual_versions'] = actual_versions
+    numerical['ffcx_artifact'] = artifact
     numerical['worker_intervals'] = dict(import_seconds=t1-t0,
                                           fixture_setup_jit_and_solve_seconds=t2-t1)
     with open(directory/'numerical.json', 'x', encoding='utf-8') as stream:

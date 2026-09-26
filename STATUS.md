@@ -1,20 +1,21 @@
 # Project status: a boundary-controlled engineering approximation
 
-Updated 2026-09-26 (America/New_York), through R229. PC/WSL `daisy` owns the
-repository. **Offline installation and metadata/interpreter checks completed;
-the overall setup resource check refused success.** New `/tmp/navier-fenicsx-r229`
-has 338 exact package records and verified Python 3.12.13. The run took
-11.434067521 s through result save, reached 1536 MiB and recorded 303 memory.max
-events with no OOM/kill. Exit/cleanup confirmed; old partial prefix preserved.
-See the [R229 review](docs/realizability/ENVIRONMENT_RECOVERY_R229.md).
-**Zero numerical attempts; no FEM execution admitted.** Next: Astra/high reviews
-existing artifacts/resource refusal and the FFCx version gate, then decides
-single-fixture admission without reinstalling or running FEM; follow the
-[single next task](SESSION_HANDOFF.md#next-task). Recommend /new at this boundary.
-R229 supplied snapshot: Astra/high, context 28% left (190K/258K), weekly 99%
-(reset 11:23 Oct 3), Luna Reserve 99% (10:18 Oct 3); full redacted fields in R229.
-These are user-reported values; no token-total/credit update or model switch.
-STARTED e4cb868 and procedure c38a668 published; completion delivery in Git/final.
+Updated 2026-09-26 (America/New_York), through R230. PC/WSL daisy owns the
+repository. **One later n=2 Poiseuille attempt admitted; zero spent.** The
+[R230 review](docs/realizability/POISEUILLE_ADMISSION_R230.md) accepts reuse of
+R229's completed artifact evidence and repairs exact FFCx package/runtime identity.
+R229's setup resource refusal remains false: 303 memory.max events at 1536 MiB,
+no OOM/kill; no numerical footprint inferred. No FEM ran. All 56 standard-library
+tests pass without numerical imports. Next: Sol/high executes the one-use fixed
+contract after a separate Continue; follow the [single task](SESSION_HANDOFF.md#next-task).
+Full convergence/tank/B2 launches remain unadmitted.
+R230 supplied snapshot: preceding completion 13m 26s / 11:45 AM; 938,400 tokens
+(831,406 input, 17,031,424 cached, 106,994 output, 23,518 reasoning). Current
+Astra/high, weekly 98% (11:23 Oct 3 reset), Luna Reserve 99% (10:18 Oct 3 reset).
+Distinct resume/status session IDs and all redacted fields are in REQUEST_LOG.md.
+These are reported snapshots, not independently checked or project-specific use.
+No model/session switch; R229 completion 2943a8a verified by clean pull.
+R230 STARTED ad40b3a published; completion delivery belongs in Git/final response.
 R223 was published as c679cfa. Historical September 22 snapshot: 21m 22s / 9:33 PM completion; 355,910 total
 tokens (300,015 input, 8,700,288 cached, 55,895 output, 20,311 reasoning);
 current Astra/high; 53% weekly left (17:37 on 28 Sep reset), 283 credits,
@@ -25,7 +26,7 @@ not project-specific usage. R222 completion bdc51f9 is verified on live remote m
 remain paused, with zero execution attempts.** The
 [R222 source and admission review](docs/realizability/POISEUILLE_DRIVER_R222.md)
 records the earlier 33 import-free checks. R225 subsequently reviewed and
-repaired that source; R226 completed the launcher; R229 admission review is linked above. R220 was published as
+repaired that source; R226 completed the launcher; R230 admission decision is linked above. R220 was published as
 f252f31; R221 reminder as cecb4dd. The
 [cost estimate](docs/PROJECT_RESOURCE_AND_COST_ESTIMATE.md) now includes confirmed
 $40 packages and the $100 Pro upgrade. The [process/model review](docs/PROCESS_REVIEW_AND_MODEL_ROUTING.md)
@@ -60,8 +61,8 @@ with both ownership routes. A modest atmospheric contraction apparatus is
 estimated at $12k–35k from scratch or $5k–18k additional in an equipped lab,
 excluding research labor. Extra pressure earns no range if delivery/optics
 limit first. These are budgetary judgments, not quotations or performance claims.
-Latest usage snapshot is recorded in REQUEST_LOG.md (R223); R197 remains historical.
-Latest technical work: [R229 offline recovery and resource refusal](docs/realizability/ENVIRONMENT_RECOVERY_R229.md).
+Latest usage snapshot is recorded in REQUEST_LOG.md (R230); earlier entries remain historical.
+Latest technical work: [R230 version gate and one-fixture admission](docs/realizability/POISEUILLE_ADMISSION_R230.md).
 R226 previously passed 49 import-free checks for the R222 driver and
 [R196 cube adapter](docs/realizability/CUBE_ADAPTER_R196.md); those were not rerun in R227. FEM forms have not been constructed or assembled,
 and convergence is untested. Execution remains unadmitted with zero attempts.

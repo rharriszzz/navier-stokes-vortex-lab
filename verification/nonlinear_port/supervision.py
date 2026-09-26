@@ -1,6 +1,6 @@
-"""Finite one-attempt Poiseuille controller; no admitted whole-task backend.
+"""Finite one-attempt Poiseuille controller; explicit admission required.
 
-An admitted Linux backend must create a held whole-task scope, verify effective
+The separately reviewed Linux backend must create a held whole-task scope, verify effective
 limits and independent expiry, then release a pinned worker. This controller
 keeps the reservation and result ledger. It deliberately has no default backend:
 the restricted agent namespace cannot establish host containment, and the
@@ -16,6 +16,7 @@ import time
 
 from .manifest import validate as validate_manifest
 from .prototype import Refusal
+from .package_identity import validate_versions
 from .sparse import condition_from_gram
 from .fixture_driver import numerical_decision
 from .diagnostics import (field_report, quadrature_comparison, step_checks,
@@ -84,7 +85,7 @@ def validate_worker_result(payload, versions, gates):
                 'diagnostics_degree24', 'diagnostics_degree26',
                 'quadrature_comparison', 'step_checks', 'multipliers', 'eta',
                 'physical_endpoint_budgets',
-                'phase_seconds', 'worker_intervals', 'actual_versions'}
+                'phase_seconds', 'worker_intervals', 'actual_versions', 'ffcx_artifact'}
     if not isinstance(payload, dict) or not required <= payload.keys():
         raise Refusal('incomplete one-fixture worker result')
     if (payload['fixture'] != 'poiseuille' or type(payload['subdivisions']) is not int
@@ -149,8 +150,7 @@ def validate_worker_result(payload, versions, gates):
             or payload['numerical_accepted'] is not True
             or decision['numerical_accepted'] is not True):
         raise Refusal('failed or inconsistent numerical evidence')
-    if any(payload['actual_versions'].get(k) != v for k, v in versions.items()):
-        raise Refusal('worker reported different pinned versions')
+    validate_versions(payload['actual_versions'], versions, payload['ffcx_artifact'])
     phases = payload['phase_seconds']
     intervals = payload['worker_intervals']
     if (not isinstance(phases, dict) or set(phases) != {

@@ -1,29 +1,30 @@
 # Current session handoff
 
-Last updated 2026-09-26 (America/New_York) for R229.
-**PC/WSL `daisy` owns the repository.** No transfer; Mac remains released.
-**R229 completed the offline transaction and metadata/interpreter checks; its
-setup resource predicate refused success.** The new `/tmp/navier-fenicsx-r229`
-has all 338 exact package records, committed history, required files and verified
-Python 3.12.13. Installer/worker exits are 0 and cleanup is confirmed. Observed
-11.434067521 s through result save; memory reached 1536 MiB with 303 max events,
-no OOM/kill. Keep top-level setup success=false; no retroactive waiver.
-The [R229 review](docs/realizability/ENVIRONMENT_RECOVERY_R229.md) preserves those
-separate outcomes. Old `/tmp/navier-fenicsx` remains partial and unchanged.
-**Zero FEM attempts granted/spent.** No numerical imports or workload requested.
-Next: **Astra/high reviews the completed environment/resource refusal and fixes
-the artifact-bound FFCx version gate, then decides single-fixture admission.**
-No reinstall or FEM execution in that review. Do not relax numerical caps/gates.
-R229 STARTED e4cb868 and tested procedure/allocation c38a668 published;
-R227 delivery 23a84be verified. Completion delivery belongs in Git/final response.
-User snapshot: Codex v0.155.1, Astra/high, same reported session
-01a0cbe6-635a-7761-a6b1-454b78e9b316; context 28% left (190K/258K); weekly 99%
-(resets 11:23 Oct 3), Luna Reserve 99% (10:18 Oct 3). REQUEST_LOG.md R229 retains
-all supplied fields with account email redacted. No worked-for/token totals or
-credit count supplied this time. Values are user-reported, not independently
-checked usage. No model/session switch occurred. Recommend **/new now**, retaining
-Astra/high, then **Continue**: installation-to-admission review is a useful fresh
-context boundary, with the complete next task below preserved in Git.
+Last updated 2026-09-26 (America/New_York) for R230.
+**PC/WSL daisy owns the repository.** No transfer; Mac remains released.
+**R230 admits one later bounded n=2 Poiseuille attempt; zero spent.**
+The [admission review](docs/realizability/POISEUILLE_ADMISSION_R230.md) accepts
+reuse of the existing artifact evidence and repairs the exact FFCx gate in both
+worker and result validation. Package remains 0.10.1/pyhbc3ee6d_1 with its saved
+digest; only that artifact permits the embedded/runtime 0.10.0 string. Fifty-six
+standard-library tests pass without numerical imports. No FEM ran.
+R229's top-level setup result remains false: 303 memory.max events at 1536 MiB,
+no OOM/kill. Transaction, metadata/interpreter, exit and cleanup succeeded;
+this is no numerical-footprint prediction or retroactive setup waiver. Retain
+/tmp/navier-fenicsx-r229 for the fixture and /tmp/navier-fenicsx as partial.
+**Next: Sol/high executes the single-use contract after a separate Continue,
+records the result and stops.** All caps/thresholds remain. Full suite/tank/B2
+execution remains unadmitted. Read the complete Next task before any launch.
+R229 completion 2943a8a verified by clean pull; R230 STARTED ad40b3a published.
+R230 completion delivery belongs in Git/final response, no post-push edit.
+Supplied snapshot: 13m 26s / 11:45 AM completion; 938,400 total tokens (831,406
+input, 17,031,424 cached, 106,994 output, 23,518 reasoning), preceding resume
+session 01a0cbe6-635a-7761-a6b1-454b78e9b316. Current status: Codex v0.155.1,
+Astra/high, session 01a0de65-6733-7371-9a22-d258ffe15779, weekly 98% (11:23 Oct 3),
+Luna Reserve 99% (10:18 Oct 3). R230 log retains supplied fields with account
+email redacted. No /new excerpt, context percentage or credit count supplied.
+These are reported snapshots, not independently checked/project-specific usage.
+No model/session switch inferred or performed.
 R223 published the supplied snapshot and pause as c679cfa. Historical snapshot:
 User reports 21m 22s / 9:33 PM completion, 355,910 total tokens (300,015 input,
 8,700,288 cached, 55,895 output, 20,311 reasoning), current Astra/high,
@@ -34,10 +35,10 @@ not project-specific accounting or independently checked account state.
 R222 completion bdc51f9 was verified on live remote main during R223 preflight.
 R222 completed the bounded n=2 Poiseuille driver, held worker and finite
 supervision **source** step with 33 import-free tests. No FEM or scope ran;
-execution remains unadmitted with zero attempts. The [R222 review](docs/realizability/POISEUILLE_DRIVER_R222.md)
+execution was then unadmitted with zero attempts. The [R222 review](docs/realizability/POISEUILLE_DRIVER_R222.md)
 records source and host limits. R225 completed the critical review and R226 completed the launcher. R227 reached
 an installation timeout; R229 completed the transaction but refused its resource
-predicate. The admission review is in the single Next task below.
+predicate. R230 now admits only the one fixture in the Next task below.
 R220 published as f252f31 and was verified on remote main. R221 reminder
 records were prepared locally; Git history records their later delivery.
 R221 did not switch models or resume implementation; R222 resumed only source work.
@@ -94,12 +95,12 @@ R222 joined it to a single-fixture driver and finite supervised worker/controlle
 source; 33 standard-library checks pass. FEM imports, UFL construction,
 mesh/assembly/solves, actual scope and convergence remain untested.
 **R225 reviewed the source; R226 completed whole-task launcher validation.**
-Execution remains unadmitted with zero FEM attempts. Clean source/interpreter
+R230 now admits one later fixture with zero spent. Clean source/interpreter
 binding, actual benign exit and independent expiry/child cleanup are verified;
-review the completed environment and setup resource event before a fixture-admission decision.
+the completed environment/setup resource review is linked above.
 Full convergence-suite and tank launches remain unadmitted. No actual base,
-gain or feasible contraction range is established. Astra/high is recommended for
-the current admission review; no agent-initiated switch or machine transfer.
+gain or feasible contraction range is established. Sol/high is recommended for
+the admitted fixed-contract execution; no agent-initiated switch or machine transfer.
 R191 similarity and R192 operating/error gates remain.
 The ideal 0.3927 micro-N m contrast, separate 0.1309 micro-N m residual/confound
 limits and 1.528e-7 m²/s² covariance allocation remain unverified requirements.
@@ -196,12 +197,12 @@ and physical-work limits remain unchanged.
 | Owner | PC/WSL `daisy`; Mac `fire.lan` released after published R161 handoff and R162 receipt. |
 | Checkout | `/home/rharris/git/navier-stokes-vortex-lab`. |
 | Branch/upstream | `main` / `origin/main` |
-| Starting state | R229 required clean fast-forward pull at 23a84be, equal to fetched origin/main; empty stashes, same rharris/daisy owner. STARTED e4cb868 published. |
+| Starting state | R230 clean required fast-forward pull retained 2943a8a equal to fetched origin/main; empty stashes, rharris/daisy owner. STARTED ad40b3a published. |
 | Interpreter | /tmp/navier-fenicsx-r229/bin/python verified as 3.12.13 with -I -S; exact environment artifacts verified, setup memory-event predicate refused. Project Python remains 3.12.14. Old /tmp/navier-fenicsx is still partial. |
 | Other owner/process | Mac `fire.lan` released in the published R161 handoff. Local Git cannot inspect another checkout's unpublished state. |
-| Task processes | R229 installer and worker exited 0; unit not-found, cgroup removed, observed worker absent. No current task process or FEM workload. Completed new prefix retained; old partial prefix retained. |
+| Task processes | R230 launched no task worker or FEM. Read-only check found R229 PID/cgroup absent; prior actual exit/cleanup retained. One later fixture admitted, zero spent; no run directory reserved. |
 | Symbolic environment | `/tmp/navier-r183-sympy/bin/python`, Python 3.12.14, SymPy 1.14.0, mpmath 1.3.0; recreate using `requirements-symbolic.txt` if missing. Existing environments unchanged. |
-| Delivery state | R227 delivery 23a84be, R229 STARTED e4cb868 and procedure c38a668 published. R229 completion prepared for scoped publication; final hash/result in Git/final response. PC retains ownership. |
+| Delivery state | R229 completion 2943a8a verified remotely via pull; R230 STARTED ad40b3a published. R230 completion prepared for scoped publication; final hash/result in Git/final response. PC retains ownership. |
 
 ## Current result and limits
 
@@ -332,58 +333,61 @@ agent-side POV-Ray backtraces are unavailable.
 
 ## Next task
 
-**GPT-6 Astra / high / PC-WSL daisy: finish environment/version admission review
-for one tiny Poiseuille fixture, without reinstalling or running FEM.**
-Read [R229 result and limits](docs/realizability/ENVIRONMENT_RECOVERY_R229.md),
-[raw resource result](docs/realizability/evidence/r229/run/result.json),
-[artifact/interpreter verification](docs/realizability/evidence/r229/run/verification.json),
-[R227 review](docs/realizability/ENVIRONMENT_RESTORE_R227.md), R225/R226 source and
-launcher reviews, the frozen manifest/environment and R103 practical policy.
-The new prefix is `/tmp/navier-fenicsx-r229`; old `/tmp/navier-fenicsx` stays partial.
+**GPT-6 Sol / high / PC-WSL daisy: execute exactly one admitted n=2 Poiseuille
+fixture after a new Continue, publish the result and stop.**
+Read the [R230 one-use admission contract](docs/realizability/POISEUILLE_ADMISSION_R230.md),
+[reviewed source inventory](docs/realizability/evidence/r230/checks.json),
+R229 result/verification and R226 launcher review. Preserve all prior failures,
+charges and evidence. One separate fixture allocation admitted, zero spent;
+the non-executable manufactured-suite manifest remains unchanged at zero attempts.
 
-1. Normal Continue ownership/synchronization/start publication first. Confirm
-   local prefix/artifacts still exist and no task survivors. Preserve R229's
-   top-level refusal and prior charges: transaction/checks passed, but memory.max
-   events=303, peak=1536 MiB, OOM/kill=0. Do not turn that setup record into PASS.
-   No reinstall or replay of its large archive scan is required by the evidence.
-2. Assess whether existing artifact evidence suffices for later use despite
-   the setup event. Any further check must be a separately declared small bounded
-   metadata/interpreter-only validation of the existing prefix, with all relevant
-   effective limits/cleanup observed. It must not silently retry installation,
-   relax numerical memory-event gates, or infer the FEM footprint from setup.
-   Current snapshot cannot attribute max events between anonymous and file cache.
-3. Implement/test the smallest FFCx version handling that binds the exact
-   conda-forge 0.10.1/pyhbc3ee6d_1 artifact and its saved digest while recognizing
-   upstream embedded 0.10.0. Keep provenance/package versions and runtime strings
-   separate; retain other pins and raw-result validation. Cover wrong artifact,
-   wrong runtime string and missing evidence refusals with import-free tests.
-   Current worker and result validation compare runtime ffcx to 0.10.1 and would
-   reject the documented artifact; review both before any future release.
-4. End with an explicit single-fixture admission or precise remaining refusal,
-   including source/manifest/interpreter binding and non-reusable attempt scope.
-   No FEM imports/JIT/mesh/assembly/solve in this review; a numerical attempt needs
-   a subsequent separate execution step. Preserve 180 s/1536 MiB/no swap/32 tasks,
-   one rank/thread and all numerical thresholds. No full suite/tank/physical/render
-   work. Recommend Sol/high only for a later fixed-contract mechanical execution;
-   retain Astra/high for changed scientific or admission choices.
+1. Normal Continue ownership, clean synchronization and STARTED publication.
+   Inspect logs for any spent/unresolved R230 fixture reservation before launch;
+   missing disposable files never reset its attempt. No Mac transfer.
+2. Verify reviewed source inventory and frozen manifest hash from R230. Bind the
+   actual clean launch commit (metadata-only descendants permitted) in admission
+   and reservation. Use /tmp/navier-fenicsx-r229/bin/python and require R229's
+   binary SHA-256 5f083df36ec986d5cd13d2549ca6cfe1ddaf658509f9e419b454b2fb375c27a3.
+   Refresh live host capacity/manager facts. No reinstall, changed pins, standalone
+   numerical import test or prewarming. Missing artifacts/changed source stop.
+3. Record the one-use allocation before launch, for exactly
+   /tmp/navier-poiseuille-r230-once. Use supervise_once and SystemdBackend, with
+   matching approved fixture/source/manifest/directory admission. Any reservation
+   or partial start consumes it. No alternate directory or automatic retry.
+   Use one finite caller whose outer timer includes its preflight and result save;
+   include interpreter hash comparison before starting the unit. Existing held
+   source/interpreter binding must match before release. Follow R230's contract.
+4. Keep 180 s observed total (15 setup/150 work/15 finish), 149+1 s independent
+   worker expiry, 1536 MiB/no swap/32 tasks, one rank/thread, <=20,000 mixed DOFs.
+   Execute only Poiseuille n=2, dt=.125 with exact history/trace, non-exact free
+   guess and checked correction. Keep all degree-24/26/error/budget gates and
+   zero max/OOM/PID-event requirement. Never relax a gate after seeing results.
+5. Persist raw terms, version/artifact evidence, timing/counters, actual exit and
+   confirmed cleanup; preserve incomplete outcomes and report unmeasured tails.
+   Stop after one result or any refusal, without repair-and-rerun. No full suite,
+   rotation, tank, B2, physical/optical or render work. Recommend Astra/high for
+   interpretation or any source/scientific/admission change afterward.
 
-Recommend **/new now**, keep Astra/high, then **Continue**. This is a useful
-completed-step boundary with the user's reported 28% remaining context, not a
-mandatory protocol rule or an automatic switch. Official
-[CLI /new documentation](https://learn.chatgpt.com/docs/developer-commands?surface=cli)
-and [Astra/high support](https://developers.openai.com/api/docs/models/gpt-6-astra)
-were searched/opened through OpenAI Docs; task fit is judgment, no account check.
-Same PC owner; Mac remains released. Early Mac algebra checks require a normal
-handoff and do not block this review.
+Completion: one bounded observed result, or a concrete prelaunch refusal, with
+source/interpreter binding, spent-attempt state, cleanup and publication recorded.
+Actual library compatibility, JIT/mesh/solve cost, rank and accuracy are unknown.
+R229's failed setup resource predicate remains false even if the fixture passes.
+R230 changed the package identity gate, worker/result wiring and tests; added
+its admission/check record; updated status, four track overviews, B1 setup,
+prototype README and request/lifecycle/handoff records. Checks: 56 standard-library
+tests, no numerical imports, 23 ASTs and 17 R229 evidence hashes; documentation,
+append-only log, source inventory and Git checks before publication. No new live
+validation scope, installation, numerical workload or retry occurred.
+[Official OpenAI Docs](https://developers.openai.com/api/docs/models/gpt-6-sol)
+was searched/opened and confirms Sol/high support. Task fit is judgment; no
+account check or model switch. The next prompt is **Continue**.
 
-R229 changed status/request/lifecycle/handoff, one finite recovery procedure and
-raw evidence, R229 review, B1 setup/prototype README and four track overviews.
-Checks: live offline transaction, 338 archive/record digests, 76,252 file entries,
-Python -I -S identity, actual exit/cleanup, source/JSON/hash/link/log/Git checks.
-No numerical test-suite rerun or numerical-source/pin change; prior evidence is
-unchanged. Remaining decisions are setup-event interpretation and artifact-bound
-FFCx admission, not another dependency solve. Completion prepared for publication;
-delivery hash/result in Git/final response, no post-push log edits.
+### Historical R229 review task (completed by R230)
+
+R229 requested assessing retained environment/resource evidence and repairing
+artifact-bound FFCx handling before an explicit single-fixture admission decision.
+R230 completed that review without reinstalling or executing FEM. Its result and
+full next-step conditions are above; no separate installation review remains.
 
 ### Historical R227 recovery task (executed by R229; resource refusal retained)
 

@@ -930,3 +930,26 @@ empty stashes, same owner, Mac released, no conflicting open record.
 Continue authorizes scoped publication. Review existing recovery and resource
 refusal; fix/test artifact-bound FFCx handling; explicit one-fixture admission
 or precise refusal. Stop before reinstall, numerical imports or FEM execution.
+
+### R230 completion
+COMPLETED | 2026-09-26T15:56:23.915772+00:00 | PC/WSL daisy | released: no
+Environment/version review complete. Existing artifact evidence accepted for one
+later bounded n=2 Poiseuille attempt; zero spent, no numerical execution. R229
+setup resource refusal/charges and old partial prefix preserved without waiver.
+Implemented exact FFCx package/runtime gate in worker and result reader, with
+retained recovery evidence and wrong-artifact/runtime/missing-evidence refusals.
+Files: package identity module/tests, worker/supervision/test fixture, prototype
+README, R230 admission/evidence, B1 setup, four track overviews and status/
+handoff/request/lifecycle logs; complete inventory in REQUEST_LOG R230.
+Checks: 56 tests (0.570 s), no numerical imports, 23 ASTs, 17 R229 hashes,
+152 links/fences, 230 unique IDs, append-only logs, unchanged frozen/production/
+prior evidence, Git whitespace. Staged checks and remote delivery follow.
+Skips: installation, new host/environment validation scope, target interpreter
+rerun, numerical imports/FEM/full suite/physical/render work, model/session
+switch, delegation and transfer. Actual numerical cost/accuracy remain unknown.
+Next: Sol/high executes one-use /tmp/navier-poiseuille-r230-once contract after
+a separate Continue, preserves all caps/gates, records result/cleanup and stops.
+Astra/high for interpretation or changed source/scientific/admission choices.
+R229 completion 2943a8a verified; STARTED ad40b3a published. Completion prepared
+for scoped publication, delivery hash/result in final/Git; no post-push edit.
+PC retains ownership; Mac remains released.

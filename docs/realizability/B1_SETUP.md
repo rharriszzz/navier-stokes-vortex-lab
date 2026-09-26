@@ -1,12 +1,12 @@
 # B1 solver environment
 
-Current PC status: [R229 offline recovery](ENVIRONMENT_RECOVERY_R229.md) completed
-the transaction and isolated Python 3.12.13 check in `/tmp/navier-fenicsx-r229`.
-Its setup resource predicate still refused success (memory.max events); **FEM
-execution remains unadmitted**. Old `/tmp/navier-fenicsx` stays partial. The
-[current task](../../SESSION_HANDOFF.md#next-task) reviews the completed artifacts,
-resource result and known FFCx version discrepancy, without reinstall or FEM.
-R226's launcher checks remain valid; reference commands below grant no attempts.
+Current PC status: [R230 admission](POISEUILLE_ADMISSION_R230.md) permits one
+later bounded Poiseuille fixture using `/tmp/navier-fenicsx-r229`. R229's
+transaction/metadata/interpreter checks completed; its setup memory-event
+refusal remains unchanged. FFCx's exact artifact/runtime gate is repaired;
+zero numerical attempts spent. Old `/tmp/navier-fenicsx` stays partial.
+Follow the [single next task](../../SESSION_HANDOFF.md#next-task); do not reinstall
+or run the general B1 suite under this single-fixture admission.
 For historical Mac setup/comparison, see
 [MAC_INSTALL_AND_BENCHMARK_PLAN.md](MAC_INSTALL_AND_BENCHMARK_PLAN.md); no machine
 transfer or new remote check is implied. General solver commands below are

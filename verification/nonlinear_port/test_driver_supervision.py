@@ -11,6 +11,7 @@ from .diagnostics import (ANGULAR_TERMS, ENERGY_TERMS, field_report,
                           step_checks, quadrature_comparison, compatibility_report,
                           poiseuille_endpoint_budgets)
 from .prototype import Refusal
+from .package_identity import FFCX_ARTIFACT, FFCX_RUNTIME, RECOVERY_EVIDENCE
 from .supervision import supervise_once, verify_held_scope, validate_worker_result
 
 
@@ -61,7 +62,9 @@ def payload():
                                    diagnostic_form_jit_assembly_sampling=0.),
                 worker_intervals={'import_seconds': 0.,
                                   'fixture_setup_jit_and_solve_seconds': 0.},
-                actual_versions=versions)
+                actual_versions=dict(versions, ffcx=FFCX_RUNTIME),
+                ffcx_artifact=dict(package=dict(FFCX_ARTIFACT), embedded_version=FFCX_RUNTIME,
+                                   recovery_evidence=dict(RECOVERY_EVIDENCE)))
 
 
 class Clock:

@@ -7941,3 +7941,61 @@ PC-WSL daisy, Mac released, no conflicting open lifecycle record.
 Bounded task: review R229 environment/resource evidence, implement and test exact
 FFCx artifact/runtime handling, decide later one-fixture admission. No reinstall,
 numerical imports or FEM execution; preserve all caps, charges and prior refusal.
+
+### R230 outcome — review complete, one later fixture admitted
+
+R229 completion 2943a8a verified through required clean pull; STARTED ad40b3a
+published before substantive work. Existing transaction/archive/record/file/
+history/interpreter and exit/cleanup evidence supports reuse of the retained
+/tmp/navier-fenicsx-r229 under R103 ordinary owner/OS trust. R229 top-level setup
+success stays false: 303 memory.max events, peak 1536 MiB, no OOM/kill. No cause
+attribution or FEM footprint inferred, no prior charge erased, no reinstall.
+Read-only input inspection found prefix/interpreter and exact FFCx record present,
+embedded metadata 0.10.0, and prior PID 140105/cgroup absent. No new environment
+validation scope or target-interpreter execution occurred.
+
+Implemented package_identity.py and worker/result integration. Package stays
+0.10.1 / pyhbc3ee6d_1, exact conda-forge URL/subdir/SHA-256/MD5, with checksummed
+R229 recovery evidence. Require listed/prefix-contained files and expected
+embedded metadata, check actual imported module origin, then accept only its
+0.10.0 runtime string. Raw results retain both identities and require provenance.
+Wrong artifact, runtime, missing/changed evidence and wrong import origin refuse.
+All other version/numerical/resource gates remain. Upstream v0.10.1 pyproject was
+opened and confirms the embedded version; no numerical packages imported.
+
+Decision: one later single n=2 Poiseuille fixture admitted, zero spent. Execution
+requires a new Continue, the fixed /tmp/navier-poiseuille-r230-once directory,
+reviewed source inventory, unchanged manifest, actual clean commit binding and
+R229's exact interpreter hash. Any reservation/partial start consumes the one
+allocation; logs survive disposable-directory loss and no retry is permitted.
+180 s observed / 149+1 s independent worker expiry, 1536 MiB/no swap/32 tasks,
+one rank/thread and all numerical/zero-memory-event gates remain unchanged.
+No run reservation or executable admission was created. Full manufactured suite,
+rotation, tank/B2 and physical/render work remain unadmitted. Actual FEM library
+compatibility, resource cost, rank and accuracy are unknown until that attempt.
+
+Checks: 56 standard-library tests passed in 0.570 s under project Python 3.12.14,
+including seven new artifact/runtime test cases; numerical import audit passed.
+23 ASTs, 17 R229 artifact hashes, 152 local Markdown links, balanced fences,
+230 unique request IDs, append-only prior logs and Git whitespace passed.
+Frozen manifest/environment, production source and R225/R226/R227/R229 evidence
+remain unchanged. Initial documentation-edit script stopped at an unmatched
+substring in B1_SETUP before editing that file; corrected targeted replacement
+completed and link/whitespace checks passed. Initial sandbox Git write failed
+on read-only index; authorized escalated start commit/push succeeded.
+
+Files: package_identity.py and test_package_identity.py; worker.py, supervision.py,
+test_driver_supervision.py and prototype README; POISEUILLE_ADMISSION_R230.md
+and evidence/r230/checks.json; B1_SETUP; PROJECT_TRACKS, EXPERIMENT,
+PHYSICAL_REALIZABILITY_PLAN, CONTROL_RESEARCH_ROADMAP; STATUS, SESSION_HANDOFF,
+REQUEST_LOG and WORK_SESSIONS. Source inventory is in evidence/r230/checks.json.
+Skips: real numerical import/JIT/mesh/assembly/solve/full suite, installation,
+new live host probe, target interpreter rerun, physical/render work, delegation,
+model/session switch and machine transfer. No attempt or resource cap reset.
+
+Next: Sol/high executes the admitted fixed-contract fixture once, records full
+result/cleanup/spent state, publishes and stops; Astra/high afterward for result
+interpretation or changed science/source/admission choices. Official OpenAI Docs
+searched/opened for Sol/high support; fit is judgment, not account access.
+PC/WSL daisy retains ownership, Mac released. Completion prepared for scoped
+commit/push; delivery hash/result belongs in Git/final response, no post-push edit.
