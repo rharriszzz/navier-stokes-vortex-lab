@@ -1,0 +1,78 @@
+{
+  "artifact_inventory": "docs/realizability/evidence/r241/artifacts.json",
+  "artifact_inventory_sha256": "f098f8287e1d1318cb8b389bf1b80c17db682911244a346ad7e1ac5c6e266f58",
+  "attempts_granted": 1,
+  "attempts_spent_at_review": 0,
+  "caller_sha256": "0afb43891ce317f0f8c398d31fa91ea01d87bc9cf038e068e787e24ae842ea37",
+  "consumption_rule": "Reservation/directory creation or partial worker start spends the new allowance, including incomplete outcomes; no retry or alternate directory",
+  "diagnostic": {
+    "acceptance": "Evidence is not an accuracy/rank/resource PASS; unchanged scientific gates",
+    "atomic_replace": true,
+    "content": "latest exact lifted/scaled CSR/RHS, state, scales, fixed indices/values, correction, clean source binding and SuperLU settings",
+    "corrections_max": 12,
+    "destination": "linear_system.json and flushed worker.log receipts/configuration/status",
+    "dofs_max": 512,
+    "nnz_max": 65536,
+    "partial_write": "retain prior complete record and .writing file; refuse before solve",
+    "serialized_bytes_max": 4194304
+  },
+  "executable_sha256": "5f083df36ec986d5cd13d2549ca6cfe1ddaf658509f9e419b454b2fb375c27a3",
+  "interpreter": "/tmp/navier-fenicsx-r229/bin/python",
+  "limits": {
+    "finish_seconds": 15,
+    "independent_stop_grace_seconds": 1,
+    "independent_worker_runtime_seconds": 149,
+    "memory_max_events": 0,
+    "mixed_dofs_max": 20000,
+    "mpi_ranks": 1,
+    "observed_total_seconds": 180,
+    "oom_events": 0,
+    "oom_kill_events": 0,
+    "pids_max_events": 0,
+    "setup_seconds": 15,
+    "swap_mib": 0,
+    "tasks": 32,
+    "threads_per_library": 1,
+    "whole_task_memory_mib": 1536,
+    "work_seconds": 150
+  },
+  "manifest_sha256": "7a8bda917e6b46994ad24c68e0b6c6013b7d6776f90c86a6de763f31f52fa558",
+  "pre_reservation_recovery": "Only demonstrated caller/preflight error before reservation, worker or numerical import: preserve failure and timing gaps, verify absent directory and no new manager process, fix/test, republish clean source binding, continue same unspent allocation. Uncertain state stops for review.",
+  "prior_allocations": [
+    {
+      "granted": 1,
+      "outcome": "INCOMPLETE",
+      "request": "R230/R231/R232",
+      "run_directory": "/tmp/navier-poiseuille-r230-once",
+      "spent": 1
+    },
+    {
+      "granted": 1,
+      "outcome": "INCOMPLETE",
+      "request": "R234/R235",
+      "run_directory": "/tmp/navier-poiseuille-r234-once",
+      "spent": 1
+    },
+    {
+      "granted": 1,
+      "outcome": "INCOMPLETE",
+      "request": "R237/R238",
+      "run_directory": "/tmp/navier-poiseuille-r237-once",
+      "spent": 1
+    }
+  ],
+  "procedure": "run_once.py; supervised SystemdBackend and supervise_once; no standalone numerical import or prewarming",
+  "request": "R241",
+  "run_directory": "/tmp/navier-poiseuille-r241-once",
+  "scope": "One NEW later n=2 Poiseuille fixture using reviewed serial SuperLU and bounded latest CSR evidence; execution requires later Continue",
+  "solver": {
+    "backend": "superlu",
+    "controls": "R240 fixed options; no fallback or regularization",
+    "ksp": "preonly",
+    "pc": "lu",
+    "shift": "none"
+  },
+  "source_commit_rule": "Actual clean launch HEAD; all R241 source_sha256 values and exact artifact bindings must match; old allocations unchanged",
+  "source_inventory": "docs/realizability/evidence/r241/checks.json",
+  "state_before_launch": "ADMITTED_FOR_LATER_EXECUTION; no R241 reservation or worker in this review"
+}

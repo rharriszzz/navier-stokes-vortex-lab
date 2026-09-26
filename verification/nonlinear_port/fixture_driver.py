@@ -111,7 +111,7 @@ def numerical_decision(report, checked, comparison, corrections, gates):
     return {'checks': checks, 'numerical_accepted': all(checks.values())}
 
 
-def run_poiseuille(modules, manifest, clock=time.monotonic):
+def run_poiseuille(modules, manifest, clock=time.monotonic, linear_evidence=None):
     """Build and solve only the frozen n=2 BE Poiseuille oracle.
 
     The trusted outer controller owns admission, containment, timing, attempt
@@ -166,11 +166,17 @@ def run_poiseuille(modules, manifest, clock=time.monotonic):
     _raw_residual, raw_matrix = assembler(guess)
     scales = row_scales(raw_matrix)
 
+    evaluated_state = None
     def evaluate(state):
+        nonlocal evaluated_state
+        evaluated_state = list(state)
         return scale_system(*assembler(state), scales)
 
     corrections = []
     def linear_solve(matrix, rhs):
+        if linear_evidence is not None:
+            linear_evidence(matrix, rhs, state=evaluated_state, scales=scales,
+                            fixed=fixed, step=1, correction=len(corrections)+1)
         answer = sparse_solve(np, PETSc, comm, matrix, rhs)
         defect = sqrt(fsum((v-b)**2 for v, b in zip(matrix.matvec(answer), rhs)))
         rhs_norm = sqrt(fsum(v*v for v in rhs))

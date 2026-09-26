@@ -16,6 +16,7 @@ from .manifest import validate as validate_manifest
 from .prototype import Refusal
 from .source_binding import verify_source
 from .package_identity import read_ffcx_artifact, validate_versions, MODULE
+from .linear_evidence import LatestSystem
 
 
 def _read_json(path):
@@ -99,7 +100,8 @@ def main(args=None):
     t0 = time.monotonic()
     modules, actual_versions, artifact = load_pinned_modules(manifest['versions'])
     t1 = time.monotonic()
-    numerical = run_poiseuille(modules, manifest)
+    numerical = run_poiseuille(modules, manifest,
+                               linear_evidence=LatestSystem(directory, binding))
     t2 = time.monotonic()
     numerical['actual_versions'] = actual_versions
     numerical['ffcx_artifact'] = artifact

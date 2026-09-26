@@ -1,0 +1,103 @@
+{
+  "artifact_inventory_sha256": "f098f8287e1d1318cb8b389bf1b80c17db682911244a346ad7e1ac5c6e266f58",
+  "attempts_granted": 1,
+  "attempts_spent_at_review": 0,
+  "caller_regression": "PASS: timer/import/path/source/artifact/existing/dangling-directory refusals before manager/reservation",
+  "changed_existing_source": [
+    "verification/nonlinear_port/fixture_driver.py",
+    "verification/nonlinear_port/test_driver_wiring.py",
+    "verification/nonlinear_port/worker.py"
+  ],
+  "current_conda_history_matches_r229": true,
+  "decision": "GO_ONE_LATER_SUPERLU_FIXTURE",
+  "direct_cli_check": "Expected invalid-commit INCOMPLETE, exit 1; invalid_commit_check.json",
+  "evidence_sha256": {
+    "allocation.json": "b92ef470bf0512d86df7cb3341e40e5575034617554d4f8e997f0f8263a7c37b",
+    "artifacts.json": "f098f8287e1d1318cb8b389bf1b80c17db682911244a346ad7e1ac5c6e266f58",
+    "check_caller.py": "0fec2d873b45afc0a2e4aefa6f8f582703232d110776840406bbb65a17571795",
+    "invalid_commit_check.json": "aa0f7f92b2b75d914a0b157262e2e6be960a71998d4ab8dc7ad5ba044f4f21f2",
+    "run_once.py": "0afb43891ce317f0f8c398d31fa91ea01d87bc9cf038e068e787e24ae842ea37",
+    "tests.json": "900b2f36153cf2f1f7a98d9de576f5a70d8a49fadf898608ac022ccece9af24c",
+    "tests.txt": "0c015d2925c78d14810a043af643e4ce559c6a7272033dd4e2624eeeea8db53e"
+  },
+  "historical_callers_allocations_unchanged": true,
+  "interpreter_sha256_verified": "5f083df36ec986d5cd13d2549ca6cfe1ddaf658509f9e419b454b2fb375c27a3",
+  "live_scope_or_worker": false,
+  "local_links_checked": 241,
+  "manager_connection": false,
+  "new_reservation": false,
+  "new_run_directory": "/tmp/navier-poiseuille-r241-once",
+  "new_run_directory_absent": true,
+  "new_source": [
+    "verification/nonlinear_port/linear_evidence.py",
+    "verification/nonlinear_port/test_linear_evidence.py"
+  ],
+  "numerical_imports": false,
+  "prior_logs_append_only": true,
+  "python_asts": 27,
+  "r229_artifacts_verified": 17,
+  "request": "R241",
+  "request_ids": 241,
+  "retained_runs": {
+    "r232": {
+      "attempts_spent": 1,
+      "cgroup_absent": true,
+      "pid_absent": true,
+      "raw_files_and_originals_verified": 10,
+      "reservation_present": true
+    },
+    "r235": {
+      "attempts_spent": 1,
+      "cgroup_absent": true,
+      "pid_absent": true,
+      "raw_files_and_originals_verified": 10,
+      "reservation_present": true
+    },
+    "r238": {
+      "attempts_spent": 1,
+      "cgroup_absent": true,
+      "pid_absent": true,
+      "raw_files_and_originals_verified": 10,
+      "reservation_present": true
+    }
+  },
+  "source_base": "14a402a5e48e6f4f502e9cbaa99cde7408625a12",
+  "source_sha256": {
+    "environment-b1.yml": "ecea6a42536e94ffe1d01a3ea173b82ef73c6a05c159fe1f6e05010b85b765ac",
+    "verification/nonlinear_port/cube_adapter.py": "3e2041ada3a2177bc9fe2bf4ded804af229b064a3b472077035979bc64ff7179",
+    "verification/nonlinear_port/diagnostics.py": "795ac30f63534e955e4639df26aaf4b1e11c1a2c1bef64404bb1ae236acc6f99",
+    "verification/nonlinear_port/fixture_driver.py": "134970261243f0c1f73ca58fb1a399b98cac44a4f740cfb599a9951540b55962",
+    "verification/nonlinear_port/fixtures.py": "91e5c8a971efe1687ad5856192b37436932a4ac094fce4b26ed994697431c584",
+    "verification/nonlinear_port/future_fem.json": "7a8bda917e6b46994ad24c68e0b6c6013b7d6776f90c86a6de763f31f52fa558",
+    "verification/nonlinear_port/handshake.py": "850ade61143dc27449f1231529916fddc83bddf9b2edfeb59e6d93b4b8bf1ace",
+    "verification/nonlinear_port/linear_evidence.py": "b3f1f110ad10281fd6ed6e81146082d9481466292379368f906898e32efe0a31",
+    "verification/nonlinear_port/manifest.py": "3c343522aa294e0fa3971ffa109b9060d3bea0cfb7e998a7194f5abd779a0269",
+    "verification/nonlinear_port/package_identity.py": "e85e5ad6c442af6d08bc248b01d3f4919c9d7af8134939d418c37d07a27d37fb",
+    "verification/nonlinear_port/polynomial.py": "418a3ac9338f14c659716579abb3404b95ad550de062083606de13b7b4e159b3",
+    "verification/nonlinear_port/probe_systemd.py": "2f344506e726c8b731a28b08065790d3a967754826ef4d9c19ab42291997edfe",
+    "verification/nonlinear_port/prototype.py": "883f4df2765930655a859aa9e5f9882b90c122632f823f0a081e366284e34c96",
+    "verification/nonlinear_port/source_binding.py": "b754e6c2735ed328341869ad449fc0261a2857ec2a1af76e4e86b2ad7cad62b2",
+    "verification/nonlinear_port/sparse.py": "db482601e6b388ded562d6c798a964362669a6d4e2444bc27acbc959c7807a8b",
+    "verification/nonlinear_port/supervision.py": "721f8bc4a5a0bc5edbcd234c52a87f5673de739c07dc44831cbbb3d1ba5b2401",
+    "verification/nonlinear_port/systemd_backend.py": "503d19765e257a317b3e252503d6db7d250cebf1fa13f81f8de809299cd34d21",
+    "verification/nonlinear_port/systemd_bus.py": "595a59ac77704f475207899b138dc68a0cf2d0f9c7f6dbba27ac5f134db2e8ce",
+    "verification/nonlinear_port/test_adapter.py": "739d7eb6a23ebf41eb33bfbc2f8ed6737851094aa62d92cdcecac62b3d18fab2",
+    "verification/nonlinear_port/test_algebra.py": "5667e2144e13ede1b2d1d7cab8752b2c74f89c040ff4eddc33993d6e7608d459",
+    "verification/nonlinear_port/test_driver_supervision.py": "784122c0a15a5e999242943001375dad73ba49b06f7be5a904c2ba69e19bdacd",
+    "verification/nonlinear_port/test_driver_wiring.py": "d7ca9ddd8c4566b936e8bb65204c6ffcc3da5ff8391fdbd490a8954aeb5a3388",
+    "verification/nonlinear_port/test_host_protocol.py": "7b73cafa5d06387d628229097f4bea5c9db178719ab931b8cc8388acc2de26a1",
+    "verification/nonlinear_port/test_linear_evidence.py": "d9b91d9ea4b9e90b19795f34e968ef26d1252f4028362b5914b1e57e927b9ef6",
+    "verification/nonlinear_port/test_package_identity.py": "aca04f4dcfb8a92c3772a0d685327950941c9ffee453f00ace81588acc6cdb01",
+    "verification/nonlinear_port/test_source_bus.py": "2917abfc381e35a2850041f84e05ec3ecdf069215d7f611cbcfcc998d8dd41d3",
+    "verification/nonlinear_port/worker.py": "69e2ff277c1f924a99008aa2cebcf07e651e38e41070469a867677c29c49f803"
+  },
+  "tests": {
+    "count": 69,
+    "errors": 0,
+    "executable": "/home/rharris/git/navier-stokes-vortex-lab/.venv/bin/python",
+    "failures": 0,
+    "numerical_modules_loaded": [],
+    "python": "3.12.14 (main, Sep  1 2026, 14:16:52) [Clang 22.1.3 ]",
+    "runner_seconds": 0.6047830840107054
+  }
+}

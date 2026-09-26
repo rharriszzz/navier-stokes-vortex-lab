@@ -1,14 +1,14 @@
 # Project status: a boundary-controlled engineering approximation
 
-[R240 SuperLU review](docs/realizability/POISEUILLE_SUPERLU_REVIEW_R240.md) implements explicit serial SuperLU settings
-and isolated backend options; 65 standard-library tests pass with no numerical
-imports. The package's 7.0.1 label differs from its 7.0.0 header/CMake/library
-names, which match its own artifact hashes. No FEM/new allocation occurred;
-all three prior allocations remain spent. Next: Astra/high completes bounded
-matrix evidence and artifact review for a separate one-fixture admission;
-follow the [current task](SESSION_HANDOFF.md#next-task), stopping before execution.
+[R241 admission](docs/realizability/POISEUILLE_ADMISSION_R241.md) grants one NEW later bounded n=2 Poiseuille
+fixture using explicit serial SuperLU and bounded pre-solve CSR/RHS evidence.
+All 69 standard-library tests pass without numerical imports. The exact packaged
+artifact is accepted by hash with its version-label discrepancy preserved.
+The new `/tmp/navier-poiseuille-r241-once` allocation is 0/1 spent; all three
+old allocations remain spent 1/1. Follow the
+[current task](SESSION_HANDOFF.md#next-task) for Sol/high execution after Continue.
 
-Updated 2026-09-26 (America/New_York), through R240. PC/WSL daisy owns the
+Updated 2026-09-26 (America/New_York), through R241. PC/WSL daisy owns the
 repository. **R232 corrects the recoverable R231 caller failure and resumes the
 same authorized, unspent one-use fixture, then spends it on a PETSc LU failure.**
 The [R232 result](docs/realizability/POISEUILLE_RESULT_R232.md) records an
@@ -32,8 +32,8 @@ or live scope occurred in R236. [R237 admission](docs/realizability/POISEUILLE_A
 granted one instrumented fixture. [R238 result](docs/realizability/POISEUILLE_RESULT_R238.md)
 spent it 1/1: KSP -11, 405 nonfinite answer entries and PC reason 2 (reported
 numeric zero pivot). Worker/caller exited 1 with empty cleanup but no numerical
-or resource report. All three allocations are spent 1/1. Next: Astra/high
-reviews bounded evidence and artifact identity for admission; follow the
+or resource report. All three allocations are spent 1/1. Next: Sol/high
+executes the separately admitted R241 caller once; follow the
 [single task](SESSION_HANDOFF.md#next-task).
 
 Historical R231 context: the
@@ -128,7 +128,7 @@ No boundary-driven core or feasible contraction range is established.
 | Is the engineering goal demonstrated? | No validated boundary-driven contraction or boundary-only state estimator exists yet. |
 | What did the latest step establish? | The single fixture reached PETSc symbolic LU and failed with missing diagonal entries; cleanup was empty but numerical/resource results were incomplete. [Evidence and limits](docs/realizability/POISEUILLE_RESULT_R232.md). |
 | What blocks trusted numerical control results? | The one-use fixture failed before a numerical report; B2 still fails its independent response-accuracy comparison and q64/q96 remain unused. |
-| What is next? | Astra/high reviews the saved LU error and sparse source without FEM; follow the single [next task](SESSION_HANDOFF.md#next-task). |
+| What is next? | Sol/high executes the separately admitted R241 caller once; follow the single [next task](SESSION_HANDOFF.md#next-task). |
 
 ## Goal and present conclusion
 

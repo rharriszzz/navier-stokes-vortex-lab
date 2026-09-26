@@ -8990,3 +8990,44 @@ already up to date. Snapshot is user reported: preceding completion 12m 19s /
 weekly 95%, Luna Reserve 99%. No /new, literal /status, token totals, credit count
 or model-change command supplied. No independent account accounting or agent
 model/session switch.
+
+**R241 outcome — 2026-09-26: COMPLETED, publication prepared.**
+GO for one NEW later n=2 Poiseuille/SuperLU fixture at the exclusive
+/tmp/navier-poiseuille-r241-once, 0/1 spent; no reservation/worker/live scope.
+The exact packaged SuperLU artifact is accepted by verified archive/file hashes
+under the existing package/OS trust boundary; package 7.0.1 versus embedded
+7.0.0 discrepancy remains explicit, with no current-tag equivalence claim.
+Caller binds seven runtime artifact hashes and library resolutions plus the
+27 source/pin entries and exact interpreter. Three older allocations stay spent.
+
+Implemented bounded latest-system writer and worker/driver wiring: actual
+lifted/scaled CSR/RHS, state, scales, fixed indices/values, correction and clean
+source/backend binding before solve; 512 global DOFs/65,536 entries/4 MiB/
+12 corrections; atomic replacement and flushed digest receipt. Invalid or
+failed saves stop before solve, preserving older complete/partial evidence.
+No extra assembly, alternate factorization or acceptance relaxation.
+
+Changed: new linear_evidence.py/test_linear_evidence.py; fixture_driver.py,
+worker.py and test_driver_wiring.py; POISEUILLE_ADMISSION_R241.md and eight
+r241 evidence/caller files; prototype README, B1_SETUP, four track overviews,
+STATUS and request/lifecycle/handoff records. Checks: focused five tests and
+full 69 standard-library tests, no numerical imports; caller source/artifact/
+existing/dangling-directory refusals and timer/outside-directory checks;
+unmocked pinned-interpreter invalid-commit CLI exit 1 before manager/reservation
+(caller 0.026281637 s, parent 0.067080642 s); exact archive/runtime files and links;
+27 source bindings; 17 R229 hashes/history/interpreter; 30 raw retained originals
+and three reservations/absent recorded PIDs/cgroups; AST/JSON/local links,
+241 unique request IDs, append-only logs and whitespace.
+
+Skips: numerical imports/FEM/JIT/assembly/solve, live manager/scope, install/full
+environment rescan, full suite/rotation/tank/B2, physical/render and Mac work.
+Actual matrix/rank/backend API/accuracy/resource events remain unknown. Artifact
+label discrepancy origin remains unresolved but exact artifact acceptance is
+explicit. R229 setup predicate remains false. No numerical/resource PASS.
+Evidence: docs/realizability/POISEUILLE_ADMISSION_R241.md and evidence/r241/.
+Next: Sol/high executes exact prepared caller once after Continue, preserves
+raw matrix/log/result/cleanup and spent state, publishes and stops. Astra/high
+interprets result or method/admission change. No /new needed or agent model/
+session switch. PC retains ownership; Mac released. R240 14a402a verified by
+clean pull; R241 STARTED afcd53f published. Completion prepared for scoped
+publication; final delivery hash/result in Git/final response, no post-push edit.

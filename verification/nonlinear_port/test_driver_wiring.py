@@ -47,21 +47,39 @@ class DriverWiring(unittest.TestCase):
                                  'basix', 'PETSc', 'comm'])
         modules.update(fem=fem, ufl=U)
         raw = payload()['diagnostics_degree24']['raw']
+        saved = []
+        def capture(matrix, rhs, **metadata):
+            saved.append((matrix, list(rhs), metadata))
+        def solve(np, p, c, matrix, rhs):
+            self.assertEqual(len(saved), 1)
+            self.assertIs(saved[-1][0], matrix)
+            self.assertEqual(saved[-1][1], rhs)
+            self.assertEqual(saved[-1][2]['state'], observed[-1])
+            self.assertEqual(saved[-1][2]['correction'], 1)
+            return rhs
         with (patch.object(driver, 'create_cube', return_value=(None, space, None, None)),
               patch.object(driver, 'interpolate_state', side_effect=lambda *a: function(space)),
               patch.object(driver, 'boundary_values', return_value={0: 2.}),
               patch.object(driver, 'step_forms', return_value=({}, [], {'exact': data, 'ds': MagicMock()})),
               patch.object(driver, 'Assembler', Assembler),
-              patch.object(driver, 'sparse_solve', side_effect=lambda np, p, c, mat, rhs: rhs),
+              patch.object(driver, 'sparse_solve', side_effect=solve) as solver,
               patch.object(driver, 'exact_data', return_value=data),
               patch.object(driver, 'field_forms', return_value={}),
               patch.object(driver, 'assemble_scalars', return_value=raw),
               patch.object(driver, 'return_quadrature_samples', return_value=([0., 0.], [1, 1]))):
-            report = driver.run_poiseuille(modules, CONTRACT)
+            report = driver.run_poiseuille(modules, CONTRACT, linear_evidence=capture)
+            completed_observed = list(observed)
+            solver.reset_mock()
+            fem.assemble_scalar.side_effect = [0., 1., 0., 0.]
+            def fail_save(*args, **kwargs):
+                raise OSError('evidence save refused')
+            with self.assertRaisesRegex(OSError, 'evidence save refused'):
+                driver.run_poiseuille(modules, CONTRACT, linear_evidence=fail_save)
+            solver.assert_not_called()
         self.assertTrue(report['numerical_accepted'])
         self.assertEqual((report['mixed_dofs'], report['global_dofs']), (4, 7))
         self.assertEqual(observed[0], [2., 3.05, 4., 5., 0., 0., 0.])
-        self.assertEqual(observed[-1], target)
+        self.assertEqual(completed_observed[-1], target)
         self.assertEqual(len(report['linear_corrections']), 1)
         self.assertEqual(report['multipliers'], [0., 0.])
         self.assertEqual(report['eta'], 0.)

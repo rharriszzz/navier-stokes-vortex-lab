@@ -1338,3 +1338,25 @@ Identity rharris/daisy, Linux 6.18.33.2-microsoft-standard-WSL2 x86_64;
 empty stashes, R240 completed, same PC owner, Mac released. Bounded evidence
 source/tests, artifact review and separate admission or blocker; publish and
 stop before numerical execution. Three older allocations remain spent 1/1.
+
+COMPLETED | 2026-09-26T20:26:42Z | PC/WSL daisy | released: no
+R241 implements bounded pre-solve CSR/RHS evidence and admits one NEW later
+n=2 SuperLU fixture at /tmp/navier-poiseuille-r241-once, 0/1 spent. Exact artifact
+accepted by archive/file hashes with 7.0.1/embedded 7.0.0 discrepancy preserved.
+Changed evidence module/test, driver/worker/wiring test, R241 admission/eight
+evidence/caller files, prototype README, B1_SETUP, four track overviews, STATUS
+and request/lifecycle/handoff records. Checks: focused 5/full 69 standard-library
+tests without numerical modules; caller refusal/timer/path tests and unmocked
+invalid-commit CLI (exit 1 before manager/reservation); 27 source/pin bindings,
+exact artifact hashes, 17 R229 evidence hashes/history/interpreter, 30 raw
+originals, three spent reservations/PID/cgroup absence, AST/JSON/links, 241
+unique IDs, append-only logs and whitespace. Skips: numerical imports/FEM/JIT/
+assembly/solve, manager/live scope, install/full rescan, full suite/rotation/tank/
+B2, physical/render/Mac. Backend API/actual rank/accuracy/resources unmeasured;
+R229 setup refusal remains false; no numerical/resource PASS.
+Evidence: docs/realizability/POISEUILLE_ADMISSION_R241.md and evidence/r241/.
+Next Sol/high: execute exact caller once after Continue, preserve all raw matrix/
+logs/result/cleanup and spent state, publish and stop; Astra/high interprets.
+No /new or agent model/session switch. PC retains ownership; Mac released.
+R240 14a402a verified; R241 STARTED afcd53f published. Completion prepared for
+scoped publication; delivery hash/result in Git/final response.

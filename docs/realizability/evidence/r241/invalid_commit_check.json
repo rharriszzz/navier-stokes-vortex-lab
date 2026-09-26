@@ -1,0 +1,14 @@
+{
+  "argument": "0000000000000000000000000000000000000000",
+  "command_interpreter": "/tmp/navier-fenicsx-r229/bin/python",
+  "exit_code": 1,
+  "parent_observed_seconds": 0.06708064200938679,
+  "stderr": "",
+  "stdout": {
+    "elapsed_after_caller_save": 0.026281636994099244,
+    "inner_status": null,
+    "reason": "RuntimeError: launch checkout is not the expected clean commit",
+    "run_directory": "/tmp/navier-poiseuille-r241-once",
+    "status": "INCOMPLETE"
+  }
+}

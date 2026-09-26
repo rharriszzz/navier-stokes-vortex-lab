@@ -1,12 +1,12 @@
 # Isolated nonlinear port verification source — R195/R196/R222/R225/R226
 
-[R240 SuperLU review](../../docs/realizability/POISEUILLE_SUPERLU_REVIEW_R240.md) implements explicit serial SuperLU settings
-and isolated backend options; 65 standard-library tests pass with no numerical
-imports. The package's 7.0.1 label differs from its 7.0.0 header/CMake/library
-names, which match its own artifact hashes. No FEM/new allocation occurred;
-all three prior allocations remain spent. Next: Astra/high completes bounded
-matrix evidence and artifact review for a separate one-fixture admission;
-follow the [current task](../../SESSION_HANDOFF.md#next-task), stopping before execution.
+[R241 admission](../../docs/realizability/POISEUILLE_ADMISSION_R241.md) grants one NEW later bounded n=2 Poiseuille
+fixture using explicit serial SuperLU and bounded pre-solve CSR/RHS evidence.
+All 69 standard-library tests pass without numerical imports. The exact packaged
+artifact is accepted by hash with its version-label discrepancy preserved.
+The new `/tmp/navier-poiseuille-r241-once` allocation is 0/1 spent; all three
+old allocations remain spent 1/1. Follow the
+[current task](../../SESSION_HANDOFF.md#next-task) for Sol/high execution after Continue.
 
 **Source and algebra evidence, not a validated FEM solver.** The
 [R195 fixture review](../../docs/realizability/NONLINEAR_VERIFICATION_R195.md)
@@ -39,8 +39,8 @@ admitted one diagnostic fixture with the unchanged solver and gates.
 [R238](../../docs/realizability/POISEUILLE_RESULT_R238.md) spent it 1/1:
 KSP -11, 405 nonfinite entries, PC reason 2 (numeric zero pivot), worker exit 1,
 empty cleanup, no numerical/resource report. All three fixture allowances are
-spent. Follow the [handoff task](../../SESSION_HANDOFF.md#next-task) for source
-review; no new execution is admitted.
+spent. R241 separately admits one later fixture with bounded matrix evidence;
+follow the [handoff task](../../SESSION_HANDOFF.md#next-task).
 
 - `polynomial.py`, `fixtures.py`: exact rational manufactured fields and
   independent Poiseuille/rigid-rotation oracles.
