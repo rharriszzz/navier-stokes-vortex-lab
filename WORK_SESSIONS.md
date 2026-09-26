@@ -1461,3 +1461,46 @@ b8327dae01576b2650683b5d02bb9b08763ae1ea after required fast-forward pull,
 empty stashes, R243 completed, same owner, Mac released. Implement and test
 R243 policy/both-degree checks; publish recommendation, stop before admission/
 execution. All four allocations remain spent 1/1.
+
+COMPLETED | 2026-09-26T21:30:05Z | PC/WSL daisy | released: no
+R244 implemented poiseuille_signed_accuracy_v1 (policy schema 1), the explicit
+17-signed-key 1e-14 absolute target with original limits for 13 other quantities,
+and numerical schema 2 with both-degree physical validation. Strict policy/
+fixture/inventory/finite/nonnegative checks refuse absent or changed evidence.
+The driver reduces the already assembled scalar inventories; the controller
+recomputes all degree reports and aliases through the shared deterministic
+helper. Backflow remains degree-24 sampling. Legacy comparator, solver/pins,
+other numerical/physical thresholds and resource/report caps remain unchanged.
+
+All 77 standard-library tests pass with no numerical modules; focused 26 pass.
+Controls include common-mode wrong values, squared errors, policy/schema
+omissions, corrupted caches and a degree-26-only physical failure despite pair
+agreement, also through real driver wiring with fake FEM. Explicit prospective
+replay of R242 saved values validates at both degrees; pretty report 34,928
+bytes below 2,000,000-byte cap. Original legacy comparison still has 12 failures;
+original report lacks the new policy/schema and refuses. No historical PASS.
+The target is an accuracy budget, not a rounding bound. All four allocations
+remain spent 1/1; no new allocation, caller, manager or FEM launch.
+
+Changed: new policy module/test; driver, manifest JSON/validator, supervision;
+three existing test modules; R244 implementation/four evidence files; prototype
+README, B1_SETUP, four track overviews, STATUS and request/lifecycle/handoff.
+Checks: 26 focused/77 full tests, no numerical imports, legacy/prospective replay,
+report cap, 29-file code/test/pin inventory (seven changed/two new), 45 raw
+originals/four retained reservations and absent recorded PIDs/cgroups, unchanged
+historical evidence, AST/JSON, 238 local link targets, 244 unique request IDs,
+append-only logs and whitespace. Old caller/source hashes are intentionally
+invalidated; historical callers/admissions/evidence were not edited.
+Skips: live numerical imports/FEM/JIT/assembly/solve/rank/alternative factors,
+manager scope, new admission/caller, artifact rescan/install, full suite/rotation/
+tank/B2, physical/render/Mac. Future target attainability, R242 discrepancy
+cause, actual rank/permutation and artifact-label origin remain unknown.
+R229 setup resource refusal remains false.
+Evidence: docs/realizability/POISEUILLE_POLICY_IMPLEMENTATION_R244.md and evidence/r244/.
+Next: Astra/high reviews one separate later admission, checks exact current
+source/manifest/interpreter/artifacts and prepares a new finite once-only caller
+if justified; publish admission or blocker and stop before execution. Official
+model high support rechecked; no model/session switch or /new needed. PC retains
+ownership; Mac released. R243 b8327da verified by clean pull; R244 STARTED
+32b444a published. Completion prepared for scoped publication; delivery hash/
+result in Git/final response, no post-push edit.

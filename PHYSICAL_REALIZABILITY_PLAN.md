@@ -1,12 +1,12 @@
 # Physical Realizability Plan for `navier-stokes-vortex-lab`
 
-[R243 review](docs/realizability/POISEUILLE_QUADRATURE_REVIEW_R243.md) reproduces
-R242's 12 quadrature failures and documents exact signed cancellation. The code
-matches the frozen rule; no runtime gate changed. A prospective Poiseuille-only
-signed accuracy target and physical checks at both degrees are proposed.
-R242 remains INCOMPLETE, all four allocations spent 1/1. Follow the
-[current task](SESSION_HANDOFF.md#next-task) for Astra/high source/tests;
-no numerical admission or execution.
+[R244 implementation](docs/realizability/POISEUILLE_POLICY_IMPLEMENTATION_R244.md)
+adds the explicit Poiseuille-only signed accuracy policy and physical checks
+at both degrees. All 77 standard-library tests pass without numerical imports.
+The legacy comparator and historical R242 INCOMPLETE result are preserved.
+All four allocations remain spent 1/1; no new numerical admission or run.
+Follow the [current task](SESSION_HANDOFF.md#next-task) for Astra/high
+review of one separate later admission and caller, then stop before execution.
 
 R232's [single-fixture result](docs/realizability/POISEUILLE_RESULT_R232.md)
 is INCOMPLETE: the worker reached PETSc symbolic LU and exited 1 after a
@@ -28,7 +28,7 @@ diagnostic; 62 standard-library tests pass without numerical imports.
 bounded diagnostic fixture; [R238](docs/realizability/POISEUILLE_RESULT_R238.md)
 spent it 1/1 on a reported numeric LU zero pivot, with empty cleanup but no
 numerical/resource report. All three allowances are spent. Follow the
-[handoff task](SESSION_HANDOFF.md#next-task) for the R243 prospective source/test step.
+[handoff task](SESSION_HANDOFF.md#next-task) for the R244 admission-review recommendation.
 No tank/hardware route or feasible contraction range is established.
 
 R188 priority update (2026-09-22): establish measurable essential dynamical

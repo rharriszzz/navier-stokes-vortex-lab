@@ -1,9 +1,11 @@
 """Validate the proposed, non-executable FEM fixture manifest without FEM imports."""
 from .prototype import Refusal, require_fixture
+from .poiseuille_policy import validate_manifest_policy
 
 
 def validate(data):
     require_fixture(data.get('fixture'))
+    validate_manifest_policy(data)
     if data.get('schema') != 1 or data.get('execution_admitted') is not False or data.get('attempts_granted') != 0:
         raise Refusal('manifest cannot admit execution')
     if data.get('proposed_attempts') != 1:

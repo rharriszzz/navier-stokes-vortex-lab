@@ -1,14 +1,14 @@
 # Project status: a boundary-controlled engineering approximation
 
-[R243 review](docs/realizability/POISEUILLE_QUADRATURE_REVIEW_R243.md) reproduces
-R242's 12 quadrature failures and documents exact signed cancellation. The code
-matches the frozen rule; no runtime gate changed. A prospective Poiseuille-only
-signed accuracy target and physical checks at both degrees are proposed.
-R242 remains INCOMPLETE, all four allocations spent 1/1. Follow the
-[current task](SESSION_HANDOFF.md#next-task) for Astra/high source/tests;
-no numerical admission or execution.
+[R244 implementation](docs/realizability/POISEUILLE_POLICY_IMPLEMENTATION_R244.md)
+adds the explicit Poiseuille-only signed accuracy policy and physical checks
+at both degrees. All 77 standard-library tests pass without numerical imports.
+The legacy comparator and historical R242 INCOMPLETE result are preserved.
+All four allocations remain spent 1/1; no new numerical admission or run.
+Follow the [current task](SESSION_HANDOFF.md#next-task) for Astra/high
+review of one separate later admission and caller, then stop before execution.
 
-Updated 2026-09-26 (America/New_York), through R243. PC/WSL daisy owns the
+Updated 2026-09-26 (America/New_York), through R244. PC/WSL daisy owns the
 repository. **R232 corrects the recoverable R231 caller failure and resumes the
 same authorized, unspent one-use fixture, then spends it on a PETSc LU failure.**
 The [R232 result](docs/realizability/POISEUILLE_RESULT_R232.md) records an
@@ -33,7 +33,7 @@ granted one instrumented fixture. [R238 result](docs/realizability/POISEUILLE_RE
 spent it 1/1: KSP -11, 405 nonfinite answer entries and PC reason 2 (reported
 numeric zero pivot). Worker/caller exited 1 with empty cleanup but no numerical
 or resource report. All three allocations are spent 1/1. Next: Astra/high
-implements/tests the prospective R243 Poiseuille policy; follow the
+reviews a separate later admission for the R244 policy; follow the
 [single task](SESSION_HANDOFF.md#next-task).
 
 Historical R231 context: the
@@ -128,7 +128,7 @@ No boundary-driven core or feasible contraction range is established.
 | Is the engineering goal demonstrated? | No validated boundary-driven contraction or boundary-only state estimator exists yet. |
 | What did the latest step establish? | The single fixture reached PETSc symbolic LU and failed with missing diagonal entries; cleanup was empty but numerical/resource results were incomplete. [Evidence and limits](docs/realizability/POISEUILLE_RESULT_R232.md). |
 | What blocks trusted numerical control results? | The one-use fixture failed before a numerical report; B2 still fails its independent response-accuracy comparison and q64/q96 remain unused. |
-| What is next? | Astra/high implements/tests the prospective R243 Poiseuille policy; follow the single [next task](SESSION_HANDOFF.md#next-task). |
+| What is next? | Astra/high reviews a separate later admission for the R244 policy; follow the single [next task](SESSION_HANDOFF.md#next-task). |
 
 ## Goal and present conclusion
 

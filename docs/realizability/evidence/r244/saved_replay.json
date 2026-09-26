@@ -1,0 +1,44 @@
+{
+  "backflow_sampling_degree": 24,
+  "historical_status": "INCOMPLETE",
+  "legacy_comparison_failures": 12,
+  "original_report_refusal_under_current_schema": "incomplete one-fixture worker result",
+  "original_sha256": "76558e6b7fa0fdf9c2ab3666b3f6e0df2c2ede0108f1dd2c66c94c634d2e4e54",
+  "projected_controller_validation": true,
+  "projected_degree_checks": {
+    "24": {
+      "divergence": true,
+      "multipliers": true,
+      "physical_endpoint_budgets": true,
+      "quadrature_24_26": true,
+      "return_traction": true,
+      "step_gates": true,
+      "velocity_pressure_exact": true,
+      "verified_correction": true
+    },
+    "26": {
+      "divergence": true,
+      "multipliers": true,
+      "physical_endpoint_budgets": true,
+      "quadrature_24_26": true,
+      "return_traction": true,
+      "step_gates": true,
+      "velocity_pressure_exact": true,
+      "verified_correction": true
+    }
+  },
+  "projected_numerical_checks": {
+    "divergence": true,
+    "multipliers": true,
+    "physical_endpoint_budgets": true,
+    "quadrature_24_26": true,
+    "return_traction": true,
+    "step_gates": true,
+    "velocity_pressure_exact": true,
+    "verified_correction": true
+  },
+  "projected_numerical_schema": 2,
+  "projected_pretty_json_bytes": 34928,
+  "report_byte_cap": 2000000,
+  "scope": "EXPLICIT PROSPECTIVE SAVED-DATA REPLAY ONLY; no new run or historical acceptance"
+}

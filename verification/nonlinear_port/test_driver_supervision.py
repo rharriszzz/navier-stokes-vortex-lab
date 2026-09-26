@@ -6,10 +6,9 @@ from pathlib import Path
 from tempfile import TemporaryDirectory
 import unittest
 
-from .fixture_driver import nonexact_guess, numerical_decision, return_quadrature_samples
-from .diagnostics import (ANGULAR_TERMS, ENERGY_TERMS, field_report,
-                          step_checks, quadrature_comparison, compatibility_report,
-                          poiseuille_endpoint_budgets)
+from .fixture_driver import (nonexact_guess, numerical_decision, return_quadrature_samples,
+                             evaluate_poiseuille_pair)
+from .diagnostics import ANGULAR_TERMS, ENERGY_TERMS, compatibility_report
 from .prototype import Refusal
 from .package_identity import FFCX_ARTIFACT, FFCX_RUNTIME, RECOVERY_EVIDENCE
 from .supervision import supervise_once, verify_held_scope, validate_worker_result
@@ -39,24 +38,14 @@ def payload():
                    ('u_L2', 'u_H1_seminorm', 'div_u_L2', 'traction_L2_returns')})
     values.update({'angular.'+k: 0. for k in ANGULAR_TERMS})
     values.update({'energy.'+k: 0. for k in ENERGY_TERMS})
-    report = field_report(values, [0., 0.], [0., 0.], [0., 0.], 0.)
-    comparison = quadrature_comparison(values, values)
-    checked = step_checks(report, [0.], [1., 1e-12], 0., gates, 1.)
-    decision = numerical_decision(report, checked, comparison, 1, gates)
-    endpoints = poiseuille_endpoint_budgets(values, .125)
-    decision['checks']['physical_endpoint_budgets'] = True
-    return dict(fixture='poiseuille', subdivisions=2, dt=.125,
+    result = dict(fixture='poiseuille', subdivisions=2, dt=.125,
                 mixed_dofs=10, global_dofs=13, multipliers=[0., 0.], eta=0.,
-                numerical_accepted=True,
-                checks=decision['checks'], compatibility=compatibility_report(0., [0., 0.], 1., 1.),
+                compatibility=compatibility_report(0., [0., 0.], 1., 1.),
                 constraint_condition={'condition_bound': 1.,
                     'method': 'sqrt infinity-norm condition of three-row Gram',
                     'gram': [[1., 0., 0.], [0., 1., 0.], [0., 0., 1.]]}, nonlinear_history=[1., 1e-12],
                 linear_corrections=[{'true_residual': 0., 'rhs_norm': 1.}],
                 return_quadrature_sample_counts=[6, 6], minimum_return_normal_velocity=0.,
-                diagnostics_degree24=report, diagnostics_degree26=values,
-                quadrature_comparison=comparison, physical_endpoint_budgets=endpoints,
-                step_checks=checked,
                 phase_seconds=dict(mesh_and_lift=0., primary_form_setup_jit=0.,
                                    compatibility_rank_newton=0.,
                                    diagnostic_form_jit_assembly_sampling=0.),
@@ -65,6 +54,12 @@ def payload():
                 actual_versions=dict(versions, ffcx=FFCX_RUNTIME),
                 ffcx_artifact=dict(package=dict(FFCX_ARTIFACT), embedded_version=FFCX_RUNTIME,
                                    recovery_evidence=dict(RECOVERY_EVIDENCE)))
+
+    result.update(evaluate_poiseuille_pair(
+        values, dict(values), [0., 0.], 0., result['nonlinear_history'],
+        result['linear_corrections'], [0.], gates,
+        CONTRACT['poiseuille_diagnostic_policy'], .125))
+    return result
 
 
 class Clock:
@@ -242,13 +237,15 @@ class DriverSupervisionChecks(unittest.TestCase):
 
     def test_incomplete_payload_does_not_accept_field_report(self):
         valid = payload()
-        self.assertEqual(validate_worker_result(valid, CONTRACT['versions'], CONTRACT['gates']), valid)
+        self.assertEqual(validate_worker_result(valid, CONTRACT['versions'], CONTRACT['gates'],
+                                       policy=CONTRACT['poiseuille_diagnostic_policy']), valid)
         for bad in (dict(valid, numerical_accepted=False),
                     dict(valid, linear_corrections=[]),
                     dict(valid, minimum_return_normal_velocity=-1e-7),
                     {'diagnostics_degree24': valid['diagnostics_degree24']}):
             with self.assertRaises(Refusal):
-                validate_worker_result(bad, CONTRACT['versions'], CONTRACT['gates'])
+                validate_worker_result(bad, CONTRACT['versions'], CONTRACT['gates'],
+                                       policy=CONTRACT['poiseuille_diagnostic_policy'])
 
     def test_corrupt_raw_terms_cannot_hide_behind_pass_flags(self):
         changes = [
@@ -269,7 +266,8 @@ class DriverSupervisionChecks(unittest.TestCase):
             bad = deepcopy(payload())
             change(bad)
             with self.subTest(change=change), self.assertRaises(Refusal):
-                validate_worker_result(bad, CONTRACT['versions'], CONTRACT['gates'])
+                validate_worker_result(bad, CONTRACT['versions'], CONTRACT['gates'],
+                                       policy=CONTRACT['poiseuille_diagnostic_policy'])
 
     def test_admission_cannot_be_reused_with_another_directory(self):
         with TemporaryDirectory() as base:

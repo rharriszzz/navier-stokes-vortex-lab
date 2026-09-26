@@ -7,15 +7,14 @@ The return value is numerical evidence, never a process/run acceptance record.
 from math import fsum, isfinite, sqrt
 import time
 
-from . import fixtures
 from .cube_adapter import (Assembler, RETURNS, boundary_values, create_cube,
                            exact_data, interpolate_state, sparse_solve, step_forms)
 from .diagnostics import (assemble_scalars, compatibility_report, field_forms,
-                          field_report, quadrature_comparison, step_checks,
+                          field_report, step_checks,
                           poiseuille_endpoint_budgets)
 from .manifest import validate as validate_manifest
-from .polynomial import face
 from .prototype import Refusal, newton
+from .poiseuille_policy import compare as poiseuille_comparison, policy_record
 from .sparse import constraint_condition, row_scales, scale_system
 
 
@@ -111,6 +110,39 @@ def numerical_decision(report, checked, comparison, corrections, gates):
     return {'checks': checks, 'numerical_accepted': all(checks.values())}
 
 
+def evaluate_poiseuille_pair(base, check, multipliers, eta, history, corrections,
+                            normal_samples, gates, policy, dt):
+    """Both-degree numerical evidence; degree-24 backflow samples are shared."""
+    if dt != .125 or gates.get('quadrature_relative_change') != 1e-8:
+        raise Refusal('Poiseuille pair fixture or relative gate changed')
+    comparison = poiseuille_comparison(base, check, policy)
+    if not corrections:
+        raise Refusal('at least one verified linear correction required')
+    latest = corrections[-1]
+    degrees = {}
+    for degree, values in (('24', base), ('26', check)):
+        field = field_report(values, multipliers, [0., 0.], [0., 0.], eta)
+        checked = step_checks(field, normal_samples, history, latest['true_residual'],
+                              gates, latest['rhs_norm'])
+        decision = numerical_decision(field, checked, comparison, len(corrections), gates)
+        endpoints = poiseuille_endpoint_budgets(values, dt)
+        decision['checks']['physical_endpoint_budgets'] = all(
+            entry['physical']['accepted'] for entry in endpoints.values())
+        decision['numerical_accepted'] = all(decision['checks'].values())
+        degrees[degree] = dict(field_report=field, step_checks=checked,
+                               physical_endpoint_budgets=endpoints, **decision)
+    checks = {key: all(degrees[d]['checks'][key] for d in degrees)
+              for key in degrees['24']['checks']}
+    # Retain familiar aliases; the controller validates every duplicate on read.
+    return dict(numerical_schema=2, diagnostic_policy=policy_record(),
+                backflow_sampling_degree=24, degree_validation=degrees,
+                diagnostics_degree24=degrees['24']['field_report'],
+                diagnostics_degree26=check, quadrature_comparison=comparison,
+                step_checks=degrees['24']['step_checks'],
+                physical_endpoint_budgets=degrees['24']['physical_endpoint_budgets'],
+                checks=checks, numerical_accepted=all(checks.values()))
+
+
 def run_poiseuille(modules, manifest, clock=time.monotonic, linear_evidence=None):
     """Build and solve only the frozen n=2 BE Poiseuille oracle.
 
@@ -203,25 +235,12 @@ def run_poiseuille(modules, manifest, clock=time.monotonic, linear_evidence=None
             base_values = values
         else:
             check_values = values
-    comparison = quadrature_comparison(
-        base_values, check_values, manifest['gates']['quadrature_relative_change'])
-    u_poly, p_poly = fixtures.poiseuille()
-    sigma = fixtures.stress(u_poly, p_poly)
-    expected = [-float(face(sigma[2][2], 2, side).evaluate([0, 0, 0, dt]))
-                for side in (0, 1)]
-    report = field_report(base_values, state[-3:-1], expected, targets, state[-1])
     velocity = w.sub(0).collapse()
     samples, sample_counts = return_quadrature_samples(
         np, meshlib, modules['basix'], domain, tags, velocity, 24)
-    latest = corrections[-1]
-    checked = step_checks(report, samples, history, latest['true_residual'],
-                          manifest['gates'], latest['rhs_norm'])
-    decision = numerical_decision(report, checked, comparison,
-                                   len(corrections), manifest['gates'])
-    endpoints = poiseuille_endpoint_budgets(base_values, dt)
-    decision['checks']['physical_endpoint_budgets'] = all(
-        entry['physical']['accepted'] for entry in endpoints.values())
-    decision['numerical_accepted'] = all(decision['checks'].values())
+    decision = evaluate_poiseuille_pair(
+        base_values, check_values, state[-3:-1], state[-1], history, corrections,
+        samples, manifest['gates'], manifest['poiseuille_diagnostic_policy'], dt)
     t_diagnostics = clock()
     return {
         'fixture': 'poiseuille', 'subdivisions': 2, 'dt': dt,
@@ -236,9 +255,6 @@ def run_poiseuille(modules, manifest, clock=time.monotonic, linear_evidence=None
                           'primary_form_setup_jit': t_forms-t_mesh,
                           'compatibility_rank_newton': t_solve-t_forms,
                           'diagnostic_form_jit_assembly_sampling': t_diagnostics-t_solve},
-        'diagnostics_degree24': report, 'diagnostics_degree26': check_values,
         'multipliers': state[-3:-1], 'eta': state[-1],
-        'physical_endpoint_budgets': endpoints,
-        'quadrature_comparison': comparison, 'step_checks': checked,
         **decision,
     }

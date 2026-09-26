@@ -100,7 +100,8 @@ class PackageIdentityChecks(unittest.TestCase):
             bad = deepcopy(payload())
             mutation(bad)
             with self.subTest(mutation=mutation), self.assertRaises(Refusal):
-                validate_worker_result(bad, CONTRACT['versions'], CONTRACT['gates'])
+                validate_worker_result(bad, CONTRACT['versions'], CONTRACT['gates'],
+                                       policy=CONTRACT['poiseuille_diagnostic_policy'])
 
     def fake_modules(self):
         modules = {}

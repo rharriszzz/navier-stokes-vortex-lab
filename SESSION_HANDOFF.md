@@ -1,5 +1,51 @@
 # Current session handoff
 
+Last updated 2026-09-26 (America/New_York) for R244.
+**PC/WSL daisy owns the repository.** No transfer; Mac remains released.
+**R244 implemented the prospective Poiseuille policy and both-degree checks.**
+The explicit policy record binds the 17 signed keys at max(old limit, 1e-14),
+retains original limits for 13 others, and requires the frozen fixture context.
+Numerical schema 2 retains both-degree field/step/endpoint decisions; the
+controller recomputes all of them and rejects missing policy or evidence.
+Backflow remains sampled at degree 24. See
+[implementation](docs/realizability/POISEUILLE_POLICY_IMPLEMENTATION_R244.md)
+and [checks/source inventory](docs/realizability/evidence/r244/checks.json).
+
+All **77 standard-library tests pass**, no numerical modules loaded. Negative
+controls reject common-mode wrong values and degree-26-only physical failure
+even when the pair comparison passes. The explicit prospective replay of
+R242 saved scalars validates (34,928 bytes), but its original report still
+fails the legacy comparison and lacks the new schema. **R242 stays INCOMPLETE**;
+all four allocations stay spent 1/1. No new allocation, caller, manager or FEM.
+The target is an accuracy-budget choice, not a measured roundoff bound.
+The old comparator, numerical/physical gates outside this policy, solver/pins
+and resource caps remain unchanged. Old caller source hashes are invalidated.
+
+**Next: Astra/high reviews one separate later admission and prepares a newly
+bound finite caller if justified, publishes and stops before execution.**
+See [Next task](#next-task). No reuse of a spent directory or historical caller.
+
+R244 supplied snapshot: completion 10m 43s / 5:17 PM, Codex v0.155.1,
+Astra/high, same session, context 43% (153K/258K), weekly 91%, Luna Reserve 99%.
+No /new, literal /status, token totals or credit count supplied; account email
+redacted. User-reported values, no agent model/session switch; no /new needed.
+R243 delivery b8327da verified by clean pull; R244 STARTED 32b444a published.
+Completion prepared for scoped publication; delivery belongs in Git/final response.
+
+Changed: policy module/test, driver, manifest JSON/validator, supervision,
+three existing test modules, R244 implementation/four evidence files, prototype
+README, B1_SETUP, four track overviews, STATUS and request/lifecycle/handoff.
+Checks: 26 focused/77 full tests and import audit; original/prospective saved
+replay, report size, 29-file inventory (seven changed/two new), 45 raw originals,
+four reservations/PID/cgroup absence, AST/JSON/links, append-only records and
+whitespace. Skips: numerical imports/FEM/JIT/assembly/solve/rank, manager scope,
+new admission/caller, artifact rescan/install, full suite/rotation/tank/B2,
+physical/render and Mac transfer. Unknown: future target attainability, cause
+of R242 discrepancies, actual rank/permutation and artifact-label origin.
+R229 setup resource refusal remains false. PC retains ownership; Mac released.
+
+### Previous R243 review (completed; implementation now R244)
+
 Last updated 2026-09-26 (America/New_York) for R243.
 **PC/WSL daisy owns the repository.** No transfer; Mac remains released.
 **R243 completed the quadrature source/algebra review.** The code implements
@@ -587,12 +633,12 @@ and physical-work limits remain unchanged.
 | Owner | PC/WSL `daisy`; Mac `fire.lan` released after published R161 handoff and R162 receipt. |
 | Checkout | `/home/rharris/git/navier-stokes-vortex-lab`. |
 | Branch/upstream | `main` / `origin/main` |
-| Starting state | R243 same-owner clean main/origin/main at 332d902 after required fast-forward pull; rharris/daisy, empty stashes, R242 completed. STARTED d74a670 published. |
+| Starting state | R244 same-owner clean main/origin/main at b8327da after required fast-forward pull; rharris/daisy, empty stashes, R243 completed. STARTED 32b444a published. |
 | Interpreter | /tmp/navier-fenicsx-r229/bin/python verified as 3.12.13 with -I -S; exact environment artifacts verified, setup memory-event predicate refused. Project Python remains 3.12.14. Old /tmp/navier-fenicsx is still partial. |
 | Other owner/process | Mac `fire.lan` released in the published R161 handoff. Local Git cannot inspect another checkout's unpublished state. |
-| Task processes | All four allocations spent 1/1; 45 raw originals match, reservations persist and all recorded PIDs/cgroups absent. R243 made no manager connection or workload launch. R242 cleanup remains empty, worker exit 0/caller exit 1. |
+| Task processes | All four allocations spent 1/1; 45 raw originals match, reservations persist and all recorded PIDs/cgroups absent. R244 made no manager connection or numerical workload launch. Only stdlib/mocked tests ran. |
 | Symbolic environment | `/tmp/navier-r183-sympy/bin/python`, Python 3.12.14, SymPy 1.14.0, mpmath 1.3.0; recreate using `requirements-symbolic.txt` if missing. Existing environments unchanged. |
-| Delivery state | R242 332d902 verified by clean pull; R243 STARTED d74a670 published. R243 review/evidence/completion prepared for publication; delivery in Git/final response. PC retains ownership. |
+| Delivery state | R243 b8327da verified by clean pull; R244 STARTED 32b444a published. R244 source/tests/evidence/completion prepared for publication; delivery in Git/final response. PC retains ownership. |
 
 ## Current result and limits
 
@@ -723,48 +769,41 @@ agent-side POV-Ray backtraces are unavailable.
 
 ## Next task
 
-**GPT-6 Astra / high / PC-WSL daisy: implement/test the prospective R243
-Poiseuille-only accuracy policy and both-degree physical validation; publish
-source/tests and an admission recommendation or blocker, then stop before
-numerical admission or execution.**
+**GPT-6 Astra / high / PC-WSL daisy: review one NEW later n=2 Poiseuille
+admission for the R244 policy, prepare a bound finite caller if justified,
+publish admission or precise blocker, then stop before execution.**
 After **Continue**, follow clean synchronization/ownership/STARTED publication.
-Read [R243 review](docs/realizability/POISEUILLE_QUADRATURE_REVIEW_R243.md),
-[audit](docs/realizability/evidence/r243/audit.json), R242 result, R225 acceptance
-review, diagnostics.py, fixture_driver.py, manifest.py and supervision.py.
-There is no prototype gates.py. All four numerical allocations remain spent.
+Read [R244 implementation](docs/realizability/POISEUILLE_POLICY_IMPLEMENTATION_R244.md),
+[checks/source hashes](docs/realizability/evidence/r244/checks.json),
+[saved replay](docs/realizability/evidence/r244/saved_replay.json), R243 method
+review and R241 artifact/admission records. All four allocations remain spent.
 
-1. Verify raw evidence/source provenance. Retain the historical original
-   comparator and R242 refusal. The proposed change is a deliberate accuracy
-   policy revision, not a bug fix or proof that the saved failure was rounding.
-2. Implement an explicit versioned policy for only this n=2 nondimensional
-   affine Poiseuille BE fixture: max(old_limit, 1e-14) for exactly the review's
-   17 signed keys, original limits for the other 13. Strict complete inventory,
-   finite values and fixture binding; no implicit fallback to the new policy.
-   Do not import the review script into runtime. Preserve all unrelated
-   numerical/physical/resource gates and dependency pins.
-3. Rebuild and validate field/constraint/identity/exact-error/endpoint checks
-   independently at degrees 24 and 26 in worker and controller, retain their
-   reports and recompute acceptance. Explicitly retain degree-24 backflow
-   sampling; do not claim additional sampling. Reject missing policy/evidence,
-   forged cached flags or a failure at either degree. Preserve report byte cap.
-4. Test original near-zero refusal, candidate small/too-large signed changes,
-   untouched squared errors, nonzero relative errors, common-mode wrong values,
-   unknown/missing/nonfinite/negative data, degree-26-only physical failure,
-   controller recomputation and real driver wiring. Use standard-library tests
-   and import audit, no FEM/JIT/assembly/solve. Record original and prospective
-   saved-data results separately; never rewrite R242 evidence or old admissions.
-5. Publish source/tests and a precise next admission recommendation or blocker.
-   Any new source invalidates old caller hashes as intended. No new caller,
-   allocation or numerical execution in this implementation step. If the design
-   reveals a scientific flaw, explain it and revise the proposal before wiring
-   a weaker condition; do not fit a threshold to a future failed run.
+1. Review explicit policy/schema and both-degree physical validation, 77 tests
+   and strict failure controls. Confirm the 29-file source inventory and new
+   manifest digest. The original general comparator stays unchanged, R242
+   stays INCOMPLETE, prospective replay is not a run or rounding-error proof.
+2. Verify the exact R229 interpreter and R241 PETSc/SuperLU artifact hashes and
+   library resolutions without numerical imports. Retain the explicit accepted
+   package/embedded-version discrepancy and R229 false setup resource predicate.
+   No reinstall, alternate backend or broad rescan absent a demonstrated change.
+3. If justified, grant one separate later fixture at a NEW exclusive fixed
+   directory, with exact current source/manifest/policy/artifact/interpreter
+   binding and a finite caller. Do not modify old admissions/callers or reuse
+   spent directories. Freeze n=2/dt=.125/one BE step and all current checks;
+   180 s total, 15/150/15 phases, 149 s independent expiry plus 1 s grace,
+   1536 MiB/no swap/32 tasks/one rank/thread. Retain latest CSR evidence caps:
+   512 global DOFs, 65,536 entries, 4 MiB, 12 corrections. No extra solve.
+4. Test caller preflight/refusal paths with stdlib/fakes and source bindings;
+   no reservation, worker, live scope, FEM import or prewarming. Preserve the
+   demonstrated pre-reservation repair rule versus spent-on-reservation/partial
+   worker rule; uncertain state stops for review. Publish admission or blocker.
+5. Stop before execution. If admitted, hand exact once-only execution to
+   Sol/high after a later Continue and clean STARTED publication; verify model
+   availability then. Keep Astra/high for remaining method/admission decisions.
 
-Completion: explicit method change, tests proving the protections above and
-one next task. No install, full suite/rotation/tank/B2, physical/render or Mac
-transfer. R229 setup resource refusal stays false. Keep Astra/high for method/
-admission decisions; recommend Sol/high only after execution/implementation is
-mechanical with frozen checks and a stopping rule, rechecking availability.
-[Official model documentation](https://developers.openai.com/api/docs/models/gpt-6-astra)
+Completion: concrete source-bound admission/caller and checks, or precise
+blocker, with one next task. No full suite/rotation/tank/B2, physical/render or
+Mac transfer. [Official OpenAI documentation](https://developers.openai.com/api/docs/models/gpt-6-astra)
 was searched/opened for high support; task fit is judgment. No model/session
 switch or new chat required. Next prompt: **Continue**.
 

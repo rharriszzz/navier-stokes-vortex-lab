@@ -16,6 +16,12 @@ class Array(list):
 class DriverWiring(unittest.TestCase):
     def test_complete_driver_keeps_mixed_and_scalar_dimensions_separate(self):
         """R222 failed at the first assembly: its state omitted all three scalars."""
+        self.run_driver()
+
+    def test_degree26_physical_failure_reaches_driver_decision(self):
+        self.run_driver(1e-10-2e-15, 1e-10+2e-15, accepted=False)
+
+    def run_driver(self, base_pressure=0., check_pressure=0., accepted=True):
         target = [2., 3., 4., 5., 0., 0., 0.]
         space = MagicMock()
         space.sub.return_value.collapse.return_value = (None, [0, 1, 2])
@@ -47,6 +53,8 @@ class DriverWiring(unittest.TestCase):
                                  'basix', 'PETSc', 'comm'])
         modules.update(fem=fem, ufl=U)
         raw = payload()['diagnostics_degree24']['raw']
+        raw = dict(raw, pressure_mean=base_pressure)
+        check_raw = dict(raw, pressure_mean=check_pressure)
         saved = []
         def capture(matrix, rhs, **metadata):
             saved.append((matrix, list(rhs), metadata))
@@ -65,7 +73,7 @@ class DriverWiring(unittest.TestCase):
               patch.object(driver, 'sparse_solve', side_effect=solve) as solver,
               patch.object(driver, 'exact_data', return_value=data),
               patch.object(driver, 'field_forms', return_value={}),
-              patch.object(driver, 'assemble_scalars', return_value=raw),
+              patch.object(driver, 'assemble_scalars', side_effect=[raw, check_raw]),
               patch.object(driver, 'return_quadrature_samples', return_value=([0., 0.], [1, 1]))):
             report = driver.run_poiseuille(modules, CONTRACT, linear_evidence=capture)
             completed_observed = list(observed)
@@ -76,7 +84,12 @@ class DriverWiring(unittest.TestCase):
             with self.assertRaisesRegex(OSError, 'evidence save refused'):
                 driver.run_poiseuille(modules, CONTRACT, linear_evidence=fail_save)
             solver.assert_not_called()
-        self.assertTrue(report['numerical_accepted'])
+        self.assertEqual(report['numerical_accepted'], accepted)
+        self.assertTrue(report['degree_validation']['24']['step_checks']['checks']['constraints'])
+        self.assertEqual(report['degree_validation']['26']['step_checks']['checks']['constraints'], accepted)
+        self.assertTrue(report['checks']['quadrature_24_26'])
+        self.assertEqual(report['numerical_schema'], 2)
+        self.assertEqual(report['backflow_sampling_degree'], 24)
         self.assertEqual((report['mixed_dofs'], report['global_dofs']), (4, 7))
         self.assertEqual(observed[0], [2., 3.05, 4., 5., 0., 0., 0.])
         self.assertEqual(completed_observed[-1], target)

@@ -18,9 +18,9 @@ from .manifest import validate as validate_manifest
 from .prototype import Refusal
 from .package_identity import validate_versions
 from .sparse import condition_from_gram
-from .fixture_driver import numerical_decision
-from .diagnostics import (field_report, quadrature_comparison, step_checks,
-                          compatibility_report, finite, poiseuille_endpoint_budgets)
+from .fixture_driver import evaluate_poiseuille_pair
+from .poiseuille_policy import validate_policy
+from .diagnostics import compatibility_report, finite
 
 
 CAPS = dict(elapsed_seconds=180, whole_task_memory_mib=1536, swap_mib=0,
@@ -76,9 +76,11 @@ def verify_held_scope(facts, scope_id):
     return dict(facts)
 
 
-def validate_worker_result(payload, versions, gates):
+def validate_worker_result(payload, versions, gates, *, policy=None):
     """Recompute decisions from finite saved terms; never trust cached PASS flags."""
-    required = {'fixture', 'subdivisions', 'dt', 'mixed_dofs', 'global_dofs',
+    validate_policy(policy)
+    required = {'numerical_schema', 'diagnostic_policy', 'backflow_sampling_degree',
+                'degree_validation', 'fixture', 'subdivisions', 'dt', 'mixed_dofs', 'global_dofs',
                 'numerical_accepted', 'checks', 'compatibility',
                 'constraint_condition', 'nonlinear_history', 'linear_corrections',
                 'return_quadrature_sample_counts', 'minimum_return_normal_velocity',
@@ -129,26 +131,18 @@ def validate_worker_result(payload, versions, gates):
     report = payload['diagnostics_degree24']
     if not isinstance(report, dict) or 'raw' not in report:
         raise Refusal('missing raw diagnostics')
-    # For this frozen oracle both cap pressure means and flux totals are zero.
-    rebuilt = field_report(report['raw'], payload['multipliers'], [0., 0.],
-                           [0., 0.], payload['eta'])
-    if rebuilt != report:
-        raise Refusal('field report differs from raw diagnostics')
-    comparison = quadrature_comparison(report['raw'], payload['diagnostics_degree26'],
-                                       gates['quadrature_relative_change'])
-    latest = corrections[-1]
-    checked = step_checks(rebuilt, [payload['minimum_return_normal_velocity']],
-                          history, latest['true_residual'], gates, latest['rhs_norm'])
-    decision = numerical_decision(rebuilt, checked, comparison, len(corrections), gates)
-    endpoints = poiseuille_endpoint_budgets(report['raw'], payload['dt'])
-    decision['checks']['physical_endpoint_budgets'] = all(
-        entry['physical']['accepted'] for entry in endpoints.values())
-    decision['numerical_accepted'] = all(decision['checks'].values())
-    if (comparison != payload['quadrature_comparison'] or checked != payload['step_checks']
-            or endpoints != payload['physical_endpoint_budgets']
-            or decision['checks'] != payload['checks']
+    if (type(payload['numerical_schema']) is not int or payload['numerical_schema'] != 2
+            or type(payload['backflow_sampling_degree']) is not int
+            or payload['backflow_sampling_degree'] != 24):
+        raise Refusal('missing or changed numerical report schema')
+    validate_policy(payload['diagnostic_policy'])
+    rebuilt = evaluate_poiseuille_pair(
+        report['raw'], payload['diagnostics_degree26'], payload['multipliers'],
+        payload['eta'], history, corrections, [payload['minimum_return_normal_velocity']],
+        gates, policy, payload['dt'])
+    if (any(payload.get(key) != value for key, value in rebuilt.items())
             or payload['numerical_accepted'] is not True
-            or decision['numerical_accepted'] is not True):
+            or rebuilt['numerical_accepted'] is not True):
         raise Refusal('failed or inconsistent numerical evidence')
     validate_versions(payload['actual_versions'], versions, payload['ffcx_artifact'])
     phases = payload['phase_seconds']
@@ -226,7 +220,8 @@ def supervise_once(run_dir, manifest_path, admission, backend, *,
                 or observed['exit_code'] != 0 or not 0 <= result['work_seconds'] <= WORK_SECONDS):
             raise Refusal('worker exit or managed time failed')
         payload = validate_worker_result(_load_limited(directory/'numerical.json'),
-                                         manifest['versions'], manifest['gates'])
+                                         manifest['versions'], manifest['gates'],
+                                         policy=manifest['poiseuille_diagnostic_policy'])
         result['numerical'] = payload
         log.append('Complete numerical payload loaded and checked.')
     except Exception as exc:
