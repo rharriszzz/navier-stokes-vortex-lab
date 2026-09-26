@@ -1069,3 +1069,15 @@ no /new needed, prompt Continue. Sol/high only for a later admitted launch.
 R232 completion 7c41b80 verified; STARTED c08eb25 published. Scoped completion
 publication follows; final delivery hash/result in Git/final response, no
 post-push edit. PC retains ownership, Mac released.
+
+## R234 — Repaired-source Poiseuille admission decision
+STARTED | 2026-09-26T16:54:01Z | PC/WSL daisy | released: no
+Identity: rharris; Linux 6.18.33.2-microsoft-standard-WSL2 x86_64; daisy;
+/home/rharris/git/navier-stokes-vortex-lab; clean main/origin/main equal at
+15c62dd35e51f6d3bfa6bbc05e0bf7915e612d32 after required fast-forward pull;
+empty stashes, same owner, Mac released, no conflicting open session.
+Continue authorizes scoped publication. Review R233 repair and retained
+environment/containment evidence; make separate go/no-go for one later bounded
+n=2 fixture with a fresh directory and source/interpreter binding. Stop before
+reservation, real numerical imports, FEM or any live task scope. R232 remains
+INCOMPLETE and spent 1/1. Supplied snapshot recorded with account redacted.

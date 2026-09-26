@@ -8307,3 +8307,47 @@ R231 caller remain historical. No `/new` needed for this connected review;
 next prompt Continue. Official OpenAI Docs was searched/opened for Astra/high
 support; task fit is judgment, no model switch or account check. Recommend
 Sol/high for a later mechanical launch only if separately admitted.
+
+## R234 — 2026-09-26 — Continue repaired-source admission decision
+
+**User wording (supplied excerpt; account email redacted):**
+
+```text
+Worked for 9m 47s · done 12:52 PM ╭───────────────────────────────────────────────────────────────────────────────────────╮
+│  >_ OpenAI Codex (v0.155.1)                                                           │
+│                                                                                       │
+│ Visit https://chatgpt.com/codex/settings/usage for up-to-date                         │
+│ information on rate limits and credits                                                │
+│                                                                                       │
+│  Model:                       gpt-6-astra (reasoning high, summaries auto)            │
+│  Model provider:              openai                                                  │
+│  Directory:                   ~/git/navier-stokes-vortex-lab                          │
+│  Permissions:                 Workspace (Ask for approval)                            │
+│  Agents.md:                   AGENTS.md                                               │
+│  Account:                     [account email redacted] (Pro Lite)                         │
+│  Thread name:                 Review Codex task output                                │
+│  Collaboration mode:          Default                                                 │
+│  Session:                     01a0de98-b2e9-74c1-8c8f-97150fb60d8c                    │
+│                                                                                       │
+│  Context window:              54% left (125K used / 258K)                             │
+│  Weekly limit:                [███████████████████░] 94% left (resets 11:23 on 3 Oct) │
+│  Luna Reserve Weekly limit:   [████████████████████] 99% left (resets 10:18 on 3 Oct) │
+╰───────────────────────────────────────────────────────────────────────────────────────╯ continue
+```
+
+**Scope/status:** STARTED. Continue authorizes scoped review and publication:
+make the separate go/no-go admission decision for one later bounded n=2
+Poiseuille fixture using R233's repaired CSR source. Prepare a concrete source/
+interpreter/directory contract if admitted, preserving all prior charges and
+gates. Stop before reservation, FEM imports or any live task scope. R232 remains
+INCOMPLETE and spent 1/1. No new numerical attempt is implied by this start.
+Reported status is Astra/high in the same supplied session ID as R233; context
+54% left (125K/258K), weekly 94%, Luna Reserve 99%. No `/new`, literal `/status`
+command, token-usage or credit-count excerpt supplied. These are user-reported
+snapshots, not independent account checks or project-specific accounting.
+
+Preflight: rharris / PC-WSL daisy / Linux 6.18.33.2-microsoft-standard-WSL2
+x86_64; same checkout and owner, Mac released. Clean main/origin/main, empty
+stashes; required fast-forward pull already up to date at
+15c62dd35e51f6d3bfa6bbc05e0bf7915e612d32, 0/0 divergence. R233 completion
+published, no open lifecycle record. No machine/model/session switch.
