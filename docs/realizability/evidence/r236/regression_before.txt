@@ -1,0 +1,57 @@
+test_sparse_refusal_preserves_both_status_and_nonfinite_count (verification.nonlinear_port.test_adapter.AdapterChecks.test_sparse_refusal_preserves_both_status_and_nonfinite_count) ...
+  test_sparse_refusal_preserves_both_status_and_nonfinite_count (verification.nonlinear_port.test_adapter.AdapterChecks.test_sparse_refusal_preserves_both_status_and_nonfinite_count) (reason=-11, count=0) ... FAIL
+  test_sparse_refusal_preserves_both_status_and_nonfinite_count (verification.nonlinear_port.test_adapter.AdapterChecks.test_sparse_refusal_preserves_both_status_and_nonfinite_count) (reason=0, count=0) ... FAIL
+  test_sparse_refusal_preserves_both_status_and_nonfinite_count (verification.nonlinear_port.test_adapter.AdapterChecks.test_sparse_refusal_preserves_both_status_and_nonfinite_count) (reason=4, count=1) ... FAIL
+  test_sparse_refusal_preserves_both_status_and_nonfinite_count (verification.nonlinear_port.test_adapter.AdapterChecks.test_sparse_refusal_preserves_both_status_and_nonfinite_count) (reason=-11, count=2) ... FAIL
+test_optional_pc_diagnostic_failure_keeps_primary_refusal (verification.nonlinear_port.test_adapter.AdapterChecks.test_optional_pc_diagnostic_failure_keeps_primary_refusal) ... FAIL
+test_sparse_diagnostic_preserves_success_true_residual_and_solver_exception (verification.nonlinear_port.test_adapter.AdapterChecks.test_sparse_diagnostic_preserves_success_true_residual_and_solver_exception) ... ok
+
+======================================================================
+FAIL: test_sparse_refusal_preserves_both_status_and_nonfinite_count (verification.nonlinear_port.test_adapter.AdapterChecks.test_sparse_refusal_preserves_both_status_and_nonfinite_count) (reason=-11, count=0)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/rharris/git/navier-stokes-vortex-lab/verification/nonlinear_port/test_adapter.py", line 110, in test_sparse_refusal_preserves_both_status_and_nonfinite_count
+    self.assertIn(f'ksp_reason={reason};', message)
+AssertionError: 'ksp_reason=-11;' not found in 'sparse linear solve failed'
+
+======================================================================
+FAIL: test_sparse_refusal_preserves_both_status_and_nonfinite_count (verification.nonlinear_port.test_adapter.AdapterChecks.test_sparse_refusal_preserves_both_status_and_nonfinite_count) (reason=0, count=0)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/rharris/git/navier-stokes-vortex-lab/verification/nonlinear_port/test_adapter.py", line 110, in test_sparse_refusal_preserves_both_status_and_nonfinite_count
+    self.assertIn(f'ksp_reason={reason};', message)
+AssertionError: 'ksp_reason=0;' not found in 'sparse linear solve failed'
+
+======================================================================
+FAIL: test_sparse_refusal_preserves_both_status_and_nonfinite_count (verification.nonlinear_port.test_adapter.AdapterChecks.test_sparse_refusal_preserves_both_status_and_nonfinite_count) (reason=4, count=1)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/rharris/git/navier-stokes-vortex-lab/verification/nonlinear_port/test_adapter.py", line 110, in test_sparse_refusal_preserves_both_status_and_nonfinite_count
+    self.assertIn(f'ksp_reason={reason};', message)
+AssertionError: 'ksp_reason=4;' not found in 'sparse linear solve failed'
+
+======================================================================
+FAIL: test_sparse_refusal_preserves_both_status_and_nonfinite_count (verification.nonlinear_port.test_adapter.AdapterChecks.test_sparse_refusal_preserves_both_status_and_nonfinite_count) (reason=-11, count=2)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/rharris/git/navier-stokes-vortex-lab/verification/nonlinear_port/test_adapter.py", line 110, in test_sparse_refusal_preserves_both_status_and_nonfinite_count
+    self.assertIn(f'ksp_reason={reason};', message)
+AssertionError: 'ksp_reason=-11;' not found in 'sparse linear solve failed'
+
+======================================================================
+FAIL: test_optional_pc_diagnostic_failure_keeps_primary_refusal (verification.nonlinear_port.test_adapter.AdapterChecks.test_optional_pc_diagnostic_failure_keeps_primary_refusal)
+----------------------------------------------------------------------
+verification.nonlinear_port.prototype.Refusal: sparse linear solve failed
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/rharris/git/navier-stokes-vortex-lab/verification/nonlinear_port/test_adapter.py", line 117, in test_optional_pc_diagnostic_failure_keeps_primary_refusal
+    with self.assertRaisesRegex(Refusal, 'ksp_reason=-11;.*pc_failed_reason=unavailable:RuntimeError'):
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: "ksp_reason=-11;.*pc_failed_reason=unavailable:RuntimeError" does not match "sparse linear solve failed"
+
+----------------------------------------------------------------------
+Ran 3 tests in 0.001s
+
+FAILED (failures=5)

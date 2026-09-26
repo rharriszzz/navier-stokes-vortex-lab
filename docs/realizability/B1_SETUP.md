@@ -4,10 +4,12 @@ Current PC status: [R232's one-use Poiseuille result](POISEUILLE_RESULT_R232.md)
 is INCOMPLETE at PETSc symbolic LU, and the single numerical allocation is
 spent 1/1. [R233](POISEUILLE_SPARSE_REVIEW_R233.md) repairs structural zero
 diagonal storage and passes 59 standard-library tests, with no numerical rerun
-in that review. [R234](POISEUILLE_ADMISSION_R234.md) admits one new later fixture
+in that review. [R234](POISEUILLE_ADMISSION_R234.md) admitted one new fixture
 in a fresh directory. [R235](POISEUILLE_RESULT_R235.md) spent the new 1/1
 allocation: sparse linear solve refused, exit 1, empty cleanup, no numerical
 report or resource snapshot. The older 1/1 charge remains unchanged.
+[R236](POISEUILLE_KSP_REVIEW_R236.md) adds a tested refusal diagnostic without
+changing the solver or running FEM. Any later fixture needs separate admission.
 R229's transaction/metadata/interpreter checks completed; its setup
 memory-event refusal remains unchanged. FFCx's exact artifact/runtime gate is
 repaired. Retain `/tmp/navier-fenicsx-r229`; old `/tmp/navier-fenicsx` stays partial.

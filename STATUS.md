@@ -1,6 +1,6 @@
 # Project status: a boundary-controlled engineering approximation
 
-Updated 2026-09-26 (America/New_York), through R235. PC/WSL daisy owns the
+Updated 2026-09-26 (America/New_York), through R236. PC/WSL daisy owns the
 repository. **R232 corrects the recoverable R231 caller failure and resumes the
 same authorized, unspent one-use fixture, then spends it on a PETSc LU failure.**
 The [R232 result](docs/realizability/POISEUILLE_RESULT_R232.md) records an
@@ -17,8 +17,11 @@ spent it 1/1: the worker reached the sparse linear solve and refused with
 `Refusal: sparse linear solve failed`. Exit 1 and empty cleanup are confirmed;
 no numerical report or resource snapshot exists, so the exact KSP reason,
 accuracy and resource events remain unknown. Both allocations are spent 1/1.
-Next: Astra/high reviews the saved refusal without FEM; follow the
-[single task](SESSION_HANDOFF.md#next-task).
+[R236 review](docs/realizability/POISEUILLE_KSP_REVIEW_R236.md) adds KSP reason,
+nonfinite-answer count and optional PC failure reason to future refusal logs.
+All 62 standard-library tests pass with no numerical imports. No new allocation
+or live scope occurred. Next: Astra/high decides whether to admit one later
+instrumented fixture; follow the [single task](SESSION_HANDOFF.md#next-task).
 
 Historical R231 context: the
 [prelaunch result](docs/realizability/POISEUILLE_PRELAUNCH_R231.md) records a
@@ -41,7 +44,8 @@ R231 STARTED c90193e, allocation c3b5598 and completion db68c61 were published.
 R232 completion 7c41b80 verified by clean pull; R233 STARTED c08eb25 published.
 R233 completion 15c62dd verified by clean pull; R234 STARTED 6cc9e88 published.
 R234 completion 49a56cb verified by clean pull; R235 STARTED f7ac565 published.
-R235 completion delivery belongs in Git/final response.
+R235 completion fe5295b verified by clean pull; R236 STARTED 2e21a9c published.
+R236 completion delivery belongs in Git/final response.
 R230 supplied snapshot: preceding completion 13m 26s / 11:45 AM; 938,400 tokens
 (831,406 input, 17,031,424 cached, 106,994 output, 23,518 reasoning). Current
 Astra/high, weekly 98% (11:23 Oct 3 reset), Luna Reserve 99% (10:18 Oct 3 reset).

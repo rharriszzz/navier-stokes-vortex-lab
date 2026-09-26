@@ -1152,3 +1152,30 @@ empty stashes, same owner, Mac released, no conflicting open record. Continue
 with reported Astra/high authorizes source/evidence review, minimal tested
 diagnostic or precise blocker, and scoped publication. No numerical imports,
 FEM, live scope or new allocation; both prior one-use fixtures remain spent.
+
+### R236 completion
+COMPLETED | 2026-09-26T17:19:32Z | PC/WSL daisy | released: no
+Minimal sparse refusal diagnostic implemented: KSP code, nonfinite-answer
+count and optional PC failure code in retained stderr. Exact R235 cause remains
+unmeasured. Both prior allocations spent 1/1; no numerical attempt, allocation
+or live scope occurred. All solver/operator/gates/caps unchanged.
+R236 changed cube_adapter.py/test_adapter.py, the KSP review and four evidence
+files, prototype README/B1_SETUP, four track overviews, STATUS and request/
+lifecycle/handoff records. Checks: 62 tests with no numerical imports, five
+expected pre-change assertion failures, 23 ASTs, 25 reviewed source hashes
+(only adapter/tests changed), 20 old raw files/originals, retained reservations
+and absent old PIDs/cgroups, 191 local links, 236 unique IDs, append-only logs
+and Git whitespace. Skipped FEM/PETSc/MPI/NumPy execution, JIT/assembly/solve,
+manager/live scope, new allocation, install, suite/rotation/tank/B2, physical/
+render and Mac work. Source/documentation and scripted API evidence establish
+message behavior only; actual KSP reason, pivots/rank, accuracy and resource
+counters remain unknown. PC retains ownership; Mac remains released.
+
+Evidence: docs/realizability/POISEUILLE_KSP_REVIEW_R236.md and evidence/r236/.
+Next: Astra/high separate admission decision for one later diagnostic fixture,
+new exclusive directory/clean source binding if admitted, then stop before FEM.
+Recommend Sol/high only for separately admitted later mechanical execution;
+retain Astra/high for numerical-method decisions. No new chat needed.
+R235 delivery fe5295b verified; R236 STARTED 2e21a9c published. Completion
+prepared for scoped publication; final delivery hash/result in Git/final
+response, no post-push edit. PC retains ownership; Mac remains released.

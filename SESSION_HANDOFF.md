@@ -1,7 +1,43 @@
 # Current session handoff
 
-Last updated 2026-09-26 (America/New_York) for R235.
+Last updated 2026-09-26 (America/New_York) for R236.
 **PC/WSL daisy owns the repository.** No transfer; Mac remains released.
+**R236 completed the KSP refusal review and minimal diagnostic source.**
+The [review](docs/realizability/POISEUILLE_KSP_REVIEW_R236.md) preserves the
+unmeasured R235 cause. Future sparse-solve refusals now include the integer KSP
+reason, nonfinite answer count and optional PC failure reason; solver/operator,
+acceptance gates and caps are unchanged. All 62 standard-library tests pass,
+with no numerical imports. Both previous allocations remain spent 1/1; no new
+allocation or live scope occurred. Twenty raw files match retained originals,
+and both old worker PIDs/cgroups are absent.
+
+**Next: Astra/high makes the separate admission decision for one later
+instrumented diagnostic fixture, then stops before execution.** Follow the
+[Next task](#next-task). No new chat is necessary for this connected decision.
+
+R236 supplied snapshot: preceding completion 8m 15s / 1:11 PM; 459,457 total
+(409,921 input, 9,454,976 cached, 49,536 output, 8,407 reasoning), preceding
+resume ID 01a0de98-b2e9-74c1-8c8f-97150fb60d8c. Status reports Codex v0.155.1,
+Sol/high, session 01a0deb4-08c7-78e2-ab83-65111b56ad3d, weekly 100% (13:10
+on Oct 3), Luna Reserve 99% (10:18 on Oct 3), then user model change to Astra/high.
+No /new, context percentage or credit count supplied. These are user-reported
+snapshots, not independent/account-specific project accounting. R236 log keeps
+the supplied wording with account email redacted. No agent-initiated switch.
+R235 completion fe5295b verified by clean pull; R236 STARTED 2e21a9c published.
+Completion delivery belongs in Git/final response, with no post-push edit.
+
+R236 changed cube_adapter.py/test_adapter.py, the KSP review and four evidence
+files, prototype README/B1_SETUP, four track overviews, STATUS and request/
+lifecycle/handoff records. Checks: 62 tests with no numerical imports, five
+expected pre-change assertion failures, 23 ASTs, 25 reviewed source hashes
+(only adapter/tests changed), 20 old raw files/originals, retained reservations
+and absent old PIDs/cgroups, 191 local links, 236 unique IDs, append-only logs
+and Git whitespace. Skipped FEM/PETSc/MPI/NumPy execution, JIT/assembly/solve,
+manager/live scope, new allocation, install, suite/rotation/tank/B2, physical/
+render and Mac work. Source/documentation and scripted API evidence establish
+message behavior only; actual KSP reason, pivots/rank, accuracy and resource
+counters remain unknown. PC retains ownership; Mac remains released.
+
 **R235 spent the new R234 n=2 Poiseuille allocation: INCOMPLETE at the
 sparse linear solve, with no retry.** The [result](docs/realizability/POISEUILLE_RESULT_R235.md)
 and [raw evidence](docs/realizability/evidence/r235/run/) preserve clean source/
@@ -13,7 +49,7 @@ PID/cgroup absent. Both R232 and R235 one-use allowances are spent 1/1.
 R229's 303-event setup refusal remains false. Full suite/tank/B2 execution
 remains unadmitted.
 
-**R234 admits one NEW later bounded n=2 Poiseuille fixture, 0/1 spent.** The
+**Historical R234 admission granted one fixture, subsequently spent by R235.** The
 [admission contract](docs/realizability/POISEUILLE_ADMISSION_R234.md) and
 [allocation/caller](docs/realizability/evidence/r234/) fix the new directory at
 `/tmp/navier-poiseuille-r234-once`, preserve every numerical/resource gate and
@@ -38,15 +74,6 @@ retained originals are unchanged; fixed directory remains reserved, PID/cgroup
 absent. No numerical report or resource snapshot exists. R229's 303-event
 setup refusal remains false. No FEM, live scope, install or new allocation
 occurred in R233; full suite/tank/B2 work remains unadmitted.
-
-**Next: Astra/high reviews the saved R235 KSP refusal and source without
-FEM, identifies the smallest discriminating diagnostic or blocker, then stops.**
-Do not launch another numerical attempt or reuse either fixed directory.
-Because this is a distinct review and the supplied context is 32% remaining,
-recommend `/new`, select Astra/high, then Continue. This is advice only; no
-agent-initiated session/model switch occurred. R234 completion 49a56cb was
-verified by clean pull; R235 STARTED f7ac565 published. Completion delivery
-belongs in Git/final response, with no post-push edit.
 
 R235 supplied snapshot: 9m 16s / 1:02 PM completion; Codex v0.155.1,
 Astra/high before user-reported switch to Sol/high, session
@@ -321,12 +348,12 @@ and physical-work limits remain unchanged.
 | Owner | PC/WSL `daisy`; Mac `fire.lan` released after published R161 handoff and R162 receipt. |
 | Checkout | `/home/rharris/git/navier-stokes-vortex-lab`. |
 | Branch/upstream | `main` / `origin/main` |
-| Starting state | R235 same-owner clean entry at 49a56cb equal to origin/main after required fast-forward pull; rharris/daisy, empty stashes, no conflicting open session. First sandbox pull could not write .git/FETCH_HEAD; approved exact host rerun succeeded. |
+| Starting state | R236 same-owner clean main/origin/main at fe5295b after required fast-forward pull; rharris/daisy, empty stashes, R235 completed. Initial sandbox pull refused FETCH_HEAD write; approved exact rerun succeeded. |
 | Interpreter | /tmp/navier-fenicsx-r229/bin/python verified as 3.12.13 with -I -S; exact environment artifacts verified, setup memory-event predicate refused. Project Python remains 3.12.14. Old /tmp/navier-fenicsx is still partial. |
 | Other owner/process | Mac `fire.lan` released in the published R161 handoff. Local Git cannot inspect another checkout's unpublished state. |
-| Task processes | R235 worker PID 147714 exited 1 after sparse-solve refusal; manager final MainPID 0/empty ControlGroup, cleanup empty/unknown_children=false. Read-only PID/cgroup absence confirmed. R235 directory/reservation and ten raw originals retained. R232 older worker absent; both allocations spent 1/1. |
+| Task processes | R236 launched no numerical worker or live scope. Both R232/R235 recorded PIDs/cgroups absent, both reservations and all 20 raw originals retained; both allocations remain spent 1/1. |
 | Symbolic environment | `/tmp/navier-r183-sympy/bin/python`, Python 3.12.14, SymPy 1.14.0, mpmath 1.3.0; recreate using `requirements-symbolic.txt` if missing. Existing environments unchanged. |
-| Delivery state | R234 completion 49a56cb verified by clean pull; R235 STARTED f7ac565 published. R235 result/completion prepared for scoped publication; final delivery in Git/final response. PC retains ownership. |
+| Delivery state | R235 completion fe5295b verified by clean pull; R236 STARTED 2e21a9c published. R236 completion prepared for scoped publication; final delivery belongs in Git/final response. PC retains ownership. |
 
 ## Current result and limits
 
@@ -457,48 +484,41 @@ agent-side POV-Ray backtraces are unavailable.
 
 ## Next task
 
-**GPT-6 Astra / high / PC-WSL daisy: review the spent R235 sparse linear
-solve refusal, with no FEM or new allocation.** Recommend `/new` for this
-distinct numerical interpretation step, select Astra/high, then **Continue**.
-The supplied context is 32% remaining; the committed evidence and handoff
-carry the task to a fresh chat. [Official OpenAI Docs](https://developers.openai.com/api/docs/models/gpt-6-astra)
-was searched/opened and confirms high reasoning support. Model fit and /new
-advice are judgments, not account checks or agent-initiated switches.
+**GPT-6 Astra / high / PC-WSL daisy: decide whether to admit one later bounded
+Poiseuille diagnostic fixture using R236 instrumentation. No execution in this
+review.** Continue in the current chat; no new chat is required. Official
+[OpenAI Docs](https://developers.openai.com/api/docs/models/gpt-6-astra) was
+searched/opened for high reasoning support; task fit is judgment.
 
-Read the [R235 result](docs/realizability/POISEUILLE_RESULT_R235.md),
-[raw worker log](docs/realizability/evidence/r235/run/worker.log),
-[controller/caller records](docs/realizability/evidence/r235/run/),
-[checks](docs/realizability/evidence/r235/checks.json), R234 admission,
-R233 sparse review, `verification/nonlinear_port/{cube_adapter,sparse,fixture_driver}.py`
-and the frozen manifest. Both fixture allowances are spent 1/1. R235 reached
-`sparse_solve`: `ksp.solve` returned, then the source refused either a
-nonpositive KSP reason or a nonfinite answer. Neither branch outcome, the
-matrix nor a numerical/resource report was saved. The generic controller
-reason denotes absent resource evidence after failure, not the immediate cause.
+Read [R236 review](docs/realizability/POISEUILLE_KSP_REVIEW_R236.md), its
+[evidence](docs/realizability/evidence/r236/), R235 result/raw records, R234
+admission and the frozen manifest. Both prior allocations are spent 1/1.
+The diagnostic reports KSP reason/nonfinite count and best-effort PC failure
+reason through existing worker.log; it does not repair a demonstrated solver
+failure or recover the missing R235 data.
 
-1. Follow normal clean Continue ownership/synchronization/start publication.
-   Confirm no live R235 worker/cgroup and preserve both fixed directories/raw
-   evidence. No machine transfer, install or numerical launch.
-2. Audit the post-KSP status/answer check and its interaction with existing
-   Newton and PETSc settings, using saved evidence and import-free source/
-   synthetic tests. Distinguish proven facts from potential numeric pivots,
-   rank/conditioning, nonfinite answer or API behavior. Do not assert an
-   unrecorded KSP reason, resource counter or accuracy result.
-3. Identify the smallest diagnostic needed to disambiguate this refusal on a
-   later separately reviewed attempt. If source instrumentation is clearly
-   safe, implement/test only that diagnostic while preserving solver/operator,
-   gate thresholds, fixture and caps. Otherwise document a precise blocker
-   and next discriminating non-FEM check. No third allocation in this review.
-4. Publish the source/evidence result or blocker, checks/skips and one later
-   decision task. Any future numerical attempt needs a separate reviewed
-   admission and a new exclusive directory; neither spent directory may be
-   reused. Full suite, rotation, tank/B2, physical/rendering work remain
-   unadmitted.
+1. Follow the clean Continue protocol and publish STARTED. Preserve both old
+   directories/ledgers and all numerical/resource gates. No live scope or FEM.
+2. Make a specific go/no-go decision on whether the diagnostic's information
+   gain justifies one new n=2 fixture with the same solver. Do not infer that
+   a future numeric-pivot code proves singularity or a PC memory code proves
+   cgroup events. Consider the saved API/source evidence and 62 passing tests;
+   rerun checks only for changed source or a concrete unresolved risk.
+3. If admitted, prepare a new exclusive directory/allocation/caller contract
+   binding R236 reviewed source hashes, exact R229 interpreter and a future
+   actual clean launch HEAD. Preserve 180 s / 1536 MiB / no swap / 32 tasks /
+   one rank-thread / 20,000 mixed-DOF limits and all acceptance gates. State
+   the expected diagnostic fields and interpretation, spent-at-reservation
+   rule, no retry and pre-reservation recovery boundary. Never modify old
+   caller inventories to reuse either spent allocation.
+4. If refused, state the exact blocker and next discriminating source check.
+   Publish the decision/contract and stop before reservation, numerical import,
+   JIT/assembly/solve, install or manager/live-scope work.
 
-Completion: a tested minimal diagnostic source change or precise blocker,
-explicit old/new spent state, no FEM/import/JIT/solve or live task scope,
-scoped commit/push, then stop. Recommend Sol/high only if a later mechanical
-launch is separately admitted; retain Astra/high for numerical-method decisions.
+Completion: one reviewed admission contract or concrete no-go, scoped commit/
+push and one next task. Only after admission recommend Sol/high for mechanical
+execution on a later Continue; retain Astra/high for scientific/method choices.
+Full suite, rotation, tank/B2 and physical/rendering work remain unadmitted.
 
 ### Historical R230 single-fixture execution task (R232 spent)
 

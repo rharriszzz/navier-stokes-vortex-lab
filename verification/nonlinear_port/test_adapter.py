@@ -20,7 +20,124 @@ def dense(matrix):
     return [[row.get(j, 0.) for j in range(matrix.n)] for row in matrix.rows()]
 
 
+def scripted_solver(answer, reason=4, pc_reason=0, solve_error=None):
+    """Script status/answer only; never emulate or execute a factorization."""
+    events = []
+
+    class Array(list):
+        def tolist(self):
+            return list(self)
+
+    class Vec:
+        def __init__(self, name):
+            self.name, self.array = name, Array([0., 0.])
+
+        def getArray(self, readonly=False):
+            return self.array
+
+        def destroy(self):
+            events.append(('destroy', self.name))
+
+    class Mat:
+        def createAIJ(self, **kwargs):
+            self.vectors = 0
+            return self
+
+        def assemble(self):
+            pass
+
+        def createVecRight(self):
+            self.vectors += 1
+            return Vec('b' if self.vectors == 1 else 'x')
+
+        def destroy(self):
+            events.append(('destroy', 'a'))
+
+    class PC:
+        def setType(self, value):
+            events.append(('pc', value))
+
+        def setFactorSolverType(self, value):
+            events.append(('backend', value))
+
+        def getFailedReason(self):
+            events.append(('pc_reason',))
+            if isinstance(pc_reason, Exception):
+                raise pc_reason
+            return pc_reason
+
+    class KSP:
+        def create(self, comm):
+            return self
+
+        def setOperators(self, matrix):
+            pass
+
+        def setType(self, value):
+            events.append(('ksp', value))
+
+        def getPC(self):
+            return PC()
+
+        def solve(self, b, x):
+            events.append(('solve', tuple(b.array)))
+            if solve_error is not None:
+                raise solve_error
+            x.array[:] = answer
+
+        def getConvergedReason(self):
+            return reason
+
+        def destroy(self):
+            events.append(('destroy', 'ksp'))
+
+    np = SimpleNamespace(asarray=lambda values, dtype: tuple(dtype(v) for v in values))
+    petsc = SimpleNamespace(Mat=Mat, KSP=KSP, IntType=int, ScalarType=float)
+    return np, petsc, SimpleNamespace(size=1), events
+
+
 class AdapterChecks(unittest.TestCase):
+    def test_sparse_refusal_preserves_both_status_and_nonfinite_count(self):
+        matrix = CSR.from_rows([{0: 1.}, {1: 1.}])
+        for reason, answer, count in ((-11, [1., 2.], 0), (0, [1., 2.], 0),
+                                       (4, [float('nan'), 2.], 1),
+                                       (-11, [float('inf'), -float('inf')], 2)):
+            with self.subTest(reason=reason, count=count):
+                np, petsc, comm, events = scripted_solver(answer, reason, 2)
+                with self.assertRaises(Refusal) as caught:
+                    sparse_solve(np, petsc, comm, matrix, [1., 2.])
+                message = str(caught.exception)
+                self.assertIn(f'ksp_reason={reason};', message)
+                self.assertIn(f'nonfinite_answer_entries={count};', message)
+                self.assertIn('pc_failed_reason=2', message)
+                self.assertEqual(events[-4:], [('destroy', n) for n in ('ksp', 'x', 'b', 'a')])
+
+    def test_optional_pc_diagnostic_failure_keeps_primary_refusal(self):
+        np, petsc, comm, events = scripted_solver([1., 2.], -11, RuntimeError('probe'))
+        with self.assertRaisesRegex(Refusal, 'ksp_reason=-11;.*pc_failed_reason=unavailable:RuntimeError'):
+            sparse_solve(np, petsc, comm, CSR.from_rows([{0: 1.}, {1: 1.}]), [1., 2.])
+        self.assertEqual(events[-4:], [('destroy', n) for n in ('ksp', 'x', 'b', 'a')])
+
+    def test_sparse_diagnostic_preserves_success_true_residual_and_solver_exception(self):
+        matrix = CSR.from_rows([{0: 1.}, {1: 1.}])
+        for answer, error in (([1., 2.], None), ([0., 0.], None),
+                              ([1., 2.], RuntimeError('scripted solve exception'))):
+            with self.subTest(answer=answer, error=error):
+                np, petsc, comm, events = scripted_solver(answer, solve_error=error)
+                if error is not None:
+                    with self.assertRaises(RuntimeError) as caught:
+                        sparse_solve(np, petsc, comm, matrix, [1., 2.])
+                    self.assertIs(caught.exception, error)
+                elif answer == [0., 0.]:
+                    with self.assertRaisesRegex(Refusal, '^sparse linear true residual failed$'):
+                        sparse_solve(np, petsc, comm, matrix, [1., 2.])
+                else:
+                    self.assertEqual(sparse_solve(np, petsc, comm, matrix, [1., 2.]), answer)
+                self.assertEqual(events[:4], [('ksp', 'preonly'), ('pc', 'lu'),
+                                              ('backend', 'petsc'), ('solve', (1., 2.))])
+                self.assertNotIn(('pc_reason',), events)
+                self.assertEqual(events[-4:], [('destroy', n) for n in ('ksp', 'x', 'b', 'a')])
+
     def test_csr_keeps_zero_diagonal_without_changing_operator(self):
         rows = [{2: 4., 0: 0., 1: 0.}, {}, {0: -2., 2: 3.}]
         original = [dict(row) for row in rows]

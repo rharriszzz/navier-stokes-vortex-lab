@@ -23,8 +23,11 @@ granted one new n=2 fixture with a prepared caller.
 [R235](../../docs/realizability/POISEUILLE_RESULT_R235.md) spent it 1/1:
 `sparse_solve` refused after KSP solve returned, with exit 1 and empty cleanup.
 The exact KSP reason/answer, numerical diagnostics and resource events were not
-saved. Both fixture allowances are spent; next is an Astra/high source/evidence
-review through the [handoff task](../../SESSION_HANDOFF.md#next-task).
+saved. [R236](../../docs/realizability/POISEUILLE_KSP_REVIEW_R236.md) adds the
+KSP reason, nonfinite-answer count and optional PC failure reason to future
+refusals; 62 standard-library tests pass without numerical imports. Both fixture
+allowances are spent; next is a separate diagnostic-fixture admission decision
+through the [handoff task](../../SESSION_HANDOFF.md#next-task).
 
 - `polynomial.py`, `fixtures.py`: exact rational manufactured fields and
   independent Poiseuille/rigid-rotation oracles.

@@ -14,8 +14,10 @@ admitted one new fixture. [R235](docs/realizability/POISEUILLE_RESULT_R235.md)
 spent that 1/1 allocation: the worker reached the sparse solve, then refused
 without a numerical report or resource snapshot. Cleanup is empty. Both fixture
 allowances are spent 1/1; full suite/tank/B2 execution remains unadmitted.
-Follow the [handoff task](SESSION_HANDOFF.md#next-task) for Astra/high review
-of the saved KSP refusal without FEM.
+[R236](docs/realizability/POISEUILLE_KSP_REVIEW_R236.md) adds a minimal refusal
+diagnostic; 62 standard-library tests pass without numerical imports. No new
+allocation is admitted. Follow the [handoff task](SESSION_HANDOFF.md#next-task)
+for the separate Astra/high diagnostic-fixture admission decision, without FEM.
 No tank/hardware route or feasible contraction range is established.
 
 R188 priority update (2026-09-22): establish measurable essential dynamical

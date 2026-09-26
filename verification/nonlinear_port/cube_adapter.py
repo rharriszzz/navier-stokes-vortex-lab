@@ -215,8 +215,18 @@ def sparse_solve(np, PETSc, comm, matrix, rhs):
         # No setFromOptions: ambient command-line options must not alter method.
         ksp.solve(b, x)
         answer = x.getArray(readonly=True).tolist()
-        if ksp.getConvergedReason() <= 0 or not all(isfinite(v) for v in answer):
-            raise Refusal('sparse linear solve failed')
+        reason = int(ksp.getConvergedReason())
+        nonfinite = sum(not isfinite(v) for v in answer)
+        if reason <= 0 or nonfinite:
+            # The worker flushes this refusal to its retained stderr log.
+            # An optional PC query must not hide the primary status/answer.
+            try:
+                pc_reason = int(ksp.getPC().getFailedReason())
+            except Exception as exc:
+                pc_reason = f'unavailable:{type(exc).__name__}'
+            raise Refusal('sparse linear solve failed: '
+                          f'ksp_reason={reason}; nonfinite_answer_entries={nonfinite}; '
+                          f'pc_failed_reason={pc_reason}')
         from math import sqrt, fsum
         defect = sqrt(fsum((v-b)**2 for v, b in zip(matrix.matvec(answer), rhs)))
         if defect > max(1e-13, 1e-8*sqrt(fsum(v*v for v in rhs))):

@@ -8561,3 +8561,50 @@ status has a different session ID and reports Sol/high followed by a user model
 change to Astra/high. No /new excerpt, context percentage or credit count was
 supplied. Account/session values are user-reported, not independently checked
 or project-specific accounting. No agent-initiated switch.
+
+### R236 outcome — minimal refusal diagnostic complete, no numerical attempt
+
+The R235 log/source proves only returned KSP solve followed by a nonpositive
+reason or nonfinite answer; which branch, which Newton correction and any exact
+PC/pivot cause remain unknown. PETSc PREONLY source permits returned failure;
+KSP iteration-limit changes are not a remedy for that configured direct path.
+The implemented diagnostic records integer KSP reason, nonfinite-answer count
+and optional PC failure reason in the existing Refusal/stderr route. If the PC
+query raises, its exception type is labeled unavailable and the primary refusal
+survives. Solver/operator, Newton/true-residual gates, fixture and caps are
+unchanged. No numerical worker or third allocation; both old charges stay 1/1.
+
+R236 changed cube_adapter.py/test_adapter.py, the KSP review and four evidence
+files, prototype README/B1_SETUP, four track overviews, STATUS and request/
+lifecycle/handoff records. Checks: 62 tests with no numerical imports, five
+expected pre-change assertion failures, 23 ASTs, 25 reviewed source hashes
+(only adapter/tests changed), 20 old raw files/originals, retained reservations
+and absent old PIDs/cgroups, 191 local links, 236 unique IDs, append-only logs
+and Git whitespace. Skipped FEM/PETSc/MPI/NumPy execution, JIT/assembly/solve,
+manager/live scope, new allocation, install, suite/rotation/tank/B2, physical/
+render and Mac work. Source/documentation and scripted API evidence establish
+message behavior only; actual KSP reason, pivots/rank, accuracy and resource
+counters remain unknown. PC retains ownership; Mac remains released.
+
+Evidence: docs/realizability/POISEUILLE_KSP_REVIEW_R236.md and evidence/r236/.
+Three new methods use scripted Python API objects; two fail on the old source
+(five assertions), then all seven modules/62 tests pass in 0.566796244 s under
+project Python 3.12.14. Successful answer, true-residual refusal, original solve
+exception, method/backend, one solve and reverse destruction remain checked.
+The unchanged worker prints/flushed exception and exits 1; no live persistence
+or PETSc API invocation is claimed. Both old raw ledgers and callers remain
+unchanged; any future allocation needs a new source inventory and directory.
+One read-only cat targeted a nonexistent controller_result.json; actual retained
+controller evidence is result.json, subsequently read. No data was missing from
+the recorded ten-file R235 inventory. Original before-change test output remains
+at /tmp/r236-before.txt; only trailing whitespace was normalized for Git evidence.
+
+Next: Astra/high makes the separate go/no-go admission decision for one later
+instrumented n=2 fixture, justified by information gain with the unchanged
+solver. If admitted, prepare a new exclusive directory/source/interpreter
+contract preserving both charges and every gate; stop before execution. If
+refused, record a concrete blocker. No new chat required. Official OpenAI Docs
+was searched/opened to verify Astra/high support; fit is judgment, no account
+check or agent-initiated model/session switch. R235 delivery fe5295b verified
+by clean pull; R236 STARTED 2e21a9c published. Completion prepared for scoped
+commit/push; final delivery belongs in Git/final response, no post-push edit.
