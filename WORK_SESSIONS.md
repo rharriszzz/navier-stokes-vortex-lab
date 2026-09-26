@@ -953,3 +953,13 @@ Astra/high for interpretation or changed source/scientific/admission choices.
 R229 completion 2943a8a verified; STARTED ad40b3a published. Completion prepared
 for scoped publication, delivery hash/result in final/Git; no post-push edit.
 PC retains ownership; Mac remains released.
+
+## R231 — One admitted Poiseuille fixture
+STARTED | 2026-09-26T15:58:50Z | PC/WSL daisy | released: no
+Identity: rharris; Linux x86_64 daisy;
+/home/rharris/git/navier-stokes-vortex-lab; main/origin/main clean and equal at
+df3e6cb3eebbf8eaf0142a6c9443380f3dccf082 after required fast-forward pull;
+empty stashes, same owner, Mac released, no conflicting open record.
+Lowercase continue authorizes scoped publication. Execute exactly one admitted
+R230 n=2 Poiseuille fixture with fixed source/interpreter binding and caps;
+persist raw result, spent state and cleanup, then stop without retry.

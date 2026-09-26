@@ -7999,3 +7999,55 @@ interpretation or changed science/source/admission choices. Official OpenAI Docs
 searched/opened for Sol/high support; fit is judgment, not account access.
 PC/WSL daisy retains ownership, Mac released. Completion prepared for scoped
 commit/push; delivery hash/result belongs in Git/final response, no post-push edit.
+
+## R231 — 2026-09-26 — Continue one admitted Poiseuille fixture
+
+**User wording (account address redacted; supplied text retained):**
+
+```text
+Worked for 10m 43s · done 11:56 AM ╭────────────────────────────────────────────────╮
+│ >_ OpenAI Codex (v0.155.1)                     │
+│                                                │
+│ model:     gpt-6-astra high   /model to change │
+│ directory: ~/git/navier-stokes-vortex-lab      │
+╰────────────────────────────────────────────────╯
+
+  Tip: Use the OpenAI docs MCP for API questions; enable it with codex mcp add openaiDeveloperDocs --url
+  https://developers.openai.com/mcp.
+
+Token usage: total=120,248 input=101,587 (+ 1,419,904 cached) output=18,661 (reasoning 2,640)
+To continue this session, run codex resume, then select Review Codex session (01a0de65-6733-7371-9a22-d258ffe15779)
+
+/status
+
+╭───────────────────────────────────────────────────────────────────────────────────────╮
+│  >_ OpenAI Codex (v0.155.1)                                                           │
+│                                                                                       │
+│ Visit https://chatgpt.com/codex/settings/usage for up-to-date                         │
+│ information on rate limits and credits                                                │
+│                                                                                       │
+│  Model:                       gpt-6-astra (reasoning high, summaries auto)            │
+│  Model provider:              openai                                                  │
+│  Directory:                   ~/git/navier-stokes-vortex-lab                          │
+│  Permissions:                 Workspace (Ask for approval)                            │
+│  Agents.md:                   AGENTS.md                                               │
+│  Account:                     [email redacted] (Pro Lite)                            │
+│  Collaboration mode:          Default                                                 │
+│  Session:                     01a0de6f-8d3d-7ce1-af0d-3a81516bf8ae                    │
+│                                                                                       │
+│  Weekly limit:                [███████████████████░] 97% left (resets 11:23 on 3 Oct) │
+│  Luna Reserve Weekly limit:   [████████████████████] 99% left (resets 10:18 on 3 Oct) │
+╰───────────────────────────────────────────────────────────────────────────────────────╯
+
+• Model changed to gpt-6-sol high continue
+```
+
+**Scope/status:** STARTED. Supplied completion and status belong to distinct
+reported sessions; no /new excerpt, context percentage or credit count supplied.
+The user reports changing to Sol/high; no agent-initiated model switch or private
+session inspection. Per SESSION_PROTOCOL, lowercase continue authorizes scoped
+commit/push. Required clean fast-forward pull retained main/origin/main at
+df3e6cb3eebbf8eaf0142a6c9443380f3dccf082, empty stashes, rharris on Linux
+x86_64 PC/WSL daisy, Mac released, no conflicting open lifecycle record.
+Bounded task: execute the single admitted R230 n=2 Poiseuille fixture once under
+its fixed limits, record binding, result, spent state and cleanup, then stop.
