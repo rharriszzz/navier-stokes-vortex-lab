@@ -1,13 +1,12 @@
 # Control Research Roadmap
 
-[R242 result](docs/realizability/POISEUILLE_RESULT_R242.md) is **INCOMPLETE**:
-three verified SuperLU corrections completed, but 12 degree-24/26 diagnostic
-comparisons failed the unchanged limits. Numerical/resource reports and the
-latest 405-by-405 CSR/RHS are retained; worker exit 0, caller exit 1, empty cleanup.
-The resource snapshot records zero limit events before final handshake/exit.
-All four fixture allocations are spent 1/1. Follow the
-[current task](SESSION_HANDOFF.md#next-task) for Astra/high review of the
-saved quadrature refusal; no rerun or new allocation.
+[R243 review](docs/realizability/POISEUILLE_QUADRATURE_REVIEW_R243.md) reproduces
+R242's 12 quadrature failures and documents exact signed cancellation. The code
+matches the frozen rule; no runtime gate changed. A prospective Poiseuille-only
+signed accuracy target and physical checks at both degrees are proposed.
+R242 remains INCOMPLETE, all four allocations spent 1/1. Follow the
+[current task](SESSION_HANDOFF.md#next-task) for Astra/high source/tests;
+no numerical admission or execution.
 
 R232's [single-fixture result](docs/realizability/POISEUILLE_RESULT_R232.md)
 is INCOMPLETE: the worker reached PETSc symbolic LU and exited 1 after a
@@ -29,7 +28,7 @@ diagnostic; 62 standard-library tests pass without numerical imports.
 bounded diagnostic fixture; [R238](docs/realizability/POISEUILLE_RESULT_R238.md)
 spent it 1/1 on a reported numeric LU zero pivot, with empty cleanup but no
 numerical/resource report. All three allowances are spent. Follow the
-[handoff task](SESSION_HANDOFF.md#next-task) for the R242 quadrature-result review.
+[handoff task](SESSION_HANDOFF.md#next-task) for the R243 prospective source/test step.
 No tank/hardware route or feasible contraction range is established.
 
 R188 priority update (2026-09-22): establish measurable essential dynamical

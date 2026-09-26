@@ -1,0 +1,51 @@
+{
+  "ast": true,
+  "base_commit": "332d902f9e46aa03c8db1e9938b83f8e8a82f7e9",
+  "both_degree_saved_physical_checks": true,
+  "candidate_pair_disagreements": 0,
+  "candidate_status": "PROPOSAL_ONLY; no new runtime gate or numerical acceptance",
+  "comparison_rows": 30,
+  "evidence_sha256": {
+    "audit.json": "cba12dacf66f6184789cc0ed36d133d44767e8de0b236cab3026f495914dbc03",
+    "audit.py": "18311ad3e874138895e71c0de275e625a802feeae292e6224297123cde04ebe6"
+  },
+  "exact_face_cancellation": true,
+  "initial_audit_issue": "Python 3.12 sum did not show naive rounding loss; assertion failed; replaced toy with explicit recursive additions and reran successfully; no workload",
+  "json": true,
+  "local_link_targets": 232,
+  "logs_append_only": true,
+  "numerical_modules_loaded": [],
+  "original_controller_refusal": "failed or inconsistent numerical evidence",
+  "original_failures": 12,
+  "python": "3.12.14 (main, Sep  1 2026, 14:16:52) [Clang 22.1.3 ]",
+  "raw_originals_verified": 45,
+  "request": "R243",
+  "runtime_tests": "R241 69 tests reused, not rerun; source unchanged",
+  "skips": [
+    "FEM/numerical imports/JIT/assembly/solve",
+    "rank/SVD/alternative factorization",
+    "manager/live scope",
+    "installation",
+    "full suite/rotation/tank/B2",
+    "physical/render/Mac"
+  ],
+  "source_files_unchanged": 27,
+  "sources": [
+    {
+      "supports": "summation error and cancellation; no claimed FEM error bound",
+      "url": "https://nhigham.com/wp-content/uploads/2023/10/high93s.pdf"
+    },
+    {
+      "supports": "quadrature degree polynomial exactness",
+      "url": "https://docs.fenicsproject.org/basix/v0.10.0.post0/python/_autosummary/basix.quadrature.html"
+    },
+    {
+      "supports": "high reasoning supported; task recommendation is judgment",
+      "url": "https://developers.openai.com/api/docs/models/gpt-6-astra"
+    }
+  ],
+  "spent_allocations": 4,
+  "started_commit": "d74a6706ac49e4d0ee28edc75d2c760cccd9bd43",
+  "time_utc": "2026-09-26T21:16:38.366391+00:00",
+  "unique_request_ids": 243
+}

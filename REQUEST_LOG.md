@@ -9134,3 +9134,43 @@ Mac released. Supplied snapshot: completion 40m 22s / 5:06 PM, Codex v0.155.1,
 Astra/high, same session, context 72% (80K/258K), weekly 92%, Luna Reserve 99%.
 No /new, literal /status, token totals or credit count supplied. User-reported
 values only; no account verification or agent model/session switch.
+
+**R243 outcome — 2026-09-26: COMPLETED, publication prepared.**
+R243 reproduced all 30 quadrature comparisons, 12 failures and the original
+controller refusal. The code matches the intended R195/R196/R225 scale rule;
+no comparator typo or runtime gate change. Exact rational face integrals show
+O(1) cancellation in zero angular advection/traction and energy advection/flux.
+Rounding is consistent with the result but not proved as its sole cause.
+Saved totals lack summands/evaluation error bounds and the final field.
+
+Proposed prospective Poiseuille-only accuracy policy: max(old limit, 1e-14)
+for 17 explicit signed keys, old limits for 13 others including squared errors,
+with unchanged physical checks at both degrees. The new absolute target is one
+percent per scalar of the 1e-12 identity floor, an accuracy-budget choice, not
+a certified rounding bound. Candidate saved-data sensitivity has zero pair
+disagreements; both-degree physical replay passes with the saved degree-24
+backflow minimum. This does not reclassify R242 or grant execution. Synthetic
+controls reject excessive signed/relative changes, squared errors, unknown/
+nonfinite values; a common-mode pressure error is rejected by the actual
+physical constraint gate. All four allocations stay spent 1/1; R229 setup
+resource refusal and artifact-label discrepancy remain.
+
+Changed: R243 review and audit.py/audit.json/checks.json, prototype README,
+B1_SETUP, four track overviews, STATUS and request/lifecycle/handoff. Checks:
+27 unchanged source/pin hashes, 45 raw originals/four reservations and absent
+recorded PIDs/cgroups, original refusal, exact algebra, candidate controls,
+both-degree saved physical checks, no numerical modules, AST/JSON, 232 local
+link targets, 243 unique request IDs, append-only logs and whitespace. Existing
+69 runtime tests reused, not rerun. Initial audit toy assertion failed because
+Python 3.12 sum avoids the naive loss; explicit recursive additions repaired
+the demonstration and final audit passed. No workload was involved.
+Skips: FEM/JIT/assembly/solve/rank/alternative factorization, manager scope,
+installation, full suite/rotation/tank/B2, physical/render/Mac. Unknown:
+actual error decomposition, future target attainability, actual rank/permutation.
+Evidence: docs/realizability/POISEUILLE_QUADRATURE_REVIEW_R243.md and evidence/r243/.
+Next: Astra/high implements/tests the explicit prospective policy and both-degree
+physical validation; publishes an admission recommendation or blocker and stops
+before admission/execution. Official model high support rechecked; no model/
+session switch or /new needed. PC retains ownership; Mac released. R242 332d902
+verified by clean pull; R243 STARTED d74a670 published. Completion prepared for
+scoped publication; delivery hash/result in Git/final response, no post-push edit.
