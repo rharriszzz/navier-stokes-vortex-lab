@@ -25,7 +25,7 @@ def _message(exc):
     try:
         original = str(exc)
         return _short(original, 512), False, len(original) > 512
-    except Exception:
+    except BaseException:
         return '<exception message unavailable>', True, False
 
 
@@ -108,7 +108,8 @@ def save_failure(exc, tracker):
     """Return bounded stderr summary; persist only in an armed reserved directory."""
     message, failed, truncated = _message(exc)
     kind = _short(type(exc).__name__, 256)
-    summary = f'{kind}: {message}'
+    one_line = message.replace('\r', '\\r').replace('\n', '\\n')
+    summary = f'{kind}: {one_line}'
     if tracker.directory is None:
         return summary
     record = _record(exc, tracker, message, failed, truncated)

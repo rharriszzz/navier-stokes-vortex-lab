@@ -1,12 +1,12 @@
 # Project status: a boundary-controlled engineering approximation
 
-[R260 diagnostic integration](docs/realizability/MANUFACTURED_DIAGNOSTICS_R260.md)
-implements the R259 bounded failure record and thirteen stages. All 113
-source/fake tests pass; 84 saved originals and seven spent reservations verify.
-R258 remains INCOMPLETE; zero new attempts are admitted. Astra/high reviews
-source and admission next. Follow the [single current task](SESSION_HANDOFF.md#next-task).
+[R261 diagnostic admission](docs/realizability/MANUFACTURED_ADMISSION_R261.md)
+grants one new later one-use manufactured pilot in a fresh directory. All 114
+source/fake and six caller checks pass; 84 originals and seven prior spent
+reservations verify. R258 remains INCOMPLETE; the new allowance is unspent.
+Follow the [single current task](SESSION_HANDOFF.md#next-task).
 
-Updated 2026-09-26 (America/New_York), through R260. PC/WSL daisy owns the
+Updated 2026-09-26 (America/New_York), through R261. PC/WSL daisy owns the
 repository. **R232 corrects the recoverable R231 caller failure and resumes the
 same authorized, unspent one-use fixture, then spends it on a PETSc LU failure.**
 The [R232 result](docs/realizability/POISEUILLE_RESULT_R232.md) records an

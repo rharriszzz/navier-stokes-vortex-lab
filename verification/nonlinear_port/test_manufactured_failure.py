@@ -253,6 +253,26 @@ class FailureDiagnostics(unittest.TestCase):
             self.assertEqual(path.read_text(),'original')
             self.assertEqual(sorted(p.name for p in Path(parent).iterdir()),['failure.json'])
 
+    def test_summary_stays_one_line_and_base_exception_format_falls_back(self):
+        class UnsafeMessage(Exception):
+            def __str__(self): raise KeyboardInterrupt('formatting failed')
+        with TemporaryDirectory() as parent:
+            tracker=failure.StageTracker();tracker.arm(parent,{})
+            try: raise ValueError('first\nsecond\rthird')
+            except ValueError as exc:
+                summary=failure.save_failure(exc,tracker)
+            self.assertEqual(summary, 'ValueError: first\\nsecond\\rthird')
+            self.assertEqual(json.loads((Path(parent)/'failure.json').read_text())
+                             ['exception_message'], 'first\nsecond\rthird')
+        with TemporaryDirectory() as parent:
+            tracker=failure.StageTracker();tracker.arm(parent,{})
+            try: raise UnsafeMessage()
+            except UnsafeMessage as exc:
+                summary=failure.save_failure(exc,tracker)
+            record=json.loads((Path(parent)/'failure.json').read_text())
+            self.assertEqual(summary, 'UnsafeMessage: <exception message unavailable>')
+            self.assertTrue(record['message_format_failed'])
+
     def test_entry_persistence_failure_still_exits_one(self):
         def original(*,tracker):
             raise Refusal('original scientific failure')

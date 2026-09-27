@@ -1,5 +1,43 @@
 # Current session handoff
 
+Last updated 2026-09-26 (America/New_York) for R261.
+**PC/WSL daisy owns the repository.** No transfer; Mac remains released.
+**R261 admits one NEW later diagnostic manufactured pilot; zero new attempts
+spent.** The [source/admission review](docs/realizability/MANUFACTURED_ADMISSION_R261.md),
+[46-file inventory](docs/realizability/evidence/r261/source_inventory.json),
+[allocation/caller](docs/realizability/evidence/r261/),
+[114 source tests](docs/realizability/evidence/r261/tests.json),
+[six fake caller checks](docs/realizability/evidence/r261/caller_tests.json)
+and [audit](docs/realizability/evidence/r261/audit.json) are saved.
+
+All seven prior allocations remain spent; R258 is INCOMPLETE. All 84 raw
+originals, eleven artifacts, four resolutions, archive/interpreter, saved
+R246/R253 PASS and recorded process absence verify. No numerical import,
+manager, worker or new reservation in R261. The actual R258 recursion site,
+FEM import progress and pilot accuracy/resources remain unknown.
+
+**Next: use `/new`, select GPT-6 Sol/high, then Continue on PC/WSL daisy to
+execute only R261's fixed one-use caller once, preserve evidence, publish and
+stop for Astra/high interpretation.** This is a published admission boundary;
+no current context percentage or new status snapshot was supplied. See
+[Next task](#next-task). No model/session switch is claimed.
+
+R261 user supplied only `continue`. Clean pull verified R260 delivery 71a82e1;
+R261 STARTED 0fb5094 published. Completion prepared for scoped publication;
+delivery hash/result belongs in Git/final reply. PC retains ownership.
+
+Changed: manufactured failure/driver/test, R261 admission/caller/bindings/
+evidence, seven current status/index pages, request/lifecycle/handoff.
+Checks: 114 source/fake and six caller tests, saved R246/R253 PASS and R258
+INCOMPLETE, 84 originals/seven spent reservations, 46 source bindings,
+artifacts, AST/JSON/links, append-only logs and whitespace. Skipped: real
+FEM/manager/worker/reservation, full convergence/tank/B2, physical/render and
+Mac transfer. Unknown: actual recursion site/import progress, resource peaks/
+events, pilot accuracy/budgets, convergence/rank, R242 cause and artifact-label
+origin.
+
+### Previous R260 diagnostic implementation (reviewed by R261)
+
 Last updated 2026-09-26 (America/New_York) for R260.
 **PC/WSL daisy owns the repository.** No transfer; Mac remains released.
 **R260 implements the bounded failure record and thirteen stage markers.
@@ -1245,21 +1283,21 @@ and physical-work limits remain unchanged.
 | Owner | PC/WSL `daisy`; Mac `fire.lan` released after published R161 handoff and R162 receipt. |
 | Checkout | `/home/rharris/git/navier-stokes-vortex-lab`. |
 | Branch/upstream | `main` / `origin/main` |
-| Starting state | R260 same-owner clean main/origin/main at 0109736 after required fast-forward pull; rharris/daisy, empty stashes, R259 completed. STARTED 0d414c8 published. |
+| Starting state | R261 same-owner clean main/origin/main at 71a82e1 after required fast-forward pull; rharris/daisy, empty stashes, R260 completed. STARTED 0fb5094 published. |
 | Interpreter | /tmp/navier-fenicsx-r229/bin/python verified as 3.12.13 with -I -S; exact environment artifacts verified, setup memory-event predicate refused. Project Python remains 3.12.14. Old /tmp/navier-fenicsx is still partial. |
 | Other owner/process | Mac `fire.lan` released in the published R161 handoff. Local Git cannot inspect another checkout's unpublished state. |
-| Task processes | R260 source/fake tests only; no numerical import/manager/worker. All seven allowances spent; R258 cleanup empty and recorded PIDs/cgroups absent. |
+| Task processes | R261 source/fake and caller tests only; no numerical import/manager/worker/reservation. Seven prior allowances spent; new R261 allowance unspent. R258 cleanup empty and recorded PIDs/cgroups absent. |
 | Symbolic environment | `/tmp/navier-r183-sympy/bin/python`, Python 3.12.14, SymPy 1.14.0, mpmath 1.3.0; recreate using `requirements-symbolic.txt` if missing. Existing environments unchanged. |
-| Delivery state | R259 delivery 0109736 verified by clean pull; R260 STARTED 0d414c8 published. Integration/completion prepared for publication; delivery in Git/final response. PC retains ownership. |
+| Delivery state | R260 delivery 71a82e1 verified by clean pull; R261 STARTED 0fb5094 published. Review/completion prepared for publication; delivery in Git/final response. PC retains ownership. |
 
 ## Current result and limits
 
-R260 implements R259's bounded traceback and thirteen diagnostic stages, with
-113 source/fake tests passing. See the
-[result](docs/realizability/MANUFACTURED_DIAGNOSTICS_R260.md) and
-[single next task](#next-task). R258 remains INCOMPLETE; all seven allocations
-remain spent. No numerical result or new admission is available.
-Earlier results below retain their historical scope.
+R261 reviews the bounded diagnostics, repairs two message/stage edge cases,
+and grants one later one-use diagnostic pilot. See the
+[admission](docs/realizability/MANUFACTURED_ADMISSION_R261.md) and
+[single next task](#next-task). R258 remains INCOMPLETE; seven prior allocations
+remain spent and the new R261 allocation is unspent. No manufactured numerical
+result is available. Earlier results below retain their historical scope.
 
 R103 removes recursive infrastructure certification while preserving process
 safeguards, observed accounting, cleanup and incomplete-result refusal. R104
@@ -1388,40 +1426,44 @@ agent-side POV-Ray backtraces are unavailable.
 
 ## Next task
 
-**Use `/new`, select GPT-6 Astra / high, then Continue on PC/WSL daisy to
-review R260 diagnostic source and decide a separately bound new one-use
-admission/caller or a precise blocker. Stop before launch.** This is a published
-source implementation boundary; the handoff preserves the review inputs. No
-current context fraction was supplied, and no chat/model switch is claimed.
+**Use `/new`, select GPT-6 Sol / high, then Continue on PC/WSL daisy to
+execute only R261's new one-use manufactured diagnostic pilot. Preserve raw
+evidence and stop for Astra/high interpretation.** This is a published
+admission boundary. No current context fraction or new session/status snapshot
+was supplied; no chat/model switch is claimed.
 
-Read the [R259 review and complete contract](docs/realizability/MANUFACTURED_FAILURE_REVIEW_R259.md),
-[R260 integration result](docs/realizability/MANUFACTURED_DIAGNOSTICS_R260.md),
-[source audit](docs/realizability/evidence/r260/audit.json),
-[113-test record](docs/realizability/evidence/r260/tests.json), and
-[R258 result](docs/realizability/MANUFACTURED_RESULT_R258.md).
+Read the [R261 admission](docs/realizability/MANUFACTURED_ADMISSION_R261.md),
+[allocation](docs/realizability/evidence/r261/allocation.json),
+[finite caller](docs/realizability/evidence/r261/run_once.py),
+[source inventory](docs/realizability/evidence/r261/source_inventory.json),
+[artifact inventory](docs/realizability/evidence/r261/artifacts.json),
+[read-only audit](docs/realizability/evidence/r261/audit.json) and
+[R258 spent result](docs/realizability/MANUFACTURED_RESULT_R258.md).
 
-1. Follow clean Continue synchronization, ownership and STARTED publication.
-   Preserve all seven spent allocations, original bytes and prior scientific
-   results. R258 lacks an actual traceback; do not assume the recursion site.
-2. Review failure-record arming, strict stage order, bounded traceback and
-   message/byte handling, exclusive persistence, worker exit 1, and fake
-   success/failure checks against every R259 requirement. Confirm the science,
-   resource gates, numerical envelope, solver and operation counts are fixed.
-3. Audit the current 46-file source inventory, eleven runtime artifacts, four
-   resolutions, archive/interpreter, 84 originals and saved PASS/INCOMPLETE
-   results. Resolve any source defect within the review; if a fixed gate cannot
-   be met, publish a precise blocker. No numerical import/manager/reservation.
-4. If source passes, publish a **new**, separately bound one-use allocation and
-   finite caller with explicit source hashes, clean preflight, stop and evidence
-   rules. The R257 caller/allocation is spent and bound to old source. Stop
-   before execution. No launch, gate relaxation, inferred reset or old caller
-   reuse. Full convergence/tank/B2, physical/render and Mac transfer excluded.
+1. Follow clean Continue synchronization, owner/stash/status checks and
+   published STARTED lifecycle. Preserve all seven older spent allocations,
+   original bytes and scientific/resource gates. Verify the new fixed directory
+   and dangling link are absent, the 46 source bindings, eleven artifacts,
+   four resolutions, archive/interpreter, saved results and live capacity.
+2. Execute exactly the fixed R261 caller once with the clean published launch
+   HEAD. The caller preflight checks source, scope, interpreter, artifacts,
+   manager and resources before reservation; its 180-second timer includes
+   project imports. Preserve its stdout/stderr, elapsed/counter gaps, controller
+   and worker files, `failure.json` if present, and exact raw-file hashes.
+3. A proven caller/preflight error before reservation, managed worker and
+   numerical import follows the repository recovery protocol: save it, verify
+   the fixed directory and manager show no new task process, repair/test and
+   publish a clean source binding before continuing the same unspent scope.
+   Reservation, partial worker start or uncertain state spends/stops. No second
+   numerical attempt, alternate directory, gate relaxation or inferred reset.
+4. Audit exit/completion, finite resource peaks/events and cleanup, publish
+   PASS or INCOMPLETE with evidence and spent state. Stop for Astra/high result
+   interpretation. Full convergence/tank/B2, physical/render and Mac transfer
+   remain excluded.
 
-Completion: a defensible source review and either new prospective one-use
-admission/caller or precise blocker, published with checks and no numerical
-attempt. Execution, if later authorized, is a distinct Continue task and must
-obey its own once-only lifecycle. Explicitly recommend `/new` or continuing
-at completion. Next prompt: **Continue**.
+Completion: one preserved outcome, cleanup/spent state and publication; no
+scientific claim beyond the saved numerical evidence. Recommend `/new` or
+continuing at completion. Next prompt: **Continue**.
 
 ### Historical R230 single-fixture execution task (R232 spent)
 

@@ -219,8 +219,7 @@ def run_manufactured(modules, manifest, *, clock=time.monotonic,
         min(samples), counts, condition, compatibility, targets,
         lateral_absolute, manifest)
     t_diagnostics = clock()
-    mark('return_sampling_and_report', 'end')
-    return dict(geometry=geometry, subdivisions=2, step=1, time=.125, dt=.125,
+    result = dict(geometry=geometry, subdivisions=2, step=1, time=.125, dt=.125,
         history_semantics=manifest['history'], load_semantics=manifest['load'],
         mixed_dofs=402, global_dofs=len(state), fixed_velocity_dofs=len(fixed),
         fixed_inventory={str(key): fixed[key] for key in sorted(fixed)},
@@ -238,6 +237,8 @@ def run_manufactured(modules, manifest, *, clock=time.monotonic,
             primary_form_setup_jit=t_forms-t_mesh,
             compatibility_rank_newton=t_solve-t_forms,
             diagnostic_form_jit_assembly_sampling=t_diagnostics-t_solve))
+    mark('return_sampling_and_report', 'end')
+    return result
 
 
 def expected_admission(admission, manifest_bytes, manifest, run_dir,

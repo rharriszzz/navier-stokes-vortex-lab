@@ -1,10 +1,10 @@
 # Experimental Concept: Finite-Scale Forced Vortex Analogue
 
-[R260 diagnostic integration](docs/realizability/MANUFACTURED_DIAGNOSTICS_R260.md)
-implements the R259 bounded failure record and thirteen stages. All 113
-source/fake tests pass; 84 saved originals and seven spent reservations verify.
-R258 remains INCOMPLETE; zero new attempts are admitted. Astra/high reviews
-source and admission next. Follow the [single current task](SESSION_HANDOFF.md#next-task).
+[R261 diagnostic admission](docs/realizability/MANUFACTURED_ADMISSION_R261.md)
+grants one new later one-use manufactured pilot in a fresh directory. All 114
+source/fake and six caller checks pass; 84 originals and seven prior spent
+reservations verify. R258 remains INCOMPLETE; the new allowance is unspent.
+Follow the [single current task](SESSION_HANDOFF.md#next-task).
 
 R232's [single-fixture result](docs/realizability/POISEUILLE_RESULT_R232.md)
 is INCOMPLETE: the worker reached PETSc symbolic LU and exited 1 after a

@@ -1,0 +1,24 @@
+{
+  "archive_and_interpreter_verified": true,
+  "changed_from_r260": [
+    "verification/nonlinear_port/manufactured_driver.py",
+    "verification/nonlinear_port/manufactured_failure.py",
+    "verification/nonlinear_port/test_manufactured_failure.py"
+  ],
+  "fake_caller_tests": 6,
+  "historical_reservations_spent": 7,
+  "library_resolutions_verified": 4,
+  "manager_worker_reservation_or_numerical_import": false,
+  "new_attempts_spent": 0,
+  "new_directory_absent": true,
+  "numerical_modules_loaded": [],
+  "raw_originals_verified": 84,
+  "recorded_pids_cgroups_absent": true,
+  "runtime_artifacts_verified": 11,
+  "saved_r246_validator": "PASS",
+  "saved_r253_validator": "PASS",
+  "saved_r258_status": "INCOMPLETE",
+  "source_files": 46,
+  "source_tests": 114,
+  "status": "ADMITTED_FOR_LATER_EXECUTION"
+}
