@@ -1,0 +1,33 @@
+{
+  "attempts_granted": 1,
+  "attempts_spent": 1,
+  "caller_files": 4,
+  "cleanup_empty": true,
+  "failed_degree_checks": [
+    "angular_budget",
+    "angular_interval"
+  ],
+  "launch_commit": "d5b42eb0433c81c663810ab2858b67f6b4c8c789",
+  "linear_system_present": true,
+  "memory_peak_bytes": 304533504,
+  "numerical_accepted": false,
+  "numerical_modules_loaded": [],
+  "numerical_report_present": true,
+  "old_allocations_spent": 8,
+  "old_raw_files_verified": 97,
+  "original_bytes_verified": true,
+  "pids_peak": 6,
+  "prior_allocations_spent": 8,
+  "raw_bytes": 256896,
+  "recorded_cgroup_absent": true,
+  "recorded_pid_absent": true,
+  "recoverable_preflight_refusals": 1,
+  "reserved_held_released": true,
+  "resource_events_zero": true,
+  "resource_snapshot_present": true,
+  "run_files": 15,
+  "saved_r246_validator": "PASS",
+  "saved_r253_validator": "PASS",
+  "status": "INCOMPLETE",
+  "worker_exit_status": 0
+}

@@ -1,12 +1,12 @@
 # Project status: a boundary-controlled engineering approximation
 
-[R265 source review/admission](docs/realizability/MANUFACTURED_ADMISSION_R265.md)
-accepts balanced symbolic evaluation and admits one NEW later manufactured
-pilot under unchanged gates. All 118 source tests and six fake caller checks
-pass; zero new attempts spent. R262 remains INCOMPLETE and eight older
-allocations remain spent. Follow the [single current task](SESSION_HANDOFF.md#next-task).
+[R266 manufactured result](docs/realizability/MANUFACTURED_RESULT_R266.md)
+is INCOMPLETE: the single R265 allocation is spent 1/1. The worker saved a
+numerical report and passed resource limits, but both degrees fail angular
+budget checks. Eight older allocations remain spent. Follow the
+[single current task](SESSION_HANDOFF.md#next-task).
 
-Updated 2026-09-26 (America/New_York), through R265. PC/WSL daisy owns the
+Updated 2026-09-26 (America/New_York), through R266. PC/WSL daisy owns the
 repository. **R232 corrects the recoverable R231 caller failure and resumes the
 same authorized, unspent one-use fixture, then spends it on a PETSc LU failure.**
 The [R232 result](docs/realizability/POISEUILLE_RESULT_R232.md) records an

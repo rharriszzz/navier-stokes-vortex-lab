@@ -1,0 +1,1463 @@
+{
+  "actual_versions": {
+    "basix": "0.10.0",
+    "dolfinx": "0.10.0",
+    "ffcx": "0.10.0",
+    "mpi4py": "4.1.2",
+    "mpi_library": "MPICH Version:      5.0.1\nMPICH Release date: Fri Apr 10 09:45:31 AM CDT 2026\nMPICH ABI:          18:1:6\nMPICH Device:       ch4:ucx ofi\nMPICH configure:    --prefix=/tmp/navier-fenicsx-r229 --disable-doc --disable-dependency-tracking --enable-cxx --enable-fortran --enable-f08 --enable-mpi-abi --with-wrapper-dl-type=none --disable-static --with-device=ch4:ucx,ofi --with-ucx=/tmp/navier-fenicsx-r229 --with-libfabric=/tmp/navier-fenicsx-r229 --with-hwloc=/tmp/navier-fenicsx-r229 --with-yaksa=embedded --with-pm=hydra:gforker\nMPICH CC:           x86_64-conda-linux-gnu-cc -I/tmp/navier-fenicsx-r229/include -march=nocona -mtune=haswell -ftree-vectorize -fPIC -fstack-protector-strong -fno-plt -O2 -ffunction-sections -pipe -fno-merge-constants -isystem /tmp/navier-fenicsx-r229/include -fdebug-prefix-map=/home/conda/feedstock_root/build_artifacts/bld/rattler-build_mpich_1784230131/work=/usr/local/src/conda/mpich-5.0.1 -fdebug-prefix-map=/tmp/navier-fenicsx-r229=/usr/local/src/conda-prefix   -O2\nMPICH CXX:          x86_64-conda-linux-gnu-c++ -I/tmp/navier-fenicsx-r229/include -fvisibility-inlines-hidden -fmessage-length=0 -march=nocona -mtune=haswell -ftree-vectorize -fPIC -fstack-protector-strong -fno-plt -O2 -ffunction-sections -pipe -fno-merge-constants -isystem /tmp/navier-fenicsx-r229/include -fdebug-prefix-map=/home/conda/feedstock_root/build_artifacts/bld/rattler-build_mpich_1784230131/work=/usr/local/src/conda/mpich-5.0.1 -fdebug-prefix-map=/tmp/navier-fenicsx-r229=/usr/local/src/conda-prefix -O2\nMPICH F77:          x86_64-conda-linux-gnu-gfortran -I/tmp/navier-fenicsx-r229/include -march=nocona -mtune=haswell -ftree-vectorize -fPIC -fstack-protector-strong -fno-plt -O2 -ffunction-sections -pipe -fno-merge-constants -isystem /tmp/navier-fenicsx-r229/include -I/home/conda/feedstock_root/build_artifacts/bld/rattler-build_mpich_1784230131/build_env/include -fdebug-prefix-map=/home/conda/feedstock_root/build_artifacts/bld/rattler-build_mpich_1784230131/work=/usr/local/src/conda/mpich-5.0.1 -fdebug-prefix-map=/tmp/navier-fenicsx-r229=/usr/local/src/conda-prefix -O2\nMPICH FC:           x86_64-conda-linux-gnu-gfortran -I/tmp/navier-fenicsx-r229/include -march=nocona -mtune=haswell -ftree-vectorize -fPIC -fstack-protector-strong -fno-plt -O2 -ffunction-sections -pipe -fno-merge-constants -isystem /tmp/navier-fenicsx-r229/include -I/home/conda/feedstock_root/build_artifacts/bld/rattler-build_mpich_1784230131/build_env/include -fdebug-prefix-map=/home/conda/feedstock_root/build_artifacts/bld/rattler-build_mpich_1784230131/work=/usr/local/src/conda/mpich-5.0.1 -fdebug-prefix-map=/tmp/navier-fenicsx-r229=/usr/local/src/conda-prefix -O2\nMPICH features:     threadcomm",
+    "mpich": "5.0.1",
+    "petsc": "3.25.5",
+    "petsc4py": "3.25.5",
+    "python": "3.12.13",
+    "ufl": "2025.2.1"
+  },
+  "assembly_receipts": {
+    "24": {
+      "angular.advective": {
+        "compiled_rank": 0,
+        "method": "fem.form+assemble_scalar",
+        "ufl_integrals": 1
+      },
+      "angular.body": {
+        "compiled_rank": 0,
+        "method": "fem.form+assemble_scalar",
+        "ufl_integrals": 1
+      },
+      "angular.storage": {
+        "compiled_rank": 0,
+        "method": "fem.form+assemble_scalar",
+        "ufl_integrals": 1
+      },
+      "angular.traction": {
+        "compiled_rank": 0,
+        "method": "fem.form+assemble_scalar",
+        "ufl_integrals": 1
+      },
+      "angular_momentum": {
+        "compiled_rank": 0,
+        "method": "fem.form+assemble_scalar",
+        "ufl_integrals": 1
+      },
+      "area_0": {
+        "compiled_rank": 0,
+        "method": "fem.form+assemble_scalar",
+        "ufl_integrals": 1
+      },
+      "area_1": {
+        "compiled_rank": 0,
+        "method": "fem.form+assemble_scalar",
+        "ufl_integrals": 1
+      },
+      "boundary_absolute_flux": {
+        "compiled_rank": 0,
+        "method": "fem.form+assemble_scalar",
+        "ufl_integrals": 1
+      },
+      "div_u_L2_squared": {
+        "compiled_rank": 0,
+        "method": "fem.form+assemble_scalar",
+        "ufl_integrals": 1
+      },
+      "energy.advective": {
+        "compiled_rank": 0,
+        "method": "fem.form+assemble_scalar",
+        "ufl_integrals": 1
+      },
+      "energy.body": {
+        "compiled_rank": 0,
+        "method": "fem.form+assemble_scalar",
+        "ufl_integrals": 1
+      },
+      "energy.conservative_divergence": {
+        "compiled_rank": 0,
+        "method": "fem.form+assemble_scalar",
+        "ufl_integrals": 1
+      },
+      "energy.dissipation": {
+        "compiled_rank": 0,
+        "method": "fem.form+assemble_scalar",
+        "ufl_integrals": 1
+      },
+      "energy.pressure_divergence": {
+        "compiled_rank": 0,
+        "method": "fem.form+assemble_scalar",
+        "ufl_integrals": 1
+      },
+      "energy.storage": {
+        "compiled_rank": 0,
+        "method": "fem.form+assemble_scalar",
+        "ufl_integrals": 1
+      },
+      "energy.traction": {
+        "compiled_rank": 0,
+        "method": "fem.form+assemble_scalar",
+        "ufl_integrals": 1
+      },
+      "energy_identity_dissipation": {
+        "compiled_rank": 0,
+        "method": "fem.form+assemble_scalar",
+        "ufl_integrals": 1
+      },
+      "energy_identity_storage": {
+        "compiled_rank": 0,
+        "method": "fem.form+assemble_scalar",
+        "ufl_integrals": 1
+      },
+      "flux_0": {
+        "compiled_rank": 0,
+        "method": "fem.form+assemble_scalar",
+        "ufl_integrals": 1
+      },
+      "flux_1": {
+        "compiled_rank": 0,
+        "method": "fem.form+assemble_scalar",
+        "ufl_integrals": 1
+      },
+      "kinetic_discrete_derivative": {
+        "compiled_rank": 0,
+        "method": "fem.form+assemble_scalar",
+        "ufl_integrals": 1
+      },
+      "kinetic_energy": {
+        "compiled_rank": 0,
+        "method": "fem.form+assemble_scalar",
+        "ufl_integrals": 1
+      },
+      "lateral_flux": {
+        "compiled_rank": 0,
+        "method": "fem.form+assemble_scalar",
+        "ufl_integrals": 4
+      },
+      "p_error_integral": {
+        "compiled_rank": 0,
+        "method": "fem.form+assemble_scalar",
+        "ufl_integrals": 1
+      },
+      "p_error_squared": {
+        "compiled_rank": 0,
+        "method": "fem.form+assemble_scalar",
+        "ufl_integrals": 1
+      },
+      "pressure_mean": {
+        "compiled_rank": 0,
+        "method": "fem.form+assemble_scalar",
+        "ufl_integrals": 1
+      },
+      "traction_L2_returns_squared": {
+        "compiled_rank": 0,
+        "method": "fem.form+assemble_scalar",
+        "ufl_integrals": 2
+      },
+      "u_H1_seminorm_squared": {
+        "compiled_rank": 0,
+        "method": "fem.form+assemble_scalar",
+        "ufl_integrals": 1
+      },
+      "u_L2_squared": {
+        "compiled_rank": 0,
+        "method": "fem.form+assemble_scalar",
+        "ufl_integrals": 1
+      },
+      "volume": {
+        "compiled_rank": 0,
+        "method": "fem.form+assemble_scalar",
+        "ufl_integrals": 1
+      }
+    },
+    "26": {
+      "angular.advective": {
+        "compiled_rank": 0,
+        "method": "fem.form+assemble_scalar",
+        "ufl_integrals": 1
+      },
+      "angular.body": {
+        "compiled_rank": 0,
+        "method": "fem.form+assemble_scalar",
+        "ufl_integrals": 1
+      },
+      "angular.storage": {
+        "compiled_rank": 0,
+        "method": "fem.form+assemble_scalar",
+        "ufl_integrals": 1
+      },
+      "angular.traction": {
+        "compiled_rank": 0,
+        "method": "fem.form+assemble_scalar",
+        "ufl_integrals": 1
+      },
+      "angular_momentum": {
+        "compiled_rank": 0,
+        "method": "fem.form+assemble_scalar",
+        "ufl_integrals": 1
+      },
+      "area_0": {
+        "compiled_rank": 0,
+        "method": "fem.form+assemble_scalar",
+        "ufl_integrals": 1
+      },
+      "area_1": {
+        "compiled_rank": 0,
+        "method": "fem.form+assemble_scalar",
+        "ufl_integrals": 1
+      },
+      "boundary_absolute_flux": {
+        "compiled_rank": 0,
+        "method": "fem.form+assemble_scalar",
+        "ufl_integrals": 1
+      },
+      "div_u_L2_squared": {
+        "compiled_rank": 0,
+        "method": "fem.form+assemble_scalar",
+        "ufl_integrals": 1
+      },
+      "energy.advective": {
+        "compiled_rank": 0,
+        "method": "fem.form+assemble_scalar",
+        "ufl_integrals": 1
+      },
+      "energy.body": {
+        "compiled_rank": 0,
+        "method": "fem.form+assemble_scalar",
+        "ufl_integrals": 1
+      },
+      "energy.conservative_divergence": {
+        "compiled_rank": 0,
+        "method": "fem.form+assemble_scalar",
+        "ufl_integrals": 1
+      },
+      "energy.dissipation": {
+        "compiled_rank": 0,
+        "method": "fem.form+assemble_scalar",
+        "ufl_integrals": 1
+      },
+      "energy.pressure_divergence": {
+        "compiled_rank": 0,
+        "method": "fem.form+assemble_scalar",
+        "ufl_integrals": 1
+      },
+      "energy.storage": {
+        "compiled_rank": 0,
+        "method": "fem.form+assemble_scalar",
+        "ufl_integrals": 1
+      },
+      "energy.traction": {
+        "compiled_rank": 0,
+        "method": "fem.form+assemble_scalar",
+        "ufl_integrals": 1
+      },
+      "energy_identity_dissipation": {
+        "compiled_rank": 0,
+        "method": "fem.form+assemble_scalar",
+        "ufl_integrals": 1
+      },
+      "energy_identity_storage": {
+        "compiled_rank": 0,
+        "method": "fem.form+assemble_scalar",
+        "ufl_integrals": 1
+      },
+      "flux_0": {
+        "compiled_rank": 0,
+        "method": "fem.form+assemble_scalar",
+        "ufl_integrals": 1
+      },
+      "flux_1": {
+        "compiled_rank": 0,
+        "method": "fem.form+assemble_scalar",
+        "ufl_integrals": 1
+      },
+      "kinetic_discrete_derivative": {
+        "compiled_rank": 0,
+        "method": "fem.form+assemble_scalar",
+        "ufl_integrals": 1
+      },
+      "kinetic_energy": {
+        "compiled_rank": 0,
+        "method": "fem.form+assemble_scalar",
+        "ufl_integrals": 1
+      },
+      "lateral_flux": {
+        "compiled_rank": 0,
+        "method": "fem.form+assemble_scalar",
+        "ufl_integrals": 4
+      },
+      "p_error_integral": {
+        "compiled_rank": 0,
+        "method": "fem.form+assemble_scalar",
+        "ufl_integrals": 1
+      },
+      "p_error_squared": {
+        "compiled_rank": 0,
+        "method": "fem.form+assemble_scalar",
+        "ufl_integrals": 1
+      },
+      "pressure_mean": {
+        "compiled_rank": 0,
+        "method": "fem.form+assemble_scalar",
+        "ufl_integrals": 1
+      },
+      "traction_L2_returns_squared": {
+        "compiled_rank": 0,
+        "method": "fem.form+assemble_scalar",
+        "ufl_integrals": 2
+      },
+      "u_H1_seminorm_squared": {
+        "compiled_rank": 0,
+        "method": "fem.form+assemble_scalar",
+        "ufl_integrals": 1
+      },
+      "u_L2_squared": {
+        "compiled_rank": 0,
+        "method": "fem.form+assemble_scalar",
+        "ufl_integrals": 1
+      },
+      "volume": {
+        "compiled_rank": 0,
+        "method": "fem.form+assemble_scalar",
+        "ufl_integrals": 1
+      }
+    }
+  },
+  "backflow_sampling_degree": 24,
+  "compatibility": {
+    "absolute_term_sum": 4.507812499999997,
+    "condition": 1.00790526135794,
+    "defect": 7.105427357601002e-15,
+    "lateral_flux": -2.253906249999995,
+    "limit": 1.2913255704816852e-13,
+    "targets": [
+      0.6250000000000019,
+      1.6289062500000004
+    ]
+  },
+  "constraint_condition": {
+    "condition_bound": 1.00790526135794,
+    "gram": [
+      [
+        0.05555555555555559,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        0.055555555555555594,
+        0.0
+      ],
+      [
+        0.0,
+        0.0,
+        0.05468749999999996
+      ]
+    ],
+    "method": "sqrt infinity-norm condition of three-row Gram"
+  },
+  "contract_sha256": "3bae384b5840ec7827a3cb1c191e4b2f184fb2a1a69415d88a020eb0640e7128",
+  "dt": 0.125,
+  "eta": -2.029280877350218e-15,
+  "ffcx_artifact": {
+    "embedded_version": "0.10.0",
+    "package": {
+      "build": "pyhbc3ee6d_1",
+      "md5": "d37671d8e59bdccbc1ef2defa740bdaa",
+      "name": "fenics-ffcx",
+      "sha256": "727926ec2782375707cd036f86ab3d5004d53074ee80cf127619134f763e3473",
+      "subdir": "noarch",
+      "url": "https://conda.anaconda.org/conda-forge/noarch/fenics-ffcx-0.10.1-pyhbc3ee6d_1.conda",
+      "version": "0.10.1"
+    },
+    "recovery_evidence": {
+      "run/cache_verified.json": "3c5a61e8747238ac557cce800f1881c5131847ebf1212f4c388018f08f7199ce",
+      "run/verification.json": "8c91f6cc2f1494be477885e9e0cfd535b72e4f6c36fb01208ce44bb044b2d3f5"
+    }
+  },
+  "fixed_inventory": {
+    "0": -0.5634765625,
+    "1": 0.0,
+    "10": -0.5634765625,
+    "100": -0.5634765625,
+    "101": 1.62890625,
+    "102": -1.1269531249999996,
+    "103": -0.5634765625,
+    "104": 1.0654296875,
+    "105": -1.126953125,
+    "106": -0.28173828125,
+    "107": 1.0654296875,
+    "11": 0.501953125,
+    "115": -1.126953125,
+    "116": -1.126953125,
+    "117": -0.625,
+    "118": -1.1269531249999996,
+    "119": -1.1269531250000009,
+    "12": -1.1269531249999996,
+    "120": -0.0615234375,
+    "121": -1.126953125,
+    "122": -0.84521484375,
+    "123": -0.625,
+    "13": -0.5634765625,
+    "131": 0.0,
+    "132": -3.12792326762068e-17,
+    "133": -0.6249999999999999,
+    "14": -0.0615234375,
+    "140": -0.28173828125,
+    "141": 0.0,
+    "142": -0.625,
+    "144": -1.126953125,
+    "145": 0.0,
+    "146": 1.62890625,
+    "147": -1.126953125,
+    "148": -0.28173828125,
+    "149": 1.62890625,
+    "15": -1.126953125,
+    "150": -1.1269531249999998,
+    "151": 1.56396163381034e-17,
+    "152": 1.0654296875,
+    "153": -0.84521484375,
+    "154": 0.0,
+    "155": 1.0654296875,
+    "16": -0.28173828125,
+    "160": -0.28173828125,
+    "161": 0.0,
+    "162": -0.0615234375,
+    "163": -0.5634765625,
+    "164": -1.126953125,
+    "165": -0.625,
+    "166": -0.8452148437499996,
+    "167": -1.126953124999999,
+    "168": -0.0615234375,
+    "169": -0.84521484375,
+    "17": -0.0615234375,
+    "170": -1.126953125,
+    "171": -0.625,
+    "176": -1.126953125,
+    "177": -1.126953125,
+    "178": 1.62890625,
+    "179": -1.1269531249999996,
+    "18": -1.126953125,
+    "180": -1.1269531250000009,
+    "181": 1.0654296875,
+    "182": -1.126953125,
+    "183": -0.84521484375,
+    "184": 1.0654296875,
+    "189": -0.5634765625,
+    "19": -0.28173828125,
+    "190": -1.126953125,
+    "191": 0.501953125,
+    "192": -0.84521484375,
+    "193": -1.126953125,
+    "194": 0.501953125,
+    "2": -0.625,
+    "20": -0.625,
+    "202": 0.0,
+    "203": -0.5634765625,
+    "204": -0.625,
+    "211": 0.0,
+    "212": -0.28173828125,
+    "213": -0.625,
+    "215": -0.5634765625,
+    "216": 0.0,
+    "217": 1.62890625,
+    "221": -0.8452148437499999,
+    "222": 1.56396163381034e-17,
+    "223": 1.6289062499999996,
+    "224": -0.5634765624999999,
+    "225": 1.56396163381034e-17,
+    "226": 1.0654296875,
+    "228": -1.126953125,
+    "229": -0.84521484375,
+    "230": 1.62890625,
+    "244": 0.0,
+    "245": -3.12792326762068e-17,
+    "246": 0.501953125,
+    "250": -0.28173828125,
+    "251": 0.0,
+    "252": 0.501953125,
+    "253": 0.0,
+    "254": -4.6918849014310204e-17,
+    "255": -0.06152343749999989,
+    "257": -0.5634765624999999,
+    "258": -1.1269531249999996,
+    "259": -0.0615234375,
+    "260": -0.8452148437499996,
+    "261": -1.126953124999999,
+    "262": 1.0654296875,
+    "266": 0.0,
+    "267": -0.5634765625,
+    "268": 0.501953125,
+    "27": -0.84521484375,
+    "272": 0.0,
+    "273": -0.5634765625000001,
+    "274": -0.06152343749999989,
+    "275": 0.0,
+    "276": -0.28173828125,
+    "277": -0.0615234375,
+    "28": 0.0,
+    "288": 0.0,
+    "289": -0.28173828125,
+    "29": -0.625,
+    "290": 0.501953125,
+    "294": -0.5634765625,
+    "295": -1.126953125,
+    "296": 1.62890625,
+    "297": -0.84521484375,
+    "298": -1.126953125,
+    "299": 1.6289062499999996,
+    "3": -1.126953125,
+    "300": -0.5634765624999999,
+    "301": -1.1269531249999996,
+    "302": 1.0654296875,
+    "310": -0.28173828125,
+    "311": 0.0,
+    "312": 1.0654296875,
+    "319": 0.0,
+    "320": -1.126953125,
+    "321": -0.625,
+    "322": -0.28173828125,
+    "323": -1.1269531249999998,
+    "324": -0.0615234375,
+    "325": -0.28173828125,
+    "326": -1.126953125,
+    "327": -0.625,
+    "328": 0.0,
+    "329": -0.84521484375,
+    "330": -0.625,
+    "335": 0.0,
+    "336": -1.126953125,
+    "337": 0.501953125,
+    "338": -0.28173828125,
+    "339": -1.126953125,
+    "34": -1.126953125,
+    "340": 0.501953125,
+    "341": 0.0,
+    "342": -0.84521484375,
+    "343": 0.501953125,
+    "344": 0.0,
+    "345": -0.8452148437500001,
+    "346": -0.0615234375,
+    "348": 0.0,
+    "349": -6.25584653524136e-17,
+    "35": 0.0,
+    "350": 1.6289062500000004,
+    "354": -0.28173828124999994,
+    "355": 1.56396163381034e-17,
+    "356": 1.6289062499999996,
+    "357": 0.0,
+    "358": -4.6918849014310204e-17,
+    "359": 1.0654296875000002,
+    "36": 0.501953125,
+    "361": 0.0,
+    "362": -0.5634765625000001,
+    "363": 1.6289062500000004,
+    "367": 0.0,
+    "368": -0.5634765625000001,
+    "369": 1.0654296875000002,
+    "37": -1.126953125,
+    "370": 0.0,
+    "371": -0.28173828125,
+    "372": 1.0654296875,
+    "374": 0.0,
+    "375": -1.126953125,
+    "376": -0.0615234375,
+    "377": -0.28173828125,
+    "378": -1.1269531249999998,
+    "379": 1.0654296875,
+    "38": -0.28173828125,
+    "380": 0.0,
+    "381": -0.28173828125,
+    "382": 1.62890625,
+    "386": 0.0,
+    "387": -1.126953125,
+    "388": 1.62890625,
+    "389": -0.28173828125,
+    "39": 0.501953125,
+    "390": -1.126953125,
+    "391": 1.6289062499999996,
+    "392": 0.0,
+    "393": -1.126953125,
+    "394": 1.0654296875,
+    "395": 0.0,
+    "396": -0.84521484375,
+    "397": 1.0654296875,
+    "399": 0.0,
+    "4": 0.0,
+    "40": -1.1269531249999998,
+    "400": -0.84521484375,
+    "401": 1.62890625,
+    "41": 1.56396163381034e-17,
+    "42": -0.0615234375,
+    "43": -0.84521484375,
+    "44": 0.0,
+    "45": -0.0615234375,
+    "5": -0.625,
+    "6": -1.126953125,
+    "60": -0.5634765625,
+    "61": 0.0,
+    "62": 0.501953125,
+    "66": -0.84521484375,
+    "67": 0.0,
+    "68": 0.501953125,
+    "69": -0.5634765624999999,
+    "7": -0.5634765625,
+    "70": 1.56396163381034e-17,
+    "71": -0.0615234375,
+    "73": -1.126953125,
+    "74": -1.126953125,
+    "75": 0.501953125,
+    "76": -1.126953125,
+    "77": -0.84521484375,
+    "78": 0.501953125,
+    "79": -1.126953124999999,
+    "8": -0.625,
+    "80": -0.84521484375,
+    "81": -0.0615234375,
+    "9": -1.126953125,
+    "99": -1.126953125
+  },
+  "fixed_velocity_dofs": 240,
+  "fixture": "manufactured",
+  "frozen_row_scales": {
+    "maximum": 1.0,
+    "minimum": 0.6249999999999999
+  },
+  "geometry": {
+    "cell_type": "tetrahedron",
+    "cells": 48,
+    "exterior_facets": 48,
+    "facet_counts": {
+      "1": 8,
+      "2": 8,
+      "3": 8,
+      "4": 8,
+      "5": 8,
+      "6": 8
+    },
+    "geometric_dimension": 3,
+    "mixed_space_dofs": 402,
+    "mixed_space_ghosts": 0,
+    "space_used_for_field_representation": true,
+    "subdivisions": 2,
+    "topological_dimension": 3,
+    "vertices": 27
+  },
+  "global_dofs": 405,
+  "history_semantics": "exact polynomial expression at t=0 in residual and diagnostics",
+  "kind": "manufactured_spatial_pilot",
+  "lateral_absolute_flux": 2.253906249999995,
+  "linear_corrections": [
+    {
+      "linear_system": {
+        "bytes": 189049,
+        "correction": 1,
+        "file": "linear_system.json",
+        "sha256": "969dd99af185a89401dcd6ba87b8c740222334953b04732b1c26d313c13003bc"
+      },
+      "rhs_norm": 0.2383112579626536,
+      "true_residual": 1.3266849867420138e-16
+    },
+    {
+      "linear_system": {
+        "bytes": 190013,
+        "correction": 2,
+        "file": "linear_system.json",
+        "sha256": "fb73347a8af6ebe7127ad198c5bbc05f66817c494e28f8a624ffb6aa935e8443"
+      },
+      "rhs_norm": 3.967606451741691e-05,
+      "true_residual": 8.575952719519559e-20
+    },
+    {
+      "linear_system": {
+        "bytes": 189973,
+        "correction": 3,
+        "file": "linear_system.json",
+        "sha256": "d7077a425a828df03b9278ccfb29a31a143afebdd29be69d0e5ce335a5f6116b"
+      },
+      "rhs_norm": 2.1388570232954918e-10,
+      "true_residual": 2.85960637176363e-25
+    }
+  ],
+  "load_semantics": "f_continuous + (u_exact(t)-u_exact(0))/dt - u_exact_t(t)",
+  "manifest_sha256": "429c1b2752106ff834ab2cffc1670be3129dfe67ebacb8c80d0ab2a7fb61b6d6",
+  "measured_targets": [
+    0.6250000000000019,
+    1.6289062500000004
+  ],
+  "minimum_return_normal_velocity": 0.6188655155962846,
+  "mixed_dofs": 402,
+  "mode": "single_be_spatial_pilot",
+  "multipliers": [
+    -0.8222479007250396,
+    0.30168296435536296
+  ],
+  "nonlinear_history": [
+    0.2383112579626536,
+    3.967606451741691e-05,
+    2.1388570232954918e-10,
+    3.903967951178561e-15
+  ],
+  "perturbation": 0.05,
+  "perturbed_velocity_dof": 21,
+  "phase_seconds": {
+    "compatibility_rank_newton": 1.6889707490045112,
+    "diagnostic_form_jit_assembly_sampling": 12.049123731994769,
+    "mesh_and_lift": 0.01943264700821601,
+    "primary_form_setup_jit": 3.181110401987098
+  },
+  "raw_by_degree": {
+    "24": {
+      "angular.advective": 0.0039874868969447105,
+      "angular.body": -0.01897693210177953,
+      "angular.storage": -0.002395657332148085,
+      "angular.traction": 0.0122395864129779,
+      "angular_momentum": 0.0019227650557037184,
+      "area_0": 1.0000000000000029,
+      "area_1": 1.0000000000000029,
+      "boundary_absolute_flux": 4.507812499999981,
+      "div_u_L2_squared": 0.0008273811328920742,
+      "energy.advective": 0.5688677444295895,
+      "energy.body": -1.0181437223803407,
+      "energy.conservative_divergence": -7.071323044421624e-05,
+      "energy.dissipation": 1.5244690304215742,
+      "energy.pressure_divergence": 1.036745305161047e-17,
+      "energy.storage": 1.149334709656391,
+      "energy.traction": -2.2341425057553095,
+      "energy_identity_dissipation": 0.06420663727495896,
+      "energy_identity_storage": 1.085128072381438,
+      "flux_0": 0.6250000000000047,
+      "flux_1": 1.6289062499999967,
+      "kinetic_discrete_derivative": 1.085128072381438,
+      "kinetic_energy": 0.7606712433636357,
+      "lateral_flux": -2.253906249999995,
+      "p_error_integral": 2.0683124773458793e-16,
+      "p_error_squared": 0.0012822513663877616,
+      "pressure_mean": -1.222247680875919e-16,
+      "traction_L2_returns_squared": 0.006034920760428161,
+      "u_H1_seminorm_squared": 0.0017649185763709896,
+      "u_L2_squared": 8.644735053812521e-06,
+      "volume": 1.0000000000000917
+    },
+    "26": {
+      "angular.advective": 0.0039874868969447365,
+      "angular.body": -0.018976932101779333,
+      "angular.storage": -0.0023956573321481127,
+      "angular.traction": 0.01223958641297557,
+      "angular_momentum": 0.0019227650557036916,
+      "area_0": 1.0000000000000013,
+      "area_1": 1.0000000000000013,
+      "boundary_absolute_flux": 4.507812499999994,
+      "div_u_L2_squared": 0.0008273811328920677,
+      "energy.advective": 0.5688677444295923,
+      "energy.body": -1.0181437223803327,
+      "energy.conservative_divergence": -7.071323044432469e-05,
+      "energy.dissipation": 1.5244690304215718,
+      "energy.pressure_divergence": 4.04717573501556e-17,
+      "energy.storage": 1.1493347096563824,
+      "energy.traction": -2.2341425057552975,
+      "energy_identity_dissipation": 0.06420663727496001,
+      "energy_identity_storage": 1.0851280723813967,
+      "flux_0": 0.6250000000000037,
+      "flux_1": 1.628906249999997,
+      "kinetic_discrete_derivative": 1.0851280723813967,
+      "kinetic_energy": 0.7606712433636237,
+      "lateral_flux": -2.2539062500000036,
+      "p_error_integral": 1.7550137988300043e-16,
+      "p_error_squared": 0.0012822513663877735,
+      "pressure_mean": 1.9244031655807954e-16,
+      "traction_L2_returns_squared": 0.006034920760428151,
+      "u_H1_seminorm_squared": 0.0017649185763709686,
+      "u_L2_squared": 8.644735053812712e-06,
+      "volume": 1.0000000000000902
+    }
+  },
+  "report": {
+    "checks": {
+      "compatibility": true,
+      "constraint_condition": true,
+      "degree24": false,
+      "degree26": false,
+      "quadrature": true,
+      "targets": true,
+      "verified_corrections": true
+    },
+    "compatibility": {
+      "absolute_term_sum": 4.507812499999997,
+      "condition": 1.00790526135794,
+      "defect": 7.105427357601002e-15,
+      "lateral_flux": -2.253906249999995,
+      "limit": 1.2913255704816852e-13,
+      "targets": [
+        0.6250000000000019,
+        1.6289062500000004
+      ]
+    },
+    "constraint_condition": {
+      "condition_bound": 1.00790526135794,
+      "gram": [
+        [
+          0.05555555555555559,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.055555555555555594,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.05468749999999996
+        ]
+      ],
+      "method": "sqrt infinity-norm condition of three-row Gram"
+    },
+    "degree_validation": {
+      "24": {
+        "accepted": false,
+        "checks": {
+          "angular_budget": false,
+          "angular_interval": false,
+          "backflow": true,
+          "be_identities": true,
+          "constraints": true,
+          "energy_budget": true,
+          "energy_interval": true,
+          "linear": true,
+          "nonlinear": true,
+          "volume_and_caps": true
+        },
+        "field_report": {
+          "angular_budget": {
+            "absolute_term_sum": 0.03759966274385022,
+            "accepted": false,
+            "limit": 0.0003759966274385022,
+            "signed_defect": -0.005145516124005005,
+            "terms": {
+              "advective": 0.0039874868969447105,
+              "body": -0.01897693210177953,
+              "storage": -0.002395657332148085,
+              "traction": 0.0122395864129779
+            }
+          },
+          "both_flux_errors": [
+            4.6629367034256575e-15,
+            -3.3306690738754696e-15
+          ],
+          "div_u_L2": 0.02876423357039214,
+          "energy_budget": {
+            "absolute_term_sum": 6.495028425873649,
+            "accepted": true,
+            "limit": 0.06495028425873649,
+            "signed_defect": -0.00968545685853954,
+            "terms": {
+              "advective": 0.5688677444295895,
+              "body": -1.0181437223803407,
+              "conservative_divergence": -7.071323044421624e-05,
+              "dissipation": 1.5244690304215742,
+              "pressure_divergence": 1.036745305161047e-17,
+              "storage": 1.149334709656391,
+              "traction": -2.2341425057553095
+            }
+          },
+          "energy_identity_defect": -5.9396931817445875e-15,
+          "eta": -2.029280877350218e-15,
+          "multiplier_errors": [
+            0.0035333492749604067,
+            0.0024642143553629814
+          ],
+          "p_L2_mean_zero": 0.0358085376186708,
+          "pressure_mean": -1.222247680875919e-16,
+          "raw": {
+            "angular.advective": 0.0039874868969447105,
+            "angular.body": -0.01897693210177953,
+            "angular.storage": -0.002395657332148085,
+            "angular.traction": 0.0122395864129779,
+            "angular_momentum": 0.0019227650557037184,
+            "area_0": 1.0000000000000029,
+            "area_1": 1.0000000000000029,
+            "boundary_absolute_flux": 4.507812499999981,
+            "div_u_L2_squared": 0.0008273811328920742,
+            "energy.advective": 0.5688677444295895,
+            "energy.body": -1.0181437223803407,
+            "energy.conservative_divergence": -7.071323044421624e-05,
+            "energy.dissipation": 1.5244690304215742,
+            "energy.pressure_divergence": 1.036745305161047e-17,
+            "energy.storage": 1.149334709656391,
+            "energy.traction": -2.2341425057553095,
+            "energy_identity_dissipation": 0.06420663727495896,
+            "energy_identity_storage": 1.085128072381438,
+            "flux_0": 0.6250000000000047,
+            "flux_1": 1.6289062499999967,
+            "kinetic_discrete_derivative": 1.085128072381438,
+            "kinetic_energy": 0.7606712433636357,
+            "lateral_flux": -2.253906249999995,
+            "p_error_integral": 2.0683124773458793e-16,
+            "p_error_squared": 0.0012822513663877616,
+            "pressure_mean": -1.222247680875919e-16,
+            "traction_L2_returns_squared": 0.006034920760428161,
+            "u_H1_seminorm_squared": 0.0017649185763709896,
+            "u_L2_squared": 8.644735053812521e-06,
+            "volume": 1.0000000000000917
+          },
+          "traction_L2_returns": 0.07768475243204526,
+          "u_H1_seminorm": 0.0420109340097431,
+          "u_L2": 0.0029401930300258384
+        },
+        "identities": {
+          "angular_storage": {
+            "accepted": true,
+            "defect": 5.4643789493269423e-17,
+            "expected": -0.002395657332148085,
+            "limit": 1e-12,
+            "observed": -0.0023956573321480303
+          },
+          "be_storage": {
+            "accepted": true,
+            "defect": -5.9396931817445875e-15,
+            "expected": 1.149334709656397,
+            "limit": 1e-12,
+            "observed": 1.149334709656391
+          },
+          "energy_storage": {
+            "accepted": true,
+            "defect": 5.839773109528323e-14,
+            "expected": 1.085128072381438,
+            "limit": 1e-12,
+            "observed": 1.0851280723814964
+          },
+          "kinetic_derivative": {
+            "accepted": true,
+            "defect": 5.839773109528323e-14,
+            "expected": 1.085128072381438,
+            "limit": 1e-12,
+            "observed": 1.0851280723814964
+          }
+        },
+        "interval_budgets": {
+          "angular": {
+            "accepted": false,
+            "defect": -0.0006431895155006188,
+            "limit": 4.6999578429812716e-05,
+            "semantics": "discrete_manufactured_BE",
+            "terms": {
+              "advective": 0.0004984358621180888,
+              "body": -0.0023721165127224414,
+              "inventory_change": -0.0002994571665185038,
+              "traction": 0.0015299483016222375
+            }
+          },
+          "energy": {
+            "accepted": true,
+            "defect": -0.0012106821073094003,
+            "limit": 0.008118785532342142,
+            "semantics": "discrete_manufactured_BE",
+            "terms": {
+              "BE_dissipation": 0.00802582965936987,
+              "advective": 0.07110846805369869,
+              "body": -0.12726796529754258,
+              "conservative_divergence": -8.83915380552703e-06,
+              "dissipation": 0.19055862880269678,
+              "inventory_change": 0.13564100904768706,
+              "pressure_divergence": 1.2959316314513087e-18,
+              "traction": -0.2792678132194137
+            }
+          }
+        }
+      },
+      "26": {
+        "accepted": false,
+        "checks": {
+          "angular_budget": false,
+          "angular_interval": false,
+          "backflow": true,
+          "be_identities": true,
+          "constraints": true,
+          "energy_budget": true,
+          "energy_interval": true,
+          "linear": true,
+          "nonlinear": true,
+          "volume_and_caps": true
+        },
+        "field_report": {
+          "angular_budget": {
+            "absolute_term_sum": 0.03759966274384775,
+            "accepted": false,
+            "limit": 0.00037599662743847755,
+            "signed_defect": -0.005145516124007139,
+            "terms": {
+              "advective": 0.0039874868969447365,
+              "body": -0.018976932101779333,
+              "storage": -0.0023956573321481127,
+              "traction": 0.01223958641297557
+            }
+          },
+          "both_flux_errors": [
+            3.6637359812630166e-15,
+            -3.1086244689504383e-15
+          ],
+          "div_u_L2": 0.028764233570392025,
+          "energy_budget": {
+            "absolute_term_sum": 6.495028425873621,
+            "accepted": true,
+            "limit": 0.06495028425873621,
+            "signed_defect": -0.00968545685852796,
+            "terms": {
+              "advective": 0.5688677444295923,
+              "body": -1.0181437223803327,
+              "conservative_divergence": -7.071323044432469e-05,
+              "dissipation": 1.5244690304215718,
+              "pressure_divergence": 4.04717573501556e-17,
+              "storage": 1.1493347096563824,
+              "traction": -2.2341425057552975
+            }
+          },
+          "energy_identity_defect": 2.5646151868841116e-14,
+          "eta": -2.029280877350218e-15,
+          "multiplier_errors": [
+            0.0035333492749604067,
+            0.0024642143553629814
+          ],
+          "p_L2_mean_zero": 0.03580853761867096,
+          "pressure_mean": 1.9244031655807954e-16,
+          "raw": {
+            "angular.advective": 0.0039874868969447365,
+            "angular.body": -0.018976932101779333,
+            "angular.storage": -0.0023956573321481127,
+            "angular.traction": 0.01223958641297557,
+            "angular_momentum": 0.0019227650557036916,
+            "area_0": 1.0000000000000013,
+            "area_1": 1.0000000000000013,
+            "boundary_absolute_flux": 4.507812499999994,
+            "div_u_L2_squared": 0.0008273811328920677,
+            "energy.advective": 0.5688677444295923,
+            "energy.body": -1.0181437223803327,
+            "energy.conservative_divergence": -7.071323044432469e-05,
+            "energy.dissipation": 1.5244690304215718,
+            "energy.pressure_divergence": 4.04717573501556e-17,
+            "energy.storage": 1.1493347096563824,
+            "energy.traction": -2.2341425057552975,
+            "energy_identity_dissipation": 0.06420663727496001,
+            "energy_identity_storage": 1.0851280723813967,
+            "flux_0": 0.6250000000000037,
+            "flux_1": 1.628906249999997,
+            "kinetic_discrete_derivative": 1.0851280723813967,
+            "kinetic_energy": 0.7606712433636237,
+            "lateral_flux": -2.2539062500000036,
+            "p_error_integral": 1.7550137988300043e-16,
+            "p_error_squared": 0.0012822513663877735,
+            "pressure_mean": 1.9244031655807954e-16,
+            "traction_L2_returns_squared": 0.006034920760428151,
+            "u_H1_seminorm_squared": 0.0017649185763709686,
+            "u_L2_squared": 8.644735053812712e-06,
+            "volume": 1.0000000000000902
+          },
+          "traction_L2_returns": 0.07768475243204519,
+          "u_H1_seminorm": 0.04201093400974285,
+          "u_L2": 0.002940193030025871
+        },
+        "identities": {
+          "angular_storage": {
+            "accepted": true,
+            "defect": -1.3270634591222574e-16,
+            "expected": -0.0023956573321481127,
+            "limit": 1e-12,
+            "observed": -0.0023956573321482454
+          },
+          "be_storage": {
+            "accepted": true,
+            "defect": 2.5646151868841116e-14,
+            "expected": 1.1493347096563569,
+            "limit": 1e-12,
+            "observed": 1.1493347096563824
+          },
+          "energy_storage": {
+            "accepted": true,
+            "defect": 3.774758283725532e-15,
+            "expected": 1.0851280723813967,
+            "limit": 1e-12,
+            "observed": 1.0851280723814005
+          },
+          "kinetic_derivative": {
+            "accepted": true,
+            "defect": 3.774758283725532e-15,
+            "expected": 1.0851280723813967,
+            "limit": 1e-12,
+            "observed": 1.0851280723814005
+          }
+        },
+        "interval_budgets": {
+          "angular": {
+            "accepted": false,
+            "defect": -0.000643189515500909,
+            "limit": 4.699957842980986e-05,
+            "semantics": "discrete_manufactured_BE",
+            "terms": {
+              "advective": 0.0004984358621180921,
+              "body": -0.0023721165127224167,
+              "inventory_change": -0.00029945716651853067,
+              "traction": 0.0015299483016219463
+            }
+          },
+          "energy": {
+            "accepted": true,
+            "defect": -0.001210682107318729,
+            "limit": 0.008118785532341998,
+            "semantics": "discrete_manufactured_BE",
+            "terms": {
+              "BE_dissipation": 0.008025829659370001,
+              "advective": 0.07110846805369904,
+              "body": -0.12726796529754159,
+              "conservative_divergence": -8.839153805540586e-06,
+              "dissipation": 0.19055862880269647,
+              "inventory_change": 0.13564100904767507,
+              "pressure_divergence": 5.05896966876945e-18,
+              "traction": -0.2792678132194122
+            }
+          }
+        }
+      }
+    },
+    "diagnostic_policy": {
+      "name": "manufactured_spatial_pilot_accuracy_v1",
+      "nonnegative_keys": [
+        "area_0",
+        "area_1",
+        "boundary_absolute_flux",
+        "div_u_L2_squared",
+        "energy.dissipation",
+        "energy_identity_dissipation",
+        "kinetic_energy",
+        "p_error_squared",
+        "traction_L2_returns_squared",
+        "u_H1_seminorm_squared",
+        "u_L2_squared",
+        "volume"
+      ],
+      "raw_keys": [
+        "angular.advective",
+        "angular.body",
+        "angular.storage",
+        "angular.traction",
+        "angular_momentum",
+        "area_0",
+        "area_1",
+        "boundary_absolute_flux",
+        "div_u_L2_squared",
+        "energy.advective",
+        "energy.body",
+        "energy.conservative_divergence",
+        "energy.dissipation",
+        "energy.pressure_divergence",
+        "energy.storage",
+        "energy.traction",
+        "energy_identity_dissipation",
+        "energy_identity_storage",
+        "flux_0",
+        "flux_1",
+        "kinetic_discrete_derivative",
+        "kinetic_energy",
+        "lateral_flux",
+        "p_error_integral",
+        "p_error_squared",
+        "pressure_mean",
+        "traction_L2_returns_squared",
+        "u_H1_seminorm_squared",
+        "u_L2_squared",
+        "volume"
+      ],
+      "relative": 1e-08,
+      "scale_floor": 1e-10,
+      "signed_absolute_floor": 1e-14,
+      "signed_keys": [
+        "angular.advective",
+        "angular.body",
+        "angular.storage",
+        "angular.traction",
+        "energy.advective",
+        "energy.body",
+        "energy.conservative_divergence",
+        "energy.pressure_divergence",
+        "energy.storage",
+        "energy.traction",
+        "energy_identity_storage",
+        "flux_0",
+        "flux_1",
+        "kinetic_discrete_derivative",
+        "lateral_flux",
+        "p_error_integral",
+        "pressure_mean"
+      ]
+    },
+    "dt": 0.125,
+    "history": "exact polynomial expression at t=0 in residual and diagnostics",
+    "lateral_absolute_flux": 2.253906249999995,
+    "load": "f_continuous + (u_exact(t)-u_exact(0))/dt - u_exact_t(t)",
+    "measured_targets": [
+      0.6250000000000019,
+      1.6289062500000004
+    ],
+    "numerical_accepted": false,
+    "quadrature_comparison": {
+      "angular.advective": {
+        "accepted": true,
+        "difference": 2.6020852139652106e-17,
+        "limit": 3.987486896944711e-11
+      },
+      "angular.body": {
+        "accepted": true,
+        "difference": 1.97758476261356e-16,
+        "limit": 1.8976932101779531e-10
+      },
+      "angular.storage": {
+        "accepted": true,
+        "difference": -2.7755575615628914e-17,
+        "limit": 2.395657332148085e-11
+      },
+      "angular.traction": {
+        "accepted": true,
+        "difference": -2.329733628236852e-15,
+        "limit": 1.22395864129779e-10
+      },
+      "angular_momentum": {
+        "accepted": true,
+        "difference": -2.688821387764051e-17,
+        "limit": 1.9227650557037184e-11
+      },
+      "area_0": {
+        "accepted": true,
+        "difference": -1.5543122344752192e-15,
+        "limit": 1.0000000000000028e-08
+      },
+      "area_1": {
+        "accepted": true,
+        "difference": -1.5543122344752192e-15,
+        "limit": 1.0000000000000028e-08
+      },
+      "boundary_absolute_flux": {
+        "accepted": true,
+        "difference": 1.2434497875801753e-14,
+        "limit": 4.507812499999981e-08
+      },
+      "div_u_L2_squared": {
+        "accepted": true,
+        "difference": -6.5052130349130266e-18,
+        "limit": 8.273811328920742e-12
+      },
+      "energy.advective": {
+        "accepted": true,
+        "difference": 2.7755575615628914e-15,
+        "limit": 5.688677444295895e-09
+      },
+      "energy.body": {
+        "accepted": true,
+        "difference": 7.993605777301127e-15,
+        "limit": 1.0181437223803407e-08
+      },
+      "energy.conservative_divergence": {
+        "accepted": true,
+        "difference": -1.0844732230286258e-16,
+        "limit": 7.071323044421624e-13
+      },
+      "energy.dissipation": {
+        "accepted": true,
+        "difference": -2.4424906541753444e-15,
+        "limit": 1.5244690304215743e-08
+      },
+      "energy.pressure_divergence": {
+        "accepted": true,
+        "difference": 3.010430429854513e-17,
+        "limit": 1e-14
+      },
+      "energy.storage": {
+        "accepted": true,
+        "difference": -8.659739592076221e-15,
+        "limit": 1.149334709656391e-08
+      },
+      "energy.traction": {
+        "accepted": true,
+        "difference": 1.199040866595169e-14,
+        "limit": 2.2341425057553094e-08
+      },
+      "energy_identity_dissipation": {
+        "accepted": true,
+        "difference": 1.0547118733938987e-15,
+        "limit": 6.420663727495896e-10
+      },
+      "energy_identity_storage": {
+        "accepted": true,
+        "difference": -4.1300296516055823e-14,
+        "limit": 1.085128072381438e-08
+      },
+      "flux_0": {
+        "accepted": true,
+        "difference": -9.992007221626409e-16,
+        "limit": 6.250000000000047e-09
+      },
+      "flux_1": {
+        "accepted": true,
+        "difference": 2.220446049250313e-16,
+        "limit": 1.6289062499999966e-08
+      },
+      "kinetic_discrete_derivative": {
+        "accepted": true,
+        "difference": -4.1300296516055823e-14,
+        "limit": 1.085128072381438e-08
+      },
+      "kinetic_energy": {
+        "accepted": true,
+        "difference": -1.199040866595169e-14,
+        "limit": 7.606712433636357e-09
+      },
+      "lateral_flux": {
+        "accepted": true,
+        "difference": -8.43769498715119e-15,
+        "limit": 2.2539062499999953e-08
+      },
+      "p_error_integral": {
+        "accepted": true,
+        "difference": -3.13298678515875e-17,
+        "limit": 1e-14
+      },
+      "p_error_squared": {
+        "accepted": true,
+        "difference": 1.1926223897340549e-17,
+        "limit": 1.2822513663877617e-11
+      },
+      "pressure_mean": {
+        "accepted": true,
+        "difference": 3.1466508464567143e-16,
+        "limit": 1e-14
+      },
+      "traction_L2_returns_squared": {
+        "accepted": true,
+        "difference": -9.540979117872439e-18,
+        "limit": 6.03492076042816e-11
+      },
+      "u_H1_seminorm_squared": {
+        "accepted": true,
+        "difference": -2.1033522146218786e-17,
+        "limit": 1.7649185763709897e-11
+      },
+      "u_L2_squared": {
+        "accepted": true,
+        "difference": 1.9142944607947188e-19,
+        "limit": 8.644735053812521e-14
+      },
+      "volume": {
+        "accepted": true,
+        "difference": -1.5543122344752192e-15,
+        "limit": 1.0000000000000917e-08
+      }
+    },
+    "raw_by_degree": {
+      "24": {
+        "angular.advective": 0.0039874868969447105,
+        "angular.body": -0.01897693210177953,
+        "angular.storage": -0.002395657332148085,
+        "angular.traction": 0.0122395864129779,
+        "angular_momentum": 0.0019227650557037184,
+        "area_0": 1.0000000000000029,
+        "area_1": 1.0000000000000029,
+        "boundary_absolute_flux": 4.507812499999981,
+        "div_u_L2_squared": 0.0008273811328920742,
+        "energy.advective": 0.5688677444295895,
+        "energy.body": -1.0181437223803407,
+        "energy.conservative_divergence": -7.071323044421624e-05,
+        "energy.dissipation": 1.5244690304215742,
+        "energy.pressure_divergence": 1.036745305161047e-17,
+        "energy.storage": 1.149334709656391,
+        "energy.traction": -2.2341425057553095,
+        "energy_identity_dissipation": 0.06420663727495896,
+        "energy_identity_storage": 1.085128072381438,
+        "flux_0": 0.6250000000000047,
+        "flux_1": 1.6289062499999967,
+        "kinetic_discrete_derivative": 1.085128072381438,
+        "kinetic_energy": 0.7606712433636357,
+        "lateral_flux": -2.253906249999995,
+        "p_error_integral": 2.0683124773458793e-16,
+        "p_error_squared": 0.0012822513663877616,
+        "pressure_mean": -1.222247680875919e-16,
+        "traction_L2_returns_squared": 0.006034920760428161,
+        "u_H1_seminorm_squared": 0.0017649185763709896,
+        "u_L2_squared": 8.644735053812521e-06,
+        "volume": 1.0000000000000917
+      },
+      "26": {
+        "angular.advective": 0.0039874868969447365,
+        "angular.body": -0.018976932101779333,
+        "angular.storage": -0.0023956573321481127,
+        "angular.traction": 0.01223958641297557,
+        "angular_momentum": 0.0019227650557036916,
+        "area_0": 1.0000000000000013,
+        "area_1": 1.0000000000000013,
+        "boundary_absolute_flux": 4.507812499999994,
+        "div_u_L2_squared": 0.0008273811328920677,
+        "energy.advective": 0.5688677444295923,
+        "energy.body": -1.0181437223803327,
+        "energy.conservative_divergence": -7.071323044432469e-05,
+        "energy.dissipation": 1.5244690304215718,
+        "energy.pressure_divergence": 4.04717573501556e-17,
+        "energy.storage": 1.1493347096563824,
+        "energy.traction": -2.2341425057552975,
+        "energy_identity_dissipation": 0.06420663727496001,
+        "energy_identity_storage": 1.0851280723813967,
+        "flux_0": 0.6250000000000037,
+        "flux_1": 1.628906249999997,
+        "kinetic_discrete_derivative": 1.0851280723813967,
+        "kinetic_energy": 0.7606712433636237,
+        "lateral_flux": -2.2539062500000036,
+        "p_error_integral": 1.7550137988300043e-16,
+        "p_error_squared": 0.0012822513663877735,
+        "pressure_mean": 1.9244031655807954e-16,
+        "traction_L2_returns_squared": 0.006034920760428151,
+        "u_H1_seminorm_squared": 0.0017649185763709686,
+        "u_L2_squared": 8.644735053812712e-06,
+        "volume": 1.0000000000000902
+      }
+    },
+    "schema": 1,
+    "semantics": "discrete_manufactured_BE",
+    "step": 1,
+    "target_checks": {
+      "0": {
+        "accepted": true,
+        "difference": 1.887379141862766e-15,
+        "expected": 0.625,
+        "limit": 1e-12,
+        "measured": 0.6250000000000019
+      },
+      "1": {
+        "accepted": true,
+        "difference": 4.440892098500626e-16,
+        "expected": 1.62890625,
+        "limit": 1e-12,
+        "measured": 1.6289062500000004
+      },
+      "lateral": {
+        "accepted": true,
+        "difference": 4.884981308350689e-15,
+        "expected": -2.25390625,
+        "limit": 1e-12,
+        "measured": -2.253906249999995
+      }
+    },
+    "time": 0.125
+  },
+  "return_quadrature_sample_counts": [
+    896,
+    896
+  ],
+  "source_binding": {
+    "clean": true,
+    "executable": "/tmp/navier-fenicsx-r229/bin/python3.12",
+    "executable_sha256": "5f083df36ec986d5cd13d2549ca6cfe1ddaf658509f9e419b454b2fb375c27a3",
+    "interpreter": "/tmp/navier-fenicsx-r229/bin/python",
+    "root": "/home/rharris/git/navier-stokes-vortex-lab",
+    "source_commit": "d5b42eb0433c81c663810ab2858b67f6b4c8c789"
+  },
+  "step": 1,
+  "subdivisions": 2,
+  "time": 0.125,
+  "worker_intervals": {
+    "fixture_setup_jit_and_solve_seconds": 16.93946968598175,
+    "import_seconds": 0.38071099400985986
+  },
+  "worker_schema": 1
+}

@@ -1,0 +1,23 @@
+{
+  "classification": "recoverable_sandbox_manager_access_refusal",
+  "first_command": "/tmp/navier-fenicsx-r229/bin/python docs/realizability/evidence/r265/run_once.py d5b42eb0433c81c663810ab2858b67f6b4c8c789",
+  "first_exit_code": 1,
+  "first_output": "sandbox-caller-stdout.txt",
+  "first_stderr": "sandbox-caller-stderr.txt",
+  "caller_elapsed_after_save_seconds": 0.08095846601645462,
+  "outer_shell_elapsed_seconds": null,
+  "refusal_site": "manager version query in caller preflight, before supervisor invocation",
+  "fixed_directory_after_refusal": "absent",
+  "reservation_after_refusal": "absent",
+  "new_worker_after_refusal": "absent",
+  "host_manager_check": "systemctl --user list-units --all --no-legend 'navier-manufactured-*'",
+  "host_manager_units_before_continuation": [
+    "navier-manufactured-3822a251be2649a6bb891970418379e1.service",
+    "navier-manufactured-aa78db6356494072bf5f6586a8ff9bec.service"
+  ],
+  "manager_unit_assessment": "Only the two previously recorded failed units appeared; no new R265 unit. The fixed directory was absent and the caller source had not invoked the supervisor.",
+  "numerical_import_or_worker": false,
+  "source_change": false,
+  "allocation_spent_by_first_command": false,
+  "continuation": "The same published clean source commit was run with host manager access; no caller or scientific gate change."
+}

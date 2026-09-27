@@ -1,10 +1,10 @@
 # B1 solver environment
 
-[R265 source review/admission](MANUFACTURED_ADMISSION_R265.md)
-accepts balanced symbolic evaluation and admits one NEW later manufactured
-pilot under unchanged gates. All 118 source tests and six fake caller checks
-pass; zero new attempts spent. R262 remains INCOMPLETE and eight older
-allocations remain spent. Follow the [single current task](../../SESSION_HANDOFF.md#next-task).
+[R266 manufactured result](MANUFACTURED_RESULT_R266.md)
+is INCOMPLETE: the single R265 allocation is spent 1/1. The worker saved a
+numerical report and passed resource limits, but both degrees fail angular
+budget checks. Eight older allocations remain spent. Follow the
+[single current task](../../SESSION_HANDOFF.md#next-task).
 
 Historical PC status: [R232's one-use Poiseuille result](POISEUILLE_RESULT_R232.md)
 is INCOMPLETE at PETSc symbolic LU, and the single numerical allocation is

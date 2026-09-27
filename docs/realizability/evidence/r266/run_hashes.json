@@ -1,0 +1,90 @@
+{
+  "caller_count": 4,
+  "caller_files": {
+    "host-caller-stderr.txt": {
+      "bytes": 0,
+      "original": "/tmp/navier-r266-host-caller-stderr.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "host-caller-stdout.txt": {
+      "bytes": 174,
+      "original": "/tmp/navier-r266-host-caller-stdout.txt",
+      "sha256": "f657ae571981a37b55a2f07e2c03ce52025c0a8f85dc9b70ce29441058a7b38e"
+    },
+    "sandbox-caller-stderr.txt": {
+      "bytes": 0,
+      "original": "/tmp/navier-r266-caller-stderr.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "sandbox-caller-stdout.txt": {
+      "bytes": 207,
+      "original": "/tmp/navier-r266-caller-stdout.txt",
+      "sha256": "65b71f51d060dda893b88a6170a70cca6276a765577d7dd7352dc3164cc79dbd"
+    }
+  },
+  "run_count": 15,
+  "run_files": {
+    "admission.json": {
+      "bytes": 779,
+      "sha256": "f148d509f43eb2f75c79eb4b95ebbbb501b2f371fc2749ef1aee04393b136f7b"
+    },
+    "caller.json": {
+      "bytes": 1865,
+      "sha256": "444c57315f78d6240fdccb4b43e615c8a428020bb7a25a0e18b65fbbea5f8a19"
+    },
+    "caller_completion.json": {
+      "bytes": 127,
+      "sha256": "9c7525ba9722a95b94325c899ddc23732850a9d0511f38fc9db6ff5a408d3801"
+    },
+    "completion.json": {
+      "bytes": 289,
+      "sha256": "18122918d2cd2f6bd3760de477942a238cc37748d512df910d786388f0065fd9"
+    },
+    "exit.json": {
+      "bytes": 46,
+      "sha256": "dc1e4482ee0821a80e6df89aa12e2bbcabda5f45ba1fcb49123f09d81416ac59"
+    },
+    "finished.json": {
+      "bytes": 46,
+      "sha256": "dc1e4482ee0821a80e6df89aa12e2bbcabda5f45ba1fcb49123f09d81416ac59"
+    },
+    "held.json": {
+      "bytes": 659,
+      "sha256": "38a3207cb871945160b128d68f26ac7724414aac08d1d8f548065e1e5ac89ab0"
+    },
+    "linear_system.json": {
+      "bytes": 189973,
+      "sha256": "d7077a425a828df03b9278ccfb29a31a143afebdd29be69d0e5ce335a5f6116b"
+    },
+    "numerical.json": {
+      "bytes": 48059,
+      "sha256": "f9d1e7b8166c0ed1ad7a1bce1e4d628f6f9461f11747b60e82d4209e6f47d190"
+    },
+    "release.json": {
+      "bytes": 176,
+      "sha256": "046eab4864f8b9f5b7d8a533bfb9edac8b61ef71589f0d5d6a79922a5496db97"
+    },
+    "reservation.json": {
+      "bytes": 1078,
+      "sha256": "5b60b3b93e45660ce357b67dfccfaab451bd98fa72a52ba2a3145f3917f06957"
+    },
+    "resource_snapshot.json": {
+      "bytes": 282,
+      "sha256": "e2cd9fdc9a9153addcaf0b0dbc28fabbcac65ded1ea58ac1e86cb882706347ec"
+    },
+    "result.json": {
+      "bytes": 3229,
+      "sha256": "d98286cac97b2e8f9e1bb82931609c13e7634ca9e29312c13636be0f0ae67c1d"
+    },
+    "run.log": {
+      "bytes": 109,
+      "sha256": "9f02a4fa18128853d02a017ba6d1bbbbb0344217e08089fdd5f9c8c2142b13c6"
+    },
+    "worker.log": {
+      "bytes": 9798,
+      "sha256": "9d86f066af2fedbe553df31034db26660acb69ef21eb442b36a71fcfe0a7da9b"
+    }
+  },
+  "source_directory": "/tmp/navier-manufactured-r265-once",
+  "total_bytes": 256896
+}

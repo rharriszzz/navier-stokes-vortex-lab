@@ -1,0 +1,28 @@
+{
+  "artifact_inventory_sha256": "cedc36294c6082f24e834805ada9a1035c70926af7070ca962aea1fb9b7d6ebe",
+  "attempt": 1,
+  "caps": {
+    "elapsed_seconds": 180,
+    "mpi_ranks": 1,
+    "pids": 32,
+    "swap_mib": 0,
+    "threads": 1,
+    "velocity_pressure_dofs": 20000,
+    "whole_task_memory_mib": 1536
+  },
+  "contract_sha256": "3bae384b5840ec7827a3cb1c191e4b2f184fb2a1a69415d88a020eb0640e7128",
+  "executable": "/tmp/navier-fenicsx-r229/bin/python3.12",
+  "executable_sha256": "5f083df36ec986d5cd13d2549ca6cfe1ddaf658509f9e419b454b2fb375c27a3",
+  "fixture": "manufactured",
+  "interpreter": "/tmp/navier-fenicsx-r229/bin/python",
+  "kind": "manufactured_spatial_pilot",
+  "manifest_sha256": "429c1b2752106ff834ab2cffc1670be3129dfe67ebacb8c80d0ab2a7fb61b6d6",
+  "mode": "single_be_spatial_pilot",
+  "monotonic_start": 190998.015425591,
+  "owner": "PC/WSL daisy / R265",
+  "release_nonce": "e9a254bd431816c3664102673a98e1a4",
+  "source_commit": "d5b42eb0433c81c663810ab2858b67f6b4c8c789",
+  "status": "RESERVED",
+  "wall_start_utc": "2026-09-27T01:53:01Z",
+  "worker_schema": 1
+}

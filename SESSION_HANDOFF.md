@@ -1,5 +1,56 @@
 # Current session handoff
 
+Last updated 2026-09-26 (America/New_York) for R266.
+**PC/WSL daisy owns the repository.** No transfer; Mac remains released.
+**R266's single R265 manufactured pilot is INCOMPLETE; its allocation is spent
+1/1. Eight older allocations remain spent.** The worker exited 0 and saved
+[numerical and linear-system evidence](docs/realizability/evidence/r266/run/),
+but both degree 24 and 26 fail fixed angular budget and interval checks.
+See the [result](docs/realizability/MANUFACTURED_RESULT_R266.md),
+[hashes](docs/realizability/evidence/r266/run_hashes.json) and
+[audit](docs/realizability/evidence/r266/audit.json).
+
+The first sandbox caller stopped at manager access before reservation,
+directory creation or worker start. Its output and the host manager check are
+preserved. The same clean source commit then ran with host access, reserved and
+released one worker. Host caller/controller/completion all say INCOMPLETE;
+no retry. The saved numerical report rejects angular budgets at both degrees:
+degree-24 signed defect -0.005145516124005005 exceeds the fixed
+0.0003759966274385022 limit. The interval defect also exceeds its limit.
+Compatibility, condition, targets, quadrature, corrections, remaining
+per-degree checks and resource limits pass in the saved report. This does not
+establish a validated manufactured solve or justify a threshold change.
+
+All 15 run files and four caller outputs (256,896 bytes) match their retained
+originals and hashes. The 47 source bindings, eleven artifacts/four resolutions,
+archive/interpreter, 97 older raw originals and eight spent reservations
+verify. Saved R246/R253 validator PASS remains. Resource snapshot reports
+304,533,504 bytes peak, six tasks and zero memory/PID limit events. Cleanup is
+empty; recorded worker PID/cgroup absent. Final save tails and independent
+parent wall interval remain unobserved; R229 setup predicate remains false.
+
+**Next: use `/new`, select GPT-6 Astra / high, then Continue for a source-only
+review of the saved angular mismatch. Publish a precise explanation and repair
+contract or blocker; stop before implementation, admission or numerical launch.**
+See [Next task](#next-task). A fresh chat is recommended at this published
+experiment/result boundary; no current context percentage supplied. Official
+OpenAI Docs confirms Astra supports high reasoning; account availability and
+model/session switching are unverified.
+
+R266 user supplied only `continue`. Clean pull verified R265 delivery 7d390e3;
+R266 STARTED d5b42eb published. Completion prepared for scoped publication;
+delivery hash/result belongs in Git/final response. PC retains ownership.
+
+Changed: R266 result/raw/hash/preflight/audit evidence, seven current status/
+index pages, request/lifecycle/handoff. Checks: prelaunch audit; exact raw
+copies/hashes, status/nonce/resource/cleanup/old evidence, static publication
+checks. Skipped: retry, new admission, full convergence/tank/B2, physical/
+render and Mac transfer. Unknown: angular mismatch mechanism and justified
+repair, convergence, R242 cause and artifact-label origin. No source or gate
+change in R266.
+
+### Previous R265 source review/admission (spent by R266)
+
 Last updated 2026-09-26 (America/New_York) for R265.
 **PC/WSL daisy owns the repository.** No transfer; Mac remains released.
 **R265 accepts R264 balanced symbolic source and admits one NEW later pilot;
@@ -1397,22 +1448,23 @@ and physical-work limits remain unchanged.
 | Owner | PC/WSL `daisy`; Mac `fire.lan` released after published R161 handoff and R162 receipt. |
 | Checkout | `/home/rharris/git/navier-stokes-vortex-lab`. |
 | Branch/upstream | `main` / `origin/main` |
-| Starting state | R265 same-owner clean main/origin/main at 4870e82 after required fast-forward pull; rharris/daisy, empty stashes, R264 complete. STARTED 9834839 published. |
+| Starting state | R266 same-owner clean main/origin/main at 7d390e3 after required fast-forward pull; rharris/daisy, empty stashes, R265 complete. STARTED d5b42eb published. |
 | Interpreter | /tmp/navier-fenicsx-r229/bin/python verified as 3.12.13 with -I -S; exact environment artifacts verified, setup memory-event predicate refused. Project Python remains 3.12.14. Old /tmp/navier-fenicsx is still partial. |
 | Other owner/process | Mac `fire.lan` released in the published R161 handoff. Local Git cannot inspect another checkout's unpublished state. |
-| Task processes | R265 source/fake tests and saved-data audits only; no numerical import/manager/worker/reservation. Eight old allocations spent, recorded PIDs/cgroups absent; new R265 allowance unspent 0/1. |
+| Task processes | R266 reserved, ran and released one R265 manufactured worker; its recorded PID/cgroup are absent and cleanup empty. R265 spent 1/1; eight old allocations spent. No active task worker. |
 | Symbolic environment | `/tmp/navier-r183-sympy/bin/python`, Python 3.12.14, SymPy 1.14.0, mpmath 1.3.0; recreate using `requirements-symbolic.txt` if missing. Existing environments unchanged. |
-| Delivery state | R264 delivery 4870e82 verified by clean pull; R265 STARTED 9834839 published. Review/admission completion prepared for publication; delivery in Git/final response. PC retains ownership. |
+| Delivery state | R265 delivery 7d390e3 verified by clean pull; R266 STARTED d5b42eb published. Result completion prepared for publication; delivery in Git/final response. PC retains ownership. |
 
 ## Current result and limits
 
-R265 accepts R264's balanced symbolic evaluator/routing and admits one new
-later pilot under unchanged gates. See the
-[review/admission](docs/realizability/MANUFACTURED_ADMISSION_R265.md) and
-[single next task](#next-task). R262 remains INCOMPLETE; eight historical
-allocations spent, R265 unspent 0/1. Scalar reassociation samples are not a
-compiler or assembled-error guarantee. No manufactured numerical report or
-real repair validation exists. Earlier results below retain historical scope.
+R266's single R265 pilot is INCOMPLETE: both degree diagnostics fail angular
+budget and interval checks, despite a clean worker exit, numerical report,
+resource snapshot and empty cleanup. See the
+[result](docs/realizability/MANUFACTURED_RESULT_R266.md) and
+[single next task](#next-task). Nine allocations are now spent, including R265
+1/1. R262 remains INCOMPLETE. No validated manufactured solve, spatial/time
+convergence or full physical result exists. Earlier results below retain
+historical scope.
 
 R103 removes recursive infrastructure certification while preserving process
 safeguards, observed accounting, cleanup and incomplete-result refusal. R104
@@ -1541,51 +1593,44 @@ agent-side POV-Ray backtraces are unavailable.
 
 ## Next task
 
-**Use `/new`, select GPT-6 Sol / high, then Continue on PC/WSL daisy to execute
-only the fixed R265 manufactured caller once. Preserve/publish the outcome,
-then stop for Astra/high interpretation.** This is a saved source/admission
-boundary; no current context percentage is available. No model switch has
-been performed. Recommend Astra/high for any scientific/gate decision.
+**Use `/new`, select GPT-6 Astra / high, then Continue on PC/WSL daisy to review
+the saved R266 angular budget failure using source and saved data only. Publish
+a precise mechanism and bounded repair contract or a documented blocker, then
+stop before implementation, admission or numerical launch.** This is a
+published experiment/result boundary; no current context percentage is
+available. No model switch has been performed. [Official OpenAI Docs](https://developers.openai.com/api/docs/models/gpt-6-astra)
+confirms Astra supports high reasoning; account access is unverified.
 
-Read the [R265 review/admission](docs/realizability/MANUFACTURED_ADMISSION_R265.md),
-[allocation](docs/realizability/evidence/r265/allocation.json),
-[caller](docs/realizability/evidence/r265/run_once.py),
-[source inventory](docs/realizability/evidence/r265/source_inventory.json),
-[artifact inventory](docs/realizability/evidence/r265/artifacts.json) and
-[audit](docs/realizability/evidence/r265/audit.json).
+Read the [R266 result](docs/realizability/MANUFACTURED_RESULT_R266.md),
+[raw numerical and linear-system evidence](docs/realizability/evidence/r266/run/),
+[hash inventory](docs/realizability/evidence/r266/run_hashes.json),
+[audit](docs/realizability/evidence/r266/audit.json),
+[R265 admission](docs/realizability/MANUFACTURED_ADMISSION_R265.md),
+[R255 exact manufactured reference](docs/realizability/VERIFICATION_MILESTONE_R255.md)
+and applicable angular diagnostic source.
 
 1. Follow clean Continue synchronization, ownership/status/stash checks and
-   published STARTED lifecycle. Verify 47 source bindings, eleven artifacts,
-   four resolutions, interpreter/archive, 97 preserved raw originals and
-   eight spent reservations/absent recorded processes. The separate R265
-   allowance is unspent 0/1; fixed run directory and dangling link must be absent.
-2. Invoke `/tmp/navier-fenicsx-r229/bin/python
-   docs/realizability/evidence/r265/run_once.py EXACT_LAUNCH_COMMIT`, replacing
-   the final argument with the full clean HEAD after STARTED publication.
-   Preserve shell caller output outside the fixed run directory, without
-   creating that directory in advance. No standalone numerical import,
-   prewarming, alternate directory or checkout edit during the workload.
-3. The caller refreshes host memory/controllers and reviewed manager version,
-   enforces clean source/artifact bindings, then delegates to the existing
-   held-worker supervisor. Fixed n=2, t=dt=1/8, degree24/26, 402/405 DOFs,
-   60 scalar receipts and all science/resource caps remain unchanged:
-   180 s outer, 15/150/15 s stages, independent 149 s worker plus 1 s grace,
-   1536 MiB/no swap, 32 tasks, one rank/thread. No gate relaxation.
-4. Reservation/directory creation or partial worker start spends the new
-   allowance, including INCOMPLETE. Preserve every raw file, failure record,
-   caller output, resource receipt and cleanup record; hash exact copies and
-   verify Git inclusion (force-add ignored raw `.log` files where needed).
-   Record missing evidence explicitly. Never reuse any older allocation.
-5. A proven pre-reservation/pre-worker/pre-import caller error follows the
-   repository recovery rule: save failure and timing gaps, verify absent fixed
-   directory and no new manager process, fix/test and publish clean bindings
-   before continuing the same unspent allocation. Uncertain state stops.
-   Once reserved/started, stop after one outcome; no retry or inferred reset.
+   published STARTED lifecycle. Verify all 19 R266 raw/caller copies against
+   the retained originals and Git index, 47 source bindings, eleven artifacts,
+   97 older raw originals, and all nine spent allocations/absent worker state.
+2. Reconstruct from saved values the angular budget and interval defects at
+   degree 24 and 26. Compare exact manufactured angular terms, discrete BE
+   history/load, solver source and diagnostic sign/traction conventions.
+   Separate an algebra/formulation error from discretization or a diagnostic
+   definition mismatch; do not assume the balanced polynomial change caused it.
+3. Use read-only source inspection, standard-library arithmetic and injected
+   fakes only. Preserve raw bytes, exact gates, source mathematics and spent
+   allocations. No FEM/PETSc/MPI import, manager, worker, JIT, assembly or
+   solve; no new admission, retry, tolerance change or physical inference.
+4. Publish a source-only review with demonstrated facts, remaining uncertainty,
+   a narrow repair contract if justified, or a precise blocker. Link one next
+   task and recommend Sol/high only for a fully specified mechanical source
+   implementation; retain Astra/high for unresolved scientific choices.
 
-Completion: publish result, raw/hash audit and cleanup/spent state, update the
-single handoff, then stop for Astra/high review. Even PASS is one-level discrete
-solve/diagnostic consistency only. No full convergence/tank/B2, physical,
-render or Mac work. Next prompt: **Continue**.
+Completion: saved-data-backed angular interpretation or explicit blocker,
+preserved evidence and one next task in the log/handoff/status pages, then
+stop. No full convergence/tank/B2, physical, rendering or Mac work. Next
+prompt: **Continue**.
 
 ### Historical R230 single-fixture execution task (R232 spent)
 

@@ -1,10 +1,10 @@
 # Isolated nonlinear port verification source — R195/R196/R222/R225/R226
 
-[R265 source review/admission](../../docs/realizability/MANUFACTURED_ADMISSION_R265.md)
-accepts balanced symbolic evaluation and admits one NEW later manufactured
-pilot under unchanged gates. All 118 source tests and six fake caller checks
-pass; zero new attempts spent. R262 remains INCOMPLETE and eight older
-allocations remain spent. Follow the [single current task](../../SESSION_HANDOFF.md#next-task).
+[R266 manufactured result](../../docs/realizability/MANUFACTURED_RESULT_R266.md)
+is INCOMPLETE: the single R265 allocation is spent 1/1. The worker saved a
+numerical report and passed resource limits, but both degrees fail angular
+budget checks. Eight older allocations remain spent. Follow the
+[single current task](../../SESSION_HANDOFF.md#next-task).
 
 **Source and algebra evidence, not a validated FEM solver.** The
 [R195 fixture review](../../docs/realizability/NONLINEAR_VERIFICATION_R195.md)

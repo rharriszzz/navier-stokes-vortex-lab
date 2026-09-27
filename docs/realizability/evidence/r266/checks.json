@@ -1,0 +1,16 @@
+{
+  "append_only_logs": true,
+  "ast_files": 2,
+  "caller_files_in_git_index": 4,
+  "evidence_files_in_git_index": 25,
+  "json_files": 17,
+  "local_link_targets_checked": 303,
+  "original_files_and_git_coverage": 19,
+  "r266_completed_once": true,
+  "r266_started_once": true,
+  "raw_run_files_in_git_index": 15,
+  "runtime_source_changes": 0,
+  "status": "INCOMPLETE",
+  "unique_contiguous_request_ids": 266,
+  "whitespace": "PASS"
+}
