@@ -1,0 +1,10 @@
+{
+  "append_only_logs": true,
+  "contiguous_request_ids": 270,
+  "evidence_json_files": 16,
+  "lifecycle_started_completed_once": true,
+  "local_links_checked": 313,
+  "scoped_files": true,
+  "status": "PASS",
+  "whitespace": "PASS"
+}

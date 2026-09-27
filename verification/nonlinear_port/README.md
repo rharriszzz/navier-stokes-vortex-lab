@@ -1,11 +1,9 @@
 # Isolated nonlinear port verification source — R195/R196/R222/R225/R226
 
-[R269 angular review/admission](../../docs/realizability/MANUFACTURED_ANGULAR_ADMISSION_R269.md)
-accepts the sidecar with stricter validation and 127 guarded source/fake tests.
-One NEW diagnostic pilot is admitted for later execution; zero new attempts spent.
-R266 remains INCOMPLETE and nine older allocations stay spent. The signed split
-and real sidecar cost remain unmeasured. Follow the
-[single current task](../../SESSION_HANDOFF.md#next-task).
+[R270 angular diagnostic](../../docs/realizability/MANUFACTURED_RESULT_R270.md) is INCOMPLETE: the saved sidecar and
+its ten consistency checks pass, but both degrees still fail the fixed physical
+angular budget. The R269 one-use allocation is spent 1/1; nine older allocations
+remain spent. Follow the [single current task](../../SESSION_HANDOFF.md#next-task).
 
 **Source and algebra evidence, not a validated FEM solver.** The
 [R195 fixture review](../../docs/realizability/NONLINEAR_VERIFICATION_R195.md)

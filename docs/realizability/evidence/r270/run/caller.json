@@ -1,0 +1,62 @@
+{
+  "angular_evidence": {
+    "bytes": 40705,
+    "comparisons": {
+      "24": {
+        "advection": true,
+        "physical_defect": true,
+        "residual_scalar_action": true,
+        "residual_vector_action": true,
+        "traction": true
+      },
+      "26": {
+        "advection": true,
+        "physical_defect": true,
+        "residual_scalar_action": true,
+        "residual_vector_action": true,
+        "traction": true
+      }
+    },
+    "consistent": true,
+    "file": "angular_audit.json",
+    "sha256": "783413c8152dbfe794a30f7e78c86cd9186090a41856dc6d3543a68fc269466a",
+    "valid": true
+  },
+  "elapsed_before_caller_save": 9.342028960003518,
+  "final_save_tail_observed": false,
+  "inner_status": "INCOMPLETE",
+  "outer_limit_seconds": 180,
+  "preflight": {
+    "admission": {
+      "approved": true,
+      "artifact_inventory_sha256": "c7506fd0ea9999d5975bd28e71d2d2c6777c1b31237016e86a028c3128272dc5",
+      "attempts_granted": 1,
+      "contract_sha256": "3bae384b5840ec7827a3cb1c191e4b2f184fb2a1a69415d88a020eb0640e7128",
+      "executable": "/tmp/navier-fenicsx-r229/bin/python3.12",
+      "executable_sha256": "5f083df36ec986d5cd13d2549ca6cfe1ddaf658509f9e419b454b2fb375c27a3",
+      "fixture": "manufactured",
+      "interpreter": "/tmp/navier-fenicsx-r229/bin/python",
+      "kind": "manufactured_spatial_pilot",
+      "manifest_sha256": "429c1b2752106ff834ab2cffc1670be3129dfe67ebacb8c80d0ab2a7fb61b6d6",
+      "mode": "single_be_spatial_pilot",
+      "run_directory": "/tmp/navier-manufactured-r269-once",
+      "source_commit": "950c2a72fe04fadc2d5a262539f0748d24924646",
+      "worker_schema": 1
+    },
+    "artifact_inventory_sha256": "c7506fd0ea9999d5975bd28e71d2d2c6777c1b31237016e86a028c3128272dc5",
+    "contract_sha256": "3bae384b5840ec7827a3cb1c191e4b2f184fb2a1a69415d88a020eb0640e7128",
+    "executable": "/tmp/navier-fenicsx-r229/bin/python3.12",
+    "executable_sha256": "5f083df36ec986d5cd13d2549ca6cfe1ddaf658509f9e419b454b2fb375c27a3",
+    "host_mem_available_kib": 6496888,
+    "interpreter": "/tmp/navier-fenicsx-r229/bin/python",
+    "manager_version": "249.11-0ubuntu3.22",
+    "manifest_sha256": "429c1b2752106ff834ab2cffc1670be3129dfe67ebacb8c80d0ab2a7fb61b6d6",
+    "run_directory": "/tmp/navier-manufactured-r269-once",
+    "runtime_artifacts_verified": 15,
+    "source_commit": "950c2a72fe04fadc2d5a262539f0748d24924646",
+    "source_files": 50,
+    "worker_schema": 1
+  },
+  "reason": null,
+  "status": "INCOMPLETE"
+}

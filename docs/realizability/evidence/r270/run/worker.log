@@ -1,0 +1,172 @@
+manufactured stage=imports edge=begin
+manufactured stage=imports edge=end
+manufactured stage=recorder_init edge=begin
+manufactured stage=recorder_init edge=end
+manufactured stage=mesh_and_geometry edge=begin
+manufactured stage=mesh_and_geometry edge=end
+manufactured stage=history_and_lift edge=begin
+manufactured stage=history_and_lift edge=end
+manufactured stage=primary_forms edge=begin
+manufactured stage=primary_forms edge=end
+manufactured stage=primary_compilation edge=begin
+manufactured stage=primary_compilation edge=end
+manufactured stage=compatibility_and_initial_system edge=begin
+manufactured stage=compatibility_and_initial_system edge=end
+manufactured stage=newton edge=begin
+linear system evidence: {"bytes": 189049, "correction": 1, "file": "linear_system.json", "sha256": "786946cd7484793092dd189ceee7907201daedea0c469b62cd935a1fa1ed9b9e"}
+sparse linear configuration: backend=superlu; shift=none; mat_superlu_equil=false; mat_superlu_colperm=COLAMD; mat_superlu_iterrefine=NOREFINE; mat_superlu_symmetricmode=false; mat_superlu_diagpivotthresh=1; mat_superlu_pivotgrowth=false; mat_superlu_conditionnumber=false; mat_superlu_rowperm=NOROWPERM; mat_superlu_replacetinypivot=false; mat_superlu_printstat=false; mat_superlu_lwork=0; mat_superlu_ilu_filltol=0
+linear system evidence: {"bytes": 190013, "correction": 2, "file": "linear_system.json", "sha256": "6d5f9de9adb029c5bafc89a82bf7c6293088cf9f18c644dfa8a114eb60729755"}
+sparse linear configuration: backend=superlu; shift=none; mat_superlu_equil=false; mat_superlu_colperm=COLAMD; mat_superlu_iterrefine=NOREFINE; mat_superlu_symmetricmode=false; mat_superlu_diagpivotthresh=1; mat_superlu_pivotgrowth=false; mat_superlu_conditionnumber=false; mat_superlu_rowperm=NOROWPERM; mat_superlu_replacetinypivot=false; mat_superlu_printstat=false; mat_superlu_lwork=0; mat_superlu_ilu_filltol=0
+linear system evidence: {"bytes": 189973, "correction": 3, "file": "linear_system.json", "sha256": "b7d87c9e63d25778304be6639146dd206e1e4bc3280d84f464c88bb2940bc739"}
+sparse linear configuration: backend=superlu; shift=none; mat_superlu_equil=false; mat_superlu_colperm=COLAMD; mat_superlu_iterrefine=NOREFINE; mat_superlu_symmetricmode=false; mat_superlu_diagpivotthresh=1; mat_superlu_pivotgrowth=false; mat_superlu_conditionnumber=false; mat_superlu_rowperm=NOROWPERM; mat_superlu_replacetinypivot=false; mat_superlu_printstat=false; mat_superlu_lwork=0; mat_superlu_ilu_filltol=0
+manufactured stage=newton edge=end
+manufactured stage=diagnostics_24 edge=begin
+manufactured degree=24 key=angular.advective stage=form
+manufactured degree=24 key=angular.advective stage=assemble
+manufactured degree=24 key=angular.body stage=form
+manufactured degree=24 key=angular.body stage=assemble
+manufactured degree=24 key=angular.storage stage=form
+manufactured degree=24 key=angular.storage stage=assemble
+manufactured degree=24 key=angular.traction stage=form
+manufactured degree=24 key=angular.traction stage=assemble
+manufactured degree=24 key=angular_momentum stage=form
+manufactured degree=24 key=angular_momentum stage=assemble
+manufactured degree=24 key=area_0 stage=form
+manufactured degree=24 key=area_0 stage=assemble
+manufactured degree=24 key=area_1 stage=form
+manufactured degree=24 key=area_1 stage=assemble
+manufactured degree=24 key=boundary_absolute_flux stage=form
+manufactured degree=24 key=boundary_absolute_flux stage=assemble
+manufactured degree=24 key=div_u_L2_squared stage=form
+manufactured degree=24 key=div_u_L2_squared stage=assemble
+manufactured degree=24 key=energy.advective stage=form
+manufactured degree=24 key=energy.advective stage=assemble
+manufactured degree=24 key=energy.body stage=form
+manufactured degree=24 key=energy.body stage=assemble
+manufactured degree=24 key=energy.conservative_divergence stage=form
+manufactured degree=24 key=energy.conservative_divergence stage=assemble
+manufactured degree=24 key=energy.dissipation stage=form
+manufactured degree=24 key=energy.dissipation stage=assemble
+manufactured degree=24 key=energy.pressure_divergence stage=form
+manufactured degree=24 key=energy.pressure_divergence stage=assemble
+manufactured degree=24 key=energy.storage stage=form
+manufactured degree=24 key=energy.storage stage=assemble
+manufactured degree=24 key=energy.traction stage=form
+manufactured degree=24 key=energy.traction stage=assemble
+manufactured degree=24 key=energy_identity_dissipation stage=form
+manufactured degree=24 key=energy_identity_dissipation stage=assemble
+manufactured degree=24 key=energy_identity_storage stage=form
+manufactured degree=24 key=energy_identity_storage stage=assemble
+manufactured degree=24 key=flux_0 stage=form
+manufactured degree=24 key=flux_0 stage=assemble
+manufactured degree=24 key=flux_1 stage=form
+manufactured degree=24 key=flux_1 stage=assemble
+manufactured degree=24 key=kinetic_discrete_derivative stage=form
+manufactured degree=24 key=kinetic_discrete_derivative stage=assemble
+manufactured degree=24 key=kinetic_energy stage=form
+manufactured degree=24 key=kinetic_energy stage=assemble
+manufactured degree=24 key=lateral_flux stage=form
+manufactured degree=24 key=lateral_flux stage=assemble
+manufactured degree=24 key=p_error_integral stage=form
+manufactured degree=24 key=p_error_integral stage=assemble
+manufactured degree=24 key=p_error_squared stage=form
+manufactured degree=24 key=p_error_squared stage=assemble
+manufactured degree=24 key=pressure_mean stage=form
+manufactured degree=24 key=pressure_mean stage=assemble
+manufactured degree=24 key=traction_L2_returns_squared stage=form
+manufactured degree=24 key=traction_L2_returns_squared stage=assemble
+manufactured degree=24 key=u_H1_seminorm_squared stage=form
+manufactured degree=24 key=u_H1_seminorm_squared stage=assemble
+manufactured degree=24 key=u_L2_squared stage=form
+manufactured degree=24 key=u_L2_squared stage=assemble
+manufactured degree=24 key=volume stage=form
+manufactured degree=24 key=volume stage=assemble
+manufactured stage=diagnostics_24 edge=end
+manufactured stage=diagnostics_26 edge=begin
+manufactured degree=26 key=angular.advective stage=form
+manufactured degree=26 key=angular.advective stage=assemble
+manufactured degree=26 key=angular.body stage=form
+manufactured degree=26 key=angular.body stage=assemble
+manufactured degree=26 key=angular.storage stage=form
+manufactured degree=26 key=angular.storage stage=assemble
+manufactured degree=26 key=angular.traction stage=form
+manufactured degree=26 key=angular.traction stage=assemble
+manufactured degree=26 key=angular_momentum stage=form
+manufactured degree=26 key=angular_momentum stage=assemble
+manufactured degree=26 key=area_0 stage=form
+manufactured degree=26 key=area_0 stage=assemble
+manufactured degree=26 key=area_1 stage=form
+manufactured degree=26 key=area_1 stage=assemble
+manufactured degree=26 key=boundary_absolute_flux stage=form
+manufactured degree=26 key=boundary_absolute_flux stage=assemble
+manufactured degree=26 key=div_u_L2_squared stage=form
+manufactured degree=26 key=div_u_L2_squared stage=assemble
+manufactured degree=26 key=energy.advective stage=form
+manufactured degree=26 key=energy.advective stage=assemble
+manufactured degree=26 key=energy.body stage=form
+manufactured degree=26 key=energy.body stage=assemble
+manufactured degree=26 key=energy.conservative_divergence stage=form
+manufactured degree=26 key=energy.conservative_divergence stage=assemble
+manufactured degree=26 key=energy.dissipation stage=form
+manufactured degree=26 key=energy.dissipation stage=assemble
+manufactured degree=26 key=energy.pressure_divergence stage=form
+manufactured degree=26 key=energy.pressure_divergence stage=assemble
+manufactured degree=26 key=energy.storage stage=form
+manufactured degree=26 key=energy.storage stage=assemble
+manufactured degree=26 key=energy.traction stage=form
+manufactured degree=26 key=energy.traction stage=assemble
+manufactured degree=26 key=energy_identity_dissipation stage=form
+manufactured degree=26 key=energy_identity_dissipation stage=assemble
+manufactured degree=26 key=energy_identity_storage stage=form
+manufactured degree=26 key=energy_identity_storage stage=assemble
+manufactured degree=26 key=flux_0 stage=form
+manufactured degree=26 key=flux_0 stage=assemble
+manufactured degree=26 key=flux_1 stage=form
+manufactured degree=26 key=flux_1 stage=assemble
+manufactured degree=26 key=kinetic_discrete_derivative stage=form
+manufactured degree=26 key=kinetic_discrete_derivative stage=assemble
+manufactured degree=26 key=kinetic_energy stage=form
+manufactured degree=26 key=kinetic_energy stage=assemble
+manufactured degree=26 key=lateral_flux stage=form
+manufactured degree=26 key=lateral_flux stage=assemble
+manufactured degree=26 key=p_error_integral stage=form
+manufactured degree=26 key=p_error_integral stage=assemble
+manufactured degree=26 key=p_error_squared stage=form
+manufactured degree=26 key=p_error_squared stage=assemble
+manufactured degree=26 key=pressure_mean stage=form
+manufactured degree=26 key=pressure_mean stage=assemble
+manufactured degree=26 key=traction_L2_returns_squared stage=form
+manufactured degree=26 key=traction_L2_returns_squared stage=assemble
+manufactured degree=26 key=u_H1_seminorm_squared stage=form
+manufactured degree=26 key=u_H1_seminorm_squared stage=assemble
+manufactured degree=26 key=u_L2_squared stage=form
+manufactured degree=26 key=u_L2_squared stage=assemble
+manufactured degree=26 key=volume stage=form
+manufactured degree=26 key=volume stage=assemble
+manufactured stage=diagnostics_26 edge=end
+manufactured stage=return_sampling_and_report edge=begin
+manufactured stage=return_sampling_and_report edge=end
+manufactured stage=angular_evidence edge=begin
+manufactured angular degree=24 stage=begin
+manufactured angular degree=24 key=A_D stage=assemble
+manufactured angular degree=24 key=A_R stage=assemble
+manufactured angular degree=24 key=C_D stage=assemble
+manufactured angular degree=24 key=C_R stage=assemble
+manufactured angular degree=24 key=G_R stage=assemble
+manufactured angular degree=24 key=residual_action stage=assemble
+manufactured angular degree=24 key=raw_residual stage=assemble
+manufactured angular degree=24 stage=end
+manufactured angular degree=26 stage=begin
+manufactured angular degree=26 key=A_D stage=assemble
+manufactured angular degree=26 key=A_R stage=assemble
+manufactured angular degree=26 key=C_D stage=assemble
+manufactured angular degree=26 key=C_R stage=assemble
+manufactured angular degree=26 key=G_R stage=assemble
+manufactured angular degree=26 key=residual_action stage=assemble
+manufactured angular degree=26 key=raw_residual stage=assemble
+manufactured angular degree=26 stage=end
+manufactured stage=angular_evidence edge=end
+manufactured stage=numerical_save edge=begin
+manufactured stage=numerical_save edge=end
+manufactured stage=completion_handshake edge=begin
+manufactured stage=completion_handshake edge=end

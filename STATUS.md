@@ -1,13 +1,11 @@
 # Project status: a boundary-controlled engineering approximation
 
-[R269 angular review/admission](docs/realizability/MANUFACTURED_ANGULAR_ADMISSION_R269.md)
-accepts the sidecar with stricter validation and 127 guarded source/fake tests.
-One NEW diagnostic pilot is admitted for later execution; zero new attempts spent.
-R266 remains INCOMPLETE and nine older allocations stay spent. The signed split
-and real sidecar cost remain unmeasured. Follow the
-[single current task](SESSION_HANDOFF.md#next-task).
+[R270 angular diagnostic](docs/realizability/MANUFACTURED_RESULT_R270.md) is INCOMPLETE: the saved sidecar and
+its ten consistency checks pass, but both degrees still fail the fixed physical
+angular budget. The R269 one-use allocation is spent 1/1; nine older allocations
+remain spent. Follow the [single current task](SESSION_HANDOFF.md#next-task).
 
-Updated 2026-09-26 (America/New_York), through R269. PC/WSL daisy owns the
+Updated 2026-09-26 (America/New_York), through R270. PC/WSL daisy owns the
 repository. **R232 corrects the recoverable R231 caller failure and resumes the
 same authorized, unspent one-use fixture, then spends it on a PETSc LU failure.**
 The [R232 result](docs/realizability/POISEUILLE_RESULT_R232.md) records an
