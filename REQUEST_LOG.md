@@ -10119,3 +10119,13 @@ Evidence: docs/realizability/MANUFACTURED_ADMISSION_R265.md and evidence/r265/{a
 Next: use `/new`, select GPT-6 Sol/high, then Continue to execute only the fixed R265 caller once, preserve/publish raw outcome and cleanup/spent state, and stop for Astra/high interpretation. A fresh chat is recommended at this saved source/admission boundary; no current context percentage supplied. OpenAI Docs searched/opened https://developers.openai.com/api/docs/models/gpt-6-sol to verify high support; task fit is judgment, account availability unverified, no model/session switch. PC retains ownership, Mac released. R264 delivery 4870e82 verified by clean pull; R265 STARTED 9834839 published. Completion prepared for scoped publication; delivery hash/result belongs in Git/final response, no post-push edit.
 
 Publication note: initial start staging failed because the sandbox made .git/index read-only; the same scoped git add succeeded with approved host access. No workload or gate change involved.
+
+## R266 — 2026-09-26 — Execute R265 admitted manufactured pilot once
+
+**User request (verbatim):**
+
+> continue
+
+**Scope/status:** STARTED. Follow the published R265 one-use admission on PC/WSL daisy: verify clean source, artifact, environment, preserved raw evidence and spent older allocations; execute only the fixed R265 caller once; preserve the exact outcome, raw files, hashes and cleanup/spent state; publish and stop for Astra/high interpretation. A proven pre-reservation, pre-worker, pre-import caller fault follows the documented recovery rule. Once reserved or started, do not retry. No full convergence/tank/B2, physical/render or Mac work. Continue authorizes scoped lifecycle/completion commits and pushes. No new session/status excerpts supplied.
+
+Identity rharris/daisy, PC/WSL Linux x86_64, /home/rharris/git/navier-stokes-vortex-lab. Clean main/origin/main at 7d390e3f1a03a9a5e5d58c4a9a613bcf427c319c after required fast-forward pull (already up to date); empty stashes, R265 completed, PC owner and Mac released. R262 INCOMPLETE; eight older allocations spent, R265 new allowance 0/1.
