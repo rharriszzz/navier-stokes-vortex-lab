@@ -9998,3 +9998,13 @@ Evidence: docs/realizability/MANUFACTURED_FAILURE_REVIEW_R259.md and evidence/r2
 Changed: R259 review/contract and evidence, seven current status/index pages, request/lifecycle/handoff. Skipped: unchanged 104 runtime/fake regressions, numerical imports, manager/worker, new admission/reservation, reassembly/solve, full convergence/tank/B2, physical/render and Mac transfer. Unresolved: actual recursion site and FEM import/assembly progress, missing resource peaks/events, manufactured accuracy/budgets, convergence/rank, R242 cause and artifact-label origin. Seven allowances remain spent; no new attempt admitted.
 
 Next: GPT-6 Sol/high implements the fixed diagnostic repair/tests, publishes and stops for Astra/high source/admission review. Continue in this chat because diagnosis and implementation contract are directly connected; no new context percentage supplied. Official Sol model documentation was searched/opened through the OpenAI docs skill and confirms high support; task fit is judgment and account access unverified. No agent model/session switch. PC retains ownership, Mac released. Clean pull verified R258 56ecd3f; R259 STARTED 09abd04 published. Completion prepared for scoped publication; final delivery hash/result belongs in Git/final response, with no post-push edit.
+
+## R260 — 2026-09-26 — Implement bounded manufactured failure diagnostics
+
+**User request (verbatim):**
+
+> continue
+
+**Scope/status:** STARTED. Implement the fixed R259 source-only bounded failure.json and thirteen stage markers, add focused fake/stdlib tests, run full source regressions and saved PASS replay, preserve all seven spent allocations, publish, and stop for Astra/high source/admission review. Continue authorizes scoped start/completion commits and pushes. No supplied new session/status/context/model snapshot; no private session inspection or agent model/session switch.
+
+Identity rharris/daisy, PC/WSL Linux 6.18.33.2-microsoft-standard-WSL2 x86_64, /home/rharris/git/navier-stokes-vortex-lab. Clean main/origin/main at 01097367a7f971ba34d4a7a5463d34bddab8260c after required fast-forward pull (already up to date); empty stashes, R259 complete, PC owner and Mac released. R258 remains INCOMPLETE. Seven allocations spent; no new admission, manager/worker, FEM import or numerical execution in this task.
