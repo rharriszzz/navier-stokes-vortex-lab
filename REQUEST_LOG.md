@@ -9934,3 +9934,35 @@ The user's /new question is answered with task-boundary guidance: use the report
 Changed: AGENTS.md, docs/workflow/SESSION_PROTOCOL.md, manufactured_driver.py, manufactured_report.py, test_manufactured_integration.py, docs/realizability/MANUFACTURED_ADMISSION_R257.md, evidence/r257/{run_once.py,allocation.json,source_inventory.json,artifacts.json,check_caller.py,caller_tests.txt,caller_tests.json,test_runner.py,tests.txt,tests.json,audit.py,audit.json,checks.py,checks.json}, seven current overview/status pages, REQUEST_LOG.md, WORK_SESSIONS.md and SESSION_HANDOFF.md. Skipped: real FEM/JIT/solve, manager/worker/reservation, installs, full convergence/tank/B2, physical/render and Mac transfer. Unknown: actual manufactured API/zero-form/JIT/nonlinear/budget/quadrature/runtime/resource behavior, coarse accuracy/convergence/rank, R242 cause and artifact-label origin; prior sampling/final-save timing limitations remain disclosed. A later PASS establishes only one-level discrete consistency.
 
 Next: use /new at this published boundary, select GPT-6 Sol/high, and Continue on PC/WSL daisy to execute only R257's fixed caller once after clean synchronization/STARTED publication; retain result/raw hashes/cleanup/spent state, publish and stop for Astra/high interpretation. Pre-reservation caller errors follow the documented recovery rule; reservation/partial start or uncertain state spends/stops, with no inferred reset, alternate path or numerical retry. PC retains ownership, Mac released. Clean pull verified R256 a00049a; R257 STARTED 230b449 published. Completion is prepared for scoped publication; final delivery hash/result belongs in Git/final response, with no post-push edit.
+
+## R258 — 2026-09-26 — Execute admitted manufactured pilot once
+
+**User request (supplied display transcribed without box padding; account redacted):**
+
+```text
+Worked for 16m 9s · done 7:59 PM
+OpenAI Codex (v0.155.1)
+model: gpt-6-sol high /model to change
+directory: ~/git/navier-stokes-vortex-lab
+Tip: New Use /fast to enable our fastest inference with increased plan usage.
+Token usage: total=671,920 input=589,931 (+ 15,484,288 cached) output=81,989 (reasoning 20,906)
+To continue this session, run codex resume, then select Review Codex session output (01a0e002-3f5d-7453-b9d9-8fb656d795ba)
+/status
+OpenAI Codex (v0.155.1)
+Visit https://chatgpt.com/codex/settings/usage for up-to-date information on rate limits and credits
+Model: gpt-6-sol (reasoning high, summaries auto)
+Model provider: openai
+Directory: ~/git/navier-stokes-vortex-lab
+Permissions: Workspace (Ask for approval)
+Agents.md: AGENTS.md
+Account: [account email redacted] (Pro Lite)
+Collaboration mode: Default
+Session: 01a0e029-d767-7ed2-8c89-501357b69012
+Weekly limit: 77% left (resets 13:10 on 3 Oct)
+Luna Reserve Weekly limit: 99% left (resets 10:18 on 3 Oct)
+ continue
+```
+
+**Scope/status:** STARTED. Execute only R257's fixed one-use manufactured spatial BE pilot after the required published STARTED checkpoint; preserve complete or partial raw evidence, verify cleanup and spent state, publish, then stop for Astra/high interpretation. Continue authorizes scoped lifecycle and completion commits/pushes. Supplied old-session completion precedes new-session /status; no literal /new, context fraction or credit balance supplied. These values are user reported; no private session inspection or model/session switch.
+
+Identity rharris/daisy, PC/WSL Linux x86_64, /home/rharris/git/navier-stokes-vortex-lab. Clean main/origin/main at ad8b967edf7b93fafa139e2c12fbceb817006426 after required fast-forward pull (already up to date); empty stashes, R257 complete, PC owner and Mac released. Fixed /tmp/navier-manufactured-r257-once directory absent before STARTED publication; six historical allowances spent and new R257 allowance unspent 0/1. Pre-reservation caller errors follow the repository recovery rule; reservation/partial worker start or uncertain state spends/stops. No alternate path, relaxed gates or numerical retry.
