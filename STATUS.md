@@ -1,11 +1,12 @@
 # Project status: a boundary-controlled engineering approximation
 
-[R270 angular diagnostic](docs/realizability/MANUFACTURED_RESULT_R270.md) is INCOMPLETE: the saved sidecar and
-its ten consistency checks pass, but both degrees still fail the fixed physical
-angular budget. The R269 one-use allocation is spent 1/1; nine older allocations
-remain spent. Follow the [single current task](SESSION_HANDOFF.md#next-task).
+[R271 angular interpretation](docs/realizability/MANUFACTURED_ANGULAR_INTERPRETATION_R271.md) reconstructs R270's signed
+split and exact-reference errors. Both lateral reaction and stress contribute;
+no corrective source change is justified. R270 remains INCOMPLETE and all ten
+allocations remain spent. Follow the [single current task](SESSION_HANDOFF.md#next-task)
+for a source-only n=4 comparison design; no implementation or launch is admitted.
 
-Updated 2026-09-26 (America/New_York), through R270. PC/WSL daisy owns the
+Updated 2026-09-27 (America/New_York), through R271. PC/WSL daisy owns the
 repository. **R232 corrects the recoverable R231 caller failure and resumes the
 same authorized, unspent one-use fixture, then spends it on a PETSc LU failure.**
 The [R232 result](docs/realizability/POISEUILLE_RESULT_R232.md) records an
@@ -29,7 +30,7 @@ or live scope occurred in R236. [R237 admission](docs/realizability/POISEUILLE_A
 granted one instrumented fixture. [R238 result](docs/realizability/POISEUILLE_RESULT_R238.md)
 spent it 1/1: KSP -11, 405 nonfinite answer entries and PC reason 2 (reported
 numeric zero pivot). Worker/caller exited 1 with empty cleanup but no numerical
-or resource report. Those three allocations were spent 1/1 at R238. Next: Astra/high reviews the R260 diagnostic source and admission; follow the
+or resource report. Those three allocations were spent 1/1 at R238. For the current task, follow the
 [single task](SESSION_HANDOFF.md#next-task).
 
 Historical R231 context: the
@@ -109,8 +110,8 @@ with both ownership routes. A modest atmospheric contraction apparatus is
 estimated at $12k–35k from scratch or $5k–18k additional in an equipped lab,
 excluding research labor. Extra pressure earns no range if delivery/optics
 limit first. These are budgetary judgments, not quotations or performance claims.
-Latest request is R260 (Continue only); the latest supplied session/status snapshot remains R258.
-Latest technical work: [R260 diagnostic integration](docs/realizability/MANUFACTURED_DIAGNOSTICS_R260.md). The R232 account below is historical.
+Latest request is R271 (Continue only); no new session/status snapshot was supplied.
+Latest technical work: [R271 angular interpretation](docs/realizability/MANUFACTURED_ANGULAR_INTERPRETATION_R271.md). The R232 account below is historical.
 R226 previously passed 49 import-free checks for the R222 driver and
 [R196 cube adapter](docs/realizability/CUBE_ADAPTER_R196.md); those were not rerun in R227.
 R232 reached actual FEM/PETSc symbolic LU but produced no numerical report;
@@ -122,9 +123,9 @@ No boundary-driven core or feasible contraction range is established.
 |---|---|
 | What works? | Illustrative animation, saved-data checks and separate reference/analysis tools. |
 | Is the engineering goal demonstrated? | No validated boundary-driven contraction or boundary-only state estimator exists yet. |
-| What did the latest step establish? | R260 implements bounded failure diagnostics and thirteen stage markers; 113 source/fake tests pass. R258 remains INCOMPLETE; seven allowances spent. [Result](docs/realizability/MANUFACTURED_DIAGNOSTICS_R260.md). |
-| What blocks trusted numerical control results? | R246 Poiseuille and R253 rotation passed their fixed oracles. The manufactured pilot and spatial/time verification remain unrun. B2 still fails its independent response-accuracy comparison; q64/q96 remain unused. |
-| What is next? | Sol/high implements the bounded traceback/stage diagnostic repair and tests, then stops for Astra/high source/admission review; follow the single [next task](SESSION_HANDOFF.md#next-task). |
+| What did the latest step establish? | R271 reconstructs both-degree raw angular actions and exact reaction/stress errors. The n=2 physical refusal remains; no isolated source repair is justified. [Review](docs/realizability/MANUFACTURED_ANGULAR_INTERPRETATION_R271.md). |
+| What blocks trusted numerical control results? | R246 Poiseuille and R253 rotation passed their fixed oracles. The manufactured pilot fails its angular physical budget; spatial/time convergence remains untested. B2 still fails its independent response-accuracy comparison; q64/q96 remain unused. |
+| What is next? | Astra/high designs a separate bounded n=4 comparison with scalable evidence and fixed gates, then stops before implementation/admission; follow the single [next task](SESSION_HANDOFF.md#next-task). |
 
 ## Goal and present conclusion
 
@@ -518,8 +519,9 @@ further movies. R191 completed the [similarity contract and first-test design](d
 including checked central side/endcap and surrounding-fluid accounting. The
 historical next analysis assessed inward transport versus wall diffusion after
 R192 quantified the operating point; R193 subsequently completed that screen.
-For the current [next task](SESSION_HANDOFF.md#next-task), R229 recommends
-**GPT-6 Astra / high / PC-WSL daisy** for artifact/resource/version admission review.
+For the current [next task](SESSION_HANDOFF.md#next-task), R271 recommends
+**GPT-6 Astra / high / PC-WSL daisy** for the source-only n=4 comparison design.
+Resolve the larger evidence format and resource justification before implementation or admission.
 Stop before FEM imports/execution, tank/controller
 implementation, procurement or physical work.
 R021 launch integration stays deferred; its accuracy diagnostic,

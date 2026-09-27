@@ -1,9 +1,10 @@
 # Control Research Roadmap
 
-[R270 angular diagnostic](docs/realizability/MANUFACTURED_RESULT_R270.md) is INCOMPLETE: the saved sidecar and
-its ten consistency checks pass, but both degrees still fail the fixed physical
-angular budget. The R269 one-use allocation is spent 1/1; nine older allocations
-remain spent. Follow the [single current task](SESSION_HANDOFF.md#next-task).
+[R271 angular interpretation](docs/realizability/MANUFACTURED_ANGULAR_INTERPRETATION_R271.md) reconstructs R270's signed
+split and exact-reference errors. Both lateral reaction and stress contribute;
+no corrective source change is justified. R270 remains INCOMPLETE and all ten
+allocations remain spent. Follow the [single current task](SESSION_HANDOFF.md#next-task)
+for a source-only n=4 comparison design; no implementation or launch is admitted.
 
 R232's [single-fixture result](docs/realizability/POISEUILLE_RESULT_R232.md)
 is INCOMPLETE: the worker reached PETSc symbolic LU and exited 1 after a

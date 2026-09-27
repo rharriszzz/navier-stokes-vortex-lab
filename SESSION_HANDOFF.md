@@ -1,5 +1,50 @@
 # Current session handoff
 
+Last updated 2026-09-27 (America/New_York) for R271.
+**PC/WSL daisy owns the repository.** No transfer; Mac remains released.
+**R271 completes the source-only angular interpretation. R270 remains
+INCOMPLETE; all ten allocations remain spent. No corrective source change
+is justified by the split alone.** See the
+[review](docs/realizability/MANUFACTURED_ANGULAR_INTERPRETATION_R271.md),
+[probe](docs/realizability/evidence/r271/probe.json) and
+[preservation audit](docs/realizability/evidence/r271/audit.json).
+
+The measured lateral mismatch -0.005296861310889651 contains reaction error
+-0.003817394203649628 and signed stress error -0.001479467107240022 against
+the exact field. Return mismatch +0.000151345186883575 offsets about 2.9%.
+Free residual norms are below 4.1e-15 at both degrees. Exact lateral nodal
+values agree, but the exact degree-seven velocity/quadratic pressure are not
+representable in P2/P1. These observations support a spatial approximation
+hypothesis; one mesh does not establish the sole cause or convergence.
+R267's missing signed-partition/raw-residual blocker is resolved.
+
+**Next: use `/new`, select GPT-6 Astra / high, then Continue for a source-only
+design of a separate bounded n=4 comparison against saved n=2 evidence.
+Publish a precise implementation contract or resource/evidence blocker;
+stop before implementation, admission or launch.** n=4 has 2,315 bordered
+DOFs, exceeding the current 512-DOF recorder. See [Next task](#next-task).
+A new chat is recommended at this saved interpretation boundary; no current
+context percentage supplied. [Official OpenAI Docs](https://developers.openai.com/api/docs/models/gpt-6-astra)
+confirms high support; account availability unverified, no model switch occurred.
+
+R271 user supplied only `continue`. Clean pull verified R270 delivery 7902102;
+R271 STARTED 5156c96 published. Completion prepared for scoped publication;
+delivery hash/result belongs in Git/final response. PC retains ownership.
+Changed: R271 review/probe/audit/checks, seven current pages and request/lifecycle/
+handoff. Checks: exact/saved-array reconstruction, original validators, 132
+raw/caller original/index files, 1,854 prior evidence files, 50 source bindings,
+15 artifacts/four resolutions/archive/interpreter, ten spent reservations and
+recorded PID/cgroup absence, AST/JSON/links/logs/scope/whitespace. Existing 127
+source/fake and eight caller tests reused, not rerun. No numerical imports,
+manager/worker, implementation, admission, full convergence/tank/B2, physical/
+render or Mac transfer. Unknown: sole cause, convergence, lateral pressure/shear
+split, n=4 evidence/resource design, R242 cause and artifact-label origin.
+R229 setup predicate, final save tails and independent parent wall interval
+remain unresolved. Two probe-only API/coordinate-comparison errors were fixed
+without runtime changes or workload activity; details in the review.
+
+### Previous R270 execution (interpreted by R271)
+
 Last updated 2026-09-26 (America/New_York) for R270.
 **PC/WSL daisy owns the repository.** No transfer; Mac remains released.
 **R270 ran R269's single admitted angular diagnostic: INCOMPLETE; the new
@@ -1594,14 +1639,21 @@ and physical-work limits remain unchanged.
 | Owner | PC/WSL `daisy`; Mac `fire.lan` released after published R161 handoff and R162 receipt. |
 | Checkout | `/home/rharris/git/navier-stokes-vortex-lab`. |
 | Branch/upstream | `main` / `origin/main` |
-| Starting state | R270 same-owner clean main/origin/main at 2f36c9d after required fast-forward pull; rharris/daisy, empty stashes, R269 complete. STARTED c523216 and clean preflight recovery 950c2a7 published. |
+| Starting state | R271 same-owner clean main/origin/main at 7902102 after required fast-forward pull; rharris/daisy, empty stashes, R270 complete. R271 STARTED 5156c96 published. |
 | Interpreter | /tmp/navier-fenicsx-r229/bin/python verified as 3.12.13 with -I -S; exact environment artifacts verified, setup memory-event predicate refused. Project Python remains 3.12.14. Old /tmp/navier-fenicsx is still partial. |
 | Other owner/process | Mac `fire.lan` released in the published R161 handoff. Local Git cannot inspect another checkout's unpublished state. |
-| Task processes | R270 spent the R269 allocation 1/1. Worker exited 0; cleanup empty, recorded PID/cgroup absent, host manager lists no new unit. Nine older allocations remain spent. |
+| Task processes | R271 launched no numerical/manager/worker task. All ten reservations spent; recorded PIDs/cgroups verified absent. R270 saved cleanup empty; no fresh manager query in R271. |
 | Symbolic environment | `/tmp/navier-r183-sympy/bin/python`, Python 3.12.14, SymPy 1.14.0, mpmath 1.3.0; recreate using `requirements-symbolic.txt` if missing. Existing environments unchanged. |
-| Delivery state | R269 delivery 2f36c9d verified by clean pull; R270 STARTED c523216 and preflight checkpoint 950c2a7 published. Result completion prepared for publication; delivery in Git/final response. PC retains ownership. |
+| Delivery state | R270 delivery 7902102 verified by clean pull; R271 STARTED 5156c96 published. Interpretation completion prepared for publication; delivery in Git/final response. PC retains ownership. |
 
 ## Current result and limits
+
+R271 resolves the missing signed split and finds both reaction and stress
+errors against the exact field. No corrective source change is justified.
+The remaining blocker is spatial discrimination on more than one mesh, with
+larger evidence/resource design unresolved. See the
+[review](docs/realizability/MANUFACTURED_ANGULAR_INTERPRETATION_R271.md) and
+[single next task](#next-task). R270 stays INCOMPLETE; all ten allowances spent.
 
 R270's one-use diagnostic is INCOMPLETE despite successful worker exit and
 consistent angular sidecar. The new allocation is spent 1/1; nine older
@@ -1746,34 +1798,40 @@ agent-side POV-Ray backtraces are unavailable.
 
 ## Next task
 
-**Use `/new`, select GPT-6 Astra / high, then Continue on PC/WSL daisy for a
-source-only interpretation of R270's measured signed angular split. Publish
-a justified repair contract or precise blocker, then stop.** A new chat is
-recommended at this saved, published experiment boundary; no current context
+**Use `/new`, select GPT-6 Astra / high, then Continue on PC/WSL daisy to
+design a separate bounded n=4 spatial comparison against saved R270 n=2
+results. Publish a precise implementation contract or evidence/resource
+blocker, then stop before implementation, admission or launch.** A new chat
+is recommended at this saved interpretation boundary; no current context
 percentage was supplied. No model/session switch occurred. Official
 [OpenAI Docs](https://developers.openai.com/api/docs/models/gpt-6-astra)
-confirms high reasoning support; account availability remains unverified.
+confirms high support; account availability remains unverified.
 
-Read the [R270 result](docs/realizability/MANUFACTURED_RESULT_R270.md),
-[all 16 raw files](docs/realizability/evidence/r270/run/),
-[saved-data verification](docs/realizability/evidence/r270/verification.json),
-[R267 angular review](docs/realizability/MANUFACTURED_ANGULAR_REVIEW_R267.md),
-the [R269 source/admission review](docs/realizability/MANUFACTURED_ANGULAR_ADMISSION_R269.md)
-and exact reference. After clean synchronization, ownership checks and STARTED
-publication, reconstruct the lateral reaction/stress and return-traction terms
-from the saved arrays and source. Compare both degrees and the exact reference.
-State what the data establish, what remains ambiguous about discretization,
-boundary stress, residual definitions and cause, and whether a source-only
-repair contract is justified. Preserve original evidence, solver, physical
-and resource gates, and all ten spent allocations.
+Read [R271 interpretation and design requirements](docs/realizability/MANUFACTURED_ANGULAR_INTERPRETATION_R271.md#precise-blocker-and-next-bounded-task),
+its [probe](docs/realizability/evidence/r271/probe.json),
+[R270 raw evidence](docs/realizability/evidence/r270/run/),
+[R267 algebra](docs/realizability/MANUFACTURED_ANGULAR_REVIEW_R267.md) and
+[R269 admission/source context](docs/realizability/MANUFACTURED_ANGULAR_ADMISSION_R269.md).
+After clean synchronization, ownership checks and STARTED publication, fix the
+smallest spatial discriminator: same fixture, t=dt=1/8, exact history/corrected
+BE load, P2/P1 method, solver, boundary data, degree24/26 and original physical
+gates. Define comparison of exact-field errors and all signed angular parts;
+a complete diagnostic comparison is separate from a numerical PASS. Two levels
+test sensitivity, not asymptotic convergence; n=8 remains outside the task.
 
-Completion: publish a precise scientific interpretation and next bounded
-implementation or blocker with checks and evidence. Stop before any new
-admission, manager/worker, numerical import/JIT/assembly/solve, full
-convergence/tank/B2, physical/render work or Mac transfer. The R269 allocation
-is spent and cannot be reused. Recommend Sol/high only if a narrowly fixed
-source implementation follows; retain Astra/high for unresolved numerical
-method or scientific decisions. Next prompt: **Continue**.
+Resolve the 2,315 bordered-DOF n=4 case against the current 512-DOF recorder,
+hard-coded 402-entry driver/envelope/sidecar, byte/entry caps and existing
+whole-task resource limits. Specify a separate bounded evidence route, source
+changes, refusal tests, acceptance/interpretation table and stop conditions.
+Preserve old validators and all ten spent allocations. Do not infer n=4
+resource fit from n=2 observations or silently omit required evidence.
+
+Completion: publish a reviewable implementation contract or precise remaining
+blocker. Stop before runtime implementation, new admission, manager/worker,
+numerical import/JIT/assembly/solve, full convergence/tank/B2, physical/render
+work or Mac transfer. Recommend Sol/high only after a narrow source contract
+is fixed; retain Astra/high for unresolved numerical-method, scientific or
+resource/evidence policy decisions. Next prompt: **Continue**.
 
 ### Historical R230 single-fixture execution task (R232 spent)
 
