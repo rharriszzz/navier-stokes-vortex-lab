@@ -1,10 +1,11 @@
 # Isolated nonlinear port verification source — R195/R196/R222/R225/R226
 
-[R271 angular interpretation](../../docs/realizability/MANUFACTURED_ANGULAR_INTERPRETATION_R271.md) reconstructs R270's signed
-split and exact-reference errors. Both lateral reaction and stress contribute;
-no corrective source change is justified. R270 remains INCOMPLETE and all ten
-allocations remain spent. Follow the [single current task](../../SESSION_HANDOFF.md#next-task)
-for a source-only n=4 comparison design; no implementation or launch is admitted.
+[R272 spatial comparison design](../../docs/realizability/MANUFACTURED_SPATIAL_DESIGN_R272.md) fixes a separate n=4 source
+contract with full sparse and both-degree angular evidence. The prospective
+16-MiB/1-MiB evidence caps leave physical and whole-task resource gates unchanged;
+actual n=4 resource fit remains unknown. R270 stays INCOMPLETE; all ten allocations
+remain spent. Follow the [single current task](../../SESSION_HANDOFF.md#next-task)
+for source/fake-test implementation, stopping before admission or launch.
 
 **Source and algebra evidence, not a validated FEM solver.** The
 [R195 fixture review](../../docs/realizability/NONLINEAR_VERIFICATION_R195.md)

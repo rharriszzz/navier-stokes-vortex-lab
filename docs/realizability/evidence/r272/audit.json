@@ -1,0 +1,15 @@
+{
+  "archive_interpreter_verified": true,
+  "historical_evidence_files_unchanged": 1860,
+  "library_resolutions": 4,
+  "numerical_modules_loaded": [],
+  "numerical_or_manager_work": false,
+  "old_original_and_index_files": 116,
+  "r269_allocation_bindings_unchanged": true,
+  "r270_original_and_index_files": 16,
+  "recorded_pids_cgroups_absent": true,
+  "runtime_artifacts": 15,
+  "source_bindings_unchanged": 50,
+  "spent_allocations": 10,
+  "status": "PASS"
+}

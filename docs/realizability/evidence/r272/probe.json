@@ -1,0 +1,49 @@
+{
+  "actual_n4_resource_fit": "UNMEASURED",
+  "angular_both_degrees_serialized_upper_bound": 461458,
+  "angular_float_count": 14617,
+  "baseline_files_bound": 18,
+  "linear_serialized_upper_bound": 16542030,
+  "mesh_counts": {
+    "2": {
+      "bordered_dofs": 405,
+      "cells": 48,
+      "exterior_facets": 48,
+      "facets_per_tag": 8,
+      "fixed_velocity_dofs": 240,
+      "mixed_dofs": 402,
+      "pressure_dofs": 27,
+      "velocity_dofs": 375,
+      "velocity_nodes": 125,
+      "vertices": 27
+    },
+    "4": {
+      "bordered_dofs": 2315,
+      "cells": 384,
+      "exterior_facets": 192,
+      "facets_per_tag": 32,
+      "fixed_velocity_dofs": 864,
+      "mixed_dofs": 2312,
+      "pressure_dofs": 125,
+      "velocity_dofs": 2187,
+      "velocity_nodes": 729,
+      "vertices": 125
+    }
+  },
+  "metadata_overhead_budget_per_record": 65536,
+  "new_admissions": 0,
+  "new_attempts": 0,
+  "numerical_modules_loaded": [],
+  "old_validator_refuses_new_contract": true,
+  "physical_and_resource_gates_unchanged": true,
+  "proposed_angular_bytes_cap": 1048576,
+  "proposed_linear_bytes_cap": 16777216,
+  "proposed_linear_nnz_cap": 524288,
+  "saved_r246_validator": "PASS",
+  "saved_r253_validator": "PASS",
+  "saved_r266_validator": "INCOMPLETE",
+  "saved_r270_validator": "INCOMPLETE",
+  "saved_r271_probe_reproduced": true,
+  "status": "DESIGN_COMPLETE_NOT_ADMITTED",
+  "structural_entry_upper_bound": 460091
+}

@@ -1,12 +1,13 @@
 # Project status: a boundary-controlled engineering approximation
 
-[R271 angular interpretation](docs/realizability/MANUFACTURED_ANGULAR_INTERPRETATION_R271.md) reconstructs R270's signed
-split and exact-reference errors. Both lateral reaction and stress contribute;
-no corrective source change is justified. R270 remains INCOMPLETE and all ten
-allocations remain spent. Follow the [single current task](SESSION_HANDOFF.md#next-task)
-for a source-only n=4 comparison design; no implementation or launch is admitted.
+[R272 spatial comparison design](docs/realizability/MANUFACTURED_SPATIAL_DESIGN_R272.md) fixes a separate n=4 source
+contract with full sparse and both-degree angular evidence. The prospective
+16-MiB/1-MiB evidence caps leave physical and whole-task resource gates unchanged;
+actual n=4 resource fit remains unknown. R270 stays INCOMPLETE; all ten allocations
+remain spent. Follow the [single current task](SESSION_HANDOFF.md#next-task)
+for source/fake-test implementation, stopping before admission or launch.
 
-Updated 2026-09-27 (America/New_York), through R271. PC/WSL daisy owns the
+Updated 2026-09-27 (America/New_York), through R272. PC/WSL daisy owns the
 repository. **R232 corrects the recoverable R231 caller failure and resumes the
 same authorized, unspent one-use fixture, then spends it on a PETSc LU failure.**
 The [R232 result](docs/realizability/POISEUILLE_RESULT_R232.md) records an

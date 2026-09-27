@@ -1,5 +1,47 @@
 # Current session handoff
 
+Last updated 2026-09-27 (America/New_York) for R272.
+**PC/WSL daisy owns the repository.** No transfer; Mac remains released.
+**R272 fixes a source-only n=4 comparison contract; no execution is admitted.**
+R270 remains INCOMPLETE and all ten allocations remain spent. See the
+[design](docs/realizability/MANUFACTURED_SPATIAL_DESIGN_R272.md),
+[non-executable proposal](docs/realizability/evidence/r272/proposal.json),
+[design probe](docs/realizability/evidence/r272/probe.json) and
+[preservation audit](docs/realizability/evidence/r272/audit.json).
+
+The separate n=4 route requires 2,312 mixed/2,315 bordered DOFs, full sparse
+pre-factorization evidence and final angular residuals at degrees24/26. A
+conservative 460,091-entry structural bound fits a proposed 524,288-entry,
+16-MiB recorder; the both-degree angular record fits a proposed 1-MiB cap.
+These are explicit new-route evidence caps; historical validators, physical
+gates and whole-task resource limits stay unchanged. Actual n=4 runtime fit
+and scientific outcome remain unknown. Two levels test sensitivity, not
+asymptotic convergence. No n=2 rerun or n=8 is included.
+
+**Next: use `/new`, select GPT-6 Sol / high, then Continue for only the fixed
+source/fake-test implementation. Publish and stop for Astra/high source and
+admission review before numerical work.** See [Next task](#next-task).
+A new chat is recommended at this saved design boundary; no current context
+percentage supplied. [Official OpenAI Docs](https://developers.openai.com/api/docs/models/gpt-6-sol)
+confirms high support; account availability unverified, no model switch occurred.
+
+R272 user supplied only `continue`. Clean pull verified R271 delivery 83fb7c9;
+R272 STARTED 2e18140 published. Completion prepared for scoped publication;
+delivery hash/result belongs in Git/final response. PC retains ownership.
+Changed: design/proposal/probe/audit/checks, seven current pages and request/
+lifecycle/handoff. Checks: source size/dimension arithmetic, 18 baseline bindings,
+R271 and exact/saved validator replay, 132 raw/caller original/index files,
+1,860 prior evidence files, 50 source bindings, 15 artifacts/four resolutions/
+archive/interpreter, ten spent reservations and recorded PID/cgroup absence,
+AST/JSON/links/logs/scope/whitespace. Existing 127 source/fake and eight caller
+tests reused, not rerun. No runtime source change, numerical import, manager,
+worker, admission, full convergence/tank/B2, physical/render or Mac transfer.
+Unknown: actual n=4 resource/error behavior, sole cause, convergence, lateral
+pressure/shear split, R242 cause and artifact-label origin. R229 setup predicate,
+final save tails and independent parent wall interval remain unresolved.
+
+### Previous R271 interpretation (design completed by R272)
+
 Last updated 2026-09-27 (America/New_York) for R271.
 **PC/WSL daisy owns the repository.** No transfer; Mac remains released.
 **R271 completes the source-only angular interpretation. R270 remains
@@ -1639,21 +1681,21 @@ and physical-work limits remain unchanged.
 | Owner | PC/WSL `daisy`; Mac `fire.lan` released after published R161 handoff and R162 receipt. |
 | Checkout | `/home/rharris/git/navier-stokes-vortex-lab`. |
 | Branch/upstream | `main` / `origin/main` |
-| Starting state | R271 same-owner clean main/origin/main at 7902102 after required fast-forward pull; rharris/daisy, empty stashes, R270 complete. R271 STARTED 5156c96 published. |
+| Starting state | R272 same-owner clean main/origin/main at 83fb7c9 after required fast-forward pull; rharris/daisy, empty stashes, R271 complete. R272 STARTED 2e18140 published. |
 | Interpreter | /tmp/navier-fenicsx-r229/bin/python verified as 3.12.13 with -I -S; exact environment artifacts verified, setup memory-event predicate refused. Project Python remains 3.12.14. Old /tmp/navier-fenicsx is still partial. |
 | Other owner/process | Mac `fire.lan` released in the published R161 handoff. Local Git cannot inspect another checkout's unpublished state. |
-| Task processes | R271 launched no numerical/manager/worker task. All ten reservations spent; recorded PIDs/cgroups verified absent. R270 saved cleanup empty; no fresh manager query in R271. |
+| Task processes | R272 launched no numerical/manager/worker task. All ten reservations remain spent; recorded PIDs/cgroups verified absent. R270 saved cleanup empty; no fresh manager query in R272. |
 | Symbolic environment | `/tmp/navier-r183-sympy/bin/python`, Python 3.12.14, SymPy 1.14.0, mpmath 1.3.0; recreate using `requirements-symbolic.txt` if missing. Existing environments unchanged. |
-| Delivery state | R270 delivery 7902102 verified by clean pull; R271 STARTED 5156c96 published. Interpretation completion prepared for publication; delivery in Git/final response. PC retains ownership. |
+| Delivery state | R271 delivery 83fb7c9 verified by clean pull; R272 STARTED 2e18140 published. Design completion prepared for publication; delivery in Git/final response. PC retains ownership. |
 
 ## Current result and limits
 
-R271 resolves the missing signed split and finds both reaction and stress
-errors against the exact field. No corrective source change is justified.
-The remaining blocker is spatial discrimination on more than one mesh, with
-larger evidence/resource design unresolved. See the
-[review](docs/realizability/MANUFACTURED_ANGULAR_INTERPRETATION_R271.md) and
-[single next task](#next-task). R270 stays INCOMPLETE; all ten allowances spent.
+R272 resolves the source/evidence design blocker for a separate n=4 comparison.
+The [fixed contract](docs/realizability/MANUFACTURED_SPATIAL_DESIGN_R272.md)
+preserves full evidence with new-route caps and leaves actual runtime fit and
+scientific interpretation open. Follow the [single next task](#next-task) for
+source/fake-test implementation only. R270 remains INCOMPLETE; all ten spent.
+R271's supported spatial-error hypothesis is still unproved by a second mesh.
 
 R270's one-use diagnostic is INCOMPLETE despite successful worker exit and
 consistent angular sidecar. The new allocation is spent 1/1; nine older
@@ -1798,40 +1840,44 @@ agent-side POV-Ray backtraces are unavailable.
 
 ## Next task
 
-**Use `/new`, select GPT-6 Astra / high, then Continue on PC/WSL daisy to
-design a separate bounded n=4 spatial comparison against saved R270 n=2
-results. Publish a precise implementation contract or evidence/resource
-blocker, then stop before implementation, admission or launch.** A new chat
-is recommended at this saved interpretation boundary; no current context
-percentage was supplied. No model/session switch occurred. Official
-[OpenAI Docs](https://developers.openai.com/api/docs/models/gpt-6-astra)
-confirms high support; account availability remains unverified.
+**Use `/new`, select GPT-6 Sol / high, then Continue on PC/WSL daisy to
+implement only the fixed R272 n=4 source/evidence/comparison contract and
+source/fake tests. Publish and stop for Astra/high source/admission review;
+no numerical import, admission or launch.** This is a saved design boundary;
+no current context percentage supplied. [Official OpenAI Docs](https://developers.openai.com/api/docs/models/gpt-6-sol)
+confirms high support; account availability unverified, no model/session switch.
 
-Read [R271 interpretation and design requirements](docs/realizability/MANUFACTURED_ANGULAR_INTERPRETATION_R271.md#precise-blocker-and-next-bounded-task),
-its [probe](docs/realizability/evidence/r271/probe.json),
-[R270 raw evidence](docs/realizability/evidence/r270/run/),
-[R267 algebra](docs/realizability/MANUFACTURED_ANGULAR_REVIEW_R267.md) and
-[R269 admission/source context](docs/realizability/MANUFACTURED_ANGULAR_ADMISSION_R269.md).
-After clean synchronization, ownership checks and STARTED publication, fix the
-smallest spatial discriminator: same fixture, t=dt=1/8, exact history/corrected
-BE load, P2/P1 method, solver, boundary data, degree24/26 and original physical
-gates. Define comparison of exact-field errors and all signed angular parts;
-a complete diagnostic comparison is separate from a numerical PASS. Two levels
-test sensitivity, not asymptotic convergence; n=8 remains outside the task.
+Read [R272 design and fixed source task](docs/realizability/MANUFACTURED_SPATIAL_DESIGN_R272.md#fixed-source-implementation-task),
+[proposal](docs/realizability/evidence/r272/proposal.json),
+[probe](docs/realizability/evidence/r272/probe.json),
+[R271 interpretation](docs/realizability/MANUFACTURED_ANGULAR_INTERPRETATION_R271.md),
+[R270 saved baseline](docs/realizability/evidence/r270/run/) and
+[R269 source/admission context](docs/realizability/MANUFACTURED_ANGULAR_ADMISSION_R269.md).
+After clean synchronization, ownership checks and STARTED publication, implement
+separate strict n=4 schema2 manifest/driver/report/linear/angular/worker/comparison
+modules and additive fixed supervision dispatch. Keep historical validators and
+shared physics/solver/CAPS unchanged. Dimensions: 2,312 mixed, 2,315 bordered,
+2,187/125 maps, 729 velocity nodes, 864 fixed components. The new full sparse
+recorder is capped at 524,288 entries/16 MiB; both-degree angular evidence at
+1 MiB; numerical envelope 2,000,000 and comparison 262,144 bytes. Preserve all
+original metrics/gates and final-state versus pre-correction provenance.
 
-Resolve the 2,315 bordered-DOF n=4 case against the current 512-DOF recorder,
-hard-coded 402-entry driver/envelope/sidecar, byte/entry caps and existing
-whole-task resource limits. Specify a separate bounded evidence route, source
-changes, refusal tests, acceptance/interpretation table and stop conditions.
-Preserve old validators and all ten spent allocations. Do not infer n=4
-resource fit from n=2 observations or silently omit required evidence.
+Run the 127 prior guarded source/fake tests and eight fake caller tests plus
+focused schema, caps, independent angular actions, final scaled residual,
+cross-file aliases, comparison outcomes and inert admission/dispatch controls.
+Replay saved R246/R253 PASS and R266/R270 refusal and exact R255/R267 references.
+Publish exact schemas/APIs, source inventory, results and preservation audit.
+No generic mesh switch, old-validator widening, recorder omission, n=2 rerun,
+n=8 or resource/gate relaxation. Actual n=4 runtime fit remains unmeasured.
 
-Completion: publish a reviewable implementation contract or precise remaining
-blocker. Stop before runtime implementation, new admission, manager/worker,
-numerical import/JIT/assembly/solve, full convergence/tank/B2, physical/render
-work or Mac transfer. Recommend Sol/high only after a narrow source contract
-is fixed; retain Astra/high for unresolved numerical-method, scientific or
-resource/evidence policy decisions. Next prompt: **Continue**.
+Completion: source integration and guarded tests, or precise demonstrated blocker.
+Stop before new admission, numerical import/JIT/assembly/solve, real manager/
+worker/reservation, full convergence/tank/B2, physical/render or Mac transfer.
+All ten allocations remain spent. Recommend Astra/high after implementation for
+source, scientific and resource/evidence admission decisions; escalate to that
+review immediately if the fixed contract cannot be met. Any later execution
+requires a separate new one-use allocation and bound finite caller. Next prompt:
+**Continue**.
 
 ### Historical R230 single-fixture execution task (R232 spent)
 
