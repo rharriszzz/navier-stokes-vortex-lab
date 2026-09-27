@@ -1,0 +1,1 @@
+{"status": "INCOMPLETE", "reason": "Refusal: sd-bus operation failed: errno 1", "elapsed_after_caller_save": 0.08954538599937223, "run_directory": "/tmp/navier-manufactured-r269-once", "inner_status": null}
