@@ -10054,3 +10054,13 @@ R262 STARTED 8de6ffd was published before the exact fixed caller ran once with h
 Evidence: docs/realizability/MANUFACTURED_RESULT_R262.md and evidence/r262/{run/,navier-r262-caller-stdout.txt,navier-r262-caller-stderr.txt,run_hashes.json,audit.py,audit.json,checks.py,checks.json}. Eleven run files and two caller outputs, 13,250 bytes, copied byte-for-byte and hashed. Checks: saved-data/source/artifact audit, original bytes, reservation/source/nonce/status/cleanup, recorded process absence, old PASS replays, AST/JSON/local links, unique contiguous R001–R262, append-only records and whitespace. Skipped: second numerical attempt, reimport/reassembly/solve, new admission, full convergence/tank/B2, physical/render and Mac transfer. Unknown: exact UFL recursion trigger, resource peaks/events, manufactured errors/budgets, convergence/rank, R242 cause and artifact-label origin.
 
 Next: GPT-6 Astra/high reviews R262 failure and first Jacobian form source using static/stdlib/injected-fake evidence; publishes an implementation-ready source-only repair contract or precise blocker, then stops before any admission, numerical import, manager, worker, JIT, assembly or solve. Sol/high is suitable for a later fixed source implementation; Astra/high for scientific gate changes. Continue in this chat is recommended for the directly connected failure; no current context percentage or new status snapshot supplied. No model/session switch. PC retains ownership, Mac released. R261 delivery 6455d4b verified by clean pull; R262 STARTED 8de6ffd published. Completion prepared for scoped publication; delivery commit/result belongs in Git/final response, with no post-push edit.
+
+## R263 — 2026-09-26 — Review primary Jacobian compilation failure
+
+**User request (verbatim):**
+
+> continue
+
+**Scope/status:** STARTED. Review R262 saved primary-compilation failure and the first Jacobian form source using static, standard-library or injected-fake checks; publish an implementation-ready source-only repair contract or precise blocker. Stop before numerical imports, manager/worker, JIT/assembly/solve or any new admission. All eight allocations remain spent. Continue authorizes scoped lifecycle/completion commits and pushes. No user-supplied new session/status/context snapshot; no private session inspection or model switch by agent.
+
+Identity rharris/daisy, PC/WSL Linux x86_64, /home/rharris/git/navier-stokes-vortex-lab. Clean main/origin/main equal at fa5f56f4a4ff1c2d3bfff9d713e20794d3bf364f after required fast-forward pull (already up to date); empty stashes, R262 completed, PC owner and Mac released. No open same-owner workload. R262 allowance spent; preserve original evidence, scientific/resource gates and stop conditions.
