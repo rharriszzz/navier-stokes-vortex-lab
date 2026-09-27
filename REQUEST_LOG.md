@@ -10018,3 +10018,13 @@ Evidence: docs/realizability/MANUFACTURED_DIAGNOSTICS_R260.md and evidence/r260/
 Changed: manufactured worker/driver, new failure helper and focused test, existing integration test, R260 result/evidence, seven current status/index pages, REQUEST_LOG.md, WORK_SESSIONS.md and SESSION_HANDOFF.md. Skipped: numerical imports, manager/worker/reservation, new admission/caller, FEM/JIT/assembly/solve, full convergence/tank/B2, physical/render and Mac transfer. Unknown: R258's actual recursion site/import progress and resource peaks/events, pilot accuracy/budgets, convergence/rank, R242 cause and artifact-label origin. Seven allocations remain spent; no new attempt admitted.
 
 Next: use /new at the published implementation boundary, select GPT-6 Astra/high and Continue on PC/WSL daisy to review R260 source against R259, publish a separately bound new one-use admission/caller or precise blocker, then stop before launch. This source/admission review warrants Astra/high judgment; no agent model/session switch or account-availability claim. PC retains ownership, Mac released. R259 delivery 0109736 verified by clean pull; R260 STARTED 0d414c8 published. Completion prepared for scoped publication; delivery result/hash belongs in Git/final response, with no post-push edit.
+
+## R261 — 2026-09-26 — Review R260 diagnostics and admission boundary
+
+**User request (verbatim):**
+
+> continue
+
+**Scope/status:** STARTED. Review R260 diagnostic source against R259, audit source and saved evidence, repair a source defect if found, then publish a separately bound new one-use admission/caller or a precise blocker. Stop before numerical import, manager, reservation, worker or launch. Continue authorizes scoped lifecycle and completion commits/pushes. No new session/status/context/model snapshot supplied; no private session inspection or model switch.
+
+Identity rharris/daisy, PC/WSL Linux 6.18.33.2-microsoft-standard-WSL2 x86_64, /home/rharris/git/navier-stokes-vortex-lab. Clean main/origin/main at 71a82e1ff9a49a8d26de654f7f45a9014d5bd740 after required fast-forward pull (already up to date); empty stashes, R260 completed, PC owner and Mac released. Seven allocations spent; no new attempt yet admitted.
