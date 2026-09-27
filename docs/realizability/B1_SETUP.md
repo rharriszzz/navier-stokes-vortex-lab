@@ -1,9 +1,8 @@
 # B1 solver environment
 
-[R261 diagnostic admission](MANUFACTURED_ADMISSION_R261.md) grants one new
-later one-use manufactured pilot. All 114 source/fake and six caller checks
-pass; 84 originals and seven prior spent reservations verify. R258 remains
-INCOMPLETE; the new allowance is unspent. Follow the
+[R262 diagnostic pilot](MANUFACTURED_RESULT_R262.md) is INCOMPLETE; the
+single R261 allowance is spent after primary Jacobian compilation failed in
+UFL derivative traversal. No numerical report or resource snapshot exists. Follow the
 [single current task](../../SESSION_HANDOFF.md#next-task).
 
 Historical PC status: [R232's one-use Poiseuille result](POISEUILLE_RESULT_R232.md)

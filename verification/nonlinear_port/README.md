@@ -1,9 +1,9 @@
 # Isolated nonlinear port verification source — R195/R196/R222/R225/R226
 
-[R261 diagnostic admission](../../docs/realizability/MANUFACTURED_ADMISSION_R261.md)
-grants one new later one-use manufactured pilot. All 114 source/fake and six
-caller checks pass; 84 originals and seven prior spent reservations verify.
-R258 remains INCOMPLETE; the new allowance is unspent. Follow the
+[R262 diagnostic pilot](../../docs/realizability/MANUFACTURED_RESULT_R262.md)
+is INCOMPLETE; the single R261 allowance is spent after primary Jacobian
+compilation failed in UFL derivative traversal. No numerical report or
+resource snapshot exists. Follow the
 [single current task](../../SESSION_HANDOFF.md#next-task).
 
 **Source and algebra evidence, not a validated FEM solver.** The

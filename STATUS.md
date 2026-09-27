@@ -1,9 +1,9 @@
 # Project status: a boundary-controlled engineering approximation
 
-[R261 diagnostic admission](docs/realizability/MANUFACTURED_ADMISSION_R261.md)
-grants one new later one-use manufactured pilot in a fresh directory. All 114
-source/fake and six caller checks pass; 84 originals and seven prior spent
-reservations verify. R258 remains INCOMPLETE; the new allowance is unspent.
+[R262 diagnostic pilot](docs/realizability/MANUFACTURED_RESULT_R262.md) is
+INCOMPLETE: the single R261 allowance is spent after a primary form-compilation
+RecursionError. A bounded traceback identifies the first Jacobian form/JIT and
+UFL derivative traversal; no numerical report or resource snapshot exists.
 Follow the [single current task](SESSION_HANDOFF.md#next-task).
 
 Updated 2026-09-26 (America/New_York), through R261. PC/WSL daisy owns the
