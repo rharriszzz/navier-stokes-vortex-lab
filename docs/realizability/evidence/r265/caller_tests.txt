@@ -1,0 +1,11 @@
+test_capacity_controllers_and_manager_drift (__main__.CallerChecks.test_capacity_controllers_and_manager_drift) ... ok
+test_finite_dispatch_persistence_and_nonzero_outcome (__main__.CallerChecks.test_finite_dispatch_persistence_and_nonzero_outcome) ... ok
+test_library_resolution_and_spent_directory_refusals (__main__.CallerChecks.test_library_resolution_and_spent_directory_refusals) ... ok
+test_source_allocation_contract_and_artifact_refusals (__main__.CallerChecks.test_source_allocation_contract_and_artifact_refusals) ... ok
+test_timer_before_imports_and_preflight_no_writes_on_refusal (__main__.CallerChecks.test_timer_before_imports_and_preflight_no_writes_on_refusal) ... ok
+test_valid_admission_and_strict_supervisor_binding (__main__.CallerChecks.test_valid_admission_and_strict_supervisor_binding) ... ok
+
+----------------------------------------------------------------------
+Ran 6 tests in 0.381s
+
+OK

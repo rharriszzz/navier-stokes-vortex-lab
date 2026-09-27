@@ -1,0 +1,16 @@
+{
+  "append_only_logs": true,
+  "ast_files": 6,
+  "evidence_files_in_git_index": 16,
+  "json_files": 8,
+  "local_link_targets_checked": 305,
+  "new_attempts_admitted": 1,
+  "new_attempts_spent": 0,
+  "original_files_and_git_coverage": 97,
+  "r265_completed_once": true,
+  "r265_started_once": true,
+  "runtime_source_changes": 0,
+  "status": "ADMITTED_FOR_LATER_EXECUTION",
+  "unique_contiguous_request_ids": 265,
+  "whitespace": "PASS"
+}

@@ -1,10 +1,10 @@
 # Control Research Roadmap
 
-[R264 source integration](docs/realizability/MANUFACTURED_BALANCED_INTEGRATION_R264.md)
-implements balanced symbolic polynomial evaluation and five adapter routes.
-All 118 source/fake tests pass. R262 stays INCOMPLETE; eight allocations are
-spent and no new attempt is admitted. Follow the
-[single current task](SESSION_HANDOFF.md#next-task).
+[R265 source review/admission](docs/realizability/MANUFACTURED_ADMISSION_R265.md)
+accepts balanced symbolic evaluation and admits one NEW later manufactured
+pilot under unchanged gates. All 118 source tests and six fake caller checks
+pass; zero new attempts spent. R262 remains INCOMPLETE and eight older
+allocations remain spent. Follow the [single current task](SESSION_HANDOFF.md#next-task).
 
 R232's [single-fixture result](docs/realizability/POISEUILLE_RESULT_R232.md)
 is INCOMPLETE: the worker reached PETSc symbolic LU and exited 1 after a

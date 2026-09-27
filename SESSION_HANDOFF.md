@@ -1,5 +1,52 @@
 # Current session handoff
 
+Last updated 2026-09-26 (America/New_York) for R265.
+**PC/WSL daisy owns the repository.** No transfer; Mac remains released.
+**R265 accepts R264 balanced symbolic source and admits one NEW later pilot;
+zero new attempts spent. R262 remains INCOMPLETE, eight old allocations spent.**
+See the [review/admission](docs/realizability/MANUFACTURED_ADMISSION_R265.md),
+[allocation/caller](docs/realizability/evidence/r265/),
+[arithmetic probe](docs/realizability/evidence/r265/reassociation.json) and
+[audit](docs/realizability/evidence/r265/audit.json).
+
+All 118 source/fake tests and six caller checks pass with no numerical imports.
+Independent tree-shape checks cover sizes 0–33; 28 all-symbolic fixture graphs
+and 56 symbolic-time exact-data values verify. Across 1,792 scalar samples,
+maximum old/new difference is 1.2434497875801753e-14. This is comparable to the
+signed diagnostic floor, not proof of assembled acceptance. All gates stay
+fixed. R264's exact monomial construction, legacy interpolation, corrected
+BE load/history, automatic Jacobian and diagnostics are accepted unchanged.
+
+The audit verifies 47 unchanged source bindings, eleven runtime artifacts,
+four resolutions, archive/interpreter, 97 raw originals/Git-index bytes, eight
+spent reservations and absent recorded PIDs/cgroups. All 1,760 prior tracked
+evidence files are unchanged. Saved R246/R253 validators PASS and R255 exact
+reference reproduces. The fresh /tmp/navier-manufactured-r265-once directory
+and dangling link are absent. No real manager, worker, reservation, numerical
+import/JIT/assembly/solve in review. Real compiler and pilot behavior are unknown.
+
+**Next: use `/new`, select GPT-6 Sol / high, then Continue to execute only the
+fixed R265 caller once on PC/WSL daisy. Preserve/publish the result and stop
+for Astra/high interpretation.** See [Next task](#next-task). A fresh chat is
+recommended at this saved source/admission boundary; no current context
+percentage supplied. No model/session switch occurred.
+
+R265 user supplied only `continue`. Clean pull verified R264 delivery 4870e82;
+R265 STARTED 9834839 published. Completion prepared for scoped publication;
+delivery hash/result belongs in Git/final response. PC retains ownership.
+
+Changed: R265 review/allocation/caller/test and audit evidence, seven current
+status/index pages, request/lifecycle/handoff. Checks: 118 source tests, six
+fake caller checks, arithmetic/tree/symbolic-time probe, saved PASS/reference,
+source/artifact/raw/index coverage, AST/JSON/links/logs/whitespace. Skipped:
+real numerical/manager/worker/admission consumption, full convergence/tank/B2,
+physical/render and Mac transfer. Unknown: exact R262 failing expression,
+compiler/pilot/resource/accuracy/budget/convergence/rank behavior, R242 cause
+and artifact-label origin. The new admission preserves all stated risks and
+all older allocations; it does not guarantee a successful run.
+
+### Previous R264 source integration (reviewed by R265)
+
 Last updated 2026-09-26 (America/New_York) for R264.
 **PC/WSL daisy owns the repository.** No transfer; Mac remains released.
 **R264 implements the R263 balanced symbolic evaluator and five adapter routes;
@@ -1350,21 +1397,22 @@ and physical-work limits remain unchanged.
 | Owner | PC/WSL `daisy`; Mac `fire.lan` released after published R161 handoff and R162 receipt. |
 | Checkout | `/home/rharris/git/navier-stokes-vortex-lab`. |
 | Branch/upstream | `main` / `origin/main` |
-| Starting state | R264 same-owner clean main/origin/main at 4323cf1 after required fast-forward pull; rharris/daisy, empty stashes, R263 completed. STARTED 17d6d63 published. |
+| Starting state | R265 same-owner clean main/origin/main at 4870e82 after required fast-forward pull; rharris/daisy, empty stashes, R264 complete. STARTED 9834839 published. |
 | Interpreter | /tmp/navier-fenicsx-r229/bin/python verified as 3.12.13 with -I -S; exact environment artifacts verified, setup memory-event predicate refused. Project Python remains 3.12.14. Old /tmp/navier-fenicsx is still partial. |
 | Other owner/process | Mac `fire.lan` released in the published R161 handoff. Local Git cannot inspect another checkout's unpublished state. |
-| Task processes | R264 standard-library/injected-fake tests and saved-data audits only. No numerical import/manager/worker/reservation; all eight allocations spent and recorded PIDs/cgroups absent. |
+| Task processes | R265 source/fake tests and saved-data audits only; no numerical import/manager/worker/reservation. Eight old allocations spent, recorded PIDs/cgroups absent; new R265 allowance unspent 0/1. |
 | Symbolic environment | `/tmp/navier-r183-sympy/bin/python`, Python 3.12.14, SymPy 1.14.0, mpmath 1.3.0; recreate using `requirements-symbolic.txt` if missing. Existing environments unchanged. |
-| Delivery state | R263 delivery 4323cf1 verified by clean pull; R264 STARTED 17d6d63 published. Implementation/completion prepared for publication; delivery in Git/final response. PC retains ownership. |
+| Delivery state | R264 delivery 4870e82 verified by clean pull; R265 STARTED 9834839 published. Review/admission completion prepared for publication; delivery in Git/final response. PC retains ownership. |
 
 ## Current result and limits
 
-R264 implements the balanced symbolic evaluator and five adapter routes under
-the [R263 contract](docs/realizability/MANUFACTURED_DEPTH_REVIEW_R263.md). See the
-[integration](docs/realizability/MANUFACTURED_BALANCED_INTEGRATION_R264.md) and
-[single next task](#next-task). R262 remains INCOMPLETE; eight allocations are
-spent. No manufactured numerical report or real repair validation is available.
-Earlier results below retain their historical scope.
+R265 accepts R264's balanced symbolic evaluator/routing and admits one new
+later pilot under unchanged gates. See the
+[review/admission](docs/realizability/MANUFACTURED_ADMISSION_R265.md) and
+[single next task](#next-task). R262 remains INCOMPLETE; eight historical
+allocations spent, R265 unspent 0/1. Scalar reassociation samples are not a
+compiler or assembled-error guarantee. No manufactured numerical report or
+real repair validation exists. Earlier results below retain historical scope.
 
 R103 removes recursive infrastructure certification while preserving process
 safeguards, observed accounting, cleanup and incomplete-result refusal. R104
@@ -1493,41 +1541,51 @@ agent-side POV-Ray backtraces are unavailable.
 
 ## Next task
 
-**GPT-6 Astra / high reviews the R264 balanced symbolic source integration,
-then decides whether to bind a separately authorized one-use admission and
-finite caller or publish a precise blocker. Stop before launch.** Continue on
-PC/WSL daisy after clean synchronization. Recommend `/new` at the published
-implementation/review boundary; no current context percentage or new
-user-supplied session/status snapshot is available.
+**Use `/new`, select GPT-6 Sol / high, then Continue on PC/WSL daisy to execute
+only the fixed R265 manufactured caller once. Preserve/publish the outcome,
+then stop for Astra/high interpretation.** This is a saved source/admission
+boundary; no current context percentage is available. No model switch has
+been performed. Recommend Astra/high for any scientific/gate decision.
 
-Read the [R263 contract](docs/realizability/MANUFACTURED_DEPTH_REVIEW_R263.md),
-[R264 integration](docs/realizability/MANUFACTURED_BALANCED_INTEGRATION_R264.md),
-[source inventory](docs/realizability/evidence/r264/source_inventory.json),
-[test transcript](docs/realizability/evidence/r264/tests.txt),
-[audit](docs/realizability/evidence/r264/audit.json) and
-[R262 failure](docs/realizability/evidence/r262/run/failure.json).
+Read the [R265 review/admission](docs/realizability/MANUFACTURED_ADMISSION_R265.md),
+[allocation](docs/realizability/evidence/r265/allocation.json),
+[caller](docs/realizability/evidence/r265/run_once.py),
+[source inventory](docs/realizability/evidence/r265/source_inventory.json),
+[artifact inventory](docs/realizability/evidence/r265/artifacts.json) and
+[audit](docs/realizability/evidence/r265/audit.json).
 
 1. Follow clean Continue synchronization, ownership/status/stash checks and
-   published STARTED lifecycle. Preserve 97 raw originals, all eight spent
-   allocations, fixed fixture policies and resource gates.
-2. Review the exact new `Poly.evaluate_balanced` monomial construction and
-   adjacent-pair/odd-tail reduction, the five `cube_adapter` routes, unchanged
-   legacy numeric interpolation, exact corrected load/history, automatic
-   Jacobian and diagnostic routes. Assess floating-point reassociation against
-   fixed acceptance thresholds without changing them by inference.
-3. Review all 118 source/fake checks, 28 fixture depth cases, negative controls,
-   saved R246/R253 PASS replay and R255 reference. Confirm 47 source bindings,
-   97 raw originals/Git coverage, artifacts, eight spent reservations and
-   absent task processes. Fake traversal is not real UFL compilation.
-4. If source accepted, decide separately whether to bind a fresh one-use
-   admission and finite caller under unchanged science/resource gates. Publish
-   a precise blocker if the review cannot responsibly admit. No numerical
-   import/JIT/assembly/solve, manager, reservation, worker or launch in this
-   review. Do not reuse a spent directory or infer actual compiler success.
+   published STARTED lifecycle. Verify 47 source bindings, eleven artifacts,
+   four resolutions, interpreter/archive, 97 preserved raw originals and
+   eight spent reservations/absent recorded processes. The separate R265
+   allowance is unspent 0/1; fixed run directory and dangling link must be absent.
+2. Invoke `/tmp/navier-fenicsx-r229/bin/python
+   docs/realizability/evidence/r265/run_once.py EXACT_LAUNCH_COMMIT`, replacing
+   the final argument with the full clean HEAD after STARTED publication.
+   Preserve shell caller output outside the fixed run directory, without
+   creating that directory in advance. No standalone numerical import,
+   prewarming, alternate directory or checkout edit during the workload.
+3. The caller refreshes host memory/controllers and reviewed manager version,
+   enforces clean source/artifact bindings, then delegates to the existing
+   held-worker supervisor. Fixed n=2, t=dt=1/8, degree24/26, 402/405 DOFs,
+   60 scalar receipts and all science/resource caps remain unchanged:
+   180 s outer, 15/150/15 s stages, independent 149 s worker plus 1 s grace,
+   1536 MiB/no swap, 32 tasks, one rank/thread. No gate relaxation.
+4. Reservation/directory creation or partial worker start spends the new
+   allowance, including INCOMPLETE. Preserve every raw file, failure record,
+   caller output, resource receipt and cleanup record; hash exact copies and
+   verify Git inclusion (force-add ignored raw `.log` files where needed).
+   Record missing evidence explicitly. Never reuse any older allocation.
+5. A proven pre-reservation/pre-worker/pre-import caller error follows the
+   repository recovery rule: save failure and timing gaps, verify absent fixed
+   directory and no new manager process, fix/test and publish clean bindings
+   before continuing the same unspent allocation. Uncertain state stops.
+   Once reserved/started, stop after one outcome; no retry or inferred reset.
 
-Completion: a recorded source decision and either a separate, reviewable
-admission/caller or precise blocker. Stop before execution. Next prompt:
-**Continue**.
+Completion: publish result, raw/hash audit and cleanup/spent state, update the
+single handoff, then stop for Astra/high review. Even PASS is one-level discrete
+solve/diagnostic consistency only. No full convergence/tank/B2, physical,
+render or Mac work. Next prompt: **Continue**.
 
 ### Historical R230 single-fixture execution task (R232 spent)
 
