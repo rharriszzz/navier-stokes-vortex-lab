@@ -1,0 +1,29 @@
+{
+  "archive_and_interpreter_verified": true,
+  "base_omitted_logs": [
+    "docs/realizability/evidence/r235/run/run.log",
+    "docs/realizability/evidence/r235/run/worker.log",
+    "docs/realizability/evidence/r262/run/run.log",
+    "docs/realizability/evidence/r262/run/worker.log"
+  ],
+  "git_index_raw_files_verified": 97,
+  "library_resolutions_verified": 4,
+  "new_attempts_admitted": 0,
+  "numerical_import_manager_worker_or_reservation": false,
+  "numerical_modules_loaded": [],
+  "omitted_log_bytes": 781,
+  "probe_cases": 28,
+  "probe_edge_cases": 5,
+  "probe_negative_controls": 4,
+  "rational_r255_reference_rederived": true,
+  "raw_original_files_verified": 97,
+  "recorded_pids_cgroups_absent": true,
+  "runtime_artifacts_verified": 11,
+  "saved_r246_validator": "PASS",
+  "saved_r253_validator": "PASS",
+  "saved_r262_status": "INCOMPLETE",
+  "source_files": 46,
+  "spent_reservations": 8,
+  "status": "REPAIR_CONTRACT_NO_ADMISSION",
+  "unchanged_source_tests_reused": 114
+}

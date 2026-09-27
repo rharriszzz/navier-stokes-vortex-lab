@@ -1,10 +1,10 @@
 # Control Research Roadmap
 
-[R262 diagnostic pilot](docs/realizability/MANUFACTURED_RESULT_R262.md) is
-INCOMPLETE: the single R261 allowance is spent after a primary form-compilation
-RecursionError. A bounded traceback identifies the first Jacobian form/JIT and
-UFL derivative traversal; no numerical report or resource snapshot exists.
-Follow the [single current task](SESSION_HANDOFF.md#next-task).
+[R263 compilation review](docs/realizability/MANUFACTURED_DEPTH_REVIEW_R263.md)
+fixes a balanced symbolic polynomial evaluation contract after a source-only
+injected probe demonstrated a long-sum recursion mechanism. R262 stays INCOMPLETE;
+eight allocations are spent and no new attempt is admitted. Follow the
+[single current task](SESSION_HANDOFF.md#next-task).
 
 R232's [single-fixture result](docs/realizability/POISEUILLE_RESULT_R232.md)
 is INCOMPLETE: the worker reached PETSc symbolic LU and exited 1 after a
@@ -26,7 +26,7 @@ diagnostic; 62 standard-library tests pass without numerical imports.
 bounded diagnostic fixture; [R238](docs/realizability/POISEUILLE_RESULT_R238.md)
 spent it 1/1 on a reported numeric LU zero pivot, with empty cleanup but no
 numerical/resource report. All three allowances are spent. Follow the
-[handoff task](SESSION_HANDOFF.md#next-task) for the R260 source/admission review.
+[handoff task](SESSION_HANDOFF.md#next-task) for the current bounded implementation task.
 No tank/hardware route or feasible contraction range is established.
 
 R188 priority update (2026-09-22): establish measurable essential dynamical

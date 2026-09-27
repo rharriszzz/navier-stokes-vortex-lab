@@ -1,0 +1,14 @@
+{
+  "append_only_logs": true,
+  "ast_files": 3,
+  "json_files": 3,
+  "local_link_targets_checked": 290,
+  "new_attempts_admitted": 0,
+  "original_files_and_git_coverage": 97,
+  "r263_completed_once": true,
+  "r263_started_once": true,
+  "runtime_source_unchanged": true,
+  "status": "REPAIR_CONTRACT_NO_ADMISSION",
+  "unique_contiguous_request_ids": 263,
+  "whitespace": "PASS"
+}

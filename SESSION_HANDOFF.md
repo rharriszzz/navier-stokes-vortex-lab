@@ -1,5 +1,51 @@
 # Current session handoff
 
+Last updated 2026-09-26 (America/New_York) for R263.
+**PC/WSL daisy owns the repository.** No transfer; Mac remains released.
+**R263 fixes a balanced symbolic polynomial evaluation repair contract;
+zero new attempts admitted. R262 stays INCOMPLETE and all eight allocations
+remain spent.** See the [review/contract](docs/realizability/MANUFACTURED_DEPTH_REVIEW_R263.md),
+[dependency-free probe](docs/realizability/evidence/r263/probe.json) and
+[audit](docs/realizability/evidence/r263/audit.json).
+
+The saved failure is in the first Jacobian form compilation. The source-only
+probe demonstrates a sufficient depth mechanism: manufactured 221/222-term
+load graphs have modeled depth 224 and recurse at the unchanged limit 1000;
+adjacent-pair summation reduces depth to 12 and completes the extracted traversal.
+All 28 fixture cases, five edge checks and four negative controls pass.
+Fake operands do not establish the actual failing expression or real compiler
+success. The fixed repair adds an explicit symbolic evaluator, preserves the
+legacy numeric interpolation path, and changes no science/resource gates.
+
+All 46 source bindings and runtime artifacts remain unchanged. All 97 raw files
+match their originals and Git-index bytes. Four already-copied R235/R262 logs
+were omitted by the ignore rule in earlier deliveries; this task explicitly
+stages their unchanged bytes. Eight reservations remain spent, recorded PIDs/
+cgroups are absent, saved R246/R253 validators replay PASS and R255's rational
+reference reproduces. No numerical import, manager/worker or new reservation.
+
+**Next: GPT-6 Sol/high implements only the fixed R263 evaluator/routing/tests,
+publishes and stops for Astra/high source/admission review.** Continue in this
+chat because diagnosis and implementation are directly connected; no current
+context percentage or user-supplied new status snapshot. See [Next task](#next-task).
+No model/session switch by agent is claimed.
+
+R263 user supplied only `continue`. Clean pull verified R262 delivery fa5f56f;
+R263 STARTED 3604f3b published. Completion prepared for scoped publication;
+delivery hash/result belongs in Git/final response. PC retains ownership.
+
+Changed: R263 review/probe/audit/checks, four omitted raw logs, seven current
+status/index pages, request/lifecycle/handoff. Checks: 28+5 probe cases/four
+negative controls, raw/source/artifact/index coverage, real saved PASS replay,
+rational reference, AST/JSON/links/logs and whitespace. Reused unchanged 114
+source tests. Skipped: runtime implementation, numerical imports/JIT/assembly/
+solve, manager/worker/admission, full convergence/tank/B2, physical/render and
+Mac transfer. Unknown: exact runtime expression, real balanced compiler and
+pilot behavior, resource peaks/events, accuracy/budgets/convergence/rank,
+R242 cause and artifact-label origin.
+
+### Previous R262 diagnostic execution (reviewed by R263)
+
 Last updated 2026-09-26 (America/New_York) for R262.
 **PC/WSL daisy owns the repository.** No transfer; Mac remains released.
 **R262's single R261 diagnostic pilot is INCOMPLETE; its allocation is spent
@@ -1294,20 +1340,21 @@ and physical-work limits remain unchanged.
 | Owner | PC/WSL `daisy`; Mac `fire.lan` released after published R161 handoff and R162 receipt. |
 | Checkout | `/home/rharris/git/navier-stokes-vortex-lab`. |
 | Branch/upstream | `main` / `origin/main` |
-| Starting state | R262 same-owner clean main/origin/main at 6455d4b after required fast-forward pull; rharris/daisy, empty stashes, R261 completed. STARTED 8de6ffd published. |
+| Starting state | R263 same-owner clean main/origin/main at fa5f56f after required fast-forward pull; rharris/daisy, empty stashes, R262 completed. STARTED 3604f3b published. |
 | Interpreter | /tmp/navier-fenicsx-r229/bin/python verified as 3.12.13 with -I -S; exact environment artifacts verified, setup memory-event predicate refused. Project Python remains 3.12.14. Old /tmp/navier-fenicsx is still partial. |
 | Other owner/process | Mac `fire.lan` released in the published R161 handoff. Local Git cannot inspect another checkout's unpublished state. |
-| Task processes | R262 single reserved/held/released worker exited 1; cleanup empty, recorded PID/cgroup absent. R261 allowance spent; eight allocations spent total. |
+| Task processes | R263 standard-library/injected-fake probe and saved-data audits only. No numerical import/manager/worker/reservation; all eight allocations spent and recorded PIDs/cgroups absent. |
 | Symbolic environment | `/tmp/navier-r183-sympy/bin/python`, Python 3.12.14, SymPy 1.14.0, mpmath 1.3.0; recreate using `requirements-symbolic.txt` if missing. Existing environments unchanged. |
-| Delivery state | R261 delivery 6455d4b verified by clean pull; R262 STARTED 8de6ffd published. Result/completion prepared for publication; delivery in Git/final response. PC retains ownership. |
+| Delivery state | R262 delivery fa5f56f verified by clean pull; R263 STARTED 3604f3b published. Review/completion prepared for publication; delivery in Git/final response. PC retains ownership. |
 
 ## Current result and limits
 
-R262 spends R261's one-use pilot on a primary-compilation RecursionError. See
-the [result](docs/realizability/MANUFACTURED_RESULT_R262.md) and
-[single next task](#next-task). R258 remains INCOMPLETE; eight allocations
-are spent. No manufactured numerical report is available. Earlier results
-below retain their historical scope.
+R263 establishes a sufficient fake traversal depth mechanism and fixes the
+next balanced symbolic evaluator contract. See the
+[review](docs/realizability/MANUFACTURED_DEPTH_REVIEW_R263.md) and
+[single next task](#next-task). R262 remains INCOMPLETE; eight allocations are
+spent. No manufactured numerical report or real repair validation is available.
+Earlier results below retain their historical scope.
 
 R103 removes recursive infrastructure certification while preserving process
 safeguards, observed accounting, cleanup and incomplete-result refusal. R104
@@ -1436,36 +1483,39 @@ agent-side POV-Ray backtraces are unavailable.
 
 ## Next task
 
-**GPT-6 Astra / high reviews the saved R262 primary-compilation failure,
-publishes a source-only repair contract or precise blocker, then stops before
-new admission or numerical launch.** Continue on PC/WSL daisy. This short
-failure handoff is directly connected, so continuing this chat is recommended;
-no current context fraction or new session/status snapshot was supplied.
+**GPT-6 Sol / high implements only the R263 balanced symbolic polynomial
+evaluator/routing/test contract, publishes and stops for Astra/high source
+and admission review.** Continue on PC/WSL daisy in this chat because the
+source diagnosis and fixed implementation are directly connected. No current
+context percentage or new user-supplied session/status snapshot is available.
 
-Read the [R262 result](docs/realizability/MANUFACTURED_RESULT_R262.md),
-[raw files](docs/realizability/evidence/r262/run/),
-[failure record](docs/realizability/evidence/r262/run/failure.json),
-[hash inventory](docs/realizability/evidence/r262/run_hashes.json),
-[saved-data audit](docs/realizability/evidence/r262/audit.json), and
-[R261 admission](docs/realizability/MANUFACTURED_ADMISSION_R261.md).
+Read the [R263 review and implementation contract](docs/realizability/MANUFACTURED_DEPTH_REVIEW_R263.md),
+[probe source/results](docs/realizability/evidence/r263/probe.py),
+[audit](docs/realizability/evidence/r263/audit.json) and
+[R262 failure](docs/realizability/evidence/r262/run/failure.json).
 
 1. Follow clean Continue synchronization, ownership/status/stash checks and
-   published STARTED lifecycle. Preserve all eight spent allocations, the
-   97 copied original files, and unchanged scientific/resource gates.
-2. Inspect the source path through `cube_adapter.Assembler.__init__`'s first
-   `fem.form(forms['jacobian'])` and the UFL derivative traversal shown in the
-   bounded trace. Use static, standard-library or injected-fake checks to
-   distinguish a source expression defect from a compilation-depth limit where
-   evidence permits. Do not infer an exact expression from the truncated trace.
-3. Publish one implementation-ready source-only repair contract or a precise
-   evidence blocker, including focused negative controls and a later separate
-   admission boundary. Stop before manager/worker, numerical imports, JIT,
-   assembly, solve, new allocation or a retry of the spent directory.
+   published STARTED lifecycle. Preserve 97 raw originals, all eight spent
+   allocations, fixed fixture policies and resource gates.
+2. Add `Poly.evaluate_balanced` with unchanged monomial generation and iterative
+   adjacent-pair summation/odd carry. Preserve `Poly.evaluate` and numeric
+   interpolation. Route the five symbolic evaluation expressions in
+   `cube_adapter.exact_data` and `step_forms` through the new method, retaining
+   exact history/corrected load, automatic Jacobian and all diagnostic routes.
+3. Add the specified symbolic algebra/depth, odd-tail/sign/left-fold negative
+   controls, all-fixture routing and unchanged-numeric-path checks. Run all 114
+   existing source/fake tests plus additions; replay R246/R253 saved PASS and
+   R255 rational reference; verify original bytes and Git inclusion. No real
+   UFL/FEM imports or JIT, manager/worker, assembly/solve, caller or allocation.
+4. Publish source inventory, test evidence and handoff; stop for Astra/high
+   source/admission review. Do not raise recursion limits, patch libraries,
+   replace the Jacobian, drop terms, change gates or retry a spent directory.
+   If those are required, publish the precise blocker for Astra/high.
 
-Completion: saved-evidence interpretation and one reviewable next contract or
-blocker, with checks/skips and owner state recorded and published. Recommend
-Sol/high for a fixed source implementation; Astra/high for any scientific gate
-revision. Next prompt: **Continue**.
+Completion: one reviewable source/test change set with preserved numeric path,
+fixed mathematics/gates, evidence and publication; no new execution admission.
+The next review may separately bind a fresh one-use caller only after source
+acceptance. Next prompt: **Continue**.
 
 ### Historical R230 single-fixture execution task (R232 spent)
 

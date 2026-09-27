@@ -1,0 +1,332 @@
+{
+  "actual_compiler_reproduction": false,
+  "case_count": 28,
+  "cases": [
+    {
+      "balanced_depth": 9,
+      "balanced_walk": "zero derivative",
+      "component": 0,
+      "fixture": "manufactured",
+      "group": "u",
+      "identical_summands": true,
+      "old_depth": 31,
+      "old_walk": "zero derivative",
+      "terms": 30
+    },
+    {
+      "balanced_depth": 9,
+      "balanced_walk": "zero derivative",
+      "component": 1,
+      "fixture": "manufactured",
+      "group": "u",
+      "identical_summands": true,
+      "old_depth": 31,
+      "old_walk": "zero derivative",
+      "terms": 30
+    },
+    {
+      "balanced_depth": 5,
+      "balanced_walk": "zero derivative",
+      "component": 2,
+      "fixture": "manufactured",
+      "group": "u",
+      "identical_summands": true,
+      "old_depth": 6,
+      "old_walk": "zero derivative",
+      "terms": 5
+    },
+    {
+      "balanced_depth": 5,
+      "balanced_walk": "zero derivative",
+      "component": 0,
+      "fixture": "manufactured",
+      "group": "p",
+      "identical_summands": true,
+      "old_depth": 9,
+      "old_walk": "zero derivative",
+      "terms": 8
+    },
+    {
+      "balanced_depth": 12,
+      "balanced_walk": "zero derivative",
+      "component": 0,
+      "fixture": "manufactured",
+      "group": "force",
+      "identical_summands": true,
+      "old_depth": 224,
+      "old_walk": "RecursionError",
+      "terms": 221
+    },
+    {
+      "balanced_depth": 12,
+      "balanced_walk": "zero derivative",
+      "component": 1,
+      "fixture": "manufactured",
+      "group": "force",
+      "identical_summands": true,
+      "old_depth": 224,
+      "old_walk": "RecursionError",
+      "terms": 222
+    },
+    {
+      "balanced_depth": 6,
+      "balanced_walk": "zero derivative",
+      "component": 2,
+      "fixture": "manufactured",
+      "group": "force",
+      "identical_summands": true,
+      "old_depth": 12,
+      "old_walk": "zero derivative",
+      "terms": 11
+    },
+    {
+      "balanced_depth": 3,
+      "balanced_walk": "zero derivative",
+      "component": 0,
+      "fixture": "poiseuille",
+      "group": "u",
+      "identical_summands": true,
+      "old_depth": 3,
+      "old_walk": "zero derivative",
+      "terms": 2
+    },
+    {
+      "balanced_depth": 0,
+      "balanced_walk": "zero derivative",
+      "component": 1,
+      "fixture": "poiseuille",
+      "group": "u",
+      "identical_summands": true,
+      "old_depth": 0,
+      "old_walk": "zero derivative",
+      "terms": 0
+    },
+    {
+      "balanced_depth": 0,
+      "balanced_walk": "zero derivative",
+      "component": 2,
+      "fixture": "poiseuille",
+      "group": "u",
+      "identical_summands": true,
+      "old_depth": 0,
+      "old_walk": "zero derivative",
+      "terms": 0
+    },
+    {
+      "balanced_depth": 2,
+      "balanced_walk": "zero derivative",
+      "component": 0,
+      "fixture": "poiseuille",
+      "group": "p",
+      "identical_summands": true,
+      "old_depth": 2,
+      "old_walk": "zero derivative",
+      "terms": 2
+    },
+    {
+      "balanced_depth": 0,
+      "balanced_walk": "zero derivative",
+      "component": 0,
+      "fixture": "poiseuille",
+      "group": "force",
+      "identical_summands": true,
+      "old_depth": 0,
+      "old_walk": "zero derivative",
+      "terms": 0
+    },
+    {
+      "balanced_depth": 0,
+      "balanced_walk": "zero derivative",
+      "component": 1,
+      "fixture": "poiseuille",
+      "group": "force",
+      "identical_summands": true,
+      "old_depth": 0,
+      "old_walk": "zero derivative",
+      "terms": 0
+    },
+    {
+      "balanced_depth": 0,
+      "balanced_walk": "zero derivative",
+      "component": 2,
+      "fixture": "poiseuille",
+      "group": "force",
+      "identical_summands": true,
+      "old_depth": 0,
+      "old_walk": "zero derivative",
+      "terms": 0
+    },
+    {
+      "balanced_depth": 2,
+      "balanced_walk": "zero derivative",
+      "component": 0,
+      "fixture": "rotation",
+      "group": "u",
+      "identical_summands": true,
+      "old_depth": 2,
+      "old_walk": "zero derivative",
+      "terms": 2
+    },
+    {
+      "balanced_depth": 1,
+      "balanced_walk": "zero derivative",
+      "component": 1,
+      "fixture": "rotation",
+      "group": "u",
+      "identical_summands": true,
+      "old_depth": 1,
+      "old_walk": "zero derivative",
+      "terms": 2
+    },
+    {
+      "balanced_depth": 0,
+      "balanced_walk": "zero derivative",
+      "component": 2,
+      "fixture": "rotation",
+      "group": "u",
+      "identical_summands": true,
+      "old_depth": 0,
+      "old_walk": "zero derivative",
+      "terms": 0
+    },
+    {
+      "balanced_depth": 5,
+      "balanced_walk": "zero derivative",
+      "component": 0,
+      "fixture": "rotation",
+      "group": "p",
+      "identical_summands": true,
+      "old_depth": 6,
+      "old_walk": "zero derivative",
+      "terms": 5
+    },
+    {
+      "balanced_depth": 0,
+      "balanced_walk": "zero derivative",
+      "component": 0,
+      "fixture": "rotation",
+      "group": "force",
+      "identical_summands": true,
+      "old_depth": 0,
+      "old_walk": "zero derivative",
+      "terms": 0
+    },
+    {
+      "balanced_depth": 0,
+      "balanced_walk": "zero derivative",
+      "component": 1,
+      "fixture": "rotation",
+      "group": "force",
+      "identical_summands": true,
+      "old_depth": 0,
+      "old_walk": "zero derivative",
+      "terms": 0
+    },
+    {
+      "balanced_depth": 0,
+      "balanced_walk": "zero derivative",
+      "component": 2,
+      "fixture": "rotation",
+      "group": "force",
+      "identical_summands": true,
+      "old_depth": 0,
+      "old_walk": "zero derivative",
+      "terms": 0
+    },
+    {
+      "balanced_depth": 4,
+      "balanced_walk": "zero derivative",
+      "component": 0,
+      "fixture": "affine_time",
+      "group": "u",
+      "identical_summands": true,
+      "old_depth": 4,
+      "old_walk": "zero derivative",
+      "terms": 3
+    },
+    {
+      "balanced_depth": 4,
+      "balanced_walk": "zero derivative",
+      "component": 1,
+      "fixture": "affine_time",
+      "group": "u",
+      "identical_summands": true,
+      "old_depth": 4,
+      "old_walk": "zero derivative",
+      "terms": 3
+    },
+    {
+      "balanced_depth": 5,
+      "balanced_walk": "zero derivative",
+      "component": 2,
+      "fixture": "affine_time",
+      "group": "u",
+      "identical_summands": true,
+      "old_depth": 6,
+      "old_walk": "zero derivative",
+      "terms": 5
+    },
+    {
+      "balanced_depth": 4,
+      "balanced_walk": "zero derivative",
+      "component": 0,
+      "fixture": "affine_time",
+      "group": "p",
+      "identical_summands": true,
+      "old_depth": 8,
+      "old_walk": "zero derivative",
+      "terms": 8
+    },
+    {
+      "balanced_depth": 5,
+      "balanced_walk": "zero derivative",
+      "component": 0,
+      "fixture": "affine_time",
+      "group": "force",
+      "identical_summands": true,
+      "old_depth": 8,
+      "old_walk": "zero derivative",
+      "terms": 7
+    },
+    {
+      "balanced_depth": 5,
+      "balanced_walk": "zero derivative",
+      "component": 1,
+      "fixture": "affine_time",
+      "group": "force",
+      "identical_summands": true,
+      "old_depth": 8,
+      "old_walk": "zero derivative",
+      "terms": 7
+    },
+    {
+      "balanced_depth": 6,
+      "balanced_walk": "zero derivative",
+      "component": 2,
+      "fixture": "affine_time",
+      "group": "force",
+      "identical_summands": true,
+      "old_depth": 12,
+      "old_walk": "zero derivative",
+      "terms": 11
+    }
+  ],
+  "conclusion": "Long polynomial sums are a sufficient fake traversal failure mechanism; balanced summation removes it.",
+  "focused_edge_cases": 5,
+  "installed_source_sha256": {
+    "/tmp/navier-fenicsx-r229/lib/python3.12/site-packages/ufl/algebra.py": "232d584d8ebe3ca39d3e0f8c278a00ad9438baa4b02c5a3b746e13b3b068b9d1",
+    "/tmp/navier-fenicsx-r229/lib/python3.12/site-packages/ufl/algorithms/apply_derivatives.py": "75fe00e5df239646b6c989b74d87e706ed81597575dcc6923d7e3f1a548792b6",
+    "/tmp/navier-fenicsx-r229/lib/python3.12/site-packages/ufl/corealg/dag_traverser.py": "a99067bde4409348472f3dbb713d067dead782de4b5588d5917ef402309756ab"
+  },
+  "limitation": "Fake scalar operands and identity hashing; no UFL graph, compiler, FEM, residual or solve ran. Actual failing expression remains unobserved.",
+  "negative_controls": [
+    "original left-fold force 0 recurses",
+    "original left-fold force 1 recurses",
+    "omitted odd tail changes signature",
+    "flipped coefficient changes signature"
+  ],
+  "numerical_modules_loaded": [],
+  "recursion_limit": 1000,
+  "recursion_limit_changed": false,
+  "status": "PASS"
+}

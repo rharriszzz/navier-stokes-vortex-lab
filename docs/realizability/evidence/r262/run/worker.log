@@ -1,0 +1,12 @@
+manufactured stage=imports edge=begin
+manufactured stage=imports edge=end
+manufactured stage=recorder_init edge=begin
+manufactured stage=recorder_init edge=end
+manufactured stage=mesh_and_geometry edge=begin
+manufactured stage=mesh_and_geometry edge=end
+manufactured stage=history_and_lift edge=begin
+manufactured stage=history_and_lift edge=end
+manufactured stage=primary_forms edge=begin
+manufactured stage=primary_forms edge=end
+manufactured stage=primary_compilation edge=begin
+RecursionError: maximum recursion depth exceeded

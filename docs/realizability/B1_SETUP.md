@@ -1,8 +1,9 @@
 # B1 solver environment
 
-[R262 diagnostic pilot](MANUFACTURED_RESULT_R262.md) is INCOMPLETE; the
-single R261 allowance is spent after primary Jacobian compilation failed in
-UFL derivative traversal. No numerical report or resource snapshot exists. Follow the
+[R263 compilation review](MANUFACTURED_DEPTH_REVIEW_R263.md)
+fixes a balanced symbolic polynomial evaluation contract after a source-only
+injected probe demonstrated a long-sum recursion mechanism. R262 stays INCOMPLETE;
+eight allocations are spent and no new attempt is admitted. Follow the
 [single current task](../../SESSION_HANDOFF.md#next-task).
 
 Historical PC status: [R232's one-use Poiseuille result](POISEUILLE_RESULT_R232.md)

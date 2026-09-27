@@ -1,12 +1,12 @@
 # Project status: a boundary-controlled engineering approximation
 
-[R262 diagnostic pilot](docs/realizability/MANUFACTURED_RESULT_R262.md) is
-INCOMPLETE: the single R261 allowance is spent after a primary form-compilation
-RecursionError. A bounded traceback identifies the first Jacobian form/JIT and
-UFL derivative traversal; no numerical report or resource snapshot exists.
-Follow the [single current task](SESSION_HANDOFF.md#next-task).
+[R263 compilation review](docs/realizability/MANUFACTURED_DEPTH_REVIEW_R263.md)
+fixes a balanced symbolic polynomial evaluation contract after a source-only
+injected probe demonstrated a long-sum recursion mechanism. R262 stays INCOMPLETE;
+eight allocations are spent and no new attempt is admitted. Follow the
+[single current task](SESSION_HANDOFF.md#next-task).
 
-Updated 2026-09-26 (America/New_York), through R261. PC/WSL daisy owns the
+Updated 2026-09-26 (America/New_York), through R263. PC/WSL daisy owns the
 repository. **R232 corrects the recoverable R231 caller failure and resumes the
 same authorized, unspent one-use fixture, then spends it on a PETSc LU failure.**
 The [R232 result](docs/realizability/POISEUILLE_RESULT_R232.md) records an
