@@ -9,6 +9,7 @@ STAGES = (
     'imports', 'recorder_init', 'mesh_and_geometry', 'history_and_lift',
     'primary_forms', 'primary_compilation', 'compatibility_and_initial_system',
     'newton', 'diagnostics_24', 'diagnostics_26', 'return_sampling_and_report',
+    'angular_evidence',
     'numerical_save', 'completion_handshake',
 )
 MAX_FRAMES = 32

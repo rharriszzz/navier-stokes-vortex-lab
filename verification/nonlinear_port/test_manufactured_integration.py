@@ -398,6 +398,12 @@ class ManufacturedIntegrationChecks(unittest.TestCase):
             return raw,receipts
         saved=[]
         stage_events=[]
+        angular_calls=[]
+        def angular_evidence(**inputs):
+            angular_calls.append(inputs)
+            self.assertEqual(inputs['state'], target)
+            self.assertEqual(set(inputs['raw_by_degree']), {'24', '26'})
+            self.assertEqual(set(inputs['degree_inputs']), {'24', '26'})
         def latest(matrix,rhs,**kw):
             saved.append(kw)
             return dict(file='linear_system.json',correction=kw['correction'],
@@ -412,7 +418,8 @@ class ManufacturedIntegrationChecks(unittest.TestCase):
               patch.object(driver,'assemble_diagnostics',side_effect=diagnostics),
               patch.object(driver,'return_quadrature_samples',return_value=([.5,.5],[1,1]))):
             result=driver.run_manufactured(modules,PROPOSAL,linear_evidence=latest,
-                progress=lambda name,edge:stage_events.append((name,edge)))
+                progress=lambda name,edge:stage_events.append((name,edge)),
+                angular_evidence=angular_evidence)
             solver.reset_mock()
             fem.assemble_scalar.side_effect=[
                 rational(REFERENCE['exact']['Q_lateral']),5.,
@@ -428,8 +435,10 @@ class ManufacturedIntegrationChecks(unittest.TestCase):
         self.assertEqual(routed,[(24,('exact-old','exact-old'),'corrected-BE'),
                                  (26,('exact-old','exact-old'),'corrected-BE')])
         self.assertEqual(len(saved),1)
+        self.assertEqual(len(angular_calls), 1)
         self.assertEqual(stage_events,[(name,edge) for name in FAILURE_STAGES[2:11]
-                                       for edge in ('begin','end')])
+                                       for edge in ('begin','end')] +
+                         [('angular_evidence','begin'), ('angular_evidence','end')])
         self.assertEqual(saved[0]['correction'],1)
         self.assertEqual((result['mixed_dofs'],result['global_dofs']),(402,405))
         self.assertEqual(result['perturbed_velocity_dof'],1)

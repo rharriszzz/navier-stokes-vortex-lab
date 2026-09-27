@@ -1,10 +1,9 @@
 # B1 solver environment
 
-[R267 angular review](MANUFACTURED_ANGULAR_REVIEW_R267.md)
-reproduces the R266 failure and explains why a small eliminated Newton residual
-does not enforce the surface-stress angular budget. The signed boundary-reaction
-split is missing; a fixed evidence-only source contract is published. R266 stays
-INCOMPLETE, nine allocations spent, no new admission. Follow the
+[R268 angular sidecar](MANUFACTURED_ANGULAR_SIDECAR_R268.md)
+implements R267's evidence-only source contract. Guarded source/fake tests pass;
+actual numerical assembly and the signed reaction/traction split remain unmeasured.
+R266 stays INCOMPLETE, nine allocations spent, no new admission. Follow the
 [single current task](../../SESSION_HANDOFF.md#next-task).
 
 Historical PC status: [R232's one-use Poiseuille result](POISEUILLE_RESULT_R232.md)

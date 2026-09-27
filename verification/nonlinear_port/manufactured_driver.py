@@ -110,7 +110,7 @@ def assemble_diagnostics(modules, domain, tags, w, context, degree):
 
 
 def run_manufactured(modules, manifest, *, clock=time.monotonic,
-                     linear_evidence, progress=None):
+                     linear_evidence, progress=None, angular_evidence=None):
     """Only fixed n=2/step1. Caller owns admission, held scope and imports."""
     validate_manifest(manifest)
     if (set(modules) != {'np', 'mesh', 'fem', 'fem_petsc', 'basix_ufl', 'basix',
@@ -198,15 +198,18 @@ def run_manufactured(modules, manifest, *, clock=time.monotonic,
         raise Refusal('manufactured pilot needs checked corrections and 405 DOFs')
     assembler(state)  # install the accepted mixed state and border before diagnostics
     mark('newton', 'end')
-    raw, receipts = {}, {}
+    raw, receipts, degree_inputs = {}, {}, {}
     for degree in (24, 26):
         stage = f'diagnostics_{degree}'
         mark(stage, 'begin')
         if degree == 24:
             degree_context = context
         else:
-            _forms, _constants, degree_context = step_forms(U, fem, domain, space,
+            degree_forms, degree_constants, degree_context = step_forms(U, fem, domain, space,
                 tags, w, previous, previous, .125, .125, 1, 'manufactured', degree=26)
+        if degree == 24:
+            degree_forms, degree_constants = forms, constants
+        degree_inputs[str(degree)] = (degree_forms, degree_constants, degree_context)
         degree_context['raw_keys'] = manifest['diagnostic_policy']['raw_keys']
         raw[str(degree)], receipts[str(degree)] = assemble_diagnostics(
             modules, domain, tags, w, degree_context, degree)
@@ -219,6 +222,13 @@ def run_manufactured(modules, manifest, *, clock=time.monotonic,
         min(samples), counts, condition, compatibility, targets,
         lateral_absolute, manifest)
     t_diagnostics = clock()
+    mark('return_sampling_and_report', 'end')
+    if angular_evidence is not None:
+        mark('angular_evidence', 'begin')
+        angular_evidence(modules=modules, domain=domain, space=space, tags=tags,
+            w=w, state=state, fixed=fixed, degree_inputs=degree_inputs,
+            raw_by_degree=raw, geometry=geometry)
+        mark('angular_evidence', 'end')
     result = dict(geometry=geometry, subdivisions=2, step=1, time=.125, dt=.125,
         history_semantics=manifest['history'], load_semantics=manifest['load'],
         mixed_dofs=402, global_dofs=len(state), fixed_velocity_dofs=len(fixed),
@@ -237,7 +247,6 @@ def run_manufactured(modules, manifest, *, clock=time.monotonic,
             primary_form_setup_jit=t_forms-t_mesh,
             compatibility_rank_newton=t_solve-t_forms,
             diagnostic_form_jit_assembly_sampling=t_diagnostics-t_solve))
-    mark('return_sampling_and_report', 'end')
     return result
 
 

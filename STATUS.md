@@ -1,13 +1,12 @@
 # Project status: a boundary-controlled engineering approximation
 
-[R267 angular review](docs/realizability/MANUFACTURED_ANGULAR_REVIEW_R267.md)
-reproduces the R266 failure and explains why a small eliminated Newton residual
-does not enforce the surface-stress angular budget. The signed boundary-reaction
-split is missing; a fixed evidence-only source contract is published. R266 stays
-INCOMPLETE, nine allocations spent, no new admission. Follow the
+[R268 angular sidecar](docs/realizability/MANUFACTURED_ANGULAR_SIDECAR_R268.md)
+implements R267's evidence-only source contract. Guarded source/fake tests pass;
+actual numerical assembly and the signed reaction/traction split remain unmeasured.
+R266 stays INCOMPLETE, nine allocations spent, no new admission. Follow the
 [single current task](SESSION_HANDOFF.md#next-task).
 
-Updated 2026-09-26 (America/New_York), through R267. PC/WSL daisy owns the
+Updated 2026-09-26 (America/New_York), through R268. PC/WSL daisy owns the
 repository. **R232 corrects the recoverable R231 caller failure and resumes the
 same authorized, unspent one-use fixture, then spends it on a PETSc LU failure.**
 The [R232 result](docs/realizability/POISEUILLE_RESULT_R232.md) records an

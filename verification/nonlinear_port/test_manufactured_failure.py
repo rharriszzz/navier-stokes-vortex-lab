@@ -67,7 +67,7 @@ class FailureDiagnostics(unittest.TestCase):
             ('mesh','mesh_and_geometry','recorder_init'),
             ('forms','primary_forms','history_and_lift'),
             ('solver','newton','compatibility_and_initial_system'),
-            ('save','numerical_save','return_sampling_and_report'),
+            ('save','numerical_save','angular_evidence'),
             ('handshake','completion_handshake','numerical_save'),
             (None,None,None),
         ):
@@ -87,7 +87,7 @@ class FailureDiagnostics(unittest.TestCase):
                     events.append('recorder')
                     return object()
                 def driver(*args,**kwargs):
-                    for stage in failure.STAGES[2:11]:
+                    for stage in failure.STAGES[2:12]:
                         kwargs['progress'](stage,'begin')
                         if (site == 'mesh' and stage == 'mesh_and_geometry'
                                 or site == 'forms' and stage == 'primary_forms'
@@ -103,7 +103,8 @@ class FailureDiagnostics(unittest.TestCase):
                     if site == 'handshake': raise_at('handshake')
                     events.append('handshake')
                 changes = dict(read_limited=lambda _p:{},validate_reservation=lambda *a:None,
-                    verify_source=lambda *a:{'source_commit':'a'*40},
+                    verify_source=lambda *a:{'source_commit':'a'*40,
+                        'executable_sha256':'b'*64},
                     _cgroup_path=lambda:'/injected-no-manager',held=lambda *a:events.append('held'),
                     load_pinned_modules=importer,LatestSystem=recorder,
                     run_manufactured=driver,write_limited_new=writer,completed=finished)
@@ -124,13 +125,14 @@ class FailureDiagnostics(unittest.TestCase):
                     self.assertEqual(events,['held','importer','recorder','driver','save','handshake'])
                     self.assertEqual(stderr.getvalue(),'')
                     self.assertFalse((directory/'failure.json').exists())
-                    self.assertEqual(len(stdout.getvalue().splitlines()),26)
+                    self.assertEqual(len(stdout.getvalue().splitlines()),28)
                 else:
                     record=json.loads((directory/'failure.json').read_text())
                     self.assertEqual(record['last_begun_stage'],begun)
                     self.assertEqual(record['last_completed_stage'],completed_stage)
                     self.assertEqual(record['exception_type'],'RecursionError')
-                    self.assertEqual(record['source_binding'],{'source_commit':'a'*40})
+                    self.assertEqual(record['source_binding'],{'source_commit':'a'*40,
+                        'executable_sha256':'b'*64})
                     self.assertTrue(record['traceback'])
                     self.assertIn('test_manufactured_failure.py',record['traceback'][-1]['file'])
                     self.assertEqual(stderr.getvalue(),f'RecursionError: injected {events[-1]}\n')

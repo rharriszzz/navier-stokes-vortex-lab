@@ -8,6 +8,7 @@ import time
 from .handshake import held, completed
 from .manufactured_failure import StageTracker, save_failure
 from .linear_evidence import LatestSystem
+from .manufactured_angular import AngularAudit
 from .manufactured_driver import (run_manufactured, validate_reservation)
 from .manufactured_manifest import contract_digest, validate as validate_manifest
 from .prototype import Refusal
@@ -43,9 +44,11 @@ def main(args=None, *, monotonic=time.monotonic, tracker=None):
     assembled_at = monotonic()
     tracker.mark('recorder_init', 'begin')
     recorder = LatestSystem(directory, binding, fixture='manufactured')
+    angular_recorder = AngularAudit(directory, binding)
     tracker.mark('recorder_init', 'end')
     numerical = run_manufactured(modules, manifest, clock=monotonic,
-        linear_evidence=recorder, progress=tracker.mark)
+        linear_evidence=recorder, angular_evidence=angular_recorder,
+        progress=tracker.mark)
     finished_at = monotonic()
     numerical.update(worker_schema=1, fixture='manufactured',
         kind='manufactured_spatial_pilot', mode='single_be_spatial_pilot',
