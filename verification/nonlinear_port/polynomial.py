@@ -85,6 +85,22 @@ class Poly:
             result += term
         return result
 
+    def evaluate_balanced(self, coordinates):
+        """Build a shallow addition tree for symbolic coordinate expressions."""
+        terms = []
+        for k, v in self.terms.items():
+            term = float(v)
+            for coord, exponent in zip(coordinates, k):
+                if exponent:
+                    term *= coord**exponent
+            terms.append(term)
+        if not terms:
+            return 0
+        while len(terms) > 1:
+            terms = [terms[i]+terms[i+1] if i+1 < len(terms) else terms[i]
+                     for i in range(0, len(terms), 2)]
+        return terms[0]
+
     def __eq__(self, other):
         return self.terms == self.cast(other).terms
 

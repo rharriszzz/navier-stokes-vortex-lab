@@ -1,0 +1,15 @@
+{
+  "append_only_logs": true,
+  "ast_files": 3,
+  "changed_runtime_source_files": 2,
+  "json_files": 3,
+  "local_link_targets_checked": 296,
+  "new_attempts_admitted": 0,
+  "new_source_test_files": 1,
+  "original_files_and_git_coverage": 97,
+  "r264_completed_once": true,
+  "r264_started_once": true,
+  "status": "BALANCED_SOURCE_IMPLEMENTED_NO_ADMISSION",
+  "unique_contiguous_request_ids": 264,
+  "whitespace": "PASS"
+}

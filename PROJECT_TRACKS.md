@@ -1,9 +1,9 @@
 # Project Tracks
 
-[R263 compilation review](docs/realizability/MANUFACTURED_DEPTH_REVIEW_R263.md)
-fixes a balanced symbolic polynomial evaluation contract after a source-only
-injected probe demonstrated a long-sum recursion mechanism. R262 stays INCOMPLETE;
-eight allocations are spent and no new attempt is admitted. Follow the
+[R264 source integration](docs/realizability/MANUFACTURED_BALANCED_INTEGRATION_R264.md)
+implements balanced symbolic polynomial evaluation and five adapter routes.
+All 118 source/fake tests pass. R262 stays INCOMPLETE; eight allocations are
+spent and no new attempt is admitted. Follow the
 [single current task](SESSION_HANDOFF.md#next-task).
 
 R232's [single-fixture result](docs/realizability/POISEUILLE_RESULT_R232.md)

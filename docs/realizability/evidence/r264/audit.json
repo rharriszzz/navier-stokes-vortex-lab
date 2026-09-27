@@ -1,0 +1,32 @@
+{
+  "archive_and_interpreter_verified": true,
+  "base_omitted_logs": [],
+  "git_index_raw_files_verified": 97,
+  "library_resolutions_verified": 4,
+  "new_attempts_admitted": 0,
+  "new_source_test": [
+    "verification/nonlinear_port/test_balanced_polynomial.py"
+  ],
+  "numerical_import_manager_worker_or_reservation": false,
+  "numerical_modules_loaded": [],
+  "omitted_log_bytes": 0,
+  "prior_source_unchanged": 44,
+  "probe_cases": 28,
+  "probe_edge_cases": 5,
+  "probe_negative_controls": 4,
+  "rational_r255_reference_rederived": true,
+  "raw_original_files_verified": 97,
+  "recorded_pids_cgroups_absent": true,
+  "runtime_artifacts_verified": 11,
+  "runtime_source_changed": [
+    "verification/nonlinear_port/cube_adapter.py",
+    "verification/nonlinear_port/polynomial.py"
+  ],
+  "saved_r246_validator": "PASS",
+  "saved_r253_validator": "PASS",
+  "saved_r262_status": "INCOMPLETE",
+  "source_files": 47,
+  "source_tests_passed": 118,
+  "spent_reservations": 8,
+  "status": "BALANCED_SOURCE_IMPLEMENTED_NO_ADMISSION"
+}

@@ -105,7 +105,7 @@ def exact_data(U, domain, name, time):
     """Time may be a DOLFINx Constant; polynomial coefficients remain exact."""
     u, p = fields(name)
     coordinates = [*U.SpatialCoordinate(domain), time]
-    vector = lambda polys: U.as_vector([v.evaluate(coordinates) for v in polys])
+    vector = lambda polys: U.as_vector([v.evaluate_balanced(coordinates) for v in polys])
     sigma = fixtures.stress(u, p)
     targets, pressures, offsets = [], [], []
     for side in (0, 1):
@@ -115,10 +115,10 @@ def exact_data(U, domain, name, time):
         traction = [sign*sigma[i][2].at(2, side) for i in range(3)]
         offset = [v + (sign*pressure if i == 2 else 0)
                   for i, v in enumerate(traction)]
-        targets.append(face(sign*u[2], 2, side).evaluate(coordinates))
-        pressures.append(pressure.evaluate(coordinates))
+        targets.append(face(sign*u[2], 2, side).evaluate_balanced(coordinates))
+        pressures.append(pressure.evaluate_balanced(coordinates))
         offsets.append(vector(offset))
-    return dict(u=vector(u), p=p.evaluate(coordinates),
+    return dict(u=vector(u), p=p.evaluate_balanced(coordinates),
                 force=vector(fixtures.forcing(u, p)), targets=targets,
                 pressures=pressures, offsets=offsets)
 
@@ -172,7 +172,7 @@ def step_forms(U, fem, domain, space, tags, w, previous, older,
         history = (old, old)
         u_poly, _ = fields(fixture)
         coords = [*U.SpatialCoordinate(domain), time]
-        continuous_dt = U.as_vector([v.d(3).evaluate(coords) for v in u_poly])
+        continuous_dt = U.as_vector([v.d(3).evaluate_balanced(coords) for v in u_poly])
         force += (exact['u']-old)/dt-continuous_dt
     result = build_forms(U, w, previous, older, test, increment,
                          U.FacetNormal(domain), dx, ds, RETURNS,

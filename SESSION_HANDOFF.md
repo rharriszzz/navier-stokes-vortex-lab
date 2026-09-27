@@ -1,48 +1,58 @@
 # Current session handoff
 
-Last updated 2026-09-26 (America/New_York) for R263.
+Last updated 2026-09-26 (America/New_York) for R264.
 **PC/WSL daisy owns the repository.** No transfer; Mac remains released.
-**R263 fixes a balanced symbolic polynomial evaluation repair contract;
+**R264 implements the R263 balanced symbolic evaluator and five adapter routes;
 zero new attempts admitted. R262 stays INCOMPLETE and all eight allocations
-remain spent.** See the [review/contract](docs/realizability/MANUFACTURED_DEPTH_REVIEW_R263.md),
-[dependency-free probe](docs/realizability/evidence/r263/probe.json) and
-[audit](docs/realizability/evidence/r263/audit.json).
+remain spent.** See the [integration](docs/realizability/MANUFACTURED_BALANCED_INTEGRATION_R264.md),
+[118-test result](docs/realizability/evidence/r264/tests.json),
+[source inventory](docs/realizability/evidence/r264/source_inventory.json) and
+[audit](docs/realizability/evidence/r264/audit.json).
 
-The saved failure is in the first Jacobian form compilation. The source-only
-probe demonstrates a sufficient depth mechanism: manufactured 221/222-term
-load graphs have modeled depth 224 and recurse at the unchanged limit 1000;
-adjacent-pair summation reduces depth to 12 and completes the extracted traversal.
-All 28 fixture cases, five edge checks and four negative controls pass.
-Fake operands do not establish the actual failing expression or real compiler
-success. The fixed repair adds an explicit symbolic evaluator, preserves the
-legacy numeric interpolation path, and changes no science/resource gates.
+`Poly.evaluate_balanced` builds original monomials in insertion order then
+reduces adjacent pairs, carrying an odd tail. The five symbolic adapter sites
+use it for exact field, history, force, offsets, targets, pressure and
+continuous-time derivative. Legacy numeric `evaluate` and interpolation remain
+unchanged; automatic Jacobian, corrected BE load, science/resource gates and
+diagnostics remain. Reassociation can change floating-point summation order.
 
-All 46 source bindings and runtime artifacts remain unchanged. All 97 raw files
-match their originals and Git-index bytes. Four already-copied R235/R262 logs
-were omitted by the ignore rule in earlier deliveries; this task explicitly
-stages their unchanged bytes. Eight reservations remain spent, recorded PIDs/
-cgroups are absent, saved R246/R253 validators replay PASS and R255's rational
-reference reproduces. No numerical import, manager/worker or new reservation.
+All 114 prior source/fake tests plus four new ones pass under the numerical
+import guard. The new cases cover 28 fixture graphs, logarithmic depth, exact
+monomial/rational controls, both degree24/26 routes, and legacy numeric routing.
+Saved R246/R253 validator replays PASS and R255 rational reference reproduces.
+The audit verifies 47 source bindings (44 unchanged, two changed, one new),
+eleven artifacts, four resolutions, archive/interpreter, 97 raw originals and
+Git-index bytes, eight spent reservations and absent recorded PIDs/cgroups.
+No numerical import, real JIT/assembly/solve, manager/worker, caller or admission.
+Real compiler success and the exact saved failing expression remain unknown.
 
-**Next: GPT-6 Sol/high implements only the fixed R263 evaluator/routing/tests,
-publishes and stops for Astra/high source/admission review.** Continue in this
-chat because diagnosis and implementation are directly connected; no current
-context percentage or user-supplied new status snapshot. See [Next task](#next-task).
+**Next: Astra/high reviews R264 source/test coverage and floating-point
+reassociation, then separately decides whether to bind a fresh one-use
+admission and finite caller or publish a precise blocker. Stop before launch.**
+See [Next task](#next-task). Recommend `/new` at this published implementation
+boundary; no current context percentage or new status snapshot was supplied.
 No model/session switch by agent is claimed.
 
-R263 user supplied only `continue`. Clean pull verified R262 delivery fa5f56f;
-R263 STARTED 3604f3b published. Completion prepared for scoped publication;
+R264 user supplied only `continue`. Clean pull verified R263 delivery 4323cf1;
+R264 STARTED 17d6d63 published. Completion prepared for scoped publication;
 delivery hash/result belongs in Git/final response. PC retains ownership.
 
-Changed: R263 review/probe/audit/checks, four omitted raw logs, seven current
-status/index pages, request/lifecycle/handoff. Checks: 28+5 probe cases/four
-negative controls, raw/source/artifact/index coverage, real saved PASS replay,
-rational reference, AST/JSON/links/logs and whitespace. Reused unchanged 114
-source tests. Skipped: runtime implementation, numerical imports/JIT/assembly/
-solve, manager/worker/admission, full convergence/tank/B2, physical/render and
-Mac transfer. Unknown: exact runtime expression, real balanced compiler and
-pilot behavior, resource peaks/events, accuracy/budgets/convergence/rank,
-R242 cause and artifact-label origin.
+Changed: two runtime source files, one new focused test, R264 result/evidence,
+seven current status/index pages, request/lifecycle/handoff. Checks: 118 tests,
+saved PASS/rational replays, raw/source/artifact/index coverage, AST/JSON/links/
+logs and whitespace. Skipped: numerical import/JIT/assembly/solve, manager/
+worker/admission, full convergence/tank/B2, physical/render and Mac transfer.
+Unknown: exact runtime expression, real compiler/pilot behavior, resource
+peaks/events, accuracy/budgets/convergence/rank, R242 cause and artifact-label
+origin.
+
+### Previous R263 compilation review (implemented by R264)
+
+R263 fixed the source-only repair contract in
+[the review](docs/realizability/MANUFACTURED_DEPTH_REVIEW_R263.md). Its fake
+installed-traversal probe found 221/222-term left folds recursing at depth 224;
+balanced depth 12 completed, with unchanged recursion limit. All 97 raw files
+were published in Git. The review made no runtime source change.
 
 ### Previous R262 diagnostic execution (reviewed by R263)
 
@@ -1340,18 +1350,18 @@ and physical-work limits remain unchanged.
 | Owner | PC/WSL `daisy`; Mac `fire.lan` released after published R161 handoff and R162 receipt. |
 | Checkout | `/home/rharris/git/navier-stokes-vortex-lab`. |
 | Branch/upstream | `main` / `origin/main` |
-| Starting state | R263 same-owner clean main/origin/main at fa5f56f after required fast-forward pull; rharris/daisy, empty stashes, R262 completed. STARTED 3604f3b published. |
+| Starting state | R264 same-owner clean main/origin/main at 4323cf1 after required fast-forward pull; rharris/daisy, empty stashes, R263 completed. STARTED 17d6d63 published. |
 | Interpreter | /tmp/navier-fenicsx-r229/bin/python verified as 3.12.13 with -I -S; exact environment artifacts verified, setup memory-event predicate refused. Project Python remains 3.12.14. Old /tmp/navier-fenicsx is still partial. |
 | Other owner/process | Mac `fire.lan` released in the published R161 handoff. Local Git cannot inspect another checkout's unpublished state. |
-| Task processes | R263 standard-library/injected-fake probe and saved-data audits only. No numerical import/manager/worker/reservation; all eight allocations spent and recorded PIDs/cgroups absent. |
+| Task processes | R264 standard-library/injected-fake tests and saved-data audits only. No numerical import/manager/worker/reservation; all eight allocations spent and recorded PIDs/cgroups absent. |
 | Symbolic environment | `/tmp/navier-r183-sympy/bin/python`, Python 3.12.14, SymPy 1.14.0, mpmath 1.3.0; recreate using `requirements-symbolic.txt` if missing. Existing environments unchanged. |
-| Delivery state | R262 delivery fa5f56f verified by clean pull; R263 STARTED 3604f3b published. Review/completion prepared for publication; delivery in Git/final response. PC retains ownership. |
+| Delivery state | R263 delivery 4323cf1 verified by clean pull; R264 STARTED 17d6d63 published. Implementation/completion prepared for publication; delivery in Git/final response. PC retains ownership. |
 
 ## Current result and limits
 
-R263 establishes a sufficient fake traversal depth mechanism and fixes the
-next balanced symbolic evaluator contract. See the
-[review](docs/realizability/MANUFACTURED_DEPTH_REVIEW_R263.md) and
+R264 implements the balanced symbolic evaluator and five adapter routes under
+the [R263 contract](docs/realizability/MANUFACTURED_DEPTH_REVIEW_R263.md). See the
+[integration](docs/realizability/MANUFACTURED_BALANCED_INTEGRATION_R264.md) and
 [single next task](#next-task). R262 remains INCOMPLETE; eight allocations are
 spent. No manufactured numerical report or real repair validation is available.
 Earlier results below retain their historical scope.
@@ -1483,39 +1493,41 @@ agent-side POV-Ray backtraces are unavailable.
 
 ## Next task
 
-**GPT-6 Sol / high implements only the R263 balanced symbolic polynomial
-evaluator/routing/test contract, publishes and stops for Astra/high source
-and admission review.** Continue on PC/WSL daisy in this chat because the
-source diagnosis and fixed implementation are directly connected. No current
-context percentage or new user-supplied session/status snapshot is available.
+**GPT-6 Astra / high reviews the R264 balanced symbolic source integration,
+then decides whether to bind a separately authorized one-use admission and
+finite caller or publish a precise blocker. Stop before launch.** Continue on
+PC/WSL daisy after clean synchronization. Recommend `/new` at the published
+implementation/review boundary; no current context percentage or new
+user-supplied session/status snapshot is available.
 
-Read the [R263 review and implementation contract](docs/realizability/MANUFACTURED_DEPTH_REVIEW_R263.md),
-[probe source/results](docs/realizability/evidence/r263/probe.py),
-[audit](docs/realizability/evidence/r263/audit.json) and
+Read the [R263 contract](docs/realizability/MANUFACTURED_DEPTH_REVIEW_R263.md),
+[R264 integration](docs/realizability/MANUFACTURED_BALANCED_INTEGRATION_R264.md),
+[source inventory](docs/realizability/evidence/r264/source_inventory.json),
+[test transcript](docs/realizability/evidence/r264/tests.txt),
+[audit](docs/realizability/evidence/r264/audit.json) and
 [R262 failure](docs/realizability/evidence/r262/run/failure.json).
 
 1. Follow clean Continue synchronization, ownership/status/stash checks and
    published STARTED lifecycle. Preserve 97 raw originals, all eight spent
    allocations, fixed fixture policies and resource gates.
-2. Add `Poly.evaluate_balanced` with unchanged monomial generation and iterative
-   adjacent-pair summation/odd carry. Preserve `Poly.evaluate` and numeric
-   interpolation. Route the five symbolic evaluation expressions in
-   `cube_adapter.exact_data` and `step_forms` through the new method, retaining
-   exact history/corrected load, automatic Jacobian and all diagnostic routes.
-3. Add the specified symbolic algebra/depth, odd-tail/sign/left-fold negative
-   controls, all-fixture routing and unchanged-numeric-path checks. Run all 114
-   existing source/fake tests plus additions; replay R246/R253 saved PASS and
-   R255 rational reference; verify original bytes and Git inclusion. No real
-   UFL/FEM imports or JIT, manager/worker, assembly/solve, caller or allocation.
-4. Publish source inventory, test evidence and handoff; stop for Astra/high
-   source/admission review. Do not raise recursion limits, patch libraries,
-   replace the Jacobian, drop terms, change gates or retry a spent directory.
-   If those are required, publish the precise blocker for Astra/high.
+2. Review the exact new `Poly.evaluate_balanced` monomial construction and
+   adjacent-pair/odd-tail reduction, the five `cube_adapter` routes, unchanged
+   legacy numeric interpolation, exact corrected load/history, automatic
+   Jacobian and diagnostic routes. Assess floating-point reassociation against
+   fixed acceptance thresholds without changing them by inference.
+3. Review all 118 source/fake checks, 28 fixture depth cases, negative controls,
+   saved R246/R253 PASS replay and R255 reference. Confirm 47 source bindings,
+   97 raw originals/Git coverage, artifacts, eight spent reservations and
+   absent task processes. Fake traversal is not real UFL compilation.
+4. If source accepted, decide separately whether to bind a fresh one-use
+   admission and finite caller under unchanged science/resource gates. Publish
+   a precise blocker if the review cannot responsibly admit. No numerical
+   import/JIT/assembly/solve, manager, reservation, worker or launch in this
+   review. Do not reuse a spent directory or infer actual compiler success.
 
-Completion: one reviewable source/test change set with preserved numeric path,
-fixed mathematics/gates, evidence and publication; no new execution admission.
-The next review may separately bind a fresh one-use caller only after source
-acceptance. Next prompt: **Continue**.
+Completion: a recorded source decision and either a separate, reviewable
+admission/caller or precise blocker. Stop before execution. Next prompt:
+**Continue**.
 
 ### Historical R230 single-fixture execution task (R232 spent)
 
