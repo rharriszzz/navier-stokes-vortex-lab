@@ -166,10 +166,12 @@ def validate_record(record, binding):
     coefficients = _vector(phi['coefficients'], 402, 'phi')
     vm, pm = phi['velocity_parent_map'], phi['pressure_parent_map']
     if (type(vm) is not list or type(pm) is not list or
+            len(vm) != 375 or len(pm) != 27 or
             any(type(i) is not int for i in vm + pm) or
             sorted(vm + pm) != list(range(402)) or
             type(phi['velocity_block_size']) is not int or phi['velocity_block_size'] != 3 or
-            len(vm) % 3 or len(phi['velocity_node_coordinates']) != len(vm)//3):
+            type(phi['velocity_node_coordinates']) is not list or
+            len(phi['velocity_node_coordinates']) != 125):
         raise Refusal('angular evidence parent maps')
     coordinates = phi['velocity_node_coordinates']
     for j, coordinate in enumerate(coordinates):
@@ -203,6 +205,37 @@ def validate_record(record, binding):
         if (not _same_typed(entry['reductions'], reductions) or
                 not _same_typed(entry['comparisons'], comparisons)):
             raise Refusal('angular evidence cached reduction altered')
+    return record
+
+
+def validate_numerical_aliases(record, numerical, binding):
+    """Cross-check a new sidecar without accepting/replacing the physical report.
+
+    Historical numerical envelopes intentionally have no sidecar requirement.
+    A separate diagnostic caller invokes this check even on physical refusal.
+    """
+    validate_record(record, binding)
+    if not _same_typed(numerical['source_binding'], binding):
+        raise Refusal('angular evidence numerical source alias')
+    for key in ('geometry', 'step', 'time', 'dt'):
+        if not _same_typed(record[key], numerical[key]):
+            raise Refusal('angular evidence numerical alias: ' + key)
+    fixed = {str(i): value for i, value in
+             zip(record['fixed_indices'], record['fixed_values'])}
+    _keys(numerical['fixed_inventory'], fixed, 'numerical fixed inventory')
+    numerical_fixed = {key: _number(value, 'numerical fixed value')
+                       for key, value in numerical['fixed_inventory'].items()}
+    if (fixed != numerical_fixed or
+            type(numerical['fixed_velocity_dofs']) is not int or
+            numerical['fixed_velocity_dofs'] != len(fixed) or
+            _vector(numerical['multipliers'], 2, 'numerical multipliers') +
+            [_number(numerical['eta'], 'numerical eta')] != record['state'][402:]):
+        raise Refusal('angular evidence numerical fixed/multiplier alias')
+    for degree in DEGREES:
+        for key in ('storage', 'advective', 'traction', 'body'):
+            if record['degrees'][degree]['original'][key] != _number(
+                    numerical['raw_by_degree'][degree]['angular.'+key], key):
+                raise Refusal('angular evidence numerical physical-term alias')
     return record
 
 

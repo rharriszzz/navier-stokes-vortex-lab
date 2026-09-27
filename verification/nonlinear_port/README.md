@@ -1,9 +1,10 @@
 # Isolated nonlinear port verification source — R195/R196/R222/R225/R226
 
-[R268 angular sidecar](../../docs/realizability/MANUFACTURED_ANGULAR_SIDECAR_R268.md)
-implements R267's evidence-only source contract. Guarded source/fake tests pass;
-actual numerical assembly and the signed reaction/traction split remain unmeasured.
-R266 stays INCOMPLETE, nine allocations spent, no new admission. Follow the
+[R269 angular review/admission](../../docs/realizability/MANUFACTURED_ANGULAR_ADMISSION_R269.md)
+accepts the sidecar with stricter validation and 127 guarded source/fake tests.
+One NEW diagnostic pilot is admitted for later execution; zero new attempts spent.
+R266 remains INCOMPLETE and nine older allocations stay spent. The signed split
+and real sidecar cost remain unmeasured. Follow the
 [single current task](../../SESSION_HANDOFF.md#next-task).
 
 **Source and algebra evidence, not a validated FEM solver.** The

@@ -1,5 +1,50 @@
 # Current session handoff
 
+Last updated 2026-09-26 (America/New_York) for R269.
+**PC/WSL daisy owns the repository.** No transfer; Mac remains released.
+**R269 accepts the angular sidecar with a map-validation repair and admits
+one NEW later diagnostic pilot. Zero new attempts spent; R266 remains
+INCOMPLETE and all nine older allocations remain spent.** See the
+[review/admission](docs/realizability/MANUFACTURED_ANGULAR_ADMISSION_R269.md),
+[allocation/caller](docs/realizability/evidence/r269/),
+[127 guarded tests](docs/realizability/evidence/r269/tests.json),
+[eight caller tests](docs/realizability/evidence/r269/caller_tests.json) and
+[preservation audit](docs/realizability/evidence/r269/audit.json).
+
+The new assembly test calls the actual sidecar helper with injected modules;
+the validator now fixes 375/27 map counts and 125 coordinate rows. The new
+caller requires and cross-checks the bounded sidecar after the supervisor,
+including physical INCOMPLETE. Missing/malformed/inconsistent evidence prevents
+outer PASS; sidecar success never promotes an old physical refusal. No solver,
+residual, physical/resource gate, manifest or old numerical validator change.
+
+All 116 original/index raw files, 1,814 historical evidence files, nine spent
+reservations and recorded PID/cgroup absence verify. Fifty source files and
+fifteen runtime files (eleven retained plus four inspected APIs) are bound.
+Saved R246/R253 PASS and R266 refusal replay. No numerical import/JIT/assembly/
+solve, manager, worker or reservation; real sidecar cost/size and signed split
+remain unmeasured. R229 setup predicate remains false.
+
+**Next: use `/new`, select GPT-6 Sol / high, then Continue to execute only
+R269's fixed diagnostic caller once on PC/WSL daisy. Preserve/publish every
+outcome and stop for Astra/high interpretation.** See [Next task](#next-task).
+This is a saved source/admission boundary; no current context percentage was
+supplied. [Official OpenAI Docs](https://developers.openai.com/api/docs/models/gpt-6-sol)
+confirms Sol high support; account availability is unverified, no model/session
+switch occurred.
+
+R269 user supplied only `continue`. Clean pull verified R268 delivery 2c25fc6;
+R269 STARTED 3590ba9 published. Completion prepared for scoped publication;
+delivery hash/result belongs in Git/final response. PC retains ownership.
+Changed: angular validator/helper, new assembly test, R269 admission/caller/
+tests/audit/probe/checks, seven current pages, request/lifecycle/handoff.
+Skipped: actual numerical/manager work, full convergence/tank/B2, physical/
+render and Mac transfer. Unknown: real sidecar size/runtime/API behavior,
+signed split and causal interpretation, convergence, R242 cause and artifact
+label origin. One corrected fake-test arithmetic failure is preserved.
+
+### Previous R268 source integration (reviewed by R269)
+
 Last updated 2026-09-26 (America/New_York) for R268.
 **PC/WSL daisy owns the repository.** No transfer; Mac remains released.
 **R268 integrates R267's angular evidence sidecar in source and passes 123
@@ -1542,20 +1587,21 @@ and physical-work limits remain unchanged.
 | Owner | PC/WSL `daisy`; Mac `fire.lan` released after published R161 handoff and R162 receipt. |
 | Checkout | `/home/rharris/git/navier-stokes-vortex-lab`. |
 | Branch/upstream | `main` / `origin/main` |
-| Starting state | R268 same-owner clean main/origin/main at ef32bb2 after required fast-forward pull; rharris/daisy, empty stashes, R267 complete. STARTED 0c8bd5d published. |
+| Starting state | R269 same-owner clean main/origin/main at 2c25fc6 after required fast-forward pull; rharris/daisy, empty stashes, R268 complete. STARTED 3590ba9 published. |
 | Interpreter | /tmp/navier-fenicsx-r229/bin/python verified as 3.12.13 with -I -S; exact environment artifacts verified, setup memory-event predicate refused. Project Python remains 3.12.14. Old /tmp/navier-fenicsx is still partial. |
 | Other owner/process | Mac `fire.lan` released in the published R161 handoff. Local Git cannot inspect another checkout's unpublished state. |
-| Task processes | R268 launched no task worker/manager. All nine spent allocations and recorded PID/cgroup absence verified. R266 cleanup remains empty; no active task worker. |
+| Task processes | R269 launched no numerical task worker/manager. Nine spent allocations and recorded PID/cgroup absence verified. New R269 directory/link absent; zero new attempts spent. |
 | Symbolic environment | `/tmp/navier-r183-sympy/bin/python`, Python 3.12.14, SymPy 1.14.0, mpmath 1.3.0; recreate using `requirements-symbolic.txt` if missing. Existing environments unchanged. |
-| Delivery state | R267 delivery ef32bb2 verified by clean pull; R268 STARTED 0c8bd5d published. Source completion prepared for publication; delivery in Git/final response. PC retains ownership. |
+| Delivery state | R268 delivery 2c25fc6 verified by clean pull; R269 STARTED 3590ba9 published. Source/admission completion prepared for publication; delivery in Git/final response. PC retains ownership. |
 
 ## Current result and limits
 
-R268 implements the bounded angular evidence source and schema specified by
-R267, with 123 guarded tests. See the
-[result](docs/realizability/MANUFACTURED_ANGULAR_SIDECAR_R268.md) and
-[single next task](#next-task). Actual FEM assembly and the signed split remain
-unmeasured; no physical metric or gate changed.
+R269 accepts the angular sidecar with strict dimensions and saved numerical
+aliases, passing 127 guarded source/fake and eight caller tests. One new later
+diagnostic pilot is admitted, zero new attempts spent. See the
+[review/admission](docs/realizability/MANUFACTURED_ANGULAR_ADMISSION_R269.md) and
+[single next task](#next-task). Actual sidecar assembly/cost and signed split
+remain unmeasured; all physical and resource gates remain unchanged.
 
 R266's single R265 pilot is INCOMPLETE: both degree diagnostics fail angular
 budget and interval checks, despite a clean worker exit, numerical report,
@@ -1693,36 +1739,41 @@ agent-side POV-Ray backtraces are unavailable.
 
 ## Next task
 
-**Use `/new`, select GPT-6 Astra / high, then Continue on PC/WSL daisy to
-review R268's angular evidence source against the R267 six-part contract.
-Publish a separately source/artifact-bound one-use diagnostic admission and
-finite caller if justified, or a precise blocker; stop before launch.** This
-source integration is a saved task boundary; no current context percentage
-was supplied. [Official OpenAI Docs](https://developers.openai.com/api/docs/models/gpt-6-astra)
-confirms high reasoning support; account access and model/session switching
-are unverified.
+**Use `/new`, select GPT-6 Sol / high, then Continue on PC/WSL daisy to
+execute only R269's fixed diagnostic caller once. Preserve/publish complete
+or partial evidence and stop for Astra/high interpretation.** A new chat is
+recommended at this saved admission boundary; no current context percentage
+was supplied. No model/session switch occurred.
 
-Read the [R267 contract](docs/realizability/MANUFACTURED_ANGULAR_REVIEW_R267.md#fixed-next-source-contract-record-the-missing-angular-evidence),
-[R268 sidecar schema/result](docs/realizability/MANUFACTURED_ANGULAR_SIDECAR_R268.md),
-[guarded tests](docs/realizability/evidence/r268/tests.json),
-[preservation audit/source inventory](docs/realizability/evidence/r268/audit.json),
-and linked helper, driver, worker, residual and diagnostic source. Check final
-degree-26 Constant installation, mixed parent-map and coordinate assumptions,
-raw versus scaled/eliminated vector routing, face signs/tags and independent
-scalar/vector action. Review bounded serialization and failure behavior against
-the fixed old physical INCOMPLETE path. Preserve 116 old raw/caller originals,
-nine spent allocations, pinned artifacts and all unchanged science/resource
-gates. Repair a demonstrated source-only defect within contract before an
-admission decision, or publish its exact blocker.
+Read the [R269 review/admission](docs/realizability/MANUFACTURED_ANGULAR_ADMISSION_R269.md),
+[allocation](docs/realizability/evidence/r269/allocation.json),
+[caller](docs/realizability/evidence/r269/run_once.py),
+[source inventory](docs/realizability/evidence/r269/source_inventory.json) and
+[audit](docs/realizability/evidence/r269/audit.json). After clean synchronization,
+identity/ownership checks and STARTED publication, verify source/artifacts,
+old raw/spent evidence, recorded process absence and the absent fixed directory
+including a dangling link. The caller refreshes capacity, cgroup controllers
+and manager version before reservation.
 
-Completion: a review with explicit accepted source inventory and either one
-new, separate, finite diagnostic admission/caller under the original outer,
-resource and physical gates, or a precise blocker. No numerical import/JIT/
-assembly/solve, manager, worker, reservation, old attempt retry, full
-convergence/tank/B2, physical/render or Mac transfer. Any later execution must
-follow a new Continue task and the one-use stop rule. Recommend Sol/high for a
-fixed admitted launch; retain Astra/high for scientific interpretation or gate
-changes. Next prompt: **Continue**.
+Run `/tmp/navier-fenicsx-r229/bin/python docs/realizability/evidence/r269/run_once.py EXACT_LAUNCH_COMMIT`
+with that actual clean HEAD. Use only `/tmp/navier-manufactured-r269-once`;
+keep the checkout unchanged throughout. Original 180-second outer, 15/150/15
+phases, 149-second worker plus one-second grace, 1536 MiB/no swap/32 tasks/
+one rank/thread, physical gates and manifest remain fixed. No standalone
+numerical imports/prewarming or alternate path. A sidecar PASS cannot change
+an old physical INCOMPLETE. Missing/malformed/inconsistent sidecar also refuses.
+
+Completion: preserve every raw/partial artifact including angular_audit.json
+if produced, numerical/linear/failure/resource records, caller output/hash/
+status, allocation spending and cleanup evidence; ensure raw logs enter Git.
+Recompute sidecar identities and aliases from saved bytes without another solve.
+Publish the scoped result and stop. Reservation or partial worker start spends
+1/1 even on INCOMPLETE; no retry/reset. A demonstrated pre-reservation,
+pre-worker, pre-import caller fault follows the documented evidence/absence/
+repair/test/clean-publication recovery rule; uncertain state stops for review.
+All nine older allowances remain spent. No full convergence/tank/B2, physical/
+render or Mac transfer. Recommend Astra/high next for interpretation and any
+scientific/gate decision. Next prompt: **Continue**.
 
 ### Historical R230 single-fixture execution task (R232 spent)
 

@@ -1,0 +1,10 @@
+{
+  "count": 8,
+  "errors": 0,
+  "executable": "/tmp/navier-fenicsx-r229/bin/python",
+  "failures": 0,
+  "fixed_directory_created": false,
+  "manager": "injected fake only",
+  "numerical_modules_loaded": [],
+  "python": "3.12.13 | packaged by conda-forge | (main, Mar  5 2026, 16:50:00) [GCC 14.3.0]"
+}

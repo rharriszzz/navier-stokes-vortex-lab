@@ -1,12 +1,13 @@
 # Project status: a boundary-controlled engineering approximation
 
-[R268 angular sidecar](docs/realizability/MANUFACTURED_ANGULAR_SIDECAR_R268.md)
-implements R267's evidence-only source contract. Guarded source/fake tests pass;
-actual numerical assembly and the signed reaction/traction split remain unmeasured.
-R266 stays INCOMPLETE, nine allocations spent, no new admission. Follow the
+[R269 angular review/admission](docs/realizability/MANUFACTURED_ANGULAR_ADMISSION_R269.md)
+accepts the sidecar with stricter validation and 127 guarded source/fake tests.
+One NEW diagnostic pilot is admitted for later execution; zero new attempts spent.
+R266 remains INCOMPLETE and nine older allocations stay spent. The signed split
+and real sidecar cost remain unmeasured. Follow the
 [single current task](SESSION_HANDOFF.md#next-task).
 
-Updated 2026-09-26 (America/New_York), through R268. PC/WSL daisy owns the
+Updated 2026-09-26 (America/New_York), through R269. PC/WSL daisy owns the
 repository. **R232 corrects the recoverable R231 caller failure and resumes the
 same authorized, unspent one-use fixture, then spends it on a PETSc LU failure.**
 The [R232 result](docs/realizability/POISEUILLE_RESULT_R232.md) records an

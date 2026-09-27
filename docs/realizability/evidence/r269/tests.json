@@ -1,0 +1,31 @@
+{
+  "errors": 0,
+  "executable": "/tmp/navier-fenicsx-r229/bin/python",
+  "failures": 0,
+  "modules": [
+    "test_adapter",
+    "test_algebra",
+    "test_driver_supervision",
+    "test_driver_wiring",
+    "test_host_protocol",
+    "test_linear_evidence",
+    "test_package_identity",
+    "test_poiseuille_policy",
+    "test_rotation_oracle",
+    "test_rotation_integration",
+    "test_source_bus",
+    "test_manufactured_integration",
+    "test_manufactured_failure",
+    "test_balanced_polynomial",
+    "test_manufactured_angular",
+    "test_manufactured_angular_assembly"
+  ],
+  "numerical_modules_loaded": [],
+  "python": "3.12.13 | packaged by conda-forge | (main, Mar  5 2026, 16:50:00) [GCC 14.3.0]",
+  "r267_decomposition_controls": 4,
+  "runner_seconds": 3.213733966986183,
+  "saved_r246_validator": "PASS",
+  "saved_r253_validator": "PASS",
+  "saved_r266_validator": "INCOMPLETE",
+  "tests": 127
+}

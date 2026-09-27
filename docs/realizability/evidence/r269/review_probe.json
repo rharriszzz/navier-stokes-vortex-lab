@@ -1,0 +1,11 @@
+{
+  "actual_runtime_size_unmeasured": true,
+  "new_refusal": "angular evidence parent maps",
+  "numerical_modules_loaded": [],
+  "old_source_sha256": "a3589cc8d8894331327e7a74ba119b7ac3764d8a8c084625ed2409bf8ad83c1d",
+  "old_wrong_partition_accepted": true,
+  "status": "PASS",
+  "valid_synthetic_json_bytes": 32863,
+  "wrong_pressure_count": 30,
+  "wrong_velocity_count": 372
+}
