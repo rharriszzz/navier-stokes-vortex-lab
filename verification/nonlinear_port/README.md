@@ -1,11 +1,6 @@
 # Isolated nonlinear port verification source — R195/R196/R222/R225/R226
 
-[R257 source review/admission](../../docs/realizability/MANUFACTURED_ADMISSION_R257.md) repairs the fixed manufactured
-spatial BE pilot and admits one later n=2 attempt. All 104 regressions and six
-fake caller checks pass without numerical imports or launch; saved R246/R253
-remain PASS. New allowance unspent 0/1, six prior allowances spent. Follow the
-[single current task](../../SESSION_HANDOFF.md#next-task): use `/new`, Sol/high, then Continue
-for the fixed one-use execution and evidence handoff.
+[R258 manufactured pilot result](../../docs/realizability/MANUFACTURED_RESULT_R258.md) is INCOMPLETE: the held worker exited 1 with a one-line RecursionError before a numerical report or resource snapshot. The R257 one-use allowance is spent 1/1; cleanup is empty. Follow the [single current task](../../SESSION_HANDOFF.md#next-task) for Astra/high saved-failure review, with no new admission or launch.
 
 **Source and algebra evidence, not a validated FEM solver.** The
 [R195 fixture review](../../docs/realizability/NONLINEAR_VERIFICATION_R195.md)

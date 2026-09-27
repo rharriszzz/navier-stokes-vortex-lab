@@ -1,13 +1,8 @@
 # Project status: a boundary-controlled engineering approximation
 
-[R257 source review/admission](docs/realizability/MANUFACTURED_ADMISSION_R257.md) repairs the fixed manufactured
-spatial BE pilot and admits one later n=2 attempt. All 104 regressions and six
-fake caller checks pass without numerical imports or launch; saved R246/R253
-remain PASS. New allowance unspent 0/1, six prior allowances spent. Follow the
-[single current task](SESSION_HANDOFF.md#next-task): use `/new`, Sol/high, then Continue
-for the fixed one-use execution and evidence handoff.
+[R258 manufactured pilot result](docs/realizability/MANUFACTURED_RESULT_R258.md) is INCOMPLETE: the held worker exited 1 with a one-line RecursionError before a numerical report or resource snapshot. The R257 one-use allowance is spent 1/1; cleanup is empty. Follow the [single current task](SESSION_HANDOFF.md#next-task) for Astra/high saved-failure review, with no new admission or launch.
 
-Updated 2026-09-26 (America/New_York), through R257. PC/WSL daisy owns the
+Updated 2026-09-26 (America/New_York), through R258. PC/WSL daisy owns the
 repository. **R232 corrects the recoverable R231 caller failure and resumes the
 same authorized, unspent one-use fixture, then spends it on a PETSc LU failure.**
 The [R232 result](docs/realizability/POISEUILLE_RESULT_R232.md) records an
@@ -31,7 +26,7 @@ or live scope occurred in R236. [R237 admission](docs/realizability/POISEUILLE_A
 granted one instrumented fixture. [R238 result](docs/realizability/POISEUILLE_RESULT_R238.md)
 spent it 1/1: KSP -11, 405 nonfinite answer entries and PC reason 2 (reported
 numeric zero pivot). Worker/caller exited 1 with empty cleanup but no numerical
-or resource report. Those three allocations were spent 1/1 at R238. Next: Sol/high executes the R257 manufactured pilot once; follow the
+or resource report. Those three allocations were spent 1/1 at R238. Next: Astra/high reviews the saved R258 worker failure; follow the
 [single task](SESSION_HANDOFF.md#next-task).
 
 Historical R231 context: the
@@ -111,8 +106,8 @@ with both ownership routes. A modest atmospheric contraction apparatus is
 estimated at $12k–35k from scratch or $5k–18k additional in an equipped lab,
 excluding research labor. Extra pressure earns no range if delivery/optics
 limit first. These are budgetary judgments, not quotations or performance claims.
-Latest supplied session/context snapshot is recorded in REQUEST_LOG.md (R257); earlier entries remain historical.
-Latest technical work: [R257 manufactured pilot admission](docs/realizability/MANUFACTURED_ADMISSION_R257.md). The R232 account below is historical.
+Latest supplied session/status snapshot is recorded in REQUEST_LOG.md (R258); earlier entries remain historical.
+Latest technical work: [R258 manufactured pilot result](docs/realizability/MANUFACTURED_RESULT_R258.md). The R232 account below is historical.
 R226 previously passed 49 import-free checks for the R222 driver and
 [R196 cube adapter](docs/realizability/CUBE_ADAPTER_R196.md); those were not rerun in R227.
 R232 reached actual FEM/PETSc symbolic LU but produced no numerical report;
@@ -124,9 +119,9 @@ No boundary-driven core or feasible contraction range is established.
 |---|---|
 | What works? | Illustrative animation, saved-data checks and separate reference/analysis tools. |
 | Is the engineering goal demonstrated? | No validated boundary-driven contraction or boundary-only state estimator exists yet. |
-| What did the latest step establish? | R257 reviewed/repaired the manufactured pilot and admitted one later n=2 attempt; 104 regressions and six fake caller checks pass. No new numerical run. [Admission and limits](docs/realizability/MANUFACTURED_ADMISSION_R257.md). |
+| What did the latest step establish? | R258 spent the R257 one-use pilot: held worker exit 1 with RecursionError, no numerical report or resource snapshot, empty cleanup. [Result and limits](docs/realizability/MANUFACTURED_RESULT_R258.md). |
 | What blocks trusted numerical control results? | R246 Poiseuille and R253 rotation passed their fixed oracles. The manufactured pilot and spatial/time verification remain unrun. B2 still fails its independent response-accuracy comparison; q64/q96 remain unused. |
-| What is next? | Use `/new`, Sol/high, then Continue for the fixed R257 pilot once; follow the single [next task](SESSION_HANDOFF.md#next-task). |
+| What is next? | Astra/high reviews the saved R258 failure and defines a source-only repair contract or blocker; follow the single [next task](SESSION_HANDOFF.md#next-task). |
 
 ## Goal and present conclusion
 

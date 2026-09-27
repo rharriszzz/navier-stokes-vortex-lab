@@ -1,0 +1,17 @@
+{
+  "attempt_spent": false,
+  "caller_exit_code": 1,
+  "caller_output": {
+    "elapsed_after_caller_save": 0.0923658510146197,
+    "inner_status": null,
+    "reason": "Refusal: sd-bus operation failed: errno 1",
+    "run_directory": "/tmp/navier-manufactured-r257-once",
+    "status": "INCOMPLETE"
+  },
+  "command": "/tmp/navier-fenicsx-r229/bin/python -B docs/realizability/evidence/r257/run_once.py c34ecabe5cb9a89687bf4eaa782bd5b76022c1b5",
+  "failure_boundary": "sandbox denied systemd manager access during caller preflight, before reservation, supervisor, managed worker and numerical import",
+  "followup": "same clean source commit and fixed caller invoked with host approval; reserved single allocation and returned INCOMPLETE",
+  "manager_task_check": "No new task unit could be queried inside the sandbox; caller had not invoked supervisor, and fixed directory plus dangling-link check were both negative before host-approved invocation.",
+  "run_directory_absent_after_refusal": true,
+  "sandbox_systemctl_output": "Failed to connect to bus: Operation not permitted (consider using --machine=<user>@.host --user to connect to bus of other user)"
+}

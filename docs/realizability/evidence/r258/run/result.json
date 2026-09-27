@@ -1,0 +1,79 @@
+{
+  "cleanup": {
+    "empty": true,
+    "manager_final": {
+      "ActiveState": "failed",
+      "ControlGroup": "",
+      "ExecMainCode": "1",
+      "ExecMainStatus": "1",
+      "KillMode": "control-group",
+      "LoadState": "loaded",
+      "MainPID": "0",
+      "Restart": "no",
+      "Result": "exit-code",
+      "RuntimeMaxUSec": "149000000us",
+      "SendSIGKILL": "yes",
+      "SubState": "failed",
+      "TimeoutStopUSec": "1000000us"
+    },
+    "resource_snapshot_complete": false,
+    "unit": "navier-manufactured-3822a251be2649a6bb891970418379e1.service",
+    "unknown_children": false
+  },
+  "cleanup_seconds": 0.0025668419839348644,
+  "elapsed_seconds_before_save": 0.9804661230009515,
+  "final_save_tail_observed": false,
+  "held_scope": {
+    "all_task_processes_in_scope": true,
+    "cgroup_path": "/user.slice/user-1000.slice/user@1000.service/app.slice/navier-manufactured-3822a251be2649a6bb891970418379e1.service",
+    "control_boundary": "pre-existing caller and OS manager; R103",
+    "independent_expiry_seconds": 150.0,
+    "memory_max_bytes": 1610612736,
+    "mpi_ranks": 1,
+    "pids_max": 32,
+    "source_binding": {
+      "clean": true,
+      "executable": "/tmp/navier-fenicsx-r229/bin/python3.12",
+      "executable_sha256": "5f083df36ec986d5cd13d2549ca6cfe1ddaf658509f9e419b454b2fb375c27a3",
+      "interpreter": "/tmp/navier-fenicsx-r229/bin/python",
+      "root": "/home/rharris/git/navier-stokes-vortex-lab",
+      "source_commit": "c34ecabe5cb9a89687bf4eaa782bd5b76022c1b5"
+    },
+    "spawned_control_clients": 0,
+    "swap_max_bytes": 0,
+    "threads": 1,
+    "worker_descendants_in_scope": true,
+    "worker_held": true
+  },
+  "reason": "missing, exceeded or unknown cleanup/resource evidence",
+  "reservation": {
+    "artifact_inventory_sha256": "cedc36294c6082f24e834805ada9a1035c70926af7070ca962aea1fb9b7d6ebe",
+    "attempt": 1,
+    "caps": {
+      "elapsed_seconds": 180,
+      "mpi_ranks": 1,
+      "pids": 32,
+      "swap_mib": 0,
+      "threads": 1,
+      "velocity_pressure_dofs": 20000,
+      "whole_task_memory_mib": 1536
+    },
+    "contract_sha256": "3bae384b5840ec7827a3cb1c191e4b2f184fb2a1a69415d88a020eb0640e7128",
+    "executable": "/tmp/navier-fenicsx-r229/bin/python3.12",
+    "executable_sha256": "5f083df36ec986d5cd13d2549ca6cfe1ddaf658509f9e419b454b2fb375c27a3",
+    "fixture": "manufactured",
+    "interpreter": "/tmp/navier-fenicsx-r229/bin/python",
+    "kind": "manufactured_spatial_pilot",
+    "manifest_sha256": "429c1b2752106ff834ab2cffc1670be3129dfe67ebacb8c80d0ab2a7fb61b6d6",
+    "mode": "single_be_spatial_pilot",
+    "monotonic_start": 184399.179941227,
+    "owner": "PC/WSL daisy / R257",
+    "release_nonce": "03c21bdbd037b32bbec5f91baa37e2d1",
+    "source_commit": "c34ecabe5cb9a89687bf4eaa782bd5b76022c1b5",
+    "status": "RESERVED",
+    "wall_start_utc": "2026-09-27T00:03:08Z",
+    "worker_schema": 1
+  },
+  "setup_seconds": 0.1594594480120577,
+  "status": "INCOMPLETE"
+}

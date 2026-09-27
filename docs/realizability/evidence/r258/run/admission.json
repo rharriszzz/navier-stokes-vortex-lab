@@ -1,0 +1,16 @@
+{
+  "approved": true,
+  "artifact_inventory_sha256": "cedc36294c6082f24e834805ada9a1035c70926af7070ca962aea1fb9b7d6ebe",
+  "attempts_granted": 1,
+  "contract_sha256": "3bae384b5840ec7827a3cb1c191e4b2f184fb2a1a69415d88a020eb0640e7128",
+  "executable": "/tmp/navier-fenicsx-r229/bin/python3.12",
+  "executable_sha256": "5f083df36ec986d5cd13d2549ca6cfe1ddaf658509f9e419b454b2fb375c27a3",
+  "fixture": "manufactured",
+  "interpreter": "/tmp/navier-fenicsx-r229/bin/python",
+  "kind": "manufactured_spatial_pilot",
+  "manifest_sha256": "429c1b2752106ff834ab2cffc1670be3129dfe67ebacb8c80d0ab2a7fb61b6d6",
+  "mode": "single_be_spatial_pilot",
+  "run_directory": "/tmp/navier-manufactured-r257-once",
+  "source_commit": "c34ecabe5cb9a89687bf4eaa782bd5b76022c1b5",
+  "worker_schema": 1
+}

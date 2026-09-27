@@ -1,0 +1,16 @@
+{
+  "append_only_logs": true,
+  "ast_files": 2,
+  "caller_inventory_artifact_bindings": 3,
+  "json_files": 4,
+  "local_link_targets_checked": 275,
+  "numerical_modules_loaded": [],
+  "numerical_source_unchanged": true,
+  "r258_completed_once": true,
+  "r258_started_once": true,
+  "raw_audit": "PASS",
+  "source_bindings": 44,
+  "status": "INCOMPLETE",
+  "unique_contiguous_request_ids": 258,
+  "whitespace": "PASS"
+}

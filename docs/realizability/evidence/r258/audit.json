@@ -1,0 +1,21 @@
+{
+  "attempts_granted": 1,
+  "attempts_spent": 1,
+  "caller_completion": "INCOMPLETE",
+  "cleanup_empty": true,
+  "held_and_released": true,
+  "launch_commit": "c34ecabe5cb9a89687bf4eaa782bd5b76022c1b5",
+  "no_second_numerical_attempt": true,
+  "numerical_report_present": false,
+  "original_bytes_verified": true,
+  "pre_reservation_sandbox_refusal_recorded": true,
+  "raw_bytes": 8062,
+  "raw_files": 10,
+  "recorded_cgroup_absent": true,
+  "recorded_pid_absent": true,
+  "reservation_present": true,
+  "resource_snapshot_present": false,
+  "status": "INCOMPLETE",
+  "worker_exit_status": 1,
+  "worker_log": "RecursionError: maximum recursion depth exceeded"
+}

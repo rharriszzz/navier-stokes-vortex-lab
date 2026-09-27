@@ -1,11 +1,6 @@
 # Experimental Concept: Finite-Scale Forced Vortex Analogue
 
-[R257 source review/admission](docs/realizability/MANUFACTURED_ADMISSION_R257.md) repairs the fixed manufactured
-spatial BE pilot and admits one later n=2 attempt. All 104 regressions and six
-fake caller checks pass without numerical imports or launch; saved R246/R253
-remain PASS. New allowance unspent 0/1, six prior allowances spent. Follow the
-[single current task](SESSION_HANDOFF.md#next-task): use `/new`, Sol/high, then Continue
-for the fixed one-use execution and evidence handoff.
+[R258 manufactured pilot result](docs/realizability/MANUFACTURED_RESULT_R258.md) is INCOMPLETE: the held worker exited 1 with a one-line RecursionError before a numerical report or resource snapshot. The R257 one-use allowance is spent 1/1; cleanup is empty. Follow the [single current task](SESSION_HANDOFF.md#next-task) for Astra/high saved-failure review, with no new admission or launch.
 
 R232's [single-fixture result](docs/realizability/POISEUILLE_RESULT_R232.md)
 is INCOMPLETE: the worker reached PETSc symbolic LU and exited 1 after a
@@ -27,7 +22,7 @@ diagnostic; 62 standard-library tests pass without numerical imports.
 bounded diagnostic fixture; [R238](docs/realizability/POISEUILLE_RESULT_R238.md)
 spent it 1/1 on a reported numeric LU zero pivot, with empty cleanup but no
 numerical/resource report. All three allowances are spent. Follow the
-[handoff task](SESSION_HANDOFF.md#next-task) for the R257 one-use execution.
+[handoff task](SESSION_HANDOFF.md#next-task) for R258 saved-failure review.
 No tank/hardware route or feasible contraction range is established.
 
 R188 priority update (2026-09-22): establish measurable essential dynamical

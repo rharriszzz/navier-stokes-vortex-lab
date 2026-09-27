@@ -1,0 +1,47 @@
+{
+  "count": 10,
+  "files": {
+    "admission.json": {
+      "bytes": 779,
+      "sha256": "b8d4a8f0b58fe83d67e6aa6340a8408b1bd238e628363f747e711d76083693e5"
+    },
+    "caller.json": {
+      "bytes": 1865,
+      "sha256": "1f34849f4946ce021f2b1f49498e8775705ca30c0be85c0c0168b145f2b60abf"
+    },
+    "caller_completion.json": {
+      "bytes": 128,
+      "sha256": "0ccedabc9f66d27f213a7ce6705198fbee6415a810472b4f867cbac721b5dd50"
+    },
+    "completion.json": {
+      "bytes": 274,
+      "sha256": "67e84959a144b5ff5f48dd24265a68e5ae5b72d714622090a4cc91a0a601780b"
+    },
+    "held.json": {
+      "bytes": 659,
+      "sha256": "74362ac00cc49fcec3e2568c828e7582c7bdee4f39326f38e8fb98960157487c"
+    },
+    "release.json": {
+      "bytes": 176,
+      "sha256": "64d94b853c2c9df2abaf5859fe8805bb4b623cb720ef415f7e7bc8a345353630"
+    },
+    "reservation.json": {
+      "bytes": 1078,
+      "sha256": "133613eeb2b31ac800ae2a5b37ff23064a18189103d737231ce8ae3a98848584"
+    },
+    "result.json": {
+      "bytes": 2947,
+      "sha256": "d427edc53a483c63547a31856e270733c5e832a8832a86d74658f664be24db76"
+    },
+    "run.log": {
+      "bytes": 107,
+      "sha256": "da87ef71c1e5745c4f5a11ea966d1e2cb3380d641174b23e231816245fbace32"
+    },
+    "worker.log": {
+      "bytes": 49,
+      "sha256": "5d6b189606c6bb12a73a9802eb4ad74525232da6dce2b9b54bee2bbb315469d8"
+    }
+  },
+  "source_directory": "/tmp/navier-manufactured-r257-once",
+  "total_bytes": 8062
+}

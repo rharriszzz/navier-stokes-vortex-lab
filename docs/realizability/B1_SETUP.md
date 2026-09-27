@@ -1,11 +1,6 @@
 # B1 solver environment
 
-[R257 source review/admission](MANUFACTURED_ADMISSION_R257.md) repairs the fixed manufactured
-spatial BE pilot and admits one later n=2 attempt. All 104 regressions and six
-fake caller checks pass without numerical imports or launch; saved R246/R253
-remain PASS. New allowance unspent 0/1, six prior allowances spent. Follow the
-[single current task](../../SESSION_HANDOFF.md#next-task): use `/new`, Sol/high, then Continue
-for the fixed one-use execution and evidence handoff.
+[R258 manufactured pilot result](MANUFACTURED_RESULT_R258.md) is INCOMPLETE: the held worker exited 1 with a one-line RecursionError before a numerical report or resource snapshot. The R257 one-use allowance is spent 1/1; cleanup is empty. Follow the [single current task](../../SESSION_HANDOFF.md#next-task) for Astra/high saved-failure review, with no new admission or launch.
 
 Historical PC status: [R232's one-use Poiseuille result](POISEUILLE_RESULT_R232.md)
 is INCOMPLETE at PETSc symbolic LU, and the single numerical allocation is
