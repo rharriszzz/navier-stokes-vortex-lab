@@ -1,5 +1,58 @@
 # Current session handoff
 
+Last updated 2026-09-26 (America/New_York) for R267.
+**PC/WSL daisy owns the repository.** No transfer; Mac remains released.
+**R267 completes source-only angular interpretation and fixes an evidence
+repair contract. R266 remains INCOMPLETE; all nine allocations remain spent.**
+See the [review/contract](docs/realizability/MANUFACTURED_ANGULAR_REVIEW_R267.md),
+[exact/saved-data probe](docs/realizability/evidence/r267/probe.json) and
+[preservation audit](docs/realizability/evidence/r267/audit.json).
+
+The rate defect -0.005145516124005005 is 13.685 times its fixed limit.
+Storage, advection and traction errors against the exact field account for
+it; body torque matches to 1.7e-17. Both quadrature degrees agree and the
+interval failure equals dt times the rate failure. No sign, BE load/history,
+missing angular divergence term or balanced-summation cause was demonstrated.
+The angular test (-y,x,0) is nonzero on lateral Dirichlet faces, so the scaled
+Newton residual with 240 erased fixed rows does not enforce this physical
+surface-stress balance. This is compatible with coarse approximation error;
+it does not prove that approximation is the sole cause.
+
+The exact reaction/traction split is blocked by missing raw final residuals
+and face partitions. The latest matrix stores a pre-correction state with
+fixed rows already erased. Do not reconstruct a final solve or replace the
+physical gate with a reaction identity. The fixed next source task adds a
+bounded diagnostic sidecar, retaining original metrics/gates and allocations.
+
+All 19 R266 and 97 older raw originals/index bytes, 47 source bindings,
+eleven artifacts/four resolutions/archive/interpreter, nine spent reservations
+and recorded PID/cgroup absence verify. All 1,801 prior evidence files are
+unchanged. Saved R246/R253 PASS and R266 refusal replay; exact identities and
+four decomposition controls pass without numerical imports. R229 setup
+predicate remains false. No runtime source change or numerical/manager work.
+
+**Next: use `/new`, select GPT-6 Sol / high, then Continue to implement only
+the R267 angular evidence sidecar and source/fake tests. Publish and stop for
+Astra/high review before new admission or launch.** See [Next task](#next-task).
+A fresh chat is recommended at this saved review/contract boundary; no current
+context percentage supplied. Official OpenAI Docs confirms Sol/high support;
+account access is unverified and no model/session switch occurred.
+
+R267 user supplied only `continue`. Clean pull verified R266 delivery 7266486;
+R267 STARTED 6315125 published. Completion prepared for scoped publication;
+delivery hash/result belongs in Git/final response. PC retains ownership.
+
+Changed: R267 review/probe/audit/publication checks, seven current pages,
+request/lifecycle/handoff. Checks: exact/saved report/linear system, raw/index/
+source/artifact/process preservation, AST/JSON/links/logs/whitespace. Existing
+118 unchanged source tests reused, not rerun. Skipped: runtime implementation,
+admission, numerical import/JIT/assembly/solve, manager/worker, full convergence/
+tank/B2, physical/render and Mac transfer. Unknown: signed reaction/traction
+split, sole runtime cause, prospective diagnostic behavior/cost, convergence,
+R242 cause and artifact-label origin.
+
+### Previous R266 execution (reviewed by R267)
+
 Last updated 2026-09-26 (America/New_York) for R266.
 **PC/WSL daisy owns the repository.** No transfer; Mac remains released.
 **R266's single R265 manufactured pilot is INCOMPLETE; its allocation is spent
@@ -1448,14 +1501,19 @@ and physical-work limits remain unchanged.
 | Owner | PC/WSL `daisy`; Mac `fire.lan` released after published R161 handoff and R162 receipt. |
 | Checkout | `/home/rharris/git/navier-stokes-vortex-lab`. |
 | Branch/upstream | `main` / `origin/main` |
-| Starting state | R266 same-owner clean main/origin/main at 7d390e3 after required fast-forward pull; rharris/daisy, empty stashes, R265 complete. STARTED d5b42eb published. |
+| Starting state | R267 same-owner clean main/origin/main at 7266486 after required fast-forward pull; rharris/daisy, empty stashes, R266 complete. STARTED 6315125 published. |
 | Interpreter | /tmp/navier-fenicsx-r229/bin/python verified as 3.12.13 with -I -S; exact environment artifacts verified, setup memory-event predicate refused. Project Python remains 3.12.14. Old /tmp/navier-fenicsx is still partial. |
 | Other owner/process | Mac `fire.lan` released in the published R161 handoff. Local Git cannot inspect another checkout's unpublished state. |
-| Task processes | R266 reserved, ran and released one R265 manufactured worker; its recorded PID/cgroup are absent and cleanup empty. R265 spent 1/1; eight old allocations spent. No active task worker. |
+| Task processes | R267 launched no task worker/manager. All nine spent allocations and recorded PID/cgroup absence verified. R266 cleanup remains empty; no active task worker. |
 | Symbolic environment | `/tmp/navier-r183-sympy/bin/python`, Python 3.12.14, SymPy 1.14.0, mpmath 1.3.0; recreate using `requirements-symbolic.txt` if missing. Existing environments unchanged. |
-| Delivery state | R265 delivery 7d390e3 verified by clean pull; R266 STARTED d5b42eb published. Result completion prepared for publication; delivery in Git/final response. PC retains ownership. |
+| Delivery state | R266 delivery 7266486 verified by clean pull; R267 STARTED 6315125 published. Review completion prepared for publication; delivery in Git/final response. PC retains ownership. |
 
 ## Current result and limits
+
+R267 explains the excluded angular test and saved defect, with a precise
+missing-reaction-evidence blocker and fixed sidecar implementation contract.
+See the [review](docs/realizability/MANUFACTURED_ANGULAR_REVIEW_R267.md) and
+[single next task](#next-task). No source correction or gate change is justified.
 
 R266's single R265 pilot is INCOMPLETE: both degree diagnostics fail angular
 budget and interval checks, despite a clean worker exit, numerical report,
@@ -1593,44 +1651,44 @@ agent-side POV-Ray backtraces are unavailable.
 
 ## Next task
 
-**Use `/new`, select GPT-6 Astra / high, then Continue on PC/WSL daisy to review
-the saved R266 angular budget failure using source and saved data only. Publish
-a precise mechanism and bounded repair contract or a documented blocker, then
-stop before implementation, admission or numerical launch.** This is a
-published experiment/result boundary; no current context percentage is
-available. No model switch has been performed. [Official OpenAI Docs](https://developers.openai.com/api/docs/models/gpt-6-astra)
-confirms Astra supports high reasoning; account access is unverified.
+**Use `/new`, select GPT-6 Sol / high, then Continue on PC/WSL daisy to
+implement only R267's bounded angular evidence sidecar and source/fake tests.
+Publish and stop for Astra/high source review before any new admission or
+numerical launch.** The review/contract is saved at a bounded task boundary;
+no current context percentage supplied. [Official OpenAI Docs](https://developers.openai.com/api/docs/models/gpt-6-sol)
+confirms high support; account access unverified, no model/session switch.
 
-Read the [R266 result](docs/realizability/MANUFACTURED_RESULT_R266.md),
-[raw numerical and linear-system evidence](docs/realizability/evidence/r266/run/),
-[hash inventory](docs/realizability/evidence/r266/run_hashes.json),
-[audit](docs/realizability/evidence/r266/audit.json),
-[R265 admission](docs/realizability/MANUFACTURED_ADMISSION_R265.md),
-[R255 exact manufactured reference](docs/realizability/VERIFICATION_MILESTONE_R255.md)
-and applicable angular diagnostic source.
+Read the [R267 review and six-part source contract](docs/realizability/MANUFACTURED_ANGULAR_REVIEW_R267.md#fixed-next-source-contract-record-the-missing-angular-evidence),
+[probe](docs/realizability/evidence/r267/probe.py),
+[audit](docs/realizability/evidence/r267/audit.json),
+[R266 result/raw evidence](docs/realizability/MANUFACTURED_RESULT_R266.md),
+[R255 reference](docs/realizability/VERIFICATION_MILESTONE_R255.md), and the
+linked residual/driver/diagnostic source.
 
-1. Follow clean Continue synchronization, ownership/status/stash checks and
-   published STARTED lifecycle. Verify all 19 R266 raw/caller copies against
-   the retained originals and Git index, 47 source bindings, eleven artifacts,
-   97 older raw originals, and all nine spent allocations/absent worker state.
-2. Reconstruct from saved values the angular budget and interval defects at
-   degree 24 and 26. Compare exact manufactured angular terms, discrete BE
-   history/load, solver source and diagnostic sign/traction conventions.
-   Separate an algebra/formulation error from discretization or a diagnostic
-   definition mismatch; do not assume the balanced polynomial change caused it.
-3. Use read-only source inspection, standard-library arithmetic and injected
-   fakes only. Preserve raw bytes, exact gates, source mathematics and spent
-   allocations. No FEM/PETSc/MPI import, manager, worker, JIT, assembly or
-   solve; no new admission, retry, tolerance change or physical inference.
-4. Publish a source-only review with demonstrated facts, remaining uncertainty,
-   a narrow repair contract if justified, or a precise blocker. Link one next
-   task and recommend Sol/high only for a fully specified mechanical source
-   implementation; retain Astra/high for unresolved scientific choices.
+1. Follow clean Continue ownership/status/stash/synchronization and publish
+   STARTED. Verify 47 source bindings, eleven artifacts, all 116 old raw/caller
+   originals and Git bytes, nine spent reservations and recorded process absence.
+2. Implement the injected sidecar helper, pure reducer/validator, optional
+   driver recorder callback and mandatory worker recorder wiring exactly as
+   R267 specifies. Record final-state raw residual vectors, independently
+   assembled angular action, face advection/physical/prescribed traction
+   partitions, fixed/free action and consistency identities at both degrees.
+   Install final degree26 multipliers/eta; never use eliminated/scaled rows.
+3. Retain the original manifest, numerical envelope/validators, physical
+   metrics/gates, solver, fixture and resources. Add no caller/allocation.
+   The sidecar cap is 262,144 bytes; measured mismatch remains evidence.
+   No reconstructed or replacement angular budget may turn R266 into PASS.
+4. Run the existing 118 source/fake regressions and focused nonzero/sign/map/
+   degree26/final-state/persistence/strict-data controls under an import guard.
+   Reproduce R246/R253 saved PASS, R266 refusal and R267 algebra; publish
+   sidecar schema, source inventory and evidence without changing old records.
 
-Completion: saved-data-backed angular interpretation or explicit blocker,
-preserved evidence and one next task in the log/handoff/status pages, then
-stop. No full convergence/tank/B2, physical, rendering or Mac work. Next
-prompt: **Continue**.
+Completion: evidence-only source integration and tests, preserved records,
+one next task and publication. Then recommend Astra/high for source review and
+separate diagnostic admission or blocker; also stop for Astra/high if a
+scientific choice is needed. No FEM/PETSc/MPI import, manager/worker, JIT,
+assembly/solve, new admission or retry; no full convergence/tank/B2, physical,
+rendering or Mac work. Nine allocations remain spent. Next prompt: **Continue**.
 
 ### Historical R230 single-fixture execution task (R232 spent)
 

@@ -1,0 +1,80 @@
+{
+  "angular_test_nonzero_on_all_lateral_faces": true,
+  "cause_limit": "Boundary reaction versus surface-stress split is not recorded; no corrective solver change is justified.",
+  "decomposition_negative_controls": 4,
+  "degrees": {
+    "24": {
+      "cap_torque_error_cauchy_bound": 0.08970262545714151,
+      "defect": -0.005145516124005005,
+      "endpoint_minus_storage": 5.4643789493269423e-17,
+      "errors_against_exact_field": {
+        "advective": -0.0011092368715014704,
+        "body": -1.734723475976807e-17,
+        "storage": -0.0027081573321480847,
+        "traction": -0.0013281219203554323
+      },
+      "exact_terms": {
+        "advective": 0.005096723768446181,
+        "body": -0.018976932101779514,
+        "storage": 0.0003125,
+        "traction": 0.013567708333333333
+      },
+      "failure_ratio": 13.68500605725939,
+      "inferred_uneliminated_action": -0.017385102536982906,
+      "interval_defect": -0.0006431895155006188,
+      "interval_minus_dt_rate": 6.830473686658678e-18,
+      "limit": 0.0003759966274385022,
+      "physical_total_torque": -0.0122395864129779,
+      "terms": {
+        "advective": 0.0039874868969447105,
+        "body": -0.01897693210177953,
+        "storage": -0.002395657332148085,
+        "traction": 0.0122395864129779
+      }
+    },
+    "26": {
+      "cap_torque_error_cauchy_bound": 0.08970262545714144,
+      "defect": -0.005145516124007139,
+      "endpoint_minus_storage": -1.3270634591222574e-16,
+      "errors_against_exact_field": {
+        "advective": -0.0011092368715014444,
+        "body": 1.8041124150158794e-16,
+        "storage": -0.0027081573321481125,
+        "traction": -0.001328121920357762
+      },
+      "exact_terms": {
+        "advective": 0.005096723768446181,
+        "body": -0.018976932101779514,
+        "storage": 0.0003125,
+        "traction": 0.013567708333333333
+      },
+      "failure_ratio": 13.685006057265962,
+      "inferred_uneliminated_action": -0.017385102536982708,
+      "interval_defect": -0.000643189515500909,
+      "interval_minus_dt_rate": -1.6588293239028218e-17,
+      "limit": 0.00037599662743847755,
+      "physical_total_torque": -0.01223958641297557,
+      "terms": {
+        "advective": 0.0039874868969447365,
+        "body": -0.018976932101779333,
+        "storage": -0.0023956573321481127,
+        "traction": 0.01223958641297557
+      }
+    }
+  },
+  "erroneous_extra_angular_divergence_term": "-5/72",
+  "exact_lateral_advective_torque": "0",
+  "exact_reference_rederived": true,
+  "fixed_row_information_loss_demonstrated": true,
+  "fixed_rows_erased": 240,
+  "latest_state_is_pre_correction": true,
+  "latest_system_validated": true,
+  "maximum_degree_term_difference": 2.329733628236852e-15,
+  "non_solenoidal_conservative_identity": "0",
+  "numerical_modules_loaded": [],
+  "prescribed_return_torque": "0",
+  "runtime_source_changes": 0,
+  "saved_full_report_rebuilt": true,
+  "saved_validator_refuses": true,
+  "status": "SOURCE_REVIEW_COMPLETE_NO_ADMISSION"
+}

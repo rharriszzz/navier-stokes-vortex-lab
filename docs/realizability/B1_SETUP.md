@@ -1,9 +1,10 @@
 # B1 solver environment
 
-[R266 manufactured result](MANUFACTURED_RESULT_R266.md)
-is INCOMPLETE: the single R265 allocation is spent 1/1. The worker saved a
-numerical report and passed resource limits, but both degrees fail angular
-budget checks. Eight older allocations remain spent. Follow the
+[R267 angular review](MANUFACTURED_ANGULAR_REVIEW_R267.md)
+reproduces the R266 failure and explains why a small eliminated Newton residual
+does not enforce the surface-stress angular budget. The signed boundary-reaction
+split is missing; a fixed evidence-only source contract is published. R266 stays
+INCOMPLETE, nine allocations spent, no new admission. Follow the
 [single current task](../../SESSION_HANDOFF.md#next-task).
 
 Historical PC status: [R232's one-use Poiseuille result](POISEUILLE_RESULT_R232.md)

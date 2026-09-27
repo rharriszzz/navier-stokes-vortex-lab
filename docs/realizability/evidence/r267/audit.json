@@ -1,0 +1,18 @@
+{
+  "archive_interpreter_verified": true,
+  "historical_evidence_files_unchanged": 1801,
+  "library_resolutions": 4,
+  "numerical_modules_loaded": [],
+  "numerical_or_manager_work": false,
+  "old_original_and_index_files": 97,
+  "r265_allocation_bindings_verified": true,
+  "r266_original_and_index_files": 19,
+  "recorded_pids_cgroups_absent": true,
+  "runtime_artifacts": 11,
+  "saved_r246_validator": "PASS",
+  "saved_r253_validator": "PASS",
+  "saved_r266_status": "INCOMPLETE",
+  "source_bindings_unchanged": 47,
+  "spent_allocations": 9,
+  "status": "PASS"
+}

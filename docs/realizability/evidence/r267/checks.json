@@ -1,0 +1,12 @@
+{
+  "append_only_logs": true,
+  "ast_files": 3,
+  "contiguous_request_ids": 267,
+  "evidence_files": 6,
+  "evidence_index_matches": true,
+  "lifecycle_started_completed_once": true,
+  "local_links_checked": 309,
+  "runtime_source_changes": 0,
+  "status": "PASS",
+  "whitespace": "PASS"
+}
