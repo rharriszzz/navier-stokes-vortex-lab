@@ -1,10 +1,10 @@
 # Experimental Concept: Finite-Scale Forced Vortex Analogue
 
-[R259 failure review](docs/realizability/MANUFACTURED_FAILURE_REVIEW_R259.md) establishes that R258's one-line
-RecursionError cannot locate the failing call. Four guarded fake paths
-pass; all 84 saved originals/seven spent reservations and 44 source bindings
-verify. The next task is a bounded traceback/stage diagnostic repair, with
-zero new attempts admitted. Follow the [single current task](SESSION_HANDOFF.md#next-task).
+[R260 diagnostic integration](docs/realizability/MANUFACTURED_DIAGNOSTICS_R260.md)
+implements the R259 bounded failure record and thirteen stages. All 113
+source/fake tests pass; 84 saved originals and seven spent reservations verify.
+R258 remains INCOMPLETE; zero new attempts are admitted. Astra/high reviews
+source and admission next. Follow the [single current task](SESSION_HANDOFF.md#next-task).
 
 R232's [single-fixture result](docs/realizability/POISEUILLE_RESULT_R232.md)
 is INCOMPLETE: the worker reached PETSc symbolic LU and exited 1 after a
@@ -26,7 +26,7 @@ diagnostic; 62 standard-library tests pass without numerical imports.
 bounded diagnostic fixture; [R238](docs/realizability/POISEUILLE_RESULT_R238.md)
 spent it 1/1 on a reported numeric LU zero pivot, with empty cleanup but no
 numerical/resource report. All three allowances are spent. Follow the
-[handoff task](SESSION_HANDOFF.md#next-task) for the R259 diagnostic repair.
+[handoff task](SESSION_HANDOFF.md#next-task) for the R260 source/admission review.
 No tank/hardware route or feasible contraction range is established.
 
 R188 priority update (2026-09-22): establish measurable essential dynamical

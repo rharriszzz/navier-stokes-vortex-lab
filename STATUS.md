@@ -1,12 +1,12 @@
 # Project status: a boundary-controlled engineering approximation
 
-[R259 failure review](docs/realizability/MANUFACTURED_FAILURE_REVIEW_R259.md) establishes that R258's one-line
-RecursionError cannot locate the failing call. Four guarded fake paths
-pass; all 84 saved originals/seven spent reservations and 44 source bindings
-verify. The next task is a bounded traceback/stage diagnostic repair, with
-zero new attempts admitted. Follow the [single current task](SESSION_HANDOFF.md#next-task).
+[R260 diagnostic integration](docs/realizability/MANUFACTURED_DIAGNOSTICS_R260.md)
+implements the R259 bounded failure record and thirteen stages. All 113
+source/fake tests pass; 84 saved originals and seven spent reservations verify.
+R258 remains INCOMPLETE; zero new attempts are admitted. Astra/high reviews
+source and admission next. Follow the [single current task](SESSION_HANDOFF.md#next-task).
 
-Updated 2026-09-26 (America/New_York), through R259. PC/WSL daisy owns the
+Updated 2026-09-26 (America/New_York), through R260. PC/WSL daisy owns the
 repository. **R232 corrects the recoverable R231 caller failure and resumes the
 same authorized, unspent one-use fixture, then spends it on a PETSc LU failure.**
 The [R232 result](docs/realizability/POISEUILLE_RESULT_R232.md) records an
@@ -30,7 +30,7 @@ or live scope occurred in R236. [R237 admission](docs/realizability/POISEUILLE_A
 granted one instrumented fixture. [R238 result](docs/realizability/POISEUILLE_RESULT_R238.md)
 spent it 1/1: KSP -11, 405 nonfinite answer entries and PC reason 2 (reported
 numeric zero pivot). Worker/caller exited 1 with empty cleanup but no numerical
-or resource report. Those three allocations were spent 1/1 at R238. Next: Sol/high implements the R259 diagnostic repair; follow the
+or resource report. Those three allocations were spent 1/1 at R238. Next: Astra/high reviews the R260 diagnostic source and admission; follow the
 [single task](SESSION_HANDOFF.md#next-task).
 
 Historical R231 context: the
@@ -110,8 +110,8 @@ with both ownership routes. A modest atmospheric contraction apparatus is
 estimated at $12k–35k from scratch or $5k–18k additional in an equipped lab,
 excluding research labor. Extra pressure earns no range if delivery/optics
 limit first. These are budgetary judgments, not quotations or performance claims.
-Latest request is R259 (Continue only); the latest supplied session/status snapshot remains R258.
-Latest technical work: [R259 failure review and repair contract](docs/realizability/MANUFACTURED_FAILURE_REVIEW_R259.md). The R232 account below is historical.
+Latest request is R260 (Continue only); the latest supplied session/status snapshot remains R258.
+Latest technical work: [R260 diagnostic integration](docs/realizability/MANUFACTURED_DIAGNOSTICS_R260.md). The R232 account below is historical.
 R226 previously passed 49 import-free checks for the R222 driver and
 [R196 cube adapter](docs/realizability/CUBE_ADAPTER_R196.md); those were not rerun in R227.
 R232 reached actual FEM/PETSc symbolic LU but produced no numerical report;
@@ -123,7 +123,7 @@ No boundary-driven core or feasible contraction range is established.
 |---|---|
 | What works? | Illustrative animation, saved-data checks and separate reference/analysis tools. |
 | Is the engineering goal demonstrated? | No validated boundary-driven contraction or boundary-only state estimator exists yet. |
-| What did the latest step establish? | R259 proves the saved error line cannot identify the failing stage and fixes a bounded diagnostic repair contract. R258 remains INCOMPLETE; seven allowances spent. [Review](docs/realizability/MANUFACTURED_FAILURE_REVIEW_R259.md). |
+| What did the latest step establish? | R260 implements bounded failure diagnostics and thirteen stage markers; 113 source/fake tests pass. R258 remains INCOMPLETE; seven allowances spent. [Result](docs/realizability/MANUFACTURED_DIAGNOSTICS_R260.md). |
 | What blocks trusted numerical control results? | R246 Poiseuille and R253 rotation passed their fixed oracles. The manufactured pilot and spatial/time verification remain unrun. B2 still fails its independent response-accuracy comparison; q64/q96 remain unused. |
 | What is next? | Sol/high implements the bounded traceback/stage diagnostic repair and tests, then stops for Astra/high source/admission review; follow the single [next task](SESSION_HANDOFF.md#next-task). |
 

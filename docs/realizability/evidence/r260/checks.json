@@ -1,0 +1,16 @@
+{
+  "ast_files": 8,
+  "intended_runtime_changes_only": true,
+  "json_files": 2,
+  "local_link_targets_checked": 279,
+  "new_attempts_admitted": 0,
+  "next_task": "Astra/high source review; new one-use admission/caller or precise blocker; stop before launch",
+  "prior_logs_preserved": true,
+  "r260_completed_once": true,
+  "r260_started_once": true,
+  "session_recommendation": "/new at published source boundary",
+  "status": "SOURCE_INTEGRATED_NO_ADMISSION",
+  "tests": 113,
+  "unique_contiguous_request_ids": 260,
+  "whitespace": "PASS"
+}

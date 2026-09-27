@@ -110,7 +110,7 @@ def assemble_diagnostics(modules, domain, tags, w, context, degree):
 
 
 def run_manufactured(modules, manifest, *, clock=time.monotonic,
-                     linear_evidence):
+                     linear_evidence, progress=None):
     """Only fixed n=2/step1. Caller owns admission, held scope and imports."""
     validate_manifest(manifest)
     if (set(modules) != {'np', 'mesh', 'fem', 'fem_petsc', 'basix_ufl', 'basix',
@@ -119,10 +119,16 @@ def run_manufactured(modules, manifest, *, clock=time.monotonic,
         raise Refusal('complete injected modules and linear recorder required')
     np, meshlib, fem, fp = (modules[key] for key in ('np', 'mesh', 'fem', 'fem_petsc'))
     U, PETSc, comm = (modules[key] for key in ('ufl', 'PETSc', 'comm'))
+    def mark(stage, edge):
+        if progress is not None:
+            progress(stage, edge)
     started = clock()
+    mark('mesh_and_geometry', 'begin')
     domain, space, tags, lateral = create_cube(np, meshlib, fem,
         modules['basix_ufl'], comm, 2, 'manufactured')
     geometry = measured_geometry(modules, domain, space, tags)
+    mark('mesh_and_geometry', 'end')
+    mark('history_and_lift', 'begin')
     previous = interpolate_state(np, fem, space, 'manufactured', 0.)
     trace = interpolate_state(np, fem, space, 'manufactured', .125)
     fixed = boundary_values(fem, space, lateral, trace)
@@ -137,12 +143,18 @@ def run_manufactured(modules, manifest, *, clock=time.monotonic,
     w.x.scatter_forward()
     guess += [0., 0., 0.]
     t_mesh = clock()
+    mark('history_and_lift', 'end')
+    mark('primary_forms', 'begin')
     forms, constants, context = step_forms(U, fem, domain, space, tags, w,
         previous, previous, .125, .125, 1, 'manufactured', degree=24)
     if context.get('history') is None or context.get('force') is None:
         raise Refusal('manufactured residual lost exact history or corrected load')
+    mark('primary_forms', 'end')
+    mark('primary_compilation', 'begin')
     assembler = Assembler(fem, fp, PETSc, w, forms, constants, fixed)
+    mark('primary_compilation', 'end')
     t_forms = clock()
+    mark('compatibility_and_initial_system', 'begin')
     rows = [assembler.vector(form) for form in assembler.rows]
     condition = constraint_condition(rows, fixed)
     ds, exact = context['ds'], context['exact']
@@ -163,6 +175,7 @@ def run_manufactured(modules, manifest, *, clock=time.monotonic,
         raise Refusal('manufactured measured targets differ from rational reference')
     _residual, matrix = assembler(guess)
     scales = row_scales(matrix)
+    mark('compatibility_and_initial_system', 'end')
     evaluated_state = None
     def evaluate(state):
         nonlocal evaluated_state
@@ -178,13 +191,17 @@ def run_manufactured(modules, manifest, *, clock=time.monotonic,
         corrections.append(dict(true_residual=defect, rhs_norm=norm,
                                 linear_system=receipt))
         return answer
+    mark('newton', 'begin')
     state, history = newton(guess, evaluate, linear_solve)
     t_solve = clock()
     if not corrections or len(state) != 405:
         raise Refusal('manufactured pilot needs checked corrections and 405 DOFs')
     assembler(state)  # install the accepted mixed state and border before diagnostics
+    mark('newton', 'end')
     raw, receipts = {}, {}
     for degree in (24, 26):
+        stage = f'diagnostics_{degree}'
+        mark(stage, 'begin')
         if degree == 24:
             degree_context = context
         else:
@@ -193,6 +210,8 @@ def run_manufactured(modules, manifest, *, clock=time.monotonic,
         degree_context['raw_keys'] = manifest['diagnostic_policy']['raw_keys']
         raw[str(degree)], receipts[str(degree)] = assemble_diagnostics(
             modules, domain, tags, w, degree_context, degree)
+        mark(stage, 'end')
+    mark('return_sampling_and_report', 'begin')
     velocity = w.sub(0).collapse()
     samples, counts = return_quadrature_samples(np, meshlib, modules['basix'],
         domain, tags, velocity, 24)
@@ -200,6 +219,7 @@ def run_manufactured(modules, manifest, *, clock=time.monotonic,
         min(samples), counts, condition, compatibility, targets,
         lateral_absolute, manifest)
     t_diagnostics = clock()
+    mark('return_sampling_and_report', 'end')
     return dict(geometry=geometry, subdivisions=2, step=1, time=.125, dt=.125,
         history_semantics=manifest['history'], load_semantics=manifest['load'],
         mixed_dofs=402, global_dofs=len(state), fixed_velocity_dofs=len(fixed),

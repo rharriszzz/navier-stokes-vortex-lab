@@ -1,10 +1,10 @@
 # Isolated nonlinear port verification source — R195/R196/R222/R225/R226
 
-[R259 failure review](../../docs/realizability/MANUFACTURED_FAILURE_REVIEW_R259.md) establishes that R258's one-line
-RecursionError cannot locate the failing call. Four guarded fake paths
-pass; all 84 saved originals/seven spent reservations and 44 source bindings
-verify. The next task is a bounded traceback/stage diagnostic repair, with
-zero new attempts admitted. Follow the [single current task](../../SESSION_HANDOFF.md#next-task).
+[R260 diagnostic integration](../../docs/realizability/MANUFACTURED_DIAGNOSTICS_R260.md)
+implements the R259 bounded failure record and thirteen stages. All 113
+source/fake tests pass; 84 saved originals and seven spent reservations verify.
+R258 remains INCOMPLETE; zero new attempts are admitted. Astra/high reviews
+source and admission next. Follow the [single current task](../../SESSION_HANDOFF.md#next-task).
 
 **Source and algebra evidence, not a validated FEM solver.** The
 [R195 fixture review](../../docs/realizability/NONLINEAR_VERIFICATION_R195.md)

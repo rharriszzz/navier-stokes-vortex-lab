@@ -24,6 +24,7 @@ from .sparse import condition_from_gram
 from .supervision import supervise_manufactured_once
 from .test_driver_supervision import Clock, FakeBackend
 from . import manufactured_worker
+from .manufactured_failure import STAGES as FAILURE_STAGES
 
 
 PROPOSAL = expected()
@@ -396,6 +397,7 @@ class ManufacturedIntegrationChecks(unittest.TestCase):
                 compiled_rank=0) for key in raw}
             return raw,receipts
         saved=[]
+        stage_events=[]
         def latest(matrix,rhs,**kw):
             saved.append(kw)
             return dict(file='linear_system.json',correction=kw['correction'],
@@ -409,7 +411,8 @@ class ManufacturedIntegrationChecks(unittest.TestCase):
               patch.object(driver,'sparse_solve',side_effect=lambda np,p,c,m,r:r) as solver,
               patch.object(driver,'assemble_diagnostics',side_effect=diagnostics),
               patch.object(driver,'return_quadrature_samples',return_value=([.5,.5],[1,1]))):
-            result=driver.run_manufactured(modules,PROPOSAL,linear_evidence=latest)
+            result=driver.run_manufactured(modules,PROPOSAL,linear_evidence=latest,
+                progress=lambda name,edge:stage_events.append((name,edge)))
             solver.reset_mock()
             fem.assemble_scalar.side_effect=[
                 rational(REFERENCE['exact']['Q_lateral']),5.,
@@ -425,6 +428,8 @@ class ManufacturedIntegrationChecks(unittest.TestCase):
         self.assertEqual(routed,[(24,('exact-old','exact-old'),'corrected-BE'),
                                  (26,('exact-old','exact-old'),'corrected-BE')])
         self.assertEqual(len(saved),1)
+        self.assertEqual(stage_events,[(name,edge) for name in FAILURE_STAGES[2:11]
+                                       for edge in ('begin','end')])
         self.assertEqual(saved[0]['correction'],1)
         self.assertEqual((result['mixed_dofs'],result['global_dofs']),(402,405))
         self.assertEqual(result['perturbed_velocity_dof'],1)
