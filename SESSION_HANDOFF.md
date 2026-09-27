@@ -1,5 +1,42 @@
 # Current session handoff
 
+Last updated 2026-09-26 (America/New_York) for R259.
+**PC/WSL daisy owns the repository.** No transfer; Mac remains released.
+**R259 fixes a source-only diagnostic repair contract. R258 remains INCOMPLETE,
+all seven allocations spent, zero new attempts admitted.** The one-line
+RecursionError does not identify the actual call or whether FEM imports
+completed. Four guarded fake paths demonstrate the ambiguity and check the
+successful fake path. See the [review/contract](docs/realizability/MANUFACTURED_FAILURE_REVIEW_R259.md),
+[probe](docs/realizability/evidence/r259/probe.json) and
+[audit](docs/realizability/evidence/r259/audit.json).
+
+All 84 original raw files/seven spent reservations, 44 source/test/pin/reference
+hashes, eleven artifacts, four resolutions and archive/interpreter verify.
+Recorded worker PIDs/cgroups remain absent; saved R246/R253 PASS and R242
+INCOMPLETE remain unchanged. R229 setup predicate remains false. No runtime
+source change, numerical import, manager, worker, reservation or new admission.
+
+**Next: GPT-6 Sol/high implements the fixed bounded traceback/stage diagnostic
+repair and tests, publishes and stops for Astra/high source/admission review.**
+Continue in this chat: the review and implementation contract are directly
+connected. No current context percentage or new status snapshot was supplied.
+See [Next task](#next-task). No model/session switch is claimed.
+
+R259 user supplied only `continue`. Clean pull verified R258 delivery 56ecd3f;
+R259 STARTED 09abd04 published. Completion prepared for scoped publication;
+delivery hash/result belongs in Git/final reply. PC retains ownership.
+
+Changed: R259 review/contract, guarded probe, audit/checks, seven current
+status/index pages, request/lifecycle/handoff. Checks: four fake paths, saved
+R258/R246/R253 replay, 84 originals, seven reservations/process absence, 44
+source and artifact hashes, AST/JSON/links, append-only logs and whitespace.
+Skipped: unchanged 104 source regressions, numerical imports/manager/worker,
+new admission/solve, full convergence/tank/B2, physical/render and Mac transfer.
+Unknown: actual recursion site/import progress, resource peaks/events, pilot
+accuracy/budgets, convergence/rank, R242 cause and artifact-label origin.
+
+### Previous R258 execution (reviewed by R259)
+
 Last updated 2026-09-26 (America/New_York) for R258.
 **PC/WSL daisy owns the repository.** No transfer; Mac remains released.
 **R258's one-use manufactured spatial BE pilot is INCOMPLETE; the R257
@@ -1197,20 +1234,20 @@ and physical-work limits remain unchanged.
 | Owner | PC/WSL `daisy`; Mac `fire.lan` released after published R161 handoff and R162 receipt. |
 | Checkout | `/home/rharris/git/navier-stokes-vortex-lab`. |
 | Branch/upstream | `main` / `origin/main` |
-| Starting state | R258 same-owner clean main/origin/main at ad8b967 after required fast-forward pull; rharris/daisy, empty stashes, R257 completed. STARTED c34ecab published. |
+| Starting state | R259 same-owner clean main/origin/main at 56ecd3f after required fast-forward pull; rharris/daisy, empty stashes, R258 completed. STARTED 09abd04 published. |
 | Interpreter | /tmp/navier-fenicsx-r229/bin/python verified as 3.12.13 with -I -S; exact environment artifacts verified, setup memory-event predicate refused. Project Python remains 3.12.14. Old /tmp/navier-fenicsx is still partial. |
 | Other owner/process | Mac `fire.lan` released in the published R161 handoff. Local Git cannot inspect another checkout's unpublished state. |
-| Task processes | R258 worker exited 1; saved cleanup empty, recorded PID/cgroup absent. R257 allowance spent 1/1; six historical allowances spent. |
+| Task processes | R259 guarded fake probes only; no numerical import/manager/worker. All seven allowances spent; R258 cleanup empty and recorded PIDs/cgroups absent. |
 | Symbolic environment | `/tmp/navier-r183-sympy/bin/python`, Python 3.12.14, SymPy 1.14.0, mpmath 1.3.0; recreate using `requirements-symbolic.txt` if missing. Existing environments unchanged. |
-| Delivery state | R257 delivery ad8b967 verified by clean pull; R258 STARTED c34ecab published. Result/completion prepared for publication; delivery in Git/final response. PC retains ownership. |
+| Delivery state | R258 delivery 56ecd3f verified by clean pull; R259 STARTED 09abd04 published. Review/completion prepared for publication; delivery in Git/final response. PC retains ownership. |
 
 ## Current result and limits
 
-R258 spent the fixed manufactured pilot on a worker RecursionError before a
-numerical report or resource snapshot. Saved cleanup is empty and the recorded
-PID/cgroup are absent. See the [result](docs/realizability/MANUFACTURED_RESULT_R258.md)
-and [single next task](#next-task). R257 allowance spent 1/1; all six prior
-allocations remain spent. No manufactured accuracy claim is available.
+R259 demonstrates that distinct post-release failures produce the same saved
+R258 stderr. A bounded traceback/stage diagnostic repair is fixed for the next
+source task. See the [review](docs/realizability/MANUFACTURED_FAILURE_REVIEW_R259.md)
+and [single next task](#next-task). R258 remains INCOMPLETE; all seven
+allocations remain spent. No numerical result or new admission is available.
 Earlier results below retain their historical scope.
 
 R103 removes recursive infrastructure certification while preserving process
@@ -1340,47 +1377,41 @@ agent-side POV-Ray backtraces are unavailable.
 
 ## Next task
 
-**Continue in this chat with GPT-6 Astra / high on PC/WSL daisy: review the
-saved R258 INCOMPLETE result, identify the earliest defensible recursion cause
-or precise blocker, and publish a source-only repair contract. Stop before a
-new admission or numerical launch.** The prior 22% context snapshot belongs to
-the earlier supplied session; the current chat has a short, connected failure
-handoff. No model or chat switch has been performed.
+**Continue in this chat with GPT-6 Sol / high on PC/WSL daisy: implement the
+fixed R259 bounded traceback/stage diagnostic repair and tests, publish and
+stop for Astra/high source/admission review.** The working diagnosis and
+implementation contract are directly connected; no current context fraction
+was supplied. No chat/model switch is performed by this recommendation.
 
-Read the [R258 result](docs/realizability/MANUFACTURED_RESULT_R258.md),
-[ten raw files and hashes](docs/realizability/evidence/r258/run_hashes.json),
-[saved-data audit](docs/realizability/evidence/r258/audit.json),
-[R257 admission](docs/realizability/MANUFACTURED_ADMISSION_R257.md),
-[R255 contract](docs/realizability/VERIFICATION_MILESTONE_R255.md) and
-[R256 integration](docs/realizability/MANUFACTURED_INTEGRATION_R256.md).
+Read the [R259 review and complete contract](docs/realizability/MANUFACTURED_FAILURE_REVIEW_R259.md),
+[four-case probe](docs/realizability/evidence/r259/probe.json),
+[audit](docs/realizability/evidence/r259/audit.json), and
+[R258 result](docs/realizability/MANUFACTURED_RESULT_R258.md).
 
-1. Follow the full clean Continue synchronization, ownership and STARTED
-   publication protocol. Confirm the R258 result delivery and no conflicting
-   open session. Preserve all seven spent allocations and the retained raw
-   directory. Recheck saved file hashes, four INCOMPLETE gates, empty cleanup,
-   recorded PID/cgroup absence, and the absence of numerical/resource reports.
-2. Trace the manufactured worker's post-release path using saved evidence,
-   source reading, static analysis and standard-library or injected-fake tests.
-   Distinguish a demonstrated recursive call from a plausible one: the one-line
-   worker log has no traceback and does not locate the failure. State whether
-   FEM import progress can be established; do not infer it from timing alone.
-3. Publish either a narrowly scoped source-only repair/test contract within
-   R255 scientific/resource gates, or a precise blocker and evidence needed to
-   resolve it. A new source admission and one-use allocation require a later
-   separate review. Do not reuse R257's spent directory, rerun the worker,
-   import numerical modules, assemble/solve, install, relax gates or allocate a
-   replacement in this review.
-4. Update result interpretation, evidence checks, request/lifecycle/handoff
-   and current status pointers. Stop at this research-decision boundary. Saved
-   R246/R253 remain PASS, R242 INCOMPLETE, R229 setup predicate false; full
-   convergence/tank/B2, physical/render and Mac transfer remain outside scope.
+1. Follow clean Continue synchronization, ownership and STARTED publication.
+   Preserve all seven spent allocations, original bytes and prior scientific
+   results. R258 lacks an actual traceback; do not assume the recursion site.
+2. Implement only the R259 failure-record and fixed stage callback/marker
+   contract in the manufactured worker/driver, an optional small stdlib helper,
+   and focused tests. Preserve exit 1, scientific/resource gates, operation
+   order/counts, numerical envelope, solver, old workers/callers and evidence.
+3. Exercise the bounded traceback, safe-message/UTF-8 byte limits, stages,
+   write/refusal paths and successful call order using stdlib/injected fakes.
+   Run all 104 existing source regressions plus new checks and saved R246/R253
+   replay; verify R258 raw bytes. No numerical modules or real manager/worker.
+4. Publish source changes/tests and stop. No caller, new allocation/admission,
+   reservation, FEM import, reassembly or solve in this source task. Do not
+   increase recursion limits or rewrite mathematics to address an unlocated
+   failure. Full convergence/tank/B2, physical/render and Mac transfer excluded.
 
-Completion: one defensible source-only repair contract or precise blocker,
-scoped publication, and no new numerical attempt or admission. Astra/high fits
-failure analysis and any scientific interpretation; a subsequent fixed source
-repair can use Sol/high, while any later admission needs separate review.
-Explicitly recommend `/new` or continuing this chat at completion. Next prompt:
-**Continue**.
+Completion: implemented diagnostic contract with focused/full fake checks,
+unchanged scientific gates and preserved evidence, scoped publication, and no
+numerical attempt. Return to Astra/high for separate source/admission review;
+any later execution needs a fresh allocation. Recommend a different model only
+if a scientific contract change or unresolved design question warrants it.
+The [official Sol model page](https://developers.openai.com/api/docs/models/gpt-6-sol)
+confirms high support; fit is judgment, account access unverified. Explicitly
+recommend `/new` or continuing this chat at completion. Next prompt: **Continue**.
 
 ### Historical R230 single-fixture execution task (R232 spent)
 

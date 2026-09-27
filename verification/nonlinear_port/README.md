@@ -1,6 +1,10 @@
 # Isolated nonlinear port verification source — R195/R196/R222/R225/R226
 
-[R258 manufactured pilot result](../../docs/realizability/MANUFACTURED_RESULT_R258.md) is INCOMPLETE: the held worker exited 1 with a one-line RecursionError before a numerical report or resource snapshot. The R257 one-use allowance is spent 1/1; cleanup is empty. Follow the [single current task](../../SESSION_HANDOFF.md#next-task) for Astra/high saved-failure review, with no new admission or launch.
+[R259 failure review](../../docs/realizability/MANUFACTURED_FAILURE_REVIEW_R259.md) establishes that R258's one-line
+RecursionError cannot locate the failing call. Four guarded fake paths
+pass; all 84 saved originals/seven spent reservations and 44 source bindings
+verify. The next task is a bounded traceback/stage diagnostic repair, with
+zero new attempts admitted. Follow the [single current task](../../SESSION_HANDOFF.md#next-task).
 
 **Source and algebra evidence, not a validated FEM solver.** The
 [R195 fixture review](../../docs/realizability/NONLINEAR_VERIFICATION_R195.md)

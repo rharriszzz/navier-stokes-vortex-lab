@@ -1,0 +1,54 @@
+{
+  "actual_r258_failure_site": "undetermined",
+  "cases": [
+    {
+      "events": [
+        "held_returned_fake_release",
+        "pinned_import"
+      ],
+      "exit_code": 1,
+      "injected_failure": "pinned_import",
+      "stderr": "RecursionError: maximum recursion depth exceeded\n"
+    },
+    {
+      "events": [
+        "held_returned_fake_release",
+        "imports_returned_fake_modules",
+        "driver_entry"
+      ],
+      "exit_code": 1,
+      "injected_failure": "driver_entry",
+      "stderr": "RecursionError: maximum recursion depth exceeded\n"
+    },
+    {
+      "events": [
+        "held_returned_fake_release",
+        "imports_returned_fake_modules",
+        "create_cube"
+      ],
+      "exit_code": 1,
+      "injected_failure": "create_cube",
+      "stderr": "RecursionError: maximum recursion depth exceeded\n"
+    },
+    {
+      "events": [
+        "held_returned_fake_release",
+        "imports_returned_fake_modules",
+        "driver_returned_fake_payload",
+        "fake_payload_saved",
+        "fake_completion"
+      ],
+      "exit_code": 0,
+      "injected_failure": null,
+      "stderr": ""
+    }
+  ],
+  "checks": 4,
+  "limitation": "Injected control-flow proof; does not reproduce real FEM failure",
+  "numerical_import_guard": true,
+  "numerical_modules_loaded": [],
+  "real_worker_or_manager": false,
+  "status": "PASS",
+  "successful_fake_path_checked": true,
+  "three_distinct_sites_match_saved_log": true
+}

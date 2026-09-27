@@ -1,6 +1,10 @@
 # B1 solver environment
 
-[R258 manufactured pilot result](MANUFACTURED_RESULT_R258.md) is INCOMPLETE: the held worker exited 1 with a one-line RecursionError before a numerical report or resource snapshot. The R257 one-use allowance is spent 1/1; cleanup is empty. Follow the [single current task](../../SESSION_HANDOFF.md#next-task) for Astra/high saved-failure review, with no new admission or launch.
+[R259 failure review](MANUFACTURED_FAILURE_REVIEW_R259.md) establishes that R258's one-line
+RecursionError cannot locate the failing call. Four guarded fake paths
+pass; all 84 saved originals/seven spent reservations and 44 source bindings
+verify. The next task is a bounded traceback/stage diagnostic repair, with
+zero new attempts admitted. Follow the [single current task](../../SESSION_HANDOFF.md#next-task).
 
 Historical PC status: [R232's one-use Poiseuille result](POISEUILLE_RESULT_R232.md)
 is INCOMPLETE at PETSc symbolic LU, and the single numerical allocation is

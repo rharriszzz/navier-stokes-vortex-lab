@@ -1,6 +1,10 @@
 # Physical Realizability Plan for `navier-stokes-vortex-lab`
 
-[R258 manufactured pilot result](docs/realizability/MANUFACTURED_RESULT_R258.md) is INCOMPLETE: the held worker exited 1 with a one-line RecursionError before a numerical report or resource snapshot. The R257 one-use allowance is spent 1/1; cleanup is empty. Follow the [single current task](SESSION_HANDOFF.md#next-task) for Astra/high saved-failure review, with no new admission or launch.
+[R259 failure review](docs/realizability/MANUFACTURED_FAILURE_REVIEW_R259.md) establishes that R258's one-line
+RecursionError cannot locate the failing call. Four guarded fake paths
+pass; all 84 saved originals/seven spent reservations and 44 source bindings
+verify. The next task is a bounded traceback/stage diagnostic repair, with
+zero new attempts admitted. Follow the [single current task](SESSION_HANDOFF.md#next-task).
 
 R232's [single-fixture result](docs/realizability/POISEUILLE_RESULT_R232.md)
 is INCOMPLETE: the worker reached PETSc symbolic LU and exited 1 after a
@@ -22,7 +26,7 @@ diagnostic; 62 standard-library tests pass without numerical imports.
 bounded diagnostic fixture; [R238](docs/realizability/POISEUILLE_RESULT_R238.md)
 spent it 1/1 on a reported numeric LU zero pivot, with empty cleanup but no
 numerical/resource report. All three allowances are spent. Follow the
-[handoff task](SESSION_HANDOFF.md#next-task) for R258 saved-failure review.
+[handoff task](SESSION_HANDOFF.md#next-task) for the R259 diagnostic repair.
 No tank/hardware route or feasible contraction range is established.
 
 R188 priority update (2026-09-22): establish measurable essential dynamical
