@@ -10251,3 +10251,27 @@ Changed: R272 design and seven evidence files, seven current pages, SESSION_HAND
 Next: use `/new` at this saved design boundary, select GPT-6 Sol/high, then Continue for only the fixed R272 source/fake-test integration and publication; stop for Astra/high source/admission review before numerical work. No current context percentage supplied. OpenAI Docs skill searched/opened https://developers.openai.com/api/docs/models/gpt-6-sol and https://developers.openai.com/api/docs/models/gpt-6-astra to verify high support; task fit is judgment, account availability unverified, no switch occurred. PC retains ownership; Mac released. Clean pull verified R271 delivery 83fb7c9; R272 STARTED 2e18140 published after sandbox .git write denial was resolved through host permission. Completion prepared for scoped publication; delivery hash/result belongs in Git/final response, no post-push edit.
 
 Publication-check note: initial local-link check encountered its own not-yet-created checks.json output; bootstrap handling was corrected and the final pass includes that link. Temporary prose-formatting errors were corrected before staging. No runtime source, workload, admission or allocation was involved.
+
+## R273 — 2026-11-01 — Physics-first project direction
+
+**User statement (verbatim):**
+
+> I have to say I got tired of the two navier stokes projects, because I did not understand what was going on.  I somewhat know pdes, but I wand to have a more engineering or physics based approach.  Let others deal with the math singularity.
+
+**User request (verbatim):**
+
+> Suggest a place in one of these repos to record this information, tell me, and then record it.
+
+**Scope:** Record the owner's change of research interest. Preserve
+prior evidence and historical tasks, but stop treating the numerical R272
+handoff or a bare `Continue` as authorization to restart that research.
+
+**Outcome:** Added `PROJECT_DIRECTION.md` at the repo root and priority
+links and pause notices in README, AGENTS, PROJECT_TRACKS, STATUS and
+SESSION_HANDOFF. The other Navier–Stokes repository was not modified.
+
+**Validation and limits:** This was documentation-only. No new simulation,
+solver, physical experiment or hardware work was undertaken. No numerical
+or scientific checks were performed.
+
+**Next task:** None. Wait for the owner to choose a specific future goal.

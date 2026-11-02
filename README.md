@@ -1,5 +1,11 @@
 # navier-stokes-vortex-lab
 
+**Current direction (2026-11-01):** The owner has paused the earlier
+singularity-related research. If fluid work resumes, it should emphasize
+understandable physics, realistic apparatus, and measurable engineering
+questions. Read [PROJECT_DIRECTION.md](PROJECT_DIRECTION.md) before any
+older plan or continuation request.
+
 A reproducible POV-Ray + Python visualization project for a **finite-scale laboratory analogue** of a contracting, stretching, swirling Navier–Stokes flow with localized oscillatory perturbations.
 
 This repository is intended to separate:
@@ -41,14 +47,11 @@ The tests are planned, not yet run. For the M4 Mac's remaining software
 installation and movie-readiness checks, use
 [the Mac setup and benchmark guide](docs/realizability/MAC_INSTALL_AND_BENCHMARK_PLAN.md).
 
-To resume work in a Codex session opened in this repository, say **Continue**.
-The [documented workflow](AGENTS.md#short-continuation-request) includes the
-current task, checks, logging, the next handoff, commit, and push. See
-[SESSION_HANDOFF.md](SESSION_HANDOFF.md) for the bounded task and recommended
-model/effort. User requests and outcomes are recorded
-in [REQUEST_LOG.md](REQUEST_LOG.md), following the persistent instructions in
-[AGENTS.md](AGENTS.md). The scientific benchmark defaults and original work
-packages are in [BOUNDARY_CONTROL_HANDOFF.md](BOUNDARY_CONTROL_HANDOFF.md).
+The previous Codex **Continue** task in [SESSION_HANDOFF.md](SESSION_HANDOFF.md)
+is now **paused**, not an automatic next step. A new explicit user direction
+is required. [PROJECT_DIRECTION.md](PROJECT_DIRECTION.md) takes precedence.
+Earlier requests, evidence and processes remain in [REQUEST_LOG.md](REQUEST_LOG.md),
+[AGENTS.md](AGENTS.md), and [BOUNDARY_CONTROL_HANDOFF.md](BOUNDARY_CONTROL_HANDOFF.md).
 
 ## Repository layout
 

@@ -1,5 +1,12 @@
 # Current session handoff
 
+**Priority override (2026-11-01):** See
+[PROJECT_DIRECTION.md](PROJECT_DIRECTION.md). The owner now prefers a
+physics/engineering-first approach if fluid mechanics work ever resumes.
+The singularity-related numerical continuation described below is
+**PAUSED**, not active. No new experiments or computational workloads
+are authorized by this documentation change.
+
 Last updated 2026-09-27 (America/New_York) for R272.
 **PC/WSL daisy owns the repository.** No transfer; Mac remains released.
 **R272 fixes a source-only n=4 comparison contract; no execution is admitted.**
@@ -1839,6 +1846,12 @@ write access. The tool sandbox denies `.git` writes, `ps`, unrestricted
 agent-side POV-Ray backtraces are unavailable.
 
 ## Next task
+
+**PAUSED by the 2026-11-01 direction change.** The proposal below is historical,
+not a current task. Obtain new, explicit technical direction before
+any numerical implementation or execution. See
+[PROJECT_DIRECTION.md](PROJECT_DIRECTION.md).
+
 
 **Use `/new`, select GPT-6 Sol / high, then Continue on PC/WSL daisy to
 implement only the fixed R272 n=4 source/evidence/comparison contract and

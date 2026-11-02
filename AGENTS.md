@@ -1,5 +1,11 @@
 # Repository agent instructions
 
+**Priority override (2026-11-01):** Read
+[PROJECT_DIRECTION.md](PROJECT_DIRECTION.md) first. The mathematical
+singularity-related work and R272 continuation are paused. A bare
+`Continue` does **not** authorize numerical or research work.
+Obtain an explicit new task instead of following archived handoffs.
+
 ## Every session
 
 - Prioritize good progress at each step (R217–R219). Do not reduce word count if doing so might impair an agent's progress. Preserve enough rationale, constraints, known failures, evidence and completion criteria for informed work; when unsure whether context is needed, retain it. Judge steps by useful results and clear completion points, not document length. Historical size-reduction targets are superseded by this preference.
@@ -19,4 +25,6 @@
 
 ## Current task
 
-Follow [the current handoff](SESSION_HANDOFF.md#next-task). Historical full instructions and handoff are preserved byte-for-byte in [`docs/history/AGENTS_BEFORE_R092_IMPLEMENTATION.md`](docs/history/AGENTS_BEFORE_R092_IMPLEMENTATION.md) and [`docs/history/SESSION_HANDOFF_BEFORE_R092_IMPLEMENTATION.md`](docs/history/SESSION_HANDOFF_BEFORE_R092_IMPLEMENTATION.md). See [the archive index](docs/history/R092_ARCHIVE_INDEX.md) for original link context and heading locations.
+No new technical work is authorized. The former
+[handoff task](SESSION_HANDOFF.md#next-task) is historical and paused by
+[PROJECT_DIRECTION.md](PROJECT_DIRECTION.md). Historical full instructions and handoff are preserved byte-for-byte in [`docs/history/AGENTS_BEFORE_R092_IMPLEMENTATION.md`](docs/history/AGENTS_BEFORE_R092_IMPLEMENTATION.md) and [`docs/history/SESSION_HANDOFF_BEFORE_R092_IMPLEMENTATION.md`](docs/history/SESSION_HANDOFF_BEFORE_R092_IMPLEMENTATION.md). See [the archive index](docs/history/R092_ARCHIVE_INDEX.md) for original link context and heading locations.
