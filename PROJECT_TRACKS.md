@@ -1,11 +1,12 @@
 # Project Tracks
 
-**Priority override (2026-11-01):** See
-[PROJECT_DIRECTION.md](PROJECT_DIRECTION.md). The owner now prefers a
-physics/engineering-first approach if fluid mechanics work ever resumes.
-The singularity-related numerical continuation described below is
-**PAUSED**, not active. No new experiments or computational workloads
-are authorized by this documentation change.
+**Direction clarification (2026-11-01):** See
+[PROJECT_DIRECTION.md](PROJECT_DIRECTION.md). Physics/engineering is a
+stated preference, not an automatic override of the mathematical/numerical
+plan below. If the user requests `Continue` or otherwise leaves the
+direction unclear, ask whether to follow the older R272 task, choose a
+physics/engineering objective, or do neither. **Wait for the answer**
+before starting technical work. Specific new instructions govern their scope.
 
 [R272 spatial comparison design](docs/realizability/MANUFACTURED_SPATIAL_DESIGN_R272.md) fixes a separate n=4 source
 contract with full sparse and both-degree angular evidence. The prospective
