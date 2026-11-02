@@ -10275,3 +10275,30 @@ solver, physical experiment or hardware work was undertaken. No numerical
 or scientific checks were performed.
 
 **Next task:** None. Wait for the owner to choose a specific future goal.
+
+## R274 — 2026-11-01 — Ask before choosing research direction
+
+**User clarification (verbatim):**
+
+> I am not sure it should take precedence, although it is true.  I would want it to ask me, and then wait for  an answer.
+
+**User approval (verbatim):**
+
+> perfect
+
+**Scope:** Correct R273's overly strong priority override. The
+physics/engineering preference is genuine but does not automatically
+replace the singularity-related R272 handoff. A vague instruction,
+especially `Continue`, requires an explicit choice from the owner.
+
+**Outcome:** Updated `PROJECT_DIRECTION.md`, `README.md`,
+`AGENTS.md`, `PROJECT_TRACKS.md`, `STATUS.md`, and
+`SESSION_HANDOFF.md`: if direction is unspecified, ask whether to
+resume the prior numerical task, take a physics/engineering direction,
+or leave both inactive; then wait. Specific explicit instructions
+remain actionable. Prior evidence, gates, plans and the R273 record
+are preserved.
+
+**Checks and boundaries:** Documentation only. No numerical workers,
+CFD, render, experiment, hardware task, or tests were run. The earlier
+handoff remains conditional, not erased. No other repository changed.
