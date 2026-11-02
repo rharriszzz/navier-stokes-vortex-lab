@@ -1,5 +1,12 @@
 # Project Tracks
 
+**Priority override (2026-11-01):** See
+[PROJECT_DIRECTION.md](PROJECT_DIRECTION.md). The owner now prefers a
+physics/engineering-first approach if fluid mechanics work ever resumes.
+The singularity-related numerical continuation described below is
+**PAUSED**, not active. No new experiments or computational workloads
+are authorized by this documentation change.
+
 [R272 spatial comparison design](docs/realizability/MANUFACTURED_SPATIAL_DESIGN_R272.md) fixes a separate n=4 source
 contract with full sparse and both-degree angular evidence. The prospective
 16-MiB/1-MiB evidence caps leave physical and whole-task resource gates unchanged;
