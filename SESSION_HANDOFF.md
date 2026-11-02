@@ -1,11 +1,12 @@
 # Current session handoff
 
-**Priority override (2026-11-01):** See
-[PROJECT_DIRECTION.md](PROJECT_DIRECTION.md). The owner now prefers a
-physics/engineering-first approach if fluid mechanics work ever resumes.
-The singularity-related numerical continuation described below is
-**PAUSED**, not active. No new experiments or computational workloads
-are authorized by this documentation change.
+**Direction clarification (2026-11-01):** See
+[PROJECT_DIRECTION.md](PROJECT_DIRECTION.md). Physics/engineering is a
+stated preference, not an automatic override of the mathematical/numerical
+plan below. If the user requests `Continue` or otherwise leaves the
+direction unclear, ask whether to follow the older R272 task, choose a
+physics/engineering objective, or do neither. **Wait for the answer**
+before starting technical work. Specific new instructions govern their scope.
 
 Last updated 2026-09-27 (America/New_York) for R272.
 **PC/WSL daisy owns the repository.** No transfer; Mac remains released.
@@ -1847,10 +1848,11 @@ agent-side POV-Ray backtraces are unavailable.
 
 ## Next task
 
-**PAUSED by the 2026-11-01 direction change.** The proposal below is historical,
-not a current task. Obtain new, explicit technical direction before
-any numerical implementation or execution. See
-[PROJECT_DIRECTION.md](PROJECT_DIRECTION.md).
+**Conditional task.** The R272 proposal below is preserved and may be
+resumed if the owner selects it. The physics/engineering preference is
+not an automatic veto. A bare or ambiguous `Continue` requires asking
+the owner which direction to take and **waiting for an answer**.
+See [PROJECT_DIRECTION.md](PROJECT_DIRECTION.md).
 
 
 **Use `/new`, select GPT-6 Sol / high, then Continue on PC/WSL daisy to
