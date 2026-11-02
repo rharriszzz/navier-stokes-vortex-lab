@@ -1,8 +1,15 @@
 # Project direction — physics and engineering first
 
-**Owner's decision: 2026-11-01.** This statement supersedes the priorities
-and automatic continuation instructions in older research handoffs. It does
-not invalidate, alter or delete prior calculations, documentation or evidence.
+**Owner's preference: 2026-11-01; clarified in a follow-up.** This document
+records an interest in physics- and engineering-based questions. It is **not a
+standing priority override** of earlier research plans or an instruction to
+abandon them. Preserve the old plans, calculations, and evidence.
+
+**When a new request leaves the direction unclear (especially `Continue`),
+ask the owner whether to pursue the prior numerical plan, a physics/engineering
+investigation, or neither. Wait for an answer before selecting a research task,
+implementing it, or launching any related computation.** A sufficiently
+specific new request supplies that choice and can proceed within its scope.
 
 ## Why the direction changed
 
@@ -16,12 +23,12 @@ the previous research was false or that it could not succeed.
 
 ## What this means for future work
 
-- **Pause the singularity-oriented research program**, including the R272
-  n=4 numerical-comparison handoff and related solver investigations.
-  Do not restart them merely because an old handoff says `Continue`.
-- **Do not automatically start a different research project.** The two
-  Navier–Stokes repos can remain inactive indefinitely. A new concrete
-  question and explicit approval are required before substantive work.
+- The older singularity-oriented work, including the R272 n=4 handoff,
+  is **available as an option**, not automatically canceled or chosen.
+  If a request such as `Continue` does not identify which direction to take,
+  explicitly ask, and wait.
+- Likewise, do not automatically switch to an engineering/physics project.
+  Neither project needs to be active until the owner selects the next goal.
 - If fluid mechanics becomes interesting again, begin with an intelligible
   physical phenomenon, a realistic apparatus, and quantities that could be
   observed or measured.
@@ -43,7 +50,8 @@ or moving walls create and control swirl in water; actuator power and
 pressure requirements; and whether a small bench experiment agrees with
 a simple model. These examples are suggestions, not a new project plan.
 
-A future proposal should start by answering:
+If the owner chooses an engineering/physics direction, a proposal should
+start by answering:
 1. What physical effect are we trying to understand?
 2. What apparatus might actually produce it?
 3. What should happen, and why?
@@ -60,8 +68,10 @@ physics-first investigation, but only if the owner decides to return.
 `navier-stokes-physical-approximation` remains more closely associated
 with the mathematical singularity construction and is not a current priority.
 
-This decision is recorded here; **the other repository is unchanged**.
+This preference is recorded here; **the other repository is unchanged**.
 Preserve old plans, negative results, resource gates, and experimental
-evidence. Old `SESSION_HANDOFF.md#next-task` text is historical and paused.
-A bare `Continue` must not initiate that task. Obtain a new explicit
-technical objective before work or execution.
+evidence. The `SESSION_HANDOFF.md#next-task` remains a viable *candidate*
+for future work, but it is not to be selected solely on an ambiguous
+`Continue`. Ask which direction the owner wants, and **stop until the
+owner answers**. Do not treat this preference as vetoing an explicit request
+to resume the prior mathematical/numerical work.

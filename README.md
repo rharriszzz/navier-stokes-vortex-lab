@@ -1,10 +1,10 @@
 # navier-stokes-vortex-lab
 
-**Current direction (2026-11-01):** The owner has paused the earlier
-singularity-related research. If fluid work resumes, it should emphasize
-understandable physics, realistic apparatus, and measurable engineering
-questions. Read [PROJECT_DIRECTION.md](PROJECT_DIRECTION.md) before any
-older plan or continuation request.
+**Research preference (2026-11-01):** The owner is interested in
+understandable physical and engineering questions, but has not automatically
+superseded the earlier numerical plan. When a `Continue` request is ambiguous,
+ask which direction to take and wait for the answer.
+See [PROJECT_DIRECTION.md](PROJECT_DIRECTION.md).
 
 A reproducible POV-Ray + Python visualization project for a **finite-scale laboratory analogue** of a contracting, stretching, swirling Navier–Stokes flow with localized oscillatory perturbations.
 
@@ -48,10 +48,13 @@ installation and movie-readiness checks, use
 [the Mac setup and benchmark guide](docs/realizability/MAC_INSTALL_AND_BENCHMARK_PLAN.md).
 
 The previous Codex **Continue** task in [SESSION_HANDOFF.md](SESSION_HANDOFF.md)
-is now **paused**, not an automatic next step. A new explicit user direction
-is required. [PROJECT_DIRECTION.md](PROJECT_DIRECTION.md) takes precedence.
-Earlier requests, evidence and processes remain in [REQUEST_LOG.md](REQUEST_LOG.md),
-[AGENTS.md](AGENTS.md), and [BOUNDARY_CONTROL_HANDOFF.md](BOUNDARY_CONTROL_HANDOFF.md).
+remains a candidate, but is not automatically selected when a request leaves
+the choice of direction unclear. Ask whether the owner wants that numerical
+task, a physics/engineering direction, or neither; **wait for an answer**.
+A specific user request determines its own scope. See
+[PROJECT_DIRECTION.md](PROJECT_DIRECTION.md). Earlier requests and evidence
+remain in [REQUEST_LOG.md](REQUEST_LOG.md), [AGENTS.md](AGENTS.md), and
+[BOUNDARY_CONTROL_HANDOFF.md](BOUNDARY_CONTROL_HANDOFF.md).
 
 ## Repository layout
 

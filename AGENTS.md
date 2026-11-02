@@ -1,10 +1,14 @@
 # Repository agent instructions
 
-**Priority override (2026-11-01):** Read
-[PROJECT_DIRECTION.md](PROJECT_DIRECTION.md) first. The mathematical
-singularity-related work and R272 continuation are paused. A bare
-`Continue` does **not** authorize numerical or research work.
-Obtain an explicit new task instead of following archived handoffs.
+**Direction check (2026-11-01):** Read
+[PROJECT_DIRECTION.md](PROJECT_DIRECTION.md) before choosing research work.
+The owner's physics/engineering preference does **not** automatically
+supersede the R272 mathematical/numerical handoff. If a request is ambiguous
+about the direction—especially a bare `Continue`—ask the owner whether
+to proceed with R272, shift to an engineering/physics question, or leave both
+inactive. **Stop and wait for the owner's answer**; no technical task,
+numerical launch, or implicit choice may occur first. Follow a new explicit,
+specific instruction within its authorized scope.
 
 ## Every session
 
@@ -25,6 +29,7 @@ Obtain an explicit new task instead of following archived handoffs.
 
 ## Current task
 
-No new technical work is authorized. The former
-[handoff task](SESSION_HANDOFF.md#next-task) is historical and paused by
-[PROJECT_DIRECTION.md](PROJECT_DIRECTION.md). Historical full instructions and handoff are preserved byte-for-byte in [`docs/history/AGENTS_BEFORE_R092_IMPLEMENTATION.md`](docs/history/AGENTS_BEFORE_R092_IMPLEMENTATION.md) and [`docs/history/SESSION_HANDOFF_BEFORE_R092_IMPLEMENTATION.md`](docs/history/SESSION_HANDOFF_BEFORE_R092_IMPLEMENTATION.md). See [the archive index](docs/history/R092_ARCHIVE_INDEX.md) for original link context and heading locations.
+The former [handoff task](SESSION_HANDOFF.md#next-task) is retained as
+a possible next task, but it is **not selected by default** when `Continue`
+is ambiguous. Ask which direction to follow and wait for an answer,
+as explained in [PROJECT_DIRECTION.md](PROJECT_DIRECTION.md). Historical full instructions and handoff are preserved byte-for-byte in [`docs/history/AGENTS_BEFORE_R092_IMPLEMENTATION.md`](docs/history/AGENTS_BEFORE_R092_IMPLEMENTATION.md) and [`docs/history/SESSION_HANDOFF_BEFORE_R092_IMPLEMENTATION.md`](docs/history/SESSION_HANDOFF_BEFORE_R092_IMPLEMENTATION.md). See [the archive index](docs/history/R092_ARCHIVE_INDEX.md) for original link context and heading locations.
