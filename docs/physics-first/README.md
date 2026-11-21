@@ -41,6 +41,8 @@ Reproduce the rows with `python -m physics_first.water_scales` from the reposito
 
 ### Physical test after the reference
 
+R281 measured the energy precision at tenfold pressure amplitude. [100 Pa comparison](ACOUSTIC_100PA.md) · [Next task](../../SESSION_HANDOFF.md#next-task)
+
 R279/R280 completed the acoustic control with SU2 and CoolProp. Speed, amplitude, mass and momentum met the specified checks. The signed energy difference is near the precision floor at 10 Pa. [Results and procedure](ACOUSTIC_RESULT.md) · [Installation](SU2_WATER_SETUP.md)
 
 Keep the cylinder, taper, velocity and T₀. For compressible water integrate **dp/dr = ρ(p,T₀)uθ²/r** inward from the initial wall pressure, then set ρ and e from the same EOS and E = e+|u|²/2. The wall pressure is subsequently free to evolve. Regularity, zero tangential wall traction, insulation and periodic ends admit no energy input or net torque. This is a balanced initial state. Viscosity immediately changes the profile, the liquid can launch sound and its temperature evolves.

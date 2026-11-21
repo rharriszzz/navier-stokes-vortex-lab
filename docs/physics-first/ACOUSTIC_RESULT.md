@@ -46,4 +46,6 @@ water_python="$HOME/.local/opt/water-acoustics/tools/bin/python"
 
 The generated inputs and final binary restart reproduced byte-for-byte on daisy. The unit tests also compare sound speed with an independent isentropic density secant and check the periodic input, phase, amplitude and energy units.
 
-**Next proposed decision.** Repeat only the 128-cell, 512-step acoustic case at 100 Pa, keeping the background, transport, method and conservation accounting fixed. Linear wave energy grows by a factor of 100. Compare absolute and wave-normalized energy defects against this saved 10 Pa run. This single control can distinguish a precision floor from a defect that grows with wave energy, before investing in thermal claims or a compressible vortex simulation.
+**R281 follow-up.** The [100 Pa control and precision comparison](ACOUSTIC_100PA.md) are complete.
+
+**Original proposed decision.** Repeat only the 128-cell, 512-step acoustic case at 100 Pa, keeping the background, transport, method and conservation accounting fixed. Linear wave energy grows by a factor of 100. Compare absolute and wave-normalized energy defects against this saved 10 Pa run. This single control can distinguish a precision floor from a defect that grows with wave energy, before investing in thermal claims or a compressible vortex simulation.

@@ -2077,3 +2077,7 @@ PC/WSL2 daisy retains research/water-vortex-limits. During R279 the owner author
 ## R281 STARTED · 2026-11-21T06:16:28+00:00
 
 PC/WSL2 daisy, rharris, Linux x86_64, /home/rharris/git/navier-stokes-vortex-lab. Clean research/water-vortex-limits at fetched origin/research/water-vortex-limits 52ee938 after fast-forward synchronization. Single worktree, empty stashes, Mac released. One 100 Pa water acoustic control on the existing solver and comparison with the matched 10 Pa case. Released: no.
+
+## R281 COMPLETED · 2026-11-21T06:19:16+00:00
+
+PC/WSL2 daisy, research/water-vortex-limits, start record 4ffe254. One 100 Pa control completed and both amplitudes' measurements reproduced from the raw files. The maximum normalized quarter-period energy discrepancy fell to 0.280%, and the full-trip energy discrepancy still exceeds the resolved wave-energy loss. Changed the acoustic Python code and tests, added report/JSON, and updated navigation, status, request log and handoff. Seven targeted tests passed. No full suite, additional CFD, FEM or rendering. Use `/new` after review for the time-zero radial vortex balance check. [Comparison and limitations](docs/physics-first/ACOUSTIC_100PA.md) · [Next task](SESSION_HANDOFF.md#next-task). Released: no.

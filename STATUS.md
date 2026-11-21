@@ -1,5 +1,7 @@
 # Project status
 
+**R281 · 2026-11-21.** At 100 Pa the largest quarter-period energy defect was 0.280% of initial wave energy, down from 45.4% at 10 Pa. Both waves had the same measured speed to 0.001 m/s. Heating remains unresolved. [Measured comparison](docs/physics-first/ACOUSTIC_100PA.md) · [Next task](SESSION_HANDOFF.md#next-task)
+
 **R280 · 2026-11-21.** SU2 8.6.0 with CoolProp water is installed as `su2-water` on daisy. All six CFD settings closed the mass and momentum budgets. Both fine grids passed the 10 Pa wave speed and amplitude criteria at both time steps. The shifted total-energy differences cannot resolve percent-level acoustic losses at 10 Pa. [Results and precision limits](docs/physics-first/ACOUSTIC_RESULT.md) · [Next task](SESSION_HANDOFF.md#next-task)
 
 **R277 · 2026-11-21.** The finite-cylinder spreading reference passed. After 5 s the peak moved from 10.000 to 11.186 mm, and the axis-to-30 mm pressure rise fell from 15.902 to 12.491 Pa. Energy loss agrees with integrated shear dissipation. A compressible water run and the physical concentration limit remain open. [Results and figure](docs/physics-first/SPREADING_RESULT.md) · [Physics-first plan](docs/physics-first/README.md) · [Next task](SESSION_HANDOFF.md#next-task)

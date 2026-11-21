@@ -1,4 +1,4 @@
-"""SI reference properties and isentropic initial states for the 10 Pa water wave."""
+"""SI reference properties and isentropic initial states for a periodic water wave."""
 
 import CoolProp.CoolProp as CP
 

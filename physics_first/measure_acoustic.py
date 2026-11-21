@@ -43,7 +43,7 @@ def shifted(integral, e0):
     return np.array([mass, mx, my, energy - e0 * mass], dtype=np.longdouble)
 
 
-def measure(directory, cells, steps):
+def measure(directory, cells, steps, amplitude_pa=AMPLITUDE):
     base = background()
     state = CP.AbstractState("HEOS", "Water")
     first = read_restart(directory / "state_00000.dat")
@@ -58,6 +58,12 @@ def measure(directory, cells, steps):
     angles = 2*pi * (x / LENGTH + 0.5 / cells)
     start = np.column_stack([first[k] for k in CONSERVED])
     snapshots = [dict(step=0, time_s=0.0, **wave(start, weights, angles, base, state))]
+    # The imposed velocity fixes the normalization independently of EOS pressure recovery.
+    velocity_scale = amplitude_pa / (base["rho_kg_m3"] * base["sound_speed_m_s"])
+    if not 0 < amplitude_pa < P0 or not np.allclose(
+        start[:, 1] / start[:, 0], velocity_scale * np.sin(angles), rtol=1e-10, atol=1e-14 * velocity_scale
+    ):
+        raise ValueError("requested amplitude does not match the initial velocity field")
     interval_start = start
     e0 = base["internal_energy_J_kg"]
     net_out = np.zeros(4, dtype=np.longdouble)
@@ -93,14 +99,13 @@ def measure(directory, cells, steps):
     defects = np.abs([i["defect"] for i in intervals])
     wave_energy = initial["wave_energy_J_per_m2"]
     mass = base["rho_kg_m3"] * LENGTH
-    speed = AMPLITUDE / (base["rho_kg_m3"] * base["sound_speed_m_s"])
     return dict(cells=cells, steps=steps, dt_s=dt, acoustic_cfl=cells/steps,
                 measured_phase_speed_m_s=speed_ratio * base["sound_speed_m_s"],
                 speed_error_pct=100 * (speed_ratio - 1),
-                amplitude_error_pct=100 * (last["amplitude_pa"] / AMPLITUDE - 1),
+                amplitude_error_pct=100 * (last["amplitude_pa"] / amplitude_pa - 1),
                 amplitude_change_pct=100 * (last["amplitude_pa"] / initial["amplitude_pa"] - 1),
                 relative_mass_defect_max=defects[:, 0].max() / mass,
-                relative_momentum_defect_max=np.linalg.norm(defects[:, 1:3], axis=1).max() / (mass*speed),
+                relative_momentum_defect_max=np.linalg.norm(defects[:, 1:3], axis=1).max() / (mass*velocity_scale),
                 shifted_energy_defect_over_wave_energy_max=defects[:, 3].max() / wave_energy,
                 max_local_update_discrepancy=max_update_error.tolist(),
                 snapshots=snapshots, budget_intervals=intervals)
@@ -111,5 +116,6 @@ if __name__ == "__main__":
     parser.add_argument("directory", type=Path)
     parser.add_argument("cells", type=int)
     parser.add_argument("steps", type=int)
+    parser.add_argument("--amplitude-pa", type=float, default=AMPLITUDE, help="imposed peak pressure perturbation in Pa")
     args = parser.parse_args()
-    print(json.dumps(measure(args.directory, args.cells, args.steps), indent=2, allow_nan=False))
+    print(json.dumps(measure(args.directory, args.cells, args.steps, args.amplitude_pa), indent=2, allow_nan=False))

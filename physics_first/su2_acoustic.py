@@ -27,7 +27,9 @@ def read_restart(path):
     return {name: data[:, i] for i, name in enumerate(names)}
 
 
-def make_case(directory, cells, steps):
+def make_case(directory, cells, steps, amplitude_pa=AMPLITUDE):
+    if not 0 < amplitude_pa < P0:
+        raise ValueError("expected a positive amplitude below the background pressure")
     if cells not in (32, 64, 128) or steps % 4 or steps < 2 * cells:
         raise ValueError("use a saved grid and a multiple of four time steps at acoustic CFL <= 0.5")
     directory.mkdir(parents=True, exist_ok=False)
@@ -39,7 +41,7 @@ def make_case(directory, cells, steps):
     state = CP.AbstractState("HEOS", "Water")
     rows = []
     for i, a in enumerate(angles):
-        dp = AMPLITUDE * np.sin(a)
+        dp = amplitude_pa * np.sin(a)
         rho, momentum, energy = isentropic_conserved(state, base, dp)
         rows.append([LENGTH * i / cells, 0, rho, momentum, 0, energy])
     data = np.tile(np.asarray(rows), (NY + 1, 1))
@@ -80,7 +82,7 @@ INIT_OPTION= TD_CONDITIONS
 FREESTREAM_OPTION= TEMPERATURE_FS
 FREESTREAM_PRESSURE= {P0}
 FREESTREAM_TEMPERATURE= {base['temperature_K']}
-MACH_NUMBER= {AMPLITUDE / (rho0*c*c):.17g}
+MACH_NUMBER= {amplitude_pa / (rho0*c*c):.17g}
 VISCOSITY_MODEL= CONSTANT_VISCOSITY
 MU_CONSTANT= {base['mu_Pa_s']:.17g}
 CONDUCTIVITY_MODEL= CONSTANT_CONDUCTIVITY
@@ -117,5 +119,6 @@ if __name__ == "__main__":
     parser.add_argument("directory", type=Path)
     parser.add_argument("cells", type=int)
     parser.add_argument("steps", type=int)
+    parser.add_argument("--amplitude-pa", type=float, default=AMPLITUDE, help="peak pressure perturbation in Pa")
     args = parser.parse_args()
-    make_case(args.directory, args.cells, args.steps)
+    make_case(args.directory, args.cells, args.steps, args.amplitude_pa)
