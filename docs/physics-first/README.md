@@ -1,5 +1,24 @@
 # How tightly can a vortex in water concentrate?
 
+**R288 · 21 November 2026.** The 8 mm gap still gives centerline decay at the original circulation. At Γ = 0.0036 m²/s and a = 2 mm, the facing peak gains vorticity at +0.142 s⁻¹. Strong radial shoulders retain a positive sign across the one-factor variations, while the peak sign changes with width, gap or tilt. Decision A supports a 20 ms pair and isolated-ring comparison after rotating-water and slow-time qualification. [Thresholds](RING_THRESHOLDS.md) · [Core sections](RING_SECTIONS.md) · [Preparation](RING_PREPARATION.md) · [Evolution design](RING_EVOLUTION_DESIGN.md) · [Next task](../../SESSION_HANDOFF.md#next-task)
+
+### Reproduce the ring experiment
+
+Run from the repository root. The reference numerical files use Python 3.12.14, NumPy 2.5.5, SciPy 1.17.1 and one OpenBLAS thread. On daisy the Python/SciPy paths are recorded in the [R287 reproduction notes](RING_STRAIN.md). Generate the figure with the system Matplotlib used for the reference PNG.
+
+```sh
+export OPENBLAS_NUM_THREADS=1
+out=$(mktemp -d)
+python -m physics_first.ring_thresholds "$out"
+python -m physics_first.ring_sections "$out"
+python -m physics_first.ring_preparation "$out"
+python -m unittest tests.test_ring_sections tests.test_ring_strain tests.test_water_scales
+env -u PYTHONPATH MPLBACKEND=Agg python3 -m physics_first.plot_ring_sections "$out" "$out/facing.png"
+diff -qr "$out" docs/physics-first/ring-experiment
+```
+
+### Earlier water investigations
+
 **R287 · 21 November 2026.** Both water rings stretch along every sampled centerline arc at release. At the facing points the partner supplies +0.27530 s⁻¹ against −1.00677 s⁻¹ from viscosity. The net is −0.73147 s⁻¹ there, and more negative everywhere else sampled. The isolated ring loses vorticity at −1.00677 s⁻¹. [Budget, figure and checks](RING_STRAIN.md) · [Next task](../../SESSION_HANDOFF.md#next-task)
 
 **R286 · 21 November 2026.** Removing fourth-order JST dissipation corrected the phase-dependent seam error at 64 cells. Viscosity converged under axial refinement. At 128 cells and the original step, the largest cross-strip pressure error grew to 0.07090 Pa against a 0.001 Pa limit. Halving the step restored both phases below 0.00060 Pa. The fixed-step qualification remains failed. The preferred physical experiment is a pair of detached water vortex rings on obliquely converging paths. [Qualification and raw measurements](SHEAR_QUALIFICATION.md) · [Physical design and release geometry](INTERACTING_VORTICES.md) · [Next task](../../SESSION_HANDOFF.md#next-task)

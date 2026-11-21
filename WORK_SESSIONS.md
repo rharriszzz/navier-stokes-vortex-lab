@@ -2133,3 +2133,7 @@ Scientific R287. PC/WSL2 daisy, rharris, research/water-vortex-limits, start rec
 ## R289 STARTED · 2026-11-21
 
 PC/WSL2 daisy retains ownership. Clean sole worktree at remote 977918d, empty stashes, Mac released. Five connected water-ring investigation milestones and scoped branch publication authorized.
+
+## R289 COMPLETED · 2026-11-21
+
+Scientific R288. PC/WSL2 daisy retains research/water-vortex-limits. Published start e212d12, thresholds 517ca66, sections fdef23c, and preparation/evolution design e9bc1b8. Decision A is conditional on measured preparation and solver qualification. All three baseline gaps lose centerline vorticity; the 8 mm doubled-circulation release gives a sensitive positive facing peak and positive strong radial shoulders throughout the one-factor comparisons. No time evolution. Ten targeted tests and numerical replays passed, previous failures preserved. Unknowns include correlated nozzle properties, slow-time pressure accuracy and actual evolution of widths. Use `/new` for the 2D rotating control at this published experiment-design boundary. [Reports and evidence](docs/physics-first/README.md) · [Next task](SESSION_HANDOFF.md#next-task). Released: no.

@@ -11104,3 +11104,166 @@ Complete this research round and stop for review.
 **User wording (supplied excerpts).** “Our objective is to identify initial conditions for ordinary viscous, compressible water that could produce measurable vortex concentration through unforced three-dimensional dynamics.” “Complete the connected milestones below without stopping for approval between them, unless you encounter an important scientific contradiction, resource problem, or change in scope.” “At logical milestones, commit and push completed, validated work to the existing research branch. Do not merge into main.” The supplied message ends at “You are authorized to commit and push the scoped” [remainder missing].
 
 **Started.** Extend R287 at original/10/8 mm gaps, compute critical circulation with 1.5/2/2.5 mm cores, sample sections and isolate diffusion, assess preparation literature and one-factor sensitivity, then design the smallest qualified compressible-water evolution with an isolated control and decide A/B/C. No large 3D DNS or major CFD install. PC/WSL2 daisy, research/water-vortex-limits clean at reviewed 977918d, same remote head, Mac released, no stash.
+
+**R289 supplied request text (verbatim, including the truncated ending).**
+
+```text
+# Next Research Phase — Find a Physically Plausible Vortex-Concentration Experiment
+
+Work in `rharriszzz/navier-stokes-vortex-lab`, branch `research/water-vortex-limits`, on the Windows/WSL2 PC.
+
+The latest reviewed result is R287, commit `977918d`.
+
+This is a **larger, multi-stage research assignment**. Complete the connected milestones below without stopping for approval between them, unless you encounter an important scientific contradiction, resource problem, or change in scope.
+
+Our objective is to identify initial conditions for ordinary viscous, compressible water that could produce measurable vortex concentration through unforced three-dimensional dynamics.
+
+We permit physically realizable mechanical preparation of the initial state, but no artificial volumetric forcing during its subsequent evolution.
+
+## Phase 1 — Extend the existing vortex-ring calculation
+
+Read the current project instructions, `SESSION_HANDOFF.md`, `INTERACTING_VORTICES.md`, `RING_STRAIN.md`, and the existing ring-strain implementation and tests.
+
+The previous calculation found that stretching offsets only 27.3% of viscous loss at the most favorable centerline location.
+
+Begin with a controlled change in separation.
+
+Keep the original ring radius, core radius, circulation, orientation and water properties. Evaluate three initial centerline gaps:
+
+- Original: approximately 12.019 mm.
+- Intermediate: 10 mm.
+- Closer: 8 mm.
+
+For each, calculate the local stretching, viscous vorticity tendency and net material rate around both rings.
+
+Retain the previously validated 128/256/512 quadrature refinement and independent-gradient checks.
+
+Determine whether the 8 mm configuration produces a positive net initial growth rate at any centerline location.
+
+Do not change additional parameters merely to obtain a positive result.
+
+## Phase 2 — Determine the critical circulation
+
+For the same geometries, investigate the circulation required for stretching to equal or exceed viscous weakening.
+
+Use the linear dependence of the Biot–Savart velocity field and strain on circulation for fixed geometry and core width. Check the resulting critical values with actual numerical evaluations.
+
+Calculate:
+
+- Critical circulation for zero net vorticity growth at the most favorable centerline location.
+- Corresponding circulation Reynolds number.
+- Characteristic vortex speed.
+- Approximate pressure and Mach-number scales.
+- Sensitivity to core radius.
+
+Include a small, controlled comparison for core radii of 1.5, 2.0 and 2.5 mm where physically meaningful.
+
+Do not perform a large blind optimization. Use a bounded set of physically interpretable cases.
+
+Explain which combinations remain plausible for two distinct vortex cores. Flag cases where Gaussian-core overlap makes the isolated-ring interpretation questionable.
+
+## Phase 3 — Examine the whole vortex core, not just its centerline
+
+The existing R287 calculation evaluates the signed vorticity budget on the centerlines.
+
+That is valuable but incomplete.
+
+For the original geometry and the most promising alternative, evaluate selected cross-sectional points in planes normal to the vortex centerlines.
+
+Sample representative facing arcs, shoulders, flanks and far arcs, including points at several fractions of the core radius.
+
+Calculate local:
+
+- Vorticity magnitude and direction.
+- Axial stretching.
+- Viscous contribution.
+- Net material vorticity tendency.
+- Circulation-related and core-shape diagnostics.
+
+Use the full local vorticity direction, not merely the geometric centerline tangent.
+
+Distinguish genuine growth in the strongly vortical core from positive fractional growth in weak Gaussian tails.
+
+Check numerical convergence and consistency with the centerline results. Reuse validated kernel code rather than introducing an unrelated numerical implementation.
+
+Determine whether the interaction creates localized regions of positive vorticity growth that the centerline calculation missed.
+
+This is still an initial-state calculation. Do not claim to have demonstrated core contraction.
+
+## Phase 4 — Assess physical preparation and sensitivity
+
+Investigate whether the promising initial conditions could plausibly be produced in a water tank.
+
+Start with the existing piston-nozzle concept:
+
+- Nozzle diameter near 25 mm.
+- Stroke near 50 mm.
+- Original exit speed near 0.072 m/s.
+- Original circulation approximately 0.0018 m²/s.
+
+Using the relevant vortex-ring formation literature, assess the nozzle velocities, strokes, release timing and geometric placement required by the candidate initial conditions.
+
+Do not assume that changing nozzle speed leaves ring radius and core radius unchanged.
+
+Treat the relation between jet parameters and detached-ring properties as an experimental uncertainty until independently supported.
+
+Estimate characteristic propagation speeds, encounter time, pressure deficits and energy scales.
+
+For the most promising candidate, perform a small one-factor-at-a-time robustness check, including reasonable variations in circulation, core radius, initial separation and orientation.
+
+Determine whether the sign of the initial net vorticity tendency is robust or depends on finely tuned parameters.
+
+A physically plausible negative result is more useful than an artificially favorable positive result.
+
+## Phase 5 — Prepare for the first real time-dependent experiment
+
+We eventually need to evolve the fluid rather than repeatedly calculate properties of prescribed initial states.
+
+Review the results of the earlier SU2/CoolProp qualification. The spatial viscosity calculation improved, but the rotating-flow and low-Mach time-integration qualifications remain incomplete.
+
+For the best physically justified candidate:
+
+1. Specify smooth, finite-energy initial velocity and vorticity fields.
+2. Explain how to initialize pressure, density and temperature consistently with a compressible-water equation of state.
+3. Specify an appropriate finite or periodic computational domain, including how boundary-image effects will be checked.
+4. Estimate the necessary grid spacing, cell count, RAM and physical time steps.
+5. Compare suitable numerical methods for low-Mach, compressible, viscous water.
+6. Design the smallest useful time-dependent test, including an isolated-ring control.
+7. Define quantitative conservation, convergence and physical-interpretation criteria.
+
+A candidate time-evolution experiment should measure both principal core widths, circulation, core length, vorticity growth, stretching, pressure, and viscous diffusion.
+
+Do not equate growing peak vorticity with contracting core area.
+
+Do not launch large 3D DNS or install another major CFD package during this phase.
+
+If a reduced vortex-filament model might help estimate encounter geometry, explain its limitations explicitly. Do not treat filament kinematics as a substitute for a viscous compressible Navier–Stokes solution.
+
+## Scientific decisions
+
+At the end, make a clear recommendation among these possibilities:
+
+**A.** A physically plausible ring configuration has promising initial concentration tendencies. Recommend a specific first time-dependent simulation.
+
+**B.** The rings show stretching but no robust initial concentration in the tested range. Recommend whether later-time ring interaction still justifies simulation.
+
+**C.** The required circulation, spacing or preparation is physically implausible. Explain whether another unforced vortex mechanism is more promising.
+
+Do not assume in advance which conclusion will result.
+
+## Documentation and checkpoints
+
+This is intended to be a substantial research phase, not one tiny continuation task.
+
+Create a coherent set of Markdown reports and reproducible numerical evidence under `docs/physics-first/`.
+
+Preserve the previous results, failed numerical qualifications and historical work.
+
+At logical milestones, commit and push completed, validated work to the existing research branch. Do not merge into main.
+
+You are authorized to commit and push the scoped
+```
+
+**R289 outcome · scientific R288 completed, 2026-11-21.** Decision A supports a conditional 20 ms pair and isolated-ring experiment. At original circulation Γ₀ = 0.0018 m²/s, peak centerline nets at 12.019, 10 and 8 mm are −0.73147, −0.61744 and −0.43086 s⁻¹. At 8 mm and a = 2 mm the sampled critical Γ is 0.00314663 m²/s. Localized strong-core growth is already present off-center. At the doubled-speed target Γ = 0.0036 m²/s, the facing section maximum gains +0.14157 s⁻¹ initially. Facing radial shoulders retain positive growth in all eight one-factor variations; peak growth reverses for a narrower core, wider gap or smaller tilt. Actual detached-ring properties and any narrowing over time remain open. [Thresholds](docs/physics-first/RING_THRESHOLDS.md) · [Sections](docs/physics-first/RING_SECTIONS.md) · [Tank preparation](docs/physics-first/RING_PREPARATION.md) · [First evolution design](docs/physics-first/RING_EVOLUTION_DESIGN.md)
+
+**Delivery and verification.** Extended the original parameterized ring kernel and added threshold, section, preparation and plot modules plus section/energy tests. Four reports, point/shape/threshold/robustness/energy CSVs, two JSON audits and a figure are under docs/physics-first. Updated both READMEs, status, direction, handoff and lifecycle records. Scientific checkpoints 517ca66, fdef23c and e9bc1b8 were pushed to the research branch. All three gap cases passed the R287 gates. Nine circulation roots were reintegrated and bracketed, with independent gradient checks. Off-axis coarse Cartesian differences reached 0.06769 s⁻¹ and converged to 0.00107 s⁻¹ or better. Fractional normalization initially failed at the exact gap midpoint; archived raw projections and explicitly undefined fractional values now accompany the zero-vector symmetry result. Ten targeted tests passed. The new CSVs, JSONs and PNG reproduced byte-for-byte; the archived R287 CSV/JSON reproduced unchanged. System Python 3.14.4 reproduced the selected rates, thresholds, widths, flux and energy with zero maximum difference in the cross-environment comparison. Verified report links, table widths, figure and whitespace. No full historical suite, CFD evolution, FEM, new solver installation, tank run or merge. WSL2 daisy retains ownership. Use `/new` for the bounded 2D rotating-water qualification because its measured inputs, prior failures and criteria are saved. [Next task](SESSION_HANDOFF.md#next-task)

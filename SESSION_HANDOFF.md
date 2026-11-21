@@ -1,5 +1,11 @@
 # Current session handoff
 
+**R288 · 21 November 2026.** The 8 mm gap still gives centerline decay at the original circulation. At Γ = 0.0036 m²/s and a = 2 mm, the facing peak gains vorticity at +0.142 s⁻¹. Strong radial shoulders retain a positive sign across the one-factor variations, while the peak sign changes with width, gap or tilt. Decision A supports a 20 ms pair and isolated-ring comparison after rotating-water and slow-time qualification. [Thresholds](docs/physics-first/RING_THRESHOLDS.md) · [Core sections](docs/physics-first/RING_SECTIONS.md) · [Preparation](docs/physics-first/RING_PREPARATION.md) · [Evolution design](docs/physics-first/RING_EVOLUTION_DESIGN.md) · [Next task](#next-task)
+
+Scientific R288 is request R289. PC/WSL2 daisy retains ownership. Published numerical milestones include the 128/256/512 gap comparisons, direct threshold brackets, normalized and dimensional section budgets, signed flux/width measurements, isolated controls and one-factor checks. The symmetry midpoint has zero vorticity and undefined fractional rate. Its raw failed refinement is retained. No CFD evolution ran. Actual nozzle release properties and low-Mach rotating performance remain unresolved. Use `/new` for the bounded two-dimensional rotating control.
+
+### Previous R287 result
+
 **R287 · 21 November 2026.** Both water rings stretch along every sampled centerline arc at release. At the facing points the partner supplies +0.27530 s⁻¹ against −1.00677 s⁻¹ from viscosity. The net is −0.73147 s⁻¹ there, and more negative everywhere else sampled. The isolated ring loses vorticity at −1.00677 s⁻¹. [Budget, figure and checks](docs/physics-first/RING_STRAIN.md) · [Next task](#next-task)
 
 Scientific R287 is request R288. PC/WSL2 daisy retains ownership. The 128/256/512 line quadratures, two independent offsets, kernel, circulation sign, vector diffusion and symmetry checks passed. Added the quadrature and plotting modules, independent tests, report, JSON, pointwise CSV and figure. Updated the design link, both READMEs, status, direction and coordination records. Seven targeted tests passed. The JSON, CSV and figure reproduced byte-for-byte. The full suite and flow evolution were outside scope. An initial JSON serialization error was fixed before archiving. The physical release shape and later core widths remain unmeasured. Stop for scientific review. Use `/new` after review for one proposed 8 mm gap comparison with GPT-6.2 Astra/high. The baseline and controls are saved.
@@ -1746,13 +1752,13 @@ and physical-work limits remain unchanged.
 
 ## Owner and checkout
 
-| Field | R287 value |
+| Field | R288 value |
 |---|---|
 | Owner | PC/WSL2 `daisy`, user `rharris`. Mac released per the published handoff. |
 | Checkout | `/home/rharris/git/navier-stokes-vortex-lab`, sole local worktree, empty stashes at start. |
-| Branch and publication target | `research/water-vortex-limits` → `origin/research/water-vortex-limits`, based on fetched `origin/main` at `f348cf6`. R287 started from synchronized R286 eaa5bf4. Delivery commit is in Git history. |
+| Branch and publication target | `research/water-vortex-limits` → `origin/research/water-vortex-limits`, based on fetched `origin/main` at `f348cf6`. R288 started from reviewed and synchronized R287 977918d. Delivery commit is in Git history. |
 | Runtime | Free-space Python 3.12.14 quadrature using the existing NumPy/SciPy environment on daisy. System Matplotlib for the static figure. |
-| Next decision | Owner reviews the insufficient release stretching and the proposed single 8 mm gap comparison. |
+| Next decision | Review the 2D rotating-water qualification before any 3D evolution. |
 
 ### Historical R272 checkout
 
@@ -1923,6 +1929,10 @@ write access. The tool sandbox denies `.git` writes, `ps`, unrestricted
 agent-side POV-Ray backtraces are unavailable.
 
 ## Next task
+
+**Review R288 and use `/new` for the 2D rotating-water qualification on daisy.** Evaluate the installed solver’s rotating residual, short explicit evolution and timestep control against the archived 10 mm swirl and radial spreading reference. This is the first gate for the proposed 20 ms pair/isolated experiment. [Specification and criteria](docs/physics-first/RING_EVOLUTION_DESIGN.md#qualification-before-a-pair-run)
+
+### Historical R287 proposal completed within R288
 
 **Review R287.** After review use `/new` with **GPT-6.2 Astra, high reasoning** because the quadrature baseline and isolated controls are published. If selected, evaluate one independently prepared geometry at an 8.000 mm facing gap. Hold all other release parameters fixed, use the same 128/256/512 quadratures, matched isolated controls and 0.02 s⁻¹ gates, and report the change in partner extension, viscous loss and net rate around both rings. Stop for review after that single release state. [Physical rationale and placement](docs/physics-first/RING_STRAIN.md#physical-interpretation-and-next-experiment)
 
