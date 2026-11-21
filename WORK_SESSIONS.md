@@ -2105,3 +2105,7 @@ PC/WSL2 daisy, rharris, sole worktree, empty stash, clean fast-forward sync at d
 ## R284 COMPLETED · 2026-11-21
 
 PC/WSL2 daisy, research/water-vortex-limits, start record a32e72a. Three runs completed at the frozen settings. Fine effective viscosity +15.64%, coarse +95.51%, with 79.87% grid change and negligible time-step change. The fine-grid cross-strip pressure range reached 23.95 Pa. Spatial source and vortex transfer are unresolved. Added generator, analysis, plotter, test, report, JSON, plot and raw snapshots, shared the acoustic input writer and updated navigation/status/handoff/logs. Sixteen targeted tests passed. JSON, plot, new inputs and historical acoustic inputs reproduced byte-for-byte. Scientific check exits 1. Full suite and vortex evolution skipped. R285 authorizes branch publication. Stop for review, then use `/new` for the proposed translation control. [Report](docs/physics-first/SHEAR_DECAY.md) · [Next task](SESSION_HANDOFF.md#next-task). Released: no.
+
+## R286 STARTED · 2026-11-21T06:59:13+00:00
+
+Scientific round R285. PC/WSL2 daisy, rharris, Linux x86_64, /home/rharris/git/navier-stokes-vortex-lab. Sole worktree, empty stash, clean research/water-vortex-limits at origin/research/water-vortex-limits 50b9c65. Mac released. One translated 64-cell, 2048-step control after preflight. Released: no.

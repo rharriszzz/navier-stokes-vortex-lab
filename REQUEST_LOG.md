@@ -10775,3 +10775,39 @@ Stop for review.
 **Changes and checks.** Added the shear input generator, diagnostics, plotter, two regression tests, result document, JSON, comparison plot and compressed raw runs. Shared strip/configuration writing with the existing acoustic generator. Updated both READMEs, direction, status, handoff and logs. Sixteen targeted water tests passed with zero skips. Reanalysis from the archive and regeneration of the plot reproduced the JSON and PNG byte-for-byte. All three generated meshes/configs/initial states and the historical 128/512 acoustic input reproduced byte-for-byte. Scientific exit 1 retained. No further CFD, vortex evolution, FEM, solver installation or full-suite test. No machine transfer. Cause of the seam-localized pressure and transfer to a radial vortex remain unresolved.
 
 **R285 outcome.** Publication authorized on the research branch. Review R284, then use `/new` because the evidence and proposed next control are saved. One proposed 64-cell, 2048-step wave translated by λ/4 would test whether the numerical error follows the wave or stays at the seam. [Next task](SESSION_HANDOFF.md#next-task)
+
+## R286 · 2026-11-21 · R285 translation experiment
+
+```text
+Continue with R285 on `research/water-vortex-limits`.
+
+I have reviewed R284. With 69% context remaining, stay in this session.
+
+The viscosity qualification failed, and the unexpected transverse pressure variation is more concerning than the 15.64% effective-viscosity error.
+
+Proceed with the single quarter-wavelength translation control proposed in `docs/physics-first/SHEAR_DECAY.md` and `SESSION_HANDOFF.md`.
+
+Use the existing 64-cell, 2048-step configuration. Shift the initial shear wave by 16 cells. Keep the EOS, mesh, time steps, physical parameters and numerical method unchanged.
+
+Before running, inspect the periodic boundary mappings, corner-node treatment and initial conservative states. Check for an identifiable setup error without modifying the solver.
+
+After running:
+
+1. Undo the translation and compare the conservative fields against the original archived simulation at matching times.
+2. Determine whether the unphysical pressure disturbance follows the wave or remains associated with the periodic seam.
+3. Compare the transverse symmetry violation, pressure extrema, effective viscosity and momentum residuals.
+4. Determine whether the evidence points toward boundary mapping, numerical flux dissipation, viscous discretization or another cause. Do not claim a unique cause without evidence.
+5. State whether a small configuration correction is justified or whether we should reconsider the numerical method.
+
+Preserve the original failed R284 result. Do not relax its scientific acceptance criteria.
+
+Run only this bounded experiment and lightweight associated tests. Do not start 3D vortex calculations, install another solver, or initiate a broad optimization campaign.
+
+Update the research documents and handoff. Commit and push scoped changes to the research branch, not main.
+
+At completion, recommend one of two paths: a specific, inexpensive correction with a clear validation test, or a change in solver/methodology.
+
+Give me a concise explanation of the scientific implications and then stop for review. Recommend whether the next round needs a more powerful model.
+```
+
+**STARTED.** Scientific round R285, request record R286 because R285 already records publication authorization. Same owner and session, user-reported 69% context. Exactly one shifted run after input and corner inspection, followed by comparison and publication to the research branch. No status or worked-for excerpts supplied.
