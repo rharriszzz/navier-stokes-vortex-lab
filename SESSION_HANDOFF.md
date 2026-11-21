@@ -1,5 +1,11 @@
 # Current session handoff
 
+**R290 · 21 November 2026.** The unforced incompressible isolated ring traveled 1.631 mm in 20 ms. Its core flattened and its half-circulation radius grew 1.317%. The nominal area change was −0.460% with a ±1.936 percentage-point envelope across aperture, centering and numerical choices. Core contraction remains unresolved. [Measured history and decision](docs/physics-first/RING_EVOLUTION.md) · [Figure](docs/physics-first/ring-evolution/history.png) · [Next task](#next-task)
+
+Scientific R290 is request R291. PC/WSL2 daisy retains ownership. Both finer grids passed the release gate. The a/8 material-rate miss is recorded. Nine histories reached 20 ms with no swap use. The local and global budgets, uncertainty series, source and field samples are published. Use `/new` after review for the short compressible rotating-disk step comparison with GPT-6.2 Astra/high.
+
+### Previous R289 result
+
 **R289 · 21 November 2026.** The full-disk SU2 release force passes on the two finer meshes. Moving the mesh junction outside the core cuts the 12 ns inner pressure disturbance from 1.29 to 0.0446 Pa. The 25 µs dual-time trial diverges. Rotating time evolution and 3D water remain unqualified. [Scientific decision](docs/physics-first/ROTATING_DECISION.md) · [Disk measurements and figure](docs/physics-first/ROTATING_DISK.md) · [Next task](#next-task)
 
 Scientific R289 is logged as request R290. PC/WSL2 daisy retains ownership. The no-slip mode reference, actual release residuals, viscosity control, space/time pilots, slow-time failure and isolated-ring resource plan are published. The release stress power is within 0.058% of reference, while local pressure and width evolution remain uncertain. The 11 measured comparisons replay from the compact archive. All 29 targeted tests passed. The historical acoustic and shear regressions reproduced. The measured resource stop excludes a 1 ms explicit window. No 3D or FEM job ran. Use `/new` after review for one meridional 20 ms isolated-ring reference with GPT-6.2 Astra/high.
@@ -1758,13 +1764,13 @@ and physical-work limits remain unchanged.
 
 ## Owner and checkout
 
-| Field | R289 value |
+| Field | R290 value |
 |---|---|
 | Owner | PC/WSL2 `daisy`, user `rharris`. Mac released per the published handoff. |
 | Checkout | `/home/rharris/git/navier-stokes-vortex-lab`, sole local worktree, empty stashes at start. |
-| Branch and publication target | `research/water-vortex-limits` → `origin/research/water-vortex-limits`, based on fetched `origin/main` at `f348cf6`. R289 started from reviewed and synchronized R288 8987bc5. Delivery commit is in Git history. |
-| Runtime | Serial SU2 8.6.0, CoolProp 7.2.0, water Python 3.12, NumPy/SciPy, system Matplotlib. Native fields remain on daisy under ~/.local/opt/water-acoustics/runs/r289/. |
-| Next decision | Review R289 and the proposed independent 20 ms meridional isolated-ring reference. |
+| Branch and publication target | `research/water-vortex-limits` → `origin/research/water-vortex-limits`, based on fetched `origin/main` at `f348cf6`. R290 started from reviewed and synchronized R289 5209200. Delivery commit is in Git history. |
+| Runtime | Serial SU2 8.6.0, CoolProp 7.2.0, water Python 3.12, NumPy/SciPy, system Matplotlib. R290 uses the water Python 3.12 / SciPy stack. The compact histories and sampled fields are in docs/physics-first/ring-evolution/. |
+| Next decision | Review the R290 isolated control and its unresolved area. Consider the bounded 2D compressible disk update in Next task. |
 
 ### Historical R272 checkout
 
@@ -1781,6 +1787,8 @@ and physical-work limits remain unchanged.
 | Delivery state | R271 delivery 83fb7c9 verified by clean pull; R272 STARTED 2e18140 published. Design completion prepared for publication; delivery in Git/final response. PC retains ownership. |
 
 ## Current result and limits
+
+**R290 · 21 November 2026.** The unforced incompressible isolated ring traveled 1.631 mm in 20 ms. Its core flattened and its half-circulation radius grew 1.317%. The nominal area change was −0.460% with a ±1.936 percentage-point envelope across aperture, centering and numerical choices. Core contraction remains unresolved. [Evidence](docs/physics-first/RING_EVOLUTION.md)
 
 R281 completed the [100 Pa precision control](docs/physics-first/ACOUSTIC_100PA.md). R279/R280 completed the [liquid-water acoustic test](docs/physics-first/ACOUSTIC_RESULT.md). R277 completes the [finite spreading reference](docs/physics-first/SPREADING_RESULT.md). R275 supplies the [water estimates and decision gates](docs/physics-first/README.md). A compressible vortex calculation and a measured physical concentration limit remain outstanding.
 
@@ -1935,6 +1943,10 @@ write access. The tool sandbox denies `.git` writes, `ps`, unrestricted
 agent-side POV-Ray backtraces are unavailable.
 
 ## Next task
+
+**Review the 20 ms isolated-ring result.** After review, use `/new` with GPT-6.2 Astra, high reasoning, for one bounded comparison on the R289 junction-relocated rotating disk. Qualify one conservative acoustic-implicit pressure/energy update at the physical sound speed against the saved 12 ns explicit window, two half steps and a tighter inner solve. Measure mass residual, core pressure, circulation and mechanical/energy closure. Stop if the short window fails. The time-resolved isolated reference, uncertainty envelopes, R289 slow-time failure and 3D resource limits are published. The tilted pair remains deferred. [Scientific decision and resource estimate](docs/physics-first/RING_EVOLUTION.md#decision-on-the-interacting-pair)
+
+### Historical R289 proposal completed in R290
 
 **Review scientific R289, then use `/new` with GPT-6.2 Astra, high reasoning.** The proposed experiment is a 20 ms incompressible axisymmetric evolution of one circular ring in its axial frame using azimuthal vorticity, with measured width uncertainty. Its curvature and diffusion supply an independent control for any future 3D water calculation. Use the published left-ring release. Refine space, step, domain and aperture. Stop after the bounded control or at a measured accuracy/resource gate. Report translation, material/ridge behavior, flux, widths and rates against the saved thresholds. If only replay/reporting remains, recommend a lower reasoning level. Retain high reasoning for a new numerical-method decision. [Executable specification](docs/physics-first/ROTATING_DECISION.md#one-next-executable-experiment) · [Isolated release targets](docs/physics-first/ISOLATED_RING_CONTROL.md)
 
