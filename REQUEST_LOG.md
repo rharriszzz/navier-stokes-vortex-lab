@@ -10506,3 +10506,11 @@ Complete this bounded first round and stop for my review before beginning the ne
 **Scope/status.** Started a handoff clarification. The user reports 61% remaining in this chat. Verify the published plan and advise on model and chat choice. Round two awaits owner review.
 
 **Outcome.** Confirmed the prompt in SESSION_HANDOFF.md under “Next task” and its full specification in docs/physics-first/README.md under “Round-two test” at published commit a0e3d2c on research/water-vortex-limits. With the new 61% context report, recommend continuing this chat on GPT-6.2 Astra with high reasoning for interpreting convergence and energy balance. Updated this log and the current handoff locally. Checked the plan anchors, Git state and official model/CLI documentation. Scientific tests and simulations were skipped for this clarification. The single next task awaits owner approval.
+
+## R277 — 2026-11-21 — Evaluate the finite-cylinder viscous spreading reference
+
+**User request (verbatim)**
+
+> I did not do /new, following your advice.  please continue.  thanks.
+
+**Scope/status.** STARTED. Evaluate the R275/R276 finite-cylinder incompressible reference through 5 s and its saved decision gate on the research branch. The user continued in the current chat. The only local edits were the previously disclosed R276 clarification. Published them in 1d4c020, then verified clean fast-forward synchronization and same-owner handoff. Mac remains released. Preserve all FEM restrictions and stop before a physical compressible run.

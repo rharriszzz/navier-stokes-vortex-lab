@@ -2057,3 +2057,7 @@ Publication-check note: initial local-link check encountered its own not-yet-cre
 ## 2026-11-21 · R275 water investigation · PC retains ownership
 
 Explicit first-round request selects the physics direction. Clean WSL2 daisy checkout, one worktree and empty stashes. Fetched two newer main commits and created `research/water-vortex-limits` from `f348cf6`. Publication is scoped to that branch. R270 remains INCOMPLETE and ten allocations are spent. The calculator and scoped tests ran without FEM or a new solver. See the [R275 research plan](docs/physics-first/README.md) and [handoff for owner review](SESSION_HANDOFF.md#next-task). Use `/new` after review for the finite-cylinder spreading reference.
+
+## R277 STARTED · 2026-11-21T05:50:51+00:00
+
+PC/WSL2 daisy, Linux x86_64, rharris, /home/rharris/git/navier-stokes-vortex-lab. Clean research/water-vortex-limits tracking origin/research/water-vortex-limits at 1d4c020 after synchronized R276 publication. Sole active owner per handoff, no open competing session or stash. Evaluate the finite-cylinder mode sum and its convergence/conservation checks. Stop at the reference gate. Released: no.
