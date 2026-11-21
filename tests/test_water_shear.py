@@ -67,3 +67,34 @@ class WaterShearTest(unittest.TestCase):
         self.assertAlmostEqual(result["snapshots"][-1]["residual_modal_nu_m2_s"] / nu, 1, places=12)
         self.assertAlmostEqual(result["snapshots"][0]["amplitude_m_s"], 0.01, places=15)
         self.assertLess(result["snapshots"][-1]["transverse_off_mode_rms_m_s"], 1e-16)
+
+    def test_translation_preflight_and_wrong_phase(self):
+        from physics_first.shear_translation import NX, STEPS, SHIFT, audit_inputs, corner_stencil
+        from physics_first.su2_shear import make_case
+
+        with tempfile.TemporaryDirectory() as tmp:
+            ref, dest = Path(tmp) / "base", Path(tmp) / "shifted"
+            make_case(ref, NX, STEPS)
+            make_case(dest, NX, STEPS, shift_cells=SHIFT)
+            check = audit_inputs(ref, dest)
+            self.assertEqual(check["unique_nodes"], 256)
+            self.assertEqual(check["initial_p_spread_Pa"], 0)
+            self.assertTrue(check["initial_inverse_shift_bit_identical"])
+            corner = corner_stencil(ref)
+            self.assertLess(abs(corner["four_neighbor_torus"]), 1e-12)
+            self.assertGreater(corner["left_corner_local"], 0.97)
+            with self.assertRaises(AssertionError):
+                audit_inputs(ref, ref)
+
+    def test_alignment_on_unique_periodic_vertices(self):
+        import numpy as np
+        from physics_first.shear_translation import NX, NY, SHIFT, discrepancy, unique_grid
+
+        field = np.arange(NX * NY).reshape(NY, NX, 1)
+        shifted = np.roll(field, SHIFT, axis=1)
+        with_seams = np.pad(shifted[:, :, 0], ((0, 1), (0, 1)), mode="wrap")
+        recovered = unique_grid({"example": with_seams}, ["example"])
+        self.assertEqual(discrepancy(field, recovered)["max_abs"], [0.0])
+        recovered = recovered.copy()
+        recovered[1, 0, 0] += 8
+        self.assertEqual(discrepancy(field, recovered)["rms"], [0.5])

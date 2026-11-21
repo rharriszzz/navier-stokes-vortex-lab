@@ -1,6 +1,8 @@
 # Project direction — physics and engineering first
 
-**R284 · 21 November 2026.** The 10 µm transverse shear wave decayed too quickly. Effective viscosity exceeded the physical value by 95.51% on the coarse grid and 15.64% on the fine grid. Halving the time step preserved the excess. The fine-grid pressure field also developed a 23.95 Pa difference across the strip. Review the proposed quarter-wavelength translation control before further vortex work. [Results, plot and reproduction](docs/physics-first/SHEAR_DECAY.md) · [Next task](SESSION_HANDOFF.md#next-task)
+**R285 · 21 November 2026.** A 16-cell shift left the cross-strip pressure disturbance at the periodic seam. Its peak fell from 23.95 to 5.12 Pa, and viscosity excess fell from 15.64% to 4.73%. The corner stencil for JST artificial dissipation is a candidate for a one-setting correction test. Review before running it. [Translation control and evidence](docs/physics-first/SHEAR_TRANSLATION.md) · [Next task](SESSION_HANDOFF.md#next-task)
+
+**R284 · 21 November 2026.** The 10 µm transverse shear wave decayed too quickly. Effective viscosity exceeded the physical value by 95.51% on the coarse grid and 15.64% on the fine grid. Halving the time step preserved the excess. The fine-grid pressure field also developed a 23.95 Pa difference across the strip. R285 completed the proposed translation control. [Results, plot and reproduction](docs/physics-first/SHEAR_DECAY.md) · [Next task](SESSION_HANDOFF.md#next-task)
 
 **R275 · 2026-11-21.** The owner selected the physical limits of vortex concentration in ordinary water. Study unforced dynamics and physically plausible boundary motion using compressible viscous mass, momentum and energy conservation. The first round establishes an interpretable viscous-spreading benchmark and the strain needed to oppose it. The limiting mechanism and attainable radius remain open. [Research plan](docs/physics-first/README.md)
 

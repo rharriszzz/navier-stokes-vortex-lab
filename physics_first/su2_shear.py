@@ -15,7 +15,7 @@ AMPLITUDE = 0.01
 CASES = ((32, 2048), (64, 2048), (64, 4096))
 
 
-def make_case(directory, cells, steps):
+def make_case(directory, cells, steps, *, shift_cells=0):
     if (cells, steps) not in CASES:
         raise ValueError("unsupported R284 grid or step count")
     base = background()
@@ -24,7 +24,7 @@ def make_case(directory, cells, steps):
     dt = 8 * LENGTH / (speed * steps)
     x = np.arange(cells + 1) * LENGTH / cells
     y = np.arange(NY + 1) * HEIGHT / NY
-    angles = 2 * np.pi * (np.arange(cells + 1) % cells) / cells
+    angles = 2 * np.pi * ((np.arange(cells + 1) - shift_cells) % cells) / cells
     velocity = AMPLITUDE * np.sin(angles)
     energy = density * (base["internal_energy_J_kg"] + 0.5 * velocity**2)
     row = np.column_stack((x, np.zeros_like(x), np.full_like(x, density),

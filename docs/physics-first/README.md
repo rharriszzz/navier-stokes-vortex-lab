@@ -1,6 +1,8 @@
 # How tightly can a vortex in water concentrate?
 
-**R284 · 21 November 2026.** The 10 µm transverse shear wave decayed too quickly. Effective viscosity exceeded the physical value by 95.51% on the coarse grid and 15.64% on the fine grid. Halving the time step preserved the excess. The fine-grid pressure field also developed a 23.95 Pa difference across the strip. Review the proposed quarter-wavelength translation control before further vortex work. [Results, plot and reproduction](SHEAR_DECAY.md) · [Next task](../../SESSION_HANDOFF.md#next-task)
+**R285 · 21 November 2026.** A 16-cell shift left the cross-strip pressure disturbance at the periodic seam. Its peak fell from 23.95 to 5.12 Pa, and viscosity excess fell from 15.64% to 4.73%. The corner stencil for JST artificial dissipation is a candidate for a one-setting correction test. Review before running it. [Translation control and evidence](SHEAR_TRANSLATION.md) · [Next task](../../SESSION_HANDOFF.md#next-task)
+
+**R284 · 21 November 2026.** The 10 µm transverse shear wave decayed too quickly. Effective viscosity exceeded the physical value by 95.51% on the coarse grid and 15.64% on the fine grid. Halving the time step preserved the excess. The fine-grid pressure field also developed a 23.95 Pa difference across the strip. R285 completed the proposed translation control. [Results, plot and reproduction](SHEAR_DECAY.md) · [Next task](../../SESSION_HANDOFF.md#next-task)
 
 **R283 · 21 November 2026.** The 10 mm vortex starts with a 15.90564 Pa pressure rise from the axis to 30 mm. The radial acceleration meets its target on all grids. EOS recovery limits force-gradient convergence on the finest grid. R284 completed the proposed shear test. [Initial state and results](VORTEX_EQUILIBRIUM.md) · [Independent review brief](INDEPENDENT_REVIEW.md) · [Next task](../../SESSION_HANDOFF.md#next-task)
 

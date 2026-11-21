@@ -1,5 +1,11 @@
 # Current session handoff
 
+**R285 · 2026-11-21 · Pressure disturbance stays at the seam.** Request R286 records this scientific round. PC/WSL2 daisy retains the research branch. Mesh and configuration matched R284 and all four initial fields translated exactly. At 64 cells and 2048 steps, moving the wave by 16 cells reduced peak cross-strip pressure range from 23.95 to 5.12 Pa. The peak stayed at the seam at all four translated endpoints, with 99.9% of transverse pressure variance within four cells. Viscosity excess changed from 15.64% to 4.73%. R284 remains failed. [Result and measured fields](docs/physics-first/SHEAR_TRANSLATION.md) · [Next task](#next-task)
+
+One translated CFD run completed. Seven targeted tests passed. The archived comparison and plot reproduced byte-for-byte. The installed source and initial states identify a phase-sensitive JST corner stencil. The combined residuals leave individual flux contributions unresolved. Added the preflight, measured comparison, plot, raw outputs and report, extended the shear generator and reader, and updated tests, navigation, status and logs. No solver modification, coefficient trial, full suite or vortex evolution. Continue in this chat after review for the proposed two-phase correction test with GPT-6.2 Astra/high. A stronger model is unnecessary for this bounded test.
+
+### Previous R284 result
+
 **R284 · 2026-11-21 · Shear qualification failed.** PC/WSL2 daisy retains the research branch. The 64-cell, half-step fit is 1.16034 × 10⁻⁶ m²/s against 1.00340 × 10⁻⁶ m²/s physical. Grid change is 79.87% of physical viscosity, time-step change is below 0.000001%, and four-interval spread is 12.03% coarse and 2.06% fine. Pressure varies across the strip despite uniform transverse initial and boundary conditions. R283's recovered-pressure refinement failure remains open. [Result, figure and raw states](docs/physics-first/SHEAR_DECAY.md) · [Next task](#next-task)
 
 Three CFD runs completed. Sixteen targeted tests passed. Archived inputs, summary and plot reproduced byte-for-byte. The scientific measurement exits 1. Changed the shear generator, analysis, plot and tests, shared acoustic input writer, physics-first evidence, research status and coordination files. The exact origin of the seam-localized pressure signal and the radial operator balance are unresolved. Full suite and vortex evolution skipped. Stop for review. Use `/new` after review because the measurements and next control are saved together.
@@ -1728,13 +1734,13 @@ and physical-work limits remain unchanged.
 
 ## Owner and checkout
 
-| Field | R284 value |
+| Field | R285 value |
 |---|---|
 | Owner | PC/WSL2 `daisy`, user `rharris`. Mac released per the published handoff. |
 | Checkout | `/home/rharris/git/navier-stokes-vortex-lab`, sole local worktree, empty stashes at start. |
-| Branch and publication target | `research/water-vortex-limits` → `origin/research/water-vortex-limits`, based on fetched `origin/main` at `f348cf6`. R284 started from synchronized R283 d56a784. Delivery commit is in Git history. |
+| Branch and publication target | `research/water-vortex-limits` → `origin/research/water-vortex-limits`, based on fetched `origin/main` at `f348cf6`. R285 started from synchronized R284 50b9c65. Delivery commit is in Git history. |
 | Runtime | WSL command `su2-water`, dedicated Python 3.12.14 in `~/.local/opt/water-acoustics/tools`, pinned CoolProp 7.2.0. [Rebuild](docs/physics-first/SU2_WATER_SETUP.md). |
-| Next decision | Owner reviews R284 before selecting a single translated shear-wave control. |
+| Next decision | Owner reviews the translation result before any single-setting JST correction test. |
 
 ### Historical R272 checkout
 
@@ -1905,6 +1911,10 @@ write access. The tool sandbox denies `.git` writes, `ps`, unrestricted
 agent-side POV-Ray backtraces are unavailable.
 
 ## Next task
+
+**Review R285.** If approved, test only `JST_SENSOR_COEFF= (0.5, 0.0)` for the original and translated phases at 64 cells and 2048 steps. Apply the proposed 0.001 Pa transverse-range and aligned-pressure maximum limits, check alternating modes and conservation, and retain R284’s viscosity and interval criteria. Require phase sensitivity below 5% of physical viscosity. Stop after the pair. A failure calls for reconsidering the spatial method. A pass still requires independent grid and time checks before qualification. Continue this chat with GPT-6.2 Astra/high. Reassess model choice if selecting or auditing a different discretization becomes necessary. [Validation and interpretation](docs/physics-first/SHEAR_TRANSLATION.md#decision-for-review)
+
+### Historical R284 proposal completed by R285
 
 **Review R284.** If selected, translate the initial 10 µm wave by λ/4 on the 64-cell grid and run one 2048-step case. Compare pressure and conservative fields after undoing the 16-cell translation, along with modal damping and residuals. Test whether the pressure extrema track the seam or the wave. Stop after that control. Explicit stepping is sufficient. Vortex-scale radial balance and a practical slow-time integrator remain separate qualifications. Use `/new` after review for this bounded control. [Results and rationale](docs/physics-first/SHEAR_DECAY.md#decision-for-vortex-concentration)
 

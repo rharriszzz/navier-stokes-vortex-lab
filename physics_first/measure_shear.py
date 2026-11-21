@@ -35,7 +35,7 @@ def thermodynamics(q, base, state):
     return np.array(pressures), np.array(temperatures)
 
 
-def measure(directory, cells, steps, base):
+def measure(directory, cells, steps, base, *, shift_cells=0):
     state = CP.AbstractState("HEOS", "Water")
     start = read_restart(directory / "state_00000.dat")
     x, y = start["x"], start["y"]
@@ -53,7 +53,7 @@ def measure(directory, cells, steps, base):
     rho0 = base["rho_kg_m3"]
     np.testing.assert_array_equal(q0[:, 0], rho0)
     np.testing.assert_array_equal(q0[:, 1], 0)
-    np.testing.assert_allclose(q0[:, 2] / rho0, AMPLITUDE * np.sin(K * x), atol=2e-17)
+    np.testing.assert_allclose(q0[:, 2] / rho0, AMPLITUDE * np.sin(K * (x - LENGTH * shift_cells / cells)), atol=2e-17)
     np.testing.assert_allclose(q0[:, 3], rho0 * (base["internal_energy_J_kg"]
                                + 0.5 * (q0[:, 2] / rho0)**2), rtol=2e-16)
     dt = 8 * LENGTH / (base["sound_speed_m_s"] * steps)

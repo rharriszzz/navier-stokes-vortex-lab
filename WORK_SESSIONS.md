@@ -2109,3 +2109,7 @@ PC/WSL2 daisy, research/water-vortex-limits, start record a32e72a. Three runs co
 ## R286 STARTED · 2026-11-21T06:59:13+00:00
 
 Scientific round R285. PC/WSL2 daisy, rharris, Linux x86_64, /home/rharris/git/navier-stokes-vortex-lab. Sole worktree, empty stash, clean research/water-vortex-limits at origin/research/water-vortex-limits 50b9c65. Mac released. One translated 64-cell, 2048-step control after preflight. Released: no.
+
+## R286 COMPLETED · 2026-11-21T07:05:15+00:00
+
+Scientific R285. PC/WSL2 daisy, rharris, research/water-vortex-limits, STARTED e1c8592. One translated 64/2048 SU2 run. The pressure extrema stayed at the mesh seam. Peak transverse pressure range fell from 23.95 to 5.12 Pa and viscosity excess from 15.64% to 4.73%. Input audit passed. The source-based JST corner stencil identifies a plausible mechanism. Flux attribution remains open and R284 still fails. Added the translation and plotting tools, test coverage, report, JSON, figure and raw archive, and updated the input generator, measurement, navigation, status, request log and handoff. Seven targeted tests passed. Input, JSON and plot replayed byte-for-byte, and archived R284 JSON reproduced with exit 1. Full suite, solver modification, coefficient trial and vortex work skipped. Continue this chat for review with GPT-6.2 Astra/high before any two-phase fourth-order dissipation test. [Result](docs/physics-first/SHEAR_TRANSLATION.md) · [Next task](SESSION_HANDOFF.md#next-task). Released: no.
