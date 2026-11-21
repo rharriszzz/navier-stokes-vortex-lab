@@ -1,5 +1,7 @@
 # navier-stokes-vortex-lab
 
+**R291 · 21 November 2026.** In 20 ms the isolated ring’s whole-section effective area grew 1.463%, and all three fixed-circulation radii grew. The corrected liquid-water face matrix passed its independent finest-perturbation check. At 12 ns the relocated disk passed pressure but missed radial acceleration and local vorticity-rate targets. Decision B calls for a 2D release mass-flux balance test after review. [Report and decision](docs/physics-first/CONCENTRATION_AND_WATER_STEP.md) · [Next task](SESSION_HANDOFF.md#next-task)
+
 **R290 · 21 November 2026.** The unforced incompressible isolated ring traveled 1.631 mm in 20 ms. Its core flattened and its half-circulation radius grew 1.317%. The nominal area change was −0.460% with a ±1.936 percentage-point envelope across aperture, centering and numerical choices. Core contraction remains unresolved. [Measured history and decision](docs/physics-first/RING_EVOLUTION.md) · [Figure](docs/physics-first/ring-evolution/history.png) · [Next task](SESSION_HANDOFF.md#next-task)
 
 **R289 · 21 November 2026.** The full-disk SU2 release force passes on the two finer meshes. Moving the mesh junction outside the core cuts the 12 ns inner pressure disturbance from 1.29 to 0.0446 Pa. The 25 µs dual-time trial diverges. Rotating time evolution and 3D water remain unqualified. [Scientific decision](docs/physics-first/ROTATING_DECISION.md) · [Disk measurements and figure](docs/physics-first/ROTATING_DISK.md) · [Next task](SESSION_HANDOFF.md#next-task)

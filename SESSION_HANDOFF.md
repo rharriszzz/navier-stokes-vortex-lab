@@ -1,5 +1,11 @@
 # Current session handoff
 
+**R291 · 21 November 2026.** In 20 ms the isolated ring’s whole-section effective area grew 1.463%, and all three fixed-circulation radii grew. The corrected liquid-water face matrix passed its independent finest-perturbation check. At 12 ns the relocated disk passed pressure but missed radial acceleration and local vorticity-rate targets. Decision B calls for a 2D release mass-flux balance test after review. [Report](docs/physics-first/CONCENTRATION_AND_WATER_STEP.md) · [Next task](#next-task)
+
+Scientific R291 is request R292. PC/WSL2 daisy retains ownership. The full-section area and matched controls, mixed-sign assignment test, finite-difference face audit, experimental executable build, all short-time disk comparisons and failed gates are saved. The projected release remains a proposal. Use `/new` after review with GPT-6.2 Astra/high because the scientific evidence and next comparison are published.
+
+### Previous R290 result
+
 **R290 · 21 November 2026.** The unforced incompressible isolated ring traveled 1.631 mm in 20 ms. Its core flattened and its half-circulation radius grew 1.317%. The nominal area change was −0.460% with a ±1.936 percentage-point envelope across aperture, centering and numerical choices. Core contraction remains unresolved. [Measured history and decision](docs/physics-first/RING_EVOLUTION.md) · [Figure](docs/physics-first/ring-evolution/history.png) · [Next task](#next-task)
 
 Scientific R290 is request R291. PC/WSL2 daisy retains ownership. Both finer grids passed the release gate. The a/8 material-rate miss is recorded. Nine histories reached 20 ms with no swap use. The local and global budgets, uncertainty series, source and field samples are published. Use `/new` after review for the short compressible rotating-disk step comparison with GPT-6.2 Astra/high.
@@ -1764,13 +1770,13 @@ and physical-work limits remain unchanged.
 
 ## Owner and checkout
 
-| Field | R290 value |
+| Field | R291 value |
 |---|---|
-| Owner | PC/WSL2 `daisy`, user `rharris`. Mac released per the published handoff. |
-| Checkout | `/home/rharris/git/navier-stokes-vortex-lab`, sole local worktree, empty stashes at start. |
-| Branch and publication target | `research/water-vortex-limits` → `origin/research/water-vortex-limits`, based on fetched `origin/main` at `f348cf6`. R290 started from reviewed and synchronized R289 5209200. Delivery commit is in Git history. |
-| Runtime | Serial SU2 8.6.0, CoolProp 7.2.0, water Python 3.12, NumPy/SciPy, system Matplotlib. R290 uses the water Python 3.12 / SciPy stack. The compact histories and sampled fields are in docs/physics-first/ring-evolution/. |
-| Next decision | Review the R290 isolated control and its unresolved area. Consider the bounded 2D compressible disk update in Next task. |
+| Owner | PC/WSL2 daisy, user rharris. Mac released per the published handoff. |
+| Checkout | /home/rharris/git/navier-stokes-vortex-lab, sole local worktree, empty stashes at start. |
+| Branch and publication target | research/water-vortex-limits → origin/research/water-vortex-limits. R291 started at synchronized 00edf2d. Measurement protocol b4a36d8 and research evidence 199a1c0 are published. |
+| Runtime | Qualified SU2 8.6.0 / CoolProp 7.2.0 and separate experimental binary in ~/r291-lab/experimental on daisy. The replay needs only the two published field archives and water Python/SciPy stack. |
+| Next decision | Review the failed 12 ns qualification and the proposed 2D release projection. [Next task](#next-task) |
 
 ### Historical R272 checkout
 
@@ -1787,6 +1793,10 @@ and physical-work limits remain unchanged.
 | Delivery state | R271 delivery 83fb7c9 verified by clean pull; R272 STARTED 2e18140 published. Design completion prepared for publication; delivery in Git/final response. PC retains ownership. |
 
 ## Current result and limits
+
+**R291 · 21 November 2026.** In 20 ms the isolated ring’s whole-section effective area grew 1.463%, and all three fixed-circulation radii grew. The corrected liquid-water face matrix passed its independent finest-perturbation check. At 12 ns the relocated disk passed pressure but missed radial acceleration and local vorticity-rate targets. Decision B calls for a 2D release mass-flux balance test after review. [Evidence](docs/physics-first/CONCENTRATION_AND_WATER_STEP.md)
+
+### Previous isolated-ring result
 
 **R290 · 21 November 2026.** The unforced incompressible isolated ring traveled 1.631 mm in 20 ms. Its core flattened and its half-circulation radius grew 1.317%. The nominal area change was −0.460% with a ±1.936 percentage-point envelope across aperture, centering and numerical choices. Core contraction remains unresolved. [Evidence](docs/physics-first/RING_EVOLUTION.md)
 
@@ -1943,6 +1953,10 @@ write access. The tool sandbox denies `.git` writes, `ps`, unrestricted
 agent-side POV-Ray backtraces are unavailable.
 
 ## Next task
+
+**Review scientific R291.** After review, use `/new` with GPT-6.2 Astra and high reasoning for one bounded 2D experiment on daisy. Test a minimum-change adjustment to the junction-relocated disk's initial momentum that balances the actual SU2 mass flux while preserving the wall, pressure, temperature and circulation. Compare release residuals first. Only if the correction preserves the vortex, repeat the explicit and corrected backward-Euler 12 ns window with step halving and tightened solves. Check the 0.05 Pa, 0.001 m/s² and 0.02 s⁻¹ gates, stress, circulation and energy precision. Stop if any physical gate fails. No 3D launch is selected. [Scientific basis and cost](docs/physics-first/CONCENTRATION_AND_WATER_STEP.md#one-next-executable-experiment) · [Source and replay](docs/physics-first/r291/REPLAY.md)
+
+### Historical R290 proposal tested in R291
 
 **Review the 20 ms isolated-ring result.** After review, use `/new` with GPT-6.2 Astra, high reasoning, for one bounded comparison on the R289 junction-relocated rotating disk. Qualify one conservative acoustic-implicit pressure/energy update at the physical sound speed against the saved 12 ns explicit window, two half steps and a tighter inner solve. Measure mass residual, core pressure, circulation and mechanical/energy closure. Stop if the short window fails. The time-resolved isolated reference, uncertainty envelopes, R289 slow-time failure and 3D resource limits are published. The tilted pair remains deferred. [Scientific decision and resource estimate](docs/physics-first/RING_EVOLUTION.md#decision-on-the-interacting-pair)
 
