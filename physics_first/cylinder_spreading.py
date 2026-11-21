@@ -50,6 +50,7 @@ class Expansion:
     wavenumbers: np.ndarray
     amplitudes: np.ndarray
     rigid_rate: float
+    viscosity: float = VISCOSITY
 
     @classmethod
     def project(cls, modes, radius, weights, profile=initial_swirl):
@@ -61,7 +62,7 @@ class Expansion:
         return cls(k, amplitudes, (weighted @ radius) / (WALL**4 / 4))
 
     def at_time(self, time):
-        return self.amplitudes * np.exp(-VISCOSITY * time * self.wavenumbers**2)
+        return self.amplitudes * np.exp(-self.viscosity * time * self.wavenumbers**2)
 
     def velocity(self, radius, amplitudes):
         return self.rigid_rate * radius + j1(np.outer(radius, self.wavenumbers)) @ amplitudes

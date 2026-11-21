@@ -61,4 +61,6 @@ work=$(mktemp -d)
 env -u PYTHONPATH MPLBACKEND=Agg python3 -m physics_first.plot_disk_pressure plot "$work/map.npz" "$work/map.png"
 ```
 
-To regenerate baseline inputs in a fresh directory use `python -m physics_first.rotating_disk ROOT/r289-disk32 32` (likewise 16 and 64). For the wide control use `ROOT/r289-wide32 32 --wide`. Run `su2-water wave.cfg` in each generated directory. Use `python -m physics_first.disk_time_cases ROOT rk32` to generate a pilot and run it there. Case names in the module select space, time, mesh or implicit comparisons. The scientific limitations are reported in the measurements. The measurement commands exit successfully on valid extraction, including extraction of a failed solver qualification.
+To regenerate baseline inputs in a fresh directory use `python -m physics_first.rotating_disk ROOT/r289-disk32 32` (likewise 16 and 64). For the wide control use `ROOT/r289-wide32 32 --wide`. Run `su2-water wave.cfg` in each generated directory. Use `python -m physics_first.disk_time_cases ROOT rk32` to generate a pilot and run it there. Case names in the module select space, time, mesh or implicit comparisons. Daisy also retains the complete native meshes, restarts and logs in `~/.local/opt/water-acoustics/runs/r289/`. [Native file checksums](rotating-disk/native_sha256.txt)
+
+The scientific limitations are reported in the measurements. The measurement commands exit successfully on valid extraction, including extraction of a failed solver qualification.

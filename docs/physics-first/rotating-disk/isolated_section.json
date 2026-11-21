@@ -1,0 +1,30 @@
+[
+  {
+    "radial": 8,
+    "angular": 24,
+    "sources": 256,
+    "flux_m2_s": 0.003533145884922974,
+    "loop_m2_s": 0.003533145880159975,
+    "flux_over_gamma": 0.9814294124786039,
+    "stokes_rel": 1.3230552841574865e-09,
+    "negative_flux_over_gamma": -0.0,
+    "centroid_radial_mm": -0.06195209269416919,
+    "centroid_second_mm": 5.402322252277232e-17,
+    "minor_mm": 1.9236407146062875,
+    "major_mm": 1.9270894797863458
+  },
+  {
+    "radial": 16,
+    "angular": 48,
+    "sources": 512,
+    "flux_m2_s": 0.0035331458801599732,
+    "loop_m2_s": 0.0035331458801599745,
+    "flux_over_gamma": 0.9814294111555482,
+    "stokes_rel": 3.6140072416183483e-16,
+    "negative_flux_over_gamma": -0.0,
+    "centroid_radial_mm": -0.06195209299495377,
+    "centroid_second_mm": 8.834377205334186e-17,
+    "minor_mm": 1.9236407191133542,
+    "major_mm": 1.9270894843736117
+  }
+]

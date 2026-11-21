@@ -1,0 +1,21 @@
+# R289 decision on vortex evolution
+
+| Question | Decision |
+|---|---|
+| Is rotating 2D water qualified? | **Only at release on the two finer meshes.** The recovered 30 mm pressure rise is within 0.0002 Pa of reference, all nodes recover as liquid, and the actual radial acceleration RMS falls below 0.001 m/s². Sustained evolution remains unqualified. |
+| Does the method preserve pressure balance and viscous diffusion? | The isolated release stress agrees with reference kinetic dissipation to 0.058%. A 12 ns pilot shows pressure disturbances strongly tied to the mesh. Moving the mesh transition reduces the core maximum from 1.29 to 0.0446 Pa. There is no resolved time-dependent core-width or heating measurement. |
+| Is SU2 suitable for a first short 3D water evolution here? | **No, for the tested settings and host.** Explicit integration is too slow. The installed dual-time water path executes, but its 25 µs step diverges. Even a reduced 3D layout exceeds local memory. |
+| Which uncertainty matters most? | Numerical mass-flux imbalance generates acoustic pressure before a measurable change of width. The uncertainty of a slow-time, curved-core width measurement remains unknown. Experimentally, uncertainty in detached-ring width, circulation and alignment also changes the predicted sign. |
+| Is the 20 ms pair the most useful next experiment? | **Defer it.** It remains the physical comparison of interest. A positive release tendency of 0.142 s⁻¹ gives only 0.28% intensity change if maintained for 20 ms, and intensity does not establish contraction. First measure how well an isolated curved core's width can be followed in time. |
+
+[Full-disk force, transient and resource measurements](ROTATING_DISK.md) · [Rigid-wall analytical reference](ROTATING_REFERENCE.md) · [Installed implicit method and acoustic-implicit alternative](WATER_SLOW_TIME.md) · [3D implementation, signal and PC estimates](ISOLATED_RING_CONTROL.md)
+
+## One next executable experiment
+
+**Compute a 20 ms axisymmetric incompressible isolated-ring reference with cylindrical coordinates aligned to its propagation axis**. Keep the origin fixed in the laboratory. A single circular ring of this type has azimuthal vorticity, axial and radial velocity, and no azimuthal velocity. Its curvature, self-translation, material stretching and physical viscosity survive the two-dimensional reduction. This is a different use of axisymmetry from the swirling disk, which requires an azimuthal velocity degree of freedom. It gives the future 3D calculation an independent time history and estimates the uncertainty of identifying a material core. The interacting tilted pair lacks this symmetry.
+
+Use the same smooth left-ring release, Γ = 0.0036 m²/s, R = 15 mm, a = 2 mm and ν = 1.003395 × 10⁻⁶ m²/s. In meridional (r,z) coordinates evolve η=ωθ/r, satisfying Dη/Dt = ν(ηᵣᵣ+3ηᵣ/r+η𝓏𝓏). Recover uᵣ=−ψ𝓏/r and u𝓏=ψᵣ/r from ψᵣᵣ−ψᵣ/r+ψ𝓏𝓏=−r²η. Enforce regularity at the axis. Use the existing one-ring quadrature for release and an isolated/free-space outer condition with a doubled-domain control. A practical starting rectangle is 0–80 mm radially and ±80 mm axially. Compare core spacings a/8, a/12 and a/16 and independently halve the physical step. Limit the solve to 20 ms and check memory before the doubled domain. A meridional solve avoids the full cube and the acoustic step count.
+
+Measure translation, circulation, the two tracked widths, half-circulation radius, material stretch and vorticity budget at release and every 0.5 ms. Use the finite-aperture targets already measured, account separately for viscous transport across the aperture, and test interpolation, ridge choice and domain sensitivity. Report a measured uncertainty envelope and stop if the strong-core rate error exceeds 0.02 s⁻¹ after refinement or the width change is unresolved. An unresolved width is a decision result. This control cannot certify the compressible EOS, 3D image effects or the pair's interaction. It can determine whether curvature and diffusion alone already defeat the required measurement precision.
+
+Use **GPT-6.2 Astra, high reasoning** for the axis treatment, elliptic inversion and uncertainty budget. Stop after this one control for review. Use a fresh chat at the published boundary.

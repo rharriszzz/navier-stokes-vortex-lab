@@ -17,7 +17,8 @@ def project(modes, r, weights, profile=initial_swirl):
     k = roots / WALL
     norm = (WALL * j0(roots))**2 / 2
     amplitudes = ((weights * r * profile(r)) @ j1(np.outer(r, k))) / norm
-    return Expansion(k, amplitudes, 0.0)
+    props = background()
+    return Expansion(k, amplitudes, 0.0, props["mu_Pa_s"] / props["rho_kg_m3"])
 
 
 def evaluate(modes, points):
@@ -31,7 +32,7 @@ def evaluate(modes, points):
     inner, wi = radial_rule(points, INNER)
     rows = []
     for time in (0, .001, .020):
-        a = series.amplitudes * np.exp(-nu * time * k**2)
+        a = series.at_time(time)
         u = series.velocity(r, a)
         shear = -jv(2, kr) @ (k * a)
         peak = brentq(lambda x: (j0(k*x) - jv(2, k*x)) @ (k*a), .009, .012)

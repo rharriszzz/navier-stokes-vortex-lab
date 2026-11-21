@@ -73,7 +73,7 @@ def samples(arc, gap, core, gamma, tilt, count, fd_divisors):
     return rows, checks
 
 
-def section_shape(arc, opts, nrad, nphi, nsource):
+def section_shape(arc, opts, nrad, nphi, nsource, *, sides=(-1, 1)):
     gap, tilt, a, gamma = (opts[k] for k in ('gap','tilt','core','gamma'))
     center, tangent, basis = frame(arc, gap, tilt)
     # Disk of radius 2a. Legendre radial weights include the polar Jacobian.
@@ -88,7 +88,7 @@ def section_shape(arc, opts, nrad, nphi, nsource):
     edge_dl = 2*a*2*np.pi/nphi*np.column_stack((-np.sin(phi), np.cos(phi))) @ basis
     axial = np.zeros(len(points))
     loop = 0.
-    for side in (-1, 1):
+    for side in sides:
         source, unit = rs.ring(side, nsource, **placement(gap, tilt))
         dl = unit*(2*np.pi*rs.RADIUS/nsource)
         for start in range(0, len(points), 128):
