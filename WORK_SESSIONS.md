@@ -2089,3 +2089,7 @@ PC/WSL2 daisy, rharris, Linux x86_64, /home/rharris/git/navier-stokes-vortex-lab
 ## R282 COMPLETED · 2026-11-21T06:27:29+00:00
 
 PC/WSL2 daisy, research/water-vortex-limits, start be1adf5. Prepared the [review brief](docs/physics-first/INDEPENDENT_REVIEW.md), updated both READMEs, status, handoff and logs. Read primary sources and checked rounded results against saved JSON, linked project files at 596062d and current navigation. No simulation, software tests or proof build. Owner will use `/new` for the [next task](SESSION_HANDOFF.md#next-task) after receiving the reviewer’s recommendation. Released: no.
+
+## R283 STARTED · 2026-11-21T06:34:00Z
+
+PC/WSL2 daisy, rharris, Linux x86_64, /home/rharris/git/navier-stokes-vortex-lab. Sole worktree, clean research/water-vortex-limits at origin/research/water-vortex-limits 5836550, empty stashes. Static equilibrium and engineering assessment only. Mac released. Released: no.

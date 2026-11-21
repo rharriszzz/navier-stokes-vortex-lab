@@ -10568,3 +10568,105 @@ Complete this bounded first round and stop for my review before beginning the ne
 **Scope/status.** STARTED. Revisit current primary research, summarize project evidence and uncertainties in a standalone reviewer document, propose bounded options and invite a different recommendation. Publish to the research branch and wait for the owner's chosen review advice before experimentation.
 
 **R282 outcome · 2026-11-21 · COMPLETED.** Added a self-contained ChatGPT review brief and linked it from the repository and physics-first READMEs, status and current handoff. Revisited the 20 November unforced manuscript and the authors’ public certificate-status note, September forced work, a barotropic implosion result, a low-Mach rotating-water benchmark, vortex-wave and porous-wall studies, and two 2026 water-tunnel papers. Compared technical claims with primary sources and rounded spreading/acoustic numbers with saved JSON. Verified pinned project paths and new local navigation. This documentation round ran no CFD, code tests, proof verification, FEM or rendering. Physical concentration, local radial balance and effective numerical viscosity remain open. The reviewer is asked to rank the initial radial equilibrium and transverse shear checks or replace both with a better bounded experiment. Use `/new` with the reviewer’s actual advice. [Standalone document](docs/physics-first/INDEPENDENT_REVIEW.md) · [Next task](SESSION_HANDOFF.md#next-task)
+
+## R283 — 2026-11-21 — Validate the initial compressible-water vortex
+
+**User request (verbatim)**
+
+````markdown
+# R283 — Validate the Initial Compressible-Water Vortex
+
+Continue on branch `research/water-vortex-limits` in `rharriszzz/navier-stokes-vortex-lab`, on the Windows/WSL2 PC.
+
+This is a new, explicitly selected physics-first task. Do not resume the historical R272 FEM program.
+
+## Objective
+
+Establish a numerically consistent, physically interpretable initial state for the 10 mm rotating-water vortex, including the pressure gradient required to balance its centrifugal acceleration.
+
+**Stop before advancing the vortex in time.**
+
+Read `AGENTS.md`, `SESSION_HANDOFF.md`, `docs/physics-first/INDEPENDENT_REVIEW.md`, `SPREADING_RESULT.md`, `ACOUSTIC_RESULT.md`, `ACOUSTIC_100PA.md`, and the relevant physics-first Python source.
+
+## Physical problem
+
+Use the existing finite-cylinder swirl profile:
+
+- Core radius (peak swirl): 10 mm
+- Peak tangential speed: 0.1 m/s
+- Cylinder radius: 100 mm
+- Same smooth taper between 60 and 80 mm
+- Temperature: 293.15 K
+- Wall pressure: 101325 Pa absolute
+- Initial radial and axial velocities: zero
+
+Use the existing CoolProp/IAPWS-95 liquid-water equation of state.
+
+At constant initial temperature, integrate the centrifugal equilibrium equation inward from the wall:
+
+`dp/dr = rho(p,T) * u_theta(r)^2 / r`
+
+Treat the axis correctly, including the limiting behavior as r approaches zero.
+
+Construct pressure, density, specific internal energy and conservative total-energy variables consistently.
+
+## Numerical verification
+
+1. Compute the initial state with 16, 32 and 64 radial cells per initial core radius.
+
+2. Compare `p(30 mm) - p(0)` with the finite-cylinder incompressible reference, approximately 15.902 Pa, accounting for the small change in reference density.
+
+3. Independently check the integral identity:
+
+   `integral(dp/rho) = integral(u_theta^2/r dr)`
+
+   Use separate numerical paths so the comparison is not merely a repetition of the original pressure integration.
+
+4. Recover pressure and temperature from the conservative variables using the water EOS. Measure round-trip errors and confirm liquid-phase states.
+
+5. Evaluate the local radial force imbalance:
+
+   `dp/dr - rho*u_theta^2/r`
+
+   Report its maximum, location and radial RMS over the inner 30 mm, in Pa/m. Also report the corresponding spurious radial acceleration in m/s².
+
+6. Distinguish a Python radial-stencil check from an actual SU2 discrete momentum residual. The latter requires an appropriate geometric discretization and the actual CFD operator. Do not treat these as equivalent.
+
+## Acceptance criteria
+
+- Inner pressure-rise error below 0.05 Pa relative to the density-adjusted benchmark.
+- Recovered EOS pressure error below 0.01 Pa, or a documented precision limitation.
+- Refinement should reduce independently measured errors consistently with the method's expected order.
+- Target inner-region RMS spurious acceleration below 0.01 m/s², approximately 1% of the initial characteristic centrifugal acceleration.
+- No unexplained nonfinite states, phase errors or inconsistent thermodynamic variables.
+
+If a numerical gate fails, document the cause or uncertainty. Do not silently relax the criterion.
+
+If the actual SU2 momentum operator can be inspected in a small, bounded calculation, report its discrete force imbalance separately. If it requires substantial new geometry or solver development, document that limitation and stop.
+
+## Additional engineering assessment
+
+Before recommending a multi-second vortex simulation, estimate the runtime implications of the present explicit acoustic time step.
+
+Determine what would be required for an implicit or all-speed method to evolve the vortex over seconds while preserving pressure balance and accurately resolving viscous diffusion.
+
+Do not install or implement such a method in this round.
+
+Identify the smallest subsequent transverse shear-wave test that would measure effective numerical viscosity without requiring an excessive number of acoustic time steps.
+
+## Deliverables
+
+Add a concise result document, reproducible calculation, test cases and any necessary small plots in the existing physics-first structure.
+
+Give an accessible explanation of what centrifugal equilibrium means and why its numerical accuracy matters.
+
+Preserve all historical work and existing reports. Update the README, status, request log and handoff as appropriate.
+
+Run lightweight tests and record their results. This prompt authorizes committing and pushing scoped changes to the existing research branch only, not merging to main.
+
+Finally, recommend one concrete next experiment and the appropriate Codex model/reasoning level. Stop for review.
+
+Do not start long CFD runs, 3D simulations, old FEM tasks or additional research programs.
+````
+
+**Scope/status.** STARTED on PC/WSL2 daisy after clean fast-forward synchronization at 5836550. Static EOS and radial verification, operator feasibility and runtime assessment, then review. Scoped branch publication authorized.
