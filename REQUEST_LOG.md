@@ -10676,3 +10676,96 @@ Do not start long CFD runs, 3D simulations, old FEM tasks or additional research
 **Changes and validation.** Added physics_first/{vortex_equilibrium,plot_vortex_equilibrium}.py, tests/test_vortex_equilibrium.py, docs/physics-first/{VORTEX_EQUILIBRIUM.md,vortex_equilibrium.json,vortex_initial_state.csv,vortex_equilibrium.png}. Updated both READMEs, status, direction, handoff, request and lifecycle logs. Used existing Python 3.12.14 / CoolProp 7.2.0 / NumPy 2.5.5 with the R277 SciPy 1.17.1 directory. Four new static-state tests, three spreading, three acoustic and four scale tests passed with zero skips. Repeated the calculation and compared the JSON/CSV byte-for-byte, inspected the plot, source for the SU2 axisymmetric operator and prior strip restart timings. The scientific command exits 1 as measured. No CFD launch, implicit solver work, full test suite, FEM, 3D or machine transfer. No session/status excerpts supplied.
 
 **Review and next task.** PC retains ownership. Use `/new` with GPT-6.2 Astra/high after review because the static result and precision diagnosis are saved. Proposed next measurement is effective viscosity from the 10 μm transverse shear mode, eight acoustic crossings, two grids and one half-step repeat. Stop at the shear comparison. Solver-level radial balance, transfer of shear damping to vortex scales and affordability of a slow-time solver remain open. [Next task](SESSION_HANDOFF.md#next-task)
+
+## R284 · 2026-11-21 · Validate viscous momentum diffusion in water
+
+````text
+# R284 — Validate Viscous Momentum Diffusion in Water
+
+Work in `rharriszzz/navier-stokes-vortex-lab`, branch `research/water-vortex-limits`, on the Windows/WSL2 PC.
+
+The latest reviewed result is R283, commit `d56a784`. Synchronize and verify the actual branch HEAD and worktree before making changes.
+
+## Scientific objective
+
+Measure the effective shear viscosity of our installed SU2 8.6.0 / CoolProp liquid-water solver using an initially transverse velocity wave.
+
+We need to know whether numerical damping overwhelms physical viscous diffusion.
+
+This is an **unforced, compressible, viscous-water experiment**. Preserve the mass, momentum and total-energy equations.
+
+## First read
+
+- `AGENTS.md` and the current `SESSION_HANDOFF.md`
+- `docs/physics-first/README.md`
+- `docs/physics-first/VORTEX_EQUILIBRIUM.md`
+- `docs/physics-first/ACOUSTIC_RESULT.md`
+- `docs/physics-first/PHYSICAL_MODEL.md`
+
+Preserve the previous results and the failed R283 recovered-pressure refinement finding.
+
+## Experiment
+
+Use the transverse Fourier mode proposed in `VORTEX_EQUILIBRIUM.md`:
+
+- Wavelength: 10 µm
+- Initial transverse velocity amplitude: 0.01 m/s
+- Longitudinal velocity: zero
+- Initial pressure: 101325 Pa
+- Initial temperature: 293.15 K
+- Periodic boundaries in both directions
+- Same CoolProp water EOS, physical shear viscosity, heat conduction and qualified SU2 solver configuration
+
+Include kinetic energy in the conservative initial state.
+
+Test 32 and 64 cells per wavelength with 2048 steps, and repeat the fine grid at half the time step.
+
+Measure the initial Fourier amplitude and its evolution over eight acoustic crossing times.
+
+Compare with the linear viscous-decay prediction. The full compressible energy equation may introduce small second-order thermal and pressure effects; quantify these rather than assuming they vanish exactly.
+
+## Diagnostics and acceptance
+
+Calculate:
+
+1. Effective viscosity from the measured logarithmic amplitude decay.
+2. Difference between effective and physical viscosity.
+3. Independent grid and time-step convergence.
+4. Pressure fluctuations and unintended longitudinal velocity.
+5. Mass, momentum and total-energy conservation.
+6. Numerical precision and other effects that might contaminate the 2.1% expected amplitude loss.
+
+Target effective viscosity within 10% of physical viscosity, with grid, time-step and interval-fit changes below 5% of physical viscosity.
+
+Use independent diagnostics where practical. Do not silently relax a failed criterion.
+
+Avoid excessive restart files; store enough snapshots for independent reproduction.
+
+## Scope
+
+This is one bounded qualification experiment.
+
+Do not start a multi-second vortex simulation, 3D DNS, FEM work, actuator optimization, rendering or unrelated research.
+
+If SU2 cannot perform the experiment correctly, explain the problem and stop rather than starting an extensive solver-development project.
+
+## Deliverables
+
+Publish a concise physical explanation, numerical results, comparison plot, reproducible inputs, checks and limitations in the physics-first documentation.
+
+Distinguish physical viscosity from numerical diffusion and explain why agreement at a 10 µm wavelength does not independently validate a millimetre-scale vortex.
+
+Preserve historical documentation and update the current research status and handoff. Do not merge into main; obtain any needed Git publication authorization under the repository instructions.
+
+**After completing R284, recommend a scientifically useful next step toward vortex stretching or concentration.** Explain whether the existing solver is a credible candidate for that step, and whether an implicit or all-speed time integrator is needed.
+
+Stop for review.
+````
+
+**STARTED.** PC/WSL2 daisy, rharris, clean synchronized research branch at d56a784, empty stash. Three specified runs only. Branch publication permission requested separately.
+
+## R285 · 2026-11-21 · R284 publication authorization
+
+> I authorize you to do as many add commit pus as you need.
+
+**Scope/status.** Received during R284. Authorizes staging, commits and pushes needed for R284 on the current research branch. The experiment, review stop and branch target remain as requested.
