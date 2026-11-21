@@ -1,6 +1,8 @@
 # Project status
 
-**R283 · 21 November 2026.** The 10 mm vortex starts with a 15.90564 Pa pressure rise from the axis to 30 mm. The radial acceleration meets its target on all grids. EOS recovery limits force-gradient convergence on the finest grid. The next proposed test measures transverse shear damping. [Initial state and results](docs/physics-first/VORTEX_EQUILIBRIUM.md) · [Independent review brief](docs/physics-first/INDEPENDENT_REVIEW.md) · [Next task](SESSION_HANDOFF.md#next-task)
+**R284 · 21 November 2026.** The 10 µm transverse shear wave decayed too quickly. Effective viscosity exceeded the physical value by 95.51% on the coarse grid and 15.64% on the fine grid. Halving the time step preserved the excess. The fine-grid pressure field also developed a 23.95 Pa difference across the strip. Review the proposed quarter-wavelength translation control before further vortex work. [Results, plot and reproduction](docs/physics-first/SHEAR_DECAY.md) · [Next task](SESSION_HANDOFF.md#next-task)
+
+**R283 · 21 November 2026.** The 10 mm vortex starts with a 15.90564 Pa pressure rise from the axis to 30 mm. The radial acceleration meets its target on all grids. EOS recovery limits force-gradient convergence on the finest grid. R284 completed the proposed shear test. [Initial state and results](docs/physics-first/VORTEX_EQUILIBRIUM.md) · [Independent review brief](docs/physics-first/INDEPENDENT_REVIEW.md) · [Next task](SESSION_HANDOFF.md#next-task)
 
 **R281 · 2026-11-21.** At 100 Pa the largest quarter-period energy defect was 0.280% of initial wave energy, down from 45.4% at 10 Pa. Both waves had the same measured speed to 0.001 m/s. Heating remains unresolved. [Measured comparison](docs/physics-first/ACOUSTIC_100PA.md) · [Next task](SESSION_HANDOFF.md#next-task)
 

@@ -46,6 +46,13 @@ def make_case(directory, cells, steps, amplitude_pa=AMPLITUDE):
         rows.append([LENGTH * i / cells, 0, rho, momentum, 0, energy])
     data = np.tile(np.asarray(rows), (NY + 1, 1))
     data[:, 1] = np.repeat(np.linspace(0, HEIGHT, NY + 1), cells + 1)
+    write_strip(directory, cells, NY, data)
+    write_configuration(directory, base, dt, steps, amplitude_pa / (rho0*c*c), LENGTH,
+                        restart_frequency=1)
+
+
+def write_strip(directory, cells, ny, data):
+    """Write a structured quadrilateral strip and its conservative nodal state."""
     with (directory / "state_00000.dat").open("wb") as f:
         f.write(struct.pack("<5i", MAGIC, len(FIELDS), len(data), 8, 0))
         for name in FIELDS:
@@ -53,23 +60,33 @@ def make_case(directory, cells, steps, amplitude_pa=AMPLITUDE):
         f.write(data.astype("<f8").tobytes())
 
     stride = cells + 1
-    lines = ["NDIME= 2", f"NELEM= {cells * NY}"]
-    for j in range(NY):
+    lines = ["NDIME= 2", f"NELEM= {cells * ny}"]
+    for j in range(ny):
         for i in range(cells):
             a = j * stride + i
             lines.append(f"9 {a} {a+1} {a+stride+1} {a+stride}")
     lines += [f"NPOIN= {len(data)}"] + [f"{x:.17g} {y:.17g} {i}" for i, (x, y) in enumerate(data[:, :2])]
     boundaries = {
         "bottom": [(i, i + 1) for i in range(cells)],
-        "right": [(j*stride + cells, (j+1)*stride + cells) for j in range(NY)],
-        "top": [(NY*stride + i + 1, NY*stride + i) for i in range(cells)],
-        "left": [((j+1)*stride, j*stride) for j in range(NY)],
+        "right": [(j*stride + cells, (j+1)*stride + cells) for j in range(ny)],
+        "top": [(ny*stride + i + 1, ny*stride + i) for i in range(cells)],
+        "left": [((j+1)*stride, j*stride) for j in range(ny)],
     }
     lines.append("NMARK= 4")
     for marker, edges in boundaries.items():
         lines += [f"MARKER_TAG= {marker}", f"MARKER_ELEMS= {len(edges)}"]
         lines.extend(f"3 {a} {b}" for a, b in edges)
     (directory / "line.su2").write_text("\n".join(lines) + "\n")
+
+
+def write_configuration(directory, base, dt, steps, mach, length, restart_frequency,
+                        periodic_height=None):
+    pairs = f"left, right, 0, 0, 0, 0, 0, 0, {length}, 0, 0"
+    if periodic_height is None:
+        boundaries = f"MARKER_PERIODIC= ({pairs})\nMARKER_SYM= (bottom, top)"
+    else:
+        pairs += f", bottom, top, 0, 0, 0, 0, 0, 0, 0, {periodic_height}, 0"
+        boundaries = f"MARKER_PERIODIC= ({pairs})"
     (directory / "wave.cfg").write_text(f"""SOLVER= NAVIER_STOKES
 MATH_PROBLEM= DIRECT
 SYSTEM_MEASUREMENTS= SI
@@ -82,13 +99,12 @@ INIT_OPTION= TD_CONDITIONS
 FREESTREAM_OPTION= TEMPERATURE_FS
 FREESTREAM_PRESSURE= {P0}
 FREESTREAM_TEMPERATURE= {base['temperature_K']}
-MACH_NUMBER= {amplitude_pa / (rho0*c*c):.17g}
+MACH_NUMBER= {mach:.17g}
 VISCOSITY_MODEL= CONSTANT_VISCOSITY
 MU_CONSTANT= {base['mu_Pa_s']:.17g}
 CONDUCTIVITY_MODEL= CONSTANT_CONDUCTIVITY
 THERMAL_CONDUCTIVITY_CONSTANT= {base['conductivity_W_m_K']:.17g}
-MARKER_PERIODIC= (left, right, 0, 0, 0, 0, 0, 0, {LENGTH}, 0, 0)
-MARKER_SYM= (bottom, top)
+{boundaries}
 TIME_DOMAIN= YES
 TIME_MARCHING= TIME_STEPPING
 TIME_STEP= {dt:.17g}
@@ -108,7 +124,7 @@ RESTART_FILENAME= state
 WRT_RESTART_COMPACT= NO
 VOLUME_OUTPUT= (COORDINATES, SOLUTION, PRIMITIVE, RESIDUAL)
 OUTPUT_FILES= (RESTART)
-OUTPUT_WRT_FREQ= 1
+OUTPUT_WRT_FREQ= {restart_frequency}
 SCREEN_OUTPUT= (TIME_ITER, CUR_TIME, RMS_DENSITY)
 SCREEN_WRT_FREQ_TIME= {steps//4}
 """)

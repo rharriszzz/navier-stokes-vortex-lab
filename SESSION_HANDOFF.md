@@ -1,5 +1,11 @@
 # Current session handoff
 
+**R284 · 2026-11-21 · Shear qualification failed.** PC/WSL2 daisy retains the research branch. The 64-cell, half-step fit is 1.16034 × 10⁻⁶ m²/s against 1.00340 × 10⁻⁶ m²/s physical. Grid change is 79.87% of physical viscosity, time-step change is below 0.000001%, and four-interval spread is 12.03% coarse and 2.06% fine. Pressure varies across the strip despite uniform transverse initial and boundary conditions. R283's recovered-pressure refinement failure remains open. [Result, figure and raw states](docs/physics-first/SHEAR_DECAY.md) · [Next task](#next-task)
+
+Three CFD runs completed. Sixteen targeted tests passed. Archived inputs, summary and plot reproduced byte-for-byte. The scientific measurement exits 1. Changed the shear generator, analysis, plot and tests, shared acoustic input writer, physics-first evidence, research status and coordination files. The exact origin of the seam-localized pressure signal and the radial operator balance are unresolved. Full suite and vortex evolution skipped. Stop for review. Use `/new` after review because the measurements and next control are saved together.
+
+### Previous R283 result
+
 **R283 · 2026-11-21 · Time-zero water state constructed.** The inner pressure rise is 15.90564 Pa against a 15.90532 Pa density-adjusted reference. On the finest grid the recovered-pressure radial stencil gives 0.000381 m/s² RMS spurious acceleration. All three grids pass the magnitude targets. The finest recovered-force refinement check fails because the stencil magnifies nodal EOS round-trip error. SU2's discrete radial residual and effective viscosity remain unmeasured. PC/WSL2 daisy retains the research branch. [Result, figure and data](docs/physics-first/VORTEX_EQUILIBRIUM.md) · [Next task](#next-task)
 
 Added a static initializer, tests, plot source, report, JSON, finest CSV and figure. Updated both READMEs, status, direction and coordination logs. Fourteen targeted tests passed and JSON/CSV reproduced byte-for-byte with the scientific gate exit 1. No CFD time step, implicit method, FEM, full-suite test or machine transfer. Use `/new` after review because the initialization and its precision limit are saved and the shear-mode experiment is independently specified.
@@ -1722,13 +1728,13 @@ and physical-work limits remain unchanged.
 
 ## Owner and checkout
 
-| Field | R283 value |
+| Field | R284 value |
 |---|---|
 | Owner | PC/WSL2 `daisy`, user `rharris`. Mac released per the published handoff. |
 | Checkout | `/home/rharris/git/navier-stokes-vortex-lab`, sole local worktree, empty stashes at start. |
-| Branch and publication target | `research/water-vortex-limits` → `origin/research/water-vortex-limits`, based on fetched `origin/main` at `f348cf6`. Delivery commit is in Git history. |
+| Branch and publication target | `research/water-vortex-limits` → `origin/research/water-vortex-limits`, based on fetched `origin/main` at `f348cf6`. R284 started from synchronized R283 d56a784. Delivery commit is in Git history. |
 | Runtime | WSL command `su2-water`, dedicated Python 3.12.14 in `~/.local/opt/water-acoustics/tools`, pinned CoolProp 7.2.0. [Rebuild](docs/physics-first/SU2_WATER_SETUP.md). |
-| Next decision | Owner reviews the static equilibrium result before selecting the short periodic transverse shear test. |
+| Next decision | Owner reviews R284 before selecting a single translated shear-wave control. |
 
 ### Historical R272 checkout
 
@@ -1899,6 +1905,10 @@ write access. The tool sandbox denies `.git` writes, `ps`, unrestricted
 agent-side POV-Ray backtraces are unavailable.
 
 ## Next task
+
+**Review R284.** If selected, translate the initial 10 µm wave by λ/4 on the 64-cell grid and run one 2048-step case. Compare pressure and conservative fields after undoing the 16-cell translation, along with modal damping and residuals. Test whether the pressure extrema track the seam or the wave. Stop after that control. Explicit stepping is sufficient. Vortex-scale radial balance and a practical slow-time integrator remain separate qualifications. Use `/new` after review for this bounded control. [Results and rationale](docs/physics-first/SHEAR_DECAY.md#decision-for-vortex-concentration)
+
+### Historical R283 proposal completed by R284
 
 After owner review, use `/new` with **GPT-6.2 Astra, high reasoning** for the independently specified shear-decay measurement. The initial state and failed recovered-gradient refinement gate are saved. Prompt: **Measure the 10 μm periodic transverse water shear wave in the three short cases specified in R283. Estimate effective viscosity, compare space/time and interval-fit changes with the proposed gates, and stop before vortex evolution.** Eight acoustic crossings predict 2.115% amplitude loss. Use the same model and effort for scientific interpretation if the gate fails. A routine evidence or navigation update after qualification can use GPT-6.2 Sol/medium. [Shear setup, budget and decisions](docs/physics-first/VORTEX_EQUILIBRIUM.md#recommended-next-experiment)
 
