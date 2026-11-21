@@ -52,8 +52,9 @@ def critical(gap, core):
     i = np.argmin(ratios)
     gamma = rs.GAMMA*ratios[i]
     rates = [at(f*gamma)['net'].max() for f in (.99, 1., 1.01)]
-    direct = at(gamma)
-    fine = at(gamma, 256)
+    direct, checks = rs.measure(-1,512,**opts,gamma=gamma,fd_divisors=(8,16,32))
+    middle = at(gamma, 256)
+    coarse = at(gamma, 128)
     swirl = gamma*(1-np.exp(-1.121**2))/(2*np.pi*1.121*core)
     # Integral rho * integral(v_theta^2/r dr), straight Gaussian from axis to infinity.
     deficit = 998*(gamma/(2*np.pi*core))**2*np.log(2)
@@ -63,7 +64,11 @@ def critical(gap, core):
                 swirl_Mach=swirl/1482, straight_deficit_Pa=deficit,
                 single_tail_midpoint=np.exp(-(gap/(2*core))**2),
                 max_net_99=rates[0], max_net_100=rates[1], max_net_101=rates[2],
-                fine_change=max(rs.maximum(direct[k]-fine[k]) for k in ('s','visc','net')))
+                coarse_change=max(rs.maximum(middle[k]-coarse[k]) for k in ('s','visc','net')),
+                fine_change=max(rs.maximum(direct[k]-middle[k]) for k in ('s','visc','net')),
+                **{f'fd_a{d}': max(checks[f'fd_a{d}_{kind}'] for kind in
+                                   ('pair_s','partner_s','pair_directional_s','partner_directional_s'))
+                   for d in (8,16,32)})
 
 
 def main(folder):
@@ -72,7 +77,8 @@ def main(folder):
     rows = [critical(gap, core) for gap in GAPS for core in CORES]
     write_csv(folder/'critical.csv', rows)
     return passed and all(r['max_net_99'] < 0 < r['max_net_101'] and
-                          abs(r['max_net_100']) < 1e-9 and r['fine_change'] < rs.TOL for r in rows)
+                          abs(r['max_net_100']) < 1e-9 and max(r[k] for k in ('coarse_change','fine_change','fd_a8','fd_a16','fd_a32')) < rs.TOL
+                          for r in rows)
 
 
 if __name__ == '__main__':

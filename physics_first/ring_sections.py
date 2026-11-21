@@ -41,11 +41,25 @@ def samples(arc, gap, core, gamma, tilt, count, fd_divisors):
     for i, (r, angle) in enumerate(zip(radii, angles)):
         if null[i]:
             # Retain the ill-conditioned raw projection for the convergence audit.
-            raw, _ = rs.measure(-1,count,**placement(gap,tilt),core=core,gamma=gamma,
-                                targets=(points[i:i+1],tangent[None,:]),fd_divisors=())
-            checks['null_raw_omega'] = raw['omega_s_inv'][0]
-            checks['null_raw_net'] = raw['net'][0]
-            vals = {k: raw[k][0] if k.startswith('iso_') else None for k in scalars}
+            def local_field(side):
+                source, unit = rs.ring(side,count,**placement(gap,tilt))
+                return rs.field(points[i:i+1],source,unit*(2*np.pi*rs.RADIUS/count),
+                                core=core,gamma=gamma)
+            own, partner = local_field(-1), local_field(1)
+            omega = own[2]+partner[2]
+            magnitude = np.linalg.norm(omega)
+            checks['null_raw_omega'] = magnitude
+            checks['null_raw_net'] = None
+            if magnitude > 0:
+                axis = omega / magnitude
+                checks['null_raw_net'] = (rs.project(own[1]+partner[1],axis)[0]
+                                          + rs.NU*rs.dot(own[3]+partner[3],axis)[0]/magnitude)
+            iso_mag = np.linalg.norm(own[2])
+            iso_axis = own[2]/iso_mag
+            iso_s = rs.project(own[1],iso_axis)[0]
+            iso_visc = rs.NU*rs.dot(own[3],iso_axis)[0]/iso_mag
+            vals = dict.fromkeys(scalars)
+            vals.update(iso_s=iso_s,iso_visc=iso_visc,iso_net=iso_s+iso_visc,iso_omega_s_inv=iso_mag)
             vals.update(omega_s_inv=0., net_abs=0.)
             axis = (None,)*3
         else:

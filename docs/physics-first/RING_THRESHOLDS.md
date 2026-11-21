@@ -16,7 +16,7 @@ Both rings attain their largest sampled net at facing. The isolated control give
 
 ## Critical circulation
 
-Scale both rings by the same positive factor k. Then u, ∇u, ω and Δω scale with k, ω̂ stays fixed, s becomes ks and v stays fixed. With v negative at every centerline sample here, take the minimum of −Γ₀v/s over positive s. All nine minima occur at facing. Reintegrating the kernels at 0.99, 1 and 1.01 times each calculated threshold gives respectively negative, zero within 2.5 × 10⁻¹⁵ s⁻¹, and positive maximum net rate. The largest 256→512 change at threshold is below 9 × 10⁻¹⁴ s⁻¹. Reflection gives the other ring. These are thresholds for the sampled geometric centerlines.
+Scale both rings by the same positive factor k. Then u, ∇u, ω and Δω scale with k, ω̂ stays fixed, s becomes ks and v stays fixed. With v negative at every centerline sample here, take the minimum of −Γ₀v/s over positive s. All nine minima occur at facing. Reintegrating the kernels at 0.99, 1 and 1.01 times each calculated threshold gives respectively negative, zero within 2.5 × 10⁻¹⁵ s⁻¹, and positive maximum net rate. The largest 256→512 change at threshold is below 9 × 10⁻¹⁴ s⁻¹. The 128→256 changes are also below 9 × 10⁻¹⁴ s⁻¹. The largest independent projected errors across thresholds (pair and partner, Cartesian and directional differences) are 0.01587, 0.00397 and 0.000991 s⁻¹ at a/8, a/16 and a/32. Reflection gives the other ring. These are thresholds for the sampled geometric centerlines.
 
 | Gap mm | a mm | Γ critical, 10⁻³ m²/s | ReΓ | Isolated line speed m/s | Peak swirl m/s | Axis deficit Pa | Swirl Mach ×10⁴ |
 |---:|---:|---:|---:|---:|---:|---:|---:|

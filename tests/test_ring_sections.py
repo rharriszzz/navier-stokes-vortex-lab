@@ -4,6 +4,10 @@ import unittest
 import numpy as np
 
 from physics_first import ring_strain as rs
+from scipy.integrate import quad
+from scipy.special import erf
+
+from physics_first.ring_preparation import energy_term, RHO
 from physics_first.ring_sections import frame, samples
 from physics_first.ring_thresholds import placement
 
@@ -30,3 +34,13 @@ class SectionGeometryTest(unittest.TestCase):
         near, = (r for r in points if r['r_a']==.5 and r['phi_deg']==0)
         self.assertGreater(near['net'],0.)
         self.assertLess(near['iso_net'],0.)
+
+    def test_single_ring_energy_against_angular_integral(self):
+        # Rotational invariance reduces the double line integral to a chord integral.
+        x,t = rs.ring(-1,256)
+        dl = t*(2*np.pi*rs.RADIUS/len(x))
+        def integrand(angle):
+            chord = 2*rs.RADIUS*np.sin(angle/2)
+            return np.cos(angle)*erf(chord/(np.sqrt(2)*rs.CORE))/chord
+        expected = RHO*rs.GAMMA**2*rs.RADIUS**2/4 * quad(integrand,0,2*np.pi)[0]
+        self.assertAlmostEqual(energy_term((x,dl),(x,dl),rs.CORE,rs.GAMMA),expected,places=14)
