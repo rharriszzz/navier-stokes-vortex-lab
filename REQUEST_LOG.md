@@ -10815,3 +10815,161 @@ Give me a concise explanation of the scientific implications and then stop for r
 **R286 outcome · 2026-11-21 · R285 control completed.** The sole new calculation translated the R284 wave right by 16 cells. Mesh/configuration bytes, opposite marker donors, four quarter-cell corner shares, exact inverse translation of all initial conservative fields, uniform recovered pressure and the installed periodic assembly were inspected before launch. No input correction was found. All four evolved endpoints place the translated cross-strip pressure peak at the seam. The peak was 5.123 Pa versus 23.954 Pa originally, and the viscosity excess changed from 15.64% to 4.73%. All four conservative fields and both assembled momentum residuals fail to translate during evolution. The initial JST corner Laplacian has a one-sided contribution, especially large in the original phase. Its role is plausible and testable. The total residual leaves viscous and numerical flux contributions unresolved. R283 and the original failed R284 result are preserved. [Report](docs/physics-first/SHEAR_TRANSLATION.md)
 
 **Changes, checks and review.** Added physics_first/{shear_translation,plot_shear_translation}.py and docs/physics-first/{SHEAR_TRANSLATION.md,shear_translation.json,shear_translation.png,shear_translation_run.tar.gz}. Extended su2_shear.py, measure_shear.py and tests/test_water_shear.py. Updated both READMEs, status, direction and coordination logs/handoff. Seven targeted tests passed with zero skips. Replayed the comparison, input generation, plot and archived R284 analysis. Exactly one 2048-step SU2 run, no full suite, solver edits, coefficient trial, 3D or installation. PC retains ownership. Continue in this chat after review with GPT-6.2 Astra/high. Proposed next task is a single setting change to zero fourth-order JST dissipation on both phases, with pressure symmetry/alignment and viscosity checks. Stop after that pair. [Next task](SESSION_HANDOFF.md#next-task)
+
+## R287 · 2026-11-21 · Scientific R286 method and physical experiment
+
+```text
+you are codex using gpt-6.2-astra high in a new session.  Here is my request: # R286 — Resolve the Numerical Method and Advance the Physical Vortex Investigation
+
+Continue in `rharriszzz/navier-stokes-vortex-lab`, branch `research/water-vortex-limits`.
+
+We have reviewed R285, commit `b788678`, and I approve the next physics-first research stage described below.
+
+Remain on the currently selected model and reasoning level. Do not suggest a more powerful model merely because the problem is scientifically difficult.
+
+## Overall objective
+
+Our goal is to understand how much vorticity concentration can arise in ordinary, compressible, viscous water without artificial volumetric forcing.
+
+We are interested in:
+
+- Unforced evolution from physically plausible smooth initial conditions.
+- Energy and momentum supplied through realizable boundaries.
+- Competition between vortex stretching and viscous diffusion.
+- The physical mechanisms that eventually limit concentration.
+
+We are not attempting to reproduce the September 2026 manufactured-forcing construction or prove a singularity.
+
+Please accomplish both parts below, subject to their stopping rules.
+
+## Part A — Resolve the SU2 spatial-method question
+
+R285 isolated a phase-dependent error at periodic corners in the JST dissipation stencil.
+
+First conduct the proposed configuration experiment:
+
+`JST_SENSOR_COEFF= (0.5, 0.0)`
+
+Use the existing original and quarter-wavelength-translated shear waves, 64 cells and 2048 steps.
+
+Preserve all earlier evidence and scientific criteria.
+
+Measure:
+
+1. Cross-strip pressure symmetry and the location of its extrema.
+2. Pressure mismatch after undoing the translation.
+3. Effective viscosity in both phases.
+4. Phase sensitivity of measured viscosity.
+5. Conservation, residuals, and possible alternating-cell instabilities.
+
+Use the acceptance criteria in `SHEAR_TRANSLATION.md`, including its 0.001 Pa symmetry threshold, viscosity limits and phase-sensitivity requirements.
+
+### If the correction passes
+
+Perform one small additional grid-refinement qualification, including the original 32- and 64-cell configurations and a finer level if affordable. Independently check time-step sensitivity as needed.
+
+Do not infer success merely because one phase or one resolution passes.
+
+Determine whether the corrected scheme has acceptable convergence and whether the result supports proceeding toward a rotating-vortex calculation.
+
+Do not begin that vortex calculation yet.
+
+### If the correction fails
+
+Do not start an open-ended series of coefficient adjustments.
+
+Review the available spatial methods, including JST_MAT and other low-Mach-compatible formulations, checking their actual compatibility with the installed SU2/CoolProp configuration.
+
+You may conduct one additional inexpensive, justified comparison if it can be performed without rebuilding major software. Define its acceptance criteria before running it.
+
+Otherwise provide a specific recommendation for replacing the numerical method or solver.
+
+Do not hide or weaken failed scientific gates.
+
+## Part B — Design a physically plausible 3D unforced vortex experiment
+
+This part is independent of whether Part A succeeds.
+
+I want us to begin making progress on the fluid mechanics rather than continuing indefinitely with solver calibration.
+
+Investigate two candidate physical mechanisms:
+
+**Candidate 1: Interacting vortex tubes**
+
+Consider two initially smooth, finite-core, oppositely oriented vortex tubes with a nontrivial three-dimensional arrangement.
+
+Could their mutual induction produce localized vortex stretching and increased vorticity without continuing external forcing?
+
+Investigate the geometry, circulation, energy, characteristic induced velocity, Reynolds number, and expected stretching mechanism.
+
+**Candidate 2: Interacting vortex rings**
+
+Consider vortex rings initially generated by physically plausible mechanical means, such as piston-driven jets, followed by unforced evolution.
+
+Could their interaction produce local stretching or core concentration?
+
+Compare this with the vortex-tube case.
+
+For both candidates:
+
+- Choose plausible dimensions, velocities and water properties.
+- Explain how the initial vortices could physically be prepared.
+- Identify the source of any local stretching.
+- Account for global energy and circulation constraints.
+- Specify smooth, finite-energy initial data and a suitable finite or effectively unbounded computational domain.
+- Avoid arbitrary body forces and prescribed collapsing profiles.
+- Distinguish an increase in peak vorticity from an actual decrease in vortex-core radius.
+- Identify meaningful observables, including the vorticity-stretching term, viscous transport, pressure, density and temperature.
+- Discuss what observations would indicate real concentration, vortex reconnection, breakup or numerical artifacts.
+
+Use established experimental and mathematical literature where relevant. Cite primary sources.
+
+### Select one preferred initial experiment
+
+Make a scientific choice between the two candidates.
+
+I want a concrete first three-dimensional experiment that could eventually be simulated and, at least in principle, reproduced with water in a laboratory.
+
+Explain why the selected geometry is preferable for detecting genuine vortex concentration.
+
+Do not attempt full 3D DNS during this round.
+
+## Part C — Produce an actionable research plan
+
+Create concise Markdown documentation under `docs/physics-first/`.
+
+Include:
+
+1. Results and interpretation of the spatial-method qualification.
+2. A comparison of the two physical vortex mechanisms.
+3. The preferred 3D experiment, with specific dimensional parameters and physically consistent initial/boundary conditions.
+4. Necessary numerical validation steps before the physical simulation.
+5. A small, bounded next computational experiment.
+6. A clear decision on whether SU2 remains suitable or whether a different method is needed.
+
+Keep the explanation understandable to someone comfortable with fluid mechanics, calculus, PDEs and numerical methods, but not necessarily familiar with current CFD implementation details.
+
+Avoid an enormous implementation plan unless the underlying scientific questions justify it.
+
+## Scope and completion
+
+Preserve historical work, all negative results, and the prior research-branch commits.
+
+Do not merge into main, launch large simulations, buy equipment or install substantial new software.
+
+Follow repository Git and ownership instructions, including authorization requirements for publication.
+
+Update the research status, README and handoff so that the next session can start without reconstructing this conversation.
+
+When finished, report:
+
+- Whether the numerical defect was corrected.
+- Whether the current solver is suitable for future physical vortex experiments.
+- Which 3D vortex mechanism is the best starting point.
+- What we would learn from the first physical simulation.
+- One recommended next task and suitable model/reasoning level.
+
+Complete the authorized bounded work, then stop for scientific review. Do not ask for approval between Part A and Part B unless an unexpected blocker would require a major change in scope.
+```
+
+**STARTED.** Scientific R286 is sequential request R287. New session, no worked-for or status excerpts supplied. Branch-scoped Continue workflow. Two-phase correction, conditional refinement or method review, physical design and bounded recommendation. PC retains ownership.
