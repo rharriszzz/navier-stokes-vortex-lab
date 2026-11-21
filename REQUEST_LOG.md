@@ -10528,3 +10528,11 @@ Complete this bounded first round and stop for my review before beginning the ne
 > Very good.  Do you want to continue now, or do you want me to ask the chatgpt anything?
 
 **Scope and outcome.** Advice at the R277 review boundary. Read the current handoff and confirmed PC ownership, branch and starting commit 82503fe. Recommend continuing in this chat. The 10 Pa wave already has a specified speed, amplitude and conservation test. The remaining question concerns an accessible solver's measured performance. Recorded the recommendation in the request log and handoff locally. No simulation or test ran. Next task on approval is the bounded acoustic qualification.
+
+## R279 — 2026-11-21 — Qualify the 10 Pa liquid-water acoustic test
+
+**User request (verbatim)**
+
+> go ahead.  thanks.
+
+**Scope/status.** STARTED. Approval of the specific R278 acoustic qualification on the research branch. Identify an accessible conservative solver and liquid EOS, run the saved periodic test if feasible, otherwise document the specific capability/access gap. Stop before major solver installation or a compressible vortex run. Reconciled R278-only local notes in 11e6a24, synchronized the clean branch and confirmed PC/WSL2 daisy ownership. No open workload or machine transfer in the handoff.

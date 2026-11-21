@@ -2065,3 +2065,7 @@ PC/WSL2 daisy, Linux x86_64, rharris, /home/rharris/git/navier-stokes-vortex-lab
 ## R277 COMPLETED · 2026-11-21T05:56:04+00:00
 
 PC/WSL2 daisy, research/water-vortex-limits. The seven-setting radial reference passed its six checks and two Python stacks produced identical JSON. Peak radius at 5 s was 11.186 mm and energy closed within 0.0000223% of loss. Added the series and plotting code, tests, report, JSON and figure; updated current navigation, direction, handoff and logs. Fifteen scoped unit tests passed. No FEM, compressible solver, rendering pipeline or Mac work. R270 remains incomplete and ten allocations spent. See [evidence and checks](docs/physics-first/SPREADING_RESULT.md) and the [next task](SESSION_HANDOFF.md#next-task). Continue in this chat for review and the 10 Pa liquid-water acoustic qualification, recommend GPT-6.2 Astra/high until solver qualification is settled. Source/start fc0bd1d; completion prepared for research-branch publication. Released: no.
+
+## R279 STARTED · 2026-11-21T05:59:19+00:00
+
+PC/WSL2 daisy, rharris, Linux x86_64, /home/rharris/git/navier-stokes-vortex-lab. Clean research/water-vortex-limits tracking origin/research/water-vortex-limits at 11e6a24. Single local worktree, empty stashes, Mac released. Run the bounded 10 Pa acoustic qualification or record a specific access/capability gap. Released: no.
