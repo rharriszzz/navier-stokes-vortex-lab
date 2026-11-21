@@ -1,5 +1,7 @@
 # Project status
 
+**R287 · 21 November 2026.** Both water rings stretch along every sampled centerline arc at release. At the facing points the partner supplies +0.27530 s⁻¹ against −1.00677 s⁻¹ from viscosity. The net is −0.73147 s⁻¹ there, and more negative everywhere else sampled. The isolated ring loses vorticity at −1.00677 s⁻¹. [Budget, figure and checks](docs/physics-first/RING_STRAIN.md) · [Next task](SESSION_HANDOFF.md#next-task)
+
 **R286 · 21 November 2026.** Removing fourth-order JST dissipation corrected the phase-dependent seam error at 64 cells. Viscosity converged under axial refinement. At 128 cells and the original step, the largest cross-strip pressure error grew to 0.07090 Pa against a 0.001 Pa limit. Halving the step restored both phases below 0.00060 Pa. The fixed-step qualification remains failed. The preferred physical experiment is a pair of detached water vortex rings on obliquely converging paths. [Qualification and raw measurements](docs/physics-first/SHEAR_QUALIFICATION.md) · [Physical design and release geometry](docs/physics-first/INTERACTING_VORTICES.md) · [Next task](SESSION_HANDOFF.md#next-task)
 
 **R285 · 21 November 2026.** A 16-cell shift left the cross-strip pressure disturbance at the periodic seam. Its peak fell from 23.95 to 5.12 Pa, and viscosity excess fell from 15.64% to 4.73%. R286 completed the proposed corner-dissipation test. [Translation control and evidence](docs/physics-first/SHEAR_TRANSLATION.md) · [Next task](SESSION_HANDOFF.md#next-task)

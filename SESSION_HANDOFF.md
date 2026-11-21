@@ -1,5 +1,11 @@
 # Current session handoff
 
+**R287 · 21 November 2026.** Both water rings stretch along every sampled centerline arc at release. At the facing points the partner supplies +0.27530 s⁻¹ against −1.00677 s⁻¹ from viscosity. The net is −0.73147 s⁻¹ there, and more negative everywhere else sampled. The isolated ring loses vorticity at −1.00677 s⁻¹. [Budget, figure and checks](docs/physics-first/RING_STRAIN.md) · [Next task](#next-task)
+
+Scientific R287 is request R288. PC/WSL2 daisy retains ownership. The 128/256/512 line quadratures, two independent offsets, kernel, circulation sign, vector diffusion and symmetry checks passed. Added the quadrature and plotting modules, independent tests, report, JSON, pointwise CSV and figure. Updated the design link, both READMEs, status, direction and coordination records. Seven targeted tests passed. The JSON, CSV and figure reproduced byte-for-byte. The full suite and flow evolution were outside scope. An initial JSON serialization error was fixed before archiving. The physical release shape and later core widths remain unmeasured. Stop for scientific review. Use `/new` after review for one proposed 8 mm gap comparison with GPT-6.2 Astra/high. The baseline and controls are saved.
+
+### Previous R286 result
+
 **R286 · 21 November 2026.** Removing fourth-order JST dissipation corrected the phase-dependent seam error at 64 cells. Viscosity converged under axial refinement. At 128 cells and the original step, the largest cross-strip pressure error grew to 0.07090 Pa against a 0.001 Pa limit. Halving the step restored both phases below 0.00060 Pa. The fixed-step qualification remains failed. The preferred physical experiment is a pair of detached water vortex rings on obliquely converging paths. Scientific R286 is request R287. PC/WSL2 daisy retains ownership. [Qualification and raw measurements](docs/physics-first/SHEAR_QUALIFICATION.md) · [Physical design and release geometry](docs/physics-first/INTERACTING_VORTICES.md) · [Next task](#next-task)
 
 The report retains every phase, fixed-step failure and time-step control. The changed files include the shear reader/generator, qualification tool and test, raw archive, measurements, geometry plot and both reports, README/status/direction and coordination records. Nineteen targeted tests passed. All inputs and historical measurements reproduced. The translated 128/4096 case resumed from step 3072 after status 143, with all 876 overlapping residual-history rows matching. The full archive replays with scientific exit 1. Rotating flow and 3D DNS await review. Use `/new` after review with GPT-6.2 Astra/high because the next experiment needs only the saved geometry and a bounded quadrature calculation.
@@ -1740,13 +1746,13 @@ and physical-work limits remain unchanged.
 
 ## Owner and checkout
 
-| Field | R286 value |
+| Field | R287 value |
 |---|---|
 | Owner | PC/WSL2 `daisy`, user `rharris`. Mac released per the published handoff. |
 | Checkout | `/home/rharris/git/navier-stokes-vortex-lab`, sole local worktree, empty stashes at start. |
-| Branch and publication target | `research/water-vortex-limits` → `origin/research/water-vortex-limits`, based on fetched `origin/main` at `f348cf6`. R286 started from synchronized R285 b788678. Delivery commit is in Git history. |
-| Runtime | WSL command `su2-water`, dedicated Python 3.12.14 in `~/.local/opt/water-acoustics/tools`, pinned CoolProp 7.2.0. [Rebuild](docs/physics-first/SU2_WATER_SETUP.md). |
-| Next decision | Owner reviews the spatial qualification and ring design before the initial-strain calculation. |
+| Branch and publication target | `research/water-vortex-limits` → `origin/research/water-vortex-limits`, based on fetched `origin/main` at `f348cf6`. R287 started from synchronized R286 eaa5bf4. Delivery commit is in Git history. |
+| Runtime | Free-space Python 3.12.14 quadrature using the existing NumPy/SciPy environment on daisy. System Matplotlib for the static figure. |
+| Next decision | Owner reviews the insufficient release stretching and the proposed single 8 mm gap comparison. |
 
 ### Historical R272 checkout
 
@@ -1917,6 +1923,10 @@ write access. The tool sandbox denies `.git` writes, `ps`, unrestricted
 agent-side POV-Ray backtraces are unavailable.
 
 ## Next task
+
+**Review R287.** After review use `/new` with **GPT-6.2 Astra, high reasoning** because the quadrature baseline and isolated controls are published. If selected, evaluate one independently prepared geometry at an 8.000 mm facing gap. Hold all other release parameters fixed, use the same 128/256/512 quadratures, matched isolated controls and 0.02 s⁻¹ gates, and report the change in partner extension, viscous loss and net rate around both rings. Stop for review after that single release state. [Physical rationale and placement](docs/physics-first/RING_STRAIN.md#physical-interpretation-and-next-experiment)
+
+### Historical R286 proposal completed by R287
 
 **Review R286, then use `/new` with GPT-6.2 Astra/high.** Compute the initial axial strain and viscous vorticity tendency along the two specified obliquely approaching rings. Compare the facing arcs, far arcs and a matched isolated ring. Use 128/256/512 line quadratures with an independent gradient check, the fixed 0.02 s⁻¹ tolerances and symmetry checks. Report signs, extrema and uncertainty and stop before flow evolution. This release-state calculation stands independently of SU2. Keep the selected model/effort for interpretation. [Dimensions, algorithm and stopping conditions](docs/physics-first/INTERACTING_VORTICES.md#validation-before-evolving-the-pair)
 
