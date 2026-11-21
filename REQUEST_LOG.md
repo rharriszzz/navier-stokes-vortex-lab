@@ -10496,3 +10496,13 @@ Complete this bounded first round and stop for my review before beginning the ne
 **Evidence and checks.** Project interpreter `.venv/bin/python` 3.12.14. Ran `-m physics_first.water_scales` for all three rows, `-m unittest discover -v -s tests -p test_water_scales.py` (4 passed, including direct radial pressure quadrature), and `-m unittest discover -v -s tests/realizability -p test_b0.py` (8 passed). No skipped cases within those two selections. Publication checks cover the rounded table and 5 s prediction, links in new prose, log preservation, staged scope, untouched evidence and whitespace. Skipped all other test suites including B1/B2, nonlinear/fake-worker, optional SciPy swirl and trajectory/render tests. No package install, numerical PDE solve, reference-series run, physical experiment or FEM allocation use. No new chat/status excerpts supplied.
 
 **Decision and next task.** Recommend an established conservative all-speed solver with an energy-consistent water EOS for a later physical test. Package access, low-Mach accuracy, sustainable interior strain, stability, and the first material limitation remain open. Await owner review. Use `/new` at this saved boundary for just the finite-cylinder incompressible spreading reference through 5 s, with convergence and pressure, angular-momentum and energy checks. The [plan](docs/physics-first/README.md#round-two-test) specifies the pass criteria. Branch-only delivery commit and push reported in Git and the final response.
+
+## R276 — 2026-11-21 — Locate round-two plan and review chat/model choice
+
+**User request (verbatim)**
+
+> You have left a plan for the next round to find?  You recommend the same model, GPT-6.2-Astra high?  There is 61% context left now, but you think /new will be better?
+
+**Scope/status.** Started a handoff clarification. The user reports 61% remaining in this chat. Verify the published plan and advise on model and chat choice. Round two awaits owner review.
+
+**Outcome.** Confirmed the prompt in SESSION_HANDOFF.md under “Next task” and its full specification in docs/physics-first/README.md under “Round-two test” at published commit a0e3d2c on research/water-vortex-limits. With the new 61% context report, recommend continuing this chat on GPT-6.2 Astra with high reasoning for interpreting convergence and energy balance. Updated this log and the current handoff locally. Checked the plan anchors, Git state and official model/CLI documentation. Scientific tests and simulations were skipped for this clarification. The single next task awaits owner approval.

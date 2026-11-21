@@ -1,6 +1,6 @@
 # Current session handoff
 
-**R275 · 2026-11-21 · Owner review.** PC/WSL2 `daisy` owns the water investigation on `research/water-vortex-limits`. The Mac remains released. The round-one plan, estimates and code assessment are complete. The proposed next experiment is a finite-cylinder viscous spreading reference. Use `/new` after review because the predictions, checks and stop condition are saved on this branch. [Plan](docs/physics-first/README.md) · [Next task](#next-task)
+**R275 · 2026-11-21 · Owner review.** PC/WSL2 `daisy` owns the water investigation on `research/water-vortex-limits`. The Mac remains released. The round-one plan, estimates and code assessment are complete. The proposed next experiment is a finite-cylinder viscous spreading reference. R276 review advice: with 61% context remaining, continue in this chat using GPT-6.2 Astra at high reasoning for the bounded next test. [Plan](docs/physics-first/README.md) · [Next task](#next-task)
 
 Changed the research plan/model/assessment, scalar calculator and tests, direction/status/navigation pages, request and session logs, and this handoff. Python 3.12.14 ran the scales calculation, four new checks and eight existing B0 checks. No CFD, FEM fixture, package installation, rendering or physical experiment ran. R270 remains INCOMPLETE and all ten historical allocations are spent. Finite-wall effects, low-Mach solver accuracy, attainable strain and the first physical limitation remain open.
 
@@ -1872,7 +1872,7 @@ agent-side POV-Ray backtraces are unavailable.
 
 > Evaluate only the finite-cylinder incompressible spreading reference for the 10 mm water vortex through 5 s. Report core radius, swirl, vorticity, inner pressure difference, angular momentum and dissipated energy with separate mode, radial and time-quadrature refinements. Compare with Lamb–Oseen and stop at the decision gate.
 
-Use the [initial/boundary conditions and quantitative checks](docs/physics-first/README.md#round-two-test). Use `/new` after review for this saved phase boundary. R272 has no active execution authority.
+Use the [initial/boundary conditions and quantitative checks](docs/physics-first/README.md#round-two-test). Continue in this chat after approval. The user reports 61% context remaining, and the convergence and conservation checks benefit from retaining the discussion. Recommended model: GPT-6.2 Astra, high reasoning. R272 has no active execution authority.
 
 ### Historical R272 implementation task
 
