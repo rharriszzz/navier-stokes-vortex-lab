@@ -1,0 +1,158 @@
+[
+  {
+    "modes": 128,
+    "points": 2048,
+    "nu_m2_s": 1.0033950795193939e-06,
+    "snapshots": [
+      {
+        "time_s": 0,
+        "peak_m": 0.010000009150908297,
+        "speed_m_s": 0.09999999153416347,
+        "axis_omega_s": 35.128342404356744,
+        "rise_Pa": 15.905315808910725,
+        "energy_J_m": 0.012070928565178692,
+        "dissipation_W_m": 0.0001670970848767434,
+        "wall_speed_m_s": -1.2962780919693376e-18,
+        "wall_torque_per_length_N": 2.126457289965222e-09,
+        "angular_rate_N": 2.1264572901222464e-09,
+        "max_inner_oseen_speed_error_m_s": 4.056420763350055e-08,
+        "max_inner_oseen_omega_error_s": 0.00028176193711715314,
+        "max_inner_oseen_viscous_acc_error_m_s2": 6.649335670931979e-07
+      },
+      {
+        "time_s": 0.001,
+        "peak_m": 0.010000261162888064,
+        "speed_m_s": 0.09999747037705296,
+        "axis_omega_s": 35.12657561249016,
+        "rise_Pa": 15.904459140251458,
+        "energy_J_m": 0.01207076147236755,
+        "dissipation_W_m": 0.00016708853756509804,
+        "wall_speed_m_s": -1.2960748301641207e-18,
+        "wall_torque_per_length_N": 2.0911105851263575e-09,
+        "angular_rate_N": 2.091110585256206e-09,
+        "max_inner_oseen_speed_error_m_s": 3.990469322340262e-08,
+        "max_inner_oseen_omega_error_s": 0.0002771813382196342,
+        "max_inner_oseen_viscous_acc_error_m_s2": 6.541247670970962e-07
+      },
+      {
+        "time_s": 0.02,
+        "peak_m": 0.010005048468281989,
+        "speed_m_s": 0.09994960419261986,
+        "axis_omega_s": 35.093027619433315,
+        "rise_Pa": 15.888198807868461,
+        "energy_J_m": 0.012067588331786854,
+        "dissipation_W_m": 0.00016692631673212818,
+        "wall_speed_m_s": -1.2921467910290603e-18,
+        "wall_torque_per_length_N": 1.5206411933060397e-09,
+        "angular_rate_N": 1.5206411933614885e-09,
+        "max_inner_oseen_speed_error_m_s": 2.9225258576029423e-08,
+        "max_inner_oseen_omega_error_s": 0.0002030071582410642,
+        "max_inner_oseen_viscous_acc_error_m_s2": 4.790940017951784e-07
+      }
+    ]
+  },
+  {
+    "modes": 256,
+    "points": 2048,
+    "nu_m2_s": 1.0033950795193939e-06,
+    "snapshots": [
+      {
+        "time_s": 0,
+        "peak_m": 0.009999998204471847,
+        "speed_m_s": 0.0999999982113216,
+        "axis_omega_s": 35.128786185340104,
+        "rise_Pa": 15.905316498773079,
+        "energy_J_m": 0.012070928565202874,
+        "dissipation_W_m": 0.00016709708598131528,
+        "wall_speed_m_s": -1.2941164357224952e-18,
+        "wall_torque_per_length_N": -5.774057252903605e-11,
+        "angular_rate_N": -5.7740572392453554e-11,
+        "max_inner_oseen_speed_error_m_s": 1.1677670322049472e-08,
+        "max_inner_oseen_omega_error_s": 0.00016199853719456314,
+        "max_inner_oseen_viscous_acc_error_m_s2": 7.630651830070286e-07
+      },
+      {
+        "time_s": 0.001,
+        "peak_m": 0.010000250472994403,
+        "speed_m_s": 0.09999747702538167,
+        "axis_omega_s": 35.12700456481271,
+        "rise_Pa": 15.904459814744813,
+        "energy_J_m": 0.012070761472390655,
+        "dissipation_W_m": 0.00016708853861576144,
+        "wall_speed_m_s": -1.2939700213926754e-18,
+        "wall_torque_per_length_N": -5.444977046967955e-11,
+        "angular_rate_N": -5.4449770354793894e-11,
+        "max_inner_oseen_speed_error_m_s": 1.0939001109447344e-08,
+        "max_inner_oseen_omega_error_s": 0.00015175147974844094,
+        "max_inner_oseen_viscous_acc_error_m_s2": 7.147988310245157e-07
+      },
+      {
+        "time_s": 0.02,
+        "peak_m": 0.010005041139537674,
+        "speed_m_s": 0.09994960974933761,
+        "axis_omega_s": 35.093274481829866,
+        "rise_Pa": 15.88819926501127,
+        "energy_J_m": 0.012067588331796884,
+        "dissipation_W_m": 0.00016692631715983197,
+        "wall_speed_m_s": -1.290851751406642e-18,
+        "wall_torque_per_length_N": -1.7706768724290668e-11,
+        "angular_rate_N": -1.770676865520563e-11,
+        "max_inner_oseen_speed_error_m_s": 3.1606482934348756e-09,
+        "max_inner_oseen_omega_error_s": 4.38468846368778e-05,
+        "max_inner_oseen_viscous_acc_error_m_s2": 2.065362734611487e-07
+      }
+    ]
+  },
+  {
+    "modes": 256,
+    "points": 4096,
+    "nu_m2_s": 1.0033950795193939e-06,
+    "snapshots": [
+      {
+        "time_s": 0,
+        "peak_m": 0.009999998204619033,
+        "speed_m_s": 0.0999999982115094,
+        "axis_omega_s": 35.12878616857065,
+        "rise_Pa": 15.90531649876402,
+        "energy_J_m": 0.012070928565257261,
+        "dissipation_W_m": 0.00016709708598134818,
+        "wall_speed_m_s": -1.2941164629905863e-18,
+        "wall_torque_per_length_N": -5.7771058819558455e-11,
+        "angular_rate_N": -5.77710586697041e-11,
+        "max_inner_oseen_speed_error_m_s": 1.1680502572976315e-08,
+        "max_inner_oseen_omega_error_s": 0.00016199247770032343,
+        "max_inner_oseen_viscous_acc_error_m_s2": 7.632497219501558e-07
+      },
+      {
+        "time_s": 0.001,
+        "peak_m": 0.01000025047313027,
+        "speed_m_s": 0.09999747702555764,
+        "axis_omega_s": 35.1270045491057,
+        "rise_Pa": 15.904459814736335,
+        "energy_J_m": 0.012070761472445039,
+        "dissipation_W_m": 0.0001670885386157988,
+        "wall_speed_m_s": -1.2939700479847235e-18,
+        "wall_torque_per_length_N": -5.447831018991847e-11,
+        "angular_rate_N": -5.4478310168887833e-11,
+        "max_inner_oseen_speed_error_m_s": 1.0941654706407566e-08,
+        "max_inner_oseen_omega_error_s": 0.00015174580521915004,
+        "max_inner_oseen_viscous_acc_error_m_s2": 7.149717274477954e-07
+      },
+      {
+        "time_s": 0.02,
+        "peak_m": 0.010005041139565844,
+        "speed_m_s": 0.0999496097493886,
+        "axis_omega_s": 35.09327447730277,
+        "rise_Pa": 15.888199265008835,
+        "energy_J_m": 0.012067588331851268,
+        "dissipation_W_m": 0.00016692631715992676,
+        "wall_speed_m_s": -1.2908517681989732e-18,
+        "wall_torque_per_length_N": -1.7714913851133064e-11,
+        "angular_rate_N": -1.7714913760547872e-11,
+        "max_inner_oseen_speed_error_m_s": 3.1614179303932066e-09,
+        "max_inner_oseen_omega_error_s": 4.384525642819881e-05,
+        "max_inner_oseen_viscous_acc_error_m_s2": 2.0658640012080772e-07
+      }
+    ]
+  }
+]
