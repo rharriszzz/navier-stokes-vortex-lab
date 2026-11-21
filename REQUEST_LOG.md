@@ -10979,3 +10979,118 @@ Complete the authorized bounded work, then stop for scientific review. Do not as
 **Physical decision.** Select two obliquely converging piston-generated rings with R = 15 mm, a = 2 mm and circulation 0.0018 m²/s. A measurable rise in peak vorticity and reduction in circulation-based core area can be compared with the isolated ring and the far arcs. Actual local strain, thinning and possible breakup remain unresolved. [Tube/ring comparison, release geometry and experiment](docs/physics-first/INTERACTING_VORTICES.md)
 
 **Evidence and checks.** Ten small configurations, five saved fields in time per case. The translated 128/4096 process returned 143 after 3948 recorded iterations. Cause unknown. Resumed from its last complete state at step 3072, preserving the initial partial run and raw continuation. All 876 overlapping rows agreed in iterations and reported residuals. An analysis-only NumPy boolean serialization error was fixed without a solver rerun. Changed the shear generator, measurement and translation readers, qualification tool/JSON/raw archive, line-mode test, two research documents, geometry plot/source, both READMEs, direction, status, handoff and logs. All ten inputs reproduced, the full archive replay was byte-identical with the expected failures, historical R284/R285 JSON reproduced, the design figure reproduced, and 19 targeted tests passed with zero skips using the existing SciPy path. An earlier test invocation lacked that path and skipped four tests. Local report links and whitespace checked. No full repository suite, solver build, alternative flux run, FEM, rotating flow or 3D DNS. PC retains ownership. Review, then use `/new` with GPT-6.2 Astra/high for one initial ring-strain and viscous-tendency calculation because the geometry, controls and quadrature stop are saved. [Next task](SESSION_HANDOFF.md#next-task)
+
+## R288 · 2026-11-21 · Scientific R287 release-state ring calculation
+
+```text
+# Next Research Round — Can Two Water Vortex Rings Overcome Viscous Diffusion?
+
+Work in `rharriszzz/navier-stokes-vortex-lab`, on branch `research/water-vortex-limits`, using the Windows/WSL2 PC.
+
+This is a fresh Codex session. The latest reviewed commit is `eaa5bf4`. Synchronize, check Git status and repository ownership, and read the current instructions and handoff before making changes.
+
+## Scientific objective
+
+Determine whether the two obliquely converging vortex rings proposed in `docs/physics-first/INTERACTING_VORTICES.md` initially generate enough three-dimensional vortex stretching to overcome viscous diffusion.
+
+Our broader objective is to understand vortex concentration in ordinary compressible, viscous water, with no artificial volumetric force.
+
+The rings can receive energy and circulation from mechanically driven nozzles during preparation, but their subsequent evolution is unforced.
+
+**Do not simulate their time evolution in this round.**
+
+## Starting references
+
+Read:
+
+- `AGENTS.md` and the current `SESSION_HANDOFF.md`
+- `docs/physics-first/INTERACTING_VORTICES.md`
+- `docs/physics-first/PHYSICAL_MODEL.md`
+- `docs/physics-first/SHEAR_QUALIFICATION.md`
+- The relevant existing physics-first numerical code
+
+Use the geometry, circulation and water parameters already selected in `INTERACTING_VORTICES.md`.
+
+Do not restart the old forced-blowup or FEM programs.
+
+## Part 1 — Calculate the initial induced velocity and strain
+
+Use the proposed smooth Gaussian-convolved vortex rings and their regularized Biot–Savart velocity field.
+
+Implement a documented, reproducible Python calculation using 128, 256 and 512 quadrature points per closed ring.
+
+At 128 fixed azimuthal locations on each ring, determine:
+
+- The actual local vorticity direction and its angle relative to the geometric tangent.
+- The velocity-gradient tensor and local axial extension rate.
+- The contributions from each ring, evaluated using a consistent local direction.
+- The viscous contribution to the rate of change of vorticity magnitude.
+- The net initial material rate of change of vorticity magnitude.
+
+Compare each ring with a matched isolated ring.
+
+Check the velocity gradient independently with centered differences at offsets a/8 and a/16, where a is the specified Gaussian core scale.
+
+Verify units, symmetries, the solenoidal velocity field and appropriate convergence behavior. Derive or independently verify the regularized kernel and its derivatives rather than assuming the implementation is correct.
+
+Use the predeclared 0.02 s⁻¹ agreement criteria in `INTERACTING_VORTICES.md`. Preserve negative or inconclusive results.
+
+## Part 2 — Interpret the physics
+
+Identify the facing arcs, far arcs and locations of the largest positive and negative stretching rates.
+
+Give an explicit comparison between:
+
+1. Vorticity amplification due to stretching.
+2. Vorticity reduction due to viscosity.
+3. The net initial tendency.
+
+Explain where the stretching comes from physically.
+
+Distinguish an initially positive vorticity-growth rate from actual core contraction. An instantaneous result cannot establish later narrowing, an instability, or a singularity.
+
+If all net rates are negative, say so. Do not artificially alter the geometry to manufacture a positive result.
+
+Also explain the approximations involved in evaluating this initial, nearly incompressible velocity field before a full compressible-water calculation. We are not claiming that the Biot–Savart calculation solves the compressible evolution equations.
+
+## Part 3 — Present results and decide what follows
+
+Produce a readable report under `docs/physics-first/` containing:
+
+- A table of numerical results and convergence.
+- A figure of the two rings showing where stretching strengthens or weakens vorticity.
+- Physical units and key assumptions.
+- A comparison against an isolated ring.
+- A clear discussion of numerical uncertainty.
+- An assessment of whether the proposed collision geometry is promising.
+
+Make one recommendation for the next physical experiment.
+
+If the initial interaction is promising, suggest the smallest meaningful time-evolution calculation and identify the validations required beforehand.
+
+If it is not promising, explain whether changing the initial geometry or investigating a different mechanism would be more scientifically useful.
+
+## Scope and resource limits
+
+This round is a quadrature and physics-analysis task, not CFD.
+
+Do not run 3D DNS, install major CFD packages, optimize SU2 further, render movies, or perform a broad parameter search.
+
+Keep computational work bounded and reproducible. If the quadrature fails its convergence or independent-gradient checks, diagnose the problem and stop rather than producing unsupported physical conclusions.
+
+Preserve previous results, including all unsuccessful SU2 qualification tests.
+
+## Completion and handoff
+
+Update the physics-first documentation, repository status, README, request log and handoff as needed.
+
+You are authorized to commit and push this round's scoped changes to `research/water-vortex-limits`, but not to merge into `main`.
+
+At completion, provide a concise scientific explanation of what was learned, numerical checks performed, unresolved limitations, and one recommended next task.
+
+Recommend an appropriate model and reasoning level for that next task. Do not attempt to report your own remaining context percentage; I will inspect `/status`.
+
+Complete this research round and stop for review.
+```
+
+**STARTED.** Evaluate only the specified free-space release state, derivatives, controls and numerical gates. Publish the measurements, report and coordination records on the research branch and stop for review. No session excerpts supplied.
