@@ -2129,3 +2129,7 @@ Scientific R287. PC/WSL2 daisy, rharris, Linux x86_64, /home/rharris/git/navier-
 ## R288 COMPLETED · 2026-11-21T07:39:54Z
 
 Scientific R287. PC/WSL2 daisy, rharris, research/water-vortex-limits, start record 90e82ff. All 256 sampled centerline locations lose vorticity at release. Peak extension offsets 27.3% of diffusion at the facing points. Fine quadratures and independent projected gradients passed the 0.02 s⁻¹ gates. Added the ring calculation, tests, plotter, report, CSV, JSON and figure, and updated the design, navigation, status and coordination pages. Seven targeted tests passed. Same-environment numerical files and figure reproduced byte-for-byte, and the system stack reproduced sampled rates. Local links, figure and whitespace checked. Full suite, CFD, evolution and FEM skipped. Release geometry in a real tank and later core width remain open. Stop for review. Use a new chat with GPT-6.2 Astra/high for one 8 mm gap geometry comparison if selected. [Release result](docs/physics-first/RING_STRAIN.md) · [Next task](SESSION_HANDOFF.md#next-task). Released: no.
+
+## R289 STARTED · 2026-11-21
+
+PC/WSL2 daisy retains ownership. Clean sole worktree at remote 977918d, empty stashes, Mac released. Five connected water-ring investigation milestones and scoped branch publication authorized.
