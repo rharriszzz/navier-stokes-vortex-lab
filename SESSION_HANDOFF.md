@@ -1,5 +1,11 @@
 # Current session handoff
 
+**R277 · 2026-11-21 · Reference passed.** PC/WSL2 `daisy` retains `research/water-vortex-limits`. Mac remains released. The peak radius reached 11.186 mm at 5 s, all six reference checks passed, and viscous dissipation accounts for 6.15% loss of initial kinetic energy. Continue in this chat for review and the bounded acoustic qualification if selected. [Result and figure](docs/physics-first/SPREADING_RESULT.md) · [Next task](#next-task)
+
+Changed the radial mode sum, plot script and three tests, result/JSON/figure, current navigation, request and lifecycle logs, and this handoff. Seven one-factor settings ran in two Python/SciPy environments. All 15 targeted unit tests passed. Project Python 3.12.14 used SciPy 1.17.1 in a temporary directory. The existing system stack reproduced the results and generated the figure. No FEM, compressible-flow run or archived allocation was used. Water EOS/solver access and very-low-Mach acoustic accuracy remain open.
+
+### Previous R275/R276 review
+
 **R275 · 2026-11-21 · Owner review.** PC/WSL2 `daisy` owns the water investigation on `research/water-vortex-limits`. The Mac remains released. The round-one plan, estimates and code assessment are complete. The proposed next experiment is a finite-cylinder viscous spreading reference. R276 review advice: with 61% context remaining, continue in this chat using GPT-6.2 Astra at high reasoning for the bounded next test. [Plan](docs/physics-first/README.md) · [Next task](#next-task)
 
 Changed the research plan/model/assessment, scalar calculator and tests, direction/status/navigation pages, request and session logs, and this handoff. Python 3.12.14 ran the scales calculation, four new checks and eight existing B0 checks. No CFD, FEM fixture, package installation, rendering or physical experiment ran. R270 remains INCOMPLETE and all ten historical allocations are spent. Finite-wall effects, low-Mach solver accuracy, attainable strain and the first physical limitation remain open.
@@ -1690,13 +1696,13 @@ and physical-work limits remain unchanged.
 
 ## Owner and checkout
 
-| Field | R275 value |
+| Field | R277 value |
 |---|---|
 | Owner | PC/WSL2 `daisy`, user `rharris`. Mac released per the published handoff. |
 | Checkout | `/home/rharris/git/navier-stokes-vortex-lab`, sole local worktree, empty stashes at start. |
 | Branch and publication target | `research/water-vortex-limits` → `origin/research/water-vortex-limits`, based on fetched `origin/main` at `f348cf6`. Delivery commit is in Git history. |
-| Runtime | Project `.venv/bin/python`, 3.12.14. Only lightweight arithmetic and tests ran. |
-| Next decision | Owner review before the finite-cylinder spreading benchmark. |
+| Runtime | Project `.venv/bin/python`, 3.12.14. Isolated SciPy 1.17.1 for the benchmark, system Python 3.14.4 for a second calculation. |
+| Next decision | Owner review of the reference, then the 10 Pa periodic acoustic qualification if selected. |
 
 ### Historical R272 checkout
 
@@ -1714,7 +1720,7 @@ and physical-work limits remain unchanged.
 
 ## Current result and limits
 
-R275 supplies the [water estimates and decision gates](docs/physics-first/README.md). A compressible water solution and a measured physical limit remain outstanding.
+R277 completes the [finite spreading reference](docs/physics-first/SPREADING_RESULT.md). R275 supplies the [water estimates and decision gates](docs/physics-first/README.md). A compressible water solution and a measured physical limit remain outstanding.
 
 ### Earlier numerical result
 
@@ -1867,6 +1873,12 @@ write access. The tool sandbox denies `.git` writes, `ps`, unrestricted
 agent-side POV-Ray backtraces are unavailable.
 
 ## Next task
+
+**Proposed round three.** Evaluate the saved 0.10 m periodic, 10 Pa liquid-water acoustic test in an accessible conservative compressible solver. Confirm the water EOS and signed conservation/energy outputs, measure phase speed and amplitude on independent grid/time refinements, and stop with a qualification result or an identified access or solver-capability gap. Stop before a compressible vortex run or a major solver installation. [Acoustic specification](docs/physics-first/README.md#physical-test-after-the-reference)
+
+Continue in this chat to retain the numerical and physical interpretation. Recommend GPT-6.2 Astra with high reasoning for the EOS and acoustic qualification. Reconsider model/effort for routine implementation once the solver and acceptance checks are fixed. Explicit prompt: **Continue with the water acoustic qualification.**
+
+### Historical R275/R276 task (completed by R277)
 
 **Await owner review.** Suggested prompt for the next round on this research branch:
 

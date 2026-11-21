@@ -1,6 +1,6 @@
 # Project status
 
-**R275 · 2026-11-21.** Round one of the water investigation is ready for owner review. The initial peak-radius Reynolds number is 1000 and Mach number is 0.0000676. The infinite-plane viscous reference predicts 10.00 → 11.19 mm in 5 s. The finite-cylinder comparison and a compressible water run remain unexecuted. [Physics-first plan](docs/physics-first/README.md) · [Next task](SESSION_HANDOFF.md#next-task)
+**R277 · 2026-11-21.** The finite-cylinder spreading reference passed. After 5 s the peak moved from 10.000 to 11.186 mm, and the axis-to-30 mm pressure rise fell from 15.902 to 12.491 Pa. Energy loss agrees with integrated shear dissipation. A compressible water run and the physical concentration limit remain open. [Results and figure](docs/physics-first/SPREADING_RESULT.md) · [Physics-first plan](docs/physics-first/README.md) · [Next task](SESSION_HANDOFF.md#next-task)
 
 ## Historical status through R272
 
@@ -475,7 +475,7 @@ user's finite-range boundary-only engineering approximation is impossible.
 
 ## Next task and execution status
 
-For R275 see the [review boundary and next task](SESSION_HANDOFF.md#next-task). The chronology below records earlier proposals and results.
+For the current water investigation see the [review boundary and next task](SESSION_HANDOFF.md#next-task). The chronology below records earlier proposals and results.
 
 R177 completed the [benchmark revision](BOUNDARY_CONTROL_HANDOFF.md). It proposes
 300 s preparation from rest and 100 s tracking of the existing 10 mm → 3 mm

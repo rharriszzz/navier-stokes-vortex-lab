@@ -2061,3 +2061,7 @@ Explicit first-round request selects the physics direction. Clean WSL2 daisy che
 ## R277 STARTED · 2026-11-21T05:50:51+00:00
 
 PC/WSL2 daisy, Linux x86_64, rharris, /home/rharris/git/navier-stokes-vortex-lab. Clean research/water-vortex-limits tracking origin/research/water-vortex-limits at 1d4c020 after synchronized R276 publication. Sole active owner per handoff, no open competing session or stash. Evaluate the finite-cylinder mode sum and its convergence/conservation checks. Stop at the reference gate. Released: no.
+
+## R277 COMPLETED · 2026-11-21T05:56:04+00:00
+
+PC/WSL2 daisy, research/water-vortex-limits. The seven-setting radial reference passed its six checks and two Python stacks produced identical JSON. Peak radius at 5 s was 11.186 mm and energy closed within 0.0000223% of loss. Added the series and plotting code, tests, report, JSON and figure; updated current navigation, direction, handoff and logs. Fifteen scoped unit tests passed. No FEM, compressible solver, rendering pipeline or Mac work. R270 remains incomplete and ten allocations spent. See [evidence and checks](docs/physics-first/SPREADING_RESULT.md) and the [next task](SESSION_HANDOFF.md#next-task). Continue in this chat for review and the 10 Pa liquid-water acoustic qualification, recommend GPT-6.2 Astra/high until solver qualification is settled. Source/start fc0bd1d; completion prepared for research-branch publication. Released: no.

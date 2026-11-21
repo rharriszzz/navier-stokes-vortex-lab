@@ -1,0 +1,806 @@
+{
+  "inputs": {
+    "cylinder_radius_m": 0.1,
+    "axial_period_m": 0.1,
+    "rho_kg_m3": 998.0,
+    "nu_m2_s": 1e-06,
+    "reference_temperature_K": 293.15,
+    "initial_wall_pressure_Pa": 101325,
+    "initial_peak_radius_m": 0.01,
+    "initial_peak_speed_m_s": 0.1
+  },
+  "runs": [
+    {
+      "modes": 32,
+      "radial_points": 2048,
+      "time_spacing_s": 0.025,
+      "snapshots": [
+        {
+          "time_s": 0.0,
+          "peak_radius_m": 0.009999857824753525,
+          "peak_speed_m_s": 0.0999992493985962,
+          "axis_vorticity_s_inv": 35.130587328607284,
+          "probes": [
+            {
+              "radius_m": 0.01,
+              "circulation_m2_s": 0.00628313814454228,
+              "pressure_above_axis_pa": 9.043940161870964,
+              "oseen_pressure_above_axis_pa": 9.043890125700493
+            },
+            {
+              "radius_m": 0.02,
+              "circulation_m2_s": 0.008725984546814032,
+              "pressure_above_axis_pa": 14.552354910104775,
+              "oseen_pressure_above_axis_pa": 14.55230306034637
+            },
+            {
+              "radius_m": 0.03,
+              "circulation_m2_s": 0.008783651023169742,
+              "pressure_above_axis_pa": 15.90205782931134,
+              "oseen_pressure_above_axis_pa": 15.902015699709002
+            }
+          ],
+          "max_inner_speed_error_m_s": 1.44257538441106e-06,
+          "max_inner_vorticity_error_s_inv": 0.001963156083895967,
+          "kinetic_J_per_m": 0.012068423161658123,
+          "angular_kg_m_per_s": 0.021190536080913105,
+          "dissipation_W_per_m": 0.00016649593949003436,
+          "cumulative_dissipation_J_per_m": 0.0
+        },
+        {
+          "time_s": 1.0,
+          "peak_radius_m": 0.01024823920783359,
+          "peak_speed_m_s": 0.09757781980647487,
+          "axis_vorticity_s_inv": 33.44810205904419,
+          "probes": [
+            {
+              "radius_m": 0.01,
+              "circulation_m2_s": 0.006128226665808386,
+              "pressure_above_axis_pa": 8.378221807984486,
+              "oseen_pressure_above_axis_pa": 8.378212677888484
+            },
+            {
+              "radius_m": 0.02,
+              "circulation_m2_s": 0.008710250509132312,
+              "pressure_above_axis_pa": 13.741019697054098,
+              "oseen_pressure_above_axis_pa": 13.741008882711206
+            },
+            {
+              "radius_m": 0.03,
+              "circulation_m2_s": 0.008783472820062877,
+              "pressure_above_axis_pa": 15.089226927422576,
+              "oseen_pressure_above_axis_pa": 15.089219355348954
+            }
+          ],
+          "max_inner_speed_error_m_s": 4.739765212674607e-07,
+          "max_inner_vorticity_error_s_inv": 0.0005311727655973725,
+          "kinetic_J_per_m": 0.01190602404949096,
+          "angular_kg_m_per_s": 0.021190536080913116,
+          "dissipation_W_per_m": 0.00015844146276633247,
+          "cumulative_dissipation_J_per_m": 0.0001623991556980501
+        },
+        {
+          "time_s": 5.0,
+          "peak_radius_m": 0.01118609341742031,
+          "peak_speed_m_s": 0.08939673793615369,
+          "axis_vorticity_s_inv": 28.074007498245646,
+          "probes": [
+            {
+              "radius_m": 0.01,
+              "circulation_m2_s": 0.00556554979988958,
+              "pressure_above_axis_pa": 6.33919720349374,
+              "oseen_pressure_above_axis_pa": 6.339197392451243
+            },
+            {
+              "radius_m": 0.02,
+              "circulation_m2_s": 0.008625341993774809,
+              "pressure_above_axis_pa": 11.151731131431761,
+              "oseen_pressure_above_axis_pa": 11.151731255680128
+            },
+            {
+              "radius_m": 0.03,
+              "circulation_m2_s": 0.008782551365211463,
+              "pressure_above_axis_pa": 12.490959457912934,
+              "oseen_pressure_above_axis_pa": 12.490959618153456
+            }
+          ],
+          "max_inner_speed_error_m_s": 5.6296614592277194e-09,
+          "max_inner_vorticity_error_s_inv": 6.224866149736122e-06,
+          "kinetic_J_per_m": 0.01132635301500631,
+          "angular_kg_m_per_s": 0.021190536080913088,
+          "dissipation_W_per_m": 0.0001329339394099514,
+          "cumulative_dissipation_J_per_m": 0.0007420703113753688
+        }
+      ],
+      "max_initial_speed_error_m_s": 1.6961251267662292e-05,
+      "rigid_rate_s_inv": 0.13517348954086084,
+      "kinetic_loss_J_per_m": 0.0007420701466518131,
+      "dissipation_J_per_m": 0.0007420703113753688,
+      "residual_J_per_m": 1.6472355565070457e-10,
+      "max_relative_angular_drift": 1.964714968251496e-15
+    },
+    {
+      "modes": 64,
+      "radial_points": 2048,
+      "time_spacing_s": 0.025,
+      "snapshots": [
+        {
+          "time_s": 0.0,
+          "peak_radius_m": 0.009999606338643916,
+          "peak_speed_m_s": 0.0999996054189675,
+          "axis_vorticity_s_inv": 35.122972612134674,
+          "probes": [
+            {
+              "radius_m": 0.01,
+              "circulation_m2_s": 0.006283160507564679,
+              "pressure_above_axis_pa": 9.043846323731437,
+              "oseen_pressure_above_axis_pa": 9.043890125700493
+            },
+            {
+              "radius_m": 0.02,
+              "circulation_m2_s": 0.008725890676070203,
+              "pressure_above_axis_pa": 14.552255049821479,
+              "oseen_pressure_above_axis_pa": 14.55230306034637
+            },
+            {
+              "radius_m": 0.03,
+              "circulation_m2_s": 0.008783547038411584,
+              "pressure_above_axis_pa": 15.901968516269495,
+              "oseen_pressure_above_axis_pa": 15.902015699709002
+            }
+          ],
+          "max_inner_speed_error_m_s": 1.6013075037971114e-06,
+          "max_inner_vorticity_error_s_inv": 0.005651560388720611,
+          "kinetic_J_per_m": 0.012068423572910656,
+          "angular_kg_m_per_s": 0.021190536080913095,
+          "dissipation_W_per_m": 0.00016649710580038797,
+          "cumulative_dissipation_J_per_m": 0.0
+        },
+        {
+          "time_s": 1.0,
+          "peak_radius_m": 0.010248204895676797,
+          "peak_speed_m_s": 0.0975780476689569,
+          "axis_vorticity_s_inv": 33.44755488824394,
+          "probes": [
+            {
+              "radius_m": 0.01,
+              "circulation_m2_s": 0.006128241254767283,
+              "pressure_above_axis_pa": 8.378212066084494,
+              "oseen_pressure_above_axis_pa": 8.378212677888484
+            },
+            {
+              "radius_m": 0.02,
+              "circulation_m2_s": 0.008710232378527716,
+              "pressure_above_axis_pa": 13.741008211096913,
+              "oseen_pressure_above_axis_pa": 13.741008882711206
+            },
+            {
+              "radius_m": 0.03,
+              "circulation_m2_s": 0.008783410561532035,
+              "pressure_above_axis_pa": 15.089218696616658,
+              "oseen_pressure_above_axis_pa": 15.089219355348954
+            }
+          ],
+          "max_inner_speed_error_m_s": 2.3508409253969464e-08,
+          "max_inner_vorticity_error_s_inv": 8.303844275303618e-05,
+          "kinetic_J_per_m": 0.011906024079651035,
+          "angular_kg_m_per_s": 0.02119053608091312,
+          "dissipation_W_per_m": 0.00015844153790666091,
+          "cumulative_dissipation_J_per_m": 0.00016239953697027955
+        },
+        {
+          "time_s": 5.0,
+          "peak_radius_m": 0.011186090656370575,
+          "peak_speed_m_s": 0.08939673660078583,
+          "axis_vorticity_s_inv": 28.074011366164,
+          "probes": [
+            {
+              "radius_m": 0.01,
+              "circulation_m2_s": 0.005565549932776659,
+              "pressure_above_axis_pa": 6.3391973924512195,
+              "oseen_pressure_above_axis_pa": 6.339197392451243
+            },
+            {
+              "radius_m": 0.02,
+              "circulation_m2_s": 0.00862534205467603,
+              "pressure_above_axis_pa": 11.151731255680103,
+              "oseen_pressure_above_axis_pa": 11.151731255680128
+            },
+            {
+              "radius_m": 0.03,
+              "circulation_m2_s": 0.00878255030404532,
+              "pressure_above_axis_pa": 12.490959618153438,
+              "oseen_pressure_above_axis_pa": 12.490959618153456
+            }
+          ],
+          "max_inner_speed_error_m_s": 1.0269562977782698e-15,
+          "max_inner_vorticity_error_s_inv": 3.6344260934129125e-12,
+          "kinetic_J_per_m": 0.011326353015008396,
+          "angular_kg_m_per_s": 0.021190536080913133,
+          "dissipation_W_per_m": 0.0001329339394147933,
+          "cumulative_dissipation_J_per_m": 0.0007420707228156238
+        }
+      ],
+      "max_initial_speed_error_m_s": 2.0596965698595204e-06,
+      "rigid_rate_s_inv": 0.13517348954086084,
+      "kinetic_loss_J_per_m": 0.00074207055790226,
+      "dissipation_J_per_m": 0.0007420707228156238,
+      "residual_J_per_m": 1.649133637808553e-10,
+      "max_relative_angular_drift": 2.29216746296008e-15
+    },
+    {
+      "modes": 128,
+      "radial_points": 512,
+      "time_spacing_s": 0.025,
+      "snapshots": [
+        {
+          "time_s": 0.0,
+          "peak_radius_m": 0.00999999793220187,
+          "peak_speed_m_s": 0.09999999868719282,
+          "axis_vorticity_s_inv": 35.128607833407706,
+          "probes": [
+            {
+              "radius_m": 0.01,
+              "circulation_m2_s": 0.0062831852246932746,
+              "pressure_above_axis_pa": 9.043890090447407,
+              "oseen_pressure_above_axis_pa": 9.043890125700493
+            },
+            {
+              "radius_m": 0.02,
+              "circulation_m2_s": 0.008725914766158771,
+              "pressure_above_axis_pa": 14.552303018247063,
+              "oseen_pressure_above_axis_pa": 14.55230306034637
+            },
+            {
+              "radius_m": 0.03,
+              "circulation_m2_s": 0.008783486742005438,
+              "pressure_above_axis_pa": 15.902015662930758,
+              "oseen_pressure_above_axis_pa": 15.902015699709002
+            }
+          ],
+          "max_inner_speed_error_m_s": 3.4527413567131404e-09,
+          "max_inner_vorticity_error_s_inv": 1.6339115688879247e-05,
+          "kinetic_J_per_m": 0.012068423561630699,
+          "angular_kg_m_per_s": 0.021190536053525364,
+          "dissipation_W_per_m": 0.00016649713743877357,
+          "cumulative_dissipation_J_per_m": 0.0
+        },
+        {
+          "time_s": 1.0,
+          "peak_radius_m": 0.01024820593247965,
+          "peak_speed_m_s": 0.09757805479208112,
+          "axis_vorticity_s_inv": 33.44763792668375,
+          "probes": [
+            {
+              "radius_m": 0.01,
+              "circulation_m2_s": 0.006128241623020361,
+              "pressure_above_axis_pa": 8.378212677888481,
+              "oseen_pressure_above_axis_pa": 8.378212677888484
+            },
+            {
+              "radius_m": 0.02,
+              "circulation_m2_s": 0.00871023270551528,
+              "pressure_above_axis_pa": 13.741008882711201,
+              "oseen_pressure_above_axis_pa": 13.741008882711206
+            },
+            {
+              "radius_m": 0.03,
+              "circulation_m2_s": 0.008783409670704153,
+              "pressure_above_axis_pa": 15.089219355348947,
+              "oseen_pressure_above_axis_pa": 15.089219355348954
+            }
+          ],
+          "max_inner_speed_error_m_s": 4.145989107584569e-16,
+          "max_inner_vorticity_error_s_inv": 2.9629632081196178e-12,
+          "kinetic_J_per_m": 0.011906024065762761,
+          "angular_kg_m_per_s": 0.02119053605352536,
+          "dissipation_W_per_m": 0.0001584415377872912,
+          "cumulative_dissipation_J_per_m": 0.0001623995395999343
+        },
+        {
+          "time_s": 5.0,
+          "peak_radius_m": 0.011186090656369777,
+          "peak_speed_m_s": 0.08939673660078575,
+          "axis_vorticity_s_inv": 28.074011366167632,
+          "probes": [
+            {
+              "radius_m": 0.01,
+              "circulation_m2_s": 0.005565549932776676,
+              "pressure_above_axis_pa": 6.339197392451243,
+              "oseen_pressure_above_axis_pa": 6.339197392451243
+            },
+            {
+              "radius_m": 0.02,
+              "circulation_m2_s": 0.008625342054676032,
+              "pressure_above_axis_pa": 11.151731255680124,
+              "oseen_pressure_above_axis_pa": 11.151731255680128
+            },
+            {
+              "radius_m": 0.03,
+              "circulation_m2_s": 0.008782550304045266,
+              "pressure_above_axis_pa": 12.490959618153454,
+              "oseen_pressure_above_axis_pa": 12.490959618153456
+            }
+          ],
+          "max_inner_speed_error_m_s": 7.632783294297951e-17,
+          "max_inner_vorticity_error_s_inv": 1.4210854715202004e-14,
+          "kinetic_J_per_m": 0.011326353001686133,
+          "angular_kg_m_per_s": 0.02119053605352535,
+          "dissipation_W_per_m": 0.00013293393927218706,
+          "cumulative_dissipation_J_per_m": 0.000742070724879227
+        }
+      ],
+      "max_initial_speed_error_m_s": 2.7060063942027646e-07,
+      "rigid_rate_s_inv": 0.13517348936615559,
+      "kinetic_loss_J_per_m": 0.0007420705599445656,
+      "dissipation_J_per_m": 0.000742070724879227,
+      "residual_J_per_m": 1.6493466141465074e-10,
+      "max_relative_angular_drift": 1.146083732961297e-15
+    },
+    {
+      "modes": 128,
+      "radial_points": 1024,
+      "time_spacing_s": 0.025,
+      "snapshots": [
+        {
+          "time_s": 0.0,
+          "peak_radius_m": 0.009999997902184197,
+          "peak_speed_m_s": 0.09999999873558423,
+          "axis_vorticity_s_inv": 35.128609336868024,
+          "probes": [
+            {
+              "radius_m": 0.01,
+              "circulation_m2_s": 0.006283185227733792,
+              "pressure_above_axis_pa": 9.043890093716909,
+              "oseen_pressure_above_axis_pa": 9.043890125700493
+            },
+            {
+              "radius_m": 0.02,
+              "circulation_m2_s": 0.00872591476209751,
+              "pressure_above_axis_pa": 14.55230302149118,
+              "oseen_pressure_above_axis_pa": 14.55230306034637
+            },
+            {
+              "radius_m": 0.03,
+              "circulation_m2_s": 0.00878348674662123,
+              "pressure_above_axis_pa": 15.902015666141853,
+              "oseen_pressure_above_axis_pa": 15.902015699709002
+            }
+          ],
+          "max_inner_speed_error_m_s": 3.424880247460127e-09,
+          "max_inner_vorticity_error_s_inv": 1.4835655370859513e-05,
+          "kinetic_J_per_m": 0.012068423575507737,
+          "angular_kg_m_per_s": 0.021190536083642526,
+          "dissipation_W_per_m": 0.0001664971374487067,
+          "cumulative_dissipation_J_per_m": 0.0
+        },
+        {
+          "time_s": 1.0,
+          "peak_radius_m": 0.010248205932479652,
+          "peak_speed_m_s": 0.09757805479208113,
+          "axis_vorticity_s_inv": 33.44763792668372,
+          "probes": [
+            {
+              "radius_m": 0.01,
+              "circulation_m2_s": 0.006128241623020362,
+              "pressure_above_axis_pa": 8.378212677888486,
+              "oseen_pressure_above_axis_pa": 8.378212677888484
+            },
+            {
+              "radius_m": 0.02,
+              "circulation_m2_s": 0.00871023270551529,
+              "pressure_above_axis_pa": 13.741008882711208,
+              "oseen_pressure_above_axis_pa": 13.741008882711206
+            },
+            {
+              "radius_m": 0.03,
+              "circulation_m2_s": 0.008783409670704163,
+              "pressure_above_axis_pa": 15.089219355348957,
+              "oseen_pressure_above_axis_pa": 15.089219355348954
+            }
+          ],
+          "max_inner_speed_error_m_s": 4.198030811863873e-16,
+          "max_inner_vorticity_error_s_inv": 2.9771740628348198e-12,
+          "kinetic_J_per_m": 0.011906024079554541,
+          "angular_kg_m_per_s": 0.021190536083642537,
+          "dissipation_W_per_m": 0.00015844153790217264,
+          "cumulative_dissipation_J_per_m": 0.00016239953968516405
+        },
+        {
+          "time_s": 5.0,
+          "peak_radius_m": 0.011186090656369782,
+          "peak_speed_m_s": 0.08939673660078577,
+          "axis_vorticity_s_inv": 28.074011366167635,
+          "probes": [
+            {
+              "radius_m": 0.01,
+              "circulation_m2_s": 0.0055655499327766774,
+              "pressure_above_axis_pa": 6.339197392451245,
+              "oseen_pressure_above_axis_pa": 6.339197392451243
+            },
+            {
+              "radius_m": 0.02,
+              "circulation_m2_s": 0.008625342054676036,
+              "pressure_above_axis_pa": 11.151731255680131,
+              "oseen_pressure_above_axis_pa": 11.151731255680128
+            },
+            {
+              "radius_m": 0.03,
+              "circulation_m2_s": 0.00878255030404527,
+              "pressure_above_axis_pa": 12.49095961815346,
+              "oseen_pressure_above_axis_pa": 12.490959618153456
+            }
+          ],
+          "max_inner_speed_error_m_s": 5.551115123125783e-17,
+          "max_inner_vorticity_error_s_inv": 1.0658141036401503e-14,
+          "kinetic_J_per_m": 0.011326353014940916,
+          "angular_kg_m_per_s": 0.02119053608364252,
+          "dissipation_W_per_m": 0.00013293393940723615,
+          "cumulative_dissipation_J_per_m": 0.0007420707255014703
+        }
+      ],
+      "max_initial_speed_error_m_s": 2.7291036103563315e-07,
+      "rigid_rate_s_inv": 0.13517348955827171,
+      "kinetic_loss_J_per_m": 0.0007420705605668213,
+      "dissipation_J_per_m": 0.0007420707255014703,
+      "residual_J_per_m": 1.6493464894632576e-10,
+      "max_relative_angular_drift": 1.3098099786656221e-15
+    },
+    {
+      "modes": 128,
+      "radial_points": 2048,
+      "time_spacing_s": 0.1,
+      "snapshots": [
+        {
+          "time_s": 0.0,
+          "peak_radius_m": 0.009999997904472055,
+          "peak_speed_m_s": 0.09999999873416467,
+          "axis_vorticity_s_inv": 35.128609284143806,
+          "probes": [
+            {
+              "radius_m": 0.01,
+              "circulation_m2_s": 0.006283185227644599,
+              "pressure_above_axis_pa": 9.043890093600778,
+              "oseen_pressure_above_axis_pa": 9.043890125700493
+            },
+            {
+              "radius_m": 0.02,
+              "circulation_m2_s": 0.008725914762244033,
+              "pressure_above_axis_pa": 14.552303021379386,
+              "oseen_pressure_above_axis_pa": 14.55230306034637
+            },
+            {
+              "radius_m": 0.03,
+              "circulation_m2_s": 0.008783486746424199,
+              "pressure_above_axis_pa": 15.902015666029598,
+              "oseen_pressure_above_axis_pa": 15.902015699709002
+            }
+          ],
+          "max_inner_speed_error_m_s": 3.425347450125571e-09,
+          "max_inner_vorticity_error_s_inv": 1.4888379574529154e-05,
+          "kinetic_J_per_m": 0.012068423575608802,
+          "angular_kg_m_per_s": 0.021190536080913078,
+          "dissipation_W_per_m": 0.0001664971374492981,
+          "cumulative_dissipation_J_per_m": 0.0
+        },
+        {
+          "time_s": 1.0,
+          "peak_radius_m": 0.01024820593247987,
+          "peak_speed_m_s": 0.09757805479208108,
+          "axis_vorticity_s_inv": 33.44763792668364,
+          "probes": [
+            {
+              "radius_m": 0.01,
+              "circulation_m2_s": 0.006128241623020358,
+              "pressure_above_axis_pa": 8.378212677888481,
+              "oseen_pressure_above_axis_pa": 8.378212677888484
+            },
+            {
+              "radius_m": 0.02,
+              "circulation_m2_s": 0.00871023270551529,
+              "pressure_above_axis_pa": 13.741008882711204,
+              "oseen_pressure_above_axis_pa": 13.741008882711206
+            },
+            {
+              "radius_m": 0.03,
+              "circulation_m2_s": 0.008783409670704177,
+              "pressure_above_axis_pa": 15.089219355348954,
+              "oseen_pressure_above_axis_pa": 15.089219355348954
+            }
+          ],
+          "max_inner_speed_error_m_s": 4.354155924701786e-16,
+          "max_inner_vorticity_error_s_inv": 3.055333763768431e-12,
+          "kinetic_J_per_m": 0.011906024079651236,
+          "angular_kg_m_per_s": 0.021190536080913088,
+          "dissipation_W_per_m": 0.00015844153790816403,
+          "cumulative_dissipation_J_per_m": 0.00016240019564419897
+        },
+        {
+          "time_s": 5.0,
+          "peak_radius_m": 0.011186090656370037,
+          "peak_speed_m_s": 0.08939673660078573,
+          "axis_vorticity_s_inv": 28.074011366167632,
+          "probes": [
+            {
+              "radius_m": 0.01,
+              "circulation_m2_s": 0.005565549932776676,
+              "pressure_above_axis_pa": 6.339197392451243,
+              "oseen_pressure_above_axis_pa": 6.339197392451243
+            },
+            {
+              "radius_m": 0.02,
+              "circulation_m2_s": 0.00862534205467604,
+              "pressure_above_axis_pa": 11.15173125568013,
+              "oseen_pressure_above_axis_pa": 11.151731255680128
+            },
+            {
+              "radius_m": 0.03,
+              "circulation_m2_s": 0.008782550304045282,
+              "pressure_above_axis_pa": 12.490959618153461,
+              "oseen_pressure_above_axis_pa": 12.490959618153456
+            }
+          ],
+          "max_inner_speed_error_m_s": 6.245004513516506e-17,
+          "max_inner_vorticity_error_s_inv": 1.0658141036401503e-14,
+          "kinetic_J_per_m": 0.011326353015008382,
+          "angular_kg_m_per_s": 0.02119053608091312,
+          "dissipation_W_per_m": 0.00013293393941479312,
+          "cumulative_dissipation_J_per_m": 0.0007420731995205956
+        }
+      ],
+      "max_initial_speed_error_m_s": 2.7292747056470446e-07,
+      "rigid_rate_s_inv": 0.13517348954086084,
+      "kinetic_loss_J_per_m": 0.0007420705606004194,
+      "dissipation_J_per_m": 0.0007420731995205956,
+      "residual_J_per_m": 2.6389201761289893e-09,
+      "max_relative_angular_drift": 3.438251194440122e-15
+    },
+    {
+      "modes": 128,
+      "radial_points": 2048,
+      "time_spacing_s": 0.05,
+      "snapshots": [
+        {
+          "time_s": 0.0,
+          "peak_radius_m": 0.009999997904472055,
+          "peak_speed_m_s": 0.09999999873416467,
+          "axis_vorticity_s_inv": 35.128609284143806,
+          "probes": [
+            {
+              "radius_m": 0.01,
+              "circulation_m2_s": 0.006283185227644599,
+              "pressure_above_axis_pa": 9.043890093600778,
+              "oseen_pressure_above_axis_pa": 9.043890125700493
+            },
+            {
+              "radius_m": 0.02,
+              "circulation_m2_s": 0.008725914762244033,
+              "pressure_above_axis_pa": 14.552303021379386,
+              "oseen_pressure_above_axis_pa": 14.55230306034637
+            },
+            {
+              "radius_m": 0.03,
+              "circulation_m2_s": 0.008783486746424199,
+              "pressure_above_axis_pa": 15.902015666029598,
+              "oseen_pressure_above_axis_pa": 15.902015699709002
+            }
+          ],
+          "max_inner_speed_error_m_s": 3.425347450125571e-09,
+          "max_inner_vorticity_error_s_inv": 1.4888379574529154e-05,
+          "kinetic_J_per_m": 0.012068423575608802,
+          "angular_kg_m_per_s": 0.021190536080913078,
+          "dissipation_W_per_m": 0.0001664971374492981,
+          "cumulative_dissipation_J_per_m": 0.0
+        },
+        {
+          "time_s": 1.0,
+          "peak_radius_m": 0.01024820593247987,
+          "peak_speed_m_s": 0.09757805479208108,
+          "axis_vorticity_s_inv": 33.44763792668364,
+          "probes": [
+            {
+              "radius_m": 0.01,
+              "circulation_m2_s": 0.006128241623020358,
+              "pressure_above_axis_pa": 8.378212677888481,
+              "oseen_pressure_above_axis_pa": 8.378212677888484
+            },
+            {
+              "radius_m": 0.02,
+              "circulation_m2_s": 0.00871023270551529,
+              "pressure_above_axis_pa": 13.741008882711204,
+              "oseen_pressure_above_axis_pa": 13.741008882711206
+            },
+            {
+              "radius_m": 0.03,
+              "circulation_m2_s": 0.008783409670704177,
+              "pressure_above_axis_pa": 15.089219355348954,
+              "oseen_pressure_above_axis_pa": 15.089219355348954
+            }
+          ],
+          "max_inner_speed_error_m_s": 4.354155924701786e-16,
+          "max_inner_vorticity_error_s_inv": 3.055333763768431e-12,
+          "kinetic_J_per_m": 0.011906024079651236,
+          "angular_kg_m_per_s": 0.021190536080913088,
+          "dissipation_W_per_m": 0.00015844153790816403,
+          "cumulative_dissipation_J_per_m": 0.00016239967088414108
+        },
+        {
+          "time_s": 5.0,
+          "peak_radius_m": 0.011186090656370037,
+          "peak_speed_m_s": 0.08939673660078573,
+          "axis_vorticity_s_inv": 28.074011366167632,
+          "probes": [
+            {
+              "radius_m": 0.01,
+              "circulation_m2_s": 0.005565549932776676,
+              "pressure_above_axis_pa": 6.339197392451243,
+              "oseen_pressure_above_axis_pa": 6.339197392451243
+            },
+            {
+              "radius_m": 0.02,
+              "circulation_m2_s": 0.00862534205467604,
+              "pressure_above_axis_pa": 11.15173125568013,
+              "oseen_pressure_above_axis_pa": 11.151731255680128
+            },
+            {
+              "radius_m": 0.03,
+              "circulation_m2_s": 0.008782550304045282,
+              "pressure_above_axis_pa": 12.490959618153461,
+              "oseen_pressure_above_axis_pa": 12.490959618153456
+            }
+          ],
+          "max_inner_speed_error_m_s": 6.245004513516506e-17,
+          "max_inner_vorticity_error_s_inv": 1.0658141036401503e-14,
+          "kinetic_J_per_m": 0.011326353015008382,
+          "angular_kg_m_per_s": 0.02119053608091312,
+          "dissipation_W_per_m": 0.00013293393941479312,
+          "cumulative_dissipation_J_per_m": 0.0007420712203371818
+        }
+      ],
+      "max_initial_speed_error_m_s": 2.7292747056470446e-07,
+      "rigid_rate_s_inv": 0.13517348954086084,
+      "kinetic_loss_J_per_m": 0.0007420705606004194,
+      "dissipation_J_per_m": 0.0007420712203371818,
+      "residual_J_per_m": 6.597367623994294e-10,
+      "max_relative_angular_drift": 3.438251194440122e-15
+    },
+    {
+      "modes": 128,
+      "radial_points": 2048,
+      "time_spacing_s": 0.025,
+      "snapshots": [
+        {
+          "time_s": 0.0,
+          "peak_radius_m": 0.009999997904472055,
+          "peak_speed_m_s": 0.09999999873416467,
+          "axis_vorticity_s_inv": 35.128609284143806,
+          "probes": [
+            {
+              "radius_m": 0.01,
+              "circulation_m2_s": 0.006283185227644599,
+              "pressure_above_axis_pa": 9.043890093600778,
+              "oseen_pressure_above_axis_pa": 9.043890125700493
+            },
+            {
+              "radius_m": 0.02,
+              "circulation_m2_s": 0.008725914762244033,
+              "pressure_above_axis_pa": 14.552303021379386,
+              "oseen_pressure_above_axis_pa": 14.55230306034637
+            },
+            {
+              "radius_m": 0.03,
+              "circulation_m2_s": 0.008783486746424199,
+              "pressure_above_axis_pa": 15.902015666029598,
+              "oseen_pressure_above_axis_pa": 15.902015699709002
+            }
+          ],
+          "max_inner_speed_error_m_s": 3.425347450125571e-09,
+          "max_inner_vorticity_error_s_inv": 1.4888379574529154e-05,
+          "kinetic_J_per_m": 0.012068423575608802,
+          "angular_kg_m_per_s": 0.021190536080913078,
+          "dissipation_W_per_m": 0.0001664971374492981,
+          "cumulative_dissipation_J_per_m": 0.0
+        },
+        {
+          "time_s": 1.0,
+          "peak_radius_m": 0.01024820593247987,
+          "peak_speed_m_s": 0.09757805479208108,
+          "axis_vorticity_s_inv": 33.44763792668364,
+          "probes": [
+            {
+              "radius_m": 0.01,
+              "circulation_m2_s": 0.006128241623020358,
+              "pressure_above_axis_pa": 8.378212677888481,
+              "oseen_pressure_above_axis_pa": 8.378212677888484
+            },
+            {
+              "radius_m": 0.02,
+              "circulation_m2_s": 0.00871023270551529,
+              "pressure_above_axis_pa": 13.741008882711204,
+              "oseen_pressure_above_axis_pa": 13.741008882711206
+            },
+            {
+              "radius_m": 0.03,
+              "circulation_m2_s": 0.008783409670704177,
+              "pressure_above_axis_pa": 15.089219355348954,
+              "oseen_pressure_above_axis_pa": 15.089219355348954
+            }
+          ],
+          "max_inner_speed_error_m_s": 4.354155924701786e-16,
+          "max_inner_vorticity_error_s_inv": 3.055333763768431e-12,
+          "kinetic_J_per_m": 0.011906024079651236,
+          "angular_kg_m_per_s": 0.021190536080913088,
+          "dissipation_W_per_m": 0.00015844153790816403,
+          "cumulative_dissipation_J_per_m": 0.0001623995396895356
+        },
+        {
+          "time_s": 5.0,
+          "peak_radius_m": 0.011186090656370037,
+          "peak_speed_m_s": 0.08939673660078573,
+          "axis_vorticity_s_inv": 28.074011366167632,
+          "probes": [
+            {
+              "radius_m": 0.01,
+              "circulation_m2_s": 0.005565549932776676,
+              "pressure_above_axis_pa": 6.339197392451243,
+              "oseen_pressure_above_axis_pa": 6.339197392451243
+            },
+            {
+              "radius_m": 0.02,
+              "circulation_m2_s": 0.00862534205467604,
+              "pressure_above_axis_pa": 11.15173125568013,
+              "oseen_pressure_above_axis_pa": 11.151731255680128
+            },
+            {
+              "radius_m": 0.03,
+              "circulation_m2_s": 0.008782550304045282,
+              "pressure_above_axis_pa": 12.490959618153461,
+              "oseen_pressure_above_axis_pa": 12.490959618153456
+            }
+          ],
+          "max_inner_speed_error_m_s": 6.245004513516506e-17,
+          "max_inner_vorticity_error_s_inv": 1.0658141036401503e-14,
+          "kinetic_J_per_m": 0.011326353015008382,
+          "angular_kg_m_per_s": 0.02119053608091312,
+          "dissipation_W_per_m": 0.00013293393941479312,
+          "cumulative_dissipation_J_per_m": 0.0007420707255350484
+        }
+      ],
+      "max_initial_speed_error_m_s": 2.7292747056470446e-07,
+      "rigid_rate_s_inv": 0.13517348954086084,
+      "kinetic_loss_J_per_m": 0.0007420705606004194,
+      "dissipation_J_per_m": 0.0007420707255350484,
+      "residual_J_per_m": 1.6493462899700578e-10,
+      "max_relative_angular_drift": 3.438251194440122e-15
+    }
+  ],
+  "fine_pair_changes": {
+    "modes": {
+      "max_peak_change_m": 3.915658281384432e-07,
+      "max_pressure_change_pa": 4.714976010333771e-05,
+      "integrated_dissipation_change_fraction": 3.6646442599547266e-09,
+      "balance_change_fraction": 2.865659585427154e-11
+    },
+    "radius": {
+      "max_peak_change_m": 2.287857403526772e-12,
+      "max_pressure_change_pa": 1.1225509410905943e-10,
+      "integrated_dissipation_change_fraction": 4.5249302081969815e-11,
+      "balance_change_fraction": 2.6883319502113134e-14
+    },
+    "time": {
+      "max_peak_change_m": 0.0,
+      "max_pressure_change_pa": 0.0,
+      "integrated_dissipation_change_fraction": 6.667858282938382e-07,
+      "balance_change_fraction": 6.667858282938382e-07
+    }
+  },
+  "checks": {
+    "modes": true,
+    "radius": true,
+    "time": true,
+    "energy": true,
+    "angular": true,
+    "final_radius": true
+  },
+  "passed": true
+}

@@ -1,6 +1,6 @@
 # navier-stokes-vortex-lab
 
-**Active research, November 2026.** How tightly can ordinary water concentrate a vortex before viscosity, loss of coherence or a change in material behaviour takes over? The first benchmark is a 10 mm vortex left to spread for five seconds. The plan gives quantitative predictions, the water equations, and a way to check the calculation before attempting to stretch the core. [Physics-first plan](docs/physics-first/README.md) · [Project direction](PROJECT_DIRECTION.md) · [Review and next task](SESSION_HANDOFF.md#next-task)
+**Active research, November 2026.** How tightly can ordinary water concentrate a vortex before viscosity, loss of coherence or a change in material behaviour takes over? The first benchmark is a 10 mm vortex left to spread for five seconds. In the finite-cylinder reference its peak moved to 11.186 mm, with the loss of kinetic energy accounted for by viscosity. [Result and figure](docs/physics-first/SPREADING_RESULT.md). [Physics-first plan](docs/physics-first/README.md) · [Project direction](PROJECT_DIRECTION.md) · [Review and next task](SESSION_HANDOFF.md#next-task)
 
 ## Earlier visualization and boundary-control work
 

@@ -2,7 +2,7 @@
 
 Start with a vortex whose fate we can predict. In still surroundings, viscosity transports rotation out of a straight column. The peak swirl moves **outward** and weakens. A three-dimensional flow can instead pull the column lengthwise and narrow it. Measuring the natural outward drift gives us the amount of stretching a later experiment has to beat.
 
-The first round supplies dimensional estimates and a design. The first new numerical experiment awaits review. The earlier [water feasibility study](../realizability/WATER_EXPERIMENT_FEASIBILITY_AND_COST.md) supplies apparatus context. [Water model and conservation laws](PHYSICAL_MODEL.md) · [Code assessment and solver choice](EXISTING_CODE.md) · [Proposed next test](#round-two-test)
+The first round supplies dimensional estimates and a design. Round two evaluated the finite-cylinder reference and passed its conservation and refinement checks. [Five-second result and profiles](SPREADING_RESULT.md). The earlier [water feasibility study](../realizability/WATER_EXPERIMENT_FEASIBILITY_AND_COST.md) supplies apparatus context. [Water model and conservation laws](PHYSICAL_MODEL.md) · [Code assessment and solver choice](EXISTING_CODE.md) · [Round-two test specification](#round-two-test)
 
 ## Reference A · A vortex left alone
 

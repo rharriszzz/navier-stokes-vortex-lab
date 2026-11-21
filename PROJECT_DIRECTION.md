@@ -2,7 +2,7 @@
 
 **R275 · 2026-11-21.** The owner selected the physical limits of vortex concentration in ordinary water. Study unforced dynamics and physically plausible boundary motion using compressible viscous mass, momentum and energy conservation. The first round establishes an interpretable viscous-spreading benchmark and the strain needed to oppose it. The limiting mechanism and attainable radius remain open. [Research plan](docs/physics-first/README.md)
 
-Round one ends at owner review. The proposed second round is one finite-cylinder spreading reference. R272 is historical and requires an explicit choice to resume. [Next task](SESSION_HANDOFF.md#next-task)
+R277 completed the [finite-cylinder spreading reference](docs/physics-first/SPREADING_RESULT.md). The next decision concerns acoustic qualification of a compressible liquid-water solver. R272 is historical and requires an explicit choice to resume. [Next task](SESSION_HANDOFF.md#next-task)
 
 ## Earlier direction decision · November 1
 
