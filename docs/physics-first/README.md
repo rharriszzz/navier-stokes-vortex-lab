@@ -1,5 +1,7 @@
 # How tightly can a vortex in water concentrate?
 
+**R289 · 21 November 2026.** The full-disk SU2 release force passes on the two finer meshes. Moving the mesh junction outside the core cuts the 12 ns inner pressure disturbance from 1.29 to 0.0446 Pa. The 25 µs dual-time trial diverges. Rotating time evolution and 3D water remain unqualified. [Scientific decision](ROTATING_DECISION.md) · [Disk measurements and figure](ROTATING_DISK.md) · [Next task](../../SESSION_HANDOFF.md#next-task)
+
 **R288 · 21 November 2026.** The 8 mm gap still gives centerline decay at the original circulation. At Γ = 0.0036 m²/s and a = 2 mm, the facing peak gains vorticity at +0.142 s⁻¹. Strong radial shoulders retain a positive sign across the one-factor variations, while the peak sign changes with width, gap or tilt. Decision A supports a 20 ms pair and isolated-ring comparison after rotating-water and slow-time qualification. [Thresholds](RING_THRESHOLDS.md) · [Core sections](RING_SECTIONS.md) · [Preparation](RING_PREPARATION.md) · [Evolution design](RING_EVOLUTION_DESIGN.md) · [Next task](../../SESSION_HANDOFF.md#next-task)
 
 ### Reproduce the ring experiment

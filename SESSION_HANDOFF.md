@@ -1,5 +1,11 @@
 # Current session handoff
 
+**R289 · 21 November 2026.** The full-disk SU2 release force passes on the two finer meshes. Moving the mesh junction outside the core cuts the 12 ns inner pressure disturbance from 1.29 to 0.0446 Pa. The 25 µs dual-time trial diverges. Rotating time evolution and 3D water remain unqualified. [Scientific decision](docs/physics-first/ROTATING_DECISION.md) · [Disk measurements and figure](docs/physics-first/ROTATING_DISK.md) · [Next task](#next-task)
+
+Scientific R289 is logged as request R290. PC/WSL2 daisy retains ownership. The no-slip mode reference, actual release residuals, viscosity control, space/time pilots, slow-time failure and isolated-ring resource plan are published. The release stress power is within 0.058% of reference, while local pressure and width evolution remain uncertain. The 11 measured comparisons replay from the compact archive. All 29 targeted tests passed. The historical acoustic and shear regressions reproduced. The measured resource stop excludes a 1 ms explicit window. No 3D or FEM job ran. Use `/new` after review for one meridional 20 ms isolated-ring reference with GPT-6.2 Astra/high.
+
+### Previous R288 result
+
 **R288 · 21 November 2026.** The 8 mm gap still gives centerline decay at the original circulation. At Γ = 0.0036 m²/s and a = 2 mm, the facing peak gains vorticity at +0.142 s⁻¹. Strong radial shoulders retain a positive sign across the one-factor variations, while the peak sign changes with width, gap or tilt. Decision A supports a 20 ms pair and isolated-ring comparison after rotating-water and slow-time qualification. [Thresholds](docs/physics-first/RING_THRESHOLDS.md) · [Core sections](docs/physics-first/RING_SECTIONS.md) · [Preparation](docs/physics-first/RING_PREPARATION.md) · [Evolution design](docs/physics-first/RING_EVOLUTION_DESIGN.md) · [Next task](#next-task)
 
 Scientific R288 is request R289. PC/WSL2 daisy retains ownership. Published numerical milestones include the 128/256/512 gap comparisons, direct threshold brackets, normalized and dimensional section budgets, signed flux/width measurements, isolated controls and one-factor checks. The symmetry midpoint has zero vorticity and undefined fractional rate. Its raw failed refinement is retained. No CFD evolution ran. Actual nozzle release properties and low-Mach rotating performance remain unresolved. Use `/new` for the bounded two-dimensional rotating control.
@@ -1752,13 +1758,13 @@ and physical-work limits remain unchanged.
 
 ## Owner and checkout
 
-| Field | R288 value |
+| Field | R289 value |
 |---|---|
 | Owner | PC/WSL2 `daisy`, user `rharris`. Mac released per the published handoff. |
 | Checkout | `/home/rharris/git/navier-stokes-vortex-lab`, sole local worktree, empty stashes at start. |
-| Branch and publication target | `research/water-vortex-limits` → `origin/research/water-vortex-limits`, based on fetched `origin/main` at `f348cf6`. R288 started from reviewed and synchronized R287 977918d. Delivery commit is in Git history. |
-| Runtime | Free-space Python 3.12.14 quadrature using the existing NumPy/SciPy environment on daisy. System Matplotlib for the static figure. |
-| Next decision | Review the 2D rotating-water qualification before any 3D evolution. |
+| Branch and publication target | `research/water-vortex-limits` → `origin/research/water-vortex-limits`, based on fetched `origin/main` at `f348cf6`. R289 started from reviewed and synchronized R288 8987bc5. Delivery commit is in Git history. |
+| Runtime | Serial SU2 8.6.0, CoolProp 7.2.0, water Python 3.12, NumPy/SciPy, system Matplotlib. Native fields remain on daisy under ~/.local/opt/water-acoustics/runs/r289/. |
+| Next decision | Review R289 and the proposed independent 20 ms meridional isolated-ring reference. |
 
 ### Historical R272 checkout
 
@@ -1929,6 +1935,10 @@ write access. The tool sandbox denies `.git` writes, `ps`, unrestricted
 agent-side POV-Ray backtraces are unavailable.
 
 ## Next task
+
+**Review scientific R289, then use `/new` with GPT-6.2 Astra, high reasoning.** The proposed experiment is a 20 ms incompressible axisymmetric evolution of one circular ring in its axial frame using azimuthal vorticity, with measured width uncertainty. Its curvature and diffusion supply an independent control for any future 3D water calculation. Use the published left-ring release. Refine space, step, domain and aperture. Stop after the bounded control or at a measured accuracy/resource gate. Report translation, material/ridge behavior, flux, widths and rates against the saved thresholds. If only replay/reporting remains, recommend a lower reasoning level. Retain high reasoning for a new numerical-method decision. [Executable specification](docs/physics-first/ROTATING_DECISION.md#one-next-executable-experiment) · [Isolated release targets](docs/physics-first/ISOLATED_RING_CONTROL.md)
+
+### Historical R288 proposal investigated in R289
 
 **Review R288 and use `/new` for the 2D rotating-water qualification on daisy.** Evaluate the installed solver’s rotating residual, short explicit evolution and timestep control against the archived 10 mm swirl and radial spreading reference. This is the first gate for the proposed 20 ms pair/isolated experiment. [Specification and criteria](docs/physics-first/RING_EVOLUTION_DESIGN.md#qualification-before-a-pair-run)
 
