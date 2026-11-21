@@ -1,0 +1,389 @@
+{
+  "endpoints": {
+    "reference_6ns": {
+      "liquid_nodes": 165313,
+      "p_min_Pa": 101308.2241212018,
+      "T_range_K": [
+        293.14999999943365,
+        293.15000000057154
+      ],
+      "inner_pressure_rise_Pa": 15.905472582555376,
+      "core_dp_peak_Pa": 0.022333570537739433,
+      "core_dp_rms_Pa": 0.009776327836321106,
+      "radial_acc_rms_m_s2": 0.0005795465577265097,
+      "core_density_rate_rms": 0.7415075968753093,
+      "conserved_change_per_m": [
+        2.757318213385679e-19,
+        -2.769917953039427e-20,
+        -2.0452145767256197e-21,
+        2.0454245156820889e-13
+      ],
+      "wall_force_N_m": [
+        -3.1066068572479896e-21,
+        -8.340150389064333e-22
+      ],
+      "integrated_wall_impulse_per_m": [
+        -9.31982057174397e-30,
+        -2.5020451167193003e-30
+      ],
+      "momentum_defect_per_m": [
+        -2.769917952107445e-20,
+        -2.0452145742235745e-21
+      ],
+      "internal_change_J_m": 1.2197667669128061e-12,
+      "mass_drift_fraction": 8.792661236226395e-21,
+      "kinetic_loss_J_m": 1.0152243153445972e-12,
+      "initial_kinetic_J_m": 0.01207102400170809,
+      "energy_drift_over_loss": 0.20147513064517283,
+      "energy_one_ulp_bound_J_m": 4.681294731002792e-10,
+      "dissipation_W_m": 0.0001670427252530261,
+      "stress_power_rel_error": -0.00032531760657228403,
+      "loss_rate_rel_error": 0.01260924259835905,
+      "gamma_square_m2_s": 0.0069115710100241335,
+      "gamma_change_m2_s": -8.508506743428791e-13,
+      "gamma_loop_change_m2_s": -8.508506743428791e-13,
+      "gamma_diffusion_change_m2_s": -8.489060072020485e-13,
+      "gamma_decay_rel_error": 0.002290792059818303,
+      "strong_cells": 3560,
+      "max_strong_fractional_rate_error_s": 0.1328664384601369
+    },
+    "reference_12ns": {
+      "liquid_nodes": 165313,
+      "p_min_Pa": 101308.2241212018,
+      "T_range_K": [
+        293.14999999885987,
+        293.1500000011392
+      ],
+      "inner_pressure_rise_Pa": 15.905472582555376,
+      "core_dp_peak_Pa": 0.04456494875194039,
+      "core_dp_rms_Pa": 0.019552147954497636,
+      "radial_acc_rms_m_s2": 0.0010747311847706996,
+      "core_density_rate_rms": 0.7415053219249205,
+      "conserved_change_per_m": [
+        5.964545262413335e-18,
+        -2.7199024901432153e-20,
+        -1.1330087524346118e-20,
+        1.0912929071050612e-12
+      ],
+      "wall_force_N_m": [
+        -6.213213714495979e-21,
+        -1.6680300778128666e-21
+      ],
+      "integrated_wall_impulse_per_m": [
+        -3.7279282286975877e-29,
+        -1.0008180466877201e-29
+      ],
+      "momentum_defect_per_m": [
+        -2.719902486415287e-20,
+        -1.1330087514337938e-20
+      ],
+      "internal_change_J_m": 3.122125304502422e-12,
+      "mass_drift_fraction": 1.902001215019135e-19,
+      "kinetic_loss_J_m": 2.030832397397361e-12,
+      "initial_kinetic_J_m": 0.01207102400170809,
+      "energy_drift_over_loss": 0.5373623685064417,
+      "energy_one_ulp_bound_J_m": 4.681294731002792e-10,
+      "dissipation_W_m": 0.00016704272520076994,
+      "stress_power_rel_error": -0.00032531791930168197,
+      "loss_rate_rel_error": 0.012800631688344888,
+      "gamma_square_m2_s": 0.006911571009174064,
+      "gamma_change_m2_s": -1.7009200952171499e-12,
+      "gamma_loop_change_m2_s": -1.7009200952171499e-12,
+      "gamma_diffusion_change_m2_s": -1.697812014404097e-12,
+      "gamma_decay_rel_error": 0.0018306389557172231,
+      "strong_cells": 3560,
+      "max_strong_fractional_rate_error_s": 0.12176473788301413
+    },
+    "full_12ns": {
+      "liquid_nodes": 165313,
+      "p_min_Pa": 101308.22420674519,
+      "T_range_K": [
+        293.1499999988633,
+        293.1500000011383
+      ],
+      "inner_pressure_rise_Pa": 15.905387039165362,
+      "core_dp_peak_Pa": 0.044539097463712096,
+      "core_dp_rms_Pa": 0.019552464060531235,
+      "radial_acc_rms_m_s2": 0.002108220113976114,
+      "core_density_rate_rms": 0.7414818959525541,
+      "conserved_change_per_m": [
+        -5.335402169120903e-18,
+        -5.4247333862506e-20,
+        -3.4028853216163095e-21,
+        -2.661992305840242e-13
+      ],
+      "wall_force_N_m": [
+        -6.210588636274891e-21,
+        -1.6674181569355072e-21
+      ],
+      "integrated_wall_impulse_per_m": [
+        -7.45270636352987e-29,
+        -2.0009017883226088e-29
+      ],
+      "momentum_defect_per_m": [
+        -5.424733378797894e-20,
+        -3.4028853016072915e-21
+      ],
+      "internal_change_J_m": 1.765365809250764e-12,
+      "mass_drift_fraction": -1.7013772151638754e-19,
+      "kinetic_loss_J_m": 2.0315650398347883e-12,
+      "initial_kinetic_J_m": 0.01207102400170809,
+      "energy_drift_over_loss": 0.13103160635490763,
+      "energy_one_ulp_bound_J_m": 4.681294731002792e-10,
+      "dissipation_W_m": 0.00016704272520072183,
+      "stress_power_rel_error": -0.0003253179195895628,
+      "loss_rate_rel_error": 0.013166009315951799,
+      "gamma_square_m2_s": 0.006911571009173885,
+      "gamma_change_m2_s": -1.701099585449343e-12,
+      "gamma_loop_change_m2_s": -1.7010995854493436e-12,
+      "gamma_diffusion_change_m2_s": -1.697812014404097e-12,
+      "gamma_decay_rel_error": 0.0019363575103452657,
+      "strong_cells": 3560,
+      "max_strong_fractional_rate_error_s": 0.16160317988822565
+    },
+    "half_6ns": {
+      "liquid_nodes": 165313,
+      "p_min_Pa": 101308.2241212018,
+      "T_range_K": [
+        293.1499999994296,
+        293.1500000005685
+      ],
+      "inner_pressure_rise_Pa": 15.905472582555376,
+      "core_dp_peak_Pa": 0.022380835813237354,
+      "core_dp_rms_Pa": 0.009775821274498782,
+      "radial_acc_rms_m_s2": 0.001077928914955592,
+      "core_density_rate_rms": 0.741502715274696,
+      "conserved_change_per_m": [
+        -3.1835532010369184e-18,
+        1.011013160370471e-20,
+        4.5361233630151965e-21,
+        -5.849213684154093e-13
+      ],
+      "wall_force_N_m": [
+        -3.1062741390709204e-21,
+        -8.339380148046082e-22
+      ],
+      "integrated_wall_impulse_per_m": [
+        -1.8637644834425523e-29,
+        -5.00362808882765e-30
+      ],
+      "momentum_defect_per_m": [
+        1.0110131622342356e-20,
+        4.536123368018825e-21
+      ],
+      "internal_change_J_m": 4.3049298511900556e-13,
+      "mass_drift_fraction": -1.0151858674973475e-19,
+      "kinetic_loss_J_m": 1.0154143535344148e-12,
+      "initial_kinetic_J_m": 0.01207102400170809,
+      "energy_drift_over_loss": 0.5760420525664599,
+      "energy_one_ulp_bound_J_m": 4.681294731002792e-10,
+      "dissipation_W_m": 0.00016704272525301325,
+      "stress_power_rel_error": -0.0003253176066492225,
+      "loss_rate_rel_error": 0.01279879127695871,
+      "gamma_square_m2_s": 0.006911571010024047,
+      "gamma_change_m2_s": -8.509377963183836e-13,
+      "gamma_loop_change_m2_s": -8.509377963183838e-13,
+      "gamma_diffusion_change_m2_s": -8.489060072020485e-13,
+      "gamma_decay_rel_error": 0.0023934205896738447,
+      "strong_cells": 3560,
+      "max_strong_fractional_rate_error_s": 0.14742602973080599
+    },
+    "half_12ns": {
+      "liquid_nodes": 165313,
+      "p_min_Pa": 101308.2241212018,
+      "T_range_K": [
+        293.1499999988703,
+        293.15000000114065
+      ],
+      "inner_pressure_rise_Pa": 15.905472582555376,
+      "core_dp_peak_Pa": 0.044641643748036586,
+      "core_dp_rms_Pa": 0.019552398000978896,
+      "radial_acc_rms_m_s2": 0.0015894580787530902,
+      "core_density_rate_rms": 0.7414980958998743,
+      "conserved_change_per_m": [
+        -5.055751180907916e-18,
+        1.1757858539171777e-20,
+        1.7724309877170244e-20,
+        -1.6448511381374677e-12
+      ],
+      "wall_force_N_m": [
+        -6.212221568398203e-21,
+        -1.66779965700987e-21
+      ],
+      "integrated_wall_impulse_per_m": [
+        -5.591097424481474e-29,
+        -1.501042603088687e-29
+      ],
+      "momentum_defect_per_m": [
+        1.1757858595082751e-20,
+        1.772430989218067e-20
+      ],
+      "internal_change_J_m": 3.8636135097702486e-13,
+      "mass_drift_fraction": -1.6122008411133261e-19,
+      "kinetic_loss_J_m": 2.0312124891144926e-12,
+      "initial_kinetic_J_m": 0.01207102400170809,
+      "energy_drift_over_loss": 0.8097878222748329,
+      "energy_one_ulp_bound_J_m": 4.681294731002792e-10,
+      "dissipation_W_m": 0.00016704272520074508,
+      "stress_power_rel_error": -0.00032531791945045185,
+      "loss_rate_rel_error": 0.012990188015939319,
+      "gamma_square_m2_s": 0.0069115710091742465,
+      "gamma_change_m2_s": -1.7007373650143528e-12,
+      "gamma_loop_change_m2_s": -1.7007373650143528e-12,
+      "gamma_diffusion_change_m2_s": -1.697812014404097e-12,
+      "gamma_decay_rel_error": 0.0017230120799225368,
+      "strong_cells": 3560,
+      "max_strong_fractional_rate_error_s": 0.13660468803101025
+    },
+    "tight_12ns": {
+      "liquid_nodes": 165313,
+      "p_min_Pa": 101308.22419548316,
+      "T_range_K": [
+        293.1499999988657,
+        293.15000000113685
+      ],
+      "inner_pressure_rise_Pa": 15.905398301198147,
+      "core_dp_peak_Pa": 0.0445564466790529,
+      "core_dp_rms_Pa": 0.019553367634916524,
+      "radial_acc_rms_m_s2": 0.0021080953124492747,
+      "core_density_rate_rms": 0.7414898286361963,
+      "conserved_change_per_m": [
+        -9.554649797729824e-18,
+        -2.4763358530142988e-20,
+        -2.035232465385171e-20,
+        -2.1296924339533717e-13
+      ],
+      "wall_force_N_m": [
+        -6.210598850342258e-21,
+        -1.6674221900194476e-21
+      ],
+      "integrated_wall_impulse_per_m": [
+        -7.452718620410711e-29,
+        -2.0009066280233375e-29
+      ],
+      "momentum_defect_per_m": [
+        -2.47633584556158e-20,
+        -2.0352324633842643e-20
+      ],
+      "internal_change_J_m": 1.818626708650158e-12,
+      "mass_drift_fraction": -3.0468300138293256e-19,
+      "kinetic_loss_J_m": 2.0315959520454953e-12,
+      "initial_kinetic_J_m": 0.01207102400170809,
+      "energy_drift_over_loss": 0.10482854289058358,
+      "energy_one_ulp_bound_J_m": 4.681294731002792e-10,
+      "dissipation_W_m": 0.0001670427252007208,
+      "stress_power_rel_error": -0.00032531791959578005,
+      "loss_rate_rel_error": 0.013181425608586705,
+      "gamma_square_m2_s": 0.006911571009176202,
+      "gamma_change_m2_s": -1.698781528726881e-12,
+      "gamma_loop_change_m2_s": -1.6987815287268809e-12,
+      "gamma_diffusion_change_m2_s": -1.697812014404097e-12,
+      "gamma_decay_rel_error": 0.0005710374968246335,
+      "strong_cells": 3560,
+      "max_strong_fractional_rate_error_s": 0.15501766527568345
+    }
+  },
+  "comparisons": {
+    "full-reference_12ns": {
+      "core_pressure_max_Pa": 0.0002492533822078258,
+      "radial_acc_diff_rms_m_s2": 0.0010509498148425444,
+      "max_strong_rate_diff_s": 0.11017220850621648
+    },
+    "half-reference_6ns": {
+      "core_pressure_max_Pa": 0.0002637883007992059,
+      "radial_acc_diff_rms_m_s2": 0.0005351923382192355,
+      "max_strong_rate_diff_s": 0.0939951648478461
+    },
+    "half-reference_12ns": {
+      "core_pressure_max_Pa": 0.0002542750007705763,
+      "radial_acc_diff_rms_m_s2": 0.0005292063306896878,
+      "max_strong_rate_diff_s": 0.07767635503264686
+    },
+    "tight-reference_12ns": {
+      "core_pressure_max_Pa": 0.0002504459989722818,
+      "radial_acc_diff_rms_m_s2": 0.0010508746931216938,
+      "max_strong_rate_diff_s": 0.1092529815486555
+    },
+    "full-half_12ns": {
+      "core_pressure_max_Pa": 0.0002517600223654881,
+      "radial_acc_diff_rms_m_s2": 0.0005340473023395571,
+      "max_strong_rate_diff_s": 0.1255388242279032
+    },
+    "full-tight_12ns": {
+      "core_pressure_max_Pa": 0.0002517600223654881,
+      "radial_acc_diff_rms_m_s2": 0.00012214144215195942,
+      "max_strong_rate_diff_s": 0.10740358947361162
+    }
+  },
+  "gates": {
+    "reference_6ns": {
+      "inner_pressure": true,
+      "radial_acceleration": true,
+      "mass": true,
+      "energy_inventory": true,
+      "energy_loss_scale_raw": false,
+      "kinetic_rate": true,
+      "stress_power": true,
+      "square_circulation_rate": true
+    },
+    "reference_12ns": {
+      "inner_pressure": true,
+      "radial_acceleration": false,
+      "mass": true,
+      "energy_inventory": true,
+      "energy_loss_scale_raw": false,
+      "kinetic_rate": true,
+      "stress_power": true,
+      "square_circulation_rate": true
+    },
+    "full_12ns": {
+      "inner_pressure": true,
+      "radial_acceleration": false,
+      "mass": true,
+      "energy_inventory": true,
+      "energy_loss_scale_raw": false,
+      "kinetic_rate": true,
+      "stress_power": true,
+      "square_circulation_rate": true
+    },
+    "half_6ns": {
+      "inner_pressure": true,
+      "radial_acceleration": false,
+      "mass": true,
+      "energy_inventory": true,
+      "energy_loss_scale_raw": false,
+      "kinetic_rate": true,
+      "stress_power": true,
+      "square_circulation_rate": true
+    },
+    "half_12ns": {
+      "inner_pressure": true,
+      "radial_acceleration": false,
+      "mass": true,
+      "energy_inventory": true,
+      "energy_loss_scale_raw": false,
+      "kinetic_rate": true,
+      "stress_power": true,
+      "square_circulation_rate": true
+    },
+    "tight_12ns": {
+      "inner_pressure": true,
+      "radial_acceleration": false,
+      "mass": true,
+      "energy_inventory": true,
+      "energy_loss_scale_raw": false,
+      "kinetic_rate": true,
+      "stress_power": true,
+      "square_circulation_rate": true
+    }
+  },
+  "strong_rate_agreement": {
+    "full-reference_12ns": false,
+    "half-reference_6ns": false,
+    "half-reference_12ns": false,
+    "tight-reference_12ns": false,
+    "full-half_12ns": false,
+    "full-tight_12ns": false
+  },
+  "physical_window_passed": false
+}
