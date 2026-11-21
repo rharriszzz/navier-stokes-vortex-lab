@@ -1,11 +1,12 @@
 # Isolated nonlinear port verification source — R195/R196/R222/R225/R226
 
+R275 selected the water investigation. This page documents the earlier track. [Physics-first plan](../../docs/physics-first/README.md) · [Current handoff](../../SESSION_HANDOFF.md#next-task)
+
 [R272 spatial comparison design](../../docs/realizability/MANUFACTURED_SPATIAL_DESIGN_R272.md) fixes a separate n=4 source
 contract with full sparse and both-degree angular evidence. The prospective
 16-MiB/1-MiB evidence caps leave physical and whole-task resource gates unchanged;
 actual n=4 resource fit remains unknown. R270 stays INCOMPLETE; all ten allocations
-remain spent. Follow the [single current task](../../SESSION_HANDOFF.md#next-task)
-for source/fake-test implementation, stopping before admission or launch.
+remain spent. The proposed source/fake-test implementation is historical.
 
 **Source and algebra evidence, not a validated FEM solver.** The
 [R195 fixture review](../../docs/realizability/NONLINEAR_VERIFICATION_R195.md)

@@ -1,5 +1,11 @@
 # Current session handoff
 
+**R275 · 2026-11-21 · Owner review.** PC/WSL2 `daisy` owns the water investigation on `research/water-vortex-limits`. The Mac remains released. The round-one plan, estimates and code assessment are complete. The proposed next experiment is a finite-cylinder viscous spreading reference. Use `/new` after review because the predictions, checks and stop condition are saved on this branch. [Plan](docs/physics-first/README.md) · [Next task](#next-task)
+
+Changed the research plan/model/assessment, scalar calculator and tests, direction/status/navigation pages, request and session logs, and this handoff. Python 3.12.14 ran the scales calculation, four new checks and eight existing B0 checks. No CFD, FEM fixture, package installation, rendering or physical experiment ran. R270 remains INCOMPLETE and all ten historical allocations are spent. Finite-wall effects, low-Mach solver accuracy, attainable strain and the first physical limitation remain open.
+
+## Historical handoff through R274
+
 **Direction clarification (2026-11-01):** See
 [PROJECT_DIRECTION.md](PROJECT_DIRECTION.md). Physics/engineering is a
 stated preference, not an automatic override of the mathematical/numerical
@@ -1684,6 +1690,16 @@ and physical-work limits remain unchanged.
 
 ## Owner and checkout
 
+| Field | R275 value |
+|---|---|
+| Owner | PC/WSL2 `daisy`, user `rharris`. Mac released per the published handoff. |
+| Checkout | `/home/rharris/git/navier-stokes-vortex-lab`, sole local worktree, empty stashes at start. |
+| Branch and publication target | `research/water-vortex-limits` → `origin/research/water-vortex-limits`, based on fetched `origin/main` at `f348cf6`. Delivery commit is in Git history. |
+| Runtime | Project `.venv/bin/python`, 3.12.14. Only lightweight arithmetic and tests ran. |
+| Next decision | Owner review before the finite-cylinder spreading benchmark. |
+
+### Historical R272 checkout
+
 | Field | Current value |
 |---|---|
 | Owner | PC/WSL `daisy`; Mac `fire.lan` released after published R161 handoff and R162 receipt. |
@@ -1697,6 +1713,10 @@ and physical-work limits remain unchanged.
 | Delivery state | R271 delivery 83fb7c9 verified by clean pull; R272 STARTED 2e18140 published. Design completion prepared for publication; delivery in Git/final response. PC retains ownership. |
 
 ## Current result and limits
+
+R275 supplies the [water estimates and decision gates](docs/physics-first/README.md). A compressible water solution and a measured physical limit remain outstanding.
+
+### Earlier numerical result
 
 R272 resolves the source/evidence design blocker for a separate n=4 comparison.
 The [fixed contract](docs/realizability/MANUFACTURED_SPATIAL_DESIGN_R272.md)
@@ -1847,6 +1867,14 @@ write access. The tool sandbox denies `.git` writes, `ps`, unrestricted
 agent-side POV-Ray backtraces are unavailable.
 
 ## Next task
+
+**Await owner review.** Suggested prompt for the next round on this research branch:
+
+> Evaluate only the finite-cylinder incompressible spreading reference for the 10 mm water vortex through 5 s. Report core radius, swirl, vorticity, inner pressure difference, angular momentum and dissipated energy with separate mode, radial and time-quadrature refinements. Compare with Lamb–Oseen and stop at the decision gate.
+
+Use the [initial/boundary conditions and quantitative checks](docs/physics-first/README.md#round-two-test). Use `/new` after review for this saved phase boundary. R272 has no active execution authority.
+
+### Historical R272 implementation task
 
 **Conditional task.** The R272 proposal below is preserved and may be
 resumed if the owner selects it. The physics/engineering preference is

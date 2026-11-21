@@ -1,10 +1,8 @@
 # navier-stokes-vortex-lab
 
-**Research preference (2026-11-01):** The owner is interested in
-understandable physical and engineering questions, but has not automatically
-superseded the earlier numerical plan. When a `Continue` request is ambiguous,
-ask which direction to take and wait for the answer.
-See [PROJECT_DIRECTION.md](PROJECT_DIRECTION.md).
+**Active research, November 2026.** How tightly can ordinary water concentrate a vortex before viscosity, loss of coherence or a change in material behaviour takes over? The first benchmark is a 10 mm vortex left to spread for five seconds. The plan gives quantitative predictions, the water equations, and a way to check the calculation before attempting to stretch the core. [Physics-first plan](docs/physics-first/README.md) · [Project direction](PROJECT_DIRECTION.md) · [Review and next task](SESSION_HANDOFF.md#next-task)
+
+## Earlier visualization and boundary-control work
 
 A reproducible POV-Ray + Python visualization project for a **finite-scale laboratory analogue** of a contracting, stretching, swirling Navier–Stokes flow with localized oscillatory perturbations.
 
@@ -16,9 +14,9 @@ This repository is intended to separate:
 
 It is deliberately **not** a claim to numerically solve, reproduce, or physically realize a mathematical Navier–Stokes singularity. The initial model is a controlled, finite-scale, kinematic analogue designed for visualization and later experimental design work.
 
-## Two parallel project tracks
+### Two original project tracks
 
-This repository now has two related but distinct tracks:
+The earlier project developed two tracks:
 
 1. **Visualization** — the existing Python/POV-Ray/ffmpeg pipeline for making the
    proposed flow and apparatus understandable in three dimensions.
@@ -47,12 +45,7 @@ The tests are planned, not yet run. For the M4 Mac's remaining software
 installation and movie-readiness checks, use
 [the Mac setup and benchmark guide](docs/realizability/MAC_INSTALL_AND_BENCHMARK_PLAN.md).
 
-The previous Codex **Continue** task in [SESSION_HANDOFF.md](SESSION_HANDOFF.md)
-remains a candidate, but is not automatically selected when a request leaves
-the choice of direction unclear. Ask whether the owner wants that numerical
-task, a physics/engineering direction, or neither; **wait for an answer**.
-A specific user request determines its own scope. See
-[PROJECT_DIRECTION.md](PROJECT_DIRECTION.md). Earlier requests and evidence
+Earlier requests and evidence
 remain in [REQUEST_LOG.md](REQUEST_LOG.md), [AGENTS.md](AGENTS.md), and
 [BOUNDARY_CONTROL_HANDOFF.md](BOUNDARY_CONTROL_HANDOFF.md).
 

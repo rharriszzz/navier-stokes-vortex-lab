@@ -1,6 +1,8 @@
 # Repository agent instructions
 
-**Direction check (2026-11-01):** Read
+**R275 direction decision (2026-11-21).** The owner selected the water investigation and requested review before round two. Follow the [current handoff](SESSION_HANDOFF.md#next-task). The earlier ambiguity rule still applies to an unspecified request.
+
+**Earlier direction check (2026-11-01):** Read
 [PROJECT_DIRECTION.md](PROJECT_DIRECTION.md) before choosing research work.
 The owner's physics/engineering preference does **not** automatically
 supersede the R272 mathematical/numerical handoff. If a request is ambiguous
@@ -29,7 +31,7 @@ specific instruction within its authorized scope.
 
 ## Current task
 
-The former [handoff task](SESSION_HANDOFF.md#next-task) is retained as
+The former [R272 task](SESSION_HANDOFF.md#historical-r272-implementation-task) is retained as
 a possible next task, but it is **not selected by default** when `Continue`
 is ambiguous. Ask which direction to follow and wait for an answer,
 as explained in [PROJECT_DIRECTION.md](PROJECT_DIRECTION.md). Historical full instructions and handoff are preserved byte-for-byte in [`docs/history/AGENTS_BEFORE_R092_IMPLEMENTATION.md`](docs/history/AGENTS_BEFORE_R092_IMPLEMENTATION.md) and [`docs/history/SESSION_HANDOFF_BEFORE_R092_IMPLEMENTATION.md`](docs/history/SESSION_HANDOFF_BEFORE_R092_IMPLEMENTATION.md). See [the archive index](docs/history/R092_ARCHIVE_INDEX.md) for original link context and heading locations.

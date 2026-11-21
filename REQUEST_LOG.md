@@ -10302,3 +10302,197 @@ are preserved.
 **Checks and boundaries:** Documentation only. No numerical workers,
 CFD, render, experiment, hardware task, or tests were run. The earlier
 handoff remains conditional, not erased. No other repository changed.
+
+## R275 — 2026-11-21 — Physical limits of vortex concentration in water
+
+**User request (verbatim)**
+
+````text
+# New Research Direction — Physical Limits of Vortex Concentration in Water
+
+We are starting a new, explicitly authorized physics-first investigation in `rharriszzz/navier-stokes-vortex-lab`.
+
+**This instruction supersedes the old R272 continuation as the active research direction.** Preserve the old work, numerical results, negative findings, resource restrictions and historical handoffs. Do not automatically continue the previous FEM or manufactured-solution task sequence.
+
+## 1. Scientific objective
+
+Investigate whether ordinary, viscous, compressible fluids can develop extremely concentrated vortices through their own nonlinear dynamics or physically realizable boundary motion.
+
+Our first fluid is liquid water, initially near 20°C and atmospheric pressure.
+
+We ultimately want to determine which physical mechanism limits further vortex concentration, and at what quantitative scales.
+
+Candidate limitations include:
+
+- Inability of the dynamics to sustain stretching against viscous diffusion.
+- Hydrodynamic instabilities or loss of coherent vortex structure.
+- Cavitation as absolute pressure approaches vapor pressure.
+- Significant compressibility and acoustic effects.
+- Viscous heating and changes in material properties.
+- Eventually, breakdown of the continuum-fluid approximation.
+
+Do not assume in advance which limitation dominates.
+
+## 2. Essential physical restrictions
+
+Use the ordinary compressible, viscous Navier–Stokes equations, including mass, momentum and total-energy conservation, an equation of state, viscous stress and heat conduction.
+
+Do not impose incompressibility, although incompressible and low-Mach solutions are useful validation references.
+
+The physical models must have no artificially prescribed volumetric forcing.
+
+Investigate two principal cases:
+
+**A. Unforced evolution:** Smooth initial conditions evolve with no continuing external energy or momentum input.
+
+**B. Boundary-driven evolution:** Energy and momentum enter through physically plausible boundaries—moving or rotating walls, ports, pumps, etc.
+
+Exclude MHD, electromagnetic body forcing, synthetic volumetric forces and externally maintained singularity profiles from the physical models.
+
+Distinguish carefully between physical solutions, manufactured solutions used only for code verification, analytical benchmarks and prescribed kinematic illustrations.
+
+Do not claim that any of these demonstrates a singularity.
+
+Superfluid helium is an interesting future subject, but it is outside this first investigation.
+
+## 3. Read and assess the existing project
+
+Before changes, follow `AGENTS.md` and inspect:
+
+- `PROJECT_DIRECTION.md`
+- `README.md`
+- `STATUS.md`
+- `SESSION_HANDOFF.md` (current relevant sections)
+- `PHYSICAL_REALIZABILITY_PLAN.md`
+- `docs/realizability/WATER_EXPERIMENT_FEASIBILITY_AND_COST.md`
+- Relevant solver code, validation reports and test infrastructure.
+
+Consult `rharriszzz/navier-stokes-physical-approximation` as a read-only historical reference where useful.
+
+Produce a concise technical assessment of what the current code can actually calculate. In particular:
+
+1. Which solvers are incompressible versus compressible?
+2. Which calculate an actual Navier–Stokes solution versus prescribed trajectories?
+3. Which existing validations remain useful?
+4. Can any current solver correctly conserve mass, momentum and energy for a compressible viscous liquid?
+5. Should we adapt a solver or choose a different established numerical package?
+
+Do not invest effort in repairing old solvers unless clearly justified by the new objective.
+
+## 4. Establish the first two reference problems
+
+**Reference A — Viscous spreading**
+
+Study a smooth, initially swirling vortex in water, evolving without further forcing.
+
+Use the Lamb–Oseen vortex as an analytical *incompressible* reference, not as an exact solution of compressible liquid-water equations.
+
+For a finite-domain or compressible test, specify a compatible initial pressure, density and temperature field and appropriate boundaries. Distinguish its predictions from the infinite-domain analytical reference.
+
+We want to understand and measure viscous spreading, pressure distribution, energy dissipation and the low-Mach limit.
+
+**Reference B — Concentration through stretching**
+
+Use the Burgers vortex to illustrate the competition between vortex stretching and viscous diffusion.
+
+However, its prescribed background strain must not be mistaken for a freely evolving finite laboratory vortex.
+
+Explain the required strain rate, the source of that strain, the momentum and energy budgets, and how an initial-condition-only or boundary-driven flow might reproduce some of the behavior.
+
+Ultimately, three-dimensional vortex stretching is essential. A purely two-dimensional unforced vortex is a validation problem, not a singularity candidate.
+
+## 5. First quantitative example
+
+Begin with illustrative water parameters:
+
+- Temperature: 20°C.
+- Initial absolute pressure: approximately 101325 Pa.
+- Initial characteristic vortex-core radius: 10 mm.
+- Initial characteristic swirl speed: 0.1 m/s.
+- Density: approximately 998 kg/m³.
+- Kinematic viscosity: approximately 1.0e-6 m²/s.
+- Sound speed: approximately 1480 m/s.
+
+Compute Reynolds number, Mach number, viscous timescale, characteristic pressure and strain scales, with explicitly stated conventions.
+
+Use authoritative water-property references, preferably IAPWS, and explain the selection of an equation of state appropriate for numerical work. Do not implement the full IAPWS-95 formulation unnecessarily.
+
+Explore conditional contraction toward 3 mm and 1 mm. Explicitly distinguish an imposed scaling estimate from a dynamically realized trajectory.
+
+Identify the quantities that must be measured to determine whether concentration is occurring.
+
+Explain what cavitation, thermal change and compressibility would look like in the output, and when a single-phase model would become invalid.
+
+## 6. Methodology
+
+Start with physical reasoning and independently checkable estimates.
+
+Then design a sequence of increasingly demanding numerical experiments, with clear stop/go criteria.
+
+Every numerical experiment must have:
+
+- Explicit initial and boundary conditions.
+- Correct physical units and material properties.
+- Mass, momentum and energy accounting.
+- Diagnostics for velocity, vorticity, core radius, pressure, density and temperature.
+- Grid and time-step convergence appropriate to the problem.
+- A distinction between imposed quantities and calculated outcomes.
+- An explanation of what a negative result would mean.
+
+In particular, choose a numerical approach that can handle the very-low-Mach liquid-water regime without confusing numerical acoustic errors with genuine vortex physics.
+
+Avoid premature 3D DNS, complex actuator optimization, extensive benchmarking, rendering, or long-running FEM work.
+
+## 7. Concrete first-round deliverables
+
+Create a small, readable physics-first research plan, under `docs/physics-first/` or another suitable location.
+
+Include:
+
+1. **Physical model:** Governing equations, constitutive laws, thermodynamics, assumptions and applicability limits.
+2. **Baseline experiments:** Two reference problems, quantitative estimates, observables, numerical validation requirements and decision gates.
+3. **Existing-code assessment:** What can be reused, what should be left alone, and the recommended solver strategy.
+4. **Next experimental step:** One specific, small numerical test that can establish a trustworthy baseline.
+
+If it is straightforward, implement a small independently testable Python calculation of the initial dimensional scales and physical estimates. This is not permission to build a new CFD solver.
+
+Keep the new documentation accessible from the repository README. Update `PROJECT_DIRECTION.md`, `STATUS.md`, the request log and current handoff sufficiently to make the new direction clear, without deleting or rewriting historical evidence.
+
+## 8. Execution limits and Git workflow
+
+Work on the Windows/WSL2 machine. First verify Git status, branch, repository ownership and existing work, following repository instructions.
+
+Create a new descriptive research branch if the checkout is safe to modify. You are authorized to commit and push completed changes to that new branch, but **do not merge into main**.
+
+Do not consume the old FEM task allocations or launch expensive numerical workloads. Do not install major solver packages without a documented justification.
+
+Run applicable lightweight tests. Record exactly which tests ran and which were skipped.
+
+## 9. Final report
+
+At completion, provide:
+
+- An accessible explanation of the physics.
+- The current capabilities and shortcomings of the existing repository.
+- The recommended numerical approach.
+- The files created or modified.
+- Test results and Git branch/commit information.
+- The biggest remaining scientific uncertainties.
+- One specific prompt-sized recommendation for the second round.
+
+**Most importantly, tell me whether the first new experiment is scientifically worthwhile and why.**
+
+I would rather understand one simple vortex correctly than produce thousands of lines of sophisticated calculations that I cannot interpret.
+
+Complete this bounded first round and stop for my review before beginning the next major stage.
+````
+
+**Scope/status.** Started the bounded model, reference-problem design, code assessment and independent scales check. Owner review precedes round two. New research branch only. Verified rharris on WSL2 daisy, repository ownership and clean main at e3bde05, one worktree and empty stashes. Fetched origin and branched from its fast-forward descendant f348cf6 with R273/R274 included. PC retains ownership and the Mac is released per the published handoff.
+
+**Outcome · 2026-11-21.** Completed the bounded research plan and dimensional calculation on PC/WSL2 daisy. At 10 mm peak radius and 0.1 m/s the example gives Re = 1000, Ma = 6.76×10⁻⁵, R²/ν = 100 s and a 16.99 Pa infinite-profile centre deficit. At 3 and 1 mm the conditional constant-circulation deficits are 188.7 and 1699 Pa and the steady axial holding rates are 0.558 and 5.03 s⁻¹. These are imposed profile comparisons. The 11.19 mm peak after 5 s is an unbounded analytical spreading prediction. No contraction or physical water run was observed.
+
+**Deliverables.** Created `docs/physics-first/{README,PHYSICAL_MODEL,EXISTING_CODE}.md`, `physics_first/water_scales.py` and `tests/test_water_scales.py`. Updated README, PROJECT_DIRECTION, STATUS, SESSION_HANDOFF, AGENTS, REQUEST_LOG and WORK_SESSIONS. Marked old execution pointers in PROJECT_TRACKS, EXPERIMENT, PHYSICAL_REALIZABILITY_PLAN, CONTROL_RESEARCH_ROADMAP, docs/realizability/B1_SETUP and verification/nonlinear_port/README as historical. No legacy solver, validator, evidence file or allocation changed. Historical sibling README at 1e47257 consulted read-only.
+
+**Evidence and checks.** Project interpreter `.venv/bin/python` 3.12.14. Ran `-m physics_first.water_scales` for all three rows, `-m unittest discover -v -s tests -p test_water_scales.py` (4 passed, including direct radial pressure quadrature), and `-m unittest discover -v -s tests/realizability -p test_b0.py` (8 passed). No skipped cases within those two selections. Publication checks cover the rounded table and 5 s prediction, links in new prose, log preservation, staged scope, untouched evidence and whitespace. Skipped all other test suites including B1/B2, nonlinear/fake-worker, optional SciPy swirl and trajectory/render tests. No package install, numerical PDE solve, reference-series run, physical experiment or FEM allocation use. No new chat/status excerpts supplied.
+
+**Decision and next task.** Recommend an established conservative all-speed solver with an energy-consistent water EOS for a later physical test. Package access, low-Mach accuracy, sustainable interior strain, stability, and the first material limitation remain open. Await owner review. Use `/new` at this saved boundary for just the finite-cylinder incompressible spreading reference through 5 s, with convergence and pressure, angular-momentum and energy checks. The [plan](docs/physics-first/README.md#round-two-test) specifies the pass criteria. Branch-only delivery commit and push reported in Git and the final response.

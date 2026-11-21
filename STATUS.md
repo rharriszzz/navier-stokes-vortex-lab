@@ -1,19 +1,14 @@
-# Project status: a boundary-controlled engineering approximation
+# Project status
 
-**Direction clarification (2026-11-01):** See
-[PROJECT_DIRECTION.md](PROJECT_DIRECTION.md). Physics/engineering is a
-stated preference, not an automatic override of the mathematical/numerical
-plan below. If the user requests `Continue` or otherwise leaves the
-direction unclear, ask whether to follow the older R272 task, choose a
-physics/engineering objective, or do neither. **Wait for the answer**
-before starting technical work. Specific new instructions govern their scope.
+**R275 · 2026-11-21.** Round one of the water investigation is ready for owner review. The initial peak-radius Reynolds number is 1000 and Mach number is 0.0000676. The infinite-plane viscous reference predicts 10.00 → 11.19 mm in 5 s. The finite-cylinder comparison and a compressible water run remain unexecuted. [Physics-first plan](docs/physics-first/README.md) · [Next task](SESSION_HANDOFF.md#next-task)
+
+## Historical status through R272
 
 [R272 spatial comparison design](docs/realizability/MANUFACTURED_SPATIAL_DESIGN_R272.md) fixes a separate n=4 source
 contract with full sparse and both-degree angular evidence. The prospective
 16-MiB/1-MiB evidence caps leave physical and whole-task resource gates unchanged;
 actual n=4 resource fit remains unknown. R270 stays INCOMPLETE; all ten allocations
-remain spent. Follow the [single current task](SESSION_HANDOFF.md#next-task)
-for source/fake-test implementation, stopping before admission or launch.
+remain spent. The proposed source/fake-test implementation is historical.
 
 Updated 2026-09-27 (America/New_York), through R272. PC/WSL daisy owns the
 repository. **R232 corrects the recoverable R231 caller failure and resumes the
@@ -479,6 +474,8 @@ example of numerical uncertainty. Neither currently establishes that the
 user's finite-range boundary-only engineering approximation is impossible.
 
 ## Next task and execution status
+
+For R275 see the [review boundary and next task](SESSION_HANDOFF.md#next-task). The chronology below records earlier proposals and results.
 
 R177 completed the [benchmark revision](BOUNDARY_CONTROL_HANDOFF.md). It proposes
 300 s preparation from rest and 100 s tracking of the existing 10 mm → 3 mm
