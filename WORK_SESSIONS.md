@@ -2069,3 +2069,7 @@ PC/WSL2 daisy, research/water-vortex-limits. The seven-setting radial reference 
 ## R279 STARTED · 2026-11-21T05:59:19+00:00
 
 PC/WSL2 daisy, rharris, Linux x86_64, /home/rharris/git/navier-stokes-vortex-lab. Clean research/water-vortex-limits tracking origin/research/water-vortex-limits at 11e6a24. Single local worktree, empty stashes, Mac released. Run the bounded 10 Pa acoustic qualification or record a specific access/capability gap. Released: no.
+
+## R279 COMPLETED with R280 installation authorization · 2026-11-21T06:14:52+00:00
+
+PC/WSL2 daisy retains research/water-vortex-limits. During R279 the owner authorized a durable installation in R280. Built and tested user-local SU2 8.6.0 with CoolProp 7.2.0. Added the acoustic setup, analysis, measured evidence and tests, linked them from the current status, research pages and handoff, and recorded both outcomes in the request log. All six acoustic settings finished. The finest run repeated byte-for-byte, six unit tests passed and all six records were regenerated from the raw binaries. Pressure and momentum results support further qualification. The total-energy precision is insufficient for a heating claim. Skipped unrelated full suite, FEM, vortex and rendering workloads. Historical allocations remain spent. Start commit 0eed492. Continue in this chat after review for a single 100 Pa precision control at fixed resolution. [Report](docs/physics-first/ACOUSTIC_RESULT.md) · [Next task](SESSION_HANDOFF.md#next-task). Released: no.

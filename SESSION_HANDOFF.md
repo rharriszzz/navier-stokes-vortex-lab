@@ -1,5 +1,11 @@
 # Current session handoff
 
+**R279/R280 · 2026-11-21 · 10 Pa pressure-wave qualification completed.** PC/WSL2 daisy retains the research branch. The owner authorized installation during R279. The user-local SU2 8.6.0 executable `su2-water` uses CoolProp 7.2.0. At 128 cells and 512 steps the 10 Pa wave returned 9.99980 Pa and 1481.79 m/s versus the EOS value 1482.35 m/s. Mass and momentum budgets passed. The total-energy difference is near double-precision storage resolution. [Result](docs/physics-first/ACOUSTIC_RESULT.md) · [Setup](docs/physics-first/SU2_WATER_SETUP.md) · [Next task](#next-task)
+
+Changed the acoustic initializer, SU2 case generator, analysis, tests, result/JSON/install recipe, direction/status/navigation and logs. Six periodic CFD cases ran and the finest repeated through the installed command. Final restart reproduced byte-for-byte. Two acoustic and four dimensional unit tests passed. No compressible vortex, FEM allocation, rendering or machine transfer. Precision at higher amplitude and slow vortex accuracy remain open. Continue this chat for the one-case amplitude comparison after review.
+
+### Previous R277/R278 review
+
 **R277 · 2026-11-21 · Reference passed.** PC/WSL2 `daisy` retains `research/water-vortex-limits`. Mac remains released. The peak radius reached 11.186 mm at 5 s, all six reference checks passed, and viscous dissipation accounts for 6.15% loss of initial kinetic energy. Continue in this chat for review and the bounded acoustic qualification if selected. [Result and figure](docs/physics-first/SPREADING_RESULT.md) · [Next task](#next-task)
 
 Changed the radial mode sum, plot script and three tests, result/JSON/figure, current navigation, request and lifecycle logs, and this handoff. Seven one-factor settings ran in two Python/SciPy environments. All 15 targeted unit tests passed. Project Python 3.12.14 used SciPy 1.17.1 in a temporary directory. The existing system stack reproduced the results and generated the figure. No FEM, compressible-flow run or archived allocation was used. Water EOS/solver access and very-low-Mach acoustic accuracy remain open.
@@ -1698,13 +1704,13 @@ and physical-work limits remain unchanged.
 
 ## Owner and checkout
 
-| Field | R277 value |
+| Field | R280 value |
 |---|---|
 | Owner | PC/WSL2 `daisy`, user `rharris`. Mac released per the published handoff. |
 | Checkout | `/home/rharris/git/navier-stokes-vortex-lab`, sole local worktree, empty stashes at start. |
 | Branch and publication target | `research/water-vortex-limits` → `origin/research/water-vortex-limits`, based on fetched `origin/main` at `f348cf6`. Delivery commit is in Git history. |
-| Runtime | Project `.venv/bin/python`, 3.12.14. Isolated SciPy 1.17.1 for the benchmark, system Python 3.14.4 for a second calculation. |
-| Next decision | Owner review of the reference, then the 10 Pa periodic acoustic qualification if selected. |
+| Runtime | WSL command `su2-water`, dedicated Python 3.12.14 in `~/.local/opt/water-acoustics/tools`, pinned CoolProp 7.2.0. [Rebuild](docs/physics-first/SU2_WATER_SETUP.md). |
+| Next decision | Owner review of the 10 Pa result, then one 100 Pa energy-precision control if selected. |
 
 ### Historical R272 checkout
 
@@ -1722,7 +1728,7 @@ and physical-work limits remain unchanged.
 
 ## Current result and limits
 
-R277 completes the [finite spreading reference](docs/physics-first/SPREADING_RESULT.md). R275 supplies the [water estimates and decision gates](docs/physics-first/README.md). A compressible water solution and a measured physical limit remain outstanding.
+R279/R280 completed the [liquid-water acoustic test](docs/physics-first/ACOUSTIC_RESULT.md). R277 completes the [finite spreading reference](docs/physics-first/SPREADING_RESULT.md). R275 supplies the [water estimates and decision gates](docs/physics-first/README.md). A compressible vortex calculation and a measured physical concentration limit remain outstanding.
 
 ### Earlier numerical result
 
@@ -1875,6 +1881,12 @@ write access. The tool sandbox denies `.git` writes, `ps`, unrestricted
 agent-side POV-Ray backtraces are unavailable.
 
 ## Next task
+
+**Proposed next experiment.** Repeat just the 128-cell, 512-step periodic water case at 100 Pa, scaling the pressure and velocity consistently and testing the new normalization. Hold geometry, EOS, fluxes, physical duration and time scheme fixed. Compare absolute and wave-normalized signed total-energy defects, phase, amplitude and mass/momentum with the saved 10 Pa run. Stop with the comparison before a compressible vortex run. [10 Pa baseline](docs/physics-first/ACOUSTIC_RESULT.md)
+
+Continue in this chat to keep the energy accounting in context. GPT-6.2 Astra/high is appropriate for interpreting precision and acoustic conservation. Prompt: **Continue with the 100 Pa water control.**
+
+### Prior acoustic task (completed by R280)
 
 **Proposed round three.** Evaluate the saved 0.10 m periodic, 10 Pa liquid-water acoustic test in an accessible conservative compressible solver. Confirm the water EOS and signed conservation/energy outputs, measure phase speed and amplitude on independent grid/time refinements, and stop with a qualification result or an identified access or solver-capability gap. Stop before a compressible vortex run or a major solver installation. [Acoustic specification](docs/physics-first/README.md#physical-test-after-the-reference)
 
