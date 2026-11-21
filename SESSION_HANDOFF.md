@@ -4,6 +4,8 @@
 
 Changed the radial mode sum, plot script and three tests, result/JSON/figure, current navigation, request and lifecycle logs, and this handoff. Seven one-factor settings ran in two Python/SciPy environments. All 15 targeted unit tests passed. Project Python 3.12.14 used SciPy 1.17.1 in a temporary directory. The existing system stack reproduced the results and generated the figure. No FEM, compressible-flow run or archived allocation was used. Water EOS/solver access and very-low-Mach acoustic accuracy remain open.
 
+R278 review confirmed the next test is specified. Continue in this chat once selected. External consultation is optional. Only the request log and handoff were updated locally for this review. Solver access and acoustic accuracy remain open.
+
 ### Previous R275/R276 review
 
 **R275 · 2026-11-21 · Owner review.** PC/WSL2 `daisy` owns the water investigation on `research/water-vortex-limits`. The Mac remains released. The round-one plan, estimates and code assessment are complete. The proposed next experiment is a finite-cylinder viscous spreading reference. R276 review advice: with 61% context remaining, continue in this chat using GPT-6.2 Astra at high reasoning for the bounded next test. [Plan](docs/physics-first/README.md) · [Next task](#next-task)
