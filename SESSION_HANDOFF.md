@@ -1,5 +1,11 @@
 # Current session handoff
 
+**R294 · 21 November 2026.** The staggered pressure-based water solver passed the two-phase transverse shear benchmark. At 128 cells the amplitude fell 2.114715% against 2.115135% predicted. The measured cross-strip and aligned pressure errors were zero, including at the historical failed SU2 step. Integrated stress work accounted for the resolved kinetic loss. Review the 12 ns curved-wall disk qualification next. [Report and measurements](docs/physics-first/VISCOUS_WATER_2D.md) · [Next task](#next-task)
+
+Scientific R294 is request R295. PC/WSL2 daisy retains ownership. The pilot, 17-case matrix, 6 alternating-mode histories, 19 targeted tests and reproduction checks are complete. Maximum viscosity bias across grids was 0.321%. Step halving and a genuinely tighter nonlinear solution changed viscosity by less than the 5% limit. The full matrix took 85.67 s and 122664 KiB peak RSS. Curved-wall pressure/curl and wall torque remain unqualified. The full historical suite, disk evolution, 3D and FEM were outside this round. Use `/new` after scientific review at this published task boundary. [Replay, raw evidence and checks](docs/physics-first/r294/REPLAY.md)
+
+### Previous R293 result
+
 **R293 · 21 November 2026.** The conservative pressure-based water solver passed all 36 resolved 1D acoustic cases. At 10 Pa the finest wave traveled at 1481.73 m/s and closed shifted energy to 1.57 × 10⁻²¹ J/m² per quarter period. Four steps per crossing kept the wave bounded but missed phase speed by 15.26%. Review the two-phase transverse shear experiment next. [Report and measurements](docs/physics-first/LIQUID_IMEX.md) · [Next task](#next-task)
 
 Scientific R293 is request R294. PC/WSL2 daisy retains ownership. The implementation, independent tests, all checkpoint fields, direct decimal EOS inversions and resource measurements are saved. Nine targeted tests passed. The historical full suite, 2D and 3D evolution and FEM were outside this experiment. Use `/new` after review because the acoustic evidence and shear gates are published.
@@ -1784,13 +1790,13 @@ and physical-work limits remain unchanged.
 
 ## Owner and checkout
 
-| Field | R293 value |
+| Field | R294 value |
 |---|---|
 | Owner | PC/WSL2 daisy, user rharris. Mac released per the published handoff. |
 | Checkout | /home/rharris/git/navier-stokes-vortex-lab, sole local worktree, empty stashes at start. |
-| Branch and publication target | research/water-vortex-limits → origin/research/water-vortex-limits. R293 started at reviewed and synchronized 29baf73. The bounded 1D acoustic experiment is complete for review. |
-| Runtime | Existing water Python 3.12.14, CoolProp 7.2.0, NumPy 2.5.5. R293 measured 15.45 s and 122792 KiB for the benchmark on daisy. [Replay](docs/physics-first/r293/REPLAY.md) |
-| Next decision | Review the acoustic pass and large-step phase limit before the archived two-phase shear gate. [Next task](#next-task) |
+| Branch and publication target | research/water-vortex-limits → origin/research/water-vortex-limits. R294 started at reviewed and synchronized bdeb6db. The periodic 2D shear qualification is complete for review. |
+| Runtime | Existing water Python 3.12.14, CoolProp 7.2.0, NumPy 2.5.5. R294 measured 1.02 s and 122236 KiB for the pilot, then 85.67 s and 122664 KiB for the matrix. [Replay](docs/physics-first/r294/REPLAY.md) |
+| Next decision | Review the shear pass and the geometry, release and local-rate gates for the 12 ns disk. [Next task](#next-task) |
 
 ### Historical R272 checkout
 
@@ -1971,6 +1977,10 @@ write access. The tool sandbox denies `.git` writes, `ps`, unrestricted
 agent-side POV-Ray backtraces are unavailable.
 
 ## Next task
+
+**Review scientific R294.** After review, use `/new` for one matched 12 ns test of the staggered pressure method on the archived junction-relocated water disk. Rebuild conservative primal and dual flux geometry, no-slip stationary wall traction and compatible normal pressure correction. Check the actual release balance before advancing. Compare acoustic-resolving, full, half and tighter steps with archived pressure, radial acceleration and cell-circulation vorticity gates, plus integrated wall torque, angular momentum, circulation and energy closure. Stop at a failed gate. The periodic experiment gives no bound on curved-wall curl errors. [Design and decision](docs/physics-first/VISCOUS_WATER_2D.md#method-decision-and-one-next-experiment) · [Archived disk gate](docs/physics-first/DISK_MASS_BALANCE.md)
+
+### Historical R293 proposal tested in R294
 
 **Review scientific R293.** After review, use `/new` for one bounded two-dimensional 10 µm transverse shear-wave test in its original and quarter-wavelength-shifted phases. Carry over the same incremental water EOS, conservative face fluxes and pressure residual checks. Add transverse momentum, matched viscous stress/work and periodic pressure operators. Reproduce the archived 32/64/128-cell and time-halving comparisons. Require pressure symmetry and aligned errors within 0.001 Pa, viscosity and loss rates within 5%, and measured conservative closure. Preserve the historical 128-cell fixed-step failure and defer the disk until this gate passes. [1D result and generalization](docs/physics-first/LIQUID_IMEX.md#larger-steps-and-the-next-physical-gate) · [Archived protocol](docs/physics-first/SHEAR_QUALIFICATION.md)
 

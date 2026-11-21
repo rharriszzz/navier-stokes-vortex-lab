@@ -1,5 +1,7 @@
 # How tightly can a vortex in water concentrate?
 
+**R294 · 21 November 2026.** The staggered pressure-based water solver passed the two-phase transverse shear benchmark. At 128 cells the amplitude fell 2.114715% against 2.115135% predicted. The measured cross-strip and aligned pressure errors were zero, including at the historical failed SU2 step. Integrated stress work accounted for the resolved kinetic loss. Review the 12 ns curved-wall disk qualification next. [Report and measurements](VISCOUS_WATER_2D.md) · [Next task](../../SESSION_HANDOFF.md#next-task)
+
 **R293 · 21 November 2026.** The conservative pressure-based water solver passed all 36 resolved 1D acoustic cases. At 10 Pa the finest wave traveled at 1481.73 m/s and closed shifted energy to 1.57 × 10⁻²¹ J/m² per quarter period. Four steps per crossing kept the wave bounded but missed phase speed by 15.26%. Review the two-phase transverse shear experiment next. [Report and measurements](LIQUID_IMEX.md) · [Next task](../../SESSION_HANDOFF.md#next-task)
 
 **R292 · 21 November 2026.** Balancing the initial SU2 mass flux reduced the core residual 34,674-fold. All four 12 ns runs passed radial acceleration. The full and half-step local vorticity-rate discrepancies of 0.0942 and 0.0725 s⁻¹ both exceeded 0.02 s⁻¹. Recovered pressure differences dominate the discrepancy between endpoint spatial forces at the worst cell. Slow-time rotating water remains unqualified. [Report and decision](DISK_MASS_BALANCE.md) · [Next task](../../SESSION_HANDOFF.md#next-task)
