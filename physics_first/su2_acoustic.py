@@ -51,14 +51,18 @@ def make_case(directory, cells, steps, amplitude_pa=AMPLITUDE):
                         restart_frequency=1)
 
 
-def write_strip(directory, cells, ny, data):
-    """Write a structured quadrilateral strip and its conservative nodal state."""
+def write_restart(directory, data):
+    """Write the initial Cartesian conservative nodal state."""
     with (directory / "state_00000.dat").open("wb") as f:
         f.write(struct.pack("<5i", MAGIC, len(FIELDS), len(data), 8, 0))
         for name in FIELDS:
             f.write(name.encode().ljust(33, b"\0"))
         f.write(data.astype("<f8").tobytes())
 
+
+def write_strip(directory, cells, ny, data):
+    """Write a structured quadrilateral strip and its conservative nodal state."""
+    write_restart(directory, data)
     stride = cells + 1
     lines = ["NDIME= 2", f"NELEM= {cells * ny}"]
     for j in range(ny):
@@ -80,11 +84,11 @@ def write_strip(directory, cells, ny, data):
 
 
 def write_configuration(directory, base, dt, steps, mach, length, restart_frequency,
-                        periodic_height=None):
+                        periodic_height=None, boundaries=None, time_scheme="RUNGE-KUTTA_EXPLICIT"):
     pairs = f"left, right, 0, 0, 0, 0, 0, 0, {length}, 0, 0"
-    if periodic_height is None:
+    if boundaries is None and periodic_height is None:
         boundaries = f"MARKER_PERIODIC= ({pairs})\nMARKER_SYM= (bottom, top)"
-    else:
+    elif boundaries is None:
         pairs += f", bottom, top, 0, 0, 0, 0, 0, 0, 0, {periodic_height}, 0"
         boundaries = f"MARKER_PERIODIC= ({pairs})"
     (directory / "wave.cfg").write_text(f"""SOLVER= NAVIER_STOKES
@@ -112,7 +116,7 @@ UNST_CFL_NUMBER= 0
 TIME_ITER= {steps + 1}
 INNER_ITER= 1
 CONV_NUM_METHOD_FLOW= JST
-TIME_DISCRE_FLOW= RUNGE-KUTTA_EXPLICIT
+TIME_DISCRE_FLOW= {time_scheme}
 RK_ALPHA_COEFF= (0.5, 1.0)
 MGLEVEL= 0
 NUM_METHOD_GRAD= GREEN_GAUSS
@@ -126,7 +130,7 @@ VOLUME_OUTPUT= (COORDINATES, SOLUTION, PRIMITIVE, RESIDUAL)
 OUTPUT_FILES= (RESTART)
 OUTPUT_WRT_FREQ= {restart_frequency}
 SCREEN_OUTPUT= (TIME_ITER, CUR_TIME, RMS_DENSITY)
-SCREEN_WRT_FREQ_TIME= {steps//4}
+SCREEN_WRT_FREQ_TIME= {max(1, steps//4)}
 """)
 
 

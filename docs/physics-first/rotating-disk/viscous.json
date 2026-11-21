@@ -1,0 +1,6 @@
+{
+  "core_rms_viscous_radial_m_s2": 6.996525249225998e-06,
+  "core_rms_viscous_tangential_m_s2": 0.0011636262293121507,
+  "core_rms_viscous_tangential_error_m_s2": 9.240568230100576e-06,
+  "kinetic_viscous_power_W_m": -0.0001670009466868887
+}
