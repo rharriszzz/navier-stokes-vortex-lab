@@ -1,0 +1,574 @@
+{
+  "endpoints": {
+    "reference_6ns": {
+      "liquid_nodes": 165313,
+      "p_min_Pa": 101308.2241212018,
+      "T_range_K": [
+        293.14999999995496,
+        293.1500000000378
+      ],
+      "inner_pressure_rise_Pa": 15.905472582555376,
+      "core_dp_peak_Pa": 0.0002626574569148943,
+      "core_dp_rms_Pa": 4.750620893395438e-05,
+      "radial_acc_rms_m_s2": 0.00025101715578744786,
+      "core_density_rate_rms": 2.65831849822878e-05,
+      "conserved_change_per_m": [
+        9.553951365708577e-19,
+        2.0185128159367195e-20,
+        2.8414500865824547e-21,
+        7.159542292356482e-13
+      ],
+      "wall_force_N_m": [
+        2.0769678000593972e-20,
+        -5.3874531789520115e-21
+      ],
+      "integrated_wall_impulse_per_m": [
+        1.2657418213118984e-28,
+        -4.2547391899857455e-29
+      ],
+      "momentum_defect_per_m": [
+        2.018512803279301e-20,
+        2.8414501291298467e-21
+      ],
+      "internal_change_J_m": 1.730989648714707e-12,
+      "mass_drift_fraction": 3.046607294662218e-20,
+      "kinetic_loss_J_m": 1.0150354194790588e-12,
+      "initial_kinetic_J_m": 0.012071023984441655,
+      "energy_drift_over_loss": 0.7053490109764776,
+      "energy_one_ulp_bound_J_m": 4.681294731002792e-10,
+      "dissipation_W_m": 0.00016704276119828876,
+      "stress_power_rel_error": -0.00032510249053552265,
+      "loss_rate_rel_error": 0.012420833301574286,
+      "gamma_square_m2_s": 0.006911570153196203,
+      "gamma_change_m2_s": -8.504460955803741e-13,
+      "gamma_loop_change_m2_s": -8.50446095580374e-13,
+      "gamma_diffusion_change_m2_s": -8.489060072020485e-13,
+      "gamma_decay_rel_error": 0.0018142036518291604,
+      "strong_cells": 3560,
+      "max_strong_fractional_rate_error_s": 0.1279287461440254
+    },
+    "reference_12ns": {
+      "liquid_nodes": 165313,
+      "p_min_Pa": 101308.2241212018,
+      "T_range_K": [
+        293.14999999995547,
+        293.1500000000378
+      ],
+      "inner_pressure_rise_Pa": 15.905472582555376,
+      "core_dp_peak_Pa": 0.0002509158366592601,
+      "core_dp_rms_Pa": 5.1784314048187565e-05,
+      "radial_acc_rms_m_s2": 0.00024859707274878175,
+      "core_density_rate_rms": 2.6100534011864582e-05,
+      "conserved_change_per_m": [
+        -7.902538284493728e-19,
+        1.1562570612600818e-20,
+        1.049544746351903e-20,
+        1.366046057639994e-12
+      ],
+      "wall_force_N_m": [
+        2.0109122582682095e-20,
+        -1.9954827549046813e-21
+      ],
+      "integrated_wall_impulse_per_m": [
+        2.4921058388101803e-28,
+        -6.469619970142754e-29
+      ],
+      "momentum_defect_per_m": [
+        1.1562570363390235e-20,
+        1.049544752821523e-20
+      ],
+      "internal_change_J_m": 3.3961165554581233e-12,
+      "mass_drift_fraction": -2.519997209772318e-20,
+      "kinetic_loss_J_m": 2.0300704978181293e-12,
+      "initial_kinetic_J_m": 0.012071023984441655,
+      "energy_drift_over_loss": 0.6729057237707692,
+      "energy_one_ulp_bound_J_m": 4.681294731002792e-10,
+      "dissipation_W_m": 0.00016704276114605385,
+      "stress_power_rel_error": -0.000325102803137689,
+      "loss_rate_rel_error": 0.012420663170944035,
+      "gamma_square_m2_s": 0.006911570152345758,
+      "gamma_change_m2_s": -1.700891323857118e-12,
+      "gamma_loop_change_m2_s": -1.700891323857118e-12,
+      "gamma_diffusion_change_m2_s": -1.697812014404097e-12,
+      "gamma_decay_rel_error": 0.0018136928157512777,
+      "strong_cells": 3560,
+      "max_strong_fractional_rate_error_s": 0.12636710941776594
+    },
+    "full_12ns": {
+      "liquid_nodes": 165313,
+      "p_min_Pa": 101308.2241236478,
+      "T_range_K": [
+        293.1499999999542,
+        293.1500000000378
+      ],
+      "inner_pressure_rise_Pa": 15.905470136553049,
+      "core_dp_peak_Pa": 0.00025374193501193076,
+      "core_dp_rms_Pa": 5.978286778799723e-05,
+      "radial_acc_rms_m_s2": 0.0002539675779304136,
+      "core_density_rate_rms": 2.3492573583517012e-05,
+      "conserved_change_per_m": [
+        1.525097049979342e-17,
+        -1.1464022227167091e-21,
+        -4.777877098496356e-22,
+        -4.5264690893344007e-13
+      ],
+      "wall_force_N_m": [
+        2.6389543082279242e-20,
+        -6.185656620671541e-21
+      ],
+      "integrated_wall_impulse_per_m": [
+        3.1667451698735095e-28,
+        -7.42278794480585e-29
+      ],
+      "momentum_defect_per_m": [
+        -1.146402539391226e-21,
+        -4.777876356217562e-22
+      ],
+      "internal_change_J_m": 1.5764472299111357e-12,
+      "mass_drift_fraction": 4.863298565881166e-19,
+      "kinetic_loss_J_m": 2.0290941388445758e-12,
+      "initial_kinetic_J_m": 0.012071023984441655,
+      "energy_drift_over_loss": 0.22307831867829955,
+      "energy_one_ulp_bound_J_m": 4.681294731002792e-10,
+      "dissipation_W_m": 0.00016704276114610074,
+      "stress_power_rel_error": -0.00032510280285702464,
+      "loss_rate_rel_error": 0.011933741164757317,
+      "gamma_square_m2_s": 0.006911570152346545,
+      "gamma_change_m2_s": -1.70010423570977e-12,
+      "gamma_loop_change_m2_s": -1.70010423570977e-12,
+      "gamma_diffusion_change_m2_s": -1.697812014404097e-12,
+      "gamma_decay_rel_error": 0.001350103124625024,
+      "strong_cells": 3560,
+      "max_strong_fractional_rate_error_s": 0.14789518708577923
+    },
+    "half_6ns": {
+      "liquid_nodes": 165313,
+      "p_min_Pa": 101308.2241212018,
+      "T_range_K": [
+        293.14999999995496,
+        293.1500000000378
+      ],
+      "inner_pressure_rise_Pa": 15.905472582555376,
+      "core_dp_peak_Pa": 0.00026598171098157763,
+      "core_dp_rms_Pa": 5.296477324945293e-05,
+      "radial_acc_rms_m_s2": 0.00025523627114791444,
+      "core_density_rate_rms": 2.261717904402816e-05,
+      "conserved_change_per_m": [
+        1.4143872129119585e-19,
+        6.0589138780411605e-21,
+        1.219976558137709e-20,
+        8.950567520095737e-14
+      ],
+      "wall_force_N_m": [
+        2.007939577941847e-20,
+        -5.461253199228227e-21
+      ],
+      "integrated_wall_impulse_per_m": [
+        1.2047637467651084e-28,
+        -3.2767519195369364e-29
+      ],
+      "momentum_defect_per_m": [
+        6.058913757564786e-21,
+        1.2199765614144609e-20
+      ],
+      "internal_change_J_m": 1.1044161774903977e-12,
+      "mass_drift_fraction": 4.510262021848747e-21,
+      "kinetic_loss_J_m": 1.0149105022894403e-12,
+      "initial_kinetic_J_m": 0.012071023984441655,
+      "energy_drift_over_loss": 0.08819070745553427,
+      "energy_one_ulp_bound_J_m": 4.681294731002792e-10,
+      "dissipation_W_m": 0.00016704276119829326,
+      "stress_power_rel_error": -0.00032510249050854423,
+      "loss_rate_rel_error": 0.012296237880783822,
+      "gamma_square_m2_s": 0.006911570153196299,
+      "gamma_change_m2_s": -8.503498195963053e-13,
+      "gamma_loop_change_m2_s": -8.503498195963053e-13,
+      "gamma_diffusion_change_m2_s": -8.489060072020485e-13,
+      "gamma_decay_rel_error": 0.001700791821482639,
+      "strong_cells": 3560,
+      "max_strong_fractional_rate_error_s": 0.1448862190505927
+    },
+    "half_12ns": {
+      "liquid_nodes": 165313,
+      "p_min_Pa": 101308.2241212018,
+      "T_range_K": [
+        293.1499999999542,
+        293.1500000000378
+      ],
+      "inner_pressure_rise_Pa": 15.905472582555376,
+      "core_dp_peak_Pa": 0.0002626574569148943,
+      "core_dp_rms_Pa": 5.7529682206309236e-05,
+      "radial_acc_rms_m_s2": 0.0002487418331990774,
+      "core_density_rate_rms": 2.273326081067501e-05,
+      "conserved_change_per_m": [
+        3.098981754762022e-18,
+        3.028504774470595e-20,
+        2.6391208986938546e-20,
+        -2.3462707633063483e-13
+      ],
+      "wall_force_N_m": [
+        1.944949774295934e-20,
+        -1.2402539309466959e-21
+      ],
+      "integrated_wall_impulse_per_m": [
+        2.371733611342669e-28,
+        -4.020904278104954e-29
+      ],
+      "momentum_defect_per_m": [
+        3.028504750753259e-20,
+        2.6391209027147588e-20
+      ],
+      "internal_change_J_m": 1.7951934045149744e-12,
+      "mass_drift_fraction": 9.882173415672259e-20,
+      "kinetic_loss_J_m": 2.0298204808456093e-12,
+      "initial_kinetic_J_m": 0.012071023984441655,
+      "energy_drift_over_loss": 0.11559006254232433,
+      "energy_one_ulp_bound_J_m": 4.681294731002792e-10,
+      "dissipation_W_m": 0.00016704276114606223,
+      "stress_power_rel_error": -0.00032510280308750694,
+      "loss_rate_rel_error": 0.012295976688678989,
+      "gamma_square_m2_s": 0.00691157015234596,
+      "gamma_change_m2_s": -1.7006893582848366e-12,
+      "gamma_loop_change_m2_s": -1.7006893582848368e-12,
+      "gamma_diffusion_change_m2_s": -1.697812014404097e-12,
+      "gamma_decay_rel_error": 0.0016947364350872185,
+      "strong_cells": 3560,
+      "max_strong_fractional_rate_error_s": 0.130252154483644
+    },
+    "tight_12ns": {
+      "liquid_nodes": 165313,
+      "p_min_Pa": 101308.2241236478,
+      "T_range_K": [
+        293.1499999999542,
+        293.1500000000378
+      ],
+      "inner_pressure_rise_Pa": 15.905470136553049,
+      "core_dp_peak_Pa": 0.00025374193501193076,
+      "core_dp_rms_Pa": 5.978286778799723e-05,
+      "radial_acc_rms_m_s2": 0.0002539675779304136,
+      "core_density_rate_rms": 2.3492573583517012e-05,
+      "conserved_change_per_m": [
+        1.525097049979342e-17,
+        -1.1464022227167091e-21,
+        -4.777877098496356e-22,
+        -4.5264690893344007e-13
+      ],
+      "wall_force_N_m": [
+        2.6389543082279242e-20,
+        -6.185656620671541e-21
+      ],
+      "integrated_wall_impulse_per_m": [
+        3.1667451698735095e-28,
+        -7.42278794480585e-29
+      ],
+      "momentum_defect_per_m": [
+        -1.146402539391226e-21,
+        -4.777876356217562e-22
+      ],
+      "internal_change_J_m": 1.5764472299111357e-12,
+      "mass_drift_fraction": 4.863298565881166e-19,
+      "kinetic_loss_J_m": 2.0290941388445758e-12,
+      "initial_kinetic_J_m": 0.012071023984441655,
+      "energy_drift_over_loss": 0.22307831867829955,
+      "energy_one_ulp_bound_J_m": 4.681294731002792e-10,
+      "dissipation_W_m": 0.00016704276114610074,
+      "stress_power_rel_error": -0.00032510280285702464,
+      "loss_rate_rel_error": 0.011933741164757317,
+      "gamma_square_m2_s": 0.006911570152346545,
+      "gamma_change_m2_s": -1.70010423570977e-12,
+      "gamma_loop_change_m2_s": -1.70010423570977e-12,
+      "gamma_diffusion_change_m2_s": -1.697812014404097e-12,
+      "gamma_decay_rel_error": 0.001350103124625024,
+      "strong_cells": 3560,
+      "max_strong_fractional_rate_error_s": 0.14789518708577923
+    }
+  },
+  "comparisons": {
+    "full-reference_12ns": {
+      "core_pressure_max_Pa": 0.00026427161355968565,
+      "radial_acc_diff_rms_m_s2": 9.450962720749914e-05,
+      "max_strong_rate_diff_s": 0.09416816199654496
+    },
+    "half-reference_6ns": {
+      "core_pressure_max_Pa": 0.0002738900511758402,
+      "radial_acc_diff_rms_m_s2": 7.959598100206317e-05,
+      "max_strong_rate_diff_s": 0.06395501903753859
+    },
+    "half-reference_12ns": {
+      "core_pressure_max_Pa": 0.00026427161355968565,
+      "radial_acc_diff_rms_m_s2": 6.445564418280917e-05,
+      "max_strong_rate_diff_s": 0.07251872104663781
+    },
+    "tight-reference_12ns": {
+      "core_pressure_max_Pa": 0.00026427161355968565,
+      "radial_acc_diff_rms_m_s2": 9.450962720749914e-05,
+      "max_strong_rate_diff_s": 0.09416816199654496
+    },
+    "full-half_12ns": {
+      "core_pressure_max_Pa": 0.0002548622142057866,
+      "radial_acc_diff_rms_m_s2": 8.047383031418866e-05,
+      "max_strong_rate_diff_s": 0.05931683672854002
+    },
+    "full-tight_12ns": {
+      "core_pressure_max_Pa": 0.0,
+      "radial_acc_diff_rms_m_s2": 0.0,
+      "max_strong_rate_diff_s": 0.0
+    }
+  },
+  "gates": {
+    "reference_6ns": {
+      "inner_pressure": true,
+      "radial_acceleration": true,
+      "mass": true,
+      "energy_inventory": true,
+      "energy_loss_scale_raw": false,
+      "kinetic_rate": true,
+      "stress_power": true,
+      "square_circulation_rate": true
+    },
+    "reference_12ns": {
+      "inner_pressure": true,
+      "radial_acceleration": true,
+      "mass": true,
+      "energy_inventory": true,
+      "energy_loss_scale_raw": false,
+      "kinetic_rate": true,
+      "stress_power": true,
+      "square_circulation_rate": true
+    },
+    "full_12ns": {
+      "inner_pressure": true,
+      "radial_acceleration": true,
+      "mass": true,
+      "energy_inventory": true,
+      "energy_loss_scale_raw": false,
+      "kinetic_rate": true,
+      "stress_power": true,
+      "square_circulation_rate": true
+    },
+    "half_6ns": {
+      "inner_pressure": true,
+      "radial_acceleration": true,
+      "mass": true,
+      "energy_inventory": true,
+      "energy_loss_scale_raw": true,
+      "kinetic_rate": true,
+      "stress_power": true,
+      "square_circulation_rate": true
+    },
+    "half_12ns": {
+      "inner_pressure": true,
+      "radial_acceleration": true,
+      "mass": true,
+      "energy_inventory": true,
+      "energy_loss_scale_raw": false,
+      "kinetic_rate": true,
+      "stress_power": true,
+      "square_circulation_rate": true
+    },
+    "tight_12ns": {
+      "inner_pressure": true,
+      "radial_acceleration": true,
+      "mass": true,
+      "energy_inventory": true,
+      "energy_loss_scale_raw": false,
+      "kinetic_rate": true,
+      "stress_power": true,
+      "square_circulation_rate": true
+    }
+  },
+  "strong_rate_agreement": {
+    "full-reference_12ns": false,
+    "half-reference_6ns": false,
+    "half-reference_12ns": false,
+    "tight-reference_12ns": false,
+    "full-half_12ns": false,
+    "full-tight_12ns": true
+  },
+  "physical_window_passed": false,
+  "algebraic": {
+    "full_12ns": {
+      "iterations": 2,
+      "final_log10_rms": [
+        -12.19273962,
+        -7.956125544,
+        -7.956125544,
+        -7.084439336
+      ],
+      "passed": true
+    },
+    "half_6ns": {
+      "iterations": 2,
+      "final_log10_rms": [
+        -11.90627886,
+        -8.054743964,
+        -8.054743965,
+        -6.855879941
+      ],
+      "passed": true
+    },
+    "half_12ns": {
+      "iterations": 2,
+      "final_log10_rms": [
+        -11.90979976,
+        -8.052276156,
+        -8.052276156,
+        -6.858586639
+      ],
+      "passed": true
+    },
+    "tight_12ns": {
+      "iterations": 2,
+      "final_log10_rms": [
+        -12.19273962,
+        -7.956125544,
+        -7.956125544,
+        -7.084439336
+      ],
+      "passed": true
+    }
+  },
+  "spatial": {
+    "release": {
+      "core_density_rate_rms": 2.138533370649162e-05,
+      "core_momentum_rate_rms": [
+        0.8770310135247411,
+        0.8770310135316236
+      ],
+      "core_radial_acc_rms_m_s2": 0.0002540740664286819,
+      "core_tangential_acc_rms_m_s2": 0.0012162830028766127,
+      "signed_conservative_rates": [
+        7.547338010291255e-16,
+        1.540829022195746e-12,
+        1.0047445210386848e-13,
+        8.563687411110299e-12
+      ]
+    },
+    "reference": {
+      "core_density_rate_rms": 2.3107338522276594e-05,
+      "core_momentum_rate_rms": [
+        0.8771032024062659,
+        0.8771032024090979
+      ],
+      "core_radial_acc_rms_m_s2": 0.0002545357532020083,
+      "core_tangential_acc_rms_m_s2": 0.0012162909638871416,
+      "signed_conservative_rates": [
+        6.238459741085785e-16,
+        6.535996673641053e-13,
+        9.987420277754396e-13,
+        -2.8512318858865812e-11
+      ]
+    },
+    "full": {
+      "core_density_rate_rms": 2.3345397187938827e-05,
+      "core_momentum_rate_rms": [
+        0.8767942478241468,
+        0.8767942478208751
+      ],
+      "core_radial_acc_rms_m_s2": 0.0002533166165652992,
+      "core_tangential_acc_rms_m_s2": 0.0012160983532418577,
+      "signed_conservative_rates": [
+        5.56124129951736e-16,
+        1.0777098687621032e-12,
+        6.618552599290664e-13,
+        1.8145219141045923e-11
+      ],
+      "be_core_defect_rms": [
+        2.7401760618729817e-06,
+        0.09189959857032573,
+        0.09189959828610904,
+        0.35525534312324225
+      ],
+      "be_radial_defect_rms_m_s2": 9.182499776155135e-05,
+      "be_core_momentum_rate_resolution_rms": [
+        6.824519169509035e-07,
+        6.824519169509035e-07
+      ],
+      "be_max_strong_fractional_curl_defect_s": 0.08913202348996925
+    },
+    "half": {
+      "core_density_rate_rms": 2.3112172969781735e-05,
+      "core_momentum_rate_rms": [
+        0.876763315848513,
+        0.8767633158415443
+      ],
+      "core_radial_acc_rms_m_s2": 0.00025305954959223216,
+      "core_tangential_acc_rms_m_s2": 0.0012161071106363405,
+      "signed_conservative_rates": [
+        1.0232609574299273e-15,
+        -2.912189567431253e-13,
+        1.7589949912045599e-12,
+        4.245719136100655e-12
+      ],
+      "be_core_defect_rms": [
+        5.549173109609692e-06,
+        0.05291558262863605,
+        0.0529155824269505,
+        0.6792320292647505
+      ],
+      "be_radial_defect_rms_m_s2": 5.272865359491412e-05,
+      "be_core_momentum_rate_resolution_rms": [
+        1.364903833901807e-06,
+        1.364903833901807e-06
+      ],
+      "be_max_strong_fractional_curl_defect_s": 0.06047929999376297
+    },
+    "tight": {
+      "core_density_rate_rms": 2.3345397187938827e-05,
+      "core_momentum_rate_rms": [
+        0.8767942478241468,
+        0.8767942478208751
+      ],
+      "core_radial_acc_rms_m_s2": 0.0002533166165652992,
+      "core_tangential_acc_rms_m_s2": 0.0012160983532418577,
+      "signed_conservative_rates": [
+        5.56124129951736e-16,
+        1.0777098687621032e-12,
+        6.618552599290664e-13,
+        1.8145219141045923e-11
+      ],
+      "be_core_defect_rms": [
+        2.7401760618729817e-06,
+        0.09189959857032573,
+        0.09189959828610904,
+        0.35525534312324225
+      ],
+      "be_radial_defect_rms_m_s2": 9.182499776155135e-05,
+      "be_core_momentum_rate_resolution_rms": [
+        6.824519169509035e-07,
+        6.824519169509035e-07
+      ],
+      "be_max_strong_fractional_curl_defect_s": 0.08913202348996925
+    }
+  },
+  "mass_one_ulp_kg_m": 3.571544441988214e-15,
+  "full_step_rate_budget": {
+    "peak_xy_m": [
+      0.00421875,
+      -0.00953125
+    ],
+    "pressure_audit": {
+      "solver_dp_rms_Pa": 4.225926145115736e-05,
+      "linear_heos_dp_rms_Pa": 2.961707179019493e-07,
+      "dp_minus_linear_rms_Pa": 4.226853498941725e-05,
+      "pressure_curl_at_peak_s": -0.06150333793686957,
+      "linear_heos_curl_at_peak_s": 0.0001426669850464477,
+      "max_operator_minus_pressure_s": 0.0030291016288675698,
+      "max_pressure_minus_linear_s": 0.09197185001870775,
+      "max_linear_heos_pressure_curl_s": 0.00043392816166347046
+    },
+    "at_peak_s": {
+      "measured_difference": -0.09416816199654554,
+      "be_endpoint_defect": -0.012253629628198221,
+      "difference_of_endpoint_operators": -0.05981916835078248,
+      "reference_endpoint_minus_average": -0.022095364017564845
+    },
+    "max_abs_s": {
+      "measured_difference": 0.09416816199654554,
+      "be_endpoint_defect": 0.0891320234647706,
+      "difference_of_endpoint_operators": 0.09087792826683624,
+      "reference_endpoint_minus_average": 0.06172888906906351
+    }
+  },
+  "qualified": false
+}

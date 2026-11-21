@@ -1,0 +1,131 @@
+{
+  "disk": {
+    "nodes": 165313,
+    "density_rate_rms": 0.2597163801875796,
+    "max_abs_density_rate": 2.9660352595850195,
+    "peak_xy_m": [
+      0.04575537337450387,
+      -0.046167583945445345
+    ],
+    "mass_rate_norm2_fraction": 1.0,
+    "jst_rate_rms": 3.8711181704276563e-10,
+    "constant_density_difference_rms": 2.5241967819396163e-09,
+    "centered_reconstruction_max": 1.734723475976807e-17,
+    "pressure_rate_rms_Pa_s": 570687.8349939039,
+    "pressure_rate_max_Pa_s": 6517418.117994195,
+    "pressure_rate_acoustic_difference_rms_Pa_s": 0.0019353839704402895,
+    "predicted_peak_Pa": 0.07820901741593034,
+    "observed_peak_Pa": 0.07821760783554055,
+    "observed_rms_Pa": 0.006847862771883604,
+    "error_rms_Pa": 5.076550382725464e-05,
+    "acoustic_error_rms_Pa": 5.0765503933449405e-05
+  },
+  "core": {
+    "nodes": 28916,
+    "density_rate_rms": 0.7415082645908478,
+    "max_abs_density_rate": 1.689010366447972,
+    "peak_xy_m": [
+      -0.005625,
+      0.01375
+    ],
+    "mass_rate_norm2_fraction": 0.7326991649952196,
+    "jst_rate_rms": 1.2878844315258748e-09,
+    "constant_density_difference_rms": 7.887290346905652e-09,
+    "centered_reconstruction_max": 1.734723475976807e-17,
+    "pressure_rate_rms_Pa_s": 1629353.319042998,
+    "pressure_rate_max_Pa_s": 3711347.242478439,
+    "pressure_rate_acoustic_difference_rms_Pa_s": 0.006383731189403563,
+    "predicted_peak_Pa": 0.04453616690974127,
+    "observed_peak_Pa": 0.04456494875194039,
+    "observed_rms_Pa": 0.019552147954497636,
+    "error_rms_Pa": 6.524879081341682e-05,
+    "acoustic_error_rms_Pa": 6.524879226130036e-05
+  },
+  "square_seam": {
+    "nodes": 896,
+    "density_rate_rms": 0.8393123921892243,
+    "max_abs_density_rate": 1.1781407169250868,
+    "peak_xy_m": [
+      -0.035,
+      -0.025
+    ],
+    "mass_rate_norm2_fraction": 0.030763234064578548,
+    "jst_rate_rms": 6.036392605545807e-11,
+    "constant_density_difference_rms": 2.7976325246338137e-09,
+    "centered_reconstruction_max": 7.93585168282554e-18,
+    "pressure_rate_rms_Pa_s": 1844263.2378389274,
+    "pressure_rate_max_Pa_s": 2588787.71891616,
+    "pressure_rate_acoustic_difference_rms_Pa_s": 0.0005670361314366722,
+    "predicted_peak_Pa": 0.03106545262699392,
+    "observed_peak_Pa": 0.03112433382193558,
+    "observed_rms_Pa": 0.022121396091039875,
+    "error_rms_Pa": 6.970707650008969e-05,
+    "acoustic_error_rms_Pa": 6.970707529031501e-05
+  },
+  "circle_seam": {
+    "nodes": 896,
+    "density_rate_rms": 1.5689991137048136,
+    "max_abs_density_rate": 2.9660352595850195,
+    "peak_xy_m": [
+      0.04575537337450387,
+      -0.046167583945445345
+    ],
+    "mass_rate_norm2_fraction": 0.19950879630725996,
+    "jst_rate_rms": 3.6304119828717044e-12,
+    "constant_density_difference_rms": 6.006765069390573e-11,
+    "centered_reconstruction_max": 5.4752209710517974e-18,
+    "pressure_rate_rms_Pa_s": 3447640.488188553,
+    "pressure_rate_max_Pa_s": 6517418.117994195,
+    "pressure_rate_acoustic_difference_rms_Pa_s": 0.00033669118837215893,
+    "predicted_peak_Pa": 0.07820901741593034,
+    "observed_peak_Pa": 0.07821760783554055,
+    "observed_rms_Pa": 0.041358276006640125,
+    "error_rms_Pa": 5.343138018501304e-05,
+    "acoustic_error_rms_Pa": 5.343138125052144e-05
+  },
+  "taper": {
+    "nodes": 39272,
+    "density_rate_rms": 0.2277727987423627,
+    "max_abs_density_rate": 2.9660352595850195,
+    "peak_xy_m": [
+      0.04575537337450387,
+      -0.046167583945445345
+    ],
+    "mass_rate_norm2_fraction": 0.21284508466231647,
+    "jst_rate_rms": 2.1744194658266838e-12,
+    "constant_density_difference_rms": 3.9780451233662113e-10,
+    "centered_reconstruction_max": 6.071532165918825e-18,
+    "pressure_rate_rms_Pa_s": 500496.60079023277,
+    "pressure_rate_max_Pa_s": 6517418.117994195,
+    "pressure_rate_acoustic_difference_rms_Pa_s": 0.00031410306127909924,
+    "predicted_peak_Pa": 0.07820901741593034,
+    "observed_peak_Pa": 0.07821760783554055,
+    "observed_rms_Pa": 0.006004406306804975,
+    "error_rms_Pa": 5.980189750143588e-05,
+    "acoustic_error_rms_Pa": 5.9801897258558114e-05
+  },
+  "quiet": {
+    "nodes": 26880,
+    "density_rate_rms": 0.0,
+    "max_abs_density_rate": 0.0,
+    "peak_xy_m": [
+      -0.05817164791726125,
+      -0.05817164791726125
+    ],
+    "mass_rate_norm2_fraction": 0.0,
+    "jst_rate_rms": 0.0,
+    "constant_density_difference_rms": 0.0,
+    "centered_reconstruction_max": 0.0,
+    "pressure_rate_rms_Pa_s": 4.686578330148853e-09,
+    "pressure_rate_max_Pa_s": 2.6281364265477562e-08,
+    "pressure_rate_acoustic_difference_rms_Pa_s": 4.686578330148853e-09,
+    "predicted_peak_Pa": 3.1537637118573073e-16,
+    "observed_peak_Pa": 0.0,
+    "observed_rms_Pa": 0.0,
+    "error_rms_Pa": 5.623893996178624e-17,
+    "acoustic_error_rms_Pa": 0.0
+  },
+  "signed_outflux_kg_m_s": -6.082776528293626e-16,
+  "absolute_outflux_sum_kg_m_s": 0.002715380220986166,
+  "wall_max_speed_m_s": 0.0
+}

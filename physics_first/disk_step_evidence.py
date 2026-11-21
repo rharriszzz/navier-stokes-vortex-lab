@@ -34,6 +34,31 @@ def pack(root, dest):
 
 
 def measure(archive, old_archive):
+    xy,_,_ = mesh(32,True)
+    with ZipFile(old_archive) as old:
+        import tempfile
+        with tempfile.TemporaryDirectory() as temp:
+            original=Path(temp)/'release.dat'
+            original.write_bytes(old.read('r289-wide32/state_00000.dat'))
+            state=read_restart(original)
+            np.testing.assert_allclose(xy,np.column_stack((state['x'],state['y'])),atol=1e-16,rtol=0)
+            q0=conservative(state)
+        states={}
+        for step in (2,4):
+            with np.load(io.BytesIO(old.read(f'wide32/state_{step:05d}.npz'))) as diff:
+                q=np.column_stack([(state[k].view('<u8')^diff[k]).view('<f8') for k in FIELDS[2:]])
+            states['reference',step*3]=q
+    with ZipFile(archive) as trials:
+        for case,(steps,_,_) in TRIALS.items():
+            for j in range(1,steps+1):
+                diff=np.load(io.BytesIO(trials.read(f'{case}/{j}.npy')))
+                states[case,12*j//steps]=(q0.view('<u8')^diff).view('<f8')
+
+    return measure_states(q0, states)
+
+
+def measure_states(q0, states):
+    """Apply the same R291 physical gates to endpoints from one common release."""
     xy,cells,wall = mesh(32,True)
     vol,_ = dual_geometry(xy,cells,wall)
     edge = np.roll(xy[cells],-1,axis=1)-xy[cells]
@@ -68,25 +93,6 @@ def measure(archive, old_archive):
 
     def rms(a,weight):
         return np.sqrt(np.average(a*a,weights=weight))
-
-    with ZipFile(old_archive) as old:
-        import tempfile
-        with tempfile.TemporaryDirectory() as temp:
-            original=Path(temp)/'release.dat'
-            original.write_bytes(old.read('r289-wide32/state_00000.dat'))
-            state=read_restart(original)
-            np.testing.assert_allclose(xy,np.column_stack((state['x'],state['y'])),atol=1e-16,rtol=0)
-            q0=conservative(state)
-        states={}
-        for step in (2,4):
-            with np.load(io.BytesIO(old.read(f'wide32/state_{step:05d}.npz'))) as diff:
-                q=np.column_stack([(state[k].view('<u8')^diff[k]).view('<f8') for k in FIELDS[2:]])
-            states['reference',step*3]=q
-    with ZipFile(archive) as trials:
-        for case,(steps,_,_) in TRIALS.items():
-            for j in range(1,steps+1):
-                diff=np.load(io.BytesIO(trials.read(f'{case}/{j}.npy')))
-                states[case,12*j//steps]=(q0.view('<u8')^diff).view('<f8')
 
     p0,_=flash(q0)
     u0=q0[:,1:3]/q0[:,:1]

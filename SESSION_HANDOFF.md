@@ -1,5 +1,13 @@
 # Current session handoff
 
+**R292 · 21 November 2026.** Balancing the initial SU2 mass flux reduced the core residual 34,674-fold. All four 12 ns runs passed radial acceleration. The full and half-step local vorticity-rate discrepancies of 0.0942 and 0.0725 s⁻¹ both exceeded 0.02 s⁻¹. Recovered pressure differences dominate the discrepancy between endpoint spatial forces at the worst cell. Slow-time rotating water remains unqualified. [Report](docs/physics-first/DISK_MASS_BALANCE.md) · [Next task](#next-task)
+
+Scientific R292 is request R293. PC/WSL2 daisy retains ownership. The measured release, projected restart, four runs, static residual probes, physical gates and independent tests are preserved. Stop for owner review. Use `/new` at this published boundary for the proposed one-dimensional liquid pressure-based IMEX acoustic benchmark.
+
+The release projection, probe and gate readers, spatial rate budget, raw archive, figure, tests and report are linked in the [replay](docs/physics-first/r292/REPLAY.md). Updated both READMEs, direction, status and request records. All 23 targeted tests passed. Baseline, corrected release, projection, common restart and historical R291 gate file reproduced. The four endpoint comparisons matched native measurements. The current scientific gate returns 1. Longer physical runs, 3D, FEM and the full historical suite were skipped. Local curl sensitivity, nonlinear root accuracy and heat conversion at the stored energy precision remain unresolved.
+
+### Previous R291 result
+
 **R291 · 21 November 2026.** In 20 ms the isolated ring’s whole-section effective area grew 1.463%, and all three fixed-circulation radii grew. The corrected liquid-water face matrix passed its independent finest-perturbation check. At 12 ns the relocated disk passed pressure but missed radial acceleration and local vorticity-rate targets. Decision B calls for a 2D release mass-flux balance test after review. [Report](docs/physics-first/CONCENTRATION_AND_WATER_STEP.md) · [Next task](#next-task)
 
 Scientific R291 is request R292. PC/WSL2 daisy retains ownership. The full-section area and matched controls, mixed-sign assignment test, finite-difference face audit, experimental executable build, all short-time disk comparisons and failed gates are saved. The projected release remains a proposal. Use `/new` after review with GPT-6.2 Astra/high because the scientific evidence and next comparison are published.
@@ -1770,13 +1778,13 @@ and physical-work limits remain unchanged.
 
 ## Owner and checkout
 
-| Field | R291 value |
+| Field | R292 value |
 |---|---|
 | Owner | PC/WSL2 daisy, user rharris. Mac released per the published handoff. |
 | Checkout | /home/rharris/git/navier-stokes-vortex-lab, sole local worktree, empty stashes at start. |
-| Branch and publication target | research/water-vortex-limits → origin/research/water-vortex-limits. R291 started at synchronized 00edf2d. Measurement protocol b4a36d8 and research evidence 199a1c0 are published. |
-| Runtime | Qualified SU2 8.6.0 / CoolProp 7.2.0 and separate experimental binary in ~/r291-lab/experimental on daisy. The replay needs only the two published field archives and water Python/SciPy stack. |
-| Next decision | Review the failed 12 ns qualification and the proposed 2D release projection. [Next task](#next-task) |
+| Branch and publication target | research/water-vortex-limits → origin/research/water-vortex-limits. R292 started at reviewed and synchronized 90f00a6. The bounded water experiment is complete for review. |
+| Runtime | Qualified SU2 8.6.0 / CoolProp 7.2.0 and separate experimental binary in ~/r291-lab/experimental on daisy. R292 native runs are in ~/r292-lab. The [replay](docs/physics-first/r292/REPLAY.md) uses archived fields and the existing water Python/SciPy environment. |
+| Next decision | Review the local-rate and energy limits and proposed 1D pressure-based IMEX acoustic benchmark. [Next task](#next-task) |
 
 ### Historical R272 checkout
 
@@ -1793,6 +1801,10 @@ and physical-work limits remain unchanged.
 | Delivery state | R271 delivery 83fb7c9 verified by clean pull; R272 STARTED 2e18140 published. Design completion prepared for publication; delivery in Git/final response. PC retains ownership. |
 
 ## Current result and limits
+
+**R292 · 21 November 2026.** Balancing the initial SU2 mass flux reduced the core residual 34,674-fold. All four 12 ns runs passed radial acceleration. The full and half-step local vorticity-rate discrepancies of 0.0942 and 0.0725 s⁻¹ both exceeded 0.02 s⁻¹. Recovered pressure differences dominate the discrepancy between endpoint spatial forces at the worst cell. Slow-time rotating water remains unqualified. [Report](docs/physics-first/DISK_MASS_BALANCE.md) · [Next task](#next-task)
+
+### Previous R291 decision
 
 **R291 · 21 November 2026.** In 20 ms the isolated ring’s whole-section effective area grew 1.463%, and all three fixed-circulation radii grew. The corrected liquid-water face matrix passed its independent finest-perturbation check. At 12 ns the relocated disk passed pressure but missed radial acceleration and local vorticity-rate targets. Decision B calls for a 2D release mass-flux balance test after review. [Evidence](docs/physics-first/CONCENTRATION_AND_WATER_STEP.md)
 
@@ -1953,6 +1965,10 @@ write access. The tool sandbox denies `.git` writes, `ps`, unrestricted
 agent-side POV-Ray backtraces are unavailable.
 
 ## Next task
+
+**Review scientific R292.** After review, use `/new` for one bounded 1D periodic water-acoustic experiment on daisy. Prototype the conservative general-EOS pressure-based IMEX split with a reference-shifted energy and perturbation pressure. Check the EOS response at the disk's tiny pressure increments, then measure phase, amplitude and shifted energy at 10 Pa with grid/step refinement and the 100 Pa control. Shear and disk requalification depend on this prototype passing. Physical disk evolution stopped at 12 ns. [Method, validation and decision](docs/physics-first/DISK_MASS_BALANCE.md#numerical-method-decision-and-one-next-experiment) · [Evidence and replay](docs/physics-first/r292/REPLAY.md)
+
+### Historical R291 proposal tested in R292
 
 **Review scientific R291.** After review, use `/new` with GPT-6.2 Astra and high reasoning for one bounded 2D experiment on daisy. Test a minimum-change adjustment to the junction-relocated disk's initial momentum that balances the actual SU2 mass flux while preserving the wall, pressure, temperature and circulation. Compare release residuals first. Only if the correction preserves the vortex, repeat the explicit and corrected backward-Euler 12 ns window with step halving and tightened solves. Check the 0.05 Pa, 0.001 m/s² and 0.02 s⁻¹ gates, stress, circulation and energy precision. Stop if any physical gate fails. No 3D launch is selected. [Scientific basis and cost](docs/physics-first/CONCENTRATION_AND_WATER_STEP.md#one-next-executable-experiment) · [Source and replay](docs/physics-first/r291/REPLAY.md)
 

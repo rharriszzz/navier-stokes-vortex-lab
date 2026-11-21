@@ -1,0 +1,10 @@
+{
+  "lsqr_stop": 2,
+  "iterations": 1344,
+  "damping": 0.0001,
+  "scale": 386049.6566259871,
+  "estimated_augmented_condition": 10772.655587806037,
+  "relative_normal_defect": 9.715843375666418e-13,
+  "weighted_residual_ratio": 4.364602579172717e-05,
+  "correction_kinetic_norm2": 3.4527445982776854e-11
+}
