@@ -1,0 +1,814 @@
+{
+  "uncertainty": {
+    "minor": {
+      "change_pct": -4.165107949961233,
+      "fixed_pp": 0.011680047194563059,
+      "total_pp": 1.2037670580128843,
+      "last_three_quarter_signal": false
+    },
+    "major": {
+      "change_pct": 3.8660186054387147,
+      "fixed_pp": 0.012363583847663229,
+      "total_pp": 0.7441401973127926,
+      "last_three_quarter_signal": true
+    },
+    "area": {
+      "change_pct": -0.46011319280462315,
+      "fixed_pp": 0.006128487561496421,
+      "total_pp": 1.936175555800479,
+      "last_three_quarter_signal": false
+    },
+    "flux": {
+      "change_pct": -1.0283515032557422,
+      "fixed_pp": 0.00370736086069412,
+      "total_pp": 0.8453764158988131,
+      "last_three_quarter_signal": false
+    }
+  },
+  "fixed_probe_errors_pp": {
+    "ridge_peak": {
+      "space": 0.0012314641786748126,
+      "step": 7.100603333087818e-05,
+      "domain": 3.226008349344056e-09,
+      "phase": 9.549142528930687e-05
+    },
+    "half_radius": {
+      "space": 0.00030206683103717324,
+      "step": 7.013122704790931e-06,
+      "domain": 6.931766272089135e-09,
+      "phase": 7.264138175422374e-05
+    }
+  },
+  "matched_inviscid": {
+    "ridge_area": {
+      "viscous_pct": -0.46011319280462315,
+      "inviscid_pct": -1.9134305382112693,
+      "difference_pp": 1.4533173454066461
+    },
+    "ridge_minor": {
+      "viscous_pct": -4.165107949961233,
+      "inviscid_pct": -4.9328992805350635,
+      "difference_pp": 0.7677913305738304
+    },
+    "ridge_major": {
+      "viscous_pct": 3.8660186054387147,
+      "inviscid_pct": 3.176144764563693,
+      "difference_pp": 0.6898738408750216
+    },
+    "ridge_flux": {
+      "viscous_pct": -1.0283515032557422,
+      "inviscid_pct": -0.8614435040866786,
+      "difference_pp": -0.16690799916906363
+    },
+    "ridge_peak": {
+      "viscous_pct": -0.10480073940530854,
+      "inviscid_pct": 1.9798458014866682,
+      "difference_pp": -2.0846465408919768
+    },
+    "half_radius": {
+      "viscous_pct": 1.3169823109879353,
+      "inviscid_pct": 0.3205305609375042,
+      "difference_pp": 0.9964517500504311
+    },
+    "m0_omega": {
+      "viscous_pct": -2.4891052231701627,
+      "inviscid_pct": -0.5754551792908513,
+      "difference_pp": -1.9136500438793114
+    }
+  },
+  "diffusion_only_pct": {
+    "minor": 0.7441967907249492,
+    "major": 0.7462935594984899,
+    "area": 1.4960442429426069,
+    "flux": -0.15420184433106998
+  },
+  "release_section_errors": {
+    "flux_rel_gamma": 3.984418986876145e-08,
+    "stokes_rel": 5.168263516805438e-07,
+    "minor_m": 2.1020177157042574e-10,
+    "major_m": 2.0930395936390178e-10
+  },
+  "balances": {
+    "n12_L160_s2": {
+      "box": {
+        "energy_change_J": -9.610599295193614e-07,
+        "energy_terms_J": {
+          "adv_W": 7.16663833413815e-15,
+          "pressure_W": 5.938956634562294e-12,
+          "stress_W": 6.814559634698429e-13,
+          "diss_W": 9.610329552811527e-07
+        },
+        "energy_defect_J_max": 2.0346658972476085e-11,
+        "impulse_change_Ns": 1.9922387481038917e-10,
+        "impulse_out_Ns": 1.62164221997472e-150,
+        "impulse_source_Ns": -3.0559990990013912e-12,
+        "impulse_defect_Ns_max": 2.0227987390939055e-10,
+        "gamma_defect_max": 5.305608383187899e-14
+      },
+      "local": {
+        "energy_change_J": -5.514379690948294e-06,
+        "energy_terms_J": {
+          "adv_W": 7.314407133128715e-06,
+          "pressure_W": -2.730303062542933e-06,
+          "stress_W": 3.6603368194123864e-07,
+          "diss_W": 5.641424162249011e-07
+        },
+        "energy_defect_J_max": 9.9522196372698e-11,
+        "impulse_change_Ns": -5.594279462945318e-05,
+        "impulse_out_Ns": 4.7840501161254094e-05,
+        "impulse_source_Ns": -8.120454168288249e-06,
+        "impulse_defect_Ns_max": 1.8160700089146244e-08,
+        "gamma_defect_max": 2.524737358824828e-08
+      },
+      "section": {
+        "change": -3.633631045795284e-05,
+        "outward_terms": {
+          "advection": -4.2907763847125194e-05,
+          "diffusion": 5.615231552143795e-06,
+          "motion": 7.362285576607359e-05
+        },
+        "defect_max": 7.246326396493822e-09,
+        "stokes_over_gamma_max": 1.6823724350844653e-06
+      },
+      "markers": [
+        {
+          "change": -7.104566715010208,
+          "stretching": -1.6956656304984317,
+          "viscosity": -5.4115430006017045,
+          "defect_max": 0.0028712261970049724
+        },
+        {
+          "change": -4.797792726371199,
+          "stretching": 0.7128935830487374,
+          "viscosity": -5.515107215858996,
+          "defect_max": 0.0046447358729775345
+        },
+        {
+          "change": 2.55642985231259,
+          "stretching": 6.534076961639945,
+          "viscosity": -3.9718785998611463,
+          "defect_max": 0.005768509466208993
+        },
+        {
+          "change": -13.507291499918551,
+          "stretching": -11.066010512638044,
+          "viscosity": -2.4453080778108474,
+          "defect_max": 0.004027090530340338
+        },
+        {
+          "change": -26.880519507729872,
+          "stretching": -24.397025579682584,
+          "viscosity": -2.4783746972724754,
+          "defect_max": 0.005287581667594132
+        },
+        {
+          "change": 23.179016941655533,
+          "stretching": 27.6530773243403,
+          "viscosity": -4.488014534329297,
+          "defect_max": 0.013962749146010367
+        }
+      ]
+    },
+    "n12_L80_s2": {
+      "box": {
+        "energy_change_J": -9.61232702311474e-07,
+        "energy_terms_J": {
+          "adv_W": 1.6802689277934197e-12,
+          "pressure_W": 1.7702997814243829e-10,
+          "stress_W": 2.2010677154468496e-11,
+          "diss_W": 9.610116453335323e-07
+        },
+        "energy_defect_J_max": 2.0336053717000537e-11,
+        "impulse_change_Ns": 1.9929117817812925e-10,
+        "impulse_out_Ns": -4.902248915655186e-105,
+        "impulse_source_Ns": -2.997080950527889e-12,
+        "impulse_defect_Ns_max": 2.0228825912865713e-10,
+        "gamma_defect_max": 5.25465088108108e-14
+      },
+      "local": {
+        "energy_change_J": -5.514375441021264e-06,
+        "energy_terms_J": {
+          "adv_W": 7.314399046996922e-06,
+          "pressure_W": -2.730298981423241e-06,
+          "stress_W": 3.660336793828743e-07,
+          "diss_W": 5.641424349324137e-07
+        },
+        "energy_defect_J_max": 9.926113229466167e-11,
+        "impulse_change_Ns": -5.594271524442685e-05,
+        "impulse_out_Ns": 4.784043076925541e-05,
+        "impulse_source_Ns": -8.120445147482723e-06,
+        "impulse_defect_Ns_max": 1.8160672311290274e-08,
+        "gamma_defect_max": 2.524733463897641e-08
+      },
+      "section": {
+        "change": -3.633631046116642e-05,
+        "outward_terms": {
+          "advection": -4.29077357646496e-05,
+          "diffusion": 5.615231552656375e-06,
+          "motion": 7.362282769296277e-05
+        },
+        "defect_max": 7.246312452806851e-09,
+        "stokes_over_gamma_max": 1.682372432795594e-06
+      },
+      "markers": [
+        {
+          "change": -7.104566714244243,
+          "stretching": -1.6956656291335395,
+          "viscosity": -5.411543000898734,
+          "defect_max": 0.0028712276610978194
+        },
+        {
+          "change": -4.797792729028572,
+          "stretching": 0.7128935832555707,
+          "viscosity": -5.515107216146142,
+          "defect_max": 0.004644735776263786
+        },
+        {
+          "change": 2.556429853768435,
+          "stretching": 6.534076964399254,
+          "viscosity": -3.9718786001902435,
+          "defect_max": 0.005768510440574914
+        },
+        {
+          "change": -13.507291497503616,
+          "stretching": -11.06601050702006,
+          "viscosity": -2.4453080768711506,
+          "defect_max": 0.00402708638759508
+        },
+        {
+          "change": -26.880519494123348,
+          "stretching": -24.397025563221355,
+          "viscosity": -2.478374698479505,
+          "defect_max": 0.005287582341022112
+        },
+        {
+          "change": 23.179016930221252,
+          "stretching": 27.653077310864873,
+          "viscosity": -4.488014534947377,
+          "defect_max": 0.013962753055702493
+        }
+      ]
+    },
+    "n12_L80_s4": {
+      "box": {
+        "energy_change_J": -9.61228727220791e-07,
+        "energy_terms_J": {
+          "adv_W": 1.680268875685969e-12,
+          "pressure_W": 1.7702995534822018e-10,
+          "stress_W": 2.2010677156224474e-11,
+          "diss_W": 9.610117471814363e-07
+        },
+        "energy_defect_J_max": 1.625913797447208e-11,
+        "impulse_change_Ns": 1.9929187987377528e-10,
+        "impulse_out_Ns": -4.930342855470658e-105,
+        "impulse_source_Ns": -2.9970777414472177e-12,
+        "impulse_defect_Ns_max": 2.022889576152225e-10,
+        "gamma_defect_max": 5.2546075129941806e-14
+      },
+      "local": {
+        "energy_change_J": -5.51437136643038e-06,
+        "energy_terms_J": {
+          "adv_W": 7.314399309222215e-06,
+          "pressure_W": -2.7302984526700613e-06,
+          "stress_W": 3.6603370267050714e-07,
+          "diss_W": 5.6414254534832e-07
+        },
+        "energy_defect_J_max": 9.426185939925228e-11,
+        "impulse_change_Ns": -5.5942576151088875e-05,
+        "impulse_out_Ns": 4.7840297643525735e-05,
+        "impulse_source_Ns": -8.12043502526759e-06,
+        "impulse_defect_Ns_max": 1.8156517704449155e-08,
+        "gamma_defect_max": 2.525503403374128e-08
+      },
+      "section": {
+        "change": -3.633657255977269e-05,
+        "outward_terms": {
+          "advection": -4.290799121467645e-05,
+          "diffusion": 5.615233118386688e-06,
+          "motion": 7.362332132566819e-05
+        },
+        "defect_max": 7.26674762088414e-09,
+        "stokes_over_gamma_max": 1.682372522061573e-06
+      },
+      "markers": [
+        {
+          "change": -7.104550840574575,
+          "stretching": -1.6957009574954038,
+          "viscosity": -5.4115444283571925,
+          "defect_max": 0.002925624597538423
+        },
+        {
+          "change": -4.7977252074325065,
+          "stretching": 0.7128658402361769,
+          "viscosity": -5.515111039396035,
+          "defect_max": 0.004745906526458121
+        },
+        {
+          "change": 2.556131923115686,
+          "stretching": 6.534085199072835,
+          "viscosity": -3.9718663249473107,
+          "defect_max": 0.0060869510098382484
+        },
+        {
+          "change": -13.507680429310113,
+          "stretching": -11.06604559041593,
+          "viscosity": -2.4452881820556613,
+          "defect_max": 0.0036533431614782508
+        },
+        {
+          "change": -26.880732601422494,
+          "stretching": -24.397028439822762,
+          "viscosity": -2.4783717885699073,
+          "defect_max": 0.005488805985005563
+        },
+        {
+          "change": 23.179185826046194,
+          "stretching": 27.653126600108024,
+          "viscosity": -4.488060301428128,
+          "defect_max": 0.014134739078185632
+        }
+      ]
+    },
+    "n16_L80_s2": {
+      "box": {
+        "energy_change_J": -9.612400472066467e-07,
+        "energy_terms_J": {
+          "adv_W": 1.6804057364113623e-12,
+          "pressure_W": 1.7701438087924795e-10,
+          "stress_W": 2.2000896111430775e-11,
+          "diss_W": 9.610303357599273e-07
+        },
+        "energy_defect_J_max": 9.015763992363413e-12,
+        "impulse_change_Ns": 6.331046537716434e-11,
+        "impulse_out_Ns": -2.2931750170795015e-127,
+        "impulse_source_Ns": -9.241007862329563e-13,
+        "impulse_defect_Ns_max": 6.42345661633973e-11,
+        "gamma_defect_max": 3.0791341698608284e-15
+      },
+      "local": {
+        "energy_change_J": -5.514422736278588e-06,
+        "energy_terms_J": {
+          "adv_W": 7.314444862178959e-06,
+          "pressure_W": -2.7302919372418883e-06,
+          "stress_W": 3.660340638204495e-07,
+          "diss_W": 5.641622392290773e-07
+        },
+        "energy_defect_J_max": 7.350829199030256e-11,
+        "impulse_change_Ns": -5.593892753522588e-05,
+        "impulse_out_Ns": 4.7838851682269175e-05,
+        "impulse_source_Ns": -8.119854661879911e-06,
+        "impulse_defect_Ns_max": 1.9778808923202808e-08,
+        "gamma_defect_max": 2.852394384208199e-08
+      },
+      "section": {
+        "change": -3.6336032477977866e-05,
+        "outward_terms": {
+          "advection": -4.2909607287446444e-05,
+          "diffusion": 5.615191987094872e-06,
+          "motion": 7.362172085203103e-05
+        },
+        "defect_max": 8.726926298415708e-09,
+        "stokes_over_gamma_max": 5.168263516805438e-07
+      },
+      "markers": [
+        {
+          "change": -7.106941358233826,
+          "stretching": -1.6950839083906104,
+          "viscosity": -5.411442101190288,
+          "defect_max": 0.00041534865292724987
+        },
+        {
+          "change": -4.8007524255467615,
+          "stretching": 0.7134504698459297,
+          "viscosity": -5.514996736594362,
+          "defect_max": 0.0008049059613002285
+        },
+        {
+          "change": 2.5596782341804385,
+          "stretching": 6.533030153070213,
+          "viscosity": -3.972329242887249,
+          "defect_max": 0.0019926626620110355
+        },
+        {
+          "change": -13.511773078252531,
+          "stretching": -11.065658119509829,
+          "viscosity": -2.4452229044671987,
+          "defect_max": 0.0030238326448024377
+        },
+        {
+          "change": -26.882128960644167,
+          "stretching": -24.39698341940803,
+          "viscosity": -2.4783130564224316,
+          "defect_max": 0.006832484813704465
+        },
+        {
+          "change": 23.176276028275765,
+          "stretching": 27.65334796950419,
+          "viscosity": -4.487618525777431,
+          "defect_max": 0.010546584549007143
+        }
+      ]
+    },
+    "n16_L80_s4": {
+      "box": {
+        "energy_change_J": -9.612360718688469e-07,
+        "energy_terms_J": {
+          "adv_W": 1.6804056842988171e-12,
+          "pressure_W": 1.7701435779219311e-10,
+          "stress_W": 2.2000896113187513e-11,
+          "diss_W": 9.61030437653152e-07
+        },
+        "energy_defect_J_max": 4.938556105206832e-12,
+        "impulse_change_Ns": 6.331069002385448e-11,
+        "impulse_out_Ns": -2.3358686274949846e-127,
+        "impulse_source_Ns": -9.24099805762674e-13,
+        "impulse_defect_Ns_max": 6.423478982961715e-11,
+        "gamma_defect_max": 3.080001531598817e-15
+      },
+      "local": {
+        "energy_change_J": -5.51441866305018e-06,
+        "energy_terms_J": {
+          "adv_W": 7.314445126430163e-06,
+          "pressure_W": -2.730291408487773e-06,
+          "stress_W": 3.6603408718276076e-07,
+          "diss_W": 5.64162349700705e-07
+        },
+        "energy_defect_J_max": 6.850822432303172e-11,
+        "impulse_change_Ns": -5.593878809852324e-05,
+        "impulse_out_Ns": 4.7838718318171185e-05,
+        "impulse_source_Ns": -8.119844525143145e-06,
+        "impulse_defect_Ns_max": 1.9774744791088196e-08,
+        "gamma_defect_max": 2.8531811597560684e-08
+      },
+      "section": {
+        "change": -3.6336293248115555e-05,
+        "outward_terms": {
+          "advection": -4.290986240474832e-05,
+          "diffusion": 5.615193552998763e-06,
+          "motion": 7.362221281487432e-05
+        },
+        "defect_max": 8.749284990793992e-09,
+        "stokes_over_gamma_max": 5.168263516805438e-07
+      },
+      "markers": [
+        {
+          "change": -7.1069254529420505,
+          "stretching": -1.6951192310082166,
+          "viscosity": -5.411443524719021,
+          "defect_max": 0.00036269721481207995
+        },
+        {
+          "change": -4.800684990908394,
+          "stretching": 0.7134228255664347,
+          "viscosity": -5.51500055173458,
+          "defect_max": 0.0009058765615943543
+        },
+        {
+          "change": 2.559380784416959,
+          "stretching": 6.533038062053745,
+          "viscosity": -3.972316930974436,
+          "defect_max": 0.0017819227462301246
+        },
+        {
+          "change": -13.512162376559957,
+          "stretching": -11.065692684954895,
+          "viscosity": -2.445203015602688,
+          "defect_max": 0.0033248259428784177
+        },
+        {
+          "change": -26.88234262361837,
+          "stretching": -24.396986391221468,
+          "viscosity": -2.478310120257899,
+          "defect_max": 0.007046112139003746
+        },
+        {
+          "change": 23.176445548442018,
+          "stretching": 27.653396926386826,
+          "viscosity": -4.4876641214200195,
+          "defect_max": 0.010712743475211894
+        }
+      ]
+    },
+    "n16_L80_s4_inviscid": {
+      "box": {
+        "energy_change_J": -1.8123248949199026e-10,
+        "energy_terms_J": {
+          "adv_W": 1.6822530688469742e-12,
+          "pressure_W": 1.7761360453973843e-10,
+          "stress_W": 0.0,
+          "diss_W": 0.0
+        },
+        "energy_defect_J_max": 1.93663188340485e-12,
+        "impulse_change_Ns": 6.53360664182312e-11,
+        "impulse_out_Ns": 0.0,
+        "impulse_source_Ns": -9.232005172520347e-13,
+        "impulse_defect_Ns_max": 6.625926693548323e-11,
+        "gamma_defect_max": 1.265914456594075e-15
+      },
+      "local": {
+        "energy_change_J": -4.627168761089503e-06,
+        "energy_terms_J": {
+          "adv_W": 7.356788250307995e-06,
+          "pressure_W": -2.729658203381565e-06,
+          "stress_W": 0.0,
+          "diss_W": 0.0
+        },
+        "energy_defect_J_max": 5.02511617319029e-11,
+        "impulse_change_Ns": -5.176132993410564e-05,
+        "impulse_out_Ns": 4.395460558137091e-05,
+        "impulse_source_Ns": -7.826150442483215e-06,
+        "impulse_defect_Ns_max": 1.9426089748493644e-08,
+        "gamma_defect_max": 2.8003311068115246e-08
+      },
+      "section": {
+        "change": -3.043868140618954e-05,
+        "outward_terms": {
+          "advection": -4.217915869764643e-05,
+          "diffusion": -0.0,
+          "motion": 7.260846186142745e-05
+        },
+        "defect_max": 9.378242408523908e-09,
+        "stokes_over_gamma_max": 5.168263516805438e-07
+      },
+      "markers": [
+        {
+          "change": -1.6430470767807606,
+          "stretching": -1.6425736199900258,
+          "viscosity": 0.0,
+          "defect_max": 0.0004734567907347387
+        },
+        {
+          "change": 0.8046271116244839,
+          "stretching": 0.8037885997248242,
+          "viscosity": 0.0,
+          "defect_max": 0.0008475526767460773
+        },
+        {
+          "change": 6.213803584639976,
+          "stretching": 6.214792483114684,
+          "viscosity": 0.0,
+          "defect_max": 0.002000059851768654
+        },
+        {
+          "change": -10.822641413349373,
+          "stretching": -10.820927769394647,
+          "viscosity": 0.0,
+          "defect_max": 0.0035756325317404247
+        },
+        {
+          "change": -24.76097664760482,
+          "stretching": -24.753860164203033,
+          "viscosity": 0.0,
+          "defect_max": 0.007116483401787832
+        },
+        {
+          "change": 28.165722341782356,
+          "stretching": 28.154377981473967,
+          "viscosity": 0.0,
+          "defect_max": 0.011344360308388701
+        }
+      ]
+    },
+    "n16_L80_s4_shift": {
+      "box": {
+        "energy_change_J": -9.612532675709845e-07,
+        "energy_terms_J": {
+          "adv_W": 1.8385468424405445e-12,
+          "pressure_W": 1.9401700643833573e-10,
+          "stress_W": 2.2002535579655843e-11,
+          "diss_W": 9.610304358723145e-07
+        },
+        "energy_defect_J_max": 4.9736098094461115e-12,
+        "impulse_change_Ns": 6.321101194556311e-11,
+        "impulse_out_Ns": -2.3349433233019748e-127,
+        "impulse_source_Ns": -1.022494747247529e-12,
+        "impulse_defect_Ns_max": 6.423350669281064e-11,
+        "gamma_defect_max": 2.178812685828523e-15
+      },
+      "local": {
+        "energy_change_J": -5.922114765662009e-06,
+        "energy_terms_J": {
+          "adv_W": 8.006269156570063e-06,
+          "pressure_W": -3.0120815158936336e-06,
+          "stress_W": 3.665334610316313e-07,
+          "diss_W": 5.613044594072297e-07
+        },
+        "energy_defect_J_max": 8.920454671870672e-11,
+        "impulse_change_Ns": -6.402743006032625e-05,
+        "impulse_out_Ns": 5.4547299519006146e-05,
+        "impulse_source_Ns": -9.501271333701583e-06,
+        "impulse_defect_Ns_max": 2.114079238147511e-08,
+        "gamma_defect_max": 3.0380953652166666e-08
+      },
+      "section": {
+        "change": -3.633649380464527e-05,
+        "outward_terms": {
+          "advection": -4.2909735950727055e-05,
+          "diffusion": 5.6151921080068955e-06,
+          "motion": 7.362299563015914e-05
+        },
+        "defect_max": 8.739218717200776e-09,
+        "stokes_over_gamma_max": 5.165829804574853e-07
+      },
+      "markers": [
+        {
+          "change": -7.106687165516917,
+          "stretching": -1.6951194897595214,
+          "viscosity": -5.411443517008183,
+          "defect_max": 0.00019951772674708934
+        },
+        {
+          "change": -4.800488743952997,
+          "stretching": 0.7134726571854904,
+          "viscosity": -5.5150109675544545,
+          "defect_max": 0.0010608903647044698
+        },
+        {
+          "change": 2.559480132041841,
+          "stretching": 6.533057039203693,
+          "viscosity": -3.9723201012736813,
+          "defect_max": 0.001917479125793431
+        },
+        {
+          "change": -13.51210925209179,
+          "stretching": -11.06569308961869,
+          "viscosity": -2.44520299089932,
+          "defect_max": 0.003326702959832728
+        },
+        {
+          "change": -26.882157143418596,
+          "stretching": -24.396983969911744,
+          "viscosity": -2.478310436430948,
+          "defect_max": 0.006862737075903347
+        },
+        {
+          "change": 23.176448433424667,
+          "stretching": 27.65339840094266,
+          "viscosity": -4.487664112613519,
+          "defect_max": 0.010714145095526817
+        }
+      ]
+    },
+    "n8_L80_s2": {
+      "box": {
+        "energy_change_J": -9.61189236535926e-07,
+        "energy_terms_J": {
+          "adv_W": 1.6793947920419986e-12,
+          "pressure_W": 1.7713074108870808e-10,
+          "stress_W": 2.2047871034655294e-11,
+          "diss_W": 9.609013699283663e-07
+        },
+        "energy_defect_J_max": 8.700860064429311e-11,
+        "impulse_change_Ns": 9.981519204921296e-10,
+        "impulse_out_Ns": 8.382458065052827e-78,
+        "impulse_source_Ns": -1.5681808145392978e-11,
+        "impulse_defect_Ns_max": 1.0138337286375226e-09,
+        "gamma_defect_max": 9.078575564924726e-13
+      },
+      "local": {
+        "energy_change_J": -5.51409008794977e-06,
+        "energy_terms_J": {
+          "adv_W": 7.314125882870247e-06,
+          "pressure_W": -2.7303442704780593e-06,
+          "stress_W": 3.6603138958648144e-07,
+          "diss_W": 5.640256417659225e-07
+        },
+        "energy_defect_J_max": 2.5144420517876544e-10,
+        "impulse_change_Ns": -5.596501463674651e-05,
+        "impulse_out_Ns": 4.7849802468398414e-05,
+        "impulse_source_Ns": -8.123945384052795e-06,
+        "impulse_defect_Ns_max": 8.83818017341796e-09,
+        "gamma_defect_max": 9.147141755288537e-09
+      },
+      "section": {
+        "change": -3.6333674998112464e-05,
+        "outward_terms": {
+          "advection": -4.289655488926973e-05,
+          "diffusion": 5.615483272580507e-06,
+          "motion": 7.361411765440994e-05
+        },
+        "defect_max": 3.577973313191162e-09,
+        "stokes_over_gamma_max": 8.296033139365517e-06
+      },
+      "markers": [
+        {
+          "change": -7.089232221452278,
+          "stretching": -1.6989529330358706,
+          "viscosity": -5.4121606503407085,
+          "defect_max": 0.022673232656542197
+        },
+        {
+          "change": -4.7839867171954324,
+          "stretching": 0.7056954906768471,
+          "viscosity": -5.515632145431939,
+          "defect_max": 0.027066907698469755
+        },
+        {
+          "change": 2.5380527705598865,
+          "stretching": 6.540319647088708,
+          "viscosity": -3.969282689071594,
+          "defect_max": 0.0380006992568509
+        },
+        {
+          "change": -13.481807591111107,
+          "stretching": -11.06800306933231,
+          "viscosity": -2.4458251673381373,
+          "defect_max": 0.0320277345709199
+        },
+        {
+          "change": -26.870557050689655,
+          "stretching": -24.39730593484465,
+          "viscosity": -2.4787376128254515,
+          "defect_max": 0.010376740328155165
+        },
+        {
+          "change": 23.19266687316113,
+          "stretching": 27.651434474958744,
+          "viscosity": -4.490267442716502,
+          "defect_max": 0.03149984091888758
+        }
+      ]
+    },
+    "n8_L80_s4": {
+      "box": {
+        "energy_change_J": -9.611852628851176e-07,
+        "energy_terms_J": {
+          "adv_W": 1.6793947399668451e-12,
+          "pressure_W": 1.7713071995158966e-10,
+          "stress_W": 2.2047871036402196e-11,
+          "diss_W": 9.609014715119517e-07
+        },
+        "energy_defect_J_max": 8.293338743798863e-11,
+        "impulse_change_Ns": 9.981554948898519e-10,
+        "impulse_out_Ns": 8.490993823021486e-78,
+        "impulse_source_Ns": -1.5681821352756758e-11,
+        "impulse_defect_Ns_max": 1.0138373162426087e-09,
+        "gamma_defect_max": 9.078775058124463e-13
+      },
+      "local": {
+        "energy_change_J": -5.514086006342566e-06,
+        "energy_terms_J": {
+          "adv_W": 7.314126134430689e-06,
+          "pressure_W": -2.730343742100191e-06,
+          "stress_W": 3.660314124946536e-07,
+          "diss_W": 5.640257518566711e-07
+        },
+        "energy_defect_J_max": 2.4644966074314014e-10,
+        "impulse_change_Ns": -5.5964877421417134e-05,
+        "impulse_out_Ns": 4.784967073008477e-05,
+        "impulse_source_Ns": -8.123935337604872e-06,
+        "impulse_defect_Ns_max": 8.821121510755453e-09,
+        "gamma_defect_max": 9.116563194717302e-09
+      },
+      "section": {
+        "change": -3.6333943037286653e-05,
+        "outward_terms": {
+          "advection": -4.289681221234901e-05,
+          "diffusion": 5.615484832594092e-06,
+          "motion": 7.361461901383256e-05
+        },
+        "defect_max": 3.557018873693305e-09,
+        "stokes_over_gamma_max": 8.296031857597614e-06
+      },
+      "markers": [
+        {
+          "change": -7.089216426683606,
+          "stretching": -1.6989886070520233,
+          "viscosity": -5.412162100906976,
+          "defect_max": 0.02272793838941567
+        },
+        {
+          "change": -4.783919234958034,
+          "stretching": 0.7056672446678303,
+          "viscosity": -5.515635990660555,
+          "defect_max": 0.027168577064174748
+        },
+        {
+          "change": 2.5377580540571785,
+          "stretching": 6.540328261049553,
+          "viscosity": -3.9692707298960643,
+          "defect_max": 0.038245403606457895
+        },
+        {
+          "change": -13.482212239842625,
+          "stretching": -11.068037843283927,
+          "viscosity": -2.4458052098829577,
+          "defect_max": 0.03164096196427746
+        },
+        {
+          "change": -26.870766539783205,
+          "stretching": -24.397308986832588,
+          "viscosity": -2.478734648309741,
+          "defect_max": 0.010278835457414592
+        },
+        {
+          "change": 23.19283521274798,
+          "stretching": 27.65148267420199,
+          "viscosity": -4.490313663420968,
+          "defect_max": 0.03166620196695824
+        }
+      ]
+    }
+  },
+  "medium_fine_marker_fractional_rate_max": 0.0005876431111349056
+}

@@ -1,0 +1,19 @@
+{
+  "status": "complete",
+  "frames": 41,
+  "nodes": [
+    214,
+    269
+  ],
+  "nu": 1.003395e-06,
+  "dt_s": 0.000125,
+  "elapsed_s": 7.359824469021987,
+  "peak_RSS_KiB": 245520,
+  "address_limit_bytes": 2684354560,
+  "initial_memory_KiB": {
+    "MemAvailable": 4958164,
+    "SwapFree": 2097152
+  },
+  "min_available_KiB": 4767468,
+  "min_swap_free_KiB": 2097152
+}
