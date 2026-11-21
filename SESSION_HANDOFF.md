@@ -1,5 +1,11 @@
 # Current session handoff
 
+**R283 · 2026-11-21 · Time-zero water state constructed.** The inner pressure rise is 15.90564 Pa against a 15.90532 Pa density-adjusted reference. On the finest grid the recovered-pressure radial stencil gives 0.000381 m/s² RMS spurious acceleration. All three grids pass the magnitude targets. The finest recovered-force refinement check fails because the stencil magnifies nodal EOS round-trip error. SU2's discrete radial residual and effective viscosity remain unmeasured. PC/WSL2 daisy retains the research branch. [Result, figure and data](docs/physics-first/VORTEX_EQUILIBRIUM.md) · [Next task](#next-task)
+
+Added a static initializer, tests, plot source, report, JSON, finest CSV and figure. Updated both READMEs, status, direction and coordination logs. Fourteen targeted tests passed and JSON/CSV reproduced byte-for-byte with the scientific gate exit 1. No CFD time step, implicit method, FEM, full-suite test or machine transfer. Use `/new` after review because the initialization and its precision limit are saved and the shear-mode experiment is independently specified.
+
+### Previous R282 review brief
+
 **R282 · 2026-11-21 · Independent review requested.** The owner will use `/new` and bring back a recommendation from another AI. The [standalone review brief](docs/physics-first/INDEPENDENT_REVIEW.md) summarizes the measured water results, the new unforced incompressible claim and its verification status, experimental evidence, and two possible next tests. PC/WSL2 daisy retains ownership of the research branch. [Next task](#next-task)
 
 This was a literature and documentation round. Source attribution, local navigation and project measurements were checked. No simulation, proof build, installation or FEM allocation ran. The next experiment awaits the owner’s review input.
@@ -1716,13 +1722,13 @@ and physical-work limits remain unchanged.
 
 ## Owner and checkout
 
-| Field | R282 value |
+| Field | R283 value |
 |---|---|
 | Owner | PC/WSL2 `daisy`, user `rharris`. Mac released per the published handoff. |
 | Checkout | `/home/rharris/git/navier-stokes-vortex-lab`, sole local worktree, empty stashes at start. |
 | Branch and publication target | `research/water-vortex-limits` → `origin/research/water-vortex-limits`, based on fetched `origin/main` at `f348cf6`. Delivery commit is in Git history. |
 | Runtime | WSL command `su2-water`, dedicated Python 3.12.14 in `~/.local/opt/water-acoustics/tools`, pinned CoolProp 7.2.0. [Rebuild](docs/physics-first/SU2_WATER_SETUP.md). |
-| Next decision | Owner brings the external reviewer’s recommendation to a fresh session and chooses the bounded experiment. |
+| Next decision | Owner reviews the static equilibrium result before selecting the short periodic transverse shear test. |
 
 ### Historical R272 checkout
 
@@ -1894,9 +1900,13 @@ agent-side POV-Ray backtraces are unavailable.
 
 ## Next task
 
+After owner review, use `/new` with **GPT-6.2 Astra, high reasoning** for the independently specified shear-decay measurement. The initial state and failed recovered-gradient refinement gate are saved. Prompt: **Measure the 10 μm periodic transverse water shear wave in the three short cases specified in R283. Estimate effective viscosity, compare space/time and interval-fit changes with the proposed gates, and stop before vortex evolution.** Eight acoustic crossings predict 2.115% amplitude loss. Use the same model and effort for scientific interpretation if the gate fails. A routine evidence or navigation update after qualification can use GPT-6.2 Sol/medium. [Shear setup, budget and decisions](docs/physics-first/VORTEX_EQUILIBRIUM.md#recommended-next-experiment)
+
+### Historical R282 review request
+
 Use `/new` after the external review. The owner wants the other AI’s advice to determine the next experiment. Supply the [standalone document](docs/physics-first/INDEPENDENT_REVIEW.md) to ChatGPT and bring its paste-ready instruction to the fresh session. Check the recommendation against the water model and resource constraints before taking up the selected task. A time-zero radial balance check and a transverse shear-wave check are candidates for the reviewer. The choice remains open.
 
-### R281 proposal retained for review
+### R281 proposal completed by R283
 
 **Check the finite-cylinder water vortex at time zero.** Use the saved tapered 10 mm, 0.1 m/s swirl, uniform 293.15 K, and 101325 Pa at the 0.10 m wall. Integrate dp/dr = ρ(p,T)uθ²/r inward at 16/32/64 cells per initial peak radius with regularity at the axis. Recover pressure from the stored conservative state and compare its radial gradient with the centrifugal term and the inner pressure rise with the incompressible reference. Record refinement, EOS recovery precision and residual units. Stop before CFD time stepping. [Baseline vortex](docs/physics-first/SPREADING_RESULT.md) · [Acoustic comparison](docs/physics-first/ACOUSTIC_100PA.md)
 

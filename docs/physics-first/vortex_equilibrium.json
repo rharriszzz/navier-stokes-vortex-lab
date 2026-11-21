@@ -1,0 +1,193 @@
+{
+  "eos": "HEOS::Water",
+  "coolprop": "7.2.0",
+  "wall_pressure_Pa": 101325.0,
+  "temperature_K": 293.15,
+  "wall_density_kg_m3": 998.2071504679284,
+  "R277_rise_Pa": 15.902015666029598,
+  "adjusted_benchmark_Pa": 15.90531637743864,
+  "runs": [
+    {
+      "cells_per_core": 16,
+      "nodes": 161,
+      "dr_m": 0.000625,
+      "axis_pressure_Pa": 101308.21919525547,
+      "rise_30mm_Pa": 15.910450438241241,
+      "rise_error_Pa": 0.005134060802602036,
+      "max_pressure_roundtrip_Pa": 0.00023488057195208967,
+      "max_temperature_roundtrip_K": 3.609557097661309e-11,
+      "liquid_nodes_PT": 161,
+      "liquid_nodes_recovered": 161,
+      "inner_identity": {
+        "dp_over_rho_m2_s2": 0.01593902677938416,
+        "swirl_integral_m2_s2": 0.015933883466642294,
+        "defect_m2_s2": 5.143312741866246e-06
+      },
+      "cylinder_identity": {
+        "dp_over_rho_m2_s2": 0.01681094430276916,
+        "swirl_integral_m2_s2": 0.016805918717247955,
+        "defect_m2_s2": 5.025585521206688e-06
+      },
+      "balance": {
+        "force_Pa_m": {
+          "peak_abs": 3.1974620197875083,
+          "signed_at_peak": -3.1974620197875083,
+          "radius_m": 0.005,
+          "radial_rms": 1.2854684881960623
+        },
+        "acceleration_m_s2": {
+          "peak_abs": 0.0032032049039593066,
+          "signed_at_peak": 0.0032032049039593066,
+          "radius_m": 0.005,
+          "radial_rms": 0.001287777286840881
+        }
+      },
+      "prescribed_pressure_balance": {
+        "force_Pa_m": {
+          "peak_abs": 3.0751903753628085,
+          "signed_at_peak": -3.0751903753628085,
+          "radius_m": 0.004375,
+          "radial_rms": 1.2801308065406045
+        },
+        "acceleration_m_s2": {
+          "peak_abs": 0.0030807136513662375,
+          "signed_at_peak": 0.0030807136513662375,
+          "radius_m": 0.004375,
+          "radial_rms": 0.0012824300183533165
+        }
+      },
+      "recovery_gradient_rms_Pa_m": 0.11159570674493098
+    },
+    {
+      "cells_per_core": 32,
+      "nodes": 321,
+      "dr_m": 0.0003125,
+      "axis_pressure_Pa": 101308.22295850037,
+      "rise_30mm_Pa": 15.906599066453055,
+      "rise_error_Pa": 0.0012826890144150838,
+      "max_pressure_roundtrip_Pa": 0.0002007053844863549,
+      "max_temperature_roundtrip_K": 3.2514435588382185e-11,
+      "liquid_nodes_PT": 321,
+      "liquid_nodes_recovered": 321,
+      "inner_identity": {
+        "dp_over_rho_m2_s2": 0.015935168490235126,
+        "swirl_integral_m2_s2": 0.015933883466642294,
+        "defect_m2_s2": 1.2850235928327236e-06
+      },
+      "cylinder_identity": {
+        "dp_over_rho_m2_s2": 0.016807174298795618,
+        "swirl_integral_m2_s2": 0.016805918717247955,
+        "defect_m2_s2": 1.2555815476628096e-06
+      },
+      "balance": {
+        "force_Pa_m": {
+          "peak_abs": 0.9106460242962839,
+          "signed_at_peak": -0.9106460242962839,
+          "radius_m": 0.003125,
+          "radial_rms": 0.35537099791768717
+        },
+        "acceleration_m_s2": {
+          "peak_abs": 0.00091228161438119,
+          "signed_at_peak": 0.00091228161438119,
+          "radius_m": 0.003125,
+          "radial_rms": 0.0003560092708716927
+        }
+      },
+      "prescribed_pressure_balance": {
+        "force_Pa_m": {
+          "peak_abs": 0.7693064269924434,
+          "signed_at_peak": -0.7693064269924434,
+          "radius_m": 0.004375,
+          "radial_rms": 0.3202063830852197
+        },
+        "acceleration_m_s2": {
+          "peak_abs": 0.0007706881598958051,
+          "signed_at_peak": 0.0007706881598958051,
+          "radius_m": 0.004375,
+          "radial_rms": 0.00032078149798342085
+        }
+      },
+      "recovery_gradient_rms_Pa_m": 0.15818813965204126
+    },
+    {
+      "cells_per_core": 64,
+      "nodes": 641,
+      "dr_m": 0.00015625,
+      "axis_pressure_Pa": 101308.22389854904,
+      "rise_30mm_Pa": 15.905636976589449,
+      "rise_error_Pa": 0.00032059915080928647,
+      "max_pressure_roundtrip_Pa": 0.00021330569870769978,
+      "max_temperature_roundtrip_K": 3.632294465205632e-11,
+      "liquid_nodes_PT": 641,
+      "liquid_nodes_recovered": 641,
+      "inner_identity": {
+        "dp_over_rho_m2_s2": 0.015934204672384013,
+        "swirl_integral_m2_s2": 0.015933883466642294,
+        "defect_m2_s2": 3.212057417198433e-07
+      },
+      "cylinder_identity": {
+        "dp_over_rho_m2_s2": 0.016806232561721448,
+        "swirl_integral_m2_s2": 0.016805918717247955,
+        "defect_m2_s2": 3.138444734929191e-07
+      },
+      "balance": {
+        "force_Pa_m": {
+          "peak_abs": 1.127605236043678,
+          "signed_at_peak": 1.127605236043678,
+          "radius_m": 0.0115625,
+          "radial_rms": 0.3803262270261827
+        },
+        "acceleration_m_s2": {
+          "peak_abs": 0.0011296304968094674,
+          "signed_at_peak": -0.0011296304968094674,
+          "radius_m": 0.0115625,
+          "radial_rms": 0.0003810093204823912
+        }
+      },
+      "prescribed_pressure_balance": {
+        "force_Pa_m": {
+          "peak_abs": 0.19235844849004025,
+          "signed_at_peak": -0.19235844849004025,
+          "radius_m": 0.004375,
+          "radial_rms": 0.080062457504868
+        },
+        "acceleration_m_s2": {
+          "peak_abs": 0.00019270393890603762,
+          "signed_at_peak": 0.00019270393890603762,
+          "radius_m": 0.004375,
+          "radial_rms": 8.020625573791354e-05
+        }
+      },
+      "recovery_gradient_rms_Pa_m": 0.37098553926844263
+    }
+  ],
+  "observed_orders": {
+    "pressure": [
+      2.0009289477578465,
+      2.0003289248165723
+    ],
+    "inner_identity": [
+      2.0009030328784188,
+      2.0002252601949846
+    ],
+    "cylinder_identity": [
+      2.0009359596956533,
+      2.000234022235508
+    ],
+    "prescribed_force_rms": [
+      1.9992172631167486,
+      1.9998042624135695
+    ],
+    "recovered_force_rms": [
+      1.854896392665098,
+      -0.09791148283061075
+    ]
+  },
+  "checks": {
+    "pressure_rise": true,
+    "pressure_recovery": true,
+    "acceleration": true,
+    "second_order": false
+  },
+  "passed": false
+}

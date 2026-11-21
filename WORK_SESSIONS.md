@@ -2093,3 +2093,7 @@ PC/WSL2 daisy, research/water-vortex-limits, start be1adf5. Prepared the [review
 ## R283 STARTED · 2026-11-21T06:34:00Z
 
 PC/WSL2 daisy, rharris, Linux x86_64, /home/rharris/git/navier-stokes-vortex-lab. Sole worktree, clean research/water-vortex-limits at origin/research/water-vortex-limits 5836550, empty stashes. Static equilibrium and engineering assessment only. Mac released. Released: no.
+
+## R283 COMPLETED · 2026-11-21T06:39:51Z
+
+PC/WSL2 daisy, research/water-vortex-limits, STARTED e2dabde. Constructed three time-zero water profiles. Fine rise 15.905637 Pa, EOS-recovered radial RMS acceleration 0.000381 m/s². Absolute limits pass. Fine recovered-force refinement fails due to the differentiated pressure round trip. Added the initializer, figure generator, regression tests, finest CSV, measured JSON, figure and report. Updated project navigation, status, direction, request log and handoff. Fourteen targeted tests passed and repeated JSON/CSV match byte-for-byte. No vortex step, CFD, full suite, 3D, FEM or solver installation. SU2 disk residual, effective viscosity and slow-time cost remain open. Review, then use `/new` for the proposed short transverse shear measurement with GPT-6.2 Astra/high. [Result](docs/physics-first/VORTEX_EQUILIBRIUM.md) · [Next task](SESSION_HANDOFF.md#next-task). Released: no.

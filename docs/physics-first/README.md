@@ -1,6 +1,6 @@
 # How tightly can a vortex in water concentrate?
 
-**Independent review · 21 November 2026.** The owner is seeking a recommendation before selecting the next experiment. The brief includes the project measurements, recent mathematical and experimental results, and two proposed tests. [Review brief](INDEPENDENT_REVIEW.md) · [Next task](../../SESSION_HANDOFF.md#next-task)
+**R283 · 21 November 2026.** The 10 mm vortex starts with a 15.90564 Pa pressure rise from the axis to 30 mm. The radial acceleration meets its target on all grids. EOS recovery limits force-gradient convergence on the finest grid. The next proposed test measures transverse shear damping. [Initial state and results](VORTEX_EQUILIBRIUM.md) · [Independent review brief](INDEPENDENT_REVIEW.md) · [Next task](../../SESSION_HANDOFF.md#next-task)
 
 Start with a vortex whose fate we can predict. In still surroundings, viscosity transports rotation out of a straight column. The peak swirl moves **outward** and weakens. A three-dimensional flow can instead pull the column lengthwise and narrow it. Measuring the natural outward drift gives us the amount of stretching a later experiment has to beat.
 
