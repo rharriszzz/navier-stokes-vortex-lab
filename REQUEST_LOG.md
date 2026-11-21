@@ -10548,3 +10548,11 @@ Complete this bounded first round and stop for my review before beginning the ne
 **R279 outcome · 2026-11-21 · COMPLETED.** All six settings of the periodic liquid-water acoustic test ran. At 128 cells and 512 steps the wave returned 9.99980 Pa and 1481.79 m/s, versus 1482.35 m/s from the EOS. Mass and momentum balances closed. The largest quarter-period total-energy discrepancy on this run was 45.4% of initial wave energy. Heating remains unresolved. Added the initializer, case generator, budget reader, two tests and measured JSON. Updated the direction, status, README, plan, code assessment, handoff and lifecycle log. Six targeted unit tests passed, all six reported numerical records reproduced from the raw files, and an independent rerun gave byte-identical mesh, configuration and initial/final state on the finest case. The unrelated repository-wide suite, historical FEM, rendering and the compressible vortex did not run. [Measured results and methods](docs/physics-first/ACOUSTIC_RESULT.md)
 
 **R280 outcome · 2026-11-21 · COMPLETED.** The stock SU2 release rejected the CoolProp water model. Built the tagged SU2 8.6.0 CFD executable with its pinned CoolProp 7.2.0 and installed it under the owner's home directory on daisy. Verified the executable hash against the evidence and exercised the installed command on the repeated case. The user can invoke `su2-water` directly. PC retains ownership. Continue this chat for the proposed single 100 Pa precision control after review. [Rebuild instructions](docs/physics-first/SU2_WATER_SETUP.md) · [Next task](SESSION_HANDOFF.md#next-task)
+
+## R281 — 2026-11-21 — Compare the 100 Pa water control with the 10 Pa wave
+
+**User request (verbatim)**
+
+> please continue
+
+**Scope/status.** STARTED. Proceed with the single 128-cell, 512-step acoustic amplitude control recommended in the immediately preceding reply and current handoff. Preserve the 10 Pa evidence, compare signed energy budgets, phase, amplitude, mass and momentum, then stop for review. Research-branch publication only. PC retains ownership.
