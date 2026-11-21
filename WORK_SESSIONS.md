@@ -2137,3 +2137,7 @@ PC/WSL2 daisy retains ownership. Clean sole worktree at remote 977918d, empty st
 ## R289 COMPLETED · 2026-11-21
 
 Scientific R288. PC/WSL2 daisy retains research/water-vortex-limits. Published start e212d12, thresholds 517ca66, sections fdef23c, and preparation/evolution design e9bc1b8. Decision A is conditional on measured preparation and solver qualification. All three baseline gaps lose centerline vorticity; the 8 mm doubled-circulation release gives a sensitive positive facing peak and positive strong radial shoulders throughout the one-factor comparisons. No time evolution. Ten targeted tests and numerical replays passed, previous failures preserved. Unknowns include correlated nozzle properties, slow-time pressure accuracy and actual evolution of widths. Use `/new` for the 2D rotating control at this published experiment-design boundary. [Reports and evidence](docs/physics-first/README.md) · [Next task](SESSION_HANDOFF.md#next-task). Released: no.
+
+## R290 STARTED · 2026-11-21T15:56:17Z
+
+Scientific R289. rharris on PC/WSL2 daisy x86_64 retains ownership; Mac released. Sole checkout /home/rharris/git/navier-stokes-vortex-lab, clean synchronized research/water-vortex-limits at origin/research/water-vortex-limits 8987bc5, empty stashes. Bounded rotating control, integrator audit and isolated-ring preparation authorized.
