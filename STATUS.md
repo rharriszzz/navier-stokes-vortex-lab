@@ -1,5 +1,7 @@
 # Project status
 
+**Independent review · 21 November 2026.** The owner is seeking a recommendation before selecting the next experiment. The brief includes the project measurements, recent mathematical and experimental results, and two proposed tests. [Review brief](docs/physics-first/INDEPENDENT_REVIEW.md) · [Next task](SESSION_HANDOFF.md#next-task)
+
 **R281 · 2026-11-21.** At 100 Pa the largest quarter-period energy defect was 0.280% of initial wave energy, down from 45.4% at 10 Pa. Both waves had the same measured speed to 0.001 m/s. Heating remains unresolved. [Measured comparison](docs/physics-first/ACOUSTIC_100PA.md) · [Next task](SESSION_HANDOFF.md#next-task)
 
 **R280 · 2026-11-21.** SU2 8.6.0 with CoolProp water is installed as `su2-water` on daisy. All six CFD settings closed the mass and momentum budgets. Both fine grids passed the 10 Pa wave speed and amplitude criteria at both time steps. The shifted total-energy differences cannot resolve percent-level acoustic losses at 10 Pa. [Results and precision limits](docs/physics-first/ACOUSTIC_RESULT.md) · [Next task](SESSION_HANDOFF.md#next-task)

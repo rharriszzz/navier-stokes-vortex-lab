@@ -1,5 +1,11 @@
 # Current session handoff
 
+**R282 · 2026-11-21 · Independent review requested.** The owner will use `/new` and bring back a recommendation from another AI. The [standalone review brief](docs/physics-first/INDEPENDENT_REVIEW.md) summarizes the measured water results, the new unforced incompressible claim and its verification status, experimental evidence, and two possible next tests. PC/WSL2 daisy retains ownership of the research branch. [Next task](#next-task)
+
+This was a literature and documentation round. Source attribution, local navigation and project measurements were checked. No simulation, proof build, installation or FEM allocation ran. The next experiment awaits the owner’s review input.
+
+### Previous R281 result
+
 **R281 · 2026-11-21 · 100 Pa amplitude control completed.** PC/WSL2 daisy retains the research branch. The wave carried 100 times more energy. The largest quarter-period energy defect changed from 1.035 to 0.639 nJ/m², or 45.4% to 0.280% of initial wave energy. Phase, amplitude and mass/momentum checks passed. Heating remains unresolved. [Result and reproducible commands](docs/physics-first/ACOUSTIC_100PA.md) · [Next task](#next-task)
 
 Changed the acoustic case generator, budget reader and regression tests, added the 100 Pa report and JSON, and updated direction, navigation and logs. One new CFD run and seven unit tests ran. The saved 10 Pa measurement reproduced from its raw files. Skipped the full suite, additional CFD, FEM and rendering. Use `/new` after review because the acoustic controls are published together and the next task is a separate vortex initialization check.
@@ -1710,13 +1716,13 @@ and physical-work limits remain unchanged.
 
 ## Owner and checkout
 
-| Field | R281 value |
+| Field | R282 value |
 |---|---|
 | Owner | PC/WSL2 `daisy`, user `rharris`. Mac released per the published handoff. |
 | Checkout | `/home/rharris/git/navier-stokes-vortex-lab`, sole local worktree, empty stashes at start. |
 | Branch and publication target | `research/water-vortex-limits` → `origin/research/water-vortex-limits`, based on fetched `origin/main` at `f348cf6`. Delivery commit is in Git history. |
 | Runtime | WSL command `su2-water`, dedicated Python 3.12.14 in `~/.local/opt/water-acoustics/tools`, pinned CoolProp 7.2.0. [Rebuild](docs/physics-first/SU2_WATER_SETUP.md). |
-| Next decision | Review the amplitude comparison, then check the initial compressible radial vortex equilibrium if selected. |
+| Next decision | Owner brings the external reviewer’s recommendation to a fresh session and chooses the bounded experiment. |
 
 ### Historical R272 checkout
 
@@ -1887,6 +1893,10 @@ write access. The tool sandbox denies `.git` writes, `ps`, unrestricted
 agent-side POV-Ray backtraces are unavailable.
 
 ## Next task
+
+Use `/new` after the external review. The owner wants the other AI’s advice to determine the next experiment. Supply the [standalone document](docs/physics-first/INDEPENDENT_REVIEW.md) to ChatGPT and bring its paste-ready instruction to the fresh session. Check the recommendation against the water model and resource constraints before taking up the selected task. A time-zero radial balance check and a transverse shear-wave check are candidates for the reviewer. The choice remains open.
+
+### R281 proposal retained for review
 
 **Check the finite-cylinder water vortex at time zero.** Use the saved tapered 10 mm, 0.1 m/s swirl, uniform 293.15 K, and 101325 Pa at the 0.10 m wall. Integrate dp/dr = ρ(p,T)uθ²/r inward at 16/32/64 cells per initial peak radius with regularity at the axis. Recover pressure from the stored conservative state and compare its radial gradient with the centrifugal term and the inner pressure rise with the incompressible reference. Record refinement, EOS recovery precision and residual units. Stop before CFD time stepping. [Baseline vortex](docs/physics-first/SPREADING_RESULT.md) · [Acoustic comparison](docs/physics-first/ACOUSTIC_100PA.md)
 

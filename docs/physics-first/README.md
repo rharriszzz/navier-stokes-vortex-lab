@@ -1,5 +1,7 @@
 # How tightly can a vortex in water concentrate?
 
+**Independent review · 21 November 2026.** The owner is seeking a recommendation before selecting the next experiment. The brief includes the project measurements, recent mathematical and experimental results, and two proposed tests. [Review brief](INDEPENDENT_REVIEW.md) · [Next task](../../SESSION_HANDOFF.md#next-task)
+
 Start with a vortex whose fate we can predict. In still surroundings, viscosity transports rotation out of a straight column. The peak swirl moves **outward** and weakens. A three-dimensional flow can instead pull the column lengthwise and narrow it. Measuring the natural outward drift gives us the amount of stretching a later experiment has to beat.
 
 The first round supplies dimensional estimates and a design. Round two evaluated the finite-cylinder reference and passed its conservation and refinement checks. [Five-second result and profiles](SPREADING_RESULT.md). The earlier [water feasibility study](../realizability/WATER_EXPERIMENT_FEASIBILITY_AND_COST.md) supplies apparatus context. [Water model and conservation laws](PHYSICAL_MODEL.md) · [Code assessment and solver choice](EXISTING_CODE.md) · [Round-two test specification](#round-two-test)
