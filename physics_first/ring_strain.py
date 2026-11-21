@@ -19,13 +19,13 @@ TOL = 0.02  # s^-1, for the projected rates
 AXES = np.eye(3)
 
 
-def ring(sign, count):
+def ring(sign, count, half_spacing=HALF_SPACING, tilt=np.pi/6):
     """Positions and oriented unit tangents. Basis e1 x e_y points along flight."""
     theta = np.arange(count) * (2 * np.pi / count)
-    e1 = np.array([np.cos(np.pi / 6), 0, sign * np.sin(np.pi / 6)])
+    e1 = np.array([np.cos(tilt), 0, sign * np.sin(tilt)])
     radial = np.outer(np.cos(theta), e1) + np.outer(np.sin(theta), AXES[1])
     tangent = np.outer(-np.sin(theta), e1) + np.outer(np.cos(theta), AXES[1])
-    return sign * HALF_SPACING * AXES[0] + RADIUS * radial, tangent
+    return sign * half_spacing * AXES[0] + RADIUS * radial, tangent
 
 
 def radial_factor(q2, order):
@@ -35,22 +35,22 @@ def radial_factor(q2, order):
     return np.divide(scale * gammainc(power, q2), q2**power, out=result, where=q2 > 0)
 
 
-def field(targets, source, dl, velocity_only=False):
+def field(targets, source, dl, velocity_only=False, *, core=CORE, gamma=GAMMA):
     """Integrate u, J_ij = du_i/dx_j, omega and its vector Laplacian for one loop."""
     r = targets[:, None, :] - source
-    q2 = np.einsum('...i,...i->...', r, r) / CORE**2
-    weights = GAMMA / (4 * np.pi) * dl
+    q2 = np.einsum('...i,...i->...', r, r) / core**2
+    weights = gamma / (4 * np.pi) * dl
     cross = np.cross(weights, r)
-    k = radial_factor(q2, 0) / CORE**3
+    k = radial_factor(q2, 0) / core**3
     velocity = np.einsum('ts,tsi->ti', k, cross)
     if velocity_only:
         return velocity
-    derivative = radial_factor(q2, 1) / CORE**5
+    derivative = radial_factor(q2, 1) / core**5
     gradient = np.stack([k @ np.cross(weights, axis) for axis in AXES], axis=-1)
     gradient += np.einsum('ts,tsi,tsj->tij', derivative, cross, r)
-    gaussian = np.exp(-q2) / (np.pi**1.5 * CORE**3)
-    omega = GAMMA * gaussian @ dl
-    laplacian = GAMMA * (gaussian * (4*q2 - 6) / CORE**2) @ dl
+    gaussian = np.exp(-q2) / (np.pi**1.5 * core**3)
+    omega = gamma * gaussian @ dl
+    laplacian = gamma * (gaussian * (4*q2 - 6) / core**2) @ dl
     return velocity, gradient, omega, laplacian
 
 
@@ -67,13 +67,14 @@ def maximum(x):
     return float(np.max(np.abs(x)))
 
 
-def measure(sign, count):
-    points, tangent = ring(sign, SAMPLES)
+def measure(sign, count, *, half_spacing=HALF_SPACING, tilt=np.pi/6, core=CORE, gamma=GAMMA,
+            targets=None, fd_divisors=(8, 16)):
+    points, tangent = ring(sign, SAMPLES, half_spacing, tilt) if targets is None else targets
     sources = []
     for side in (sign, -sign):
-        source, unit = ring(side, count)
+        source, unit = ring(side, count, half_spacing, tilt)
         sources.append((source, unit * (2 * np.pi * RADIUS / count)))
-    own, other = (field(points, *source) for source in sources)
+    own, other = (field(points, *source, core=core, gamma=gamma) for source in sources)
     u, jac, omega, lap = (a+b for a, b in zip(own, other))
     mag = np.linalg.norm(omega, axis=1)
     axis = omega / mag[:, None]
@@ -102,13 +103,13 @@ def measure(sign, count):
                   iso_visc_spread=np.ptp(iso_visc), iso_omega_spread=np.ptp(own_mag),
                   split_s=maximum(s-values['self_s']-values['partner_s']),
                   split_visc=maximum(visc-values['self_visc']-values['partner_visc']))
-    for divisor in (8, 16):
-        h = CORE / divisor
+    for divisor in fd_divisors:
+        h = core / divisor
         fd = []
         for source in sources:
             def centered(direction):
-                plus = field(points+h*direction, *source, velocity_only=True)
-                minus = field(points-h*direction, *source, velocity_only=True)
+                plus = field(points+h*direction, *source, velocity_only=True, core=core, gamma=gamma)
+                minus = field(points-h*direction, *source, velocity_only=True, core=core, gamma=gamma)
                 return (plus-minus) / (2*h)
             # Also difference along omega_hat directly, holding each target's axis fixed.
             fd.append((np.stack([centered(e) for e in AXES], axis=-1), centered(axis)))
@@ -122,11 +123,11 @@ def measure(sign, count):
     return values, checks
 
 
-def analyze():
+def analyze(**case):
     summary = {'tolerance_s_inv': TOL, 'levels': {}, 'changes': {}}
     previous = None
     for n in LEVELS:
-        (left, lc), (right, rc) = (measure(sign, n) for sign in (-1, 1))
+        (left, lc), (right, rc) = (measure(sign, n, **case) for sign in (-1, 1))
         checks = {key: max(lc[key], rc[key]) for key in lc}
         idx = np.arange(SAMPLES)
         for name, lookup, mirror, target in (
