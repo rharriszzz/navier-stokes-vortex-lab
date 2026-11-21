@@ -1,5 +1,11 @@
 # Current session handoff
 
+**R286 · 21 November 2026.** Removing fourth-order JST dissipation corrected the phase-dependent seam error at 64 cells. Viscosity converged under axial refinement. At 128 cells and the original step, the largest cross-strip pressure error grew to 0.07090 Pa against a 0.001 Pa limit. Halving the step restored both phases below 0.00060 Pa. The fixed-step qualification remains failed. The preferred physical experiment is a pair of detached water vortex rings on obliquely converging paths. Scientific R286 is request R287. PC/WSL2 daisy retains ownership. [Qualification and raw measurements](docs/physics-first/SHEAR_QUALIFICATION.md) · [Physical design and release geometry](docs/physics-first/INTERACTING_VORTICES.md) · [Next task](#next-task)
+
+The report retains every phase, fixed-step failure and time-step control. The changed files include the shear reader/generator, qualification tool and test, raw archive, measurements, geometry plot and both reports, README/status/direction and coordination records. Nineteen targeted tests passed. All inputs and historical measurements reproduced. The translated 128/4096 case resumed from step 3072 after status 143, with all 876 overlapping residual-history rows matching. The full archive replays with scientific exit 1. Rotating flow and 3D DNS await review. Use `/new` after review with GPT-6.2 Astra/high because the next experiment needs only the saved geometry and a bounded quadrature calculation.
+
+### Previous R285 result
+
 **R285 · 2026-11-21 · Pressure disturbance stays at the seam.** Request R286 records this scientific round. PC/WSL2 daisy retains the research branch. Mesh and configuration matched R284 and all four initial fields translated exactly. At 64 cells and 2048 steps, moving the wave by 16 cells reduced peak cross-strip pressure range from 23.95 to 5.12 Pa. The peak stayed at the seam at all four translated endpoints, with 99.9% of transverse pressure variance within four cells. Viscosity excess changed from 15.64% to 4.73%. R284 remains failed. [Result and measured fields](docs/physics-first/SHEAR_TRANSLATION.md) · [Next task](#next-task)
 
 One translated CFD run completed. Seven targeted tests passed. The archived comparison and plot reproduced byte-for-byte. The installed source and initial states identify a phase-sensitive JST corner stencil. The combined residuals leave individual flux contributions unresolved. Added the preflight, measured comparison, plot, raw outputs and report, extended the shear generator and reader, and updated tests, navigation, status and logs. No solver modification, coefficient trial, full suite or vortex evolution. Continue in this chat after review for the proposed two-phase correction test with GPT-6.2 Astra/high. A stronger model is unnecessary for this bounded test.
@@ -1734,13 +1740,13 @@ and physical-work limits remain unchanged.
 
 ## Owner and checkout
 
-| Field | R285 value |
+| Field | R286 value |
 |---|---|
 | Owner | PC/WSL2 `daisy`, user `rharris`. Mac released per the published handoff. |
 | Checkout | `/home/rharris/git/navier-stokes-vortex-lab`, sole local worktree, empty stashes at start. |
-| Branch and publication target | `research/water-vortex-limits` → `origin/research/water-vortex-limits`, based on fetched `origin/main` at `f348cf6`. R285 started from synchronized R284 50b9c65. Delivery commit is in Git history. |
+| Branch and publication target | `research/water-vortex-limits` → `origin/research/water-vortex-limits`, based on fetched `origin/main` at `f348cf6`. R286 started from synchronized R285 b788678. Delivery commit is in Git history. |
 | Runtime | WSL command `su2-water`, dedicated Python 3.12.14 in `~/.local/opt/water-acoustics/tools`, pinned CoolProp 7.2.0. [Rebuild](docs/physics-first/SU2_WATER_SETUP.md). |
-| Next decision | Owner reviews the translation result before any single-setting JST correction test. |
+| Next decision | Owner reviews the spatial qualification and ring design before the initial-strain calculation. |
 
 ### Historical R272 checkout
 
@@ -1911,6 +1917,10 @@ write access. The tool sandbox denies `.git` writes, `ps`, unrestricted
 agent-side POV-Ray backtraces are unavailable.
 
 ## Next task
+
+**Review R286, then use `/new` with GPT-6.2 Astra/high.** Compute the initial axial strain and viscous vorticity tendency along the two specified obliquely approaching rings. Compare the facing arcs, far arcs and a matched isolated ring. Use 128/256/512 line quadratures with an independent gradient check, the fixed 0.02 s⁻¹ tolerances and symmetry checks. Report signs, extrema and uncertainty and stop before flow evolution. This release-state calculation stands independently of SU2. Keep the selected model/effort for interpretation. [Dimensions, algorithm and stopping conditions](docs/physics-first/INTERACTING_VORTICES.md#validation-before-evolving-the-pair)
+
+### Historical R285 proposal completed by R286
 
 **Review R285.** If approved, test only `JST_SENSOR_COEFF= (0.5, 0.0)` for the original and translated phases at 64 cells and 2048 steps. Apply the proposed 0.001 Pa transverse-range and aligned-pressure maximum limits, check alternating modes and conservation, and retain R284’s viscosity and interval criteria. Require phase sensitivity below 5% of physical viscosity. Stop after the pair. A failure calls for reconsidering the spatial method. A pass still requires independent grid and time checks before qualification. Continue this chat with GPT-6.2 Astra/high. Reassess model choice if selecting or auditing a different discretization becomes necessary. [Validation and interpretation](docs/physics-first/SHEAR_TRANSLATION.md#decision-for-review)
 

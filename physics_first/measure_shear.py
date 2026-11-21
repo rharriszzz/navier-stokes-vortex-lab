@@ -113,15 +113,45 @@ def measure(directory, cells, steps, base, *, shift_cells=0):
                 snapshots=snapshots)
 
 
-def check_history(directory, steps, dt):
-    with (directory / "history_00001.csv").open() as history:
+def read_history(directory, first_step, dt):
+    with (directory / f"history_{first_step:05d}.csv").open() as history:
         reader = csv.reader(history, skipinitialspace=True)
         fields = [column.strip() for column in next(reader)]
-        records = list(reader)
-    indices = [int(row[fields.index("Time_Iter")]) for row in records]
-    times = [float(row[fields.index("Cur_Time")]) for row in records]
-    np.testing.assert_array_equal(indices, np.arange(1, steps + 1))
-    np.testing.assert_allclose(times, dt * np.arange(1, steps + 1), atol=0, rtol=1e-9)
+        records = np.asarray(list(reader), dtype=float)
+    indices = records[:, fields.index("Time_Iter")]
+    times = records[:, fields.index("Cur_Time")]
+    np.testing.assert_array_equal(indices, np.arange(first_step, first_step + len(records)))
+    # SU2's Cur_Time counter restarts from zero when loading a saved state.
+    np.testing.assert_allclose(times, dt * np.arange(1, len(records) + 1), atol=0, rtol=1e-9)
+    if not np.isfinite(records).all():
+        raise ValueError(f"nonfinite history in {directory}")
+    return fields, records
+
+
+def check_history(directory, steps, dt, *, resume_step=None):
+    fields, records = read_history(directory, 1, dt)
+    if resume_step is not None:
+        # Keep both original histories. Validate the common portion before
+        # using the continuation's final state as the last measurement.
+        if not resume_step < len(records) < steps:
+            raise ValueError("expected a partial history extending past the saved checkpoint")
+        resumed = directory / "resumed"
+        next_step = resume_step + 1
+        other_fields, continuation = read_history(resumed, next_step, dt)
+        if other_fields != fields or len(continuation) != steps - resume_step:
+            raise ValueError("inconsistent continuation history")
+        columns = [i for i, field in enumerate(fields) if field != "Cur_Time"]
+        overlap = len(records) - resume_step
+        np.testing.assert_array_equal(records[resume_step:, columns], continuation[:overlap, columns])
+        for name in ("line.su2", f"state_{resume_step:05d}.dat", f"state_{steps:05d}.dat"):
+            if (directory / name).read_bytes() != (resumed / name).read_bytes():
+                raise ValueError(f"restart evidence mismatch for {name}")
+        expected = (directory / "wave.cfg").read_text().replace("RESTART_ITER= 1\n", f"RESTART_ITER= {next_step}\n")
+        if expected != (resumed / "wave.cfg").read_text():
+            raise ValueError("continuation changed settings other than the restart index")
+        directory = resumed
+    elif len(records) != steps:
+        raise ValueError(f"incomplete step history in {directory}")
     if "Exit Success (SU2_CFD)" not in (directory / "solver.log").read_text():
         raise ValueError(f"missing successful solver exit in {directory}")
 

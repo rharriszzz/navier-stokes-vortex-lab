@@ -12,18 +12,18 @@ from physics_first.su2_acoustic import FIELDS, read_restart
 from physics_first.su2_shear import AMPLITUDE, HEIGHT, LENGTH, NY, background, make_case
 
 NX, STEPS, SHIFT = 64, 2048, 16
-SHAPE = NY + 1, NX + 1
 CONSERVED = FIELDS[2:]
 
 
 def unique_grid(record, fields):
-    grid = np.stack([record[k].reshape(SHAPE) for k in fields], axis=-1)
+    shape = NY + 1, -1
+    grid = np.stack([record[k].reshape(shape) for k in fields], axis=-1)
     np.testing.assert_array_equal(grid[:, 0], grid[:, -1])
     np.testing.assert_array_equal(grid[0], grid[-1])
     return grid[:-1, :-1]
 
 
-def audit_mesh(path, coordinates):
+def audit_mesh(path, coordinates, cells=NX):
     """Check actual quads, oriented boundary edges, unique donors and dual areas."""
     lines = iter(path.read_text().splitlines())
 
@@ -33,12 +33,12 @@ def audit_mesh(path, coordinates):
             raise ValueError(f"expected {key}, found {name}")
         return value.strip()
 
-    if header("NDIME") != "2" or int(header("NELEM")) != NX * NY:
+    if header("NDIME") != "2" or int(header("NELEM")) != cells * NY:
         raise ValueError("unexpected strip topology")
-    quads = np.array([next(lines).split() for _ in range(NX * NY)], dtype=int)
+    quads = np.array([next(lines).split() for _ in range(cells * NY)], dtype=int)
     np.testing.assert_array_equal(quads[:, 0], 9)
-    a = np.arange(NX * NY).reshape(NY, NX) + np.arange(NY)[:, None]
-    expected = np.stack((a, a+1, a+NX+2, a+NX+1), axis=-1)
+    a = np.arange(cells * NY).reshape(NY, cells) + np.arange(NY)[:, None]
+    expected = np.stack((a, a+1, a+cells+2, a+cells+1), axis=-1)
     np.testing.assert_array_equal(quads[:, 1:], expected.reshape(-1, 4))
     count = int(header("NPOIN"))
     nodes = np.array([next(lines).split() for _ in range(count)], dtype=float)
@@ -53,7 +53,8 @@ def audit_mesh(path, coordinates):
         markers[name] = edges[:, 1:]
     if set(markers) != {"left", "right", "bottom", "top"}:
         raise ValueError("expected two pairs of periodic markers")
-    ids = np.arange(count).reshape(SHAPE)
+    shape = NY + 1, cells + 1
+    ids = np.arange(count).reshape(shape)
     for source, target, offset, ordered in [
         ("left", "right", [LENGTH, 0], ids[:, 0][::-1]),
         ("bottom", "top", [0, HEIGHT], ids[0]),
@@ -78,34 +79,34 @@ def audit_mesh(path, coordinates):
     heights = xy[corners[:, 3], 1] - xy[corners[:, 0], 1]
     dual = np.zeros(count)
     np.add.at(dual, corners, (widths * heights / 4)[:, None])
-    dual = dual.reshape(SHAPE)
-    merged = np.zeros((NY, NX))
-    j, i = np.indices(SHAPE)
-    np.add.at(merged, (j % NY, i % NX), dual)
-    ideal = LENGTH * HEIGHT / (NX * NY)
+    dual = dual.reshape(shape)
+    merged = np.zeros((NY, cells))
+    j, i = np.indices(shape)
+    np.add.at(merged, (j % NY, i % cells), dual)
+    ideal = LENGTH * HEIGHT / (cells * NY)
     np.testing.assert_allclose(merged, ideal, rtol=1e-14, atol=0)
-    return dict(axial_donor_pairs=NY+1, transverse_donor_pairs=NX+1,
+    return dict(axial_donor_pairs=NY+1, transverse_donor_pairs=cells+1,
                 unique_nodes=merged.size, corner_ids=ids[np.ix_([0, -1], [0, -1])].ravel().tolist(),
                 geometric_corner_dual_areas_m2=dual[np.ix_([0, -1], [0, -1])].ravel().tolist(),
                 merged_dual_area_range_m2=[merged.min(), merged.max()])
 
 
-def audit_inputs(original, shifted):
+def audit_inputs(original, shifted, cells=NX):
     for name in ("line.su2", "wave.cfg"):
         if (original / name).read_bytes() != (shifted / name).read_bytes():
             raise ValueError(f"archive mismatch for {name}")
     a, b = (read_restart(d / "state_00000.dat") for d in (original, shifted))
     xy = np.column_stack([b["x"], b["y"]])
     np.testing.assert_array_equal(xy, np.column_stack([a["x"], a["y"]]))
-    result = audit_mesh(original / "line.su2", xy)
+    result = audit_mesh(original / "line.su2", xy, cells)
     ref, translated = (unique_grid(r, CONSERVED) for r in (a, b))
-    np.testing.assert_array_equal(ref.view(np.uint64), np.roll(translated, -SHIFT, axis=1).view(np.uint64))
+    np.testing.assert_array_equal(ref.view(np.uint64), np.roll(translated, -(cells // 4), axis=1).view(np.uint64))
     base = background()
     rho, mx, my, energy = translated.reshape(-1, 4).T
     np.testing.assert_array_equal(rho, base["rho_kg_m3"])
     np.testing.assert_array_equal(mx, 0)
-    v = AMPLITUDE * np.sin(2*np.pi*(np.arange(NX)-SHIFT)/NX)
-    np.testing.assert_allclose((my/rho).reshape(NY, NX), np.tile(v, (NY, 1)), atol=2e-17)
+    v = AMPLITUDE * np.sin(2*np.pi*(np.arange(cells)-cells//4)/cells)
+    np.testing.assert_allclose((my/rho).reshape(NY, cells), np.tile(v, (NY, 1)), atol=2e-17)
     np.testing.assert_allclose(energy, rho*(base["internal_energy_J_kg"] + 0.5*(my/rho)**2), rtol=2e-16)
     dp, dT = thermodynamics(translated.reshape(-1, 4), base, CP.AbstractState("HEOS", "Water"))
     result.update(initial_max_abs_dp_Pa=abs(dp).max(), initial_max_abs_dT_K=abs(dT).max(),
@@ -116,21 +117,22 @@ def audit_inputs(original, shifted):
 
 def discrepancy(reference, shifted):
     """Compare only independent torus vertices, with the shift undone."""
-    delta = np.roll(shifted, -SHIFT, axis=1) - reference
+    delta = np.roll(shifted, -(reference.shape[1] // 4), axis=1) - reference
     return dict(rms=np.sqrt(np.mean(delta**2, axis=(0, 1))).tolist(),
                 max_abs=np.max(abs(delta), axis=(0, 1)).tolist())
 
 
 def pressure_pattern(q, base, state):
     dp, _ = thermodynamics(q.reshape(-1, 4), base, state)
-    dp = dp.reshape(NY, NX)
+    cells = q.shape[1]
+    dp = dp.reshape(NY, cells)
     transverse = dp - dp.mean(axis=0)
     by_column = np.sum(transverse**2, axis=0)
     spread = np.ptp(dp, axis=0)
-    # Rings have the same width and are disjoint. The second is where
+    # The windows have equal width. The second is where
     # the original seam feature would arrive if carried with the wave.
     def fraction(center):
-        distance = (np.arange(NX) - center + NX//2) % NX - NX//2
+        distance = (np.arange(cells) - center + cells//2) % cells - cells//2
         if by_column.sum() == 0:
             return None
         return float(by_column[abs(distance) <= 4].sum() / by_column.sum())
@@ -142,33 +144,34 @@ def pressure_pattern(q, base, state):
                     max_y_range_Pa=spread.max(), peak_y_range_i=peak_i,
                     symmetry_rms_Pa=np.sqrt(np.mean(transverse**2)),
                     symmetry_power_near_seam=fraction(0),
-                    symmetry_power_near_translated_seam=fraction(SHIFT),
+                    symmetry_power_near_translated_seam=fraction(cells // 4),
                     column_y_range_Pa=spread.tolist())
 
 
 def corner_stencil(directory):
     # At a geometrical corner both local neighbours have the periodic flag.
     # No extra undivided-Laplacian contribution passes SU2's send-side filter.
-    my = read_restart(directory / "state_00000.dat")["Momentum_y"].reshape(SHAPE)
+    my = read_restart(directory / "state_00000.dat")["Momentum_y"].reshape(NY + 1, -1)
     left = my[0, 1] + my[1, 0] - 2 * my[0, 0]
     right = my[0, -2] + my[1, -1] - 2 * my[0, -1]
     torus = my[0, 1] + my[0, -2] + my[1, 0] + my[-2, 0] - 4 * my[0, 0]
     return dict(left_corner_local=left, right_corner_local=right, four_neighbor_torus=torus)
 
 
-def compare(original, shifted):
-    preflight = audit_inputs(original, shifted)
+def compare(original, shifted, cells=NX, steps=STEPS, *, resumed_shift_step=None):
+    shift = cells // 4
+    preflight = audit_inputs(original, shifted, cells)
     base = background()
     nu = base["mu_Pa_s"] / base["rho_kg_m3"]
     state = CP.AbstractState("HEOS", "Water")
     runs = []
-    for directory, offset in ((original, 0), (shifted, SHIFT)):
-        run = measure(directory, NX, STEPS, base, shift_cells=offset)
-        check_history(directory, STEPS, run["dt_s"])
+    for directory, offset in ((original, 0), (shifted, shift)):
+        run = measure(directory, cells, steps, base, shift_cells=offset)
+        check_history(directory, steps, run["dt_s"], resume_step=resumed_shift_step if offset else None)
         run["initial_corner_undivided_laplacian_my_kg_m2_s"] = corner_stencil(directory)
         runs.append(run)
     endpoints = []
-    for step in range(0, STEPS + 1, STEPS // 4):
+    for step in range(0, steps + 1, steps // 4):
         records = [read_restart(d / f"state_{step:05d}.dat") for d in (original, shifted)]
         q0, q1 = (unique_grid(r, CONSERVED) for r in records)
         p0, s0 = pressure_pattern(q0, base, state)
@@ -185,7 +188,7 @@ def compare(original, shifted):
                 summary["momentum_residual_max_abs_N_per_m"] = np.max(abs(res), axis=(0, 1)).tolist()
         endpoints.append(endpoint)
     change = (runs[1]["nu_fit_m2_s"] - runs[0]["nu_fit_m2_s"]) / nu
-    return dict(shift_cells=SHIFT, original_index_of_shifted_node="(i-16) mod 64",
+    return dict(shift_cells=shift, original_index_of_shifted_node=f"(i-{shift}) mod {cells}",
                 preflight=preflight, conserved_fields=list(CONSERVED),
                 conserved_units=["kg/m3", "kg/(m2 s)", "kg/(m2 s)", "J/m3"],
                 physical_nu_m2_s=nu, phase_change_over_physical_nu=change,

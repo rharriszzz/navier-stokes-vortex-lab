@@ -98,3 +98,14 @@ class WaterShearTest(unittest.TestCase):
         recovered = recovered.copy()
         recovered[1, 0, 0] += 8
         self.assertEqual(discrepancy(field, recovered)["rms"], [0.5])
+
+    def test_line_nyquist_retains_local_transverse_checkerboard(self):
+        import numpy as np
+        from physics_first.shear_qualification import alternating_components
+
+        ny, nx = 4, 32
+        wave = np.tile(np.sin(2*np.pi*np.arange(nx)/nx), (ny, 1))
+        np.testing.assert_allclose(alternating_components(wave), [0, 0], atol=1e-15)
+        # Opposite signs in adjacent columns cancel in a domain average.
+        wave[:, 4:6] += 0.25 * (-1.)**(np.arange(ny)[:, None] + np.arange(2))
+        np.testing.assert_allclose(alternating_components(wave), [0.5/nx, 0.25])

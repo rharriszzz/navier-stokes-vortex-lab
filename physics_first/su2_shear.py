@@ -16,8 +16,8 @@ CASES = ((32, 2048), (64, 2048), (64, 4096))
 
 
 def make_case(directory, cells, steps, *, shift_cells=0):
-    if (cells, steps) not in CASES:
-        raise ValueError("unsupported R284 grid or step count")
+    if (cells, steps) not in (*CASES, (128, 2048), (128, 4096)):
+        raise ValueError("unsupported shear grid or step count")
     base = background()
     density = base["rho_kg_m3"]
     speed = base["sound_speed_m_s"]
